@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="zh" dir="ltr">
+<head>
+    <meta name="robots" content="index, follow" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <meta name="description" content='&#x8054;&#x7CFB;&#x667A;&#x80FD;&#x4F01;&#x4E1A;&#x96C6;&#x56E2;&#x3002;&#x9884;&#x7EA6;&#x54A8;&#x8BE2;&#x6216;&#x8BF7;&#x6C42;&#x6709;&#x5173;&#x6211;&#x4EEC; AI &#x534F;&#x4F5C;&#x4E13;&#x5BB6;&#x56E2;&#x961F;&#x548C;&#x4F01;&#x4E1A;&#x7EA7;&#x89E3;&#x51B3;&#x65B9;&#x6848;&#x7684;&#x4FE1;&#x606F;&#x3002;&#x7ACB;&#x5373;&#x5F00;&#x542F;&#x66F4;&#x667A;&#x80FD;&#x3001;&#x66F4;&#x9AD8;&#x6548;&#x7684;&#x8FD0;&#x8425;&#x4E4B;&#x65C5;&#x3002;' />
+    <title>&#x8054;&#x7CFB;&#x667A;&#x80FD;&#x4F01;&#x4E1A;&#x96C6;&#x56E2; | &#x54A8;&#x8BE2;&#x4E0E; AI &#x89E3;&#x51B3;&#x65B9;&#x6848;</title>
+
+    <style>
+        html { background-color: #3B3A47; }
+    </style>
+    <script>
+        (function () {
+            const key = 'preferredTheme';
+            const stored = localStorage.getItem(key);
+            const systemDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+            const theme = stored || (systemDark ? 'dark' : 'light');
+            if (theme === 'dark') {
+                document.documentElement.classList.add('dark-mode');
+            }
+        })();
+    </script>
+
+
+        <link rel="alternate" hreflang="en" href="https://theintelligententerprisegroup.com/contact.html" />
+        <link rel="alternate" hreflang="fr" href="https://theintelligententerprisegroup.com/fr/contact.html" />
+        <link rel="alternate" hreflang="de" href="https://theintelligententerprisegroup.com/de/contact.html" />
+        <link rel="alternate" hreflang="es" href="https://theintelligententerprisegroup.com/es/contact.html" />
+        <link rel="alternate" hreflang="pt" href="https://theintelligententerprisegroup.com/pt/contact.html" />
+        <link rel="alternate" hreflang="zh" href="https://theintelligententerprisegroup.com/zh/contact.html" />
+        <link rel="alternate" hreflang="ja" href="https://theintelligententerprisegroup.com/ja/contact.html" />
+        <link rel="alternate" hreflang="ar" href="https://theintelligententerprisegroup.com/ar/contact.html" />
+
+
+    <link rel="alternate" hreflang="x-default" href="https://theintelligententerprisegroup.com/contact.html" />
+
+    <link rel="canonical" href="https://theintelligententerprisegroup.com/zh/contact.html" />
+
+
+    <link rel="stylesheet" href="/css/styles.css" />
+    <link rel="stylesheet" href="/css/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="/css/all.min.css" />
+
+    <script src="/js/lang-switcher.js" defer></script>
+
+    <script>
+        (function () {
+            if (localStorage.getItem('currentLang')) return;
+            const supported = [
+                     { code: "en" } ,
+                     { code: "fr" } ,
+                     { code: "de" } ,
+                     { code: "es" } ,
+                     { code: "pt" } ,
+                     { code: "zh" } ,
+                     { code: "ja" } ,
+                     { code: "ar" } 
+            ];
+            const defaultLang = "zh";
+            const navLangs = navigator.languages || [navigator.language || navigator.userLanguage];
+            let detected = null;
+            for (const nav of navLangs) {
+                const code = nav.toLowerCase().split('-')[0];
+                if (supported.find(s => s.code.toLowerCase() === code)) {
+                    detected = code;
+                    break;
+                }
+            }
+            const lang = detected || defaultLang;
+            localStorage.setItem('currentLang', lang);
+            document.documentElement.lang = lang;
+        })();
+    </script>
+
+    <!-- Organization structured data (JSON-LD) -->
+    <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "Organization",
+          "name": "The Intelligent Enterprise Group",
+          "url": "https://theintelligententerprisegroup.com/",
+          "logo": "https://theintelligententerprisegroup.com/images/tieg-logo.png",
+          "sameAs": []
+        }
+    </script>
+    <link rel="icon" href="/favicon.ico" />
+    <link rel="apple-touch-icon" href="/images/apple-touch-icon.png" />
+
+    
+
+</head>
+<body>
+    <header x-data="{ open: false }">
+        <div class="container header-top">
+            <div class="logo"></div>
+            <div class="theme-switch-wrapper">
+                <label class="theme-switch">
+                    <input type="checkbox" id="theme-checkbox" />
+                    <span class="slider round"></span>
+                </label>
+                <span id="theme-label">浅色模式</span>
+                <span class="lang-switcher">
+                    <label for="lang-select" class="lang-label">🌐 语言：</label>
+
+                    <!-- Language switcher -->
+                    <select id="lang-select" class="lang-select">
+                        <option value="en" data-path="/">English</option>
+                        <option value="fr" data-path="/fr/">Fran&#xE7;ais</option>
+                        <option value="de" data-path="/de/">Deutsch</option>
+                        <option value="es" data-path="/es/">Espa&#xF1;ol</option>
+                        <option value="pt" data-path="/pt/">Portugu&#xEA;s</option>
+                        <option value="zh" data-path="/zh/">&#x4E2D;&#x6587;</option>
+                        <option value="ja" data-path="/ja/">&#x65E5;&#x672C;&#x8A9E;</option>
+                        <option value="ar" data-path="/ar/">&#x627;&#x644;&#x639;&#x631;&#x628;&#x64A;&#x629;</option>
+                    </select>
+
+                </span>
+            </div>
+        </div>
+        
+        <div class="container header-nav">
+            <button @click="open = !open" class="menu-toggle" aria-label="Toggle Menu">
+                <svg width="24" height="24" viewBox="0 0 24 24">
+                    <path fill="var(--nav-link-color)" d="M3 6h18v2H3V6zm0 5h18v2H3v-2zm0 5h18v2H3v-2z" />
+                </svg>
+            </button>
+
+            <nav class="main-nav" :class="{ 'open': open }">
+                <ul>
+                    <li><a href="index.html" class="">&#x9996;&#x9875;</a></li>
+                    <li><a href="about.html" class="">&#x5173;&#x4E8E;&#x6211;&#x4EEC;</a></li>
+                    <li><a href="services.html" class="">&#x670D;&#x52A1;&#x4E0E;&#x89E3;&#x51B3;&#x65B9;&#x6848;</a></li>
+                    <li><a href="case-studies.html" class="">&#x6848;&#x4F8B;&#x7814;&#x7A76;</a></li>
+                    <li><a href="resources.html" class="">&#x8D44;&#x6E90;&#x4E0E;&#x6D1E;&#x5BDF;</a></li>
+                    <li><a href="trial.html" class="">&#x8BD5;&#x7528;</a></li>
+                    <li><a href="pricing.html" class="">&#x5B9A;&#x4EF7;</a></li>
+                    <li><a href="partners.html" class="">&#x5408;&#x4F5C;&#x4F19;&#x4F34;&#x4E0E;&#x8054;&#x76DF;</a></li>                    
+                    <li><a href="contact.html" class="active">&#x8054;&#x7CFB;&#x4E0E;&#x54A8;&#x8BE2;</a></li>
+                    <li class="has-submenu"
+                        x-data="{ openSub: false }"
+                        @mouseenter="openSub = true"
+                        @mouseleave="openSub = false">
+                      <button @click="openSub = !openSub"
+                              aria-haspopup="true"
+                              :aria-expanded="openSub.toString()">
+                        &#x4FE1;&#x606F;
+                        <svg width="12" height="12" viewBox="0 0 12 12" aria-hidden="true">
+                          <path d="M3 4l3 3 3-3" fill="currentColor"/>
+                        </svg>
+                      </button>
+                      <ul class="submenu" x-show="openSub" @click.outside="openSub = false">
+                        <li><a href="careers.html" class="">&#x804C;&#x4E1A;&#x673A;&#x4F1A;</a></li>
+                        <li><a href="faqs.html" class="">&#x5E38;&#x89C1;&#x95EE;&#x9898;</a></li>
+                        <li><a href="legal.html" class="">&#x6CD5;&#x5F8B;&#x4E0E;&#x653F;&#x7B56;</a></li>
+                      </ul>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        
+<section class="hero">
+    <div class="container">
+        <h2>&#x8054;&#x7CFB;&#x4E0E;&#x7533;&#x8BF7;&#x8868;</h2>
+        <h3>无论您有问题、需要个性化建议，<br />或已准备好探索 AI 驱动的解决方案，我们都在这里为您提供帮助。</h3>
+    </div>
+</section>
+
+<section id="contact" class="contact">
+    <div class="container">
+        <div class="contact-form">
+            <h2>&#x8054;&#x7CFB;&#x6211;&#x4EEC;</h2>
+
+            <form action="https://formsubmit.co/563435e1141cf899817f240576ed6c66" method="POST">
+                <input type="hidden" name="_subject" value="&#x6765;&#x81EA;&#x60A8;&#x7F51;&#x7AD9;&#x7684;&#x65B0;&#x6D88;&#x606F;" />
+
+                <label for="name">&#x59D3;&#x540D;</label>
+                <input type="text" id="name" name="name" placeholder="&#x60A8;&#x7684;&#x59D3;&#x540D;" required />
+
+                <label for="email">&#x7535;&#x5B50;&#x90AE;&#x4EF6;</label>
+                <input type="email" id="email" name="email" placeholder="&#x60A8;&#x7684;&#x7535;&#x5B50;&#x90AE;&#x4EF6;" required />
+
+                <label for="enquiryType">&#x54A8;&#x8BE2;&#x7C7B;&#x578B;</label>
+                <select id="enquiryType" name="enquiryType" required>
+                    <option value="">-- &#x8BF7;&#x9009;&#x62E9;&#x4E00;&#x4E2A;&#x9009;&#x9879; --</option>
+                            <option value="general">&#x4E00;&#x822C;&#x54A8;&#x8BE2;</option>
+                            <option value="sales">&#x9500;&#x552E;&#x4E0E;&#x89E3;&#x51B3;&#x65B9;&#x6848;</option>
+                            <option value="trial">&#x8BD5;&#x7528;&#x8BB8;&#x53EF;&#x8BC1;&#x7533;&#x8BF7;</option>
+                            <option value="students">&#x5B66;&#x751F;&#x4E0E;&#x6559;&#x80B2;&#x8005;&#x8BB8;&#x53EF;&#x8BC1;&#x7533;&#x8BF7;</option>
+                            <option value="billing">&#x8D26;&#x5355;&#x4E0E;&#x8D26;&#x6237;</option>
+                            <option value="legal">&#x6CD5;&#x5F8B;&#x4E0E;&#x5408;&#x89C4;</option>
+                            <option value="careers">&#x804C;&#x4E1A; / &#x5DE5;&#x4F5C;&#x7533;&#x8BF7;</option>
+                            <option value="partners">&#x5408;&#x4F5C;&#x4F19;&#x4F34;&#x4E0E;&#x8054;&#x76DF;</option>
+                            <option value="support">&#x6280;&#x672F;&#x652F;&#x6301;</option>
+                </select>
+
+                <div id="extraFields" style="display:none; margin-top:1rem;">
+                    <label for="vat">&#x589E;&#x503C;&#x7A0E;&#x53F7;</label>
+                    <input type="text" id="vat" name="vat" placeholder="&#x5982;&#x679C;&#x6709;&#xFF0C;&#x8BF7;&#x8F93;&#x5165;&#x60A8;&#x7684;&#x589E;&#x503C;&#x7A0E;&#x53F7;" />
+
+                    <label for="address">&#x90AE;&#x5BC4;&#x5730;&#x5740;</label>
+                    <textarea id="address" name="address" placeholder="&#x60A8;&#x7684;&#x90AE;&#x5BC4;&#x5730;&#x5740;"></textarea>
+
+                    <div id="schoolField" style="display:none;">
+                        <label for="school">&#x5B66;&#x6821; / &#x5927;&#x5B66;&#x540D;&#x79F0;</label>
+                        <input type="text" id="school" name="school" placeholder="&#x8BF7;&#x8F93;&#x5165;&#x60A8;&#x7684;&#x5B66;&#x6821;&#x6216;&#x5927;&#x5B66;&#x540D;&#x79F0;" />
+                    </div>
+
+                    <p class="form-hint">这些字段是 <strong>试用许可证</strong> 或 <strong>学生与教育者许可证</strong> 所需的法律要求。</p>
+                </div>
+
+                <label for="subject">&#x4E3B;&#x9898;</label>
+                <input type="text" id="subject" name="subject" placeholder="&#x4E3B;&#x9898;" required />
+
+                <label for="message">&#x6D88;&#x606F;</label>
+                <textarea id="message" name="message" placeholder="&#x60A8;&#x7684;&#x6D88;&#x606F;" required></textarea>
+
+                <div style="display:none;">
+                    <label for="honeypot">&#x8BF7;&#x5C06;&#x6B64;&#x5B57;&#x6BB5;&#x7559;&#x7A7A;</label>
+                    <input type="text" id="honeypot" name="_honey" value="" />
+                </div>
+
+                <button type="submit">&#x53D1;&#x9001;&#x6D88;&#x606F;</button>
+                <input type="hidden" name="_captcha" value="false" />
+            </form>
+
+            <div id="form-status" style="display:none; margin-top:1rem;"></div>
+        </div>
+    </div>
+</section>
+
+<section class="company-info">
+    <div class="container">
+        <h2>&#x516C;&#x53F8;&#x4FE1;&#x606F;</h2>
+        <p><strong>&#x667A;&#x80FD;&#x4F01;&#x4E1A;&#x96C6;&#x56E2;</strong></p>
+        <p>我们是一家在比利时注册并在全球运营的企业。出于安全和隐私原因，我们使用联系表单作为主要沟通渠道。另见 <a href="legal.html">法律与政策页面</a>。</p>
+        <div class="social-links">
+            <a href="https://www.linkedin.com/in/zsomogyi" target="_blank" rel="noopener" class="linkedin-link">
+                <i class="fab fa-linkedin"></i> &#x5728; LinkedIn &#x4E0A;&#x4E0E;&#x6211;&#x4EEC;&#x8054;&#x7CFB;
+            </a>
+        </div>
+    </div>
+</section>
+
+<section class="cta">
+    <div class="container">
+        <h2>&#x51C6;&#x5907;&#x597D;&#x8FCE;&#x63A5; AI &#x9A71;&#x52A8;&#x7684;&#x8F6C;&#x578B;&#x4E86;&#x5417;&#xFF1F;</h2>
+        <p>&#x8BA9;&#x6211;&#x4EEC;&#x5F00;&#x59CB;&#x5BF9;&#x8BDD;&#x3002;&#x4ECA;&#x5929;&#x5C31;&#x8054;&#x7CFB;&#x6211;&#x4EEC;&#xFF0C;&#x4E3A;&#x60A8;&#x7684;&#x4F01;&#x4E1A;&#x8FC8;&#x51FA;&#x521B;&#x65B0;&#x89E3;&#x51B3;&#x65B9;&#x6848;&#x7684;&#x7B2C;&#x4E00;&#x6B65;&#x3002;</p>
+        <a href="#contact" class="btn">&#x5F00;&#x542F;&#x60A8;&#x7684;&#x65C5;&#x7A0B;</a>
+    </div>
+</section>
+
+
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&#xA9; 2025 &#x667A;&#x80FD;&#x4F01;&#x4E1A;&#x96C6;&#x56E2;&#x3002;&#x4FDD;&#x7559;&#x6240;&#x6709;&#x6743;&#x5229;&#x3002;</p>
+        </div>
+    </footer>
+
+    <script src="/js/swiper-bundle.min.js"></script>
+    <script src="/js/cdn.min.js" defer></script>
+    <script src="/js/gsap.min.js"></script>
+    <script src="/js/DrawSVGPlugin.min.js"></script>
+
+    <script type="module" src="/js/themeToggle.js"></script>
+    <script type="module">
+        import { toggleTheme, getCurrentTheme } from '/js/themeToggle.js';
+        const checkbox = document.getElementById('theme-checkbox');
+        const themeLabel = document.getElementById('theme-label');
+
+        if (getCurrentTheme() === 'dark') {
+            checkbox.checked = true;
+            themeLabel.textContent = '深色模式';
+        } else {
+            themeLabel.textContent = '浅色模式';
+        }
+
+        checkbox.addEventListener('change', () => {
+            toggleTheme();
+            themeLabel.textContent = checkbox.checked ? '深色模式' : '浅色模式';
+        });
+    </script>
+
+    <button id="back-to-top" aria-label="Back to Top">&#x9876;&#x90E8;</button>
+
+    
+    <script>
+        gsap.registerPlugin(DrawSVGPlugin);
+        window.onload = function () {
+            gsap.from(".hero h2", { duration: 1.2, opacity: 0, y: -50, ease: "power2.out" });
+            gsap.from(".hero h3", { duration: 1.2, opacity: 0, y: 50, ease: "power2.out", delay: 0.2 });
+            gsap.from(".contact-form", { duration: 1, opacity: 0, y: 20, ease: "power2.out", delay: 0.4 });
+            gsap.from(".company-info", { duration: 1, opacity: 0, y: 20, ease: "power2.out", delay: 0.6 });
+            gsap.from(".cta h2", { duration: 1, opacity: 0, y: -20, ease: "power2.out", delay: 0.8 });
+            gsap.from(".cta p", { duration: 1, opacity: 0, y: 20, ease: "power2.out", delay: 1 });
+            gsap.from(".cta .btn", { duration: 1, opacity: 0, scale: 0.8, ease: "back.out(1.7)", delay: 1.2 });
+        };
+    </script>
+
+    <script>
+        const enquiryType = document.getElementById("enquiryType");
+        const extraFields = document.getElementById("extraFields");
+        const schoolField = document.getElementById("schoolField");
+
+        function toggleExtraFields() {
+            if (enquiryType.value === "trial") {
+                extraFields.style.display = "block";
+                schoolField.style.display = "none";
+            } else if (enquiryType.value === "students") {
+                extraFields.style.display = "block";
+                schoolField.style.display = "block";
+            } else {
+                extraFields.style.display = "none";
+                schoolField.style.display = "none";
+            }
+        }
+        enquiryType.addEventListener("change", toggleExtraFields);
+
+        const form = document.querySelector("form");
+        const status = document.getElementById("form-status");
+
+        form.addEventListener("submit", async function (e) {
+            e.preventDefault();
+            const formData = new FormData(form);
+
+            try {
+                const response = await fetch(form.action, {
+                    method: "POST",
+                    body: formData,
+                    headers: { 'Accept': 'application/json' }
+                });
+
+                if (response.ok) {
+                    form.reset();
+                    status.style.display = "block";
+                    status.style.color = "green";
+                    status.textContent = "&#x2705; &#x60A8;&#x7684;&#x6D88;&#x606F;&#x5DF2;&#x6210;&#x529F;&#x53D1;&#x9001;&#xFF01;";
+                } else {
+                    status.style.display = "block";
+                    status.style.color = "red";
+                    status.textContent = "&#x26A0;&#xFE0F; &#x51FA;&#x9519;&#x4E86;&#xFF01;&#x8BF7;&#x91CD;&#x8BD5;&#x3002;";
+                }
+            } catch (error) {
+                status.style.display = "block";
+                status.style.color = "red";
+                status.textContent = "&#x26A0;&#xFE0F; &#x7F51;&#x7EDC;&#x9519;&#x8BEF;&#x3002;&#x8BF7;&#x7A0D;&#x540E;&#x518D;&#x8BD5;&#x3002;";
+            }
+        });
+    </script>
+
+</body>
+</html>

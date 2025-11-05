@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="ja" dir="ltr">
+<head>
+    <meta name="robots" content="index, follow" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <meta name="description" content='The Intelligent Enterprise Group&#x306E;&#x6CD5;&#x7684;&#x6761;&#x4EF6;&#x3001;&#x30E9;&#x30A4;&#x30BB;&#x30F3;&#x30B9;&#x3001;&#x30D7;&#x30E9;&#x30A4;&#x30D0;&#x30B7;&#x30FC;&#x3001;&#x30AF;&#x30C3;&#x30AD;&#x30FC;&#x30DD;&#x30EA;&#x30B7;&#x30FC;&#x3092;&#x3054;&#x78BA;&#x8A8D;&#x304F;&#x3060;&#x3055;&#x3044;&#x3002;&#x5F53;&#x793E;&#x306F;&#x900F;&#x660E;&#x6027;&#x3001;GDPR&#x6E96;&#x62E0;&#x3001;&#x30C7;&#x30FC;&#x30BF;&#x4FDD;&#x8B77;&#x306B;&#x53D6;&#x308A;&#x7D44;&#x3093;&#x3067;&#x3044;&#x307E;&#x3059;&#x3002;' />
+    <title>&#x6CD5;&#x52D9;&#x30FB;&#x30DD;&#x30EA;&#x30B7;&#x30FC; | The Intelligent Enterprise Group</title>
+
+    <style>
+        html { background-color: #3B3A47; }
+    </style>
+    <script>
+        (function () {
+            const key = 'preferredTheme';
+            const stored = localStorage.getItem(key);
+            const systemDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+            const theme = stored || (systemDark ? 'dark' : 'light');
+            if (theme === 'dark') {
+                document.documentElement.classList.add('dark-mode');
+            }
+        })();
+    </script>
+
+
+        <link rel="alternate" hreflang="en" href="https://theintelligententerprisegroup.com/legal.html" />
+        <link rel="alternate" hreflang="fr" href="https://theintelligententerprisegroup.com/fr/legal.html" />
+        <link rel="alternate" hreflang="de" href="https://theintelligententerprisegroup.com/de/legal.html" />
+        <link rel="alternate" hreflang="es" href="https://theintelligententerprisegroup.com/es/legal.html" />
+        <link rel="alternate" hreflang="pt" href="https://theintelligententerprisegroup.com/pt/legal.html" />
+        <link rel="alternate" hreflang="zh" href="https://theintelligententerprisegroup.com/zh/legal.html" />
+        <link rel="alternate" hreflang="ja" href="https://theintelligententerprisegroup.com/ja/legal.html" />
+        <link rel="alternate" hreflang="ar" href="https://theintelligententerprisegroup.com/ar/legal.html" />
+
+
+    <link rel="alternate" hreflang="x-default" href="https://theintelligententerprisegroup.com/legal.html" />
+
+    <link rel="canonical" href="https://theintelligententerprisegroup.com/ja/legal.html" />
+
+
+    <link rel="stylesheet" href="/css/styles.css" />
+    <link rel="stylesheet" href="/css/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="/css/all.min.css" />
+
+    <script src="/js/lang-switcher.js" defer></script>
+
+    <script>
+        (function () {
+            if (localStorage.getItem('currentLang')) return;
+            const supported = [
+                     { code: "en" } ,
+                     { code: "fr" } ,
+                     { code: "de" } ,
+                     { code: "es" } ,
+                     { code: "pt" } ,
+                     { code: "zh" } ,
+                     { code: "ja" } ,
+                     { code: "ar" } 
+            ];
+            const defaultLang = "ja";
+            const navLangs = navigator.languages || [navigator.language || navigator.userLanguage];
+            let detected = null;
+            for (const nav of navLangs) {
+                const code = nav.toLowerCase().split('-')[0];
+                if (supported.find(s => s.code.toLowerCase() === code)) {
+                    detected = code;
+                    break;
+                }
+            }
+            const lang = detected || defaultLang;
+            localStorage.setItem('currentLang', lang);
+            document.documentElement.lang = lang;
+        })();
+    </script>
+
+    <!-- Organization structured data (JSON-LD) -->
+    <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "Organization",
+          "name": "The Intelligent Enterprise Group",
+          "url": "https://theintelligententerprisegroup.com/",
+          "logo": "https://theintelligententerprisegroup.com/images/tieg-logo.png",
+          "sameAs": []
+        }
+    </script>
+    <link rel="icon" href="/favicon.ico" />
+    <link rel="apple-touch-icon" href="/images/apple-touch-icon.png" />
+
+    
+
+</head>
+<body>
+    <header x-data="{ open: false }">
+        <div class="container header-top">
+            <div class="logo"></div>
+            <div class="theme-switch-wrapper">
+                <label class="theme-switch">
+                    <input type="checkbox" id="theme-checkbox" />
+                    <span class="slider round"></span>
+                </label>
+                <span id="theme-label">ライトモード</span>
+                <span class="lang-switcher">
+                    <label for="lang-select" class="lang-label">🌐 言語:</label>
+
+                    <!-- Language switcher -->
+                    <select id="lang-select" class="lang-select">
+                        <option value="en" data-path="/">English</option>
+                        <option value="fr" data-path="/fr/">Fran&#xE7;ais</option>
+                        <option value="de" data-path="/de/">Deutsch</option>
+                        <option value="es" data-path="/es/">Espa&#xF1;ol</option>
+                        <option value="pt" data-path="/pt/">Portugu&#xEA;s</option>
+                        <option value="zh" data-path="/zh/">&#x4E2D;&#x6587;</option>
+                        <option value="ja" data-path="/ja/">&#x65E5;&#x672C;&#x8A9E;</option>
+                        <option value="ar" data-path="/ar/">&#x627;&#x644;&#x639;&#x631;&#x628;&#x64A;&#x629;</option>
+                    </select>
+
+                </span>
+            </div>
+        </div>
+        
+        <div class="container header-nav">
+            <button @click="open = !open" class="menu-toggle" aria-label="Toggle Menu">
+                <svg width="24" height="24" viewBox="0 0 24 24">
+                    <path fill="var(--nav-link-color)" d="M3 6h18v2H3V6zm0 5h18v2H3v-2zm0 5h18v2H3v-2z" />
+                </svg>
+            </button>
+
+            <nav class="main-nav" :class="{ 'open': open }">
+                <ul>
+                    <li><a href="index.html" class="">&#x30DB;&#x30FC;&#x30E0;</a></li>
+                    <li><a href="about.html" class="">&#x79C1;&#x305F;&#x3061;&#x306B;&#x3064;&#x3044;&#x3066;</a></li>
+                    <li><a href="services.html" class="">&#x30B5;&#x30FC;&#x30D3;&#x30B9;&#x3068;&#x30BD;&#x30EA;&#x30E5;&#x30FC;&#x30B7;&#x30E7;&#x30F3;</a></li>
+                    <li><a href="case-studies.html" class="">&#x4E8B;&#x4F8B;&#x7814;&#x7A76;</a></li>
+                    <li><a href="resources.html" class="">&#x30EA;&#x30BD;&#x30FC;&#x30B9;&#x3068;&#x30A4;&#x30F3;&#x30B5;&#x30A4;&#x30C8;</a></li>
+                    <li><a href="trial.html" class="">&#x30C8;&#x30E9;&#x30A4;&#x30A2;&#x30EB;</a></li>
+                    <li><a href="pricing.html" class="">&#x6599;&#x91D1;</a></li>
+                    <li><a href="partners.html" class="">&#x30D1;&#x30FC;&#x30C8;&#x30CA;&#x30FC;&#x3068;&#x30A2;&#x30E9;&#x30A4;&#x30A2;&#x30F3;&#x30B9;</a></li>                    
+                    <li><a href="contact.html" class="">&#x304A;&#x554F;&#x3044;&#x5408;&#x308F;&#x305B;&#x30FB;&#x76F8;&#x8AC7;</a></li>
+                    <li class="has-submenu"
+                        x-data="{ openSub: false }"
+                        @mouseenter="openSub = true"
+                        @mouseleave="openSub = false">
+                      <button @click="openSub = !openSub"
+                              aria-haspopup="true"
+                              :aria-expanded="openSub.toString()">
+                        &#x60C5;&#x5831;
+                        <svg width="12" height="12" viewBox="0 0 12 12" aria-hidden="true">
+                          <path d="M3 4l3 3 3-3" fill="currentColor"/>
+                        </svg>
+                      </button>
+                      <ul class="submenu" x-show="openSub" @click.outside="openSub = false">
+                        <li><a href="careers.html" class="">&#x63A1;&#x7528;&#x60C5;&#x5831;</a></li>
+                        <li><a href="faqs.html" class="">&#x3088;&#x304F;&#x3042;&#x308B;&#x8CEA;&#x554F;</a></li>
+                        <li><a href="legal.html" class="active">&#x6CD5;&#x52D9;&#x3068;&#x30DD;&#x30EA;&#x30B7;&#x30FC;</a></li>
+                      </ul>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        
+<section class="hero">
+    <div class="container">
+        <h2>&#x6CD5;&#x52D9;&#x30FB;&#x30DD;&#x30EA;&#x30B7;&#x30FC;</h2>
+        <h3>当社の法的条件、ポリシー、実務をご確認ください。<br />当社は透明性、プライバシー、そして欧州および国際規制の遵守に取り組んでいます。</h3>
+    </div>
+</section>
+
+<section class="legal">
+    <div class="container legal-container">
+                <h2>&#x5229;&#x7528;&#x898F;&#x7D04;</h2>
+                        <p>本ウェブサイト（「サイト」）および当社サービスにアクセス・利用することで、本利用規約に同意したものとみなされます。本規約のいずれかに同意できない場合は、サイトの利用をお控えください。</p>
+                        <div class="subsection">
+                            <h3>&#x5229;&#x7528;&#x3068;&#x767B;&#x9332;&#x30A2;&#x30AF;&#x30BB;&#x30B9;</h3>
+
+
+
+
+                                        <p>本サイトのコンテンツに個人的かつ非商業的な目的でアクセス・利用する限定的かつ非独占的なライセンスが付与されます。無断での使用、複製、配布は禁止されています。</p>
+                                        <p>当社サービスは「現状有姿」で提供され、いかなる保証も行いません。The Intelligent Enterprise Groupは、サイト利用に起因する直接的、間接的、偶発的、または結果的損害について一切責任を負いません。</p>
+                        </div>
+                <h2>&#x30E9;&#x30A4;&#x30BB;&#x30F3;&#x30B9;&#x3068;&#x8FD4;&#x91D1;</h2>
+                        <p>当社はトライアルライセンス（デスクトップソフトウェアのみ）と商用ライセンス（デスクトップおよびサーバーソフトウェア）を提供します。</p>
+                        <p>トライアルライセンスは厳格に非商用で、アクティベーションから6か月間有効であり、更新はできません。</p>
+                        <p>トライアルライセンスにはサポートは含まれません。</p>
+                        <p>商用ライセンスはユーザーごとに付与され、1年間有効で、毎年更新が必要です。</p>
+                        <p>各ユーザーは自身のライセンスを保持する必要があります。</p>
+                        <p>サーバーソフトウェアは商用ライセンスでのみ利用可能です。</p>
+                        <p>ソフトウェアにはライセンスチェック機能が組み込まれています。ライセンスが期限切れになると、猶予期間なしで即座に動作を停止します。</p>
+                        <p>すべての料金は返金不可です。これにはトライアルライセンスの事務手数料および商用ライセンス料金が含まれ、ライセンス期間終了前に利用を中止した場合でも返金されません。</p>
+                        <p>ライセンス終了または失効時には、5営業日以内にソフトウェアのすべてのコピーをアンインストールし、破棄する必要があります。</p>
+                        <div class="subsection">
+                            <h3>&#x5236;&#x9650;&#x4E8B;&#x9805;</h3>
+
+
+                                    <ul>
+                                                <li>
+                                                    ソフトウェアを再配布、譲渡、サブライセンス、貸与、または第三者へのサービスとして提供することはできません。
+                                                </li>
+                                                <li>
+                                                    ソフトウェアのリバースエンジニアリング、逆コンパイル、逆アセンブル、翻訳は禁止されています。
+                                                </li>
+                                                <li>
+                                                    各ライセンスは個人的かつ譲渡不可であり、明示的に付与された権利に限定されます。
+                                                </li>
+                                    </ul>
+
+
+                        </div>
+                <h2>&#x30D7;&#x30E9;&#x30A4;&#x30D0;&#x30B7;&#x30FC;&#x30DD;&#x30EA;&#x30B7;&#x30FC;</h2>
+                        <p>当社は世界中のクライアントにサービスを提供するベルギー企業として、一般データ保護規則（GDPR）およびその他関連するデータ保護法を厳格に遵守しています。</p>
+                        <div class="subsection">
+                            <h3>GDPR&#x306B;&#x57FA;&#x3065;&#x304F;&#x304A;&#x5BA2;&#x69D8;&#x306E;&#x6A29;&#x5229;</h3>
+
+                                    <p>お客様には以下の権利があります:</p>
+
+                                    <ul>
+                                                <li>自身の個人データへのアクセス</li>
+                                                <li>訂正または補完の要求</li>
+                                                <li>データの削除または処理制限の要求</li>
+                                                <li>特定の処理活動への異議申立て</li>
+                                                <li>データを可搬形式で受け取る権利</li>
+                                    </ul>
+
+                                    <p>当社はお問い合わせ対応やサービス提供に必要なデータのみを収集します。これには氏名、メールアドレス、メッセージ内容が含まれます。すべての個人データは安全に保管され、同意または契約履行を法的根拠として処理されます。個人データは必要な期間のみ保持し、法的要件または信頼できるサービスプロバイダーへの提供を除き、第三者と共有することはありません。</p>
+
+                        </div>
+                <h2>&#x30AF;&#x30C3;&#x30AD;&#x30FC;&#x30DD;&#x30EA;&#x30B7;&#x30FC;</h2>
+                        <p>当サイトはユーザー体験を向上させ、テーマ設定を管理するためにクッキーとローカルストレージを使用しています。</p>
+                        <p>クッキーは分析やコンテンツのパーソナライズにも使用される場合があります。</p>
+                        <div class="subsection">
+                            <h3>&#x4F7F;&#x7528;&#x3059;&#x308B;&#x30AF;&#x30C3;&#x30AD;&#x30FC;&#x306E;&#x7A2E;&#x985E;</h3>
+
+
+                                    <ul>
+                                                <li>
+ <strong>&#x5FC5;&#x9808;&#x30AF;&#x30C3;&#x30AD;&#x30FC;:</strong>                                                      基本的なサイト機能に必要です。
+                                                </li>
+                                                <li>
+ <strong>&#x5206;&#x6790;&#x30AF;&#x30C3;&#x30AD;&#x30FC;:</strong>                                                      ユーザーの利用状況を理解するのに役立ちます。
+                                                </li>
+                                                <li>
+ <strong>&#x8A2D;&#x5B9A;&#x30AF;&#x30C3;&#x30AD;&#x30FC;:</strong>                                                      テーマやレイアウト設定を保存します。
+                                                </li>
+                                    </ul>
+
+
+                                        <p>当サイトを利用することで、当社によるクッキー使用に同意したものとみなされます。ブラウザ設定でクッキーの管理が可能です。</p>
+                        </div>
+                <h2>&#x77E5;&#x7684;&#x8CA1;&#x7523;&#x6A29;</h2>
+                        <p>本サイト上のすべてのコンテンツ、デザイン、ロゴ、画像、テキスト、その他の資料はThe Intelligent Enterprise Groupまたは第三者ライセンサーに帰属します。</p>
+                        <p>事前の書面による同意なしに、コンテンツを複製、再発行、配布することはできません。</p>
+                <h2>&#x514D;&#x8CAC;&#x4E8B;&#x9805;</h2>
+                        <p>本サイトに掲載される情報は一般的な情報提供のみを目的としています。</p>
+                        <p>正確性を期していますが、The Intelligent Enterprise Groupは本サイト上の情報の完全性や信頼性を保証しません。</p>
+                        <p>コンテンツの利用は自己責任で行ってください。</p>
+                        <p>当社はコンテンツの誤りや欠落、またはその利用に起因する損失や損害について一切責任を負いません。</p>
+                    <blockquote>本サイトの情報は、明示または黙示を問わず、いかなる保証もなく「現状有姿」で提供されます。</blockquote>
+                <h2>&#x6E96;&#x62E0;&#x6CD5;&#x3068;&#x7D1B;&#x4E89;&#x89E3;&#x6C7A;</h2>
+                        <p>本規約および本サイトやサービスに関連するすべての法的事項は、ベルギー法および該当する場合は欧州連合法に準拠します。</p>
+                        <p>紛争が生じた場合、当事者は友好的な解決を試みるものとします。</p>
+                        <p>合意に至らない場合、法的手続きはベルギー・ゲントの裁判所の専属管轄に服することに同意します。</p>
+                        <p>法的通知: The Intelligent Enterprise Group, SP | Scheldestraat 82, 9240 Zele, Belgium | CBE: 0711.654.752 | VAT: BE 0711.654.752</p>
+                <h2>&#x30D7;&#x30ED;&#x30E2;&#x30FC;&#x30B7;&#x30E7;&#x30F3;&#x5229;&#x7528;</h2>
+                        <p>書面で別途合意がない限り、当社は納品物においてお客様の組織を参照し、プロモーション資料にお客様の名称やロゴを使用する場合があります。</p>
+                        <p>そのような利用は、公正かつ正確で、適用される法律に従って行われます。</p>
+                        <p>参照を希望されない場合は、当社までご連絡いただき、オプトアウトしてください。</p>
+                <h2>&#x66F4;&#x65B0;&#x3068;&#x6539;&#x8A02;</h2>
+                        <p>当社はこれらの法的ポリシーをいつでも更新または改訂する権利を留保します。</p>
+                        <p>変更は本ページに掲載され、サイトを継続して利用することで、これらの変更を受け入れたものとみなされます。</p>
+                <h2>&#x6CD5;&#x52D9;&#x95A2;&#x9023;&#x306E;&#x304A;&#x554F;&#x3044;&#x5408;&#x308F;&#x305B;</h2>
+                        <p>当社の法務・ポリシーに関してご質問やご不明点がある場合は、法務部門までご連絡ください。</p>
+                    <a href="contact.html" class="btn">&#x6CD5;&#x52D9;&#x3078;&#x306E;&#x304A;&#x554F;&#x3044;&#x5408;&#x308F;&#x305B;</a>
+    </div>
+</section>
+
+<section class="cta">
+    <div class="container">
+        <h2>&#x3055;&#x3089;&#x306B;&#x60C5;&#x5831;&#x304C;&#x5FC5;&#x8981;&#x3067;&#x3059;&#x304B;&#xFF1F;</h2>
+        <p>&#x5F53;&#x793E;&#x306E;&#x6CD5;&#x7684;&#x30DD;&#x30EA;&#x30B7;&#x30FC;&#x306B;&#x3064;&#x3044;&#x3066;&#x3054;&#x8CEA;&#x554F;&#x3084;&#x78BA;&#x8A8D;&#x304C;&#x5FC5;&#x8981;&#x306A;&#x5834;&#x5408;&#x306F;&#x3001;&#x3069;&#x3046;&#x305E;&#x304A;&#x6C17;&#x8EFD;&#x306B;&#x304A;&#x554F;&#x3044;&#x5408;&#x308F;&#x305B;&#x304F;&#x3060;&#x3055;&#x3044;&#x3002;</p>
+        <a href="contact.html" class="btn">&#x304A;&#x554F;&#x3044;&#x5408;&#x308F;&#x305B;</a>
+    </div>
+</section>
+
+
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&#xA9; 2025 The Intelligent Enterprise Group. &#x7121;&#x65AD;&#x8EE2;&#x8F09;&#x3092;&#x7981;&#x3058;&#x307E;&#x3059;&#x3002;</p>
+        </div>
+    </footer>
+
+    <script src="/js/swiper-bundle.min.js"></script>
+    <script src="/js/cdn.min.js" defer></script>
+    <script src="/js/gsap.min.js"></script>
+    <script src="/js/DrawSVGPlugin.min.js"></script>
+
+    <script type="module" src="/js/themeToggle.js"></script>
+    <script type="module">
+        import { toggleTheme, getCurrentTheme } from '/js/themeToggle.js';
+        const checkbox = document.getElementById('theme-checkbox');
+        const themeLabel = document.getElementById('theme-label');
+
+        if (getCurrentTheme() === 'dark') {
+            checkbox.checked = true;
+            themeLabel.textContent = 'ダークモード';
+        } else {
+            themeLabel.textContent = 'ライトモード';
+        }
+
+        checkbox.addEventListener('change', () => {
+            toggleTheme();
+            themeLabel.textContent = checkbox.checked ? 'ダークモード' : 'ライトモード';
+        });
+    </script>
+
+    <button id="back-to-top" aria-label="Back to Top">&#x30C8;&#x30C3;&#x30D7;</button>
+
+    
+    <script>
+        gsap.registerPlugin(DrawSVGPlugin);
+        window.onload = function () {
+            gsap.from(".hero h2", { duration: 1.2, opacity: 0, y: -50, ease: "power2.out" });
+            gsap.from(".hero h3", { duration: 1.2, opacity: 0, y: 50, ease: "power2.out", delay: 0.2 });
+            gsap.from(".legal-container", { duration: 1, opacity: 0, y: 20, ease: "power2.out", delay: 0.4 });
+            gsap.from(".cta h2", { duration: 1, opacity: 0, y: -20, ease: "power2.out", delay: 0.8 });
+            gsap.from(".cta p", { duration: 1, opacity: 0, y: 20, ease: "power2.out", delay: 1 });
+            gsap.from(".cta .btn", { duration: 1, opacity: 0, scale: 0.8, ease: "back.out(1.7)", delay: 1.2 });
+        };
+    </script>
+
+</body>
+</html>

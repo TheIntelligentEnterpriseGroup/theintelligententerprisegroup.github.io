@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="fr" dir="ltr">
+<head>
+    <meta name="robots" content="index, follow" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <meta name="description" content='Consultez les conditions l&#xE9;gales, les licences, la politique de confidentialit&#xE9; et la politique relative aux cookies de The Intelligent Enterprise Group. Nous nous engageons &#xE0; la transparence, au respect du RGPD et &#xE0; la protection de vos donn&#xE9;es.' />
+    <title>Mentions l&#xE9;gales &amp; Politiques | The Intelligent Enterprise Group</title>
+
+    <style>
+        html { background-color: #3B3A47; }
+    </style>
+    <script>
+        (function () {
+            const key = 'preferredTheme';
+            const stored = localStorage.getItem(key);
+            const systemDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+            const theme = stored || (systemDark ? 'dark' : 'light');
+            if (theme === 'dark') {
+                document.documentElement.classList.add('dark-mode');
+            }
+        })();
+    </script>
+
+
+        <link rel="alternate" hreflang="en" href="https://theintelligententerprisegroup.com/legal.html" />
+        <link rel="alternate" hreflang="fr" href="https://theintelligententerprisegroup.com/fr/legal.html" />
+        <link rel="alternate" hreflang="de" href="https://theintelligententerprisegroup.com/de/legal.html" />
+        <link rel="alternate" hreflang="es" href="https://theintelligententerprisegroup.com/es/legal.html" />
+        <link rel="alternate" hreflang="pt" href="https://theintelligententerprisegroup.com/pt/legal.html" />
+        <link rel="alternate" hreflang="zh" href="https://theintelligententerprisegroup.com/zh/legal.html" />
+        <link rel="alternate" hreflang="ja" href="https://theintelligententerprisegroup.com/ja/legal.html" />
+        <link rel="alternate" hreflang="ar" href="https://theintelligententerprisegroup.com/ar/legal.html" />
+
+
+    <link rel="alternate" hreflang="x-default" href="https://theintelligententerprisegroup.com/legal.html" />
+
+    <link rel="canonical" href="https://theintelligententerprisegroup.com/fr/legal.html" />
+
+
+    <link rel="stylesheet" href="/css/styles.css" />
+    <link rel="stylesheet" href="/css/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="/css/all.min.css" />
+
+    <script src="/js/lang-switcher.js" defer></script>
+
+    <script>
+        (function () {
+            if (localStorage.getItem('currentLang')) return;
+            const supported = [
+                     { code: "en" } ,
+                     { code: "fr" } ,
+                     { code: "de" } ,
+                     { code: "es" } ,
+                     { code: "pt" } ,
+                     { code: "zh" } ,
+                     { code: "ja" } ,
+                     { code: "ar" } 
+            ];
+            const defaultLang = "fr";
+            const navLangs = navigator.languages || [navigator.language || navigator.userLanguage];
+            let detected = null;
+            for (const nav of navLangs) {
+                const code = nav.toLowerCase().split('-')[0];
+                if (supported.find(s => s.code.toLowerCase() === code)) {
+                    detected = code;
+                    break;
+                }
+            }
+            const lang = detected || defaultLang;
+            localStorage.setItem('currentLang', lang);
+            document.documentElement.lang = lang;
+        })();
+    </script>
+
+    <!-- Organization structured data (JSON-LD) -->
+    <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "Organization",
+          "name": "The Intelligent Enterprise Group",
+          "url": "https://theintelligententerprisegroup.com/",
+          "logo": "https://theintelligententerprisegroup.com/images/tieg-logo.png",
+          "sameAs": []
+        }
+    </script>
+    <link rel="icon" href="/favicon.ico" />
+    <link rel="apple-touch-icon" href="/images/apple-touch-icon.png" />
+
+    
+
+</head>
+<body>
+    <header x-data="{ open: false }">
+        <div class="container header-top">
+            <div class="logo"></div>
+            <div class="theme-switch-wrapper">
+                <label class="theme-switch">
+                    <input type="checkbox" id="theme-checkbox" />
+                    <span class="slider round"></span>
+                </label>
+                <span id="theme-label">Mode clair</span>
+                <span class="lang-switcher">
+                    <label for="lang-select" class="lang-label">🌐 Langue :</label>
+
+                    <!-- Language switcher -->
+                    <select id="lang-select" class="lang-select">
+                        <option value="en" data-path="/">English</option>
+                        <option value="fr" data-path="/fr/">Fran&#xE7;ais</option>
+                        <option value="de" data-path="/de/">Deutsch</option>
+                        <option value="es" data-path="/es/">Espa&#xF1;ol</option>
+                        <option value="pt" data-path="/pt/">Portugu&#xEA;s</option>
+                        <option value="zh" data-path="/zh/">&#x4E2D;&#x6587;</option>
+                        <option value="ja" data-path="/ja/">&#x65E5;&#x672C;&#x8A9E;</option>
+                        <option value="ar" data-path="/ar/">&#x627;&#x644;&#x639;&#x631;&#x628;&#x64A;&#x629;</option>
+                    </select>
+
+                </span>
+            </div>
+        </div>
+        
+        <div class="container header-nav">
+            <button @click="open = !open" class="menu-toggle" aria-label="Toggle Menu">
+                <svg width="24" height="24" viewBox="0 0 24 24">
+                    <path fill="var(--nav-link-color)" d="M3 6h18v2H3V6zm0 5h18v2H3v-2zm0 5h18v2H3v-2z" />
+                </svg>
+            </button>
+
+            <nav class="main-nav" :class="{ 'open': open }">
+                <ul>
+                    <li><a href="index.html" class="">Accueil</a></li>
+                    <li><a href="about.html" class="">&#xC0; propos</a></li>
+                    <li><a href="services.html" class="">Services &amp; Solutions</a></li>
+                    <li><a href="case-studies.html" class="">&#xC9;tudes de cas</a></li>
+                    <li><a href="resources.html" class="">Ressources &amp; Analyses</a></li>
+                    <li><a href="trial.html" class="">Essai</a></li>
+                    <li><a href="pricing.html" class="">Tarifs</a></li>
+                    <li><a href="partners.html" class="">Partenaires &amp; Alliances</a></li>                    
+                    <li><a href="contact.html" class="">Contact &amp; Consultation</a></li>
+                    <li class="has-submenu"
+                        x-data="{ openSub: false }"
+                        @mouseenter="openSub = true"
+                        @mouseleave="openSub = false">
+                      <button @click="openSub = !openSub"
+                              aria-haspopup="true"
+                              :aria-expanded="openSub.toString()">
+                        Infos
+                        <svg width="12" height="12" viewBox="0 0 12 12" aria-hidden="true">
+                          <path d="M3 4l3 3 3-3" fill="currentColor"/>
+                        </svg>
+                      </button>
+                      <ul class="submenu" x-show="openSub" @click.outside="openSub = false">
+                        <li><a href="careers.html" class="">Carri&#xE8;res</a></li>
+                        <li><a href="faqs.html" class="">FAQs</a></li>
+                        <li><a href="legal.html" class="active">Mentions l&#xE9;gales &amp; Politiques</a></li>
+                      </ul>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        
+<section class="hero">
+    <div class="container">
+        <h2>Mentions l&#xE9;gales &amp; Politiques</h2>
+        <h3>Veuillez consulter nos conditions légales, politiques et pratiques.<br />Nous nous engageons à la transparence, à la confidentialité et au respect des réglementations européennes et internationales.</h3>
+    </div>
+</section>
+
+<section class="legal">
+    <div class="container legal-container">
+                <h2>Conditions d&#x2019;utilisation</h2>
+                        <p>En accédant à ce site web (« Site ») et à nos services, vous acceptez d’être lié par ces conditions d’utilisation.</p>
+                        <p>Si vous n’acceptez pas une partie de ces conditions, veuillez ne pas utiliser notre Site.</p>
+                        <div class="subsection">
+                            <h3>Utilisation &amp; Acc&#xE8;s enregistr&#xE9;</h3>
+
+
+
+
+                                        <p>Vous bénéficiez d’une licence limitée, non exclusive, pour accéder et utiliser le contenu de ce Site à des fins personnelles et non commerciales.</p>
+                                        <p>Toute utilisation, reproduction ou distribution non autorisée est interdite.</p>
+                                        <p>Nos services sont fournis « en l’état » sans aucune garantie.</p>
+                                        <p>The Intelligent Enterprise Group n’est pas responsable des dommages directs, indirects, accessoires ou consécutifs résultant de votre utilisation du Site.</p>
+                        </div>
+                <h2>Licences &amp; Remboursements</h2>
+                        <p>Nous proposons des licences d’essai (logiciel de bureau uniquement) et des licences commerciales (logiciel de bureau et serveur).</p>
+                        <p>Les licences d’essai sont strictement non commerciales, valables six (6) mois à compter de l’activation et ne peuvent pas être renouvelées.</p>
+                        <p>Aucune assistance n’est fournie dans le cadre d’une licence d’essai.</p>
+                        <p>Les licences commerciales sont accordées par utilisateur, valables un (1) an et doivent être renouvelées chaque année.</p>
+                        <p>Chaque utilisateur doit détenir sa propre licence.</p>
+                        <p>Le logiciel serveur est disponible uniquement sous licence commerciale.</p>
+                        <p>Le logiciel inclut une vérification de licence intégrée. Lorsqu’une licence expire, le logiciel cesse immédiatement de fonctionner sans période de grâce.</p>
+                        <p>Tous les frais sont non remboursables, y compris les frais administratifs des licences d’essai et les frais des licences commerciales, même si vous cessez d’utiliser le logiciel avant la fin de la période de validité.</p>
+                        <p>En cas de résiliation ou d’expiration de la licence, vous devez désinstaller et détruire toutes les copies du logiciel dans un délai de cinq (5) jours ouvrables.</p>
+                        <div class="subsection">
+                            <h3>Restrictions</h3>
+
+
+                                    <ul>
+                                                <li>
+                                                    Le logiciel ne peut pas être redistribué, transféré, sous‑licencié, loué ou fourni en tant que service à des tiers.
+                                                </li>
+                                                <li>
+                                                    L’ingénierie inverse, la décompilation, le désassemblage ou la traduction du logiciel sont interdits.
+                                                </li>
+                                                <li>
+                                                    Chaque licence est personnelle, non transférable et limitée aux droits expressément accordés.
+                                                </li>
+                                    </ul>
+
+
+                        </div>
+                <h2>Politique de confidentialit&#xE9;</h2>
+                        <p>En tant qu’entreprise belge au service de clients dans le monde entier, nous respectons strictement le Règlement général sur la protection des données (RGPD) et les autres lois pertinentes en matière de protection des données.</p>
+                        <div class="subsection">
+                            <h3>Vos droits en vertu du RGPD</h3>
+
+                                    <p>Vous avez le droit de :</p>
+
+                                    <ul>
+                                                <li>Accéder à vos données personnelles ;</li>
+                                                <li>Demander des corrections ou des compléments ;</li>
+                                                <li>Demander la suppression ou la limitation de vos données ;</li>
+                                                <li>Vous opposer à certaines activités de traitement ;</li>
+                                                <li>Recevoir vos données dans un format portable.</li>
+                                    </ul>
+
+                                    <p>Nous ne collectons que les données nécessaires pour répondre aux demandes ou fournir nos services. Cela inclut votre nom, votre adresse e‑mail et les détails de votre message. Toutes les données personnelles sont stockées en toute sécurité et traitées sur la base légale de votre consentement ou de l’exécution d’un contrat. Nous conservons les données personnelles uniquement aussi longtemps que nécessaire pour atteindre les objectifs définis et nous ne partageons pas les données avec des tiers, sauf obligation légale ou avec des prestataires de confiance sous accords stricts.</p>
+
+                        </div>
+                <h2>Politique relative aux cookies</h2>
+                        <p>Notre Site utilise des cookies et le stockage local pour améliorer l’expérience utilisateur et gérer les préférences de thème.</p>
+                        <p>Les cookies peuvent également être utilisés pour l’analyse et la personnalisation du contenu.</p>
+                        <div class="subsection">
+                            <h3>Types de cookies que nous utilisons</h3>
+
+
+                                    <ul>
+                                                <li>
+ <strong>Cookies essentiels :</strong>                                                      Nécessaires au fonctionnement de base du site.
+                                                </li>
+                                                <li>
+ <strong>Cookies analytiques :</strong>                                                      Nous aident à comprendre les habitudes d’utilisation.
+                                                </li>
+                                                <li>
+ <strong>Cookies de pr&#xE9;f&#xE9;rence :</strong>                                                      Enregistrent vos paramètres de thème et de mise en page.
+                                                </li>
+                                    </ul>
+
+
+                                        <p>En utilisant notre Site, vous consentez à l’utilisation de cookies. Vous pouvez gérer vos préférences en matière de cookies dans les paramètres de votre navigateur.</p>
+                        </div>
+                <h2>Propri&#xE9;t&#xE9; intellectuelle</h2>
+                        <p>Tout le contenu, les conceptions, logos, images, textes et autres éléments de ce Site appartiennent à The Intelligent Enterprise Group ou à ses concédants tiers.</p>
+                        <p>Vous ne pouvez pas reproduire, republier ou distribuer de contenu sans autorisation écrite préalable.</p>
+                <h2>Clause de non&#x2011;responsabilit&#xE9;</h2>
+                        <p>Les informations fournies sur ce Site le sont à titre informatif général uniquement.</p>
+                        <p>Bien que nous nous efforcions d’assurer l’exactitude, The Intelligent Enterprise Group ne garantit pas l’exhaustivité ou la fiabilité des informations présentes sur ce Site.</p>
+                        <p>Votre utilisation du contenu se fait à vos propres risques.</p>
+                        <p>Nous ne sommes pas responsables des erreurs ou omissions dans le contenu, ni des pertes ou dommages résultant de son utilisation.</p>
+                    <blockquote>Les informations de ce Site sont fournies « en l’état » sans aucune garantie, expresse ou implicite.</blockquote>
+                <h2>Droit applicable &amp; R&#xE8;glement des litiges</h2>
+                        <p>Ces conditions et toutes les questions juridiques liées à notre Site et à nos services sont régies par le droit belge et, le cas échéant, par le droit de l’Union européenne.</p>
+                        <p>En cas de litige, les parties s’efforceront de résoudre le différend à l’amiable.</p>
+                        <p>Si aucun accord n’est trouvé, vous acceptez que toute action ou procédure judiciaire relève de la compétence exclusive des tribunaux de Gand, Belgique.</p>
+                        <p>Mentions légales :The Intelligent Enterprise Group, SP | Scheldestraat 82, 9240 Zele, Belgique | BCE : 0711.654.752 | TVA : BE 0711.654.752</p>
+                <h2>Utilisation promotionnelle</h2>
+                        <p>Sauf accord écrit contraire, nous pouvons mentionner votre organisation dans les produits livrés et utiliser votre nom ou logo dans nos supports promotionnels.</p>
+                        <p>Toute utilisation sera équitable, exacte et conforme à la législation applicable.</p>
+                        <p>Si vous préférez ne pas être mentionné, veuillez nous contacter pour vous désinscrire.</p>
+                <h2>Mises &#xE0; jour et r&#xE9;visions</h2>
+                        <p>Nous nous réservons le droit de mettre à jour ou de réviser ces politiques légales à tout moment.</p>
+                        <p>Les modifications seront publiées sur cette page, et votre utilisation continue du Site vaut acceptation de ces changements.</p>
+                <h2>Contact pour les questions juridiques</h2>
+                        <p>Si vous avez des questions ou des préoccupations concernant nos mentions légales et politiques, veuillez contacter notre service juridique.</p>
+                    <a href="contact.html" class="btn">Contacter le service juridique</a>
+    </div>
+</section>
+
+<section class="cta">
+    <div class="container">
+        <h2>Besoin de plus d&#x2019;informations ?</h2>
+        <p>Si vous avez des questions ou souhaitez obtenir des pr&#xE9;cisions sur nos politiques l&#xE9;gales, n&#x2019;h&#xE9;sitez pas &#xE0; nous contacter.</p>
+        <a href="contact.html" class="btn">Nous contacter</a>
+    </div>
+</section>
+
+
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&#xA9; 2025 The Intelligent Enterprise Group. Tous droits r&#xE9;serv&#xE9;s.</p>
+        </div>
+    </footer>
+
+    <script src="/js/swiper-bundle.min.js"></script>
+    <script src="/js/cdn.min.js" defer></script>
+    <script src="/js/gsap.min.js"></script>
+    <script src="/js/DrawSVGPlugin.min.js"></script>
+
+    <script type="module" src="/js/themeToggle.js"></script>
+    <script type="module">
+        import { toggleTheme, getCurrentTheme } from '/js/themeToggle.js';
+        const checkbox = document.getElementById('theme-checkbox');
+        const themeLabel = document.getElementById('theme-label');
+
+        if (getCurrentTheme() === 'dark') {
+            checkbox.checked = true;
+            themeLabel.textContent = 'Mode sombre';
+        } else {
+            themeLabel.textContent = 'Mode clair';
+        }
+
+        checkbox.addEventListener('change', () => {
+            toggleTheme();
+            themeLabel.textContent = checkbox.checked ? 'Mode sombre' : 'Mode clair';
+        });
+    </script>
+
+    <button id="back-to-top" aria-label="Back to Top">Haut</button>
+
+    
+    <script>
+        gsap.registerPlugin(DrawSVGPlugin);
+        window.onload = function () {
+            gsap.from(".hero h2", { duration: 1.2, opacity: 0, y: -50, ease: "power2.out" });
+            gsap.from(".hero h3", { duration: 1.2, opacity: 0, y: 50, ease: "power2.out", delay: 0.2 });
+            gsap.from(".legal-container", { duration: 1, opacity: 0, y: 20, ease: "power2.out", delay: 0.4 });
+            gsap.from(".cta h2", { duration: 1, opacity: 0, y: -20, ease: "power2.out", delay: 0.8 });
+            gsap.from(".cta p", { duration: 1, opacity: 0, y: 20, ease: "power2.out", delay: 1 });
+            gsap.from(".cta .btn", { duration: 1, opacity: 0, scale: 0.8, ease: "back.out(1.7)", delay: 1.2 });
+        };
+    </script>
+
+</body>
+</html>

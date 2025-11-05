@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="ja" dir="ltr">
+<head>
+    <meta name="robots" content="index, follow" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <meta name="description" content='&#x308F;&#x305A;&#x304B;&#x20AC;39&#x3067;6&#x304B;&#x6708;&#x9593;&#x306E;AI&#x30C1;&#x30FC;&#x30E0;&#x30C8;&#x30E9;&#x30A4;&#x30A2;&#x30EB;&#x3092;&#x958B;&#x59CB;&#x3057;&#x307E;&#x3057;&#x3087;&#x3046;&#x3002;The Intelligent Enterprise Group&#x306E;&#x30C7;&#x30B9;&#x30AF;&#x30C8;&#x30C3;&#x30D7;&#x30A2;&#x30D7;&#x30EA;&#x30B1;&#x30FC;&#x30B7;&#x30E7;&#x30F3;&#x306B;&#x3001;&#x3059;&#x3079;&#x3066;&#x306E;&#x30B3;&#x30A2;AI&#x30A8;&#x30AD;&#x30B9;&#x30D1;&#x30FC;&#x30C8;&#x3001;&#x9069;&#x5FDC;&#x578B;&#x30E1;&#x30E2;&#x30EA;&#x3001;&#x30DE;&#x30EB;&#x30C1;&#x30D5;&#x30A9;&#x30FC;&#x30DE;&#x30C3;&#x30C8;&#x5B66;&#x7FD2;&#x3001;&#x30AA;&#x30D5;&#x30E9;&#x30A4;&#x30F3;&#x5BFE;&#x5FDC;&#x306E;&#x30A8;&#x30C3;&#x30B8;&#x6027;&#x80FD;&#x3092;&#x542B;&#x3081;&#x3066;&#x30D5;&#x30EB;&#x30A2;&#x30AF;&#x30BB;&#x30B9;&#x3067;&#x304D;&#x307E;&#x3059;&#x3002;' />
+    <title>AI&#x30C1;&#x30FC;&#x30E0;&#x30C8;&#x30E9;&#x30A4;&#x30A2;&#x30EB; | 6&#x304B;&#x6708;&#x30A2;&#x30AF;&#x30BB;&#x30B9; &#x2013; The Intelligent Enterprise Group</title>
+
+    <style>
+        html { background-color: #3B3A47; }
+    </style>
+    <script>
+        (function () {
+            const key = 'preferredTheme';
+            const stored = localStorage.getItem(key);
+            const systemDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+            const theme = stored || (systemDark ? 'dark' : 'light');
+            if (theme === 'dark') {
+                document.documentElement.classList.add('dark-mode');
+            }
+        })();
+    </script>
+
+
+        <link rel="alternate" hreflang="en" href="https://theintelligententerprisegroup.com/trial.html" />
+        <link rel="alternate" hreflang="fr" href="https://theintelligententerprisegroup.com/fr/trial.html" />
+        <link rel="alternate" hreflang="de" href="https://theintelligententerprisegroup.com/de/trial.html" />
+        <link rel="alternate" hreflang="es" href="https://theintelligententerprisegroup.com/es/trial.html" />
+        <link rel="alternate" hreflang="pt" href="https://theintelligententerprisegroup.com/pt/trial.html" />
+        <link rel="alternate" hreflang="zh" href="https://theintelligententerprisegroup.com/zh/trial.html" />
+        <link rel="alternate" hreflang="ja" href="https://theintelligententerprisegroup.com/ja/trial.html" />
+        <link rel="alternate" hreflang="ar" href="https://theintelligententerprisegroup.com/ar/trial.html" />
+
+
+    <link rel="alternate" hreflang="x-default" href="https://theintelligententerprisegroup.com/trial.html" />
+
+    <link rel="canonical" href="https://theintelligententerprisegroup.com/ja/trial.html" />
+
+
+    <link rel="stylesheet" href="/css/styles.css" />
+    <link rel="stylesheet" href="/css/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="/css/all.min.css" />
+
+    <script src="/js/lang-switcher.js" defer></script>
+
+    <script>
+        (function () {
+            if (localStorage.getItem('currentLang')) return;
+            const supported = [
+                     { code: "en" } ,
+                     { code: "fr" } ,
+                     { code: "de" } ,
+                     { code: "es" } ,
+                     { code: "pt" } ,
+                     { code: "zh" } ,
+                     { code: "ja" } ,
+                     { code: "ar" } 
+            ];
+            const defaultLang = "ja";
+            const navLangs = navigator.languages || [navigator.language || navigator.userLanguage];
+            let detected = null;
+            for (const nav of navLangs) {
+                const code = nav.toLowerCase().split('-')[0];
+                if (supported.find(s => s.code.toLowerCase() === code)) {
+                    detected = code;
+                    break;
+                }
+            }
+            const lang = detected || defaultLang;
+            localStorage.setItem('currentLang', lang);
+            document.documentElement.lang = lang;
+        })();
+    </script>
+
+    <!-- Organization structured data (JSON-LD) -->
+    <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "Organization",
+          "name": "The Intelligent Enterprise Group",
+          "url": "https://theintelligententerprisegroup.com/",
+          "logo": "https://theintelligententerprisegroup.com/images/tieg-logo.png",
+          "sameAs": []
+        }
+    </script>
+    <link rel="icon" href="/favicon.ico" />
+    <link rel="apple-touch-icon" href="/images/apple-touch-icon.png" />
+
+    
+
+</head>
+<body>
+    <header x-data="{ open: false }">
+        <div class="container header-top">
+            <div class="logo"></div>
+            <div class="theme-switch-wrapper">
+                <label class="theme-switch">
+                    <input type="checkbox" id="theme-checkbox" />
+                    <span class="slider round"></span>
+                </label>
+                <span id="theme-label">ライトモード</span>
+                <span class="lang-switcher">
+                    <label for="lang-select" class="lang-label">🌐 言語:</label>
+
+                    <!-- Language switcher -->
+                    <select id="lang-select" class="lang-select">
+                        <option value="en" data-path="/">English</option>
+                        <option value="fr" data-path="/fr/">Fran&#xE7;ais</option>
+                        <option value="de" data-path="/de/">Deutsch</option>
+                        <option value="es" data-path="/es/">Espa&#xF1;ol</option>
+                        <option value="pt" data-path="/pt/">Portugu&#xEA;s</option>
+                        <option value="zh" data-path="/zh/">&#x4E2D;&#x6587;</option>
+                        <option value="ja" data-path="/ja/">&#x65E5;&#x672C;&#x8A9E;</option>
+                        <option value="ar" data-path="/ar/">&#x627;&#x644;&#x639;&#x631;&#x628;&#x64A;&#x629;</option>
+                    </select>
+
+                </span>
+            </div>
+        </div>
+        
+        <div class="container header-nav">
+            <button @click="open = !open" class="menu-toggle" aria-label="Toggle Menu">
+                <svg width="24" height="24" viewBox="0 0 24 24">
+                    <path fill="var(--nav-link-color)" d="M3 6h18v2H3V6zm0 5h18v2H3v-2zm0 5h18v2H3v-2z" />
+                </svg>
+            </button>
+
+            <nav class="main-nav" :class="{ 'open': open }">
+                <ul>
+                    <li><a href="index.html" class="">&#x30DB;&#x30FC;&#x30E0;</a></li>
+                    <li><a href="about.html" class="">&#x79C1;&#x305F;&#x3061;&#x306B;&#x3064;&#x3044;&#x3066;</a></li>
+                    <li><a href="services.html" class="">&#x30B5;&#x30FC;&#x30D3;&#x30B9;&#x3068;&#x30BD;&#x30EA;&#x30E5;&#x30FC;&#x30B7;&#x30E7;&#x30F3;</a></li>
+                    <li><a href="case-studies.html" class="">&#x4E8B;&#x4F8B;&#x7814;&#x7A76;</a></li>
+                    <li><a href="resources.html" class="">&#x30EA;&#x30BD;&#x30FC;&#x30B9;&#x3068;&#x30A4;&#x30F3;&#x30B5;&#x30A4;&#x30C8;</a></li>
+                    <li><a href="trial.html" class="active">&#x30C8;&#x30E9;&#x30A4;&#x30A2;&#x30EB;</a></li>
+                    <li><a href="pricing.html" class="">&#x6599;&#x91D1;</a></li>
+                    <li><a href="partners.html" class="">&#x30D1;&#x30FC;&#x30C8;&#x30CA;&#x30FC;&#x3068;&#x30A2;&#x30E9;&#x30A4;&#x30A2;&#x30F3;&#x30B9;</a></li>                    
+                    <li><a href="contact.html" class="">&#x304A;&#x554F;&#x3044;&#x5408;&#x308F;&#x305B;&#x30FB;&#x76F8;&#x8AC7;</a></li>
+                    <li class="has-submenu"
+                        x-data="{ openSub: false }"
+                        @mouseenter="openSub = true"
+                        @mouseleave="openSub = false">
+                      <button @click="openSub = !openSub"
+                              aria-haspopup="true"
+                              :aria-expanded="openSub.toString()">
+                        &#x60C5;&#x5831;
+                        <svg width="12" height="12" viewBox="0 0 12 12" aria-hidden="true">
+                          <path d="M3 4l3 3 3-3" fill="currentColor"/>
+                        </svg>
+                      </button>
+                      <ul class="submenu" x-show="openSub" @click.outside="openSub = false">
+                        <li><a href="careers.html" class="">&#x63A1;&#x7528;&#x60C5;&#x5831;</a></li>
+                        <li><a href="faqs.html" class="">&#x3088;&#x304F;&#x3042;&#x308B;&#x8CEA;&#x554F;</a></li>
+                        <li><a href="legal.html" class="">&#x6CD5;&#x52D9;&#x3068;&#x30DD;&#x30EA;&#x30B7;&#x30FC;</a></li>
+                      </ul>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        
+<!-- HERO -->
+<section class="hero">
+    <div class="container">
+        <h2>&#x4ECA;&#x3059;&#x3050;AI&#x30C1;&#x30FC;&#x30E0;&#x30C8;&#x30E9;&#x30A4;&#x30A2;&#x30EB;&#x3092;&#x958B;&#x59CB;</h2>
+        <h3>ワンタイムの管理手数料で6か月間フル製品をご利用いただけます。</h3>
+        <a href="#trial" class="btn">&#x4ECA;&#x3059;&#x3050;&#x958B;&#x59CB; &#x2013; &#x20AC;39</a>
+        <a href="pricing.html" class="btn service-btn">&#x6599;&#x91D1;&#x30D7;&#x30E9;&#x30F3;&#x3092;&#x898B;&#x308B;</a>
+    </div>
+</section>
+
+<!-- OVERVIEW -->
+<section class="overview">
+    <div class="container">
+        <h2>&#x30C8;&#x30E9;&#x30A4;&#x30A2;&#x30EB;&#x306B;&#x542B;&#x307E;&#x308C;&#x308B;&#x5185;&#x5BB9;</h2>
+        <p>トライアルでは、デスクトップアプリケーションに6か月間アクセスでき、すべてのコアAIエキスパートと機能が有効化されます。1シート（単一デスクトップライセンス）。</p>
+        <div class="main-grid">
+                    <div class="service-card">
+                        <h3>&#x30D5;&#x30EB;&#x88FD;&#x54C1;&#x30C0;&#x30A6;&#x30F3;&#x30ED;&#x30FC;&#x30C9;</h3>
+                        <p>すべてのコアAIエキスパートを含む35GBのインストーラー。</p>
+                            <em>トライアルライセンスは厳格に非商用であり、評価、テスト、トレーニング、研究のみに使用可能です。</em>
+                    </div>
+                    <div class="service-card">
+                        <h3>&#x9069;&#x5FDC;&#x578B;&#x30E1;&#x30E2;&#x30EA;</h3>
+                        <p>短期・長期メモリにより、よりスマートで一貫した結果を提供。</p>
+                    </div>
+                    <div class="service-card">
+                        <h3>&#x30DE;&#x30EB;&#x30C1;&#x30D5;&#x30A9;&#x30FC;&#x30DE;&#x30C3;&#x30C8;&#x5B66;&#x7FD2; &amp; &#x591A;&#x8A00;&#x8A9E;&#x5BFE;&#x5FDC;</h3>
+                        <p>Word、Excel、PDF、CSV、音声、テキスト、画像などから学習。</p>
+                    </div>
+                    <div class="service-card">
+                        <h3>&#x30A8;&#x30C3;&#x30B8;&#x5BFE;&#x5FDC;</h3>
+                        <p>組み込みMLモデルでオフライン動作 – インターネット不要。</p>
+                    </div>
+        </div>
+
+        <div style="padding-top:2em">
+            <a href="minsystem.html" class="sysreq-badge" title="View System Requirements">
+                ⚡ &#x30B7;&#x30B9;&#x30C6;&#x30E0;&#x8981;&#x4EF6;
+            </a>
+        </div>
+    </div>
+
+    <!-- FAQ -->
+    <div class="container">
+        <h2>&#x3088;&#x304F;&#x3042;&#x308B;&#x8CEA;&#x554F;</h2>
+        <ul class="trial-faq">
+                    <li>
+                        <strong>&#x306A;&#x305C;&#x7BA1;&#x7406;&#x624B;&#x6570;&#x6599;&#x304C;&#x5FC5;&#x8981;&#x306A;&#x306E;&#x3067;&#x3059;&#x304B;&#xFF1F;</strong>
+35GB&#x306E;&#x30C0;&#x30A6;&#x30F3;&#x30ED;&#x30FC;&#x30C9;&#x914D;&#x5E03;&#x30B3;&#x30B9;&#x30C8;&#x3092;&#x30AB;&#x30D0;&#x30FC;&#x3057;&#x3001;&#x672C;&#x6C17;&#x306E;&#x30E6;&#x30FC;&#x30B6;&#x30FC;&#x306E;&#x307F;&#x304C;&#x88FD;&#x54C1;&#x306B;&#x30A2;&#x30AF;&#x30BB;&#x30B9;&#x3067;&#x304D;&#x308B;&#x3088;&#x3046;&#x306B;&#x3059;&#x308B;&#x305F;&#x3081;&#x3067;&#x3059;&#x3002;                    </li>
+                    <li>
+                        <strong>6&#x304B;&#x6708;&#x5F8C;&#x306B;&#x66F4;&#x65B0;&#x3067;&#x304D;&#x307E;&#x3059;&#x304B;&#xFF1F;</strong>
+&#x3044;&#x3044;&#x3048; &#x2014; &#x30C8;&#x30E9;&#x30A4;&#x30A2;&#x30EB;&#x306F;&#x4E00;&#x5EA6;&#x9650;&#x308A;&#x306E;&#x63D0;&#x4F9B;&#x3067;&#x3042;&#x308A;&#x3001;&#x66F4;&#x65B0;&#x3067;&#x304D;&#x307E;&#x305B;&#x3093;&#x3002;6&#x304B;&#x6708;&#x306E;&#x30C8;&#x30E9;&#x30A4;&#x30A2;&#x30EB;&#x7D42;&#x4E86;&#x5F8C;&#x306F;&#x3001;&#x6599;&#x91D1;&#x30DA;&#x30FC;&#x30B8;&#x3067;&#x63D0;&#x4F9B;&#x3055;&#x308C;&#x3066;&#x3044;&#x308B;&#x30D5;&#x30EB;&#x30E9;&#x30A4;&#x30BB;&#x30F3;&#x30B9;&#x306E;&#x3044;&#x305A;&#x308C;&#x304B;&#x3092;&#x9078;&#x629E;&#x3057;&#x3066;&#x7D99;&#x7D9A;&#x3067;&#x304D;&#x307E;&#x3059;&#x3002;&#x8A73;&#x7D30;&#x306F;                                     <a href="pricing.html">&#x6599;&#x91D1;&#x30DA;&#x30FC;&#x30B8;</a>
+ &#x3092;&#x3054;&#x89A7;&#x304F;&#x3060;&#x3055;&#x3044;&#x3002;                    </li>
+                    <li>
+                        <strong>&#x66F4;&#x65B0;&#x3057;&#x306A;&#x3044;&#x3068;&#x30C7;&#x30FC;&#x30BF;&#x306F;&#x5931;&#x308F;&#x308C;&#x307E;&#x3059;&#x304B;&#xFF1F;</strong>
+&#x3044;&#x3044;&#x3048;&#x3001;&#x30D7;&#x30ED;&#x30B8;&#x30A7;&#x30AF;&#x30C8;&#x306F;&#x30ED;&#x30FC;&#x30AB;&#x30EB;&#x306B;&#x4FDD;&#x5B58;&#x3055;&#x308C;&#x305F;&#x307E;&#x307E;&#x3067;&#x3059;&#x3002;AI&#x30C1;&#x30FC;&#x30E0;&#x3092;&#x4F7F;&#x3044;&#x7D9A;&#x3051;&#x308B;&#x306B;&#x306F;&#x6709;&#x52B9;&#x306A;&#x30E9;&#x30A4;&#x30BB;&#x30F3;&#x30B9;&#x304C;&#x5FC5;&#x8981;&#x3067;&#x3059;&#x3002;                    </li>
+                    <li>
+                        <strong>&#x6599;&#x91D1;&#x306E;&#x5168;&#x4F53;&#x306F;&#x3069;&#x3053;&#x3067;&#x78BA;&#x8A8D;&#x3067;&#x304D;&#x307E;&#x3059;&#x304B;&#xFF1F;</strong>
+&#x5F53;&#x793E;&#x306E;                                     <a href="pricing.html">&#x6599;&#x91D1;&#x30DA;&#x30FC;&#x30B8;</a>
+ &#x3092;&#x3054;&#x89A7;&#x3044;&#x305F;&#x3060;&#x304F;&#x3068;&#x3001;&#x30B9;&#x30BF;&#x30FC;&#x30BF;&#x30FC;&#x3001;&#x30D7;&#x30ED;&#x30D5;&#x30A7;&#x30C3;&#x30B7;&#x30E7;&#x30CA;&#x30EB;&#x3001;&#x30D3;&#x30B8;&#x30CD;&#x30B9;&#x3001;&#x30A8;&#x30F3;&#x30BF;&#x30FC;&#x30D7;&#x30E9;&#x30A4;&#x30BA;&#x30D7;&#x30E9;&#x30F3;&#x3092;&#x3054;&#x78BA;&#x8A8D;&#x3044;&#x305F;&#x3060;&#x3051;&#x307E;&#x3059;&#x3002;                    </li>
+        </ul>
+
+
+    </div>
+</section>
+
+<!-- TRIAL STEPS -->
+<section id="trial" class="trial-steps">
+    <div class="container">
+        <h2>&#x30C8;&#x30E9;&#x30A4;&#x30A2;&#x30EB;&#x958B;&#x59CB;&#x65B9;&#x6CD5;</h2>
+        <ol>
+                    <li>
+                        <strong>&#x30C8;&#x30E9;&#x30A4;&#x30A2;&#x30EB;&#x30E9;&#x30A4;&#x30BB;&#x30F3;&#x30B9;&#x3092;&#x7533;&#x8ACB;</strong><br />
+
+                            <p>お問い合わせ・申込フォームに記入し（お問い合わせ種別で「トライアルライセンス申請」を選択）、デスクトップアプリの6か月トライアルライセンスをリクエストしてください。 <a href="contact.html">&#x304A;&#x554F;&#x3044;&#x5408;&#x308F;&#x305B;&#x30FB;&#x7533;&#x8FBC;&#x30D5;&#x30A9;&#x30FC;&#x30E0;</a></p>
+
+
+                    </li>
+                    <li>
+                        <strong>&#x652F;&#x6255;&#x3044;&#x3092;&#x884C;&#x3046;</strong><br />
+
+                            <p>一度限りの€39（VAT除く）管理手数料をPayPalで安全にお支払いください:</p>
+
+                            <div style="margin-left: 5em;">
+                                <label>
+                                    <input type="checkbox"
+                                           class="termsCheckbox"
+                                           data-target="paypal-wrapper-NZJF49WYANFD8" />
+                                    &#x540C;&#x610F;&#x3057;&#x307E;&#x3059;: <a href="legal.html">法務・ポリシー</a>
+                                </label>
+
+                                <!-- Wrapper to control shading/disabled state -->
+                                <div id="paypal-wrapper-NZJF49WYANFD8" style="opacity:0.5; pointer-events:none;">
+                                    <div id="paypal-container-NZJF49WYANFD8"></div>
+                                </div>
+                            </div>
+
+                            <p><span class="jobs-note">&#x30C1;&#x30A7;&#x30C3;&#x30AF;&#x30A2;&#x30A6;&#x30C8;&#x6642;&#x306B;&#x3001;&#x304A;&#x4F4F;&#x307E;&#x3044;&#x306E;&#x56FD;&#x306B;&#x57FA;&#x3065;&#x304F;&#x9069;&#x7528;VAT&#x304C;&#x52A0;&#x7B97;&#x3055;&#x308C;&#x307E;&#x3059;&#xFF08;EU&#x306E;&#x307F;&#xFF09;&#x3002;</span></p>
+                            <p><span class="jobs-note">&#x3053;&#x306E;&#x30C7;&#x30B8;&#x30BF;&#x30EB;&#x88FD;&#x54C1;&#x306F;&#x8FD4;&#x91D1;&#x4E0D;&#x53EF;&#x3067;&#x3059;&#x3002;&#x8CFC;&#x5165;&#x306B;&#x3088;&#x308A;&#x300C;&#x6CD5;&#x52D9;&#x30FB;&#x30DD;&#x30EA;&#x30B7;&#x30FC;&#x300D;&#x306B;&#x540C;&#x610F;&#x3057;&#x305F;&#x3082;&#x306E;&#x3068;&#x307F;&#x306A;&#x3055;&#x308C;&#x307E;&#x3059;&#x3002;&#x3054;&#x540C;&#x610F;&#x3044;&#x305F;&#x3060;&#x3051;&#x306A;&#x3044;&#x5834;&#x5408;&#x306F;&#x8CFC;&#x5165;&#x3092;&#x5B8C;&#x4E86;&#x3057;&#x306A;&#x3044;&#x3067;&#x304F;&#x3060;&#x3055;&#x3044;&#x3002; <a href="legal.html">法務・ポリシー</a></span></p>
+                    </li>
+                    <li>
+                        <strong>&#x30C0;&#x30A6;&#x30F3;&#x30ED;&#x30FC;&#x30C9;&#x30EA;&#x30F3;&#x30AF;&#x3092;&#x53D7;&#x3051;&#x53D6;&#x308B;</strong><br />
+
+                            <p>申請と支払いが確認されると、ダウンロード手順とライセンスキーが記載されたメールを受け取ります。1シート（単一デスクトップライセンス）。</p>
+
+
+                    </li>
+        </ol>
+
+    </div>
+</section>
+
+
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&#xA9; 2025 The Intelligent Enterprise Group. &#x7121;&#x65AD;&#x8EE2;&#x8F09;&#x3092;&#x7981;&#x3058;&#x307E;&#x3059;&#x3002;</p>
+        </div>
+    </footer>
+
+    <script src="/js/swiper-bundle.min.js"></script>
+    <script src="/js/cdn.min.js" defer></script>
+    <script src="/js/gsap.min.js"></script>
+    <script src="/js/DrawSVGPlugin.min.js"></script>
+
+    <script type="module" src="/js/themeToggle.js"></script>
+    <script type="module">
+        import { toggleTheme, getCurrentTheme } from '/js/themeToggle.js';
+        const checkbox = document.getElementById('theme-checkbox');
+        const themeLabel = document.getElementById('theme-label');
+
+        if (getCurrentTheme() === 'dark') {
+            checkbox.checked = true;
+            themeLabel.textContent = 'ダークモード';
+        } else {
+            themeLabel.textContent = 'ライトモード';
+        }
+
+        checkbox.addEventListener('change', () => {
+            toggleTheme();
+            themeLabel.textContent = checkbox.checked ? 'ダークモード' : 'ライトモード';
+        });
+    </script>
+
+    <button id="back-to-top" aria-label="Back to Top">&#x30C8;&#x30C3;&#x30D7;</button>
+
+    
+    <script>
+        window.addEventListener("load", function () {
+            var script = document.createElement("script");
+            script.src = "https://www.paypal.com/sdk/js?client-id=BAAj-PZ1xj7K5ZKQ_-1tv7x4lKE0-uRmd57rjqiFTi3vstPIpwbCur3dBlGZKb3RKidFFm0Fvy3uTXTlgY&components=hosted-buttons&disable-funding=venmo&currency=EUR";
+            script.async = true;
+            script.onload = function () {
+                // Render all PayPal buttons
+                document.querySelectorAll("[id^='paypal-container-']").forEach(function (container) {
+                    var hostedId = container.id.replace("paypal-container-", "");
+                    paypal.HostedButtons({
+                        hostedButtonId: hostedId
+                    }).render("#" + container.id);
+                });
+
+                // Hook up all checkboxes
+                document.querySelectorAll(".termsCheckbox").forEach(function (cb) {
+                    cb.addEventListener("change", function () {
+                        var wrapper = document.getElementById(this.dataset.target);
+                        if (this.checked) {
+                            wrapper.style.opacity = "1";
+                            wrapper.style.pointerEvents = "auto";
+                        } else {
+                            wrapper.style.opacity = "0.5";
+                            wrapper.style.pointerEvents = "none";
+                        }
+                    });
+                });
+            };
+            document.body.appendChild(script);
+        });
+    </script>
+    <script>
+        gsap.registerPlugin(DrawSVGPlugin);
+        window.onload = function () {
+            gsap.from(".hero h2", { duration: 1.2, opacity: 0, y: -50, ease: "power2.out" });
+            gsap.from(".hero h3", { duration: 1.2, opacity: 0, y: 50, ease: "power2.out", delay: 0.2 });
+            gsap.from(".hero .btn", { duration: 1.2, opacity: 0, scale: 0.8, ease: "back.out(1.7)", delay: 0.4 });
+            gsap.from(".service-card", { duration: 1, opacity: 0, y: 30, ease: "power2.out", stagger: 0.2, delay: 0.6 });
+        };
+    </script>
+
+</body>
+</html>

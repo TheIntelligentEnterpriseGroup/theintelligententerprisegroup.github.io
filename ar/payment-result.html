@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta name="robots" content="noindex, follow" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <meta name="description" content='' />
+    <title>&#x646;&#x62A;&#x64A;&#x62C;&#x629; &#x627;&#x644;&#x62F;&#x641;&#x639; &#x2013; The Intelligent Enterprise Group</title>
+
+    <style>
+        html { background-color: #3B3A47; }
+    </style>
+    <script>
+        (function () {
+            const key = 'preferredTheme';
+            const stored = localStorage.getItem(key);
+            const systemDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+            const theme = stored || (systemDark ? 'dark' : 'light');
+            if (theme === 'dark') {
+                document.documentElement.classList.add('dark-mode');
+            }
+        })();
+    </script>
+
+
+        <link rel="alternate" hreflang="en" href="https://theintelligententerprisegroup.com/payment-result.html" />
+        <link rel="alternate" hreflang="fr" href="https://theintelligententerprisegroup.com/fr/payment-result.html" />
+        <link rel="alternate" hreflang="de" href="https://theintelligententerprisegroup.com/de/payment-result.html" />
+        <link rel="alternate" hreflang="es" href="https://theintelligententerprisegroup.com/es/payment-result.html" />
+        <link rel="alternate" hreflang="pt" href="https://theintelligententerprisegroup.com/pt/payment-result.html" />
+        <link rel="alternate" hreflang="zh" href="https://theintelligententerprisegroup.com/zh/payment-result.html" />
+        <link rel="alternate" hreflang="ja" href="https://theintelligententerprisegroup.com/ja/payment-result.html" />
+        <link rel="alternate" hreflang="ar" href="https://theintelligententerprisegroup.com/ar/payment-result.html" />
+
+
+    <link rel="alternate" hreflang="x-default" href="https://theintelligententerprisegroup.com/payment-result.html" />
+
+    <link rel="canonical" href="https://theintelligententerprisegroup.com/ar/payment-result.html" />
+
+
+    <link rel="stylesheet" href="/css/styles.css" />
+    <link rel="stylesheet" href="/css/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="/css/all.min.css" />
+
+    <script src="/js/lang-switcher.js" defer></script>
+
+    <script>
+        (function () {
+            if (localStorage.getItem('currentLang')) return;
+            const supported = [
+                     { code: "en" } ,
+                     { code: "fr" } ,
+                     { code: "de" } ,
+                     { code: "es" } ,
+                     { code: "pt" } ,
+                     { code: "zh" } ,
+                     { code: "ja" } ,
+                     { code: "ar" } 
+            ];
+            const defaultLang = "ar";
+            const navLangs = navigator.languages || [navigator.language || navigator.userLanguage];
+            let detected = null;
+            for (const nav of navLangs) {
+                const code = nav.toLowerCase().split('-')[0];
+                if (supported.find(s => s.code.toLowerCase() === code)) {
+                    detected = code;
+                    break;
+                }
+            }
+            const lang = detected || defaultLang;
+            localStorage.setItem('currentLang', lang);
+            document.documentElement.lang = lang;
+        })();
+    </script>
+
+    <!-- Organization structured data (JSON-LD) -->
+    <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "Organization",
+          "name": "The Intelligent Enterprise Group",
+          "url": "https://theintelligententerprisegroup.com/",
+          "logo": "https://theintelligententerprisegroup.com/images/tieg-logo.png",
+          "sameAs": []
+        }
+    </script>
+    <link rel="icon" href="/favicon.ico" />
+    <link rel="apple-touch-icon" href="/images/apple-touch-icon.png" />
+
+    
+
+</head>
+<body>
+    <header x-data="{ open: false }">
+        <div class="container header-top">
+            <div class="logo"></div>
+            <div class="theme-switch-wrapper">
+                <label class="theme-switch">
+                    <input type="checkbox" id="theme-checkbox" />
+                    <span class="slider round"></span>
+                </label>
+                <span id="theme-label">الوضع الفاتح</span>
+                <span class="lang-switcher">
+                    <label for="lang-select" class="lang-label">🌐 اللغة:</label>
+
+                    <!-- Language switcher -->
+                    <select id="lang-select" class="lang-select">
+                        <option value="en" data-path="/">English</option>
+                        <option value="fr" data-path="/fr/">Fran&#xE7;ais</option>
+                        <option value="de" data-path="/de/">Deutsch</option>
+                        <option value="es" data-path="/es/">Espa&#xF1;ol</option>
+                        <option value="pt" data-path="/pt/">Portugu&#xEA;s</option>
+                        <option value="zh" data-path="/zh/">&#x4E2D;&#x6587;</option>
+                        <option value="ja" data-path="/ja/">&#x65E5;&#x672C;&#x8A9E;</option>
+                        <option value="ar" data-path="/ar/">&#x627;&#x644;&#x639;&#x631;&#x628;&#x64A;&#x629;</option>
+                    </select>
+
+                </span>
+            </div>
+        </div>
+        
+        <div class="container header-nav">
+            <button @click="open = !open" class="menu-toggle" aria-label="Toggle Menu">
+                <svg width="24" height="24" viewBox="0 0 24 24">
+                    <path fill="var(--nav-link-color)" d="M3 6h18v2H3V6zm0 5h18v2H3v-2zm0 5h18v2H3v-2z" />
+                </svg>
+            </button>
+
+            <nav class="main-nav" :class="{ 'open': open }">
+                <ul>
+                    <li><a href="index.html" class="">&#x627;&#x644;&#x631;&#x626;&#x64A;&#x633;&#x64A;&#x629;</a></li>
+                    <li><a href="about.html" class="">&#x645;&#x646; &#x646;&#x62D;&#x646;</a></li>
+                    <li><a href="services.html" class="">&#x627;&#x644;&#x62E;&#x62F;&#x645;&#x627;&#x62A; &#x648;&#x627;&#x644;&#x62D;&#x644;&#x648;&#x644;</a></li>
+                    <li><a href="case-studies.html" class="">&#x62F;&#x631;&#x627;&#x633;&#x627;&#x62A; &#x627;&#x644;&#x62D;&#x627;&#x644;&#x629;</a></li>
+                    <li><a href="resources.html" class="">&#x627;&#x644;&#x645;&#x648;&#x627;&#x631;&#x62F; &#x648;&#x627;&#x644;&#x631;&#x624;&#x649;</a></li>
+                    <li><a href="trial.html" class="">&#x62A;&#x62C;&#x631;&#x628;&#x629;</a></li>
+                    <li><a href="pricing.html" class="">&#x627;&#x644;&#x623;&#x633;&#x639;&#x627;&#x631;</a></li>
+                    <li><a href="partners.html" class="">&#x627;&#x644;&#x634;&#x631;&#x643;&#x627;&#x621; &#x648;&#x627;&#x644;&#x62A;&#x62D;&#x627;&#x644;&#x641;&#x627;&#x62A;</a></li>                    
+                    <li><a href="contact.html" class="">&#x627;&#x644;&#x627;&#x62A;&#x635;&#x627;&#x644; &#x648;&#x627;&#x644;&#x627;&#x633;&#x62A;&#x634;&#x627;&#x631;&#x629;</a></li>
+                    <li class="has-submenu"
+                        x-data="{ openSub: false }"
+                        @mouseenter="openSub = true"
+                        @mouseleave="openSub = false">
+                      <button @click="openSub = !openSub"
+                              aria-haspopup="true"
+                              :aria-expanded="openSub.toString()">
+                        &#x645;&#x639;&#x644;&#x648;&#x645;&#x627;&#x62A;
+                        <svg width="12" height="12" viewBox="0 0 12 12" aria-hidden="true">
+                          <path d="M3 4l3 3 3-3" fill="currentColor"/>
+                        </svg>
+                      </button>
+                      <ul class="submenu" x-show="openSub" @click.outside="openSub = false">
+                        <li><a href="careers.html" class="">&#x627;&#x644;&#x648;&#x638;&#x627;&#x626;&#x641;</a></li>
+                        <li><a href="faqs.html" class="">&#x627;&#x644;&#x623;&#x633;&#x626;&#x644;&#x629; &#x627;&#x644;&#x634;&#x627;&#x626;&#x639;&#x629;</a></li>
+                        <li><a href="legal.html" class="">&#x627;&#x644;&#x633;&#x64A;&#x627;&#x633;&#x627;&#x62A; &#x648;&#x627;&#x644;&#x644;&#x648;&#x627;&#x626;&#x62D;</a></li>
+                      </ul>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        
+<section class="hero">
+    <div class="container">
+        <h2>&#x62D;&#x627;&#x644;&#x629; &#x627;&#x644;&#x62F;&#x641;&#x639;</h2>
+        <div id="result" class="result-message"></div>
+        <p style="text-align:center; margin-top:1rem;">
+            <a href="trial.html" class="btn">&#x627;&#x644;&#x639;&#x648;&#x62F;&#x629; &#x625;&#x644;&#x649; &#x635;&#x641;&#x62D;&#x629; &#x627;&#x644;&#x62A;&#x62C;&#x631;&#x628;&#x629;</a>
+        </p>
+    </div>
+</section>
+
+
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&#xA9; 2025 The Intelligent Enterprise Group. &#x62C;&#x645;&#x64A;&#x639; &#x627;&#x644;&#x62D;&#x642;&#x648;&#x642; &#x645;&#x62D;&#x641;&#x648;&#x638;&#x629;.</p>
+        </div>
+    </footer>
+
+    <script src="/js/swiper-bundle.min.js"></script>
+    <script src="/js/cdn.min.js" defer></script>
+    <script src="/js/gsap.min.js"></script>
+    <script src="/js/DrawSVGPlugin.min.js"></script>
+
+    <script type="module" src="/js/themeToggle.js"></script>
+    <script type="module">
+        import { toggleTheme, getCurrentTheme } from '/js/themeToggle.js';
+        const checkbox = document.getElementById('theme-checkbox');
+        const themeLabel = document.getElementById('theme-label');
+
+        if (getCurrentTheme() === 'dark') {
+            checkbox.checked = true;
+            themeLabel.textContent = 'الوضع الداكن';
+        } else {
+            themeLabel.textContent = 'الوضع الفاتح';
+        }
+
+        checkbox.addEventListener('change', () => {
+            toggleTheme();
+            themeLabel.textContent = checkbox.checked ? 'الوضع الداكن' : 'الوضع الفاتح';
+        });
+    </script>
+
+    <button id="back-to-top" aria-label="Back to Top">&#x623;&#x639;&#x644;&#x649;</button>
+
+    
+    <script>
+        const params = new URLSearchParams(window.location.search);
+        const status = params.get("status");
+        const resultDiv = document.getElementById("result");
+
+        if (status === "success") {
+            resultDiv.classList.add("success");
+            resultDiv.innerHTML = "✅ تم الدفع بنجاح! شكراً لبدء تجربتك. يرجى التحقق من بريدك الإلكتروني للحصول على تعليمات التنزيل ومفتاح الترخيص الخاص بك.";
+        } else if (status === "fail") {
+            resultDiv.classList.add("fail");
+            resultDiv.innerHTML = "⚠️ تم إلغاء الدفع أو فشل. لم يتم خصم أي رسوم. يمكنك المحاولة مرة أخرى أو الاتصال بنا إذا كنت بحاجة إلى مساعدة.";
+        } else {
+            resultDiv.innerHTML = "ℹ️ لم يتم اكتشاف حالة دفع. يرجى العودة إلى <a href='trial.html'>صفحة التجربة</a>.";
+        }
+    </script>
+
+</body>
+</html>

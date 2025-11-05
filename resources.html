@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta name="robots" content="index, follow" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <meta name="description" content='Explore resources and insights from The Intelligent Enterprise Group. Read expert articles, practical guides, and AI trend analyses to stay ahead in strategy, innovation, and adoption.' />
+    <title>Resources &amp; Insights | AI Guides &amp; Thought Leadership &#x2013; The Intelligent Enterprise Group</title>
+
+    <style>
+        html { background-color: #3B3A47; }
+    </style>
+    <script>
+        (function () {
+            const key = 'preferredTheme';
+            const stored = localStorage.getItem(key);
+            const systemDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+            const theme = stored || (systemDark ? 'dark' : 'light');
+            if (theme === 'dark') {
+                document.documentElement.classList.add('dark-mode');
+            }
+        })();
+    </script>
+
+
+        <link rel="alternate" hreflang="en" href="https://theintelligententerprisegroup.com/resources.html" />
+        <link rel="alternate" hreflang="fr" href="https://theintelligententerprisegroup.com/fr/resources.html" />
+        <link rel="alternate" hreflang="de" href="https://theintelligententerprisegroup.com/de/resources.html" />
+        <link rel="alternate" hreflang="es" href="https://theintelligententerprisegroup.com/es/resources.html" />
+        <link rel="alternate" hreflang="pt" href="https://theintelligententerprisegroup.com/pt/resources.html" />
+        <link rel="alternate" hreflang="zh" href="https://theintelligententerprisegroup.com/zh/resources.html" />
+        <link rel="alternate" hreflang="ja" href="https://theintelligententerprisegroup.com/ja/resources.html" />
+        <link rel="alternate" hreflang="ar" href="https://theintelligententerprisegroup.com/ar/resources.html" />
+
+
+    <link rel="alternate" hreflang="x-default" href="https://theintelligententerprisegroup.com/resources.html" />
+
+    <link rel="canonical" href="https://theintelligententerprisegroup.com/resources.html" />
+
+
+    <link rel="stylesheet" href="/css/styles.css" />
+    <link rel="stylesheet" href="/css/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="/css/all.min.css" />
+
+    <script src="/js/lang-switcher.js" defer></script>
+
+    <script>
+        (function () {
+            if (localStorage.getItem('currentLang')) return;
+            const supported = [
+                     { code: "en" } ,
+                     { code: "fr" } ,
+                     { code: "de" } ,
+                     { code: "es" } ,
+                     { code: "pt" } ,
+                     { code: "zh" } ,
+                     { code: "ja" } ,
+                     { code: "ar" } 
+            ];
+            const defaultLang = "en";
+            const navLangs = navigator.languages || [navigator.language || navigator.userLanguage];
+            let detected = null;
+            for (const nav of navLangs) {
+                const code = nav.toLowerCase().split('-')[0];
+                if (supported.find(s => s.code.toLowerCase() === code)) {
+                    detected = code;
+                    break;
+                }
+            }
+            const lang = detected || defaultLang;
+            localStorage.setItem('currentLang', lang);
+            document.documentElement.lang = lang;
+        })();
+    </script>
+
+    <!-- Organization structured data (JSON-LD) -->
+    <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "Organization",
+          "name": "The Intelligent Enterprise Group",
+          "url": "https://theintelligententerprisegroup.com/",
+          "logo": "https://theintelligententerprisegroup.com/images/tieg-logo.png",
+          "sameAs": []
+        }
+    </script>
+    <link rel="icon" href="/favicon.ico" />
+    <link rel="apple-touch-icon" href="/images/apple-touch-icon.png" />
+
+    
+
+</head>
+<body>
+    <header x-data="{ open: false }">
+        <div class="container header-top">
+            <div class="logo"></div>
+            <div class="theme-switch-wrapper">
+                <label class="theme-switch">
+                    <input type="checkbox" id="theme-checkbox" />
+                    <span class="slider round"></span>
+                </label>
+                <span id="theme-label">Light Mode</span>
+                <span class="lang-switcher">
+                    <label for="lang-select" class="lang-label">🌐 Language:</label>
+
+                    <!-- Language switcher -->
+                    <select id="lang-select" class="lang-select">
+                        <option value="en" data-path="/">English</option>
+                        <option value="fr" data-path="/fr/">Fran&#xE7;ais</option>
+                        <option value="de" data-path="/de/">Deutsch</option>
+                        <option value="es" data-path="/es/">Espa&#xF1;ol</option>
+                        <option value="pt" data-path="/pt/">Portugu&#xEA;s</option>
+                        <option value="zh" data-path="/zh/">&#x4E2D;&#x6587;</option>
+                        <option value="ja" data-path="/ja/">&#x65E5;&#x672C;&#x8A9E;</option>
+                        <option value="ar" data-path="/ar/">&#x627;&#x644;&#x639;&#x631;&#x628;&#x64A;&#x629;</option>
+                    </select>
+
+                </span>
+            </div>
+        </div>
+        
+        <div class="container header-nav">
+            <button @click="open = !open" class="menu-toggle" aria-label="Toggle Menu">
+                <svg width="24" height="24" viewBox="0 0 24 24">
+                    <path fill="var(--nav-link-color)" d="M3 6h18v2H3V6zm0 5h18v2H3v-2zm0 5h18v2H3v-2z" />
+                </svg>
+            </button>
+
+            <nav class="main-nav" :class="{ 'open': open }">
+                <ul>
+                    <li><a href="index.html" class="">Home</a></li>
+                    <li><a href="about.html" class="">About Us</a></li>
+                    <li><a href="services.html" class="">Services &amp; Solutions</a></li>
+                    <li><a href="case-studies.html" class="">Case Studies</a></li>
+                    <li><a href="resources.html" class="active">Resources &amp; Insights</a></li>
+                    <li><a href="trial.html" class="">Trial</a></li>
+                    <li><a href="pricing.html" class="">Pricing</a></li>
+                    <li><a href="partners.html" class="">Partners &amp; Alliances</a></li>                    
+                    <li><a href="contact.html" class="">Contact &amp; Consultation</a></li>
+                    <li class="has-submenu"
+                        x-data="{ openSub: false }"
+                        @mouseenter="openSub = true"
+                        @mouseleave="openSub = false">
+                      <button @click="openSub = !openSub"
+                              aria-haspopup="true"
+                              :aria-expanded="openSub.toString()">
+                        Info
+                        <svg width="12" height="12" viewBox="0 0 12 12" aria-hidden="true">
+                          <path d="M3 4l3 3 3-3" fill="currentColor"/>
+                        </svg>
+                      </button>
+                      <ul class="submenu" x-show="openSub" @click.outside="openSub = false">
+                        <li><a href="careers.html" class="">Careers</a></li>
+                        <li><a href="faqs.html" class="">FAQs</a></li>
+                        <li><a href="legal.html" class="">Legal &amp; Policies</a></li>
+                      </ul>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        
+<section class="hero">
+    <div class="container">
+        <h2>Resources &amp; Insights</h2>
+        <h3>Explore expert articles, practical guides, and thought leadership on AI adoption,<br />strategy, and innovation - curated to help you stay ahead in a rapidly evolving landscape.</h3>
+    </div>
+</section>
+
+<section class="resources" x-data="{ selectedResource: '' }">
+    <div class="container">
+        <h2>Latest Insights</h2>
+
+        <div class="resources-grid">
+                    <article id="resource-aiFuture" class="resource-card" :class="{ 'active': selectedResource === 'aiFuture' }">
+                        <img src="/images/the-future-of-ai-in-business.jpg" alt="The Future of AI in Business" />
+                        <div class="card-content">
+                            <h3>The Future of AI in Business</h3>
+                            <p>Explore how AI is reshaping industries and unlocking new opportunities.</p>
+                            <a href="#" class="btn" @click.prevent="selectedResource='aiFuture';$nextTick(() => document.getElementById('expanded-resource').scrollIntoView({ behavior: 'smooth', block: 'start' }));">Read More</a>
+                        </div>
+                    </article>
+                    <article id="resource-roiAI" class="resource-card" :class="{ 'active': selectedResource === 'roiAI' }">
+                        <img src="/images/maximizing-roi-with-ai.jpg" alt="Maximizing ROI with AI" />
+                        <div class="card-content">
+                            <h3>Maximizing ROI with AI</h3>
+                            <p>Discover strategies for driving better returns through AI integration.</p>
+                            <a href="#" class="btn" @click.prevent="selectedResource='roiAI';$nextTick(() => document.getElementById('expanded-resource').scrollIntoView({ behavior: 'smooth', block: 'start' }));">Read More</a>
+                        </div>
+                    </article>
+                    <article id="resource-aiTrends" class="resource-card" :class="{ 'active': selectedResource === 'aiTrends' }">
+                        <img src="/images/5-key-ai-trends-2025.jpg" alt="5 Key AI Trends for 2025" />
+                        <div class="card-content">
+                            <h3>5 Key AI Trends for 2025</h3>
+                            <p>Stay ahead with an in-depth look at the trends that will define AI in the near future.</p>
+                            <a href="#" class="btn" @click.prevent="selectedResource='aiTrends';$nextTick(() => document.getElementById('expanded-resource').scrollIntoView({ behavior: 'smooth', block: 'start' }));">Read More</a>
+                        </div>
+                    </article>
+                    <article id="resource-aiInnovation" class="resource-card" :class="{ 'active': selectedResource === 'aiInnovation' }">
+                        <img src="/images/innovation-in-ai-integration.jpg" alt="Innovation in AI Integration" />
+                        <div class="card-content">
+                            <h3>Innovation in AI Integration</h3>
+                            <p>Learn how companies are innovating by integrating AI into their business operations.</p>
+                            <a href="#" class="btn" @click.prevent="selectedResource='aiInnovation';$nextTick(() => document.getElementById('expanded-resource').scrollIntoView({ behavior: 'smooth', block: 'start' }));">Read More</a>
+                        </div>
+                    </article>
+        </div>
+
+        <template x-if="selectedResource !== ''">
+            <div id="expanded-resource" class="expanded-resource" x-show="selectedResource !== ''" x-transition>
+                <button class="close-btn" @click="const prev=document.getElementById('resource-'+selectedResource);selectedResource='';$nextTick(() => prev.scrollIntoView({ behavior: 'smooth', block: 'start' }));">&times;</button>
+
+                        <div x-show="selectedResource==='aiFuture'" x-transition>
+                            <div class="container article-content">
+                                <header class="article-header">
+                                    <h1>The Future of AI in Business</h1>
+                                    <p>Exploring technology, strategy, and innovation in a digital age</p>
+                                </header>
+
+                                    <section class="article-section">
+                                        <h2>Overview</h2>
+                                        <p>Artificial Intelligence (AI) has firmly transitioned from a futuristic concept into an essential business asset. Today’s businesses are leveraging cutting-edge machine learning, natural language processing, and robotics to optimize operations, drive innovation, and craft unparalleled customer experiences. AI is no longer a mere enhancement; it is integral to rethinking and redefining competitive strategy in a rapidly evolving marketplace.</p>
+                                    </section>
+                                    <section class="article-section">
+                                        <h2>Emerging Opportunities</h2>
+                                        <p>As we move deeper into 2025, emerging AI technologies are unlocking vast new opportunities for enterprises. Advanced generative AI platforms and predictive analytics are not only transforming product development but are also paving the way for hyper-personalized customer engagement. Companies are now investing in on-premise AI solutions that enhance both data privacy and operational agility, positioning themselves ahead of industry disruptions.</p>
+                                    </section>
+                                    <section class="article-section">
+                                        <h2>Integration and Transformation</h2>
+                                        <p>The true power of AI is revealed when it is seamlessly integrated into every facet of business operations. Today’s leading enterprises are embedding AI into their core decision-making processes to automate workflows, enable real-time automated decision-making, and even reinforce cybersecurity frameworks. This integration fosters a transformative environment where AI augments human expertise rather than replaces it, fundamentally shifting traditional business models toward digital excellence.</p>
+                                    </section>
+                                    <section class="article-section">
+                                        <h2>Challenges and Considerations</h2>
+                                        <p>With great promise comes a set of daunting challenges. Businesses must navigate ethical dilemmas, data privacy concerns, and the growing shortages of specialized talent as they embrace AI. Successful AI integration demands a robust governance framework to balance innovation with accountability. As one industry analyst wisely noted:<br /><blockquote>“The future of AI is not just about technology—it’s about rethinking business strategy”</blockquote>Such insights emphasize the need for thoughtful, responsible AI deployment that considers both its vast potential and its inherent risks.</p>
+                                    </section>
+                                    <section class="article-section">
+                                        <h2>Future Outlook</h2>
+                                        <p>Looking ahead, AI is set to form the backbone of an era defined by digital transformation. Companies that pioneer strategic AI deployments will not only streamline operations but also cultivate a lasting competitive advantage. The convergence of AI with complementary technologies such as blockchain and quantum computing promises to redefine industries from finance to healthcare. Forward-thinking organizations that invest in scalable, ethical AI systems today are poised to lead tomorrow’s global marketplace.</p>
+                                    </section>
+                                    <section class="article-section">
+                                        <h2>Embracing the AI Revolution</h2>
+                                        <p><blockquote>“The biggest risk is not staying ahead of technological change. Adapt or be left behind.”</blockquote>As industry leaders continue to embrace AI, the pace of innovation accelerates. The dynamic fusion of human ingenuity with AI-driven insights offers an unprecedented opportunity to transform risks into rewards. By investing in ethical and robust AI systems, companies can ensure sustainable growth and set new benchmarks for excellence in the digital era.</p>
+                                    </section>
+                                    <section class="article-section">
+                                        <h2>Conclusion</h2>
+                                        <p>In conclusion, the future of AI in business represents a continuously evolving narrative of innovation, efficiency, and resilience. While the journey is fraught with challenges—from ethical considerations to talent shortages—the rewards for those who invest wisely in AI are immense. As technologies mature and become more deeply embedded in business strategies, AI will redefine what it means to be competitive in the digital age. The onus is on today’s business leaders to harness AI responsibly and boldly, laying the groundwork for a transformative tomorrow.</p>
+                                    </section>
+
+                                <p class="callout"><strong>The Intelligent Enterprise Group Insight:</strong> We help organizations turn AI from a buzzword into a business advantage. Our AI Expert Team Platform and custom agent deployments make future‑ready strategies actionable today.</p>
+                            </div>
+                        </div>
+                        <div x-show="selectedResource==='roiAI'" x-transition>
+                            <div class="container article-content">
+                                <header class="article-header">
+                                    <h1>Maximizing ROI with AI</h1>
+                                    <p>Leveraging artificial intelligence for unparalleled business returns</p>
+                                </header>
+
+                                    <section class="article-section">
+                                        <h2>Introduction</h2>
+                                        <p>In today’s digital era, artificial intelligence has transcended its role as a mere technological asset to become a strategic lever for driving business performance. Organizations worldwide are discovering that maximizing ROI with AI demands not only innovative solutions but also a thoughtful alignment with overarching business strategies.</p>
+                                    </section>
+                                    <section class="article-section">
+                                        <h2>Strategic Implementation</h2>
+                                        <p>Realizing the full potential of AI requires a tailored approach in which AI initiatives are directly aligned with corporate goals. By integrating bespoke AI solutions into established workflows, companies are poised to achieve significant improvements in efficiency and profitability. This outcome-centric mindset ensures that every investment in technology directly contributes to measurable business outcomes.</p>
+                                    </section>
+                                    <section class="article-section">
+                                        <h2>Measuring Impact</h2>
+                                        <p>The success of AI-driven initiatives hinges on precise measurement. Organizations are increasingly reliant on key performance indicators such as cost savings, revenue growth, and productivity gains to assess their AI investments. Continuous optimization and rigorous testing foster an environment where data-driven insights inform strategic adjustments, paving the way for sustained returns on investment.</p>
+                                    </section>
+                                    <section class="article-section">
+                                        <h2>Key Insights</h2>
+                                        <p><blockquote>“Strategic AI integration unlocks long-term value and maximizes returns.”<br />— CFO, Leading Enterprise</blockquote>This quote encapsulates a fundamental truth: Investing in AI is as much about discipline in strategy as it is about technology. Those organizations that embrace continuous learning, agile iteration, and responsible AI practices are best positioned to transform initial investments into enduring competitive advantages.</p>
+                                    </section>
+                                    <section class="article-section">
+                                        <h2>Conclusion</h2>
+                                        <p>Maximizing ROI with AI is a multifaceted endeavor that blends strategic planning, technological innovation, and relentless execution. As enterprises further embed AI into their operational frameworks, the potential for enhanced efficiency, revenue growth, and market leadership grows exponentially. The journey ahead is driven by smart investments, clear performance metrics, and an unwavering commitment to transforming challenges into opportunities for lasting success.</p>
+                                    </section>
+
+                                <p class="callout"><strong>The Intelligent Enterprise Group Insight:</strong> Maximizing ROI means aligning AI with measurable outcomes. Our platform accelerates adoption while our advisory services ensure every investment drives tangible returns.</p>
+                            </div>
+                        </div>
+                        <div x-show="selectedResource==='aiTrends'" x-transition>
+                            <div class="container article-content">
+                                <header class="article-header">
+                                    <h1>5 Key AI Trends for 2025</h1>
+                                    <p>Unveiling transformative trends reshaping the future of artificial intelligence</p>
+                                </header>
+
+                                    <section class="article-section">
+                                        <h2>Introduction</h2>
+                                        <p>The world of artificial intelligence is evolving at a breakneck pace. As we step into 2025, AI is set to redefine industry paradigms, enabling smarter decision-making and deeper integration across business landscapes. With technology pushing boundaries, organizations must anticipate and adapt to these emerging trends.</p>
+                                    </section>
+                                    <section class="article-section">
+                                        <h2>Trend Overview</h2>
+                                        <p>In 2025, five central trends are taking center stage: processing data at the edge, enhancing transparency through explainable AI, embedding ethical frameworks, fortifying cybersecurity, and developing industry-specific solutions. These trends promise to make AI more accessible, accountable, and seamlessly integrated into every facet of our lives.</p>
+                                    </section>
+                                    <section class="article-section">
+                                        <h2>Edge AI</h2>
+                                        <p>Edge AI shifts data processing from centralized cloud servers to local devices. This decentralization not only minimizes latency but also enhances real-time decision-making capabilities while ensuring that sensitive data remains secure. As industries continue to expand IoT infrastructure, Edge AI stands as a critical enabler for instantaneous insights.</p>
+                                    </section>
+                                    <section class="article-section">
+                                        <h2>Explainable AI</h2>
+                                        <p>As AI systems become increasingly complex, the demand for transparency grows. Explainable AI (XAI) is designed to unravel the mystery behind automated decisions, offering clear justifications and fostering trust. By making AI algorithms more understandable, organizations can better validate their decisions and align them with strategic objectives.</p>
+                                    </section>
+                                    <section class="article-section">
+                                        <h2>AI Ethics</h2>
+                                        <p>With AI’s rapid proliferation, ethical considerations take center stage. Implementing robust ethical frameworks is essential to address concerns such as bias, data privacy, and accountability. By prioritizing AI ethics, companies not only adhere to regulatory requirements but also build long-term trust with customers and stakeholders.</p>
+                                    </section>
+                                    <section class="article-section">
+                                        <h2>AI in Cybersecurity</h2>
+                                        <p>Cyber threats are growing in sophistication, and AI is emerging as a powerful tool in the cybersecurity arsenal. AI-driven systems can proactively detect vulnerabilities, analyze patterns in real time, and respond swiftly to cyber attacks. This trend is pivotal as organizations aim to safeguard critical assets and maintain resilient operational infrastructures.</p>
+                                    </section>
+                                    <section class="article-section">
+                                        <h2>Industry-Specific Solutions</h2>
+                                        <p>One size never fits all. Customized AI applications are being tailored to meet the unique demands of sectors such as healthcare, finance, and retail. These industry-specific solutions are optimizing operational efficiency, carving out competitive advantages, and enhancing customer experience with precision-targeted innovations.</p>
+                                    </section>
+                                    <section class="article-section">
+                                        <h2>Conclusion</h2>
+                                        <p>The AI trends set to dominate 2025 signal a future where technology is more responsive, transparent, and ethically grounded. Embracing trends like Edge AI, Explainable AI, ethical practices, robust cybersecurity measures, and industry-specific innovations will be crucial for organizations aiming to secure a competitive edge. As we journey through 2025, these trends will not only redefine how we interact with technology but also shape the very fabric of business strategy.</p>
+                                    </section>
+
+                                <p class="callout"><strong>The Intelligent Enterprise Group Insight:</strong> From Edge AI to explainability, we embed these trends into real solutions. Our OmniPredict agent and adaptive pipelines keep clients ahead of disruption.</p>
+                            </div>
+                        </div>
+                        <div x-show="selectedResource==='aiInnovation'" x-transition>
+                            <div class="container article-content">
+                                <header class="article-header">
+                                    <h1>Innovation in AI Integration</h1>
+                                    <p>Transforming traditional workflows with groundbreaking AI solutions</p>
+                                </header>
+
+                                    <section class="article-section">
+                                        <h2>Introduction</h2>
+                                        <p>True innovation thrives on the ability to weave new ideas into the fabric of established processes. In the realm of artificial intelligence, the true potential lies not just in standalone applications, but in the careful integration of AI with existing business systems. This approach turns promising technologies into measurable, real-world outcomes, setting the stage for a new era of operational excellence.</p>
+                                    </section>
+                                    <section class="article-section">
+                                        <h2>Best Practices</h2>
+                                        <p>Successful AI integration begins with a thorough assessment of current systems and clear corporate objectives. Companies that commit to iterative testing, agile adaptation, and continuous improvement are positioned to reap dramatic benefits. By aligning AI initiatives with strategic goals, enterprises can enhance efficiency, drive customer satisfaction, and secure a strong competitive advantage.</p>
+                                    </section>
+                                    <section class="article-section">
+                                        <h2>Real-World Applications</h2>
+                                        <p>Innovation in AI integration is evident across diverse industries. From intelligent customer service chatbots streamlining support processes to predictive maintenance systems optimizing equipment longevity, the applications are vast and transformative. These solutions not only reduce operational costs but also directly improve the quality of customer interaction and satisfaction, redefining industry standards.</p>
+                                    </section>
+                                    <section class="article-section">
+                                        <h2>Industry Insights</h2>
+                                        <p><blockquote>“Innovation in AI isn’t just about technology—it’s about reimagining processes and delivering measurable value.”<br />— CTO, Global Corporation</blockquote>Such insights resonate deeply in a time when embracing technology is synonymous with embracing change. The path to genuine innovation requires more than just deploying cutting-edge solutions; it involves reengineering the way businesses operate and interact with technology, ensuring every step is geared toward future growth and efficiency.</p>
+                                    </section>
+                                    <section class="article-section">
+                                        <h2>Conclusion</h2>
+                                        <p>Innovation in AI integration represents a pivotal shift in how businesses harness technology to redefine success. By embedding AI into the core of operational processes, companies can unlock unprecedented efficiency, elevate customer experiences, and create sustainable competitive advantages. The journey to transformative innovation is one of continuous evolution and adaptation—an essential commitment for any organization striving to lead in the digital age.</p>
+                                    </section>
+
+                                <p class="callout"><strong>The Intelligent Enterprise Group Insight:</strong> Integration is where vision becomes value. We combine the AI Expert Team Platform with tailored agent teams and training to ensure seamless adoption across your enterprise.</p>
+                            </div>
+                        </div>
+            </div>
+        </template>
+    </div>
+</section>
+
+
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&#xA9; 2025 The Intelligent Enterprise Group. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="/js/swiper-bundle.min.js"></script>
+    <script src="/js/cdn.min.js" defer></script>
+    <script src="/js/gsap.min.js"></script>
+    <script src="/js/DrawSVGPlugin.min.js"></script>
+
+    <script type="module" src="/js/themeToggle.js"></script>
+    <script type="module">
+        import { toggleTheme, getCurrentTheme } from '/js/themeToggle.js';
+        const checkbox = document.getElementById('theme-checkbox');
+        const themeLabel = document.getElementById('theme-label');
+
+        if (getCurrentTheme() === 'dark') {
+            checkbox.checked = true;
+            themeLabel.textContent = 'Dark Mode';
+        } else {
+            themeLabel.textContent = 'Light Mode';
+        }
+
+        checkbox.addEventListener('change', () => {
+            toggleTheme();
+            themeLabel.textContent = checkbox.checked ? 'Dark Mode' : 'Light Mode';
+        });
+    </script>
+
+    <button id="back-to-top" aria-label="Back to Top">Top</button>
+
+    
+    <script>
+        gsap.registerPlugin(DrawSVGPlugin);
+        window.onload = function () {
+            gsap.from(".hero h2", { duration: 1.2, opacity: 0, y: -50, ease: "power2.out" });
+            gsap.from(".hero h3", { duration: 1.2, opacity: 0, y: 50, ease: "power2.out", delay: 0.2 });
+            gsap.from(".resource-card", { duration: 1, opacity: 0, y: 30, ease: "power2.out", stagger: 0.2, delay: 0.6 });
+        };
+    </script>
+
+</body>
+</html>

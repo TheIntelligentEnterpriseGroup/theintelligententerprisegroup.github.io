@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="ja" dir="ltr">
+<head>
+    <meta name="robots" content="index, follow" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <meta name="description" content='The Intelligent Enterprise Group&#x306B;&#x95A2;&#x3059;&#x308B;&#x3088;&#x304F;&#x3042;&#x308B;&#x8CEA;&#x554F;&#x3078;&#x306E;&#x56DE;&#x7B54;&#x3092;&#x3054;&#x89A7;&#x304F;&#x3060;&#x3055;&#x3044;&#x3002;AI&#x5354;&#x8ABF;&#x578B;&#x5C02;&#x9580;&#x30C1;&#x30FC;&#x30E0;&#x306E;&#x4ED5;&#x7D44;&#x307F;&#x3001;&#x5BFE;&#x5FDC;&#x696D;&#x754C;&#x3001;&#x30C7;&#x30FC;&#x30BF;&#x30D7;&#x30E9;&#x30A4;&#x30D0;&#x30B7;&#x30FC;&#x3001;&#x30BB;&#x30AD;&#x30E5;&#x30EA;&#x30C6;&#x30A3;&#x3001;&#x6599;&#x91D1;&#x3001;&#x63A1;&#x7528;&#x306A;&#x3069;&#x306B;&#x3064;&#x3044;&#x3066;&#x3054;&#x7D39;&#x4ECB;&#x3057;&#x307E;&#x3059;&#x3002;' />
+    <title>&#x3088;&#x304F;&#x3042;&#x308B;&#x8CEA;&#x554F; | The Intelligent Enterprise Group &#x2013; AI&#x30BD;&#x30EA;&#x30E5;&#x30FC;&#x30B7;&#x30E7;&#x30F3;&#x3068;&#x30B5;&#x30FC;&#x30D3;&#x30B9;</title>
+
+    <style>
+        html { background-color: #3B3A47; }
+    </style>
+    <script>
+        (function () {
+            const key = 'preferredTheme';
+            const stored = localStorage.getItem(key);
+            const systemDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+            const theme = stored || (systemDark ? 'dark' : 'light');
+            if (theme === 'dark') {
+                document.documentElement.classList.add('dark-mode');
+            }
+        })();
+    </script>
+
+
+        <link rel="alternate" hreflang="en" href="https://theintelligententerprisegroup.com/faqs.html" />
+        <link rel="alternate" hreflang="fr" href="https://theintelligententerprisegroup.com/fr/faqs.html" />
+        <link rel="alternate" hreflang="de" href="https://theintelligententerprisegroup.com/de/faqs.html" />
+        <link rel="alternate" hreflang="es" href="https://theintelligententerprisegroup.com/es/faqs.html" />
+        <link rel="alternate" hreflang="pt" href="https://theintelligententerprisegroup.com/pt/faqs.html" />
+        <link rel="alternate" hreflang="zh" href="https://theintelligententerprisegroup.com/zh/faqs.html" />
+        <link rel="alternate" hreflang="ja" href="https://theintelligententerprisegroup.com/ja/faqs.html" />
+        <link rel="alternate" hreflang="ar" href="https://theintelligententerprisegroup.com/ar/faqs.html" />
+
+
+    <link rel="alternate" hreflang="x-default" href="https://theintelligententerprisegroup.com/faqs.html" />
+
+    <link rel="canonical" href="https://theintelligententerprisegroup.com/ja/faqs.html" />
+
+
+    <link rel="stylesheet" href="/css/styles.css" />
+    <link rel="stylesheet" href="/css/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="/css/all.min.css" />
+
+    <script src="/js/lang-switcher.js" defer></script>
+
+    <script>
+        (function () {
+            if (localStorage.getItem('currentLang')) return;
+            const supported = [
+                     { code: "en" } ,
+                     { code: "fr" } ,
+                     { code: "de" } ,
+                     { code: "es" } ,
+                     { code: "pt" } ,
+                     { code: "zh" } ,
+                     { code: "ja" } ,
+                     { code: "ar" } 
+            ];
+            const defaultLang = "ja";
+            const navLangs = navigator.languages || [navigator.language || navigator.userLanguage];
+            let detected = null;
+            for (const nav of navLangs) {
+                const code = nav.toLowerCase().split('-')[0];
+                if (supported.find(s => s.code.toLowerCase() === code)) {
+                    detected = code;
+                    break;
+                }
+            }
+            const lang = detected || defaultLang;
+            localStorage.setItem('currentLang', lang);
+            document.documentElement.lang = lang;
+        })();
+    </script>
+
+    <!-- Organization structured data (JSON-LD) -->
+    <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "Organization",
+          "name": "The Intelligent Enterprise Group",
+          "url": "https://theintelligententerprisegroup.com/",
+          "logo": "https://theintelligententerprisegroup.com/images/tieg-logo.png",
+          "sameAs": []
+        }
+    </script>
+    <link rel="icon" href="/favicon.ico" />
+    <link rel="apple-touch-icon" href="/images/apple-touch-icon.png" />
+
+    
+
+</head>
+<body>
+    <header x-data="{ open: false }">
+        <div class="container header-top">
+            <div class="logo"></div>
+            <div class="theme-switch-wrapper">
+                <label class="theme-switch">
+                    <input type="checkbox" id="theme-checkbox" />
+                    <span class="slider round"></span>
+                </label>
+                <span id="theme-label">ライトモード</span>
+                <span class="lang-switcher">
+                    <label for="lang-select" class="lang-label">🌐 言語:</label>
+
+                    <!-- Language switcher -->
+                    <select id="lang-select" class="lang-select">
+                        <option value="en" data-path="/">English</option>
+                        <option value="fr" data-path="/fr/">Fran&#xE7;ais</option>
+                        <option value="de" data-path="/de/">Deutsch</option>
+                        <option value="es" data-path="/es/">Espa&#xF1;ol</option>
+                        <option value="pt" data-path="/pt/">Portugu&#xEA;s</option>
+                        <option value="zh" data-path="/zh/">&#x4E2D;&#x6587;</option>
+                        <option value="ja" data-path="/ja/">&#x65E5;&#x672C;&#x8A9E;</option>
+                        <option value="ar" data-path="/ar/">&#x627;&#x644;&#x639;&#x631;&#x628;&#x64A;&#x629;</option>
+                    </select>
+
+                </span>
+            </div>
+        </div>
+        
+        <div class="container header-nav">
+            <button @click="open = !open" class="menu-toggle" aria-label="Toggle Menu">
+                <svg width="24" height="24" viewBox="0 0 24 24">
+                    <path fill="var(--nav-link-color)" d="M3 6h18v2H3V6zm0 5h18v2H3v-2zm0 5h18v2H3v-2z" />
+                </svg>
+            </button>
+
+            <nav class="main-nav" :class="{ 'open': open }">
+                <ul>
+                    <li><a href="index.html" class="">&#x30DB;&#x30FC;&#x30E0;</a></li>
+                    <li><a href="about.html" class="">&#x79C1;&#x305F;&#x3061;&#x306B;&#x3064;&#x3044;&#x3066;</a></li>
+                    <li><a href="services.html" class="">&#x30B5;&#x30FC;&#x30D3;&#x30B9;&#x3068;&#x30BD;&#x30EA;&#x30E5;&#x30FC;&#x30B7;&#x30E7;&#x30F3;</a></li>
+                    <li><a href="case-studies.html" class="">&#x4E8B;&#x4F8B;&#x7814;&#x7A76;</a></li>
+                    <li><a href="resources.html" class="">&#x30EA;&#x30BD;&#x30FC;&#x30B9;&#x3068;&#x30A4;&#x30F3;&#x30B5;&#x30A4;&#x30C8;</a></li>
+                    <li><a href="trial.html" class="">&#x30C8;&#x30E9;&#x30A4;&#x30A2;&#x30EB;</a></li>
+                    <li><a href="pricing.html" class="">&#x6599;&#x91D1;</a></li>
+                    <li><a href="partners.html" class="">&#x30D1;&#x30FC;&#x30C8;&#x30CA;&#x30FC;&#x3068;&#x30A2;&#x30E9;&#x30A4;&#x30A2;&#x30F3;&#x30B9;</a></li>                    
+                    <li><a href="contact.html" class="">&#x304A;&#x554F;&#x3044;&#x5408;&#x308F;&#x305B;&#x30FB;&#x76F8;&#x8AC7;</a></li>
+                    <li class="has-submenu"
+                        x-data="{ openSub: false }"
+                        @mouseenter="openSub = true"
+                        @mouseleave="openSub = false">
+                      <button @click="openSub = !openSub"
+                              aria-haspopup="true"
+                              :aria-expanded="openSub.toString()">
+                        &#x60C5;&#x5831;
+                        <svg width="12" height="12" viewBox="0 0 12 12" aria-hidden="true">
+                          <path d="M3 4l3 3 3-3" fill="currentColor"/>
+                        </svg>
+                      </button>
+                      <ul class="submenu" x-show="openSub" @click.outside="openSub = false">
+                        <li><a href="careers.html" class="">&#x63A1;&#x7528;&#x60C5;&#x5831;</a></li>
+                        <li><a href="faqs.html" class="active">&#x3088;&#x304F;&#x3042;&#x308B;&#x8CEA;&#x554F;</a></li>
+                        <li><a href="legal.html" class="">&#x6CD5;&#x52D9;&#x3068;&#x30DD;&#x30EA;&#x30B7;&#x30FC;</a></li>
+                      </ul>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        
+<section class="hero">
+    <div class="container">
+        <h2>&#x3088;&#x304F;&#x3042;&#x308B;&#x8CEA;&#x554F;</h2>
+        <h3>当社のサービス、ポリシー、ビジネスプロセスに関する<br />一般的なご質問への回答をご覧いただけます。</h3>
+    </div>
+</section>
+
+<section class="faq">
+    <div class="container faq-container">
+                <div class="faq-item">
+                    <details>
+                        <summary><i class="fas fa-users"></i>AI&#x30BD;&#x30EA;&#x30E5;&#x30FC;&#x30B7;&#x30E7;&#x30F3;&#x306F;&#x4EBA;&#x3092;&#x7F6E;&#x304D;&#x63DB;&#x3048;&#x308B;&#x305F;&#x3081;&#x306B;&#x8A2D;&#x8A08;&#x3055;&#x308C;&#x3066;&#x3044;&#x307E;&#x3059;&#x304B;&#xFF1F;</summary>
+                        <p>いいえ。当社のソリューションは人を置き換えるためではなく、人を支援するために構築されています。日々の業務を効率化し、より良い意思決定を行い、少ない労力でより多くを達成できるように設計されています。反復的なプロセスを自動化し、知的なインサイトを提供することで、人は創造性、戦略、イノベーションといった人間の才能が真に発揮される分野に集中できます。</p>
+                    </details>
+                </div>
+                <div class="faq-item">
+                    <details>
+                        <summary><i class="fas fa-robot"></i>The Intelligent Enterprise Group&#x306F;&#x3069;&#x306E;&#x3088;&#x3046;&#x306A;&#x30B5;&#x30FC;&#x30D3;&#x30B9;&#x3092;&#x63D0;&#x4F9B;&#x3057;&#x3066;&#x3044;&#x307E;&#x3059;&#x304B;&#xFF1F;</summary>
+                        <p>当社は包括的なAIサービスを提供しています。AIチーム、コンサルティング＆アドバイザリー、統合＆プロジェクト管理、トレーニング＆ワークショップなどです。成長、効率、イノベーションを推進するインテリジェントソリューションで組織を支援することが目標です。</p>
+                    </details>
+                </div>
+                <div class="faq-item">
+                    <details>
+                        <summary><i class="fas fa-industry"></i>&#x3069;&#x306E;&#x696D;&#x754C;&#x306B;&#x5BFE;&#x5FDC;&#x3057;&#x3066;&#x3044;&#x307E;&#x3059;&#x304B;&#xFF1F;</summary>
+                        <p>当社はあらゆる業界のクライアントに対応しています。柔軟なAIソリューションは、それぞれの業界特有の課題や機会にシームレスに適応できるよう設計されています。</p>
+                    </details>
+                </div>
+                <div class="faq-item">
+                    <details>
+                        <summary><i class="fas fa-user-shield"></i>&#x30C7;&#x30FC;&#x30BF;&#x30D7;&#x30E9;&#x30A4;&#x30D0;&#x30B7;&#x30FC;&#x3068;&#x30B3;&#x30F3;&#x30D7;&#x30E9;&#x30A4;&#x30A2;&#x30F3;&#x30B9;&#x306F;&#x3069;&#x306E;&#x3088;&#x3046;&#x306B;&#x78BA;&#x4FDD;&#x3057;&#x3066;&#x3044;&#x307E;&#x3059;&#x304B;&#xFF1F;</summary>
+                        <p>当社はEUで事業を行うベルギー企業として、GDPR基準を厳格に遵守しています。お問い合わせ対応やサービス提供に必要なデータのみを処理し、すべてのデータを安全に保管します。また、進化する規制に対応するため、定期的にコンプライアンスレビューを実施しています。</p>
+                    </details>
+                </div>
+                <div class="faq-item">
+                    <details>
+                        <summary><i class="fas fa-lock"></i>AI&#x5C0E;&#x5165;&#x306E;&#x30BB;&#x30AD;&#x30E5;&#x30EA;&#x30C6;&#x30A3;&#x306F;&#x3069;&#x306E;&#x3088;&#x3046;&#x306B;&#x78BA;&#x4FDD;&#x3057;&#x3066;&#x3044;&#x307E;&#x3059;&#x304B;&#xFF1F;</summary>
+                        <p>セキュリティは最優先事項です。堅牢な暗号化、ペネトレーションテスト、継続的な監視を実施し、システムを保護しています。機密情報から機械学習モデルまで、すべての要素を保護します。導入時には業界のベストプラクティスや規制基準に沿ったコンプライアンスチェックも行います。</p>
+                    </details>
+                </div>
+                <div class="faq-item">
+                    <details>
+                        <summary><i class="fas fa-clock"></i>AI&#x7D71;&#x5408;&#x30D7;&#x30ED;&#x30B8;&#x30A7;&#x30AF;&#x30C8;&#x306E;&#x4E00;&#x822C;&#x7684;&#x306A;&#x671F;&#x9593;&#x306F;&#x3069;&#x306E;&#x304F;&#x3089;&#x3044;&#x3067;&#x3059;&#x304B;&#xFF1F;</summary>
+                        <p>プロジェクトの期間は範囲や複雑さによって異なります。多くの統合プロジェクトは3〜6か月で、データの準備状況、システム統合要件、組織の目標によって変動します。</p>
+                    </details>
+                </div>
+                <div class="faq-item">
+                    <details>
+                        <summary><i class="fas fa-chart-line"></i>AI&#x30BD;&#x30EA;&#x30E5;&#x30FC;&#x30B7;&#x30E7;&#x30F3;&#x306E;ROI&#x306F;&#x3069;&#x306E;&#x3088;&#x3046;&#x306B;&#x6E2C;&#x5B9A;&#x3057;&#x307E;&#x3059;&#x304B;&#xFF1F;</summary>
+                        <p>計画段階で明確なKPI（処理時間の短縮、精度の向上、収益増加など）を定義します。ROIは継続的なモニタリングと導入後のレビューで追跡します。</p>
+                    </details>
+                </div>
+                <div class="faq-item">
+                    <details>
+                        <summary><i class="fas fa-chalkboard-teacher"></i>&#x30C8;&#x30EC;&#x30FC;&#x30CB;&#x30F3;&#x30B0;&#x30BB;&#x30C3;&#x30B7;&#x30E7;&#x30F3;&#x306F;&#x30AB;&#x30B9;&#x30BF;&#x30DE;&#x30A4;&#x30BA;&#x3067;&#x304D;&#x307E;&#x3059;&#x304B;&#xFF1F;</summary>
+                        <p>もちろん可能です。当社のトレーニングプログラムは組織のニーズに合わせて調整されます。非技術チーム向けの入門ワークショップから、専門家向けの高度な技術トレーニングまで対応します。</p>
+                    </details>
+                </div>
+                <div class="faq-item">
+                    <details>
+                        <summary><i class="fas fa-envelope-open-text"></i>&#x3069;&#x306E;&#x3088;&#x3046;&#x306B;&#x9023;&#x7D61;&#x3084;&#x76F8;&#x8AC7;&#x3092;&#x7533;&#x3057;&#x8FBC;&#x3081;&#x307E;&#x3059;&#x304B;&#xFF1F;</summary>
+                        <p><a href="contact.html">お問い合わせ・相談ページ</a>からご連絡いただけます。フォームに必要事項を入力し、該当部門（営業、採用、請求、一般問い合わせ）を選択してください。チームが迅速に対応し、必要に応じて相談を手配します。</p>
+                    </details>
+                </div>
+                <div class="faq-item">
+                    <details>
+                        <summary><i class="fas fa-handshake"></i>&#x3069;&#x306E;&#x3088;&#x3046;&#x306A;&#x30D1;&#x30FC;&#x30C8;&#x30CA;&#x30FC;&#x30B7;&#x30C3;&#x30D7;&#x3084;&#x30A2;&#x30E9;&#x30A4;&#x30A2;&#x30F3;&#x30B9;&#x304C;&#x3042;&#x308A;&#x307E;&#x3059;&#x304B;&#xFF1F;</summary>
+                        <p>当社は業界リーダーとの戦略的パートナーシップやアライアンスを積極的に構築しています。パートナーリストは現在整備中ですが、<a href="partners.html">パートナー＆アライアンスページ</a>から協業提案を歓迎しています。</p>
+                    </details>
+                </div>
+                <div class="faq-item">
+                    <details>
+                        <summary><i class="fas fa-briefcase"></i>The Intelligent Enterprise Group&#x3067;&#x306E;&#x30AD;&#x30E3;&#x30EA;&#x30A2;&#x5FDC;&#x52DF;&#x65B9;&#x6CD5;&#x306F;&#xFF1F;</summary>
+                        <p><a href="careers.html">採用情報ページ</a>をご覧いただき、現在の募集職種や企業文化についてご確認ください。募集がない場合でも、優秀な人材からの自由応募を歓迎しています。</p>
+                    </details>
+                </div>
+                <div class="faq-item">
+                    <details>
+                        <summary><i class="fas fa-headset"></i>&#x30D7;&#x30ED;&#x30B8;&#x30A7;&#x30AF;&#x30C8;&#x7D0D;&#x54C1;&#x5F8C;&#x306E;&#x30B5;&#x30DD;&#x30FC;&#x30C8;&#x306F;&#x3042;&#x308A;&#x307E;&#x3059;&#x304B;&#xFF1F;</summary>
+                        <p>システム監視、パフォーマンス最適化、ユーザートレーニングなど、継続的なサポートを提供しています。AIソリューションの長期的な成功と継続的改善を目指しています。</p>
+                    </details>
+                </div>
+                <div class="faq-item">
+                    <details>
+                        <summary><i class="fas fa-tags"></i>&#x30B5;&#x30FC;&#x30D3;&#x30B9;&#x306E;&#x6599;&#x91D1;&#x4F53;&#x7CFB;&#x306F;&#xFF1F;</summary>
+                        <p>料金はプロジェクトの範囲や要件に応じて個別に設定されます。初回相談後に透明性のある提案を行い、目標や予算に沿った内容を保証します。</p>
+                    </details>
+                </div>
+                <div class="faq-item">
+                    <details>
+                        <summary><i class="fas fa-balance-scale"></i>&#x30A6;&#x30A7;&#x30D6;&#x30B5;&#x30A4;&#x30C8;&#x5229;&#x7528;&#x306B;&#x306F;&#x3069;&#x306E;&#x3088;&#x3046;&#x306A;&#x6CD5;&#x7684;&#x30DD;&#x30EA;&#x30B7;&#x30FC;&#x304C;&#x9069;&#x7528;&#x3055;&#x308C;&#x307E;&#x3059;&#x304B;&#xFF1F;</summary>
+                        <p>当社のウェブサイトは、利用規約、プライバシーポリシー、クッキーポリシーなどの包括的な法的ポリシーに基づいて運営されています。これらのポリシーは透明性を確保し、データを保護し、ベルギーおよびEU法に準拠しています。詳細は<a href="legal.html">法務・ポリシーページ</a>をご覧ください。</p>
+                    </details>
+                </div>
+    </div>
+</section>
+
+<section class="cta">
+    <div class="container">
+        <h2>&#x307E;&#x3060;&#x3054;&#x8CEA;&#x554F;&#x304C;&#x3042;&#x308A;&#x307E;&#x3059;&#x304B;&#xFF1F;</h2>
+        <p>&#x3053;&#x3053;&#x3067;&#x89E3;&#x6C7A;&#x3057;&#x306A;&#x3044;&#x7591;&#x554F;&#x304C;&#x3042;&#x308C;&#x3070;&#x3001;&#x305C;&#x3072;&#x76F4;&#x63A5;&#x304A;&#x554F;&#x3044;&#x5408;&#x308F;&#x305B;&#x304F;&#x3060;&#x3055;&#x3044;&#x3002;&#x5FC5;&#x8981;&#x306A;&#x60C5;&#x5831;&#x3092;&#x3059;&#x3079;&#x3066;&#x3054;&#x63D0;&#x4F9B;&#x3067;&#x304D;&#x308B;&#x3088;&#x3046;&#x30B5;&#x30DD;&#x30FC;&#x30C8;&#x3044;&#x305F;&#x3057;&#x307E;&#x3059;&#x3002;</p>
+        <a href="contact.html" class="btn">&#x304A;&#x554F;&#x3044;&#x5408;&#x308F;&#x305B;</a>
+    </div>
+</section>
+
+
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&#xA9; 2025 The Intelligent Enterprise Group. &#x7121;&#x65AD;&#x8EE2;&#x8F09;&#x3092;&#x7981;&#x3058;&#x307E;&#x3059;&#x3002;</p>
+        </div>
+    </footer>
+
+    <script src="/js/swiper-bundle.min.js"></script>
+    <script src="/js/cdn.min.js" defer></script>
+    <script src="/js/gsap.min.js"></script>
+    <script src="/js/DrawSVGPlugin.min.js"></script>
+
+    <script type="module" src="/js/themeToggle.js"></script>
+    <script type="module">
+        import { toggleTheme, getCurrentTheme } from '/js/themeToggle.js';
+        const checkbox = document.getElementById('theme-checkbox');
+        const themeLabel = document.getElementById('theme-label');
+
+        if (getCurrentTheme() === 'dark') {
+            checkbox.checked = true;
+            themeLabel.textContent = 'ダークモード';
+        } else {
+            themeLabel.textContent = 'ライトモード';
+        }
+
+        checkbox.addEventListener('change', () => {
+            toggleTheme();
+            themeLabel.textContent = checkbox.checked ? 'ダークモード' : 'ライトモード';
+        });
+    </script>
+
+    <button id="back-to-top" aria-label="Back to Top">&#x30C8;&#x30C3;&#x30D7;</button>
+
+    
+    <script>
+        gsap.registerPlugin(DrawSVGPlugin);
+        window.onload = function () {
+            gsap.from(".hero h2", { duration: 1.2, opacity: 0, y: -50, ease: "power2.out" });
+            gsap.from(".hero h3", { duration: 1.2, opacity: 0, y: 50, ease: "power2.out", delay: 0.2 });
+            gsap.from(".faq-container", { duration: 1, opacity: 0, y: 20, ease: "power2.out", delay: 0.4 });
+            gsap.from(".cta h2", { duration: 1, opacity: 0, y: -20, ease: "power2.out", delay: 0.8 });
+            gsap.from(".cta p", { duration: 1, opacity: 0, y: 20, ease: "power2.out", delay: 1 });
+            gsap.from(".cta .btn", { duration: 1, opacity: 0, scale: 0.8, ease: "back.out(1.7)", delay: 1.2 });
+        };
+    </script>
+
+</body>
+</html>

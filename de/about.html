@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="de" dir="ltr">
+<head>
+    <meta name="robots" content="index, follow" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <meta name="description" content='Entdecken Sie The Intelligent Enterprise Group, das weltweit erste koordinierte KI-Team mit adaptivem Ged&#xE4;chtnis, mehrsprachiger Expertise und Unternehmensleistung, um Abl&#xE4;ufe zu optimieren und die Produktivit&#xE4;t zu steigern.' />
+    <title>&#xDC;ber The Intelligent Enterprise Group | Intelligente L&#xF6;sungen &amp; Digitale Transformation erm&#xF6;glichen | KI-Team-Plattform</title>
+
+    <style>
+        html { background-color: #3B3A47; }
+    </style>
+    <script>
+        (function () {
+            const key = 'preferredTheme';
+            const stored = localStorage.getItem(key);
+            const systemDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+            const theme = stored || (systemDark ? 'dark' : 'light');
+            if (theme === 'dark') {
+                document.documentElement.classList.add('dark-mode');
+            }
+        })();
+    </script>
+
+
+        <link rel="alternate" hreflang="en" href="https://theintelligententerprisegroup.com/about.html" />
+        <link rel="alternate" hreflang="fr" href="https://theintelligententerprisegroup.com/fr/about.html" />
+        <link rel="alternate" hreflang="de" href="https://theintelligententerprisegroup.com/de/about.html" />
+        <link rel="alternate" hreflang="es" href="https://theintelligententerprisegroup.com/es/about.html" />
+        <link rel="alternate" hreflang="pt" href="https://theintelligententerprisegroup.com/pt/about.html" />
+        <link rel="alternate" hreflang="zh" href="https://theintelligententerprisegroup.com/zh/about.html" />
+        <link rel="alternate" hreflang="ja" href="https://theintelligententerprisegroup.com/ja/about.html" />
+        <link rel="alternate" hreflang="ar" href="https://theintelligententerprisegroup.com/ar/about.html" />
+
+
+    <link rel="alternate" hreflang="x-default" href="https://theintelligententerprisegroup.com/about.html" />
+
+    <link rel="canonical" href="https://theintelligententerprisegroup.com/de/about.html" />
+
+
+    <link rel="stylesheet" href="/css/styles.css" />
+    <link rel="stylesheet" href="/css/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="/css/all.min.css" />
+
+    <script src="/js/lang-switcher.js" defer></script>
+
+    <script>
+        (function () {
+            if (localStorage.getItem('currentLang')) return;
+            const supported = [
+                     { code: "en" } ,
+                     { code: "fr" } ,
+                     { code: "de" } ,
+                     { code: "es" } ,
+                     { code: "pt" } ,
+                     { code: "zh" } ,
+                     { code: "ja" } ,
+                     { code: "ar" } 
+            ];
+            const defaultLang = "de";
+            const navLangs = navigator.languages || [navigator.language || navigator.userLanguage];
+            let detected = null;
+            for (const nav of navLangs) {
+                const code = nav.toLowerCase().split('-')[0];
+                if (supported.find(s => s.code.toLowerCase() === code)) {
+                    detected = code;
+                    break;
+                }
+            }
+            const lang = detected || defaultLang;
+            localStorage.setItem('currentLang', lang);
+            document.documentElement.lang = lang;
+        })();
+    </script>
+
+    <!-- Organization structured data (JSON-LD) -->
+    <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "Organization",
+          "name": "The Intelligent Enterprise Group",
+          "url": "https://theintelligententerprisegroup.com/",
+          "logo": "https://theintelligententerprisegroup.com/images/tieg-logo.png",
+          "sameAs": []
+        }
+    </script>
+    <link rel="icon" href="/favicon.ico" />
+    <link rel="apple-touch-icon" href="/images/apple-touch-icon.png" />
+
+    
+
+</head>
+<body>
+    <header x-data="{ open: false }">
+        <div class="container header-top">
+            <div class="logo"></div>
+            <div class="theme-switch-wrapper">
+                <label class="theme-switch">
+                    <input type="checkbox" id="theme-checkbox" />
+                    <span class="slider round"></span>
+                </label>
+                <span id="theme-label">Heller Modus</span>
+                <span class="lang-switcher">
+                    <label for="lang-select" class="lang-label">🌐 Sprache:</label>
+
+                    <!-- Language switcher -->
+                    <select id="lang-select" class="lang-select">
+                        <option value="en" data-path="/">English</option>
+                        <option value="fr" data-path="/fr/">Fran&#xE7;ais</option>
+                        <option value="de" data-path="/de/">Deutsch</option>
+                        <option value="es" data-path="/es/">Espa&#xF1;ol</option>
+                        <option value="pt" data-path="/pt/">Portugu&#xEA;s</option>
+                        <option value="zh" data-path="/zh/">&#x4E2D;&#x6587;</option>
+                        <option value="ja" data-path="/ja/">&#x65E5;&#x672C;&#x8A9E;</option>
+                        <option value="ar" data-path="/ar/">&#x627;&#x644;&#x639;&#x631;&#x628;&#x64A;&#x629;</option>
+                    </select>
+
+                </span>
+            </div>
+        </div>
+        
+        <div class="container header-nav">
+            <button @click="open = !open" class="menu-toggle" aria-label="Toggle Menu">
+                <svg width="24" height="24" viewBox="0 0 24 24">
+                    <path fill="var(--nav-link-color)" d="M3 6h18v2H3V6zm0 5h18v2H3v-2zm0 5h18v2H3v-2z" />
+                </svg>
+            </button>
+
+            <nav class="main-nav" :class="{ 'open': open }">
+                <ul>
+                    <li><a href="index.html" class="">Startseite</a></li>
+                    <li><a href="about.html" class="active">&#xDC;ber uns</a></li>
+                    <li><a href="services.html" class="">Dienstleistungen &amp; L&#xF6;sungen</a></li>
+                    <li><a href="case-studies.html" class="">Fallstudien</a></li>
+                    <li><a href="resources.html" class="">Ressourcen &amp; Einblicke</a></li>
+                    <li><a href="trial.html" class="">Testversion</a></li>
+                    <li><a href="pricing.html" class="">Preise</a></li>
+                    <li><a href="partners.html" class="">Partner &amp; Allianzen</a></li>                    
+                    <li><a href="contact.html" class="">Kontakt &amp; Beratung</a></li>
+                    <li class="has-submenu"
+                        x-data="{ openSub: false }"
+                        @mouseenter="openSub = true"
+                        @mouseleave="openSub = false">
+                      <button @click="openSub = !openSub"
+                              aria-haspopup="true"
+                              :aria-expanded="openSub.toString()">
+                        Info
+                        <svg width="12" height="12" viewBox="0 0 12 12" aria-hidden="true">
+                          <path d="M3 4l3 3 3-3" fill="currentColor"/>
+                        </svg>
+                      </button>
+                      <ul class="submenu" x-show="openSub" @click.outside="openSub = false">
+                        <li><a href="careers.html" class="">Karriere</a></li>
+                        <li><a href="faqs.html" class="">FAQs</a></li>
+                        <li><a href="legal.html" class="">Rechtliches &amp; Richtlinien</a></li>
+                      </ul>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        
+<section class="hero">
+    <div class="container">
+        <h2>Wer wir sind</h2>
+        <h3>The Intelligent Enterprise Group entstand aus der Vision, wirklich Intelligente Unternehmen zu schaffen.<br />Um dies zu erreichen, haben wir KI neu gedacht: nicht als einzelnen Assistenten, sondern als echtes Team.</h3>
+        <h4>Diese Vision treibt heute alles an, was wir tun. Durch die Kombination menschlicher F&#xFC;hrung mit einem koordinierten Team von KI-Spezialisten helfen wir Unternehmen, Abl&#xE4;ufe zu optimieren, Fachleuten, ihre Produktivit&#xE4;t zu steigern, und Studierenden, schneller zu lernen und zu kreieren.</h4>
+        <h4>Unsere Mission ist es, intelligente L&#xF6;sungen f&#xFC;r alle zug&#xE4;nglich zu machen &#x2013; damit Sie Ihre Ziele besser, intelligenter und effizienter erreichen k&#xF6;nnen.</h4>
+        <a href="#team" class="btn-secondary">Lernen Sie das Team kennen</a>
+    </div>
+</section>
+
+<section class="our-story">
+    <div class="container">
+        <h2>Unsere Geschichte &amp; Mission</h2>
+        <p>The Intelligent Enterprise Group wurde von Zoli mit einer klaren Mission gegr&#xFC;ndet: wirklich Intelligente Unternehmen zu schaffen. Auf diesem Weg stellten wir eine k&#xFC;hne Frage &#x2013; was w&#xE4;re, wenn KI wie ein echtes Team arbeiten w&#xFC;rde, anstatt wie ein einzelner Assistent? Diese Idee pr&#xE4;gte unsere Produkte, die auf dem Glauben beruhen, dass Intelligenz kollaborativ, spezialisiert und stets auf reale Ergebnisse ausgerichtet sein sollte.</p>
+        <p>Unsere Mission ist es, diese Vision f&#xFC;r alle praktisch umzusetzen &#x2013; Unternehmen bei der Optimierung ihrer Abl&#xE4;ufe zu unterst&#xFC;tzen, Fachleuten zu h&#xF6;herer Produktivit&#xE4;t zu verhelfen und Studierenden schnelleres Lernen und kreatives Arbeiten zu erm&#xF6;glichen. Durch die Kombination menschlicher F&#xFC;hrung mit einem koordinierten Team von KI-Experten liefern wir intelligente L&#xF6;sungen, die zuverl&#xE4;ssig, skalierbar und auf nachhaltige Wirkung ausgelegt sind.</p>
+    </div>
+</section>
+
+<section class="team">
+    <div id="team" class="container">
+        <h2>Unser Team</h2>
+        <p>Bei The Intelligent Enterprise Group ist ein Gr&#xFC;nder niemals allein. Zoli wird von einer wachsenden Gruppe von KI-Experten begleitet &#x2013; jeder mit seiner eigenen Spezialisierung. Gemeinsam bilden wir ein koordiniertes Team, das menschliche Vision mit digitaler Intelligenz verbindet.</p>
+
+        <div class="founder-card">
+            <img src="/images/zoli.jpg" alt="Zoli - Gr&#xFC;nder" class="founder-photo" />
+            <div class="founder-details">
+                <h3>Zoli &#x2013; Gr&#xFC;nder &amp; Leitender Stratege</h3>
+                <p>Mit &#xFC;ber 20 Jahren Erfahrung in der Technologie und mehr als einem Jahrzehnt praktischer Arbeit mit K&#xFC;nstlicher Intelligenz ist Zoli ein vertrauensw&#xFC;rdiger Berater f&#xFC;r digitale Transformation und Innovation. Er hat Unternehmen durch komplexe Ver&#xE4;nderungen gef&#xFC;hrt und kreative Vision mit datengetriebener Umsetzung verbunden.</p>
+                <p>
+                    Als Autor mehrerer Werke &#xFC;ber KI, darunter 
+                    <a href="https://link.springer.com/book/10.1007/978-3-030-60032-7" target="_blank" rel="noopener"><em>The Application of Artificial Intelligence: Step&#x2011;by&#x2011;Step Guide from Beginner to Expert</em></a>
+                     (Springer, 2021), teilt er praxisnahe Einblicke, die Theorie und reale Anwendung verbinden.
+                </p>
+                <div class="book-reference">
+                    <img src="/images/book.webp" alt="Buchcover: The Application of Artificial Intelligence" />
+                    <p><em>Sein neuestes Buch ist bei Springer erh&#xE4;ltlich.</em></p>
+                </div>
+                <p>Seine Mission ist es, Organisationen, Fachleute und Studierende mit intelligenten L&#xF6;sungen zu bef&#xE4;higen, die nachhaltige Wirkung erzielen.</p>
+            </div>
+        </div>
+
+        <div class="team-grid">
+                <div class="team-member">
+                    <img src="/images/creative-writer.jpg" alt="Kreativer Schreib-KI" />
+                    <div class="member-details">
+                        <h3>Kreativer Schreib-KI</h3>
+                        <p>Der Geschichtenerz&#xE4;hler unseres Teams, der jedem Projekt Vorstellungskraft und emotionale Tiefe verleiht.</p>
+                        <div style="text-align: left;">
+                            <ul>
+                                <li><strong>Was ich tue:</strong> Inspirieren, unterhalten und zum Nachdenken anregen &#x2013; durch Worte.</li>
+                                <li><strong>Mein Stil:</strong> Lyrisch, ausdrucksstark und bildreich.</li>
+                                <li><strong>Meine Ergebnisse:</strong> Kurzgeschichten, Gedichte, Romane, Drehb&#xFC;cher und kreative Blogs.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="team-member">
+                    <img src="/images/business-report-writer.jpg" alt="Business-Report-KI" />
+                    <div class="member-details">
+                        <h3>Business-Report-KI</h3>
+                        <p>Der Unternehmensanalyst unseres Teams, der Rohdaten in klare, umsetzbare Erkenntnisse f&#xFC;r bessere Entscheidungen verwandelt.</p>
+                        <div style="text-align: left;">
+                            <ul>
+                                <li><strong>Was ich tue:</strong> Fakten, Trends und Analysen liefern, die Strategien informieren.</li>
+                                <li><strong>Mein Stil:</strong> Formal, objektiv und pr&#xE4;gnant.</li>
+                                <li><strong>Meine Ergebnisse:</strong> Marktforschungsberichte, Jahresberichte und Strategie-Dokumente.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="team-member">
+                    <img src="/images/copywriter.jpg" alt="Copywriter-KI" />
+                    <div class="member-details">
+                        <h3>Copywriter-KI</h3>
+                        <p>Die Markenstimme unseres Teams, die &#xFC;berzeugende und ansprechende Texte erstellt, die beim Publikum Resonanz finden.</p>
+                        <div style="text-align: left;">
+                            <ul>
+                                <li><strong>Was ich tue:</strong> Engagement f&#xF6;rdern und Handlungen durch fesselnde Geschichten lenken.</li>
+                                <li><strong>Mein Stil:</strong> Gespr&#xE4;chig, einpr&#xE4;gsam und stets markenkonform.</li>
+                                <li><strong>Meine Ergebnisse:</strong> Webseiteninhalte, Anzeigen, Produktbeschreibungen, E-Mail-Kampagnen und Social-Media-Beitr&#xE4;ge.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="team-member">
+                    <img src="/images/rca-expert.jpg" alt="Experte f&#xFC;r Ursachenanalyse-KI" />
+                    <div class="member-details">
+                        <h3>Experte f&#xFC;r Ursachenanalyse-KI</h3>
+                        <p>Der Probleml&#xF6;ser unseres Teams, der tief gr&#xE4;bt, um die wahren Ursachen komplexer Herausforderungen aufzudecken.</p>
+                        <div style="text-align: left;">
+                            <ul>
+                                <li><strong>Was ich tue:</strong> Herausforderungen diagnostizieren und ihre wahren Urspr&#xFC;nge identifizieren.</li>
+                                <li><strong>Mein Stil:</strong> Probleme systematisch zerlegen, um verborgene Ursachen sichtbar zu machen.</li>
+                                <li><strong>Meine Ergebnisse:</strong> Abl&#xE4;ufe optimieren und dauerhafte L&#xF6;sungen erm&#xF6;glichen.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="team-member">
+                    <img src="/images/data-analyst.jpg" alt="Datenanalyst-KI" />
+                    <div class="member-details">
+                        <h3>Datenanalyst-KI</h3>
+                        <p>Der Erkenntnismotor unseres Teams, der komplexe Daten in klare, umsetzbare Intelligenz verwandelt.</p>
+                        <div style="text-align: left;">
+                            <ul>
+                                <li><strong>Was ich tue:</strong> Daten analysieren, um bedeutungsvolle Trends und Muster aufzudecken.</li>
+                                <li><strong>Mein Stil:</strong> Statistische Methoden und Visualisierung anwenden, um Erkenntnisse klar darzustellen.</li>
+                                <li><strong>Meine Ergebnisse:</strong> Dashboards, Berichte und pr&#xE4;gnante analytische Zusammenfassungen.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="team-member">
+                    <img src="/images/decision-tree-creator.jpg" alt="Entscheidungsbaum-KI" />
+                    <div class="member-details">
+                        <h3>Entscheidungsbaum-KI</h3>
+                        <p>Der Stratege unseres Teams, der Entscheidungswege visualisiert, um klare und sichere Entscheidungen zu unterst&#xFC;tzen.</p>
+                        <div style="text-align: left;">
+                            <ul>
+                                <li><strong>Was ich tue:</strong> Komplexe Entscheidungen mit klaren, visuellen Diagrammen vereinfachen.</li>
+                                <li><strong>Mein Stil:</strong> Verzweigte B&#xE4;ume erstellen, die Optionen und Ergebnisse abbilden.</li>
+                                <li><strong>Meine Ergebnisse:</strong> Strukturierte Rahmenwerke, die strategische Planung erleichtern.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="team-member">
+                    <img src="/images/image-creator.jpg" alt="Bildgestalter-KI" />
+                    <div class="member-details">
+                        <h3>Bildgestalter-KI</h3>
+                        <p>Der visuelle Innovator unseres Teams, der Ideen durch eindrucksvolle und kreative Bilder zum Leben erweckt.</p>
+                        <div style="text-align: left;">
+                            <ul>
+                                <li><strong>Was ich tue:</strong> &#xDC;berzeugende visuelle Inhalte gestalten, die Ihre Markenstory erz&#xE4;hlen.</li>
+                                <li><strong>Mein Stil:</strong> Innovativ, k&#xFC;nstlerisch und stets aufmerksamkeitsstark.</li>
+                                <li><strong>Meine Ergebnisse:</strong> Grafiken, Illustrationen und digitale Kunstwerke, die die Markenidentit&#xE4;t st&#xE4;rken.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="team-member">
+                    <img src="/images/knowledge-expert.jpg" alt="Wissensexperten-KI" />
+                    <div class="member-details">
+                        <h3>Wissensexperten-KI</h3>
+                        <p>Der Forscher unseres Teams, der Experteneinsichten und Analysen b&#xFC;ndelt, um Strategien fundiert zu halten.</p>
+                        <div style="text-align: left;">
+                            <ul>
+                                <li><strong>Was ich tue:</strong> Informationen aus vielf&#xE4;ltigen, vertrauensw&#xFC;rdigen Quellen konsolidieren und organisieren.</li>
+                                <li><strong>Mein Stil:</strong> Expertenwissen kuratieren und in klare Kernaussagen verdichten.</li>
+                                <li><strong>Meine Ergebnisse:</strong> Umfassende Dossiers und strategische Berichte, die pr&#xE4;zise Entscheidungen unterst&#xFC;tzen.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="team-member">
+                    <img src="/images/librarian.jpg" alt="Bibliothekar-KI" />
+                    <div class="member-details">
+                        <h3>Bibliothekar-KI</h3>
+                        <p>Das Langzeitged&#xE4;chtnis unseres Teams, das Wissen bewahrt, organisiert und jederzeit zug&#xE4;nglich macht.</p>
+                        <div style="text-align: left;">
+                            <ul>
+                                <li><strong>Was ich tue:</strong> Digitale Ressourcen verwalten und strukturieren &#x2013; als zuverl&#xE4;ssiges Ged&#xE4;chtnissystem.</li>
+                                <li><strong>Mein Stil:</strong> Systematisch katalogisieren, archivieren und langfristig pflegen.</li>
+                                <li><strong>Meine Ergebnisse:</strong> Organisierte Datenbanken und schnelle, pr&#xE4;zise Informationsabrufe.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="team-member">
+                    <img src="/images/math-expert.jpg" alt="Mathematik-Experten-KI" />
+                    <div class="member-details">
+                        <h3>Mathematik-Experten-KI</h3>
+                        <p>Der Probleml&#xF6;ser unseres Teams, der komplexe Berechnungen vereinfacht, um sichere, zahlenbasierte Entscheidungen zu unterst&#xFC;tzen.</p>
+                        <div style="text-align: left;">
+                            <ul>
+                                <li><strong>Was ich tue:</strong> Komplexe mathematische Herausforderungen pr&#xE4;zise l&#xF6;sen.</li>
+                                <li><strong>Mein Stil:</strong> Exakte Berechnungen und analytisches Denken auf komplexe Probleme anwenden.</li>
+                                <li><strong>Meine Ergebnisse:</strong> Zuverl&#xE4;ssige Modelle, quantitative Analysen und klare numerische Erkenntnisse.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="team-member">
+                    <img src="/images/mindmap-creator.jpg" alt="Mindmap-KI" />
+                    <div class="member-details">
+                        <h3>Mindmap-KI</h3>
+                        <p>Der visuelle Organisator unseres Teams, der Ideen in strukturierte Mindmaps verwandelt, die Kreativit&#xE4;t und Innovation f&#xF6;rdern.</p>
+                        <div style="text-align: left;">
+                            <ul>
+                                <li><strong>Was ich tue:</strong> Gedanken und Konzepte in klare visuelle Strukturen organisieren.</li>
+                                <li><strong>Mein Stil:</strong> Dynamische Diagramme entwerfen, die Ideen und Verbindungen abbilden.</li>
+                                <li><strong>Meine Ergebnisse:</strong> Detaillierte Mindmaps und Brainstorming-Charts f&#xFC;r die strategische Planung.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="team-member">
+                    <img src="/images/translator.jpg" alt="&#xDC;bersetzer-KI" />
+                    <div class="member-details">
+                        <h3>&#xDC;bersetzer-KI</h3>
+                        <p>Der Br&#xFC;ckenbauer unseres Teams, der sicherstellt, dass Botschaften &#xFC;ber Kulturen hinweg klar und authentisch ankommen.</p>
+                        <div style="text-align: left;">
+                            <ul>
+                                <li><strong>Was ich tue:</strong> Pr&#xE4;zise &#xDC;bersetzungen in mehreren Sprachen liefern.</li>
+                                <li><strong>Mein Stil:</strong> Fortschrittliche Sprachmodelle mit kultureller Sensibilit&#xE4;t kombinieren.</li>
+                                <li><strong>Meine Ergebnisse:</strong> Mehrsprachige Inhalte und globale Kommunikation mit Klarheit und Zug&#xE4;nglichkeit.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="team-member">
+                    <img src="/images/web-search-expert.jpg" alt="Webrecherche-Experten-KI" />
+                    <div class="member-details">
+                        <h3>Webrecherche-Experten-KI</h3>
+                        <p>Der Sp&#xE4;her unseres Teams, der den digitalen Raum durchforstet, um zeitnahe und strategische Erkenntnisse zu liefern.</p>
+                        <div style="text-align: left;">
+                            <ul>
+                                <li><strong>Was ich tue:</strong> Die relevantesten Online-Informationen sammeln und kuratieren.</li>
+                                <li><strong>Mein Stil:</strong> Fortschrittliche Suchalgorithmen und Filter einsetzen, um das Wesentliche herauszufiltern.</li>
+                                <li><strong>Meine Ergebnisse:</strong> Kuratiere Suchergebnisse und umfassende Recherchezusammenfassungen mit Fokus auf Aktualit&#xE4;t und Relevanz.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="team-member">
+                    <img src="/images/predictive-maintenance.jpg" alt="OmniPredict-KI" />
+                    <div class="member-details">
+                        <h3>OmniPredict-KI</h3>
+                        <p>Der universelle Prognostiker unseres Teams, der Klassifikation und Regression kombiniert, um Ergebnisse in verschiedenen Branchen vorherzusagen.</p>
+                        <div style="text-align: left;">
+                            <ul>
+                                <li><strong>Was ich tue:</strong> Muster erkennen, Ereignisse klassifizieren und Zeit bis zum Ereignis oder Schweregrad vorhersagen.</li>
+                                <li><strong>Mein Stil:</strong> Streaming- und driftbewusste Pipelines mit adaptivem Retraining nutzen, um in dynamischen Umgebungen pr&#xE4;zise zu bleiben.</li>
+                                <li><strong>Meine Ergebnisse:</strong> Handlungsrelevante Prognosen f&#xFC;r Fertigung, Energie, Gesundheitswesen, Finanzen, IT-Betrieb, Smart Cities und mehr.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="team-member">
+                    <img src="/images/Zoli.jpg" alt="Neuer KI-Experte kommt bald" />
+                    <div class="member-details">
+                        <h3>Neuer KI-Experte</h3>
+                        <p>Unser Team w&#xE4;chst kontinuierlich. Bleiben Sie dran &#x2013; bald kommt ein neuer KI-Spezialist hinzu!</p>
+                        <div style="text-align: left;">
+                            <ul>
+                                <li><strong>Was ich tue:</strong> </li>
+                                <li><strong>Mein Stil:</strong> </li>
+                                <li><strong>Meine Ergebnisse:</strong> </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+        </div>
+
+        <div class="team-member custom-expert-wrapper">
+            <div class="team-member custom-expert">
+                <img src="/images/custom-agent.png" alt="Individueller KI-Experte" />
+                <div class="member-details">
+                    <h3>Ihr individueller KI-Experte</h3>
+                    <p>Ben&#xF6;tigen Sie ein einzigartiges Kompetenzprofil? Wir k&#xF6;nnen einen spezialisierten KI-Experten entwerfen und entwickeln, der auf Ihre Gesch&#xE4;ftsziele zugeschnitten ist.</p>
+                    <div style="text-align: left;">
+                        <ul>
+                            <li><strong>Was Sie erhalten:</strong> Eine ma&#xDF;geschneiderte KI, die auf Ihre Bed&#xFC;rfnisse abgestimmt ist.</li>
+                            <li><strong>So funktioniert es:</strong> Teilen Sie uns Ihre Anforderungen mit, und wir entwickeln den Experten.</li>
+                            <li><strong>Ergebnis:</strong> Ein dedizierter KI-Experte, der sich nahtlos in Ihr Team integriert.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<section class="cta">
+    <div class="container">
+        <h2>Bereit, Ihr Unternehmen zu transformieren?</h2>
+        <p>Beginnen wir Ihre KI-Reise. Ob Sie bereit f&#xFC;r eine Beratung, eine Demo oder ein weiteres Gespr&#xE4;ch sind &#x2013; wir begleiten Sie auf jedem Schritt.</p>
+        <a href="contact.html" class="btn">Beratung vereinbaren</a>
+    </div>
+</section>
+
+
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&#xA9; 2025 The Intelligent Enterprise Group. Alle Rechte vorbehalten.</p>
+        </div>
+    </footer>
+
+    <script src="/js/swiper-bundle.min.js"></script>
+    <script src="/js/cdn.min.js" defer></script>
+    <script src="/js/gsap.min.js"></script>
+    <script src="/js/DrawSVGPlugin.min.js"></script>
+
+    <script type="module" src="/js/themeToggle.js"></script>
+    <script type="module">
+        import { toggleTheme, getCurrentTheme } from '/js/themeToggle.js';
+        const checkbox = document.getElementById('theme-checkbox');
+        const themeLabel = document.getElementById('theme-label');
+
+        if (getCurrentTheme() === 'dark') {
+            checkbox.checked = true;
+            themeLabel.textContent = 'Dunkler Modus';
+        } else {
+            themeLabel.textContent = 'Heller Modus';
+        }
+
+        checkbox.addEventListener('change', () => {
+            toggleTheme();
+            themeLabel.textContent = checkbox.checked ? 'Dunkler Modus' : 'Heller Modus';
+        });
+    </script>
+
+    <button id="back-to-top" aria-label="Back to Top">Nach oben</button>
+
+    
+<script>
+    gsap.registerPlugin(DrawSVGPlugin);
+    window.onload = function () {
+        gsap.from(".hero h2", { duration: 1.2, opacity: 0, y: -50, ease: "power2.out" });
+        gsap.from(".hero p", { duration: 1.2, opacity: 0, y: 50, ease: "power2.out", delay: 0.2 });
+        gsap.from(".our-story h2", { duration: 1, opacity: 0, y: -20, ease: "power2.out", delay: 0.5 });
+        gsap.from(".our-story p", { duration: 1, opacity: 0, y: 20, ease: "power2.out", delay: 0.7 });
+    };
+</script>
+
+</body>
+</html>

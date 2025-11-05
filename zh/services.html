@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html lang="zh" dir="ltr">
+<head>
+    <meta name="robots" content="index, follow" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <meta name="description" content='&#x63A2;&#x7D22;&#x667A;&#x80FD;&#x4F01;&#x4E1A;&#x96C6;&#x56E2;&#x7684;&#x670D;&#x52A1;&#xFF0C;&#x5305;&#x62EC; AI &#x4E13;&#x5BB6;&#x56E2;&#x961F;&#x5E73;&#x53F0;&#xFF08;&#x684C;&#x9762;&#x7248;&#x4E0E;&#x670D;&#x52A1;&#x5668;&#x7248;&#xFF09;&#x3001;&#x5B9A;&#x5236; AI &#x4EE3;&#x7406;&#x90E8;&#x7F72;&#x3001;&#x54A8;&#x8BE2;&#x3001;&#x96C6;&#x6210;&#x4E0E;&#x57F9;&#x8BAD;&#x3002;&#x7AEF;&#x5230;&#x7AEF;&#x89E3;&#x51B3;&#x65B9;&#x6848;&#xFF0C;&#x52A0;&#x901F;&#x667A;&#x80FD;&#x5316;&#x8F6C;&#x578B;&#x3002;' />
+    <title>&#x670D;&#x52A1;&#x4E0E;&#x89E3;&#x51B3;&#x65B9;&#x6848; | AI &#x4E13;&#x5BB6;&#x56E2;&#x961F;&#x5E73;&#x53F0;&#x4E0E;&#x54A8;&#x8BE2; &#x2013; &#x667A;&#x80FD;&#x4F01;&#x4E1A;&#x96C6;&#x56E2;</title>
+
+    <style>
+        html { background-color: #3B3A47; }
+    </style>
+    <script>
+        (function () {
+            const key = 'preferredTheme';
+            const stored = localStorage.getItem(key);
+            const systemDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+            const theme = stored || (systemDark ? 'dark' : 'light');
+            if (theme === 'dark') {
+                document.documentElement.classList.add('dark-mode');
+            }
+        })();
+    </script>
+
+
+        <link rel="alternate" hreflang="en" href="https://theintelligententerprisegroup.com/services.html" />
+        <link rel="alternate" hreflang="fr" href="https://theintelligententerprisegroup.com/fr/services.html" />
+        <link rel="alternate" hreflang="de" href="https://theintelligententerprisegroup.com/de/services.html" />
+        <link rel="alternate" hreflang="es" href="https://theintelligententerprisegroup.com/es/services.html" />
+        <link rel="alternate" hreflang="pt" href="https://theintelligententerprisegroup.com/pt/services.html" />
+        <link rel="alternate" hreflang="zh" href="https://theintelligententerprisegroup.com/zh/services.html" />
+        <link rel="alternate" hreflang="ja" href="https://theintelligententerprisegroup.com/ja/services.html" />
+        <link rel="alternate" hreflang="ar" href="https://theintelligententerprisegroup.com/ar/services.html" />
+
+
+    <link rel="alternate" hreflang="x-default" href="https://theintelligententerprisegroup.com/services.html" />
+
+    <link rel="canonical" href="https://theintelligententerprisegroup.com/zh/services.html" />
+
+
+    <link rel="stylesheet" href="/css/styles.css" />
+    <link rel="stylesheet" href="/css/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="/css/all.min.css" />
+
+    <script src="/js/lang-switcher.js" defer></script>
+
+    <script>
+        (function () {
+            if (localStorage.getItem('currentLang')) return;
+            const supported = [
+                     { code: "en" } ,
+                     { code: "fr" } ,
+                     { code: "de" } ,
+                     { code: "es" } ,
+                     { code: "pt" } ,
+                     { code: "zh" } ,
+                     { code: "ja" } ,
+                     { code: "ar" } 
+            ];
+            const defaultLang = "zh";
+            const navLangs = navigator.languages || [navigator.language || navigator.userLanguage];
+            let detected = null;
+            for (const nav of navLangs) {
+                const code = nav.toLowerCase().split('-')[0];
+                if (supported.find(s => s.code.toLowerCase() === code)) {
+                    detected = code;
+                    break;
+                }
+            }
+            const lang = detected || defaultLang;
+            localStorage.setItem('currentLang', lang);
+            document.documentElement.lang = lang;
+        })();
+    </script>
+
+    <!-- Organization structured data (JSON-LD) -->
+    <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "Organization",
+          "name": "The Intelligent Enterprise Group",
+          "url": "https://theintelligententerprisegroup.com/",
+          "logo": "https://theintelligententerprisegroup.com/images/tieg-logo.png",
+          "sameAs": []
+        }
+    </script>
+    <link rel="icon" href="/favicon.ico" />
+    <link rel="apple-touch-icon" href="/images/apple-touch-icon.png" />
+
+    
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+{
+          "@type": "Service",
+          "name": "AI 专家团队平台 – 桌面版",
+          "description": "我们的旗舰产品，以桌面应用形式交付。本地即可访问精选的 AI 专家团队，无需服务器或 API。",
+          "provider": { "@id": "https://theintelligententerprisegroup.com/#org" },
+          "serviceType": "Software Application",
+          "url": "https://theintelligententerprisegroup.com/zh/services.html#detail-ai-platform-desktop"
+        }            ,
+{
+          "@type": "Service",
+          "name": "AI 专家团队平台 – 服务器与企业版",
+          "description": "企业级部署的 AI 专家团队平台，可在本地或私有云中托管，具备 API 与集成能力。",
+          "provider": { "@id": "https://theintelligententerprisegroup.com/#org" },
+          "serviceType": "Server Software",
+          "url": "https://theintelligententerprisegroup.com/zh/services.html#detail-ai-platform-server"
+        }            ,
+{
+          "@type": "Service",
+          "name": "AI 代理团队（定制部署）",
+          "description": "在桌面版或服务器版 AI 专家团队平台基础上扩展，增加一个或多个专为您需求打造的 AI 代理。这些定制代理可无缝接入现有系统，处理特定领域任务与工作流。",
+          "provider": { "@id": "https://theintelligententerprisegroup.com/#org" },
+          "serviceType": "Custom AI Development",
+          "url": "https://theintelligententerprisegroup.com/zh/services.html#detail-ai-teams"
+        }            ,
+{
+          "@type": "Service",
+          "name": "咨询与顾问",
+          "description": "通过量身定制的战略、可执行的洞察和与业务目标一致的路线图，塑造您的 AI 之旅。",
+          "provider": { "@id": "https://theintelligententerprisegroup.com/#org" },
+          "serviceType": "Consulting",
+          "url": "https://theintelligententerprisegroup.com/zh/services.html#detail-consulting"
+        }            ,
+{
+          "@type": "Service",
+          "name": "集成与项目管理",
+          "description": "通过端到端集成、稳健的架构设计和专家级项目监督，确保 AI 的顺利采用。",
+          "provider": { "@id": "https://theintelligententerprisegroup.com/#org" },
+          "serviceType": "Integration Services",
+          "url": "https://theintelligententerprisegroup.com/zh/services.html#detail-integration"
+        }            ,
+{
+          "@type": "Service",
+          "name": "培训与研讨会",
+          "description": "通过沉浸式、实践性的课程为您的团队提供实用技能，加速 AI 的采用与创新。",
+          "provider": { "@id": "https://theintelligententerprisegroup.com/#org" },
+          "serviceType": "Training",
+          "url": "https://theintelligententerprisegroup.com/zh/services.html#detail-training"
+        }]}
+</script>
+
+
+</head>
+<body>
+    <header x-data="{ open: false }">
+        <div class="container header-top">
+            <div class="logo"></div>
+            <div class="theme-switch-wrapper">
+                <label class="theme-switch">
+                    <input type="checkbox" id="theme-checkbox" />
+                    <span class="slider round"></span>
+                </label>
+                <span id="theme-label">浅色模式</span>
+                <span class="lang-switcher">
+                    <label for="lang-select" class="lang-label">🌐 语言：</label>
+
+                    <!-- Language switcher -->
+                    <select id="lang-select" class="lang-select">
+                        <option value="en" data-path="/">English</option>
+                        <option value="fr" data-path="/fr/">Fran&#xE7;ais</option>
+                        <option value="de" data-path="/de/">Deutsch</option>
+                        <option value="es" data-path="/es/">Espa&#xF1;ol</option>
+                        <option value="pt" data-path="/pt/">Portugu&#xEA;s</option>
+                        <option value="zh" data-path="/zh/">&#x4E2D;&#x6587;</option>
+                        <option value="ja" data-path="/ja/">&#x65E5;&#x672C;&#x8A9E;</option>
+                        <option value="ar" data-path="/ar/">&#x627;&#x644;&#x639;&#x631;&#x628;&#x64A;&#x629;</option>
+                    </select>
+
+                </span>
+            </div>
+        </div>
+        
+        <div class="container header-nav">
+            <button @click="open = !open" class="menu-toggle" aria-label="Toggle Menu">
+                <svg width="24" height="24" viewBox="0 0 24 24">
+                    <path fill="var(--nav-link-color)" d="M3 6h18v2H3V6zm0 5h18v2H3v-2zm0 5h18v2H3v-2z" />
+                </svg>
+            </button>
+
+            <nav class="main-nav" :class="{ 'open': open }">
+                <ul>
+                    <li><a href="index.html" class="">&#x9996;&#x9875;</a></li>
+                    <li><a href="about.html" class="">&#x5173;&#x4E8E;&#x6211;&#x4EEC;</a></li>
+                    <li><a href="services.html" class="active">&#x670D;&#x52A1;&#x4E0E;&#x89E3;&#x51B3;&#x65B9;&#x6848;</a></li>
+                    <li><a href="case-studies.html" class="">&#x6848;&#x4F8B;&#x7814;&#x7A76;</a></li>
+                    <li><a href="resources.html" class="">&#x8D44;&#x6E90;&#x4E0E;&#x6D1E;&#x5BDF;</a></li>
+                    <li><a href="trial.html" class="">&#x8BD5;&#x7528;</a></li>
+                    <li><a href="pricing.html" class="">&#x5B9A;&#x4EF7;</a></li>
+                    <li><a href="partners.html" class="">&#x5408;&#x4F5C;&#x4F19;&#x4F34;&#x4E0E;&#x8054;&#x76DF;</a></li>                    
+                    <li><a href="contact.html" class="">&#x8054;&#x7CFB;&#x4E0E;&#x54A8;&#x8BE2;</a></li>
+                    <li class="has-submenu"
+                        x-data="{ openSub: false }"
+                        @mouseenter="openSub = true"
+                        @mouseleave="openSub = false">
+                      <button @click="openSub = !openSub"
+                              aria-haspopup="true"
+                              :aria-expanded="openSub.toString()">
+                        &#x4FE1;&#x606F;
+                        <svg width="12" height="12" viewBox="0 0 12 12" aria-hidden="true">
+                          <path d="M3 4l3 3 3-3" fill="currentColor"/>
+                        </svg>
+                      </button>
+                      <ul class="submenu" x-show="openSub" @click.outside="openSub = false">
+                        <li><a href="careers.html" class="">&#x804C;&#x4E1A;&#x673A;&#x4F1A;</a></li>
+                        <li><a href="faqs.html" class="">&#x5E38;&#x89C1;&#x95EE;&#x9898;</a></li>
+                        <li><a href="legal.html" class="">&#x6CD5;&#x5F8B;&#x4E0E;&#x653F;&#x7B56;</a></li>
+                      </ul>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        
+<!-- HERO -->
+<section class="hero">
+    <div class="container">
+        <h2>&#x670D;&#x52A1;&#x4E0E;&#x89E3;&#x51B3;&#x65B9;&#x6848;</h2>
+        <h3>从战略到执行，我们的 AI 服务旨在解决实际问题，<br />解锁新机遇，让您的企业始终走在变革前沿。</h3>
+        <a href="#our-offerings" class="btn-secondary">&#x63A2;&#x7D22;&#x6211;&#x4EEC;&#x7684;&#x670D;&#x52A1;</a>
+    </div>
+</section>
+
+<!-- OUR OFFERINGS -->
+<section class="services" id="our-offerings">
+    <div class="container">
+        <h2>&#x6211;&#x4EEC;&#x7684;&#x670D;&#x52A1;</h2>
+        <p>从旗舰 AI 专家团队平台到定制部署与配套服务，我们提供完整的智能化转型生态系统。</p>
+        <div class="main-grid">
+                    <div class="service-card" id="ai-platform-desktop">
+                        <h3>AI &#x4E13;&#x5BB6;&#x56E2;&#x961F;&#x5E73;&#x53F0; &#x2013; &#x684C;&#x9762;&#x7248;</h3>
+                        <p>我们的旗舰产品，以桌面应用形式交付。本地即可访问精选的 AI 专家团队，无需服务器或 API。</p>
+                        <a href="#detail-ai-platform-desktop" class="btn service-btn">&#x4E86;&#x89E3;&#x66F4;&#x591A;</a>
+                    </div>
+                    <div class="service-card" id="ai-platform-server">
+                        <h3>AI &#x4E13;&#x5BB6;&#x56E2;&#x961F;&#x5E73;&#x53F0; &#x2013; &#x670D;&#x52A1;&#x5668;&#x4E0E;&#x4F01;&#x4E1A;&#x7248;</h3>
+                        <p>企业级部署的 AI 专家团队平台，可在本地或私有云中托管，具备 API 与集成能力。</p>
+                        <a href="#detail-ai-platform-server" class="btn service-btn">&#x4E86;&#x89E3;&#x66F4;&#x591A;</a>
+                    </div>
+                    <div class="service-card" id="ai-teams">
+                        <h3>AI &#x4EE3;&#x7406;&#x56E2;&#x961F;&#xFF08;&#x5B9A;&#x5236;&#x90E8;&#x7F72;&#xFF09;</h3>
+                        <p>在桌面版或服务器版 AI 专家团队平台基础上扩展，增加一个或多个专为您需求打造的 AI 代理。这些定制代理可无缝接入现有系统，处理特定领域任务与工作流。</p>
+                        <a href="#detail-ai-teams" class="btn service-btn">&#x4E86;&#x89E3;&#x66F4;&#x591A;</a>
+                    </div>
+                    <div class="service-card" id="consulting">
+                        <h3>&#x54A8;&#x8BE2;&#x4E0E;&#x987E;&#x95EE;</h3>
+                        <p>通过量身定制的战略、可执行的洞察和与业务目标一致的路线图，塑造您的 AI 之旅。</p>
+                        <a href="#detail-consulting" class="btn service-btn">&#x4E86;&#x89E3;&#x66F4;&#x591A;</a>
+                    </div>
+                    <div class="service-card" id="integration">
+                        <h3>&#x96C6;&#x6210;&#x4E0E;&#x9879;&#x76EE;&#x7BA1;&#x7406;</h3>
+                        <p>通过端到端集成、稳健的架构设计和专家级项目监督，确保 AI 的顺利采用。</p>
+                        <a href="#detail-integration" class="btn service-btn">&#x4E86;&#x89E3;&#x66F4;&#x591A;</a>
+                    </div>
+                    <div class="service-card" id="training">
+                        <h3>&#x57F9;&#x8BAD;&#x4E0E;&#x7814;&#x8BA8;&#x4F1A;</h3>
+                        <p>通过沉浸式、实践性的课程为您的团队提供实用技能，加速 AI 的采用与创新。</p>
+                        <a href="#detail-training" class="btn service-btn">&#x4E86;&#x89E3;&#x66F4;&#x591A;</a>
+                    </div>
+        </div>
+    </div>
+</section>
+
+<!-- KEY FEATURES -->
+<section class="features">
+    <h2>&#x4E3B;&#x8981;&#x7279;&#x6027;</h2>
+    <div class="container main-grid">
+                <div class="service-card">
+                    <h3>&#x81EA;&#x9002;&#x5E94;&#x8BB0;&#x5FC6;</h3>
+                    <p>高度优化的短期与长期记忆可在会话间保持上下文，减少幻觉并确保一致可靠的结果。
+                    </p>
+                </div>
+                <div class="service-card">
+                    <h3>&#x591A;&#x683C;&#x5F0F;&#x5B66;&#x4E60;&#x4E0E;&#x591A;&#x8BED;&#x8A00;</h3>
+                    <p>可从 Word、Excel、PDF、CSV、音频、文本、图像等学习。<br /><br />理解 100 多种语言，并在 20 多种语言中接近母语水平。
+                    </p>
+                </div>
+                <div class="service-card">
+                    <h3>&#x5185;&#x7F6E;&#x4E13;&#x4E1A;&#x6A21;&#x578B;</h3>
+                    <p>嵌入多个针对不同任务优化的机器学习模型。AI 专家会自动激活并切换模型，每次都能提供正确的解决方案。
+                    </p>
+                </div>
+                <div class="service-card">
+                    <h3>&#x534F;&#x4F5C; AI &#x56E2;&#x961F;</h3>
+                    <p>不仅仅是一个 LLM —— 而是一组由 AI 协调器管理的专业 AI 专家，像真正的咨询团队一样协作工作。
+                            <a href="about.html" class="btn-secondary">Learn More</a>
+                    </p>
+                </div>
+                <div class="service-card">
+                    <h3>&#x8FB9;&#x7F18;&#x5C31;&#x7EEA;</h3>
+                    <p>即使没有互联网访问也能完全运行，得益于为离线和安全环境设计的内置模型。
+                    </p>
+                </div>
+                <div class="service-card">
+                    <h3>&#x9AD8;&#x6027;&#x80FD;</h3>
+                    <p>使用 C++/C# 构建以实现最大速度与效率。利用硬件加速、并行计算和 CUDA 等 GPU 技术，您的 AI 团队能够更快响应并降低能耗。
+                    </p>
+                </div>
+                <div class="service-card">
+                    <h3>&#x53EF;&#x6269;&#x5C55;&#x90E8;&#x7F72;</h3>
+                    <p>灵活的设置：个人桌面版，企业服务器与 API 集成。API 可从任何业务系统调用，并嵌入流程自动化工作流。
+                    </p>
+                </div>
+                <div class="service-card">
+                    <h3>&#x8282;&#x80FD;&#x8BBE;&#x8BA1;</h3>
+                    <p>采用高度优化的编译代码而非脚本语言构建，您的 AI 团队运行更快，同时能耗显著降低——兼顾性能与可持续性。
+                    </p>
+                </div>
+    </div>
+</section>
+
+<!-- IN-DEPTH SERVICE DETAILS -->
+<section class="service-details">
+    <div class="container">
+        <h2>&#x6DF1;&#x5165;&#x7684;&#x670D;&#x52A1;&#x8BE6;&#x60C5;</h2>
+        <p>深入了解我们的核心产品与配套服务。每项服务相辅相成，共同构建 AI 驱动成功的完整生态系统。</p>
+
+                <details id="detail-ai-platform-desktop" class="detail-card">
+                    <summary><i class="fa-solid fa-desktop"></i> AI &#x4E13;&#x5BB6;&#x56E2;&#x961F;&#x5E73;&#x53F0; &#x2013; &#x684C;&#x9762;&#x7248;</summary>
+                    <p>我们的旗舰产品：一个不断扩展的专业 AI 专家团队，像数字化劳动力一样运作。以桌面应用形式交付，本地运行，无需服务器或 API —— 非常适合个人、专业人士和小型团队。</p>
+                    <h4>Key Benefits</h4>
+                    <ul>
+                            <li>即时访问多样化的 AI 专家</li>
+                            <li>本地处理，保障隐私与速度</li>
+                            <li>无需服务器或云依赖</li>
+                            <li>完美适用于生产力、学习与创意工作</li>
+                    </ul>
+                </details>
+                <details id="detail-ai-platform-server" class="detail-card">
+                    <summary><i class="fa-solid fa-server"></i> AI &#x4E13;&#x5BB6;&#x56E2;&#x961F;&#x5E73;&#x53F0; &#x2013; &#x670D;&#x52A1;&#x5668;&#x4E0E;&#x4F01;&#x4E1A;&#x7248;</summary>
+                    <p>企业级部署的 AI 专家团队平台，可在本地或私有云中托管。包含 API、可扩展性以及与企业系统的无缝集成 —— 专为需要合规、控制与协作的组织而设计。</p>
+                    <h4>Key Benefits</h4>
+                    <ul>
+                            <li>全面掌控数据与基础设施</li>
+                            <li>符合行业与监管标准</li>
+                            <li>API 可与现有 IT 系统集成</li>
+                            <li>可扩展性能以支持企业级工作负载</li>
+                    </ul>
+                </details>
+                <details id="detail-ai-teams" class="detail-card">
+                    <summary><i class="fa-solid fa-people-group"></i> AI &#x4EE3;&#x7406;&#x56E2;&#x961F;&#xFF08;&#x5B9A;&#x5236;&#x90E8;&#x7F72;&#xFF09;</summary>
+                    <p>AI 代理团队扩展了 AI 专家团队平台。无论您使用桌面版还是服务器版，我们都能设计并部署额外的 AI 代理来扩展系统能力。这些定制代理可无缝集成，与标准专家并行运行，解决特定用例 —— 从行业分析到独特工作流。</p>
+                    <h4>Key Benefits</h4>
+                    <ul>
+                            <li>直接基于现有 AI 专家团队平台构建</li>
+                            <li>增加针对您领域定制的专属代理</li>
+                            <li>扩展功能而无需替换现有系统</li>
+                            <li>与桌面或服务器/API 环境无缝集成</li>
+                    </ul>
+                </details>
+                <details id="detail-consulting" class="detail-card">
+                    <summary><i class="fa-solid fa-lightbulb"></i> &#x54A8;&#x8BE2;&#x4E0E;&#x987E;&#x95EE;</summary>
+                    <p>我们提供战略指导，帮助您定义、优先排序并执行 AI 项目。我们的顾问将技术采用与您的愿景和市场定位保持一致。</p>
+                    <h4>Key Benefits</h4>
+                    <ul>
+                            <li>清晰、可执行且可衡量的 AI 战略</li>
+                            <li>通过预测与情景规划降低风险</li>
+                            <li>数据洞察支持的增强决策</li>
+                            <li>通过量身定制的战略获得竞争优势</li>
+                    </ul>
+                </details>
+                <details id="detail-integration" class="detail-card">
+                    <summary><i class="fa-solid fa-diagram-project"></i> &#x96C6;&#x6210;&#x4E0E;&#x9879;&#x76EE;&#x7BA1;&#x7406;</summary>
+                    <p>从审计到上线，我们管理 AI 采用的全生命周期。我们的专家设计稳健架构、监督部署并确保持续优化。</p>
+                    <h4>Key Benefits</h4>
+                    <ul>
+                            <li>无缝、低干扰的部署</li>
+                            <li>通过可扩展设计优化性能</li>
+                            <li>持续监控与敏捷调整</li>
+                            <li>高效集成实践减少停机时间</li>
+                    </ul>
+                </details>
+                <details id="detail-training" class="detail-card">
+                    <summary><i class="fa-solid fa-chalkboard-user"></i> &#x57F9;&#x8BAD;&#x4E0E;&#x7814;&#x8BA8;&#x4F1A;</summary>
+                    <p>我们提供沉浸式、实践性的培训课程 —— 包括现场与虚拟形式 —— 为您的团队提供在 AI 驱动世界中蓬勃发展的技能。</p>
+                    <h4>Key Benefits</h4>
+                    <ul>
+                            <li>提升在 AI 工具与方法上的熟练度</li>
+                            <li>实践性、真实场景的练习，加速采用</li>
+                            <li>可根据您的目标定制的课程</li>
+                            <li>通过学习型思维带来长期的文化收益</li>
+                    </ul>
+                </details>
+    </div>
+</section>
+
+<!-- PROCESS -->
+<section class="process">
+    <div class="container">
+        <h2>&#x6211;&#x4EEC;&#x7684;&#x5DE5;&#x4F5C;&#x65B9;&#x5F0F;</h2>
+        <p>每位客户的旅程都不同。有些从我们即用型的 AI 专家团队平台开始，有些聘请我们提供战略咨询，许多则结合两者并进行定制部署。我们会根据您的目标调整方法 —— 无论是快速采用、深度集成，还是长期转型。</p>
+        <p>以下是常见合作模式的示例。您的路径可能遵循其中之一，融合多个，或随着时间演变。</p>
+        <div id="diagram-container">
+            <div class="spinner"></div>
+        </div>
+    </div>
+</section>
+
+<!-- CTA -->
+<section class="cta">
+    <div class="container">
+        <h2>&#x51C6;&#x5907;&#x597D;&#x8F6C;&#x578B;&#x60A8;&#x7684;&#x4E1A;&#x52A1;&#x4E86;&#x5417;&#xFF1F;</h2>
+        <p>让我们一起开启您的 AI 之旅。无论您准备好进行咨询、演示，还是进一步讨论，我们都会在每一步为您提供指导。</p>
+        <a href="contact.html" class="btn">&#x9884;&#x7EA6;&#x54A8;&#x8BE2;</a>
+    </div>
+</section>
+
+
+
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&#xA9; 2025 &#x667A;&#x80FD;&#x4F01;&#x4E1A;&#x96C6;&#x56E2;&#x3002;&#x4FDD;&#x7559;&#x6240;&#x6709;&#x6743;&#x5229;&#x3002;</p>
+        </div>
+    </footer>
+
+    <script src="/js/swiper-bundle.min.js"></script>
+    <script src="/js/cdn.min.js" defer></script>
+    <script src="/js/gsap.min.js"></script>
+    <script src="/js/DrawSVGPlugin.min.js"></script>
+
+    <script type="module" src="/js/themeToggle.js"></script>
+    <script type="module">
+        import { toggleTheme, getCurrentTheme } from '/js/themeToggle.js';
+        const checkbox = document.getElementById('theme-checkbox');
+        const themeLabel = document.getElementById('theme-label');
+
+        if (getCurrentTheme() === 'dark') {
+            checkbox.checked = true;
+            themeLabel.textContent = '深色模式';
+        } else {
+            themeLabel.textContent = '浅色模式';
+        }
+
+        checkbox.addEventListener('change', () => {
+            toggleTheme();
+            themeLabel.textContent = checkbox.checked ? '深色模式' : '浅色模式';
+        });
+    </script>
+
+    <button id="back-to-top" aria-label="Back to Top">&#x9876;&#x90E8;</button>
+
+    
+    <script src="/js/mermaid.min.js"></script>
+    <script>
+        gsap.registerPlugin(DrawSVGPlugin);
+        window.onload = function () {
+            gsap.from(".hero h2", { duration: 1.2, opacity: 0, y: -50, ease: "power2.out" });
+            gsap.from(".hero h3", { duration: 1.2, opacity: 0, y: 50, ease: "power2.out", delay: 0.2 });
+            gsap.from(".services h2", { duration: 1, opacity: 0, y: -20, ease: "power2.out", delay: 0.4 });
+            gsap.from(".service-card", { duration: 1, opacity: 0, y: 30, ease: "power2.out", stagger: 0.2, delay: 0.6 });
+            gsap.from(".service-details h2", { duration: 1, opacity: 0, y: -20, ease: "power2.out", delay: 0.8 });
+            gsap.from(".process h2", { duration: 1, opacity: 0, y: -20, ease: "power2.out", delay: 1 });
+            gsap.from(".cta h2", { duration: 1, opacity: 0, y: -20, ease: "power2.out", delay: 1.6 });
+            gsap.from(".cta p", { duration: 1, opacity: 0, y: 20, ease: "power2.out", delay: 1.8 });
+            gsap.from(".cta .btn", { duration: 1, opacity: 0, scale: 0.8, ease: "back.out(1.7)", delay: 2 });
+        };
+
+        function openDetailsFromHash() {
+            const hash = window.location.hash;
+            if (hash) {
+                const detailElem = document.querySelector(hash);
+                if (detailElem && detailElem.tagName.toLowerCase() === "details") {
+                    // optional: close others
+                    document.querySelectorAll("details.detail-card").forEach(d => d.open = false);
+                    detailElem.open = true;
+                    detailElem.scrollIntoView();
+                }
+            }
+        }
+        window.addEventListener("load", openDetailsFromHash);
+        window.addEventListener("hashchange", openDetailsFromHash);
+
+        async function delayedMermaidLoad() {
+            await new Promise(resolve => setTimeout(resolve, 1000));
+
+            mermaid.initialize({
+                startOnLoad: false,
+                theme: 'default',
+                flowchart: { useMaxWidth: true, htmlLabels: false, diagramPadding: 20 },
+                securityLevel: 'loose'
+            });
+
+            const diagramDefinition = `
+                flowchart TD
+                  Start["**&#x5F00;&#x59CB;&#x5408;&#x4F5C;**<br><i class='fas fa-handshake'></i>"]
+
+                  %% --- Path 1: Self-Service Adoption ---
+                  subgraph FastTrack["&#x81EA;&#x52A9;&#x91C7;&#x7528;"]
+                    FT1["**&#x684C;&#x9762;&#x8BD5;&#x7528;**<br><i class='fas fa-laptop'></i>"]
+                    FT2["**&#x5546;&#x4E1A;&#x8BB8;&#x53EF;&#x8BC1;**<br><i class='fas fa-key'></i>"]
+                    FT1 --> FT2
+                  end
+
+                  %% --- Path 2: Guided Evaluation ---
+                  subgraph Guided["&#x5F15;&#x5BFC;&#x8BC4;&#x4F30;"]
+                    G1["**&#x63A2;&#x7D22;&#x7535;&#x8BDD;&#x4F1A;&#x8BAE;**<br><i class='fas fa-comments'></i>"]
+                    G2["**&#x684C;&#x9762;&#x8BD5;&#x7528;**<br><i class='fas fa-laptop'></i>"]
+                    G3["**&#x53CD;&#x9988;&#x4E0E;&#x95EE;&#x7B54;**<br><i class='fas fa-question-circle'></i>"]
+                    G4["**&#x5546;&#x4E1A;&#x8BB8;&#x53EF;&#x8BC1;**<br><i class='fas fa-key'></i>"]
+                    G1 --> G2 --> G3 --> G4
+                  end
+
+                  %% --- Path 3: Strategic Transformation ---
+                  subgraph Enterprise["&#x6218;&#x7565;&#x8F6C;&#x578B;"]
+                    E1["**&#x63A2;&#x7D22;&#x4E0E;&#x5BA1;&#x8BA1;**<br><i class='fas fa-search'></i>"]
+                    E2["**&#x684C;&#x9762;&#x8BD5;&#x7528;**<br><i class='fas fa-laptop'></i>"]
+                    E3["**&#x6218;&#x7565;&#x4E0E;&#x8DEF;&#x7EBF;&#x56FE;**<br><i class='fas fa-map'></i>"]
+                    E4["**&#x5B9E;&#x65BD;&#x4E0E;&#x96C6;&#x6210;**<br>(Desktop or Server/API)<br><i class='fas fa-robot'></i>"]
+                    E5["**&#x6D4B;&#x8BD5;&#x4E0E;&#x9A8C;&#x8BC1;**<br><i class='fas fa-flask'></i>"]
+                    E6["**&#x90E8;&#x7F72;&#x4E0E;&#x4E0A;&#x7EBF;**<br><i class='fas fa-rocket'></i>"]
+                    E7["**&#x57F9;&#x8BAD;&#x4E0E;&#x4F18;&#x5316;**<br><i class='fas fa-chalkboard-teacher'></i>"]
+                    E1 --> E2 --> E3 --> E4 --> E5 --> E6 --> E7
+                  end
+
+                  %% --- Path 4: Hybrid Expansion ---
+                  subgraph Hybrid["&#x6DF7;&#x5408;&#x6269;&#x5C55;"]
+                    H1["**&#x684C;&#x9762;&#x8BD5;&#x7528;**<br><i class='fas fa-laptop'></i>"]
+                    H2["**&#x5546;&#x4E1A;&#x8BB8;&#x53EF;&#x8BC1;**<br><i class='fas fa-key'></i>"]
+                    H3["**&#x5B9A;&#x5236; AI &#x4EE3;&#x7406;**<br><i class='fas fa-users-cog'></i>"]
+                    H4["**&#x96C6;&#x6210;&#x4E0E;&#x987E;&#x95EE;**<br><i class='fas fa-lightbulb'></i>"]
+                    H1 --> H2 --> H3 --> H4
+                  end
+
+                  %% Connections from Start
+                  Start --> FastTrack
+                  Start --> Guided
+                  Start --> Enterprise
+                  Start --> Hybrid
+
+                  %% --- Styling ---
+                  classDef start fill:#C8CEE5,stroke:#A190D9,color:#3C3C3C;
+                  classDef fast fill:#EAEAF2,stroke:#A190D9,color:#3C3C3C;
+                  classDef guided fill:#F2F4F7,stroke:#66bb6a,color:#3C3C3C;
+                  classDef enterprise fill:#fff3e0,stroke:#fb8c00,color:#3C3C3C;
+                  classDef hybrid fill:#e3f2fd,stroke:#42a5f5,color:#3C3C3C;
+
+                  class Start start;
+                  class FT1,FT2 fast;
+                  class G1,G2,G3,G4 guided;
+                  class E1,E2,E3,E4,E5,E6,E7 enterprise;
+                  class H1,H2,H3,H4 hybrid;
+
+                  linkStyle default stroke:#888,stroke-width:1.5px,stroke-dasharray:2,2
+
+                  style FastTrack fill:transparent,stroke:none
+                  style Guided fill:transparent,stroke:none
+                  style Enterprise fill:transparent,stroke:none
+                  style Hybrid fill:transparent,stroke:none
+                `;
+
+
+            const container = document.getElementById('diagram-container');
+            container.innerHTML = `<div class="mermaid">${diagramDefinition}</div>`;
+            mermaid.init(undefined, container.querySelector('.mermaid'));
+        }
+        delayedMermaidLoad();
+    </script>
+
+</body>
+</html>

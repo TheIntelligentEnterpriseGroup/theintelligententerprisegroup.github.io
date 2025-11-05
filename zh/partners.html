@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="zh" dir="ltr">
+<head>
+    <meta name="robots" content="index, follow" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <meta name="description" content='&#x63A2;&#x7D22;&#x4E0E;&#x667A;&#x80FD;&#x4F01;&#x4E1A;&#x96C6;&#x56E2;&#x7684;&#x5408;&#x4F5C;&#x673A;&#x4F1A;&#x3002;&#x52A0;&#x5165;&#x6211;&#x4EEC;&#x7684;&#x6280;&#x672F;&#x8054;&#x76DF;&#x3001;&#x7814;&#x7A76;&#x5408;&#x4F5C;&#x548C;&#x884C;&#x4E1A;&#x4F19;&#x4F34;&#x7F51;&#x7EDC;&#xFF0C;&#x5171;&#x540C;&#x521B;&#x65B0;&#xFF0C;&#x52A0;&#x901F;&#x5168;&#x7403; AI &#x7684;&#x91C7;&#x7528;&#x3002;' />
+    <title>&#x5408;&#x4F5C;&#x4F19;&#x4F34;&#x4E0E;&#x8054;&#x76DF; | &#x667A;&#x80FD;&#x4F01;&#x4E1A;&#x96C6;&#x56E2;</title>
+
+    <style>
+        html { background-color: #3B3A47; }
+    </style>
+    <script>
+        (function () {
+            const key = 'preferredTheme';
+            const stored = localStorage.getItem(key);
+            const systemDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+            const theme = stored || (systemDark ? 'dark' : 'light');
+            if (theme === 'dark') {
+                document.documentElement.classList.add('dark-mode');
+            }
+        })();
+    </script>
+
+
+        <link rel="alternate" hreflang="en" href="https://theintelligententerprisegroup.com/partners.html" />
+        <link rel="alternate" hreflang="fr" href="https://theintelligententerprisegroup.com/fr/partners.html" />
+        <link rel="alternate" hreflang="de" href="https://theintelligententerprisegroup.com/de/partners.html" />
+        <link rel="alternate" hreflang="es" href="https://theintelligententerprisegroup.com/es/partners.html" />
+        <link rel="alternate" hreflang="pt" href="https://theintelligententerprisegroup.com/pt/partners.html" />
+        <link rel="alternate" hreflang="zh" href="https://theintelligententerprisegroup.com/zh/partners.html" />
+        <link rel="alternate" hreflang="ja" href="https://theintelligententerprisegroup.com/ja/partners.html" />
+        <link rel="alternate" hreflang="ar" href="https://theintelligententerprisegroup.com/ar/partners.html" />
+
+
+    <link rel="alternate" hreflang="x-default" href="https://theintelligententerprisegroup.com/partners.html" />
+
+    <link rel="canonical" href="https://theintelligententerprisegroup.com/zh/partners.html" />
+
+
+    <link rel="stylesheet" href="/css/styles.css" />
+    <link rel="stylesheet" href="/css/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="/css/all.min.css" />
+
+    <script src="/js/lang-switcher.js" defer></script>
+
+    <script>
+        (function () {
+            if (localStorage.getItem('currentLang')) return;
+            const supported = [
+                     { code: "en" } ,
+                     { code: "fr" } ,
+                     { code: "de" } ,
+                     { code: "es" } ,
+                     { code: "pt" } ,
+                     { code: "zh" } ,
+                     { code: "ja" } ,
+                     { code: "ar" } 
+            ];
+            const defaultLang = "zh";
+            const navLangs = navigator.languages || [navigator.language || navigator.userLanguage];
+            let detected = null;
+            for (const nav of navLangs) {
+                const code = nav.toLowerCase().split('-')[0];
+                if (supported.find(s => s.code.toLowerCase() === code)) {
+                    detected = code;
+                    break;
+                }
+            }
+            const lang = detected || defaultLang;
+            localStorage.setItem('currentLang', lang);
+            document.documentElement.lang = lang;
+        })();
+    </script>
+
+    <!-- Organization structured data (JSON-LD) -->
+    <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "Organization",
+          "name": "The Intelligent Enterprise Group",
+          "url": "https://theintelligententerprisegroup.com/",
+          "logo": "https://theintelligententerprisegroup.com/images/tieg-logo.png",
+          "sameAs": []
+        }
+    </script>
+    <link rel="icon" href="/favicon.ico" />
+    <link rel="apple-touch-icon" href="/images/apple-touch-icon.png" />
+
+    
+
+</head>
+<body>
+    <header x-data="{ open: false }">
+        <div class="container header-top">
+            <div class="logo"></div>
+            <div class="theme-switch-wrapper">
+                <label class="theme-switch">
+                    <input type="checkbox" id="theme-checkbox" />
+                    <span class="slider round"></span>
+                </label>
+                <span id="theme-label">浅色模式</span>
+                <span class="lang-switcher">
+                    <label for="lang-select" class="lang-label">🌐 语言：</label>
+
+                    <!-- Language switcher -->
+                    <select id="lang-select" class="lang-select">
+                        <option value="en" data-path="/">English</option>
+                        <option value="fr" data-path="/fr/">Fran&#xE7;ais</option>
+                        <option value="de" data-path="/de/">Deutsch</option>
+                        <option value="es" data-path="/es/">Espa&#xF1;ol</option>
+                        <option value="pt" data-path="/pt/">Portugu&#xEA;s</option>
+                        <option value="zh" data-path="/zh/">&#x4E2D;&#x6587;</option>
+                        <option value="ja" data-path="/ja/">&#x65E5;&#x672C;&#x8A9E;</option>
+                        <option value="ar" data-path="/ar/">&#x627;&#x644;&#x639;&#x631;&#x628;&#x64A;&#x629;</option>
+                    </select>
+
+                </span>
+            </div>
+        </div>
+        
+        <div class="container header-nav">
+            <button @click="open = !open" class="menu-toggle" aria-label="Toggle Menu">
+                <svg width="24" height="24" viewBox="0 0 24 24">
+                    <path fill="var(--nav-link-color)" d="M3 6h18v2H3V6zm0 5h18v2H3v-2zm0 5h18v2H3v-2z" />
+                </svg>
+            </button>
+
+            <nav class="main-nav" :class="{ 'open': open }">
+                <ul>
+                    <li><a href="index.html" class="">&#x9996;&#x9875;</a></li>
+                    <li><a href="about.html" class="">&#x5173;&#x4E8E;&#x6211;&#x4EEC;</a></li>
+                    <li><a href="services.html" class="">&#x670D;&#x52A1;&#x4E0E;&#x89E3;&#x51B3;&#x65B9;&#x6848;</a></li>
+                    <li><a href="case-studies.html" class="">&#x6848;&#x4F8B;&#x7814;&#x7A76;</a></li>
+                    <li><a href="resources.html" class="">&#x8D44;&#x6E90;&#x4E0E;&#x6D1E;&#x5BDF;</a></li>
+                    <li><a href="trial.html" class="">&#x8BD5;&#x7528;</a></li>
+                    <li><a href="pricing.html" class="">&#x5B9A;&#x4EF7;</a></li>
+                    <li><a href="partners.html" class="active">&#x5408;&#x4F5C;&#x4F19;&#x4F34;&#x4E0E;&#x8054;&#x76DF;</a></li>                    
+                    <li><a href="contact.html" class="">&#x8054;&#x7CFB;&#x4E0E;&#x54A8;&#x8BE2;</a></li>
+                    <li class="has-submenu"
+                        x-data="{ openSub: false }"
+                        @mouseenter="openSub = true"
+                        @mouseleave="openSub = false">
+                      <button @click="openSub = !openSub"
+                              aria-haspopup="true"
+                              :aria-expanded="openSub.toString()">
+                        &#x4FE1;&#x606F;
+                        <svg width="12" height="12" viewBox="0 0 12 12" aria-hidden="true">
+                          <path d="M3 4l3 3 3-3" fill="currentColor"/>
+                        </svg>
+                      </button>
+                      <ul class="submenu" x-show="openSub" @click.outside="openSub = false">
+                        <li><a href="careers.html" class="">&#x804C;&#x4E1A;&#x673A;&#x4F1A;</a></li>
+                        <li><a href="faqs.html" class="">&#x5E38;&#x89C1;&#x95EE;&#x9898;</a></li>
+                        <li><a href="legal.html" class="">&#x6CD5;&#x5F8B;&#x4E0E;&#x653F;&#x7B56;</a></li>
+                      </ul>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        
+<section class="hero">
+    <div class="container">
+        <h2>&#x5408;&#x4F5C;&#x4F19;&#x4F34;&#x4E0E;&#x8054;&#x76DF;</h2>
+        <h3>我们相信协作的力量。通过战略合作伙伴关系，<br />我们提供全面的 AI 解决方案，推动创新与增长。</h3>
+    </div>
+</section>
+
+<section class="partners">
+    <div class="container partners-container">
+        <h2>&#x6211;&#x4EEC;&#x7684;&#x5408;&#x4F5C;&#x613F;&#x666F;</h2>
+        <p>&#x5728;&#x667A;&#x80FD;&#x4F01;&#x4E1A;&#x96C6;&#x56E2;&#xFF0C;&#x6211;&#x4EEC;&#x6B63;&#x5728;&#x6784;&#x5EFA;&#x4E00;&#x4E2A;&#x503C;&#x5F97;&#x4FE1;&#x8D56;&#x7684;&#x8054;&#x76DF;&#x751F;&#x6001;&#x7CFB;&#x7EDF;&#x3002;&#x867D;&#x7136;&#x6211;&#x4EEC;&#x7684;&#x6B63;&#x5F0F;&#x5408;&#x4F5C;&#x4F19;&#x4F34;&#x7F51;&#x7EDC;&#x4ECD;&#x5728;&#x53D1;&#x5C55;&#x4E2D;&#xFF0C;&#x4F46;&#x6211;&#x4EEC;&#x7684;&#x613F;&#x666F;&#x5F88;&#x660E;&#x786E;&#xFF1A;&#x534F;&#x4F5C;&#x63A8;&#x52A8;&#x521B;&#x65B0;&#xFF0C;&#x800C;&#x6211;&#x4EEC;&#x643A;&#x624B;&#x80FD;&#x591F;&#x52A0;&#x901F; AI &#x7684;&#x672A;&#x6765;&#x3002;</p>
+
+        <div class="partners-grid">
+                    <div class="partner-card">
+                        <h3>&#x6280;&#x672F;&#x8054;&#x76DF;</h3>
+                        <p>&#x4E0E;&#x4E91;&#x3001;&#x57FA;&#x7840;&#x8BBE;&#x65BD;&#x548C;&#x8F6F;&#x4EF6;&#x9886;&#x5BFC;&#x8005;&#x5408;&#x4F5C;&#xFF0C;&#x5B89;&#x5168;&#x6269;&#x5C55; AI&#x3002;</p>
+                    </div>
+                    <div class="partner-card">
+                        <h3>&#x7814;&#x7A76;&#x5408;&#x4F5C;</h3>
+                        <p>&#x4E0E;&#x5927;&#x5B66;&#x548C;&#x5B9E;&#x9A8C;&#x5BA4;&#x5408;&#x4F5C;&#xFF0C;&#x63A8;&#x52A8; AI &#x79D1;&#x5B66;&#x4E0E;&#x5E94;&#x7528;&#x7684;&#x53D1;&#x5C55;&#x3002;</p>
+                    </div>
+                    <div class="partner-card">
+                        <h3>&#x884C;&#x4E1A;&#x7F51;&#x7EDC;</h3>
+                        <p>&#x4E0E;&#x4F01;&#x4E1A;&#x5171;&#x540C;&#x6784;&#x5EFA;&#x751F;&#x6001;&#x7CFB;&#x7EDF;&#xFF0C;&#x52A0;&#x901F;&#x91C7;&#x7528;&#x5E76;&#x63D0;&#x5347;&#x6295;&#x8D44;&#x56DE;&#x62A5;&#x7387;&#x3002;</p>
+                    </div>
+        </div>
+
+        <div class="partner-cta">
+            <a href="contact.html" class="btn">&#x6210;&#x4E3A;&#x5408;&#x4F5C;&#x4F19;&#x4F34;</a>
+        </div>
+    </div>
+</section>
+
+<section class="why-partner">
+    <div class="container">
+        <h2>&#x4E3A;&#x4EC0;&#x4E48;&#x4E0E;&#x6211;&#x4EEC;&#x5408;&#x4F5C;</h2>
+        <div class="benefits-grid">
+                    <div class="benefit-card">
+                        <i class="fas fa-lightbulb"></i>
+                        <h3>&#x5171;&#x540C;&#x521B;&#x65B0;</h3>
+                        <p>&#x5728;&#x524D;&#x6CBF; AI &#x89E3;&#x51B3;&#x65B9;&#x6848;&#x4E0A;&#x8FDB;&#x884C;&#x534F;&#x4F5C;&#xFF0C;&#x5C06;&#x6211;&#x4EEC;&#x7684;&#x5E73;&#x53F0;&#x4E0E;&#x60A8;&#x7684;&#x4E13;&#x957F;&#x7ED3;&#x5408;&#xFF0C;&#x521B;&#x9020;&#x65B0;&#x7684;&#x5E02;&#x573A;&#x673A;&#x4F1A;&#x3002;</p>
+                    </div>
+                    <div class="benefit-card">
+                        <i class="fas fa-network-wired"></i>
+                        <h3>&#x751F;&#x6001;&#x7CFB;&#x7EDF;&#x63A5;&#x5165;</h3>
+                        <p>&#x52A0;&#x5165;&#x4E0D;&#x65AD;&#x58EE;&#x5927;&#x7684;&#x521B;&#x65B0;&#x8005;&#x3001;&#x7814;&#x7A76;&#x4EBA;&#x5458;&#x548C;&#x4F01;&#x4E1A;&#x7F51;&#x7EDC;&#xFF0C;&#x63A8;&#x52A8;&#x8DE8;&#x884C;&#x4E1A;&#x7684; AI &#x91C7;&#x7528;&#x3002;</p>
+                    </div>
+                    <div class="benefit-card">
+                        <i class="fas fa-chart-line"></i>
+                        <h3>&#x5171;&#x4EAB;&#x589E;&#x957F;</h3>
+                        <p>&#x901A;&#x8FC7;&#x8054;&#x5408;&#x5E02;&#x573A;&#x6218;&#x7565;&#x548C;&#x96C6;&#x6210;&#x4EA7;&#x54C1;&#xFF0C;&#x5F00;&#x8F9F;&#x65B0;&#x7684;&#x6536;&#x5165;&#x6765;&#x6E90;&#x5E76;&#x52A0;&#x901F;&#x6295;&#x8D44;&#x56DE;&#x62A5;&#x3002;</p>
+                    </div>
+                    <div class="benefit-card">
+                        <i class="fas fa-shield-alt"></i>
+                        <h3>&#x503C;&#x5F97;&#x4FE1;&#x8D56;&#x7684;&#x4E13;&#x4E1A;&#x77E5;&#x8BC6;</h3>
+                        <p>&#x5229;&#x7528;&#x6211;&#x4EEC;&#x7684; AI &#x4E13;&#x5BB6;&#x56E2;&#x961F;&#x5E73;&#x53F0;&#x548C; OmniPredict &#x4EE3;&#x7406;&#xFF0C;&#x5B9E;&#x73B0;&#x5B89;&#x5168;&#x3001;&#x53EF;&#x6269;&#x5C55;&#x4E14;&#x9762;&#x5411;&#x672A;&#x6765;&#x7684;&#x90E8;&#x7F72;&#x3002;</p>
+                    </div>
+        </div>
+    </div>
+</section>
+
+<section class="cta">
+    <div class="container">
+        <h2>&#x52A0;&#x5165;&#x6211;&#x4EEC;&#x7684;&#x5408;&#x4F5C;&#x4F19;&#x4F34;&#x7F51;&#x7EDC;</h2>
+        <p>&#x4ECA;&#x5929;&#x5C31;&#x8054;&#x7CFB;&#x6211;&#x4EEC;&#xFF0C;&#x4E86;&#x89E3;&#x6211;&#x4EEC;&#x5982;&#x4F55;&#x643A;&#x624B;&#x5408;&#x4F5C;&#xFF0C;&#x901A;&#x8FC7;&#x521B;&#x65B0;&#x7684; AI &#x89E3;&#x51B3;&#x65B9;&#x6848;&#x6539;&#x53D8;&#x884C;&#x4E1A;&#x3002;</p>
+        <a href="contact.html" class="btn">&#x8054;&#x7CFB;&#x6211;&#x4EEC;</a>
+    </div>
+</section>
+
+
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&#xA9; 2025 &#x667A;&#x80FD;&#x4F01;&#x4E1A;&#x96C6;&#x56E2;&#x3002;&#x4FDD;&#x7559;&#x6240;&#x6709;&#x6743;&#x5229;&#x3002;</p>
+        </div>
+    </footer>
+
+    <script src="/js/swiper-bundle.min.js"></script>
+    <script src="/js/cdn.min.js" defer></script>
+    <script src="/js/gsap.min.js"></script>
+    <script src="/js/DrawSVGPlugin.min.js"></script>
+
+    <script type="module" src="/js/themeToggle.js"></script>
+    <script type="module">
+        import { toggleTheme, getCurrentTheme } from '/js/themeToggle.js';
+        const checkbox = document.getElementById('theme-checkbox');
+        const themeLabel = document.getElementById('theme-label');
+
+        if (getCurrentTheme() === 'dark') {
+            checkbox.checked = true;
+            themeLabel.textContent = '深色模式';
+        } else {
+            themeLabel.textContent = '浅色模式';
+        }
+
+        checkbox.addEventListener('change', () => {
+            toggleTheme();
+            themeLabel.textContent = checkbox.checked ? '深色模式' : '浅色模式';
+        });
+    </script>
+
+    <button id="back-to-top" aria-label="Back to Top">&#x9876;&#x90E8;</button>
+
+    
+    <script>
+        gsap.registerPlugin(DrawSVGPlugin);
+        window.onload = function () {
+            gsap.from(".hero h2", { duration: 1.2, opacity: 0, y: -50, ease: "power2.out" });
+            gsap.from(".hero h3", { duration: 1.2, opacity: 0, y: 50, ease: "power2.out", delay: 0.2 });
+            gsap.from(".partners-container", { duration: 1, opacity: 0, y: 20, ease: "power2.out", delay: 0.4 });
+            gsap.from(".cta h2", { duration: 1, opacity: 0, y: -20, ease: "power2.out", delay: 0.8 });
+            gsap.from(".cta p", { duration: 1, opacity: 0, y: 20, ease: "power2.out", delay: 1 });
+            gsap.from(".cta .btn", { duration: 1, opacity: 0, scale: 0.8, ease: "back.out(1.7)", delay: 1.2 });
+        };
+    </script>
+
+</body>
+</html>

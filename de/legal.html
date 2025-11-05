@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="de" dir="ltr">
+<head>
+    <meta name="robots" content="index, follow" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <meta name="description" content='Lesen Sie die rechtlichen Bedingungen, Lizenz-, Datenschutz- und Cookie-Richtlinien von The Intelligent Enterprise Group. Wir verpflichten uns zu Transparenz, DSGVO-Compliance und dem Schutz Ihrer Daten.' />
+    <title>Rechtliches &amp; Richtlinien | The Intelligent Enterprise Group</title>
+
+    <style>
+        html { background-color: #3B3A47; }
+    </style>
+    <script>
+        (function () {
+            const key = 'preferredTheme';
+            const stored = localStorage.getItem(key);
+            const systemDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+            const theme = stored || (systemDark ? 'dark' : 'light');
+            if (theme === 'dark') {
+                document.documentElement.classList.add('dark-mode');
+            }
+        })();
+    </script>
+
+
+        <link rel="alternate" hreflang="en" href="https://theintelligententerprisegroup.com/legal.html" />
+        <link rel="alternate" hreflang="fr" href="https://theintelligententerprisegroup.com/fr/legal.html" />
+        <link rel="alternate" hreflang="de" href="https://theintelligententerprisegroup.com/de/legal.html" />
+        <link rel="alternate" hreflang="es" href="https://theintelligententerprisegroup.com/es/legal.html" />
+        <link rel="alternate" hreflang="pt" href="https://theintelligententerprisegroup.com/pt/legal.html" />
+        <link rel="alternate" hreflang="zh" href="https://theintelligententerprisegroup.com/zh/legal.html" />
+        <link rel="alternate" hreflang="ja" href="https://theintelligententerprisegroup.com/ja/legal.html" />
+        <link rel="alternate" hreflang="ar" href="https://theintelligententerprisegroup.com/ar/legal.html" />
+
+
+    <link rel="alternate" hreflang="x-default" href="https://theintelligententerprisegroup.com/legal.html" />
+
+    <link rel="canonical" href="https://theintelligententerprisegroup.com/de/legal.html" />
+
+
+    <link rel="stylesheet" href="/css/styles.css" />
+    <link rel="stylesheet" href="/css/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="/css/all.min.css" />
+
+    <script src="/js/lang-switcher.js" defer></script>
+
+    <script>
+        (function () {
+            if (localStorage.getItem('currentLang')) return;
+            const supported = [
+                     { code: "en" } ,
+                     { code: "fr" } ,
+                     { code: "de" } ,
+                     { code: "es" } ,
+                     { code: "pt" } ,
+                     { code: "zh" } ,
+                     { code: "ja" } ,
+                     { code: "ar" } 
+            ];
+            const defaultLang = "de";
+            const navLangs = navigator.languages || [navigator.language || navigator.userLanguage];
+            let detected = null;
+            for (const nav of navLangs) {
+                const code = nav.toLowerCase().split('-')[0];
+                if (supported.find(s => s.code.toLowerCase() === code)) {
+                    detected = code;
+                    break;
+                }
+            }
+            const lang = detected || defaultLang;
+            localStorage.setItem('currentLang', lang);
+            document.documentElement.lang = lang;
+        })();
+    </script>
+
+    <!-- Organization structured data (JSON-LD) -->
+    <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "Organization",
+          "name": "The Intelligent Enterprise Group",
+          "url": "https://theintelligententerprisegroup.com/",
+          "logo": "https://theintelligententerprisegroup.com/images/tieg-logo.png",
+          "sameAs": []
+        }
+    </script>
+    <link rel="icon" href="/favicon.ico" />
+    <link rel="apple-touch-icon" href="/images/apple-touch-icon.png" />
+
+    
+
+</head>
+<body>
+    <header x-data="{ open: false }">
+        <div class="container header-top">
+            <div class="logo"></div>
+            <div class="theme-switch-wrapper">
+                <label class="theme-switch">
+                    <input type="checkbox" id="theme-checkbox" />
+                    <span class="slider round"></span>
+                </label>
+                <span id="theme-label">Heller Modus</span>
+                <span class="lang-switcher">
+                    <label for="lang-select" class="lang-label">🌐 Sprache:</label>
+
+                    <!-- Language switcher -->
+                    <select id="lang-select" class="lang-select">
+                        <option value="en" data-path="/">English</option>
+                        <option value="fr" data-path="/fr/">Fran&#xE7;ais</option>
+                        <option value="de" data-path="/de/">Deutsch</option>
+                        <option value="es" data-path="/es/">Espa&#xF1;ol</option>
+                        <option value="pt" data-path="/pt/">Portugu&#xEA;s</option>
+                        <option value="zh" data-path="/zh/">&#x4E2D;&#x6587;</option>
+                        <option value="ja" data-path="/ja/">&#x65E5;&#x672C;&#x8A9E;</option>
+                        <option value="ar" data-path="/ar/">&#x627;&#x644;&#x639;&#x631;&#x628;&#x64A;&#x629;</option>
+                    </select>
+
+                </span>
+            </div>
+        </div>
+        
+        <div class="container header-nav">
+            <button @click="open = !open" class="menu-toggle" aria-label="Toggle Menu">
+                <svg width="24" height="24" viewBox="0 0 24 24">
+                    <path fill="var(--nav-link-color)" d="M3 6h18v2H3V6zm0 5h18v2H3v-2zm0 5h18v2H3v-2z" />
+                </svg>
+            </button>
+
+            <nav class="main-nav" :class="{ 'open': open }">
+                <ul>
+                    <li><a href="index.html" class="">Startseite</a></li>
+                    <li><a href="about.html" class="">&#xDC;ber uns</a></li>
+                    <li><a href="services.html" class="">Dienstleistungen &amp; L&#xF6;sungen</a></li>
+                    <li><a href="case-studies.html" class="">Fallstudien</a></li>
+                    <li><a href="resources.html" class="">Ressourcen &amp; Einblicke</a></li>
+                    <li><a href="trial.html" class="">Testversion</a></li>
+                    <li><a href="pricing.html" class="">Preise</a></li>
+                    <li><a href="partners.html" class="">Partner &amp; Allianzen</a></li>                    
+                    <li><a href="contact.html" class="">Kontakt &amp; Beratung</a></li>
+                    <li class="has-submenu"
+                        x-data="{ openSub: false }"
+                        @mouseenter="openSub = true"
+                        @mouseleave="openSub = false">
+                      <button @click="openSub = !openSub"
+                              aria-haspopup="true"
+                              :aria-expanded="openSub.toString()">
+                        Info
+                        <svg width="12" height="12" viewBox="0 0 12 12" aria-hidden="true">
+                          <path d="M3 4l3 3 3-3" fill="currentColor"/>
+                        </svg>
+                      </button>
+                      <ul class="submenu" x-show="openSub" @click.outside="openSub = false">
+                        <li><a href="careers.html" class="">Karriere</a></li>
+                        <li><a href="faqs.html" class="">FAQs</a></li>
+                        <li><a href="legal.html" class="active">Rechtliches &amp; Richtlinien</a></li>
+                      </ul>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        
+<section class="hero">
+    <div class="container">
+        <h2>Rechtliches &amp; Richtlinien</h2>
+        <h3>Bitte lesen Sie unsere rechtlichen Bedingungen, Richtlinien und Praktiken.<br />Wir verpflichten uns zu Transparenz, Datenschutz und zur Einhaltung europäischer und internationaler Vorschriften.</h3>
+    </div>
+</section>
+
+<section class="legal">
+    <div class="container legal-container">
+                <h2>Nutzungsbedingungen</h2>
+                        <p>Durch den Zugriff auf und die Nutzung dieser Website ("Seite") und unserer Dienste erklären Sie sich mit diesen Nutzungsbedingungen einverstanden. Wenn Sie mit einem Teil dieser Bedingungen nicht einverstanden sind, verzichten Sie bitte auf die Nutzung unserer Seite.</p>
+                        <div class="subsection">
+                            <h3>Nutzung &amp; Registrierter Zugang</h3>
+
+
+
+
+                                        <p>Ihnen wird eine eingeschränkte, nicht-exklusive Lizenz gewährt, um die Inhalte dieser Seite für persönliche, nicht-kommerzielle Zwecke zu nutzen. Unbefugte Nutzung, Vervielfältigung oder Verbreitung ist untersagt.</p>
+                                        <p>Unsere Dienste werden "wie besehen" ohne jegliche Gewährleistung bereitgestellt. The Intelligent Enterprise Group haftet nicht für direkte, indirekte, zufällige oder Folgeschäden, die sich aus der Nutzung der Seite ergeben.</p>
+                        </div>
+                <h2>Lizenzen &amp; R&#xFC;ckerstattungen</h2>
+                        <p>Wir bieten Testlizenzen (nur Desktop-Software) und kommerzielle Lizenzen (Desktop- und Server-Software) an.</p>
+                        <p>Testlizenzen sind streng nicht-kommerziell, sechs (6) Monate ab Aktivierung gültig und können nicht verlängert werden.</p>
+                        <p>Unter einer Testlizenz wird kein Support bereitgestellt.</p>
+                        <p>Kommerzielle Lizenzen werden pro Nutzer vergeben, sind ein (1) Jahr gültig und müssen jährlich erneuert werden.</p>
+                        <p>Jeder Nutzer muss über eine eigene Lizenz verfügen.</p>
+                        <p>Die Serversoftware ist nur unter einer kommerziellen Lizenz verfügbar.</p>
+                        <p>Die Software enthält eine integrierte Lizenzprüfung. Nach Ablauf der Lizenz stellt die Software sofort ohne Übergangsfrist die Funktion ein.</p>
+                        <p>Alle Gebühren sind nicht erstattungsfähig. Dies gilt sowohl für die Verwaltungsgebühr von Testlizenzen als auch für alle Gebühren kommerzieller Lizenzen, selbst wenn Sie die Nutzung vor Ablauf der Lizenz einstellen.</p>
+                        <p>Nach Beendigung oder Ablauf der Lizenz müssen Sie alle Kopien der Software innerhalb von fünf (5) Werktagen deinstallieren und vernichten.</p>
+                        <div class="subsection">
+                            <h3>Einschr&#xE4;nkungen</h3>
+
+
+                                    <ul>
+                                                <li>
+                                                    Die Software darf nicht weitergegeben, übertragen, unterlizenziert, vermietet oder Dritten als Dienstleistung bereitgestellt werden.
+                                                </li>
+                                                <li>
+                                                    Reverse Engineering, Dekompilierung, Disassemblierung oder Übersetzung der Software sind untersagt.
+                                                </li>
+                                                <li>
+                                                    Jede Lizenz ist persönlich, nicht übertragbar und auf die ausdrücklich gewährten Rechte beschränkt.
+                                                </li>
+                                    </ul>
+
+
+                        </div>
+                <h2>Datenschutzrichtlinie</h2>
+                        <p>Als belgisches Unternehmen mit weltweiten Kunden halten wir uns strikt an die Datenschutz-Grundverordnung (DSGVO) und andere relevante Datenschutzgesetze.</p>
+                        <div class="subsection">
+                            <h3>Ihre Rechte nach DSGVO</h3>
+
+                                    <p>Sie haben das Recht auf:</p>
+
+                                    <ul>
+                                                <li>Zugriff auf Ihre personenbezogenen Daten;</li>
+                                                <li>Berichtigung oder Vervollständigung;</li>
+                                                <li>Löschung oder Einschränkung Ihrer Daten;</li>
+                                                <li>Widerspruch gegen bestimmte Verarbeitungen;</li>
+                                                <li>Erhalt Ihrer Daten in einem portablen Format.</li>
+                                    </ul>
+
+                                    <p>Wir erheben nur Daten, die notwendig sind, um Anfragen zu beantworten oder unsere Dienstleistungen zu erbringen. Dazu gehören Ihr Name, Ihre E-Mail-Adresse und Ihre Nachrichtendetails. Alle personenbezogenen Daten werden sicher gespeichert und auf Grundlage Ihrer Einwilligung oder zur Vertragserfüllung verarbeitet. Wir bewahren personenbezogene Daten nur so lange auf, wie es für die genannten Zwecke erforderlich ist, und geben sie nicht an Dritte weiter, außer wenn dies gesetzlich vorgeschrieben ist oder an vertrauenswürdige Dienstleister unter strengen Vereinbarungen.</p>
+
+                        </div>
+                <h2>Cookie-Richtlinie</h2>
+                        <p>Unsere Seite verwendet Cookies und lokalen Speicher, um die Benutzererfahrung zu verbessern und Designpräferenzen zu verwalten.</p>
+                        <p>Cookies können auch für Analysen und zur Personalisierung von Inhalten verwendet werden.</p>
+                        <div class="subsection">
+                            <h3>Arten von Cookies, die wir verwenden</h3>
+
+
+                                    <ul>
+                                                <li>
+ <strong>Essenzielle Cookies:</strong>                                                      Notwendig für die grundlegende Funktionalität der Seite.
+                                                </li>
+                                                <li>
+ <strong>Analyse-Cookies:</strong>                                                      Helfen uns, Nutzungsmuster zu verstehen.
+                                                </li>
+                                                <li>
+ <strong>Pr&#xE4;ferenz-Cookies:</strong>                                                      Speichern Ihre Design- und Layouteinstellungen.
+                                                </li>
+                                    </ul>
+
+
+                                        <p>Durch die Nutzung unserer Seite stimmen Sie der Verwendung von Cookies zu. Sie können Ihre Cookie-Einstellungen in Ihrem Browser verwalten.</p>
+                        </div>
+                <h2>Geistiges Eigentum</h2>
+                        <p>Alle Inhalte, Designs, Logos, Bilder, Texte und andere Materialien auf dieser Seite sind Eigentum von The Intelligent Enterprise Group oder deren Drittanbietern.</p>
+                        <p>Sie dürfen keine Inhalte ohne vorherige schriftliche Zustimmung reproduzieren, erneut veröffentlichen oder verbreiten.</p>
+                <h2>Haftungsausschluss</h2>
+                        <p>Die auf dieser Seite bereitgestellten Informationen dienen ausschließlich allgemeinen Informationszwecken.</p>
+                        <p>Obwohl wir uns um Genauigkeit bemühen, übernimmt The Intelligent Enterprise Group keine Garantie für die Vollständigkeit oder Zuverlässigkeit der Informationen.</p>
+                        <p>Die Nutzung der Inhalte erfolgt auf eigenes Risiko.</p>
+                        <p>Wir haften nicht für Fehler oder Auslassungen in den Inhalten oder für Verluste oder Schäden, die aus deren Nutzung entstehen.</p>
+                    <blockquote>Die Informationen auf dieser Seite werden 'wie besehen' ohne jegliche ausdrückliche oder stillschweigende Gewährleistung bereitgestellt.</blockquote>
+                <h2>Anwendbares Recht &amp; Streitbeilegung</h2>
+                        <p>Diese Bedingungen und alle rechtlichen Angelegenheiten im Zusammenhang mit unserer Seite und unseren Diensten unterliegen dem Recht Belgiens und, soweit anwendbar, der Europäischen Union.</p>
+                        <p>Im Falle eines Streits bemühen sich die Parteien um eine gütliche Einigung.</p>
+                        <p>Kann keine Einigung erzielt werden, stimmen Sie zu, dass alle rechtlichen Schritte oder Verfahren der ausschließlichen Zuständigkeit der Gerichte in Gent, Belgien, unterliegen.</p>
+                        <p>Impressum: The Intelligent Enterprise Group, SP | Scheldestraat 82, 9240 Zele, Belgien | KBO: 0711.654.752 | USt-IdNr.: BE 0711.654.752</p>
+                <h2>Werbliche Nutzung</h2>
+                        <p>Sofern nicht anders schriftlich vereinbart, dürfen wir Ihre Organisation in gelieferten Produkten erwähnen und Ihren Namen oder Ihr Logo in Werbematerialien verwenden.</p>
+                        <p>Eine solche Nutzung erfolgt fair, korrekt und im Einklang mit geltendem Recht.</p>
+                        <p>Wenn Sie nicht erwähnt werden möchten, kontaktieren Sie uns bitte, um dies abzulehnen.</p>
+                <h2>Aktualisierungen und &#xC4;nderungen</h2>
+                        <p>Wir behalten uns das Recht vor, diese rechtlichen Richtlinien jederzeit zu aktualisieren oder zu ändern.</p>
+                        <p>Änderungen werden auf dieser Seite veröffentlicht, und Ihre fortgesetzte Nutzung der Seite gilt als Zustimmung zu diesen Änderungen.</p>
+                <h2>Kontakt f&#xFC;r rechtliche Anfragen</h2>
+                        <p>Wenn Sie Fragen oder Bedenken zu unseren rechtlichen Richtlinien haben, wenden Sie sich bitte an unsere Rechtsabteilung.</p>
+                    <a href="contact.html" class="btn">Recht kontaktieren</a>
+    </div>
+</section>
+
+<section class="cta">
+    <div class="container">
+        <h2>Ben&#xF6;tigen Sie weitere Informationen?</h2>
+        <p>Wenn Sie Fragen haben oder Klarstellungen zu unseren rechtlichen Richtlinien ben&#xF6;tigen, z&#xF6;gern Sie bitte nicht, uns zu kontaktieren.</p>
+        <a href="contact.html" class="btn">Kontakt aufnehmen</a>
+    </div>
+</section>
+
+
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&#xA9; 2025 The Intelligent Enterprise Group. Alle Rechte vorbehalten.</p>
+        </div>
+    </footer>
+
+    <script src="/js/swiper-bundle.min.js"></script>
+    <script src="/js/cdn.min.js" defer></script>
+    <script src="/js/gsap.min.js"></script>
+    <script src="/js/DrawSVGPlugin.min.js"></script>
+
+    <script type="module" src="/js/themeToggle.js"></script>
+    <script type="module">
+        import { toggleTheme, getCurrentTheme } from '/js/themeToggle.js';
+        const checkbox = document.getElementById('theme-checkbox');
+        const themeLabel = document.getElementById('theme-label');
+
+        if (getCurrentTheme() === 'dark') {
+            checkbox.checked = true;
+            themeLabel.textContent = 'Dunkler Modus';
+        } else {
+            themeLabel.textContent = 'Heller Modus';
+        }
+
+        checkbox.addEventListener('change', () => {
+            toggleTheme();
+            themeLabel.textContent = checkbox.checked ? 'Dunkler Modus' : 'Heller Modus';
+        });
+    </script>
+
+    <button id="back-to-top" aria-label="Back to Top">Nach oben</button>
+
+    
+    <script>
+        gsap.registerPlugin(DrawSVGPlugin);
+        window.onload = function () {
+            gsap.from(".hero h2", { duration: 1.2, opacity: 0, y: -50, ease: "power2.out" });
+            gsap.from(".hero h3", { duration: 1.2, opacity: 0, y: 50, ease: "power2.out", delay: 0.2 });
+            gsap.from(".legal-container", { duration: 1, opacity: 0, y: 20, ease: "power2.out", delay: 0.4 });
+            gsap.from(".cta h2", { duration: 1, opacity: 0, y: -20, ease: "power2.out", delay: 0.8 });
+            gsap.from(".cta p", { duration: 1, opacity: 0, y: 20, ease: "power2.out", delay: 1 });
+            gsap.from(".cta .btn", { duration: 1, opacity: 0, scale: 0.8, ease: "back.out(1.7)", delay: 1.2 });
+        };
+    </script>
+
+</body>
+</html>

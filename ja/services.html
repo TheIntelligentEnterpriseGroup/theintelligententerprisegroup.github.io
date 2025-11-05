@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html lang="ja" dir="ltr">
+<head>
+    <meta name="robots" content="index, follow" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <meta name="description" content='The Intelligent Enterprise Group&#x306E;&#x30B5;&#x30FC;&#x30D3;&#x30B9;&#x3092;&#x3054;&#x7D39;&#x4ECB;&#x3057;&#x307E;&#x3059;&#x3002;AI&#x30A8;&#x30AD;&#x30B9;&#x30D1;&#x30FC;&#x30C8;&#x30C1;&#x30FC;&#x30E0;&#x30D7;&#x30E9;&#x30C3;&#x30C8;&#x30D5;&#x30A9;&#x30FC;&#x30E0;&#xFF08;&#x30C7;&#x30B9;&#x30AF;&#x30C8;&#x30C3;&#x30D7; &amp; &#x30B5;&#x30FC;&#x30D0;&#x30FC;&#xFF09;&#x3001;&#x30AB;&#x30B9;&#x30BF;&#x30E0;AI&#x30A8;&#x30FC;&#x30B8;&#x30A7;&#x30F3;&#x30C8;&#x5C0E;&#x5165;&#x3001;&#x30B3;&#x30F3;&#x30B5;&#x30EB;&#x30C6;&#x30A3;&#x30F3;&#x30B0;&#x3001;&#x7D71;&#x5408;&#x3001;&#x30C8;&#x30EC;&#x30FC;&#x30CB;&#x30F3;&#x30B0;&#x306A;&#x3069;&#x3002;&#x30A4;&#x30F3;&#x30C6;&#x30EA;&#x30B8;&#x30A7;&#x30F3;&#x30C8;&#x306A;&#x5909;&#x9769;&#x3092;&#x52A0;&#x901F;&#x3059;&#x308B;&#x30A8;&#x30F3;&#x30C9;&#x30C4;&#x30FC;&#x30A8;&#x30F3;&#x30C9;&#x306E;&#x30BD;&#x30EA;&#x30E5;&#x30FC;&#x30B7;&#x30E7;&#x30F3;&#x3002;' />
+    <title>&#x30B5;&#x30FC;&#x30D3;&#x30B9;&#x3068;&#x30BD;&#x30EA;&#x30E5;&#x30FC;&#x30B7;&#x30E7;&#x30F3; | AI&#x30A8;&#x30AD;&#x30B9;&#x30D1;&#x30FC;&#x30C8;&#x30C1;&#x30FC;&#x30E0;&#x30D7;&#x30E9;&#x30C3;&#x30C8;&#x30D5;&#x30A9;&#x30FC;&#x30E0; &amp; &#x30B3;&#x30F3;&#x30B5;&#x30EB;&#x30C6;&#x30A3;&#x30F3;&#x30B0; &#x2013; The Intelligent Enterprise Group</title>
+
+    <style>
+        html { background-color: #3B3A47; }
+    </style>
+    <script>
+        (function () {
+            const key = 'preferredTheme';
+            const stored = localStorage.getItem(key);
+            const systemDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+            const theme = stored || (systemDark ? 'dark' : 'light');
+            if (theme === 'dark') {
+                document.documentElement.classList.add('dark-mode');
+            }
+        })();
+    </script>
+
+
+        <link rel="alternate" hreflang="en" href="https://theintelligententerprisegroup.com/services.html" />
+        <link rel="alternate" hreflang="fr" href="https://theintelligententerprisegroup.com/fr/services.html" />
+        <link rel="alternate" hreflang="de" href="https://theintelligententerprisegroup.com/de/services.html" />
+        <link rel="alternate" hreflang="es" href="https://theintelligententerprisegroup.com/es/services.html" />
+        <link rel="alternate" hreflang="pt" href="https://theintelligententerprisegroup.com/pt/services.html" />
+        <link rel="alternate" hreflang="zh" href="https://theintelligententerprisegroup.com/zh/services.html" />
+        <link rel="alternate" hreflang="ja" href="https://theintelligententerprisegroup.com/ja/services.html" />
+        <link rel="alternate" hreflang="ar" href="https://theintelligententerprisegroup.com/ar/services.html" />
+
+
+    <link rel="alternate" hreflang="x-default" href="https://theintelligententerprisegroup.com/services.html" />
+
+    <link rel="canonical" href="https://theintelligententerprisegroup.com/ja/services.html" />
+
+
+    <link rel="stylesheet" href="/css/styles.css" />
+    <link rel="stylesheet" href="/css/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="/css/all.min.css" />
+
+    <script src="/js/lang-switcher.js" defer></script>
+
+    <script>
+        (function () {
+            if (localStorage.getItem('currentLang')) return;
+            const supported = [
+                     { code: "en" } ,
+                     { code: "fr" } ,
+                     { code: "de" } ,
+                     { code: "es" } ,
+                     { code: "pt" } ,
+                     { code: "zh" } ,
+                     { code: "ja" } ,
+                     { code: "ar" } 
+            ];
+            const defaultLang = "ja";
+            const navLangs = navigator.languages || [navigator.language || navigator.userLanguage];
+            let detected = null;
+            for (const nav of navLangs) {
+                const code = nav.toLowerCase().split('-')[0];
+                if (supported.find(s => s.code.toLowerCase() === code)) {
+                    detected = code;
+                    break;
+                }
+            }
+            const lang = detected || defaultLang;
+            localStorage.setItem('currentLang', lang);
+            document.documentElement.lang = lang;
+        })();
+    </script>
+
+    <!-- Organization structured data (JSON-LD) -->
+    <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "Organization",
+          "name": "The Intelligent Enterprise Group",
+          "url": "https://theintelligententerprisegroup.com/",
+          "logo": "https://theintelligententerprisegroup.com/images/tieg-logo.png",
+          "sameAs": []
+        }
+    </script>
+    <link rel="icon" href="/favicon.ico" />
+    <link rel="apple-touch-icon" href="/images/apple-touch-icon.png" />
+
+    
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+{
+          "@type": "Service",
+          "name": "AIエキスパートチームプラットフォーム – デスクトップ",
+          "description": "当社の主力製品。デスクトップアプリケーションとして提供され、サーバーやAPIを必要とせず、ローカルで厳選されたAIエキスパートにアクセス可能。",
+          "provider": { "@id": "https://theintelligententerprisegroup.com/#org" },
+          "serviceType": "Software Application",
+          "url": "https://theintelligententerprisegroup.com/ja/services.html#detail-ai-platform-desktop"
+        }            ,
+{
+          "@type": "Service",
+          "name": "AIエキスパートチームプラットフォーム – サーバー & エンタープライズ",
+          "description": "エンタープライズグレードの導入。オンプレミスまたはプライベートクラウドでホストされ、APIや統合機能を備えています。",
+          "provider": { "@id": "https://theintelligententerprisegroup.com/#org" },
+          "serviceType": "Server Software",
+          "url": "https://theintelligententerprisegroup.com/ja/services.html#detail-ai-platform-server"
+        }            ,
+{
+          "@type": "Service",
+          "name": "AIエージェントチーム（カスタム導入）",
+          "description": "デスクトップまたはサーバー版のAIエキスパートチームプラットフォームを拡張し、ニーズに合わせた追加AIエージェントを導入。ドメイン特化のタスクやワークフローを処理します。",
+          "provider": { "@id": "https://theintelligententerprisegroup.com/#org" },
+          "serviceType": "Custom AI Development",
+          "url": "https://theintelligententerprisegroup.com/ja/services.html#detail-ai-teams"
+        }            ,
+{
+          "@type": "Service",
+          "name": "コンサルティング & アドバイザリー",
+          "description": "ビジネス目標に沿った戦略、実行可能なインサイト、ロードマップでAI導入を支援します。",
+          "provider": { "@id": "https://theintelligententerprisegroup.com/#org" },
+          "serviceType": "Consulting",
+          "url": "https://theintelligententerprisegroup.com/ja/services.html#detail-consulting"
+        }            ,
+{
+          "@type": "Service",
+          "name": "統合 & プロジェクト管理",
+          "description": "エンドツーエンドの統合、堅牢なアーキテクチャ設計、専門的なプロジェクト管理でAI導入を円滑に進めます。",
+          "provider": { "@id": "https://theintelligententerprisegroup.com/#org" },
+          "serviceType": "Integration Services",
+          "url": "https://theintelligententerprisegroup.com/ja/services.html#detail-integration"
+        }            ,
+{
+          "@type": "Service",
+          "name": "トレーニング & ワークショップ",
+          "description": "実践的で没入型のプログラムを通じてチームにスキルを提供し、AI導入とイノベーションを加速します。",
+          "provider": { "@id": "https://theintelligententerprisegroup.com/#org" },
+          "serviceType": "Training",
+          "url": "https://theintelligententerprisegroup.com/ja/services.html#detail-training"
+        }]}
+</script>
+
+
+</head>
+<body>
+    <header x-data="{ open: false }">
+        <div class="container header-top">
+            <div class="logo"></div>
+            <div class="theme-switch-wrapper">
+                <label class="theme-switch">
+                    <input type="checkbox" id="theme-checkbox" />
+                    <span class="slider round"></span>
+                </label>
+                <span id="theme-label">ライトモード</span>
+                <span class="lang-switcher">
+                    <label for="lang-select" class="lang-label">🌐 言語:</label>
+
+                    <!-- Language switcher -->
+                    <select id="lang-select" class="lang-select">
+                        <option value="en" data-path="/">English</option>
+                        <option value="fr" data-path="/fr/">Fran&#xE7;ais</option>
+                        <option value="de" data-path="/de/">Deutsch</option>
+                        <option value="es" data-path="/es/">Espa&#xF1;ol</option>
+                        <option value="pt" data-path="/pt/">Portugu&#xEA;s</option>
+                        <option value="zh" data-path="/zh/">&#x4E2D;&#x6587;</option>
+                        <option value="ja" data-path="/ja/">&#x65E5;&#x672C;&#x8A9E;</option>
+                        <option value="ar" data-path="/ar/">&#x627;&#x644;&#x639;&#x631;&#x628;&#x64A;&#x629;</option>
+                    </select>
+
+                </span>
+            </div>
+        </div>
+        
+        <div class="container header-nav">
+            <button @click="open = !open" class="menu-toggle" aria-label="Toggle Menu">
+                <svg width="24" height="24" viewBox="0 0 24 24">
+                    <path fill="var(--nav-link-color)" d="M3 6h18v2H3V6zm0 5h18v2H3v-2zm0 5h18v2H3v-2z" />
+                </svg>
+            </button>
+
+            <nav class="main-nav" :class="{ 'open': open }">
+                <ul>
+                    <li><a href="index.html" class="">&#x30DB;&#x30FC;&#x30E0;</a></li>
+                    <li><a href="about.html" class="">&#x79C1;&#x305F;&#x3061;&#x306B;&#x3064;&#x3044;&#x3066;</a></li>
+                    <li><a href="services.html" class="active">&#x30B5;&#x30FC;&#x30D3;&#x30B9;&#x3068;&#x30BD;&#x30EA;&#x30E5;&#x30FC;&#x30B7;&#x30E7;&#x30F3;</a></li>
+                    <li><a href="case-studies.html" class="">&#x4E8B;&#x4F8B;&#x7814;&#x7A76;</a></li>
+                    <li><a href="resources.html" class="">&#x30EA;&#x30BD;&#x30FC;&#x30B9;&#x3068;&#x30A4;&#x30F3;&#x30B5;&#x30A4;&#x30C8;</a></li>
+                    <li><a href="trial.html" class="">&#x30C8;&#x30E9;&#x30A4;&#x30A2;&#x30EB;</a></li>
+                    <li><a href="pricing.html" class="">&#x6599;&#x91D1;</a></li>
+                    <li><a href="partners.html" class="">&#x30D1;&#x30FC;&#x30C8;&#x30CA;&#x30FC;&#x3068;&#x30A2;&#x30E9;&#x30A4;&#x30A2;&#x30F3;&#x30B9;</a></li>                    
+                    <li><a href="contact.html" class="">&#x304A;&#x554F;&#x3044;&#x5408;&#x308F;&#x305B;&#x30FB;&#x76F8;&#x8AC7;</a></li>
+                    <li class="has-submenu"
+                        x-data="{ openSub: false }"
+                        @mouseenter="openSub = true"
+                        @mouseleave="openSub = false">
+                      <button @click="openSub = !openSub"
+                              aria-haspopup="true"
+                              :aria-expanded="openSub.toString()">
+                        &#x60C5;&#x5831;
+                        <svg width="12" height="12" viewBox="0 0 12 12" aria-hidden="true">
+                          <path d="M3 4l3 3 3-3" fill="currentColor"/>
+                        </svg>
+                      </button>
+                      <ul class="submenu" x-show="openSub" @click.outside="openSub = false">
+                        <li><a href="careers.html" class="">&#x63A1;&#x7528;&#x60C5;&#x5831;</a></li>
+                        <li><a href="faqs.html" class="">&#x3088;&#x304F;&#x3042;&#x308B;&#x8CEA;&#x554F;</a></li>
+                        <li><a href="legal.html" class="">&#x6CD5;&#x52D9;&#x3068;&#x30DD;&#x30EA;&#x30B7;&#x30FC;</a></li>
+                      </ul>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        
+<!-- HERO -->
+<section class="hero">
+    <div class="container">
+        <h2>&#x30B5;&#x30FC;&#x30D3;&#x30B9;&#x3068;&#x30BD;&#x30EA;&#x30E5;&#x30FC;&#x30B7;&#x30E7;&#x30F3;</h2>
+        <h3>戦略から実行まで、当社のAIサービスは実際の課題を解決し、<br />新たな機会を切り開き、変化に先んじてビジネスを前進させます。</h3>
+        <a href="#our-offerings" class="btn-secondary">&#x63D0;&#x4F9B;&#x5185;&#x5BB9;&#x3092;&#x898B;&#x308B;</a>
+    </div>
+</section>
+
+<!-- OUR OFFERINGS -->
+<section class="services" id="our-offerings">
+    <div class="container">
+        <h2>&#x63D0;&#x4F9B;&#x5185;&#x5BB9;</h2>
+        <p>主力製品であるAIエキスパートチームプラットフォームから、カスタム導入や支援サービスまで、インテリジェントな変革のための完全なエコシステムを提供します。</p>
+        <div class="main-grid">
+                    <div class="service-card" id="ai-platform-desktop">
+                        <h3>AI&#x30A8;&#x30AD;&#x30B9;&#x30D1;&#x30FC;&#x30C8;&#x30C1;&#x30FC;&#x30E0;&#x30D7;&#x30E9;&#x30C3;&#x30C8;&#x30D5;&#x30A9;&#x30FC;&#x30E0; &#x2013; &#x30C7;&#x30B9;&#x30AF;&#x30C8;&#x30C3;&#x30D7;</h3>
+                        <p>当社の主力製品。デスクトップアプリケーションとして提供され、サーバーやAPIを必要とせず、ローカルで厳選されたAIエキスパートにアクセス可能。</p>
+                        <a href="#detail-ai-platform-desktop" class="btn service-btn">&#x8A73;&#x7D30;&#x3092;&#x898B;&#x308B;</a>
+                    </div>
+                    <div class="service-card" id="ai-platform-server">
+                        <h3>AI&#x30A8;&#x30AD;&#x30B9;&#x30D1;&#x30FC;&#x30C8;&#x30C1;&#x30FC;&#x30E0;&#x30D7;&#x30E9;&#x30C3;&#x30C8;&#x30D5;&#x30A9;&#x30FC;&#x30E0; &#x2013; &#x30B5;&#x30FC;&#x30D0;&#x30FC; &amp; &#x30A8;&#x30F3;&#x30BF;&#x30FC;&#x30D7;&#x30E9;&#x30A4;&#x30BA;</h3>
+                        <p>エンタープライズグレードの導入。オンプレミスまたはプライベートクラウドでホストされ、APIや統合機能を備えています。</p>
+                        <a href="#detail-ai-platform-server" class="btn service-btn">&#x8A73;&#x7D30;&#x3092;&#x898B;&#x308B;</a>
+                    </div>
+                    <div class="service-card" id="ai-teams">
+                        <h3>AI&#x30A8;&#x30FC;&#x30B8;&#x30A7;&#x30F3;&#x30C8;&#x30C1;&#x30FC;&#x30E0;&#xFF08;&#x30AB;&#x30B9;&#x30BF;&#x30E0;&#x5C0E;&#x5165;&#xFF09;</h3>
+                        <p>デスクトップまたはサーバー版のAIエキスパートチームプラットフォームを拡張し、ニーズに合わせた追加AIエージェントを導入。ドメイン特化のタスクやワークフローを処理します。</p>
+                        <a href="#detail-ai-teams" class="btn service-btn">&#x8A73;&#x7D30;&#x3092;&#x898B;&#x308B;</a>
+                    </div>
+                    <div class="service-card" id="consulting">
+                        <h3>&#x30B3;&#x30F3;&#x30B5;&#x30EB;&#x30C6;&#x30A3;&#x30F3;&#x30B0; &amp; &#x30A2;&#x30C9;&#x30D0;&#x30A4;&#x30B6;&#x30EA;&#x30FC;</h3>
+                        <p>ビジネス目標に沿った戦略、実行可能なインサイト、ロードマップでAI導入を支援します。</p>
+                        <a href="#detail-consulting" class="btn service-btn">&#x8A73;&#x7D30;&#x3092;&#x898B;&#x308B;</a>
+                    </div>
+                    <div class="service-card" id="integration">
+                        <h3>&#x7D71;&#x5408; &amp; &#x30D7;&#x30ED;&#x30B8;&#x30A7;&#x30AF;&#x30C8;&#x7BA1;&#x7406;</h3>
+                        <p>エンドツーエンドの統合、堅牢なアーキテクチャ設計、専門的なプロジェクト管理でAI導入を円滑に進めます。</p>
+                        <a href="#detail-integration" class="btn service-btn">&#x8A73;&#x7D30;&#x3092;&#x898B;&#x308B;</a>
+                    </div>
+                    <div class="service-card" id="training">
+                        <h3>&#x30C8;&#x30EC;&#x30FC;&#x30CB;&#x30F3;&#x30B0; &amp; &#x30EF;&#x30FC;&#x30AF;&#x30B7;&#x30E7;&#x30C3;&#x30D7;</h3>
+                        <p>実践的で没入型のプログラムを通じてチームにスキルを提供し、AI導入とイノベーションを加速します。</p>
+                        <a href="#detail-training" class="btn service-btn">&#x8A73;&#x7D30;&#x3092;&#x898B;&#x308B;</a>
+                    </div>
+        </div>
+    </div>
+</section>
+
+<!-- KEY FEATURES -->
+<section class="features">
+    <h2>&#x4E3B;&#x306A;&#x7279;&#x9577;</h2>
+    <div class="container main-grid">
+                <div class="service-card">
+                    <h3>&#x9069;&#x5FDC;&#x578B;&#x30E1;&#x30E2;&#x30EA;</h3>
+                    <p>高度に最適化された短期・長期メモリがセッションをまたいで文脈を保持し、幻覚を減らし、一貫性と信頼性のある結果を保証します。
+                    </p>
+                </div>
+                <div class="service-card">
+                    <h3>&#x30DE;&#x30EB;&#x30C1;&#x30D5;&#x30A9;&#x30FC;&#x30DE;&#x30C3;&#x30C8;&#x5B66;&#x7FD2; &amp; &#x591A;&#x8A00;&#x8A9E;&#x5BFE;&#x5FDC;</h3>
+                    <p>Word、Excel、PDF、CSV、音声、テキスト、画像などから学習。<br /><br />100以上の言語を理解し、20以上の言語でネイティブに近い流暢さを実現。
+                    </p>
+                </div>
+                <div class="service-card">
+                    <h3>&#x5C02;&#x9580;&#x7279;&#x5316;&#x578B;&#x7D44;&#x307F;&#x8FBC;&#x307F;&#x30E2;&#x30C7;&#x30EB;</h3>
+                    <p>タスクごとに最適化された複数の機械学習モデルを搭載。AIエキスパートが自動的に切り替え、常に最適なソリューションを提供します。
+                    </p>
+                </div>
+                <div class="service-card">
+                    <h3>&#x5354;&#x8ABF;&#x578B;AI&#x30C1;&#x30FC;&#x30E0;</h3>
+                    <p>単なるLLMではなく、AIコーディネーターに管理された専門AIチームが、実際のコンサルティングチームのように連携します。
+                            <a href="about.html" class="btn-secondary">Learn More</a>
+                    </p>
+                </div>
+                <div class="service-card">
+                    <h3>&#x30A8;&#x30C3;&#x30B8;&#x5BFE;&#x5FDC;</h3>
+                    <p>オフラインやセキュア環境でも動作可能な組み込みモデルにより、インターネット接続がなくても完全に機能します。
+                    </p>
+                </div>
+                <div class="service-card">
+                    <h3>&#x9AD8;&#x6027;&#x80FD;</h3>
+                    <p>C++/C#で設計され、最大限の速度と効率を実現。ハードウェアアクセラレーション、並列計算、CUDAなどのGPU技術を活用し、迅速な応答と低消費電力を両立します。
+                    </p>
+                </div>
+                <div class="service-card">
+                    <h3>&#x30B9;&#x30B1;&#x30FC;&#x30E9;&#x30D6;&#x30EB;&#x306A;&#x5C0E;&#x5165;</h3>
+                    <p>柔軟なセットアップ：個人向けデスクトップ、企業向けサーバーやAPI統合。APIはあらゆる業務システムから呼び出せ、プロセス自動化に組み込めます。
+                    </p>
+                </div>
+                <div class="service-card">
+                    <h3>&#x7701;&#x30A8;&#x30CD;&#x8A2D;&#x8A08;</h3>
+                    <p>スクリプト言語ではなく最適化されたコンパイルコードで構築されているため、高速かつ低消費電力で動作し、性能と持続可能性を両立します。
+                    </p>
+                </div>
+    </div>
+</section>
+
+<!-- IN-DEPTH SERVICE DETAILS -->
+<section class="service-details">
+    <div class="container">
+        <h2>&#x8A73;&#x7D30;&#x30B5;&#x30FC;&#x30D3;&#x30B9;&#x5185;&#x5BB9;</h2>
+        <p>主力製品と支援サービスをさらに詳しくご紹介します。各提供内容は互いを補完し、AIによる成功のための完全なエコシステムを構築します。</p>
+
+                <details id="detail-ai-platform-desktop" class="detail-card">
+                    <summary><i class="fa-solid fa-desktop"></i> AI&#x30A8;&#x30AD;&#x30B9;&#x30D1;&#x30FC;&#x30C8;&#x30C1;&#x30FC;&#x30E0;&#x30D7;&#x30E9;&#x30C3;&#x30C8;&#x30D5;&#x30A9;&#x30FC;&#x30E0; &#x2013; &#x30C7;&#x30B9;&#x30AF;&#x30C8;&#x30C3;&#x30D7;</summary>
+                    <p>当社の主力製品。拡大し続ける専門AIエキスパートチームがデジタルワークフォースとして機能します。デスクトップアプリケーションとして提供され、サーバーやAPIを必要とせずローカルで動作。個人、プロフェッショナル、小規模チームに最適です。</p>
+                    <h4>Key Benefits</h4>
+                    <ul>
+                            <li>多様なAIスペシャリストに即時アクセス</li>
+                            <li>ローカル処理によるプライバシーと高速性</li>
+                            <li>サーバーやクラウドへの依存なし</li>
+                            <li>生産性、学習、クリエイティブ作業に最適</li>
+                    </ul>
+                </details>
+                <details id="detail-ai-platform-server" class="detail-card">
+                    <summary><i class="fa-solid fa-server"></i> AI&#x30A8;&#x30AD;&#x30B9;&#x30D1;&#x30FC;&#x30C8;&#x30C1;&#x30FC;&#x30E0;&#x30D7;&#x30E9;&#x30C3;&#x30C8;&#x30D5;&#x30A9;&#x30FC;&#x30E0; &#x2013; &#x30B5;&#x30FC;&#x30D0;&#x30FC; &amp; &#x30A8;&#x30F3;&#x30BF;&#x30FC;&#x30D7;&#x30E9;&#x30A4;&#x30BA;</summary>
+                    <p>エンタープライズグレードの導入。オンプレミスまたはプライベートクラウドでホストされ、API、スケーラビリティ、エンタープライズシステムとのシームレスな統合を備えています。コンプライアンス、管理、コラボレーションを必要とする組織向けに設計されています。</p>
+                    <h4>Key Benefits</h4>
+                    <ul>
+                            <li>データとインフラの完全な管理</li>
+                            <li>業界および規制基準への準拠</li>
+                            <li>既存ITシステムとの統合用API</li>
+                            <li>エンタープライズワークロードに対応するスケーラブル性能</li>
+                    </ul>
+                </details>
+                <details id="detail-ai-teams" class="detail-card">
+                    <summary><i class="fa-solid fa-people-group"></i> AI&#x30A8;&#x30FC;&#x30B8;&#x30A7;&#x30F3;&#x30C8;&#x30C1;&#x30FC;&#x30E0;&#xFF08;&#x30AB;&#x30B9;&#x30BF;&#x30E0;&#x5C0E;&#x5165;&#xFF09;</summary>
+                    <p>AIエージェントチームはAIエキスパートチームプラットフォームを拡張します。デスクトップ版でもサーバー版でも、追加のAIエージェントを設計・導入し、システムの能力を拡張可能です。これらのカスタムエージェントはプラットフォームにシームレスに統合され、標準エキスパートと並行して動作し、業界特化の分析から独自のワークフローまで幅広いユースケースに対応します。</p>
+                    <h4>Key Benefits</h4>
+                    <ul>
+                            <li>既存のAIエキスパートチームプラットフォームを直接拡張</li>
+                            <li>ドメインに特化したカスタムエージェントを追加</li>
+                            <li>既存環境を置き換えることなく機能を拡張</li>
+                            <li>デスクトップまたはサーバー/API環境とシームレスに統合</li>
+                    </ul>
+                </details>
+                <details id="detail-consulting" class="detail-card">
+                    <summary><i class="fa-solid fa-lightbulb"></i> &#x30B3;&#x30F3;&#x30B5;&#x30EB;&#x30C6;&#x30A3;&#x30F3;&#x30B0; &amp; &#x30A2;&#x30C9;&#x30D0;&#x30A4;&#x30B6;&#x30EA;&#x30FC;</summary>
+                    <p>AIイニシアチブを定義、優先順位付け、実行するための戦略的ガイダンスを提供します。当社のコンサルタントは、技術導入をビジョンや市場ポジショニングと整合させます。</p>
+                    <h4>Key Benefits</h4>
+                    <ul>
+                            <li>測定可能な成果を伴う明確で実行可能なAI戦略</li>
+                            <li>予測とシナリオプランニングによるリスク軽減</li>
+                            <li>データインサイトに基づく意思決定の強化</li>
+                            <li>カスタム戦略による競争優位性の獲得</li>
+                    </ul>
+                </details>
+                <details id="detail-integration" class="detail-card">
+                    <summary><i class="fa-solid fa-diagram-project"></i> &#x7D71;&#x5408; &amp; &#x30D7;&#x30ED;&#x30B8;&#x30A7;&#x30AF;&#x30C8;&#x7BA1;&#x7406;</summary>
+                    <p>監査から展開まで、AI導入のライフサイクル全体を管理します。専門家が堅牢なアーキテクチャを設計し、導入を監督し、継続的な最適化を保証します。</p>
+                    <h4>Key Benefits</h4>
+                    <ul>
+                            <li>中断を最小限に抑えたシームレスな導入</li>
+                            <li>スケーラブル設計による最適化されたパフォーマンス</li>
+                            <li>継続的な監視とアジャイルな調整</li>
+                            <li>効率的な統合手法によるダウンタイム削減</li>
+                    </ul>
+                </details>
+                <details id="detail-training" class="detail-card">
+                    <summary><i class="fa-solid fa-chalkboard-user"></i> &#x30C8;&#x30EC;&#x30FC;&#x30CB;&#x30F3;&#x30B0; &amp; &#x30EF;&#x30FC;&#x30AF;&#x30B7;&#x30E7;&#x30C3;&#x30D7;</summary>
+                    <p>オンサイトおよびバーチャルで没入型の実践的トレーニングプログラムを提供し、AI主導の世界で成功するためのスキルをチームに習得させます。</p>
+                    <h4>Key Benefits</h4>
+                    <ul>
+                            <li>AIツールと手法に関する熟練度の向上</li>
+                            <li>導入を加速する実践的な演習</li>
+                            <li>目標に合わせてカスタマイズ可能なプログラム</li>
+                            <li>学習文化を通じた長期的な組織的メリット</li>
+                    </ul>
+                </details>
+    </div>
+</section>
+
+<!-- PROCESS -->
+<section class="process">
+    <div class="container">
+        <h2>&#x79C1;&#x305F;&#x3061;&#x306E;&#x9032;&#x3081;&#x65B9;</h2>
+        <p>クライアントごとに道のりは異なります。すぐに使えるAIエキスパートチームプラットフォームから始める方もいれば、戦略的アドバイザリーを依頼する方もいます。多くの場合、両方を組み合わせ、カスタム導入を行います。当社は迅速な導入、深い統合、長期的な変革など、目標に合わせてアプローチを調整します。</p>
+        <p>以下は一般的なエンゲージメントモデルの例です。お客様の道のりは、これらのいずれかに従う場合もあれば、複数を組み合わせたり、時間とともに進化することもあります。</p>
+        <div id="diagram-container">
+            <div class="spinner"></div>
+        </div>
+    </div>
+</section>
+
+<!-- CTA -->
+<section class="cta">
+    <div class="container">
+        <h2>&#x30D3;&#x30B8;&#x30CD;&#x30B9;&#x3092;&#x5909;&#x9769;&#x3059;&#x308B;&#x6E96;&#x5099;&#x306F;&#x3067;&#x304D;&#x3066;&#x3044;&#x307E;&#x3059;&#x304B;&#xFF1F;</h2>
+        <p>AIの旅を共に始めましょう。コンサルティング、デモ、さらなるディスカッションのいずれをご希望でも、私たちは一歩一歩ガイドします。</p>
+        <a href="contact.html" class="btn">&#x30B3;&#x30F3;&#x30B5;&#x30EB;&#x30C6;&#x30A3;&#x30F3;&#x30B0;&#x3092;&#x4E88;&#x7D04;</a>
+    </div>
+</section>
+
+
+
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&#xA9; 2025 The Intelligent Enterprise Group. &#x7121;&#x65AD;&#x8EE2;&#x8F09;&#x3092;&#x7981;&#x3058;&#x307E;&#x3059;&#x3002;</p>
+        </div>
+    </footer>
+
+    <script src="/js/swiper-bundle.min.js"></script>
+    <script src="/js/cdn.min.js" defer></script>
+    <script src="/js/gsap.min.js"></script>
+    <script src="/js/DrawSVGPlugin.min.js"></script>
+
+    <script type="module" src="/js/themeToggle.js"></script>
+    <script type="module">
+        import { toggleTheme, getCurrentTheme } from '/js/themeToggle.js';
+        const checkbox = document.getElementById('theme-checkbox');
+        const themeLabel = document.getElementById('theme-label');
+
+        if (getCurrentTheme() === 'dark') {
+            checkbox.checked = true;
+            themeLabel.textContent = 'ダークモード';
+        } else {
+            themeLabel.textContent = 'ライトモード';
+        }
+
+        checkbox.addEventListener('change', () => {
+            toggleTheme();
+            themeLabel.textContent = checkbox.checked ? 'ダークモード' : 'ライトモード';
+        });
+    </script>
+
+    <button id="back-to-top" aria-label="Back to Top">&#x30C8;&#x30C3;&#x30D7;</button>
+
+    
+    <script src="/js/mermaid.min.js"></script>
+    <script>
+        gsap.registerPlugin(DrawSVGPlugin);
+        window.onload = function () {
+            gsap.from(".hero h2", { duration: 1.2, opacity: 0, y: -50, ease: "power2.out" });
+            gsap.from(".hero h3", { duration: 1.2, opacity: 0, y: 50, ease: "power2.out", delay: 0.2 });
+            gsap.from(".services h2", { duration: 1, opacity: 0, y: -20, ease: "power2.out", delay: 0.4 });
+            gsap.from(".service-card", { duration: 1, opacity: 0, y: 30, ease: "power2.out", stagger: 0.2, delay: 0.6 });
+            gsap.from(".service-details h2", { duration: 1, opacity: 0, y: -20, ease: "power2.out", delay: 0.8 });
+            gsap.from(".process h2", { duration: 1, opacity: 0, y: -20, ease: "power2.out", delay: 1 });
+            gsap.from(".cta h2", { duration: 1, opacity: 0, y: -20, ease: "power2.out", delay: 1.6 });
+            gsap.from(".cta p", { duration: 1, opacity: 0, y: 20, ease: "power2.out", delay: 1.8 });
+            gsap.from(".cta .btn", { duration: 1, opacity: 0, scale: 0.8, ease: "back.out(1.7)", delay: 2 });
+        };
+
+        function openDetailsFromHash() {
+            const hash = window.location.hash;
+            if (hash) {
+                const detailElem = document.querySelector(hash);
+                if (detailElem && detailElem.tagName.toLowerCase() === "details") {
+                    // optional: close others
+                    document.querySelectorAll("details.detail-card").forEach(d => d.open = false);
+                    detailElem.open = true;
+                    detailElem.scrollIntoView();
+                }
+            }
+        }
+        window.addEventListener("load", openDetailsFromHash);
+        window.addEventListener("hashchange", openDetailsFromHash);
+
+        async function delayedMermaidLoad() {
+            await new Promise(resolve => setTimeout(resolve, 1000));
+
+            mermaid.initialize({
+                startOnLoad: false,
+                theme: 'default',
+                flowchart: { useMaxWidth: true, htmlLabels: false, diagramPadding: 20 },
+                securityLevel: 'loose'
+            });
+
+            const diagramDefinition = `
+                flowchart TD
+                  Start["**&#x30A8;&#x30F3;&#x30B2;&#x30FC;&#x30B8;&#x30E1;&#x30F3;&#x30C8;&#x958B;&#x59CB;**<br><i class='fas fa-handshake'></i>"]
+
+                  %% --- Path 1: Self-Service Adoption ---
+                  subgraph FastTrack["&#x30BB;&#x30EB;&#x30D5;&#x30B5;&#x30FC;&#x30D3;&#x30B9;&#x5C0E;&#x5165;"]
+                    FT1["**&#x30C7;&#x30B9;&#x30AF;&#x30C8;&#x30C3;&#x30D7;&#x30C8;&#x30E9;&#x30A4;&#x30A2;&#x30EB;**<br><i class='fas fa-laptop'></i>"]
+                    FT2["**&#x5546;&#x7528;&#x30E9;&#x30A4;&#x30BB;&#x30F3;&#x30B9;**<br><i class='fas fa-key'></i>"]
+                    FT1 --> FT2
+                  end
+
+                  %% --- Path 2: Guided Evaluation ---
+                  subgraph Guided["&#x30AC;&#x30A4;&#x30C9;&#x4ED8;&#x304D;&#x8A55;&#x4FA1;"]
+                    G1["**&#x30C7;&#x30A3;&#x30B9;&#x30AB;&#x30D0;&#x30EA;&#x30FC;&#x30B3;&#x30FC;&#x30EB;**<br><i class='fas fa-comments'></i>"]
+                    G2["**&#x30C7;&#x30B9;&#x30AF;&#x30C8;&#x30C3;&#x30D7;&#x30C8;&#x30E9;&#x30A4;&#x30A2;&#x30EB;**<br><i class='fas fa-laptop'></i>"]
+                    G3["**&#x30D5;&#x30A3;&#x30FC;&#x30C9;&#x30D0;&#x30C3;&#x30AF; &amp; Q&amp;A**<br><i class='fas fa-question-circle'></i>"]
+                    G4["**&#x5546;&#x7528;&#x30E9;&#x30A4;&#x30BB;&#x30F3;&#x30B9;**<br><i class='fas fa-key'></i>"]
+                    G1 --> G2 --> G3 --> G4
+                  end
+
+                  %% --- Path 3: Strategic Transformation ---
+                  subgraph Enterprise["&#x6226;&#x7565;&#x7684;&#x5909;&#x9769;"]
+                    E1["**&#x30C7;&#x30A3;&#x30B9;&#x30AB;&#x30D0;&#x30EA;&#x30FC; &amp; &#x76E3;&#x67FB;**<br><i class='fas fa-search'></i>"]
+                    E2["**&#x30C7;&#x30B9;&#x30AF;&#x30C8;&#x30C3;&#x30D7;&#x30C8;&#x30E9;&#x30A4;&#x30A2;&#x30EB;**<br><i class='fas fa-laptop'></i>"]
+                    E3["**&#x6226;&#x7565; &amp; &#x30ED;&#x30FC;&#x30C9;&#x30DE;&#x30C3;&#x30D7;**<br><i class='fas fa-map'></i>"]
+                    E4["**&#x5B9F;&#x88C5; &amp; &#x7D71;&#x5408;**<br>(Desktop or Server/API)<br><i class='fas fa-robot'></i>"]
+                    E5["**&#x30C6;&#x30B9;&#x30C8; &amp; &#x691C;&#x8A3C;**<br><i class='fas fa-flask'></i>"]
+                    E6["**&#x5C0E;&#x5165; &amp; &#x30ED;&#x30FC;&#x30EB;&#x30A2;&#x30A6;&#x30C8;**<br><i class='fas fa-rocket'></i>"]
+                    E7["**&#x30C8;&#x30EC;&#x30FC;&#x30CB;&#x30F3;&#x30B0; &amp; &#x6700;&#x9069;&#x5316;**<br><i class='fas fa-chalkboard-teacher'></i>"]
+                    E1 --> E2 --> E3 --> E4 --> E5 --> E6 --> E7
+                  end
+
+                  %% --- Path 4: Hybrid Expansion ---
+                  subgraph Hybrid["&#x30CF;&#x30A4;&#x30D6;&#x30EA;&#x30C3;&#x30C9;&#x62E1;&#x5F35;"]
+                    H1["**&#x30C7;&#x30B9;&#x30AF;&#x30C8;&#x30C3;&#x30D7;&#x30C8;&#x30E9;&#x30A4;&#x30A2;&#x30EB;**<br><i class='fas fa-laptop'></i>"]
+                    H2["**&#x5546;&#x7528;&#x30E9;&#x30A4;&#x30BB;&#x30F3;&#x30B9;**<br><i class='fas fa-key'></i>"]
+                    H3["**&#x30AB;&#x30B9;&#x30BF;&#x30E0;AI&#x30A8;&#x30FC;&#x30B8;&#x30A7;&#x30F3;&#x30C8;**<br><i class='fas fa-users-cog'></i>"]
+                    H4["**&#x7D71;&#x5408; &amp; &#x30A2;&#x30C9;&#x30D0;&#x30A4;&#x30B6;&#x30EA;&#x30FC;**<br><i class='fas fa-lightbulb'></i>"]
+                    H1 --> H2 --> H3 --> H4
+                  end
+
+                  %% Connections from Start
+                  Start --> FastTrack
+                  Start --> Guided
+                  Start --> Enterprise
+                  Start --> Hybrid
+
+                  %% --- Styling ---
+                  classDef start fill:#C8CEE5,stroke:#A190D9,color:#3C3C3C;
+                  classDef fast fill:#EAEAF2,stroke:#A190D9,color:#3C3C3C;
+                  classDef guided fill:#F2F4F7,stroke:#66bb6a,color:#3C3C3C;
+                  classDef enterprise fill:#fff3e0,stroke:#fb8c00,color:#3C3C3C;
+                  classDef hybrid fill:#e3f2fd,stroke:#42a5f5,color:#3C3C3C;
+
+                  class Start start;
+                  class FT1,FT2 fast;
+                  class G1,G2,G3,G4 guided;
+                  class E1,E2,E3,E4,E5,E6,E7 enterprise;
+                  class H1,H2,H3,H4 hybrid;
+
+                  linkStyle default stroke:#888,stroke-width:1.5px,stroke-dasharray:2,2
+
+                  style FastTrack fill:transparent,stroke:none
+                  style Guided fill:transparent,stroke:none
+                  style Enterprise fill:transparent,stroke:none
+                  style Hybrid fill:transparent,stroke:none
+                `;
+
+
+            const container = document.getElementById('diagram-container');
+            container.innerHTML = `<div class="mermaid">${diagramDefinition}</div>`;
+            mermaid.init(undefined, container.querySelector('.mermaid'));
+        }
+        delayedMermaidLoad();
+    </script>
+
+</body>
+</html>

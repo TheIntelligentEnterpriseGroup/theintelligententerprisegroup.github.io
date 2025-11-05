@@ -1,0 +1,797 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+<head>
+    <meta name="robots" content="index, follow" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <meta name="description" content='Explora casos de estudio e historias de &#xE9;xito en IA de The Intelligent Enterprise Group. Descubre c&#xF3;mo el primer equipo de expertos en IA coordinado del mundo impulsa la innovaci&#xF3;n en manufactura, retail, finanzas, atenci&#xF3;n al cliente y m&#xE1;s.' />
+    <title>Casos de Estudio y Historias de &#xC9;xito en IA | The Intelligent Enterprise Group</title>
+
+    <style>
+        html { background-color: #3B3A47; }
+    </style>
+    <script>
+        (function () {
+            const key = 'preferredTheme';
+            const stored = localStorage.getItem(key);
+            const systemDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+            const theme = stored || (systemDark ? 'dark' : 'light');
+            if (theme === 'dark') {
+                document.documentElement.classList.add('dark-mode');
+            }
+        })();
+    </script>
+
+
+        <link rel="alternate" hreflang="en" href="https://theintelligententerprisegroup.com/case-studies.html" />
+        <link rel="alternate" hreflang="fr" href="https://theintelligententerprisegroup.com/fr/case-studies.html" />
+        <link rel="alternate" hreflang="de" href="https://theintelligententerprisegroup.com/de/case-studies.html" />
+        <link rel="alternate" hreflang="es" href="https://theintelligententerprisegroup.com/es/case-studies.html" />
+        <link rel="alternate" hreflang="pt" href="https://theintelligententerprisegroup.com/pt/case-studies.html" />
+        <link rel="alternate" hreflang="zh" href="https://theintelligententerprisegroup.com/zh/case-studies.html" />
+        <link rel="alternate" hreflang="ja" href="https://theintelligententerprisegroup.com/ja/case-studies.html" />
+        <link rel="alternate" hreflang="ar" href="https://theintelligententerprisegroup.com/ar/case-studies.html" />
+
+
+    <link rel="alternate" hreflang="x-default" href="https://theintelligententerprisegroup.com/case-studies.html" />
+
+    <link rel="canonical" href="https://theintelligententerprisegroup.com/es/case-studies.html" />
+
+
+    <link rel="stylesheet" href="/css/styles.css" />
+    <link rel="stylesheet" href="/css/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="/css/all.min.css" />
+
+    <script src="/js/lang-switcher.js" defer></script>
+
+    <script>
+        (function () {
+            if (localStorage.getItem('currentLang')) return;
+            const supported = [
+                     { code: "en" } ,
+                     { code: "fr" } ,
+                     { code: "de" } ,
+                     { code: "es" } ,
+                     { code: "pt" } ,
+                     { code: "zh" } ,
+                     { code: "ja" } ,
+                     { code: "ar" } 
+            ];
+            const defaultLang = "es";
+            const navLangs = navigator.languages || [navigator.language || navigator.userLanguage];
+            let detected = null;
+            for (const nav of navLangs) {
+                const code = nav.toLowerCase().split('-')[0];
+                if (supported.find(s => s.code.toLowerCase() === code)) {
+                    detected = code;
+                    break;
+                }
+            }
+            const lang = detected || defaultLang;
+            localStorage.setItem('currentLang', lang);
+            document.documentElement.lang = lang;
+        })();
+    </script>
+
+    <!-- Organization structured data (JSON-LD) -->
+    <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "Organization",
+          "name": "The Intelligent Enterprise Group",
+          "url": "https://theintelligententerprisegroup.com/",
+          "logo": "https://theintelligententerprisegroup.com/images/tieg-logo.png",
+          "sameAs": []
+        }
+    </script>
+    <link rel="icon" href="/favicon.ico" />
+    <link rel="apple-touch-icon" href="/images/apple-touch-icon.png" />
+
+    
+
+</head>
+<body>
+    <header x-data="{ open: false }">
+        <div class="container header-top">
+            <div class="logo"></div>
+            <div class="theme-switch-wrapper">
+                <label class="theme-switch">
+                    <input type="checkbox" id="theme-checkbox" />
+                    <span class="slider round"></span>
+                </label>
+                <span id="theme-label">Modo claro</span>
+                <span class="lang-switcher">
+                    <label for="lang-select" class="lang-label">🌐 Idioma:</label>
+
+                    <!-- Language switcher -->
+                    <select id="lang-select" class="lang-select">
+                        <option value="en" data-path="/">English</option>
+                        <option value="fr" data-path="/fr/">Fran&#xE7;ais</option>
+                        <option value="de" data-path="/de/">Deutsch</option>
+                        <option value="es" data-path="/es/">Espa&#xF1;ol</option>
+                        <option value="pt" data-path="/pt/">Portugu&#xEA;s</option>
+                        <option value="zh" data-path="/zh/">&#x4E2D;&#x6587;</option>
+                        <option value="ja" data-path="/ja/">&#x65E5;&#x672C;&#x8A9E;</option>
+                        <option value="ar" data-path="/ar/">&#x627;&#x644;&#x639;&#x631;&#x628;&#x64A;&#x629;</option>
+                    </select>
+
+                </span>
+            </div>
+        </div>
+        
+        <div class="container header-nav">
+            <button @click="open = !open" class="menu-toggle" aria-label="Toggle Menu">
+                <svg width="24" height="24" viewBox="0 0 24 24">
+                    <path fill="var(--nav-link-color)" d="M3 6h18v2H3V6zm0 5h18v2H3v-2zm0 5h18v2H3v-2z" />
+                </svg>
+            </button>
+
+            <nav class="main-nav" :class="{ 'open': open }">
+                <ul>
+                    <li><a href="index.html" class="">Inicio</a></li>
+                    <li><a href="about.html" class="">Sobre nosotros</a></li>
+                    <li><a href="services.html" class="">Servicios y Soluciones</a></li>
+                    <li><a href="case-studies.html" class="active">Casos de Estudio</a></li>
+                    <li><a href="resources.html" class="">Recursos e Ideas</a></li>
+                    <li><a href="trial.html" class="">Prueba</a></li>
+                    <li><a href="pricing.html" class="">Precios</a></li>
+                    <li><a href="partners.html" class="">Socios y Alianzas</a></li>                    
+                    <li><a href="contact.html" class="">Contacto y Consulta</a></li>
+                    <li class="has-submenu"
+                        x-data="{ openSub: false }"
+                        @mouseenter="openSub = true"
+                        @mouseleave="openSub = false">
+                      <button @click="openSub = !openSub"
+                              aria-haspopup="true"
+                              :aria-expanded="openSub.toString()">
+                        Informaci&#xF3;n
+                        <svg width="12" height="12" viewBox="0 0 12 12" aria-hidden="true">
+                          <path d="M3 4l3 3 3-3" fill="currentColor"/>
+                        </svg>
+                      </button>
+                      <ul class="submenu" x-show="openSub" @click.outside="openSub = false">
+                        <li><a href="careers.html" class="">Carreras</a></li>
+                        <li><a href="faqs.html" class="">Preguntas Frecuentes</a></li>
+                        <li><a href="legal.html" class="">Aviso Legal y Pol&#xED;ticas</a></li>
+                      </ul>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        
+<section class="hero">
+    <div class="container">
+        <h2>Casos de Estudio e Historias de &#xC9;xito</h2>
+        <h3>Explora casos de estudio ilustrativos que muestran cómo nuestras soluciones de IA pueden transformar negocios.<br />Estos ejemplos son escenarios ficticios inspirados en desafíos reales, ya que los compromisos con clientes suelen ser confidenciales.</h3>
+    </div>
+</section>
+
+<section class="case-studies" x-data="{ selected: '' }">
+    <div class="container">
+        <div class="case-studies-grid">
+                    <article id="case-techComp" class="case-study-card" :class="{ 'active': selected === 'techComp' }">
+                            <img src="/images/reenergizing-brand-com.jpg" alt="Startup - Re-Energizando la Comunicaci&#xF3;n de Marca" />
+                        <div class="card-content">
+                            <h3>Re-Energizando la Comunicaci&#xF3;n de Marca</h3>
+
+                            <p>
+                              Una startup transforma su mensaje de marca usando IA creativa para entregar campa&#xF1;as consistentes y atractivas.
+ <span>Ejemplo ilustrativo de c&#xF3;mo nuestra aplicaci&#xF3;n de escritorio (Profesional/Business&#x2011;Desktop) con IA Escritora Creativa e IA Redactora Publicitaria puede ayudar a startups a desarrollar mensajes de marca consistentes y atractivos.</span>                             </p>
+
+                            <a href="#" class="btn"
+                               @click.prevent="selected = 'techComp';$nextTick(() => document.getElementById('expanded-case').scrollIntoView({ behavior: 'smooth', block: 'start' }));">
+                                Leer m&#xE1;s
+                            </a>
+                        </div>
+                    </article>
+                    <article id="case-manufacturing" class="case-study-card" :class="{ 'active': selected === 'manufacturing' }">
+                            <img src="/images/data-driven-decisionm.jpg" alt="Manufactura - Toma de Decisiones Basada en Datos" />
+                        <div class="card-content">
+                            <h3>Toma de Decisiones Basada en Datos</h3>
+
+                            <p>
+                              Una empresa manufacturera optimiza operaciones y reduce costos mediante sofisticadas anal&#xED;ticas de IA.
+ <span>Escenario que muestra c&#xF3;mo nuestra aplicaci&#xF3;n de escritorio puede consolidar datos y proporcionar modelos de apoyo a la decisi&#xF3;n, con la opci&#xF3;n de escalar a integraci&#xF3;n Server/API para sistemas ERP o CRM.</span>                             </p>
+
+                            <a href="#" class="btn"
+                               @click.prevent="selected = 'manufacturing';$nextTick(() => document.getElementById('expanded-case').scrollIntoView({ behavior: 'smooth', block: 'start' }));">
+                                Leer m&#xE1;s
+                            </a>
+                        </div>
+                    </article>
+                    <article id="case-retail" class="case-study-card" :class="{ 'active': selected === 'retail' }">
+                            <img src="/images/global-expansion.jpg" alt="Retail - Expansi&#xF3;n Global con Localizaci&#xF3;n" />
+                        <div class="card-content">
+                            <h3>Expansi&#xF3;n Global con Localizaci&#xF3;n Inteligente</h3>
+
+                            <p>
+                              Una marca minorista visionaria logra crecimiento internacional adaptando mensajes y visuales mediante IA.
+ <span>Demostraci&#xF3;n de c&#xF3;mo nuestros expertos en la aplicaci&#xF3;n de escritorio (IA Traductora, IA Creadora de Im&#xE1;genes, IA Experta en B&#xFA;squeda Web) pueden acelerar la localizaci&#xF3;n y adaptaci&#xF3;n cultural para el crecimiento internacional.</span>                             </p>
+
+                            <a href="#" class="btn"
+                               @click.prevent="selected = 'retail';$nextTick(() => document.getElementById('expanded-case').scrollIntoView({ behavior: 'smooth', block: 'start' }));">
+                                Leer m&#xE1;s
+                            </a>
+                        </div>
+                    </article>
+                    <article id="case-chatbots" class="case-study-card" :class="{ 'active': selected === 'chatbots' }">
+                            <img src="/images/optimizing-customer-support.jpg" alt="Chatbots de Atenci&#xF3;n al Cliente" />
+                        <div class="card-content">
+                            <h3>Optimizando la Atenci&#xF3;n al Cliente</h3>
+
+                            <p>
+                              Una plataforma global de e-commerce transforma el servicio al cliente con chatbots de IA para respuestas m&#xE1;s r&#xE1;pidas e inteligentes.
+ <span>Caso ilustrativo de c&#xF3;mo nuestro producto Server/API puede integrarse en sistemas CRM existentes para potenciar chatbots impulsados por IA.</span>                             </p>
+
+                            <a href="#" class="btn"
+                               @click.prevent="selected = 'chatbots';$nextTick(() => document.getElementById('expanded-case').scrollIntoView({ behavior: 'smooth', block: 'start' }));">
+                                Leer m&#xE1;s
+                            </a>
+                        </div>
+                    </article>
+                    <article id="case-finance" class="case-study-card" :class="{ 'active': selected === 'finance' }">
+                            <img src="/images/streamlining-finance.jpg" alt="Automatizaci&#xF3;n de Operaciones Financieras" />
+                        <div class="card-content">
+                            <h3>Optimizaci&#xF3;n de Operaciones Financieras</h3>
+
+                            <p>
+                              Una firma de servicios financieros automatiza tareas repetitivas con IA, mejorando eficiencia y precisi&#xF3;n.
+ <span>Ejemplo de c&#xF3;mo nuestras soluciones Server/API o Enterprise pueden automatizar flujos financieros repetitivos integr&#xE1;ndose con sistemas ERP.</span>                             </p>
+
+                            <a href="#" class="btn"
+                               @click.prevent="selected = 'finance';$nextTick(() => document.getElementById('expanded-case').scrollIntoView({ behavior: 'smooth', block: 'start' }));">
+                                Leer m&#xE1;s
+                            </a>
+                        </div>
+                    </article>
+                    <article id="case-productDev" class="case-study-card" :class="{ 'active': selected === 'productDev' }">
+                            <img src="/images/enhancing-product-dev.jpg" alt="Mejorando el Desarrollo de Productos" />
+                        <div class="card-content">
+                            <h3>Mejorando el Desarrollo de Productos</h3>
+
+                            <p>
+                              Una empresa de electr&#xF3;nica de consumo acelera su ciclo de desarrollo con conocimientos impulsados por IA.
+ <span>Escenario que muestra c&#xF3;mo nuestra aplicaci&#xF3;n de escritorio puede analizar retroalimentaci&#xF3;n de clientes y tendencias, o c&#xF3;mo nuestro Server/API puede integrarse con flujos de datos de producto para acelerar ciclos de desarrollo.</span>                             </p>
+
+                            <a href="#" class="btn"
+                               @click.prevent="selected = 'productDev';$nextTick(() => document.getElementById('expanded-case').scrollIntoView({ behavior: 'smooth', block: 'start' }));">
+                                Leer m&#xE1;s
+                            </a>
+                        </div>
+                    </article>
+                    <article id="case-customerExperience" class="case-study-card" :class="{ 'active': selected === 'customerExperience' }">
+                            <img src="/images/customer-experience-revamp.jpg" alt="Renovaci&#xF3;n de la Experiencia del Cliente" />
+                        <div class="card-content">
+                            <h3>Renovaci&#xF3;n de la Experiencia del Cliente</h3>
+
+                            <p>
+                              La personalizaci&#xF3;n impulsada por IA revoluciona la interacci&#xF3;n con clientes en retail.
+ <span>Ejemplo ilustrativo de c&#xF3;mo nuestro Server/API puede entregar modelos de personalizaci&#xF3;n integrados en plataformas digitales para mejorar la experiencia del cliente en tiempo real.</span>                             </p>
+
+                            <a href="#" class="btn"
+                               @click.prevent="selected = 'customerExperience';$nextTick(() => document.getElementById('expanded-case').scrollIntoView({ behavior: 'smooth', block: 'start' }));">
+                                Leer m&#xE1;s
+                            </a>
+                        </div>
+                    </article>
+                    <article id="case-digitalMarketing" class="case-study-card" :class="{ 'active': selected === 'digitalMarketing' }">
+                            <img src="/images/digital-marketing-opt.jpg" alt="Optimizaci&#xF3;n del Marketing Digital" />
+                        <div class="card-content">
+                            <h3>Optimizaci&#xF3;n del Marketing Digital</h3>
+
+                            <p>
+                              Aprovechando anal&#xED;ticas de IA para impulsar el rendimiento del marketing y el ROI.
+ <span>Demostraci&#xF3;n de c&#xF3;mo nuestra aplicaci&#xF3;n de escritorio puede analizar datos de campa&#xF1;as, y c&#xF3;mo nuestro Server/API puede apoyar la segmentaci&#xF3;n en tiempo real para optimizar el rendimiento del marketing.</span>                             </p>
+
+                            <a href="#" class="btn"
+                               @click.prevent="selected = 'digitalMarketing';$nextTick(() => document.getElementById('expanded-case').scrollIntoView({ behavior: 'smooth', block: 'start' }));">
+                                Leer m&#xE1;s
+                            </a>
+                        </div>
+                    </article>
+                    <article id="case-predictiveMaintenance" class="case-study-card" :class="{ 'active': selected === 'predictiveMaintenance' }">
+                            <img src="/images/predictive-maintenance2.jpg" alt="Mantenimiento Predictivo" />
+                        <div class="card-content">
+                            <h3>Mantenimiento Predictivo</h3>
+
+                            <p>
+                              La predicci&#xF3;n con IA reduce tiempos de inactividad y optimiza el rendimiento de los activos.
+ <span>Escenario que muestra c&#xF3;mo nuestras soluciones Server/API o Enterprise pueden procesar datos de sensores IoT (una vez instalados por el cliente) para prever fallos de equipos y programar mantenimiento proactivo.</span>                             </p>
+
+                            <a href="#" class="btn"
+                               @click.prevent="selected = 'predictiveMaintenance';$nextTick(() => document.getElementById('expanded-case').scrollIntoView({ behavior: 'smooth', block: 'start' }));">
+                                Leer m&#xE1;s
+                            </a>
+                        </div>
+                    </article>
+        </div>
+
+        <template x-if="selected !== ''">
+            <div id="expanded-case" class="expanded-case-study" x-show="selected !== ''" x-transition>
+                <button class="close-btn"
+                        @click="const prev = document.getElementById('case-' + selected);selected = '';$nextTick(() => prev.scrollIntoView({ behavior: 'smooth', block: 'start' }));">
+                    &times;
+                </button>
+
+                        <div x-show="selected === 'techComp'" x-transition>
+                        <h1>Re-Energizando la Comunicaci&#xF3;n de Marca</h1>
+                        <h3>Cliente: Startup</h3>
+
+                        <h4>Antecedentes</h4>
+                        <p>Una startup prometedora con un producto innovador enfrentaba grandes desaf&#xED;os para comunicar eficazmente su marca a inversores y clientes. A pesar de sus ofertas innovadoras, el mensaje carec&#xED;a de consistencia, dejando la narrativa fragmentada.</p>
+
+                        <h4>Desaf&#xED;o</h4>
+                        <p>El principal desaf&#xED;o era producir contenido atractivo y de alta calidad en m&#xFA;ltiples canales de manera r&#xE1;pida y consistente, permitiendo una voz de marca unificada y convincente.</p>
+
+                        <h4>La Soluci&#xF3;n con IA</h4>
+                        <p>Al integrar la IA Escritora Creativa para la ideaci&#xF3;n inicial y la IA Redactora Publicitaria para refinar la narrativa, se desarroll&#xF3; una campa&#xF1;a cohesionada alineada con los objetivos estrat&#xE9;gicos de marketing.</p>
+
+                        <h4>Proceso de Implementaci&#xF3;n</h4>
+                                <ol>
+                                    <li>
+ <strong>Descubrimiento y An&#xE1;lisis:</strong>                                         Se realiz&#xF3; una revisi&#xF3;n exhaustiva del mensaje existente y del posicionamiento general en el mercado.
+                                    </li>
+                                    <li>
+ <strong>Desarrollo de Contenido:</strong>                                         Se generaron y seleccionaron m&#xFA;ltiples propuestas de campa&#xF1;a utilizando borradores impulsados por IA.
+                                    </li>
+                                    <li>
+ <strong>Optimizaci&#xF3;n Continua:</strong>                                         Se probaron y refinaron los mensajes en distintos canales, ajust&#xE1;ndolos en tiempo real seg&#xFA;n la retroalimentaci&#xF3;n de la audiencia.
+                                    </li>
+                                </ol>
+
+                        <h4>Resultados</h4>
+                                <ul>
+                                    <li>Se logr&#xF3; un aumento del 50% en la interacci&#xF3;n de la audiencia en 3 meses.</li>
+                                    <li>Se increment&#xF3; el inter&#xE9;s de los inversores, con un aumento del 20% en consultas de financiamiento.</li>
+                                    <li>Se redujo el ciclo de producci&#xF3;n de contenido en un 40%, permitiendo tiempos de entrega m&#xE1;s r&#xE1;pidos.</li>
+                                </ul>
+
+                        <h4>Conclusiones Clave</h4>
+                                <ul>
+                                    <li>La integraci&#xF3;n estrat&#xE9;gica de IA puede mejorar r&#xE1;pidamente la comunicaci&#xF3;n de marca.</li>
+                                    <li>Las pruebas en tiempo real y los bucles de retroalimentaci&#xF3;n impulsan la mejora continua.</li>
+                                    <li>M&#xE9;tricas cuantificables como tasas de interacci&#xF3;n y consultas de financiamiento validan el &#xE9;xito.</li>
+                                </ul>
+
+                            <blockquote>
+                                Nuestra narrativa de marca se transform&#xF3; de la noche a la ma&#xF1;ana. El enfoque impulsado por IA elev&#xF3; nuestra comunicaci&#xF3;n y dio claridad a nuestro equipo.
+                                    <br />&#x2014; Podr&#xED;a decirlo un Director de Marketing                            </blockquote>
+
+                        <em>Este caso de estudio es un ejemplo ficticio creado para demostrar aplicaciones potenciales de nuestra tecnolog&#xED;a. No describe un compromiso real con un cliente (generalmente confidencial).</em>
+                    </div>
+                        <div x-show="selected === 'manufacturing'" x-transition>
+                        <h1>Toma de Decisiones Basada en Datos para la Excelencia Operativa</h1>
+                        <h3>Cliente: Empresa Manufacturera Mediana</h3>
+
+                        <h4>Antecedentes</h4>
+                        <p>Una empresa manufacturera consolidada enfrentaba ineficiencias debido a datos fragmentados y procesos de cadena de suministro complejos. La falta de anal&#xED;tica cohesionada dificultaba la toma de decisiones oportunas.</p>
+
+                        <h4>Desaf&#xED;o</h4>
+                        <p>Los informes inconsistentes y los flujos de trabajo complicados retrasaban la entrega de informaci&#xF3;n procesable necesaria para decisiones estrat&#xE9;gicas.</p>
+
+                        <h4>La Soluci&#xF3;n con IA</h4>
+                        <p>La implementaci&#xF3;n de la IA Analista de Datos consolid&#xF3; flujos de datos diversos, mientras que la IA Creadora de &#xC1;rboles de Decisi&#xF3;n proporcion&#xF3; modelos visuales claros.</p>
+
+                        <h4>Proceso de Implementaci&#xF3;n</h4>
+                                <ol>
+                                    <li>
+ <strong>Agregaci&#xF3;n de Datos:</strong>                                         Se realiz&#xF3; una auditor&#xED;a integral para normalizar fuentes de datos dispares.
+                                    </li>
+                                    <li>
+ <strong>Visualizaci&#xF3;n:</strong>                                         Se desarrollaron &#xE1;rboles de decisi&#xF3;n intuitivos que mapearon m&#xFA;ltiples escenarios operativos.
+                                    </li>
+                                    <li>
+ <strong>Capacitaci&#xF3;n del Personal:</strong>                                         Se brind&#xF3; formaci&#xF3;n espec&#xED;fica para que la gerencia aprovechara eficazmente los conocimientos de la IA.
+                                    </li>
+                                </ol>
+
+                        <h4>Resultados</h4>
+                                <ul>
+                                    <li>Se redujeron los costos operativos en un 30% en 6 meses.</li>
+                                    <li>Se aceleraron los procesos de toma de decisiones en un 25%, mejorando la eficiencia general.</li>
+                                    <li>Se mejor&#xF3; la claridad de los informes en todos los niveles de gesti&#xF3;n.</li>
+                                </ul>
+
+                        <h4>Conclusiones Clave</h4>
+                                <ul>
+                                    <li>La anal&#xED;tica consolidada desbloquea ahorros tangibles.</li>
+                                    <li>Las herramientas visuales de decisi&#xF3;n permiten acciones ejecutivas r&#xE1;pidas y seguras.</li>
+                                    <li>La capacitaci&#xF3;n robusta asegura la adopci&#xF3;n exitosa de la IA en los equipos.</li>
+                                </ul>
+
+                            <blockquote>
+                                Integrar IA en nuestros procesos transform&#xF3; por completo nuestras operaciones. Los modelos visuales simplificaron nuestras decisiones m&#xE1;s complejas.
+                                    <br />&#x2014; Podr&#xED;a decirlo un Gerente de Operaciones                            </blockquote>
+
+                        <em>Este caso de estudio es un ejemplo ficticio creado para demostrar aplicaciones potenciales de nuestra tecnolog&#xED;a. No describe un compromiso real con un cliente (generalmente confidencial).</em>
+                    </div>
+                        <div x-show="selected === 'retail'" x-transition>
+                        <h1>Expansi&#xF3;n Global con Localizaci&#xF3;n Inteligente</h1>
+                        <h3>Cliente: Marca Minorista Visionaria</h3>
+
+                        <h4>Antecedentes</h4>
+                        <p>Una marca minorista l&#xED;der orientada a mercados internacionales ten&#xED;a dificultades con un mensaje global uniforme que no resonaba en regiones culturalmente diversas.</p>
+
+                        <h4>Desaf&#xED;o</h4>
+                        <p>La marca necesitaba una soluci&#xF3;n que adaptara din&#xE1;micamente su mensaje a los gustos regionales manteniendo una identidad global coherente.</p>
+
+                        <h4>La Soluci&#xF3;n con IA</h4>
+                        <p>Al desplegar la IA Traductora para localizaci&#xF3;n precisa, la IA Creadora de Im&#xE1;genes para visuales culturalmente relevantes y la IA Experta en B&#xFA;squeda Web para rastrear tendencias locales, se lanz&#xF3; una campa&#xF1;a adaptativa.</p>
+
+                        <h4>Proceso de Implementaci&#xF3;n</h4>
+                                <ol>
+                                    <li>
+ <strong>Estrategia de Localizaci&#xF3;n:</strong>                                         Se desarrollaron gu&#xED;as espec&#xED;ficas por mercado reflejando cultura e idioma locales.
+                                    </li>
+                                    <li>
+ <strong>Adaptaci&#xF3;n Visual:</strong>                                         Se dise&#xF1;aron y refinaron m&#xFA;ltiples visuales con grupos focales regionales.
+                                    </li>
+                                    <li>
+ <strong>Ajuste Continuo:</strong>                                         Se ajustaron campa&#xF1;as en tiempo real seg&#xFA;n la retroalimentaci&#xF3;n del mercado.
+                                    </li>
+                                </ol>
+
+                        <h4>Resultados</h4>
+                                <ul>
+                                    <li>Se logr&#xF3; un aumento del 35% en ventas internacionales en el primer a&#xF1;o.</li>
+                                    <li>Se mejor&#xF3; la percepci&#xF3;n local de la marca y la penetraci&#xF3;n en el mercado.</li>
+                                    <li>Se adoptaron campa&#xF1;as &#xE1;giles que respondieron r&#xE1;pidamente a din&#xE1;micas regionales.</li>
+                                </ul>
+
+                        <h4>Conclusiones Clave</h4>
+                                <ul>
+                                    <li>Las estrategias localizadas son cruciales para la expansi&#xF3;n global exitosa.</li>
+                                    <li>Las campa&#xF1;as adaptativas en tiempo real mejoran la interacci&#xF3;n local.</li>
+                                    <li>La integraci&#xF3;n de herramientas de IA impulsa mejoras medibles en el rendimiento regional.</li>
+                                </ul>
+
+                            <blockquote>
+                                Nuestra expansi&#xF3;n global fue fluida. Estas soluciones de IA nos ayudaron a superar barreras culturales y ling&#xFC;&#xED;sticas.
+                                    <br />&#x2014; Podr&#xED;a decirlo un CEO de Retail                            </blockquote>
+
+                        <em>Este caso de estudio es un ejemplo ficticio creado para demostrar aplicaciones potenciales de nuestra tecnolog&#xED;a. No describe un compromiso real con un cliente (generalmente confidencial).</em>
+                    </div>
+                        <div x-show="selected === 'chatbots'" x-transition>
+                        <h1>Optimizando la Atenci&#xF3;n al Cliente con Chatbots de IA</h1>
+                        <h3>Cliente: Plataforma Global de E&#x2011;commerce</h3>
+
+                        <h4>Antecedentes</h4>
+                        <p>Con un aumento dram&#xE1;tico en las consultas de clientes, los sistemas tradicionales de soporte sufr&#xED;an de largos tiempos de espera y un servicio inconsistente.</p>
+
+                        <h4>Desaf&#xED;o</h4>
+                        <p>El objetivo era gestionar eficientemente grandes vol&#xFA;menes de solicitudes de soporte sin comprometer la calidad de la respuesta ni la satisfacci&#xF3;n del cliente.</p>
+
+                        <h4>La Soluci&#xF3;n con IA</h4>
+                        <p>Se implementaron chatbots avanzados de IA con procesamiento de lenguaje natural para manejar consultas rutinarias y escalar de manera inteligente los casos complejos a agentes humanos.</p>
+
+                        <h4>Proceso de Implementaci&#xF3;n</h4>
+                                <ol>
+                                    <li>
+ <strong>Integraci&#xF3;n del Sistema:</strong>                                         Se conectaron los chatbots con el CRM existente para un intercambio de datos cohesivo.
+                                    </li>
+                                    <li>
+ <strong>Personalizaci&#xF3;n:</strong>                                         Se ajustaron los modelos con datos hist&#xF3;ricos de soporte para manejar eficazmente consultas multiling&#xFC;es.
+                                    </li>
+                                    <li>
+ <strong>Monitoreo del Rendimiento:</strong>                                         Se estableci&#xF3; un monitoreo riguroso y actualizaciones peri&#xF3;dicas para mantener la calidad del servicio.
+                                    </li>
+                                </ol>
+
+                        <h4>Resultados</h4>
+                                <ul>
+                                    <li>Se redujo el tiempo promedio de respuesta en un 40% en 2 meses.</li>
+                                    <li>Se increment&#xF3; la satisfacci&#xF3;n del cliente en un 15%.</li>
+                                    <li>Se redujeron los costos de soporte en un 25% mediante la optimizaci&#xF3;n de la carga de trabajo.</li>
+                                </ul>
+
+                        <h4>Conclusiones Clave</h4>
+                                <ul>
+                                    <li>Los chatbots de IA mejoran significativamente la velocidad y precisi&#xF3;n de las respuestas.</li>
+                                    <li>La capacitaci&#xF3;n personalizada y la integraci&#xF3;n son cr&#xED;ticas para soportes multiling&#xFC;es y de alto volumen.</li>
+                                    <li>El ahorro de costos y la mejora en satisfacci&#xF3;n validan el valor de la IA en atenci&#xF3;n al cliente.</li>
+                                </ul>
+
+                            <blockquote>
+                                Los chatbots de IA revolucionaron nuestro soporte. Los clientes reciben respuestas instant&#xE1;neas y confiables, mejorando la satisfacci&#xF3;n y reduciendo costos.
+                                    <br />&#x2014; Podr&#xED;a decirlo un Jefe de Atenci&#xF3;n al Cliente                            </blockquote>
+
+                        <em>Este caso de estudio es un ejemplo ficticio creado para demostrar aplicaciones potenciales de nuestra tecnolog&#xED;a. No describe un compromiso real con un cliente (generalmente confidencial).</em>
+                    </div>
+                        <div x-show="selected === 'finance'" x-transition>
+                        <h1>Optimizaci&#xF3;n de Operaciones Financieras con Automatizaci&#xF3;n de IA</h1>
+                        <h3>Cliente: Firma de Servicios Financieros Mediana</h3>
+
+                        <h4>Antecedentes</h4>
+                        <p>La entrada manual de datos y el procesamiento repetitivo ralentizaban las operaciones financieras e introduc&#xED;an errores en flujos cr&#xED;ticos.</p>
+
+                        <h4>Desaf&#xED;o</h4>
+                        <p>La firma necesitaba una soluci&#xF3;n para automatizar tareas rutinarias, garantizar precisi&#xF3;n de datos y acelerar los procesos de reporte.</p>
+
+                        <h4>La Soluci&#xF3;n con IA</h4>
+                        <p>Se implement&#xF3; un sistema de automatizaci&#xF3;n impulsado por IA para agilizar tareas repetitivas, permitiendo al equipo enfocarse en trabajo estrat&#xE9;gico de mayor valor.</p>
+
+                        <h4>Proceso de Implementaci&#xF3;n</h4>
+                                <ol>
+                                    <li>
+ <strong>Evaluaci&#xF3;n de Flujos:</strong>                                         Se evaluaron procesos existentes para identificar oportunidades de automatizaci&#xF3;n.
+                                    </li>
+                                    <li>
+ <strong>Integraci&#xF3;n del Sistema:</strong>                                         Se integr&#xF3; la soluci&#xF3;n de IA con el ERP de la firma, asegurando un flujo de datos sin interrupciones.
+                                    </li>
+                                    <li>
+ <strong>Capacitaci&#xF3;n del Personal:</strong>                                         Se brind&#xF3; formaci&#xF3;n espec&#xED;fica para que los empleados gestionaran y supervisaran el nuevo sistema.
+                                    </li>
+                                </ol>
+
+                        <h4>Resultados</h4>
+                                <ul>
+                                    <li>Se mejor&#xF3; la eficiencia operativa en un 35% en 4 meses.</li>
+                                    <li>Se redujeron sustancialmente los errores manuales, generando datos financieros m&#xE1;s confiables.</li>
+                                    <li>Se aceleraron los reportes financieros, habilitando decisiones estrat&#xE9;gicas m&#xE1;s &#xE1;giles.</li>
+                                </ul>
+
+                        <h4>Conclusiones Clave</h4>
+                                <ul>
+                                    <li>La automatizaci&#xF3;n libera recursos para iniciativas estrat&#xE9;gicas.</li>
+                                    <li>La integraci&#xF3;n fluida con sistemas existentes es esencial para el &#xE9;xito.</li>
+                                    <li>Las mejoras en eficiencia y precisi&#xF3;n validan la inversi&#xF3;n en IA.</li>
+                                </ul>
+
+                            <blockquote>
+                                Nuestro departamento financiero ahora es m&#xE1;s &#xE1;gil y eficiente. La automatizaci&#xF3;n con IA liber&#xF3; a nuestros equipos para enfocarse en estrategia e innovaci&#xF3;n.
+                                    <br />&#x2014; Podr&#xED;a decirlo un CFO                            </blockquote>
+
+                        <em>Este caso de estudio es un ejemplo ficticio creado para demostrar aplicaciones potenciales de nuestra tecnolog&#xED;a. No describe un compromiso real con un cliente (generalmente confidencial).</em>
+                    </div>
+                        <div x-show="selected === 'productDev'" x-transition>
+                        <h1>Mejorando el Desarrollo de Productos con Conocimientos Impulsados por IA</h1>
+                        <h3>Cliente: Empresa Innovadora de Electr&#xF3;nica de Consumo</h3>
+
+                        <h4>Antecedentes</h4>
+                        <p>Ante una competencia intensa, la empresa necesitaba acelerar su ciclo de desarrollo de productos y adaptarse r&#xE1;pidamente a las tendencias de los consumidores.</p>
+
+                        <h4>Desaf&#xED;o</h4>
+                        <p>Los ciclos de desarrollo prolongados y las iteraciones lentas imped&#xED;an innovar con rapidez y responder a la demanda del mercado.</p>
+
+                        <h4>La Soluci&#xF3;n con IA</h4>
+                        <p>La anal&#xED;tica impulsada por IA consolid&#xF3; retroalimentaci&#xF3;n de clientes, tendencias de mercado y conocimientos competitivos, habilitando prototipado r&#xE1;pido y mejoras iterativas.</p>
+
+                        <h4>Proceso de Implementaci&#xF3;n</h4>
+                                <ol>
+                                    <li>
+ <strong>Consolidaci&#xF3;n de Datos:</strong>                                         Se integraron diversas fuentes de datos en un panel centralizado de anal&#xED;tica de IA.
+                                    </li>
+                                    <li>
+ <strong>Derivaci&#xF3;n de Conocimientos:</strong>                                         Se emplearon modelos predictivos para extraer sugerencias procesables de mejora de producto.
+                                    </li>
+                                    <li>
+ <strong>Prototipado Iterativo:</strong>                                         Se aprovech&#xF3; la retroalimentaci&#xF3;n en tiempo real de la IA para acelerar iteraciones de dise&#xF1;o y pruebas de mercado.
+                                    </li>
+                                </ol>
+
+                        <h4>Resultados</h4>
+                                <ul>
+                                    <li>Se redujo el ciclo de desarrollo en un 25%, acelerando el lanzamiento al mercado.</li>
+                                    <li>Se mejor&#xF3; la capacidad de respuesta a la demanda del mercado y retroalimentaci&#xF3;n de clientes.</li>
+                                    <li>Se increment&#xF3; la adecuaci&#xF3;n producto&#x2011;mercado, aumentando ventas y cuota de mercado.</li>
+                                </ul>
+
+                        <h4>Conclusiones Clave</h4>
+                                <ul>
+                                    <li>Los conocimientos impulsados por IA aceleran la innovaci&#xF3;n y el refinamiento de productos.</li>
+                                    <li>La anal&#xED;tica en tiempo real permite respuestas &#xE1;giles a tendencias del mercado.</li>
+                                    <li>Los ciclos m&#xE1;s cortos de desarrollo crean ventajas competitivas significativas.</li>
+                                </ul>
+
+                            <blockquote>
+                                Los conocimientos de IA redujeron significativamente nuestro ciclo de desarrollo, permiti&#xE9;ndonos innovar m&#xE1;s r&#xE1;pido y mantenernos por delante de la competencia.
+                                    <br />&#x2014; Podr&#xED;a decirlo un VP de Desarrollo de Producto                            </blockquote>
+
+                        <em>Este caso de estudio es un ejemplo ficticio creado para demostrar aplicaciones potenciales de nuestra tecnolog&#xED;a. No describe un compromiso real con un cliente (generalmente confidencial).</em>
+                    </div>
+                        <div x-show="selected === 'customerExperience'" x-transition>
+                        <h1>Renovaci&#xF3;n de la Experiencia del Cliente</h1>
+                        <h3>Cliente: Cadena Minorista Global</h3>
+
+                        <h4>Antecedentes</h4>
+                        <p>Una gran cadena minorista enfrentaba una disminuci&#xF3;n en la interacci&#xF3;n de clientes debido a una experiencia digital obsoleta y uniforme que no atend&#xED;a necesidades diversas.</p>
+
+                        <h4>Desaf&#xED;o</h4>
+                        <p>El reto era reinventar la experiencia digital ofreciendo contenido personalizado y recomendaciones din&#xE1;micas para cada cliente.</p>
+
+                        <h4>La Soluci&#xF3;n con IA</h4>
+                        <p>Se implement&#xF3; un motor de personalizaci&#xF3;n impulsado por IA para analizar datos en tiempo real y adaptar din&#xE1;micamente contenido, promociones y recomendaciones.</p>
+
+                        <h4>Proceso de Implementaci&#xF3;n</h4>
+                                <ol>
+                                    <li>
+ <strong>Agregaci&#xF3;n de Datos:</strong>                                         Se recopilaron datos de interacci&#xF3;n de clientes desde m&#xFA;ltiples canales.
+                                    </li>
+                                    <li>
+ <strong>Modelo de Personalizaci&#xF3;n:</strong>                                         Se desarrollaron modelos de aprendizaje autom&#xE1;tico para segmentar usuarios y entregar contenido adaptado.
+                                    </li>
+                                    <li>
+ <strong>Optimizaci&#xF3;n Continua:</strong>                                         Se establecieron bucles de retroalimentaci&#xF3;n para refinar continuamente los algoritmos de personalizaci&#xF3;n.
+                                    </li>
+                                </ol>
+
+                        <h4>Resultados</h4>
+                                <ul>
+                                    <li>Se increment&#xF3; la interacci&#xF3;n de clientes en un 30% y las tasas de conversi&#xF3;n en un 20%.</li>
+                                    <li>Se observ&#xF3; una mejora notable en la lealtad y repetici&#xF3;n de compras.</li>
+                                    <li>Se enriqueci&#xF3; la experiencia general del cliente con ajustes &#xE1;giles basados en datos.</li>
+                                </ul>
+
+                        <h4>Conclusiones Clave</h4>
+                                <ul>
+                                    <li>La personalizaci&#xF3;n din&#xE1;mica mejora la satisfacci&#xF3;n y lealtad del cliente.</li>
+                                    <li>El an&#xE1;lisis de datos en tiempo real es cr&#xED;tico para entregar contenido adaptado.</li>
+                                    <li>El refinamiento continuo de algoritmos impulsa mejoras sostenidas en la interacci&#xF3;n.</li>
+                                </ul>
+
+                            <blockquote>
+                                La transformaci&#xF3;n en nuestra experiencia de cliente ha sido notable.
+                                    <br />&#x2014; Podr&#xED;a decirlo un Director de Marketing                            </blockquote>
+
+                        <em>Este caso de estudio es un ejemplo ficticio creado para demostrar aplicaciones potenciales de nuestra tecnolog&#xED;a. No describe un compromiso real con un cliente (generalmente confidencial).</em>
+                    </div>
+                        <div x-show="selected === 'digitalMarketing'" x-transition>
+                        <h1>Optimizaci&#xF3;n del Marketing Digital</h1>
+                        <h3>Cliente: Plataforma de E&#x2011;commerce L&#xED;der</h3>
+
+                        <h4>Antecedentes</h4>
+                        <p>Una plataforma de e&#x2011;commerce consolidada enfrentaba costos crecientes de adquisici&#xF3;n de clientes y gastos publicitarios ineficientes que reduc&#xED;an el ROI.</p>
+
+                        <h4>Desaf&#xED;o</h4>
+                        <p>El objetivo era lograr una segmentaci&#xF3;n precisa de audiencias y optimizar el rendimiento de los anuncios digitales para maximizar el retorno de la inversi&#xF3;n en marketing.</p>
+
+                        <h4>La Soluci&#xF3;n con IA</h4>
+                        <p>Aprovechando anal&#xED;ticas de IA, la plataforma analiz&#xF3; datos hist&#xF3;ricos de campa&#xF1;as y el comportamiento de usuarios en tiempo real para refinar par&#xE1;metros de segmentaci&#xF3;n y automatizar estrategias de puja.</p>
+
+                        <h4>Proceso de Implementaci&#xF3;n</h4>
+                                <ol>
+                                    <li>
+ <strong>An&#xE1;lisis Profundo:</strong>                                         Se evaluaron datos de marketing pasados para identificar segmentos de audiencia con alta conversi&#xF3;n.
+                                    </li>
+                                    <li>
+ <strong>Modelado Predictivo:</strong>                                         Se utiliz&#xF3; IA para predecir y orientar audiencias en tiempo real.
+                                    </li>
+                                    <li>
+ <strong>Optimizaci&#xF3;n Continua:</strong>                                         Se implementaron pruebas A/B continuas y ajustes automatizados de pujas para mejoras sostenidas.
+                                    </li>
+                                </ol>
+
+                        <h4>Resultados</h4>
+                                <ul>
+                                    <li>Se mejor&#xF3; el ROI de campa&#xF1;as en un 40% en un per&#xED;odo de 3 meses.</li>
+                                    <li>Se redujeron los costos de adquisici&#xF3;n de clientes en un 25%.</li>
+                                    <li>Se incrementaron las tasas de conversi&#xF3;n en todos los canales digitales.</li>
+                                </ul>
+
+                        <h4>Conclusiones Clave</h4>
+                                <ul>
+                                    <li>La segmentaci&#xF3;n basada en datos y la anal&#xED;tica predictiva pueden mejorar dr&#xE1;sticamente el rendimiento del marketing digital.</li>
+                                    <li>La optimizaci&#xF3;n continua mediante pruebas A/B es esencial para el &#xE9;xito a largo plazo.</li>
+                                    <li>Una segmentaci&#xF3;n efectiva de audiencias genera ahorros significativos y un ROI mejorado.</li>
+                                </ul>
+
+                            <blockquote>
+                                Nuestras campa&#xF1;as de marketing ahora ofrecen una eficiencia sin precedentes y resultados medibles.
+                                    <br />&#x2014; Podr&#xED;a decirlo un CMO de una Plataforma de E&#x2011;commerce L&#xED;der                            </blockquote>
+
+                        <em>Este caso de estudio es un ejemplo ficticio creado para demostrar aplicaciones potenciales de nuestra tecnolog&#xED;a. No describe un compromiso real con un cliente (generalmente confidencial).</em>
+                    </div>
+                        <div x-show="selected === 'predictiveMaintenance'" x-transition>
+                        <h1>Mantenimiento Predictivo</h1>
+                        <h3>Cliente: Empresa Industrial Manufacturera</h3>
+
+                        <h4>Antecedentes</h4>
+                        <p>Un fabricante industrial sufr&#xED;a frecuentes fallos imprevistos en equipos, lo que generaba altos costos de mantenimiento y tiempos de inactividad significativos.</p>
+
+                        <h4>Desaf&#xED;o</h4>
+                        <p>La empresa necesitaba pasar de un enfoque reactivo de mantenimiento a un modelo proactivo que pudiera predecir fallos antes de que ocurrieran.</p>
+
+                        <h4>La Soluci&#xF3;n con IA</h4>
+                        <p>Se implement&#xF3; un sistema de mantenimiento predictivo basado en IA para monitorear continuamente datos de sensores en maquinaria clave y prever posibles fallos mediante anal&#xED;tica avanzada.</p>
+
+                        <h4>Proceso de Implementaci&#xF3;n</h4>
+                                <ol>
+                                    <li>
+ <strong>Instalaci&#xF3;n de Sensores:</strong>                                         Se desplegaron sensores IoT en equipos cr&#xED;ticos para capturar datos de rendimiento en tiempo real.
+                                    </li>
+                                    <li>
+ <strong>Integraci&#xF3;n de Datos:</strong>                                         Se consolidaron las salidas de sensores en una plataforma de anal&#xED;tica impulsada por IA.
+                                    </li>
+                                    <li>
+ <strong>Modelado Predictivo:</strong>                                         Se desarrollaron modelos para prever fallos y programar acciones de mantenimiento preventivo.
+                                    </li>
+                                </ol>
+
+                        <h4>Resultados</h4>
+                                <ul>
+                                    <li>Se redujo el tiempo de inactividad no planificado en un 35% en 6 meses.</li>
+                                    <li>Se disminuyeron los costos generales de mantenimiento al pasar a reparaciones programadas.</li>
+                                    <li>Se mejor&#xF3; la confiabilidad de los equipos y se increment&#xF3; la eficiencia de producci&#xF3;n.</li>
+                                </ul>
+
+                        <h4>Conclusiones Clave</h4>
+                                <ul>
+                                    <li>El mantenimiento proactivo impulsado por IA minimiza costosos tiempos de inactividad.</li>
+                                    <li>La integraci&#xF3;n de sensores IoT con anal&#xED;tica predictiva asegura reparaciones oportunas.</li>
+                                    <li>Los calendarios estructurados de mantenimiento mejoran la eficiencia operativa.</li>
+                                </ul>
+
+                            <blockquote>
+                                Gracias al mantenimiento predictivo, nuestra eficiencia operativa ha mejorado de manera notable.
+                                    <br />&#x2014; Podr&#xED;a decirlo un Gerente de Operaciones                            </blockquote>
+
+                        <em>Este caso de estudio es un ejemplo ficticio creado para demostrar aplicaciones potenciales de nuestra tecnolog&#xED;a. No describe un compromiso real con un cliente (generalmente confidencial).</em>
+                    </div>
+            </div>
+        </template>
+    </div>
+</section>
+
+<section class="cta">
+    <div class="container">
+        <h2>&#xBF;Listo para Transformar tu Negocio?</h2>
+        <p>Descubre c&#xF3;mo nuestras soluciones impulsadas por IA pueden elevar tus operaciones. Cont&#xE1;ctanos hoy para iniciar tu viaje de transformaci&#xF3;n.</p>
+        <a href="contact.html" class="btn">Agendar una Consulta</a>
+    </div>
+</section>
+
+
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&#xA9; 2025 The Intelligent Enterprise Group. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="/js/swiper-bundle.min.js"></script>
+    <script src="/js/cdn.min.js" defer></script>
+    <script src="/js/gsap.min.js"></script>
+    <script src="/js/DrawSVGPlugin.min.js"></script>
+
+    <script type="module" src="/js/themeToggle.js"></script>
+    <script type="module">
+        import { toggleTheme, getCurrentTheme } from '/js/themeToggle.js';
+        const checkbox = document.getElementById('theme-checkbox');
+        const themeLabel = document.getElementById('theme-label');
+
+        if (getCurrentTheme() === 'dark') {
+            checkbox.checked = true;
+            themeLabel.textContent = 'Modo oscuro';
+        } else {
+            themeLabel.textContent = 'Modo claro';
+        }
+
+        checkbox.addEventListener('change', () => {
+            toggleTheme();
+            themeLabel.textContent = checkbox.checked ? 'Modo oscuro' : 'Modo claro';
+        });
+    </script>
+
+    <button id="back-to-top" aria-label="Back to Top">Arriba</button>
+
+    
+    <script>
+        gsap.registerPlugin(DrawSVGPlugin);
+        window.onload = function () {
+            gsap.from(".hero h2", { duration: 1.2, opacity: 0, y: -50, ease: "power2.out" });
+            gsap.from(".hero p", { duration: 1.2, opacity: 0, y: 50, ease: "power2.out", delay: 0.2 });
+            gsap.from(".case-studies-grid", { duration: 1, opacity: 0, y: 20, ease: "power2.out", delay: 0.4 });
+            gsap.from(".expanded-case-study", { duration: 1, opacity: 0, y: 20, ease: "power2.out", delay: 0.6 });
+            gsap.from(".cta h2", { duration: 1, opacity: 0, y: -20, ease: "power2.out", delay: 0.8 });
+            gsap.from(".cta p", { duration: 1, opacity: 0, y: 20, ease: "power2.out", delay: 1 });
+            gsap.from(".cta .btn", { duration: 1, opacity: 0, scale: 0.8, ease: "back.out(1.7)", delay: 1.2 });
+        };
+    </script>
+
+</body>
+</html>

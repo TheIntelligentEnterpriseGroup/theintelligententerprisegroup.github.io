@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="pt" dir="ltr">
+<head>
+    <meta name="robots" content="index, follow" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <meta name="description" content='Encontre respostas para perguntas frequentes sobre o The Intelligent Enterprise Group. Saiba como nossa equipe de especialistas em IA coordenada funciona, os setores que atendemos, privacidade de dados, seguran&#xE7;a, pre&#xE7;os, carreiras e muito mais.' />
+    <title>FAQs | The Intelligent Enterprise Group &#x2013; Solu&#xE7;&#xF5;es e Servi&#xE7;os de IA</title>
+
+    <style>
+        html { background-color: #3B3A47; }
+    </style>
+    <script>
+        (function () {
+            const key = 'preferredTheme';
+            const stored = localStorage.getItem(key);
+            const systemDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+            const theme = stored || (systemDark ? 'dark' : 'light');
+            if (theme === 'dark') {
+                document.documentElement.classList.add('dark-mode');
+            }
+        })();
+    </script>
+
+
+        <link rel="alternate" hreflang="en" href="https://theintelligententerprisegroup.com/faqs.html" />
+        <link rel="alternate" hreflang="fr" href="https://theintelligententerprisegroup.com/fr/faqs.html" />
+        <link rel="alternate" hreflang="de" href="https://theintelligententerprisegroup.com/de/faqs.html" />
+        <link rel="alternate" hreflang="es" href="https://theintelligententerprisegroup.com/es/faqs.html" />
+        <link rel="alternate" hreflang="pt" href="https://theintelligententerprisegroup.com/pt/faqs.html" />
+        <link rel="alternate" hreflang="zh" href="https://theintelligententerprisegroup.com/zh/faqs.html" />
+        <link rel="alternate" hreflang="ja" href="https://theintelligententerprisegroup.com/ja/faqs.html" />
+        <link rel="alternate" hreflang="ar" href="https://theintelligententerprisegroup.com/ar/faqs.html" />
+
+
+    <link rel="alternate" hreflang="x-default" href="https://theintelligententerprisegroup.com/faqs.html" />
+
+    <link rel="canonical" href="https://theintelligententerprisegroup.com/pt/faqs.html" />
+
+
+    <link rel="stylesheet" href="/css/styles.css" />
+    <link rel="stylesheet" href="/css/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="/css/all.min.css" />
+
+    <script src="/js/lang-switcher.js" defer></script>
+
+    <script>
+        (function () {
+            if (localStorage.getItem('currentLang')) return;
+            const supported = [
+                     { code: "en" } ,
+                     { code: "fr" } ,
+                     { code: "de" } ,
+                     { code: "es" } ,
+                     { code: "pt" } ,
+                     { code: "zh" } ,
+                     { code: "ja" } ,
+                     { code: "ar" } 
+            ];
+            const defaultLang = "pt";
+            const navLangs = navigator.languages || [navigator.language || navigator.userLanguage];
+            let detected = null;
+            for (const nav of navLangs) {
+                const code = nav.toLowerCase().split('-')[0];
+                if (supported.find(s => s.code.toLowerCase() === code)) {
+                    detected = code;
+                    break;
+                }
+            }
+            const lang = detected || defaultLang;
+            localStorage.setItem('currentLang', lang);
+            document.documentElement.lang = lang;
+        })();
+    </script>
+
+    <!-- Organization structured data (JSON-LD) -->
+    <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "Organization",
+          "name": "The Intelligent Enterprise Group",
+          "url": "https://theintelligententerprisegroup.com/",
+          "logo": "https://theintelligententerprisegroup.com/images/tieg-logo.png",
+          "sameAs": []
+        }
+    </script>
+    <link rel="icon" href="/favicon.ico" />
+    <link rel="apple-touch-icon" href="/images/apple-touch-icon.png" />
+
+    
+
+</head>
+<body>
+    <header x-data="{ open: false }">
+        <div class="container header-top">
+            <div class="logo"></div>
+            <div class="theme-switch-wrapper">
+                <label class="theme-switch">
+                    <input type="checkbox" id="theme-checkbox" />
+                    <span class="slider round"></span>
+                </label>
+                <span id="theme-label">Modo Claro</span>
+                <span class="lang-switcher">
+                    <label for="lang-select" class="lang-label">🌐 Idioma:</label>
+
+                    <!-- Language switcher -->
+                    <select id="lang-select" class="lang-select">
+                        <option value="en" data-path="/">English</option>
+                        <option value="fr" data-path="/fr/">Fran&#xE7;ais</option>
+                        <option value="de" data-path="/de/">Deutsch</option>
+                        <option value="es" data-path="/es/">Espa&#xF1;ol</option>
+                        <option value="pt" data-path="/pt/">Portugu&#xEA;s</option>
+                        <option value="zh" data-path="/zh/">&#x4E2D;&#x6587;</option>
+                        <option value="ja" data-path="/ja/">&#x65E5;&#x672C;&#x8A9E;</option>
+                        <option value="ar" data-path="/ar/">&#x627;&#x644;&#x639;&#x631;&#x628;&#x64A;&#x629;</option>
+                    </select>
+
+                </span>
+            </div>
+        </div>
+        
+        <div class="container header-nav">
+            <button @click="open = !open" class="menu-toggle" aria-label="Toggle Menu">
+                <svg width="24" height="24" viewBox="0 0 24 24">
+                    <path fill="var(--nav-link-color)" d="M3 6h18v2H3V6zm0 5h18v2H3v-2zm0 5h18v2H3v-2z" />
+                </svg>
+            </button>
+
+            <nav class="main-nav" :class="{ 'open': open }">
+                <ul>
+                    <li><a href="index.html" class="">In&#xED;cio</a></li>
+                    <li><a href="about.html" class="">Sobre N&#xF3;s</a></li>
+                    <li><a href="services.html" class="">Servi&#xE7;os e Solu&#xE7;&#xF5;es</a></li>
+                    <li><a href="case-studies.html" class="">Estudos de Caso</a></li>
+                    <li><a href="resources.html" class="">Recursos e Insights</a></li>
+                    <li><a href="trial.html" class="">Avalia&#xE7;&#xE3;o</a></li>
+                    <li><a href="pricing.html" class="">Pre&#xE7;os</a></li>
+                    <li><a href="partners.html" class="">Parceiros e Alian&#xE7;as</a></li>                    
+                    <li><a href="contact.html" class="">Contato e Consultoria</a></li>
+                    <li class="has-submenu"
+                        x-data="{ openSub: false }"
+                        @mouseenter="openSub = true"
+                        @mouseleave="openSub = false">
+                      <button @click="openSub = !openSub"
+                              aria-haspopup="true"
+                              :aria-expanded="openSub.toString()">
+                        Informa&#xE7;&#xF5;es
+                        <svg width="12" height="12" viewBox="0 0 12 12" aria-hidden="true">
+                          <path d="M3 4l3 3 3-3" fill="currentColor"/>
+                        </svg>
+                      </button>
+                      <ul class="submenu" x-show="openSub" @click.outside="openSub = false">
+                        <li><a href="careers.html" class="">Carreiras</a></li>
+                        <li><a href="faqs.html" class="active">Perguntas Frequentes</a></li>
+                        <li><a href="legal.html" class="">Jur&#xED;dico e Pol&#xED;ticas</a></li>
+                      </ul>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        
+<section class="hero">
+    <div class="container">
+        <h2>Perguntas Frequentes</h2>
+        <h3>Aqui você encontrará respostas para algumas das dúvidas mais comuns<br />sobre nossos serviços, políticas e processos de negócios.</h3>
+    </div>
+</section>
+
+<section class="faq">
+    <div class="container faq-container">
+                <div class="faq-item">
+                    <details>
+                        <summary><i class="fas fa-users"></i>Suas solu&#xE7;&#xF5;es de IA s&#xE3;o projetadas para substituir pessoas?</summary>
+                        <p>Não. Nossas soluções não são construídas para substituir pessoas, mas para capacitá-las. Projetamos sistemas de IA que apoiam os colaboradores em seu trabalho diário, ajudando-os a executar tarefas com mais eficiência, tomar melhores decisões e alcançar mais com menos esforço. Ao automatizar processos repetitivos e fornecer insights inteligentes, nossa tecnologia libera as pessoas para focar em criatividade, estratégia e inovação — áreas onde o talento humano realmente se destaca.</p>
+                    </details>
+                </div>
+                <div class="faq-item">
+                    <details>
+                        <summary><i class="fas fa-robot"></i>Quais servi&#xE7;os o The Intelligent Enterprise Group oferece?</summary>
+                        <p>Oferecemos um conjunto abrangente de serviços de IA, incluindo Equipes de IA, Consultoria &amp; Assessoria, Integração &amp; Gestão de Projetos e Treinamentos &amp; Workshops. Nosso objetivo é capacitar organizações com soluções inteligentes que impulsionem crescimento, eficiência e inovação.</p>
+                    </details>
+                </div>
+                <div class="faq-item">
+                    <details>
+                        <summary><i class="fas fa-industry"></i>Quais setores voc&#xEA;s atendem?</summary>
+                        <p>Atendemos clientes de todos os setores. Nossas soluções de IA flexíveis são desenvolvidas para se adaptar perfeitamente aos desafios e oportunidades únicos de cada área.</p>
+                    </details>
+                </div>
+                <div class="faq-item">
+                    <details>
+                        <summary><i class="fas fa-user-shield"></i>Como voc&#xEA;s garantem a privacidade de dados e a conformidade?</summary>
+                        <p>Como uma empresa belga que atua na UE, seguimos rigorosamente os padrões do GDPR. Processamos apenas os dados necessários para responder a solicitações ou fornecer serviços, e todos os dados são armazenados com segurança. Também realizamos revisões regulares de conformidade para garantir alinhamento com as regulamentações em evolução.</p>
+                    </details>
+                </div>
+                <div class="faq-item">
+                    <details>
+                        <summary><i class="fas fa-lock"></i>Como voc&#xEA;s garantem a seguran&#xE7;a das implanta&#xE7;&#xF5;es de IA?</summary>
+                        <p>A segurança é uma prioridade máxima. Implementamos criptografia robusta, realizamos testes de penetração e aplicamos monitoramento contínuo para proteger os sistemas. Desde credenciais sensíveis até modelos de aprendizado de máquina, cada componente é protegido. Nossas implantações também passam por verificações de conformidade para garantir alinhamento com as melhores práticas do setor e padrões regulatórios.</p>
+                    </details>
+                </div>
+                <div class="faq-item">
+                    <details>
+                        <summary><i class="fas fa-clock"></i>Qual &#xE9; a dura&#xE7;&#xE3;o t&#xED;pica de um projeto de integra&#xE7;&#xE3;o de IA?</summary>
+                        <p>Os prazos dos projetos variam de acordo com o escopo e a complexidade. A maioria dos projetos de integração dura de 3 a 6 meses, dependendo da prontidão dos dados, dos requisitos de integração de sistemas e dos objetivos organizacionais.</p>
+                    </details>
+                </div>
+                <div class="faq-item">
+                    <details>
+                        <summary><i class="fas fa-chart-line"></i>Como voc&#xEA;s medem o ROI de suas solu&#xE7;&#xF5;es de IA?</summary>
+                        <p>Definimos Indicadores-Chave de Desempenho (KPIs) claros durante a fase de planejamento, como redução do tempo de processamento, melhoria da precisão ou aumento da receita. O ROI é acompanhado por meio de monitoramento contínuo e revisões pós-implementação.</p>
+                    </details>
+                </div>
+                <div class="faq-item">
+                    <details>
+                        <summary><i class="fas fa-chalkboard-teacher"></i>As sess&#xF5;es de treinamento podem ser personalizadas?</summary>
+                        <p>Com certeza. Nossos programas de treinamento são adaptados às necessidades da sua organização — seja para workshops introdutórios para equipes não técnicas ou treinamentos técnicos avançados para especialistas.</p>
+                    </details>
+                </div>
+                <div class="faq-item">
+                    <details>
+                        <summary><i class="fas fa-envelope-open-text"></i>Como posso entrar em contato ou solicitar uma consultoria?</summary>
+                        <p>Você pode nos contatar através da <a href="contact.html">página de Contato &amp; Consultoria</a>. Basta preencher o formulário e selecionar o departamento relevante (Vendas, Carreiras, Faturamento ou Consulta Geral). Nossa equipe responderá prontamente e, se apropriado, agendará uma consultoria.</p>
+                    </details>
+                </div>
+                <div class="faq-item">
+                    <details>
+                        <summary><i class="fas fa-handshake"></i>Quais parcerias ou alian&#xE7;as sua empresa possui?</summary>
+                        <p>Estamos construindo ativamente uma rede de parceiros estratégicos e alianças com líderes do setor para oferecer soluções robustas de IA. Embora nossa lista de parceiros ainda esteja em andamento, recebemos propostas de colaboração através da nossa <a href="partners.html">página de Parceiros &amp; Alianças</a>.</p>
+                    </details>
+                </div>
+                <div class="faq-item">
+                    <details>
+                        <summary><i class="fas fa-briefcase"></i>Como posso me candidatar a uma carreira no The Intelligent Enterprise Group?</summary>
+                        <p>Visite nossa <a href="careers.html">página de Carreiras</a> para explorar as vagas atuais e saber mais sobre nossa cultura. Mesmo que não haja vagas listadas, recebemos candidaturas espontâneas de talentos excepcionais.</p>
+                    </details>
+                </div>
+                <div class="faq-item">
+                    <details>
+                        <summary><i class="fas fa-headset"></i>Que suporte voc&#xEA;s oferecem ap&#xF3;s a entrega do projeto?</summary>
+                        <p>Oferecemos suporte contínuo, incluindo monitoramento de sistemas, otimização de desempenho e treinamento de usuários. Nosso objetivo é garantir o sucesso a longo prazo e a melhoria contínua das suas soluções de IA.</p>
+                    </details>
+                </div>
+                <div class="faq-item">
+                    <details>
+                        <summary><i class="fas fa-tags"></i>Como voc&#xEA;s precificam seus servi&#xE7;os?</summary>
+                        <p>Nossos preços são adaptados ao escopo e aos requisitos de cada projeto. Fornecemos propostas transparentes após uma consulta inicial, garantindo alinhamento com seus objetivos e orçamento.</p>
+                    </details>
+                </div>
+                <div class="faq-item">
+                    <details>
+                        <summary><i class="fas fa-balance-scale"></i>Quais pol&#xED;ticas legais regem o uso do meu site?</summary>
+                        <p>Nosso site é regido por um conjunto abrangente de políticas legais, incluindo nossos Termos de Serviço, Política de Privacidade e Política de Cookies. Essas políticas garantem transparência, protegem seus dados e cumprem as leis belgas e da UE. Você pode consultá-las em nossa <a href="legal.html">página Jurídico &amp; Políticas</a>.</p>
+                    </details>
+                </div>
+    </div>
+</section>
+
+<section class="cta">
+    <div class="container">
+        <h2>Ainda Tem D&#xFA;vidas?</h2>
+        <p>Se sua d&#xFA;vida n&#xE3;o foi respondida aqui, entre em contato diretamente conosco. Estamos &#xE0; disposi&#xE7;&#xE3;o para ajudar e garantir que voc&#xEA; tenha todas as informa&#xE7;&#xF5;es necess&#xE1;rias.</p>
+        <a href="contact.html" class="btn">Fale Conosco</a>
+    </div>
+</section>
+
+
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&#xA9; 2025 The Intelligent Enterprise Group. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="/js/swiper-bundle.min.js"></script>
+    <script src="/js/cdn.min.js" defer></script>
+    <script src="/js/gsap.min.js"></script>
+    <script src="/js/DrawSVGPlugin.min.js"></script>
+
+    <script type="module" src="/js/themeToggle.js"></script>
+    <script type="module">
+        import { toggleTheme, getCurrentTheme } from '/js/themeToggle.js';
+        const checkbox = document.getElementById('theme-checkbox');
+        const themeLabel = document.getElementById('theme-label');
+
+        if (getCurrentTheme() === 'dark') {
+            checkbox.checked = true;
+            themeLabel.textContent = 'Modo Escuro';
+        } else {
+            themeLabel.textContent = 'Modo Claro';
+        }
+
+        checkbox.addEventListener('change', () => {
+            toggleTheme();
+            themeLabel.textContent = checkbox.checked ? 'Modo Escuro' : 'Modo Claro';
+        });
+    </script>
+
+    <button id="back-to-top" aria-label="Back to Top">Topo</button>
+
+    
+    <script>
+        gsap.registerPlugin(DrawSVGPlugin);
+        window.onload = function () {
+            gsap.from(".hero h2", { duration: 1.2, opacity: 0, y: -50, ease: "power2.out" });
+            gsap.from(".hero h3", { duration: 1.2, opacity: 0, y: 50, ease: "power2.out", delay: 0.2 });
+            gsap.from(".faq-container", { duration: 1, opacity: 0, y: 20, ease: "power2.out", delay: 0.4 });
+            gsap.from(".cta h2", { duration: 1, opacity: 0, y: -20, ease: "power2.out", delay: 0.8 });
+            gsap.from(".cta p", { duration: 1, opacity: 0, y: 20, ease: "power2.out", delay: 1 });
+            gsap.from(".cta .btn", { duration: 1, opacity: 0, scale: 0.8, ease: "back.out(1.7)", delay: 1.2 });
+        };
+    </script>
+
+</body>
+</html>

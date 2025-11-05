@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="fr" dir="ltr">
+<head>
+    <meta name="robots" content="index, follow" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <meta name="description" content='Consultez les configurations syst&#xE8;me minimales et id&#xE9;ales pour ex&#xE9;cuter les logiciels AI Team Desktop et Server de The Intelligent Enterprise Group. D&#xE9;couvrez les syst&#xE8;mes d&#x2019;exploitation pris en charge, CPU, RAM, stockage et sp&#xE9;cifications GPU NVIDIA pour des performances optimales.' />
+    <title>Configuration syst&#xE8;me minimale | AI Team Desktop &amp; Server &#x2013; The Intelligent Enterprise Group</title>
+
+    <style>
+        html { background-color: #3B3A47; }
+    </style>
+    <script>
+        (function () {
+            const key = 'preferredTheme';
+            const stored = localStorage.getItem(key);
+            const systemDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+            const theme = stored || (systemDark ? 'dark' : 'light');
+            if (theme === 'dark') {
+                document.documentElement.classList.add('dark-mode');
+            }
+        })();
+    </script>
+
+
+        <link rel="alternate" hreflang="en" href="https://theintelligententerprisegroup.com/minsystem.html" />
+        <link rel="alternate" hreflang="fr" href="https://theintelligententerprisegroup.com/fr/minsystem.html" />
+        <link rel="alternate" hreflang="de" href="https://theintelligententerprisegroup.com/de/minsystem.html" />
+        <link rel="alternate" hreflang="es" href="https://theintelligententerprisegroup.com/es/minsystem.html" />
+        <link rel="alternate" hreflang="pt" href="https://theintelligententerprisegroup.com/pt/minsystem.html" />
+        <link rel="alternate" hreflang="zh" href="https://theintelligententerprisegroup.com/zh/minsystem.html" />
+        <link rel="alternate" hreflang="ja" href="https://theintelligententerprisegroup.com/ja/minsystem.html" />
+        <link rel="alternate" hreflang="ar" href="https://theintelligententerprisegroup.com/ar/minsystem.html" />
+
+
+    <link rel="alternate" hreflang="x-default" href="https://theintelligententerprisegroup.com/minsystem.html" />
+
+    <link rel="canonical" href="https://theintelligententerprisegroup.com/fr/minsystem.html" />
+
+
+    <link rel="stylesheet" href="/css/styles.css" />
+    <link rel="stylesheet" href="/css/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="/css/all.min.css" />
+
+    <script src="/js/lang-switcher.js" defer></script>
+
+    <script>
+        (function () {
+            if (localStorage.getItem('currentLang')) return;
+            const supported = [
+                     { code: "en" } ,
+                     { code: "fr" } ,
+                     { code: "de" } ,
+                     { code: "es" } ,
+                     { code: "pt" } ,
+                     { code: "zh" } ,
+                     { code: "ja" } ,
+                     { code: "ar" } 
+            ];
+            const defaultLang = "fr";
+            const navLangs = navigator.languages || [navigator.language || navigator.userLanguage];
+            let detected = null;
+            for (const nav of navLangs) {
+                const code = nav.toLowerCase().split('-')[0];
+                if (supported.find(s => s.code.toLowerCase() === code)) {
+                    detected = code;
+                    break;
+                }
+            }
+            const lang = detected || defaultLang;
+            localStorage.setItem('currentLang', lang);
+            document.documentElement.lang = lang;
+        })();
+    </script>
+
+    <!-- Organization structured data (JSON-LD) -->
+    <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "Organization",
+          "name": "The Intelligent Enterprise Group",
+          "url": "https://theintelligententerprisegroup.com/",
+          "logo": "https://theintelligententerprisegroup.com/images/tieg-logo.png",
+          "sameAs": []
+        }
+    </script>
+    <link rel="icon" href="/favicon.ico" />
+    <link rel="apple-touch-icon" href="/images/apple-touch-icon.png" />
+
+    
+
+</head>
+<body>
+    <header x-data="{ open: false }">
+        <div class="container header-top">
+            <div class="logo"></div>
+            <div class="theme-switch-wrapper">
+                <label class="theme-switch">
+                    <input type="checkbox" id="theme-checkbox" />
+                    <span class="slider round"></span>
+                </label>
+                <span id="theme-label">Mode clair</span>
+                <span class="lang-switcher">
+                    <label for="lang-select" class="lang-label">🌐 Langue :</label>
+
+                    <!-- Language switcher -->
+                    <select id="lang-select" class="lang-select">
+                        <option value="en" data-path="/">English</option>
+                        <option value="fr" data-path="/fr/">Fran&#xE7;ais</option>
+                        <option value="de" data-path="/de/">Deutsch</option>
+                        <option value="es" data-path="/es/">Espa&#xF1;ol</option>
+                        <option value="pt" data-path="/pt/">Portugu&#xEA;s</option>
+                        <option value="zh" data-path="/zh/">&#x4E2D;&#x6587;</option>
+                        <option value="ja" data-path="/ja/">&#x65E5;&#x672C;&#x8A9E;</option>
+                        <option value="ar" data-path="/ar/">&#x627;&#x644;&#x639;&#x631;&#x628;&#x64A;&#x629;</option>
+                    </select>
+
+                </span>
+            </div>
+        </div>
+        
+        <div class="container header-nav">
+            <button @click="open = !open" class="menu-toggle" aria-label="Toggle Menu">
+                <svg width="24" height="24" viewBox="0 0 24 24">
+                    <path fill="var(--nav-link-color)" d="M3 6h18v2H3V6zm0 5h18v2H3v-2zm0 5h18v2H3v-2z" />
+                </svg>
+            </button>
+
+            <nav class="main-nav" :class="{ 'open': open }">
+                <ul>
+                    <li><a href="index.html" class="">Accueil</a></li>
+                    <li><a href="about.html" class="">&#xC0; propos</a></li>
+                    <li><a href="services.html" class="">Services &amp; Solutions</a></li>
+                    <li><a href="case-studies.html" class="">&#xC9;tudes de cas</a></li>
+                    <li><a href="resources.html" class="">Ressources &amp; Analyses</a></li>
+                    <li><a href="trial.html" class="">Essai</a></li>
+                    <li><a href="pricing.html" class="">Tarifs</a></li>
+                    <li><a href="partners.html" class="">Partenaires &amp; Alliances</a></li>                    
+                    <li><a href="contact.html" class="">Contact &amp; Consultation</a></li>
+                    <li class="has-submenu"
+                        x-data="{ openSub: false }"
+                        @mouseenter="openSub = true"
+                        @mouseleave="openSub = false">
+                      <button @click="openSub = !openSub"
+                              aria-haspopup="true"
+                              :aria-expanded="openSub.toString()">
+                        Infos
+                        <svg width="12" height="12" viewBox="0 0 12 12" aria-hidden="true">
+                          <path d="M3 4l3 3 3-3" fill="currentColor"/>
+                        </svg>
+                      </button>
+                      <ul class="submenu" x-show="openSub" @click.outside="openSub = false">
+                        <li><a href="careers.html" class="">Carri&#xE8;res</a></li>
+                        <li><a href="faqs.html" class="">FAQs</a></li>
+                        <li><a href="legal.html" class="">Mentions l&#xE9;gales &amp; Politiques</a></li>
+                      </ul>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        
+<!-- HERO -->
+<section class="hero">
+    <div class="container">
+        <h2>Configuration syst&#xE8;me</h2>
+        <h3>Comparez les configurations minimales et id&#xE9;ales pour les logiciels AI Team Desktop et Server.</h3>
+    </div>
+</section>
+
+<!-- DESKTOP REQUIREMENTS -->
+<section class="overview">
+    <div class="container">
+        <h2>AI Team Desktop</h2>
+        <div class="main-grid">
+                <div class="service-card" style="text-align:left">
+                    <h3>Minimum</h3>
+                    <ul>
+                            <li>
+ <i class="fa-solid fa-desktop"></i> Windows 10 ou 11 (64 bits)                            </li>
+                            <li>
+ <i class="fa-solid fa-hard-drive"></i> 74 Go d&#x2019;espace libre (ex&#xE9;cution) &#x2B; 74 Go pour l&#x2019;installateur                            </li>
+                            <li>
+ <i class="fa-solid fa-hard-drive"></i> SSD NVMe recommand&#xE9;                            </li>
+                            <li>
+ <i class="fa-solid fa-memory"></i> 48 Go de RAM                            </li>
+                            <li>
+ <i class="fa-solid fa-microchip"></i> Processeur moderne avec &#x2265; 9 c&#x153;urs                            </li>
+                            <li>
+ <i class="fa-solid fa-microchip"></i>  <a href="https://www.nvidia.com/en-us/geforce/graphics-cards/40-series/rtx-4070-family/">NVIDIA GeForce RTX 4070 Ti (12 Go VRAM)</a>                             </li>
+                    </ul>
+                    <div style="text-align:center"><span class="price-badge">&#x1F4B6; ~2&#x202F;000 &#x20AC;</span></div>
+                </div>
+                <div class="service-card" style="text-align:left">
+                    <h3>Id&#xE9;al</h3>
+                    <ul>
+                            <li>
+ <i class="fa-solid fa-desktop"></i> Windows 11 Pro (64 bits)                            </li>
+                            <li>
+ <i class="fa-solid fa-hard-drive"></i> &gt;100 Go d&#x2019;espace libre (ex&#xE9;cution) &#x2B; 74 Go pour l&#x2019;installateur                            </li>
+                            <li>
+ <i class="fa-solid fa-hard-drive"></i> SSD NVMe Gen4                            </li>
+                            <li>
+ <i class="fa-solid fa-memory"></i> 128 Go de RAM                            </li>
+                            <li>
+ <i class="fa-solid fa-microchip"></i>  <a href="https://www.intel.com/content/www/us/en/products/sku/236789/intel-core-i914900k-processor-36m-cache-up-to-6-00-ghz/specifications.html">Intel Core i9&#x2011;14900K (24 c&#x153;urs)</a>                             </li>
+                            <li>
+ <i class="fa-solid fa-microchip"></i>  <a href="https://www.nvidia.com/en-us/design-visualization/rtx-6000/">NVIDIA RTX 6000 Blackwell Workstation Edition (96 Go VRAM)</a>                             </li>
+                    </ul>
+                    <div style="text-align:center"><span class="price-badge">&#x1F4B6; ~20&#x202F;000 &#x20AC;</span></div>
+                </div>
+        </div>
+    </div>
+</section>
+
+<!-- SERVER REQUIREMENTS -->
+<section class="overview">
+    <div class="container">
+        <h2>AI Team Server (API)</h2>
+        <div class="main-grid">
+                <div class="service-card" style="text-align:left">
+                    <h3>Minimum</h3>
+                    <ul>
+                            <li>
+ <i class="fa-solid fa-desktop"></i> Windows 10, 11 ou Windows Server 2019/2022                            </li>
+                            <li>
+ <i class="fa-solid fa-hard-drive"></i> 74 Go d&#x2019;espace libre (ex&#xE9;cution) &#x2B; 74 Go pour l&#x2019;installateur                            </li>
+                            <li>
+ <i class="fa-solid fa-memory"></i> 96 Go de RAM                            </li>
+                            <li>
+ <i class="fa-solid fa-microchip"></i> Processeur moderne avec &#x2265; 18 c&#x153;urs                            </li>
+                            <li>
+ <i class="fa-solid fa-microchip"></i>  <a href="https://www.nvidia.com/en-us/geforce/graphics-cards/40-series/rtx-4090/">NVIDIA GeForce RTX 4090 (24 Go VRAM)</a>                             </li>
+                            <li>
+~12 Go de m&#xE9;moire GPU requis par utilisateur simultan&#xE9; (max. 2 utilisateurs simultan&#xE9;s sur 24 Go)                            </li>
+                            <li>
+Peut fonctionner comme service Windows, IIS ou application autonome                            </li>
+                    </ul>
+                    <div style="text-align:center"><span class="price-badge">&#x1F4B6; ~4&#x202F;500 &#x20AC;</span></div>
+                </div>
+                <div class="service-card" style="text-align:left">
+                    <h3>Id&#xE9;al</h3>
+                    <ul>
+                            <li>
+ <i class="fa-solid fa-server"></i> Windows Server 2022 Datacenter                            </li>
+                            <li>
+ <i class="fa-solid fa-hard-drive"></i> &gt;150 Go d&#x2019;espace libre (ex&#xE9;cution) &#x2B; 74 Go pour l&#x2019;installateur                            </li>
+                            <li>
+ <i class="fa-solid fa-memory"></i> 384 Go de RAM                            </li>
+                            <li>
+ <i class="fa-solid fa-microchip"></i>  <a href="https://www.intel.com/content/www/us/en/products/sku/231746/intel-xeon-w93495x-processor-105m-cache-1-90-ghz/specifications.html">Intel Xeon w9&#x2011;3495X (56 c&#x153;urs)</a>                             </li>
+                            <li>
+ <i class="fa-solid fa-microchip"></i>  <a href="https://www.nvidia.com/en-us/data-center/rtx-pro-6000-blackwell-server-edition/">NVIDIA RTX PRO 6000 Blackwell Server Edition (96 Go VRAM, multi&#x2011;GPU)</a>                             </li>
+                            <li>
+~12 Go de m&#xE9;moire GPU requis par utilisateur simultan&#xE9; (1 GPU ~ 8 utilisateurs simultan&#xE9;s)                            </li>
+                            <li>
+Prend en charge le multi&#x2011;GPU (jusqu&#x2019;&#xE0; 8 GPU par serveur)                            </li>
+                    </ul>
+                    <div style="text-align:center"><span class="price-badge">&#x1F4B6; ~27&#x202F;000 &#x20AC; (1 GPU)</span></div>
+                </div>
+        </div>
+    </div>
+</section>
+
+<!-- NVIDIA NOTE -->
+<section class="callout nvidia-only">
+    <img src="/images/Nvidia.png" alt="NVIDIA Logo" class="nvidia-logo" />
+    <p>
+        <strong>Important :</strong>
+        Only <span class="highlight">GPU NVIDIA</span> sont pris en charge pour les logiciels AI Team Desktop et Server. En effet, le framework CUDA de NVIDIA, combin&#xE9; &#xE0; son &#xE9;cosyst&#xE8;me de pilotes mature, permet une optimisation maximale des charges de travail IA. Les plateformes GPU concurrentes n&#x2019;offrent actuellement pas d&#x2019;acc&#xE9;l&#xE9;ration bas niveau &#xE9;quivalente ni de support logiciel comparable, ce qui signifie qu&#x2019;elles ne peuvent pas garantir les m&#xEA;mes performances, stabilit&#xE9; ou compatibilit&#xE9;. En se concentrant sur NVIDIA, nous assurons la plus grande efficacit&#xE9; et fiabilit&#xE9; pour votre &#xE9;quipe IA.
+    </p>
+</section>
+
+<!-- COMPARISON -->
+<section class="comparison">
+    <div class="container">
+        <h2>Comparaison des performances (1 GPU, 1 utilisateur)</h2>
+        <p class="comparison-note">R&#xE9;f&#xE9;rence : supposons une t&#xE2;che AI Team o&#xF9; le syst&#xE8;me Desktop Minimum n&#xE9;cessite ~1 minute de traitement. Les autres syst&#xE8;mes sont pr&#xE9;sent&#xE9;s par rapport &#xE0; cette base.</p>
+        <table class="comparison-table">
+            <thead>
+                <tr>
+                    <th>Syst&#xE8;me</th>
+                    <th>Performance relative</th>
+                    <th>Temps de traitement estim&#xE9;</th>
+                </tr>
+            </thead>
+            <tbody>
+                    <tr>
+                        <td>Desktop Minimum<br /><small>RTX 4070 Ti, 12 Go</small></td>
+                        <td>1&#xD7;</td>
+                        <td>~1:00 min</td>
+                    </tr>
+                    <tr>
+                        <td>Desktop Id&#xE9;al<br /><small>RTX PRO 6000 Blackwell Workstation, 96 Go</small></td>
+                        <td>~7&#xD7; plus rapide</td>
+                        <td>~8&#x2013;9 sec</td>
+                    </tr>
+                    <tr>
+                        <td>Server Minimum<br /><small>RTX 4090, 24 Go</small></td>
+                        <td>~2,5&#xD7; plus rapide</td>
+                        <td>~20&#x2013;25 sec</td>
+                    </tr>
+                    <tr>
+                        <td>Server Id&#xE9;al<br /><small>Xeon w9&#x2011;3495X &#x2B; RTX PRO 6000 Blackwell Server, 96 Go</small></td>
+                        <td>~9&#xD7; plus rapide</td>
+                        <td>~6&#x2013;7 sec</td>
+                    </tr>
+            </tbody>
+        </table>
+    </div>
+</section>
+
+<!-- CTA -->
+<section class="cta contact-cta">
+    <div class="container">
+        <h2>Besoin d&#x2019;aide pour choisir ou construire un syst&#xE8;me ?</h2>
+        <p>Contactez&#x2011;nous si vous avez des questions sur ces exigences ou si vous souhaitez que notre &#xE9;quipe vous aide &#xE0; concevoir et construire le syst&#xE8;me adapt&#xE9; &#xE0; vos besoins.</p>
+        <a href="contact.html" class="btn"><i class="fa-solid fa-envelope"></i> Nous contacter</a>
+    </div>
+</section>
+
+
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&#xA9; 2025 The Intelligent Enterprise Group. Tous droits r&#xE9;serv&#xE9;s.</p>
+        </div>
+    </footer>
+
+    <script src="/js/swiper-bundle.min.js"></script>
+    <script src="/js/cdn.min.js" defer></script>
+    <script src="/js/gsap.min.js"></script>
+    <script src="/js/DrawSVGPlugin.min.js"></script>
+
+    <script type="module" src="/js/themeToggle.js"></script>
+    <script type="module">
+        import { toggleTheme, getCurrentTheme } from '/js/themeToggle.js';
+        const checkbox = document.getElementById('theme-checkbox');
+        const themeLabel = document.getElementById('theme-label');
+
+        if (getCurrentTheme() === 'dark') {
+            checkbox.checked = true;
+            themeLabel.textContent = 'Mode sombre';
+        } else {
+            themeLabel.textContent = 'Mode clair';
+        }
+
+        checkbox.addEventListener('change', () => {
+            toggleTheme();
+            themeLabel.textContent = checkbox.checked ? 'Mode sombre' : 'Mode clair';
+        });
+    </script>
+
+    <button id="back-to-top" aria-label="Back to Top">Haut</button>
+
+    
+    <script>
+        gsap.registerPlugin(DrawSVGPlugin);
+        window.onload = function () {
+            gsap.from(".hero h2", { duration: 1.2, opacity: 0, y: -50, ease: "power2.out" });
+            gsap.from(".hero h3", { duration: 1.2, opacity: 0, y: 50, ease: "power2.out", delay: 0.2 });
+            gsap.from(".service-card", { duration: 1, opacity: 0, y: 30, ease: "power2.out", stagger: 0.2, delay: 0.6 });
+            gsap.from(".cta h2", { duration: 1, opacity: 0, y: -20, ease: "power2.out", delay: 1.2 });
+            gsap.from(".cta p", { duration: 1, opacity: 0, y: 20, ease: "power2.out", delay: 1.4 });
+            gsap.from(".cta .btn", { duration: 1, opacity: 0, scale: 0.8, ease: "back.out(1.7)", delay: 1.6 });
+        };
+    </script>
+
+</body>
+</html>

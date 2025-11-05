@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="zh" dir="ltr">
+<head>
+    <meta name="robots" content="index, follow" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <meta name="description" content='&#x67E5;&#x627E;&#x6709;&#x5173;&#x667A;&#x80FD;&#x4F01;&#x4E1A;&#x96C6;&#x56E2;&#x7684;&#x5E38;&#x89C1;&#x95EE;&#x9898;&#x89E3;&#x7B54;&#x3002;&#x4E86;&#x89E3;&#x6211;&#x4EEC;&#x7684; AI &#x534F;&#x4F5C;&#x4E13;&#x5BB6;&#x56E2;&#x961F;&#x5982;&#x4F55;&#x8FD0;&#x4F5C;&#x3001;&#x670D;&#x52A1;&#x7684;&#x884C;&#x4E1A;&#x3001;&#x6570;&#x636E;&#x9690;&#x79C1;&#x3001;&#x5B89;&#x5168;&#x6027;&#x3001;&#x5B9A;&#x4EF7;&#x3001;&#x804C;&#x4E1A;&#x673A;&#x4F1A;&#x7B49;&#x3002;' />
+    <title>&#x5E38;&#x89C1;&#x95EE;&#x9898; | &#x667A;&#x80FD;&#x4F01;&#x4E1A;&#x96C6;&#x56E2; &#x2013; AI &#x89E3;&#x51B3;&#x65B9;&#x6848;&#x4E0E;&#x670D;&#x52A1;</title>
+
+    <style>
+        html { background-color: #3B3A47; }
+    </style>
+    <script>
+        (function () {
+            const key = 'preferredTheme';
+            const stored = localStorage.getItem(key);
+            const systemDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+            const theme = stored || (systemDark ? 'dark' : 'light');
+            if (theme === 'dark') {
+                document.documentElement.classList.add('dark-mode');
+            }
+        })();
+    </script>
+
+
+        <link rel="alternate" hreflang="en" href="https://theintelligententerprisegroup.com/faqs.html" />
+        <link rel="alternate" hreflang="fr" href="https://theintelligententerprisegroup.com/fr/faqs.html" />
+        <link rel="alternate" hreflang="de" href="https://theintelligententerprisegroup.com/de/faqs.html" />
+        <link rel="alternate" hreflang="es" href="https://theintelligententerprisegroup.com/es/faqs.html" />
+        <link rel="alternate" hreflang="pt" href="https://theintelligententerprisegroup.com/pt/faqs.html" />
+        <link rel="alternate" hreflang="zh" href="https://theintelligententerprisegroup.com/zh/faqs.html" />
+        <link rel="alternate" hreflang="ja" href="https://theintelligententerprisegroup.com/ja/faqs.html" />
+        <link rel="alternate" hreflang="ar" href="https://theintelligententerprisegroup.com/ar/faqs.html" />
+
+
+    <link rel="alternate" hreflang="x-default" href="https://theintelligententerprisegroup.com/faqs.html" />
+
+    <link rel="canonical" href="https://theintelligententerprisegroup.com/zh/faqs.html" />
+
+
+    <link rel="stylesheet" href="/css/styles.css" />
+    <link rel="stylesheet" href="/css/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="/css/all.min.css" />
+
+    <script src="/js/lang-switcher.js" defer></script>
+
+    <script>
+        (function () {
+            if (localStorage.getItem('currentLang')) return;
+            const supported = [
+                     { code: "en" } ,
+                     { code: "fr" } ,
+                     { code: "de" } ,
+                     { code: "es" } ,
+                     { code: "pt" } ,
+                     { code: "zh" } ,
+                     { code: "ja" } ,
+                     { code: "ar" } 
+            ];
+            const defaultLang = "zh";
+            const navLangs = navigator.languages || [navigator.language || navigator.userLanguage];
+            let detected = null;
+            for (const nav of navLangs) {
+                const code = nav.toLowerCase().split('-')[0];
+                if (supported.find(s => s.code.toLowerCase() === code)) {
+                    detected = code;
+                    break;
+                }
+            }
+            const lang = detected || defaultLang;
+            localStorage.setItem('currentLang', lang);
+            document.documentElement.lang = lang;
+        })();
+    </script>
+
+    <!-- Organization structured data (JSON-LD) -->
+    <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "Organization",
+          "name": "The Intelligent Enterprise Group",
+          "url": "https://theintelligententerprisegroup.com/",
+          "logo": "https://theintelligententerprisegroup.com/images/tieg-logo.png",
+          "sameAs": []
+        }
+    </script>
+    <link rel="icon" href="/favicon.ico" />
+    <link rel="apple-touch-icon" href="/images/apple-touch-icon.png" />
+
+    
+
+</head>
+<body>
+    <header x-data="{ open: false }">
+        <div class="container header-top">
+            <div class="logo"></div>
+            <div class="theme-switch-wrapper">
+                <label class="theme-switch">
+                    <input type="checkbox" id="theme-checkbox" />
+                    <span class="slider round"></span>
+                </label>
+                <span id="theme-label">浅色模式</span>
+                <span class="lang-switcher">
+                    <label for="lang-select" class="lang-label">🌐 语言：</label>
+
+                    <!-- Language switcher -->
+                    <select id="lang-select" class="lang-select">
+                        <option value="en" data-path="/">English</option>
+                        <option value="fr" data-path="/fr/">Fran&#xE7;ais</option>
+                        <option value="de" data-path="/de/">Deutsch</option>
+                        <option value="es" data-path="/es/">Espa&#xF1;ol</option>
+                        <option value="pt" data-path="/pt/">Portugu&#xEA;s</option>
+                        <option value="zh" data-path="/zh/">&#x4E2D;&#x6587;</option>
+                        <option value="ja" data-path="/ja/">&#x65E5;&#x672C;&#x8A9E;</option>
+                        <option value="ar" data-path="/ar/">&#x627;&#x644;&#x639;&#x631;&#x628;&#x64A;&#x629;</option>
+                    </select>
+
+                </span>
+            </div>
+        </div>
+        
+        <div class="container header-nav">
+            <button @click="open = !open" class="menu-toggle" aria-label="Toggle Menu">
+                <svg width="24" height="24" viewBox="0 0 24 24">
+                    <path fill="var(--nav-link-color)" d="M3 6h18v2H3V6zm0 5h18v2H3v-2zm0 5h18v2H3v-2z" />
+                </svg>
+            </button>
+
+            <nav class="main-nav" :class="{ 'open': open }">
+                <ul>
+                    <li><a href="index.html" class="">&#x9996;&#x9875;</a></li>
+                    <li><a href="about.html" class="">&#x5173;&#x4E8E;&#x6211;&#x4EEC;</a></li>
+                    <li><a href="services.html" class="">&#x670D;&#x52A1;&#x4E0E;&#x89E3;&#x51B3;&#x65B9;&#x6848;</a></li>
+                    <li><a href="case-studies.html" class="">&#x6848;&#x4F8B;&#x7814;&#x7A76;</a></li>
+                    <li><a href="resources.html" class="">&#x8D44;&#x6E90;&#x4E0E;&#x6D1E;&#x5BDF;</a></li>
+                    <li><a href="trial.html" class="">&#x8BD5;&#x7528;</a></li>
+                    <li><a href="pricing.html" class="">&#x5B9A;&#x4EF7;</a></li>
+                    <li><a href="partners.html" class="">&#x5408;&#x4F5C;&#x4F19;&#x4F34;&#x4E0E;&#x8054;&#x76DF;</a></li>                    
+                    <li><a href="contact.html" class="">&#x8054;&#x7CFB;&#x4E0E;&#x54A8;&#x8BE2;</a></li>
+                    <li class="has-submenu"
+                        x-data="{ openSub: false }"
+                        @mouseenter="openSub = true"
+                        @mouseleave="openSub = false">
+                      <button @click="openSub = !openSub"
+                              aria-haspopup="true"
+                              :aria-expanded="openSub.toString()">
+                        &#x4FE1;&#x606F;
+                        <svg width="12" height="12" viewBox="0 0 12 12" aria-hidden="true">
+                          <path d="M3 4l3 3 3-3" fill="currentColor"/>
+                        </svg>
+                      </button>
+                      <ul class="submenu" x-show="openSub" @click.outside="openSub = false">
+                        <li><a href="careers.html" class="">&#x804C;&#x4E1A;&#x673A;&#x4F1A;</a></li>
+                        <li><a href="faqs.html" class="active">&#x5E38;&#x89C1;&#x95EE;&#x9898;</a></li>
+                        <li><a href="legal.html" class="">&#x6CD5;&#x5F8B;&#x4E0E;&#x653F;&#x7B56;</a></li>
+                      </ul>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        
+<section class="hero">
+    <div class="container">
+        <h2>&#x5E38;&#x89C1;&#x95EE;&#x9898;</h2>
+        <h3>在这里，您将找到关于我们的服务、政策和业务流程的一些最常见问题的答案。<br /></h3>
+    </div>
+</section>
+
+<section class="faq">
+    <div class="container faq-container">
+                <div class="faq-item">
+                    <details>
+                        <summary><i class="fas fa-users"></i>&#x4F60;&#x4EEC;&#x7684; AI &#x89E3;&#x51B3;&#x65B9;&#x6848;&#x662F;&#x4E3A;&#x4E86;&#x53D6;&#x4EE3;&#x4EBA;&#x7C7B;&#x5417;&#xFF1F;</summary>
+                        <p>不是。我们的解决方案不是为了取代人类，而是为了赋能人类。我们设计的 AI 系统支持员工的日常工作，帮助他们更高效地完成任务、做出更好的决策，并以更少的努力实现更多。通过自动化重复流程并提供智能洞察，我们的技术让人们能够专注于创造力、战略和创新——这些才是人类才能真正闪耀的领域。</p>
+                    </details>
+                </div>
+                <div class="faq-item">
+                    <details>
+                        <summary><i class="fas fa-robot"></i>&#x667A;&#x80FD;&#x4F01;&#x4E1A;&#x96C6;&#x56E2;&#x63D0;&#x4F9B;&#x54EA;&#x4E9B;&#x670D;&#x52A1;&#xFF1F;</summary>
+                        <p>我们提供全面的 AI 服务套件，包括 AI 团队、咨询与顾问、集成与项目管理，以及培训与研讨会。我们的目标是通过智能解决方案赋能组织，推动增长、效率和创新。</p>
+                    </details>
+                </div>
+                <div class="faq-item">
+                    <details>
+                        <summary><i class="fas fa-industry"></i>&#x4F60;&#x4EEC;&#x670D;&#x52A1;&#x54EA;&#x4E9B;&#x884C;&#x4E1A;&#xFF1F;</summary>
+                        <p>我们服务于各行各业的客户。我们的灵活 AI 解决方案能够无缝适应每个行业的独特挑战和机遇。</p>
+                    </details>
+                </div>
+                <div class="faq-item">
+                    <details>
+                        <summary><i class="fas fa-user-shield"></i>&#x4F60;&#x4EEC;&#x5982;&#x4F55;&#x786E;&#x4FDD;&#x6570;&#x636E;&#x9690;&#x79C1;&#x548C;&#x5408;&#x89C4;&#x6027;&#xFF1F;</summary>
+                        <p>作为一家在欧盟运营的比利时企业，我们严格遵守 GDPR 标准。我们只处理回应咨询或提供服务所必需的数据，并确保所有数据安全存储。我们还定期进行合规审查，以确保与不断发展的法规保持一致。</p>
+                    </details>
+                </div>
+                <div class="faq-item">
+                    <details>
+                        <summary><i class="fas fa-lock"></i>&#x4F60;&#x4EEC;&#x5982;&#x4F55;&#x786E;&#x4FDD; AI &#x90E8;&#x7F72;&#x7684;&#x5B89;&#x5168;&#x6027;&#xFF1F;</summary>
+                        <p>安全是首要任务。我们实施强大的加密，进行渗透测试，并应用持续监控来保护系统。从敏感凭证到机器学习模型，每个组件都受到保护。我们的部署还会进行合规检查，以确保符合行业最佳实践和监管标准。</p>
+                    </details>
+                </div>
+                <div class="faq-item">
+                    <details>
+                        <summary><i class="fas fa-clock"></i>AI &#x96C6;&#x6210;&#x9879;&#x76EE;&#x7684;&#x5178;&#x578B;&#x5468;&#x671F;&#x662F;&#x591A;&#x4E45;&#xFF1F;</summary>
+                        <p>项目时间表因范围和复杂性而异。大多数集成项目通常需要 3 到 6 个月，具体取决于数据准备情况、系统集成要求和组织目标。</p>
+                    </details>
+                </div>
+                <div class="faq-item">
+                    <details>
+                        <summary><i class="fas fa-chart-line"></i>&#x4F60;&#x4EEC;&#x5982;&#x4F55;&#x8861;&#x91CF; AI &#x89E3;&#x51B3;&#x65B9;&#x6848;&#x7684;&#x6295;&#x8D44;&#x56DE;&#x62A5;&#x7387; (ROI)&#xFF1F;</summary>
+                        <p>我们在规划阶段定义明确的关键绩效指标 (KPI)，例如减少处理时间、提高准确性或增加收入。ROI 通过持续监控和实施后的评估进行跟踪。</p>
+                    </details>
+                </div>
+                <div class="faq-item">
+                    <details>
+                        <summary><i class="fas fa-chalkboard-teacher"></i>&#x4F60;&#x4EEC;&#x7684;&#x57F9;&#x8BAD;&#x8BFE;&#x7A0B;&#x53EF;&#x4EE5;&#x5B9A;&#x5236;&#x5417;&#xFF1F;</summary>
+                        <p>当然可以。我们的培训项目会根据您组织的需求量身定制——无论是为非技术团队提供入门研讨会，还是为专家提供高级技术培训。</p>
+                    </details>
+                </div>
+                <div class="faq-item">
+                    <details>
+                        <summary><i class="fas fa-envelope-open-text"></i>&#x6211;&#x5982;&#x4F55;&#x8054;&#x7CFB;&#x4F60;&#x4EEC;&#x6216;&#x7533;&#x8BF7;&#x54A8;&#x8BE2;&#xFF1F;</summary>
+                        <p>您可以通过 <a href="contact.html">联系与咨询页面</a> 与我们取得联系。只需填写表格并选择相关部门（销售、职业、账单或一般咨询）。我们的团队会及时回复，并在适当情况下安排咨询。</p>
+                    </details>
+                </div>
+                <div class="faq-item">
+                    <details>
+                        <summary><i class="fas fa-handshake"></i>&#x4F60;&#x4EEC;&#x7684;&#x4E1A;&#x52A1;&#x6709;&#x54EA;&#x4E9B;&#x5408;&#x4F5C;&#x4F19;&#x4F34;&#x6216;&#x8054;&#x76DF;&#xFF1F;</summary>
+                        <p>我们正在积极与行业领导者建立战略合作伙伴关系和联盟，以提供强大的 AI 解决方案。虽然我们的合作伙伴名单仍在完善中，但我们欢迎通过 <a href="partners.html">合作伙伴与联盟页面</a> 提交合作提案。</p>
+                    </details>
+                </div>
+                <div class="faq-item">
+                    <details>
+                        <summary><i class="fas fa-briefcase"></i>&#x6211;&#x5982;&#x4F55;&#x7533;&#x8BF7;&#x52A0;&#x5165;&#x667A;&#x80FD;&#x4F01;&#x4E1A;&#x96C6;&#x56E2;&#xFF1F;</summary>
+                        <p>请访问我们的 <a href="careers.html">职业页面</a>，查看当前职位空缺并了解更多关于我们文化的信息。即使没有列出职位空缺，我们也欢迎优秀人才的主动申请。</p>
+                    </details>
+                </div>
+                <div class="faq-item">
+                    <details>
+                        <summary><i class="fas fa-headset"></i>&#x9879;&#x76EE;&#x4EA4;&#x4ED8;&#x540E;&#x4F60;&#x4EEC;&#x63D0;&#x4F9B;&#x54EA;&#x4E9B;&#x652F;&#x6301;&#xFF1F;</summary>
+                        <p>我们提供持续支持，包括系统监控、性能优化和用户培训。我们的目标是确保您的 AI 解决方案长期成功并不断改进。</p>
+                    </details>
+                </div>
+                <div class="faq-item">
+                    <details>
+                        <summary><i class="fas fa-tags"></i>&#x4F60;&#x4EEC;&#x7684;&#x670D;&#x52A1;&#x5982;&#x4F55;&#x5B9A;&#x4EF7;&#xFF1F;</summary>
+                        <p>我们的定价会根据每个项目的范围和需求量身定制。我们会在初步咨询后提供透明的方案，确保与您的目标和预算保持一致。</p>
+                    </details>
+                </div>
+                <div class="faq-item">
+                    <details>
+                        <summary><i class="fas fa-balance-scale"></i>&#x54EA;&#x4E9B;&#x6CD5;&#x5F8B;&#x653F;&#x7B56;&#x89C4;&#x8303;&#x6211;&#x5BF9;&#x4F60;&#x4EEC;&#x7F51;&#x7AD9;&#x7684;&#x4F7F;&#x7528;&#xFF1F;</summary>
+                        <p>我们的网站受一整套法律政策的约束，包括服务条款、隐私政策和 Cookie 政策。这些政策确保透明度、保护您的数据，并遵守比利时和欧盟法律。您可以在我们的 <a href="legal.html">法律与政策页面</a> 查看。</p>
+                    </details>
+                </div>
+    </div>
+</section>
+
+<section class="cta">
+    <div class="container">
+        <h2>&#x8FD8;&#x6709;&#x95EE;&#x9898;&#x5417;&#xFF1F;</h2>
+        <p>&#x5982;&#x679C;&#x60A8;&#x7684;&#x95EE;&#x9898;&#x672A;&#x5728;&#x6B64;&#x89E3;&#x7B54;&#xFF0C;&#x8BF7;&#x968F;&#x65F6;&#x76F4;&#x63A5;&#x8054;&#x7CFB;&#x6211;&#x4EEC;&#x3002;&#x6211;&#x4EEC;&#x5728;&#x8FD9;&#x91CC;&#x4E3A;&#x60A8;&#x63D0;&#x4F9B;&#x5E2E;&#x52A9;&#xFF0C;&#x786E;&#x4FDD;&#x60A8;&#x83B7;&#x5F97;&#x6240;&#x9700;&#x7684;&#x5168;&#x90E8;&#x4FE1;&#x606F;&#x3002;</p>
+        <a href="contact.html" class="btn">&#x8054;&#x7CFB;&#x6211;&#x4EEC;</a>
+    </div>
+</section>
+
+
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&#xA9; 2025 &#x667A;&#x80FD;&#x4F01;&#x4E1A;&#x96C6;&#x56E2;&#x3002;&#x4FDD;&#x7559;&#x6240;&#x6709;&#x6743;&#x5229;&#x3002;</p>
+        </div>
+    </footer>
+
+    <script src="/js/swiper-bundle.min.js"></script>
+    <script src="/js/cdn.min.js" defer></script>
+    <script src="/js/gsap.min.js"></script>
+    <script src="/js/DrawSVGPlugin.min.js"></script>
+
+    <script type="module" src="/js/themeToggle.js"></script>
+    <script type="module">
+        import { toggleTheme, getCurrentTheme } from '/js/themeToggle.js';
+        const checkbox = document.getElementById('theme-checkbox');
+        const themeLabel = document.getElementById('theme-label');
+
+        if (getCurrentTheme() === 'dark') {
+            checkbox.checked = true;
+            themeLabel.textContent = '深色模式';
+        } else {
+            themeLabel.textContent = '浅色模式';
+        }
+
+        checkbox.addEventListener('change', () => {
+            toggleTheme();
+            themeLabel.textContent = checkbox.checked ? '深色模式' : '浅色模式';
+        });
+    </script>
+
+    <button id="back-to-top" aria-label="Back to Top">&#x9876;&#x90E8;</button>
+
+    
+    <script>
+        gsap.registerPlugin(DrawSVGPlugin);
+        window.onload = function () {
+            gsap.from(".hero h2", { duration: 1.2, opacity: 0, y: -50, ease: "power2.out" });
+            gsap.from(".hero h3", { duration: 1.2, opacity: 0, y: 50, ease: "power2.out", delay: 0.2 });
+            gsap.from(".faq-container", { duration: 1, opacity: 0, y: 20, ease: "power2.out", delay: 0.4 });
+            gsap.from(".cta h2", { duration: 1, opacity: 0, y: -20, ease: "power2.out", delay: 0.8 });
+            gsap.from(".cta p", { duration: 1, opacity: 0, y: 20, ease: "power2.out", delay: 1 });
+            gsap.from(".cta .btn", { duration: 1, opacity: 0, scale: 0.8, ease: "back.out(1.7)", delay: 1.2 });
+        };
+    </script>
+
+</body>
+</html>

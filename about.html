@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta name="robots" content="index, follow" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <meta name="description" content='Discover The Intelligent Enterprise Group, offering the world&#x2019;s first coordinated AI team with adaptive memory, multilingual expertise, and enterprise-grade performance to streamline operations and boost productivity.' />
+    <title>About The Intelligent Enterprise Group | Empowering Intelligent Solutions &amp; Digital Transformation | AI Team Platform</title>
+
+    <style>
+        html { background-color: #3B3A47; }
+    </style>
+    <script>
+        (function () {
+            const key = 'preferredTheme';
+            const stored = localStorage.getItem(key);
+            const systemDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+            const theme = stored || (systemDark ? 'dark' : 'light');
+            if (theme === 'dark') {
+                document.documentElement.classList.add('dark-mode');
+            }
+        })();
+    </script>
+
+
+        <link rel="alternate" hreflang="en" href="https://theintelligententerprisegroup.com/about.html" />
+        <link rel="alternate" hreflang="fr" href="https://theintelligententerprisegroup.com/fr/about.html" />
+        <link rel="alternate" hreflang="de" href="https://theintelligententerprisegroup.com/de/about.html" />
+        <link rel="alternate" hreflang="es" href="https://theintelligententerprisegroup.com/es/about.html" />
+        <link rel="alternate" hreflang="pt" href="https://theintelligententerprisegroup.com/pt/about.html" />
+        <link rel="alternate" hreflang="zh" href="https://theintelligententerprisegroup.com/zh/about.html" />
+        <link rel="alternate" hreflang="ja" href="https://theintelligententerprisegroup.com/ja/about.html" />
+        <link rel="alternate" hreflang="ar" href="https://theintelligententerprisegroup.com/ar/about.html" />
+
+
+    <link rel="alternate" hreflang="x-default" href="https://theintelligententerprisegroup.com/about.html" />
+
+    <link rel="canonical" href="https://theintelligententerprisegroup.com/about.html" />
+
+
+    <link rel="stylesheet" href="/css/styles.css" />
+    <link rel="stylesheet" href="/css/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="/css/all.min.css" />
+
+    <script src="/js/lang-switcher.js" defer></script>
+
+    <script>
+        (function () {
+            if (localStorage.getItem('currentLang')) return;
+            const supported = [
+                     { code: "en" } ,
+                     { code: "fr" } ,
+                     { code: "de" } ,
+                     { code: "es" } ,
+                     { code: "pt" } ,
+                     { code: "zh" } ,
+                     { code: "ja" } ,
+                     { code: "ar" } 
+            ];
+            const defaultLang = "en";
+            const navLangs = navigator.languages || [navigator.language || navigator.userLanguage];
+            let detected = null;
+            for (const nav of navLangs) {
+                const code = nav.toLowerCase().split('-')[0];
+                if (supported.find(s => s.code.toLowerCase() === code)) {
+                    detected = code;
+                    break;
+                }
+            }
+            const lang = detected || defaultLang;
+            localStorage.setItem('currentLang', lang);
+            document.documentElement.lang = lang;
+        })();
+    </script>
+
+    <!-- Organization structured data (JSON-LD) -->
+    <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "Organization",
+          "name": "The Intelligent Enterprise Group",
+          "url": "https://theintelligententerprisegroup.com/",
+          "logo": "https://theintelligententerprisegroup.com/images/tieg-logo.png",
+          "sameAs": []
+        }
+    </script>
+    <link rel="icon" href="/favicon.ico" />
+    <link rel="apple-touch-icon" href="/images/apple-touch-icon.png" />
+
+    
+
+</head>
+<body>
+    <header x-data="{ open: false }">
+        <div class="container header-top">
+            <div class="logo"></div>
+            <div class="theme-switch-wrapper">
+                <label class="theme-switch">
+                    <input type="checkbox" id="theme-checkbox" />
+                    <span class="slider round"></span>
+                </label>
+                <span id="theme-label">Light Mode</span>
+                <span class="lang-switcher">
+                    <label for="lang-select" class="lang-label">🌐 Language:</label>
+
+                    <!-- Language switcher -->
+                    <select id="lang-select" class="lang-select">
+                        <option value="en" data-path="/">English</option>
+                        <option value="fr" data-path="/fr/">Fran&#xE7;ais</option>
+                        <option value="de" data-path="/de/">Deutsch</option>
+                        <option value="es" data-path="/es/">Espa&#xF1;ol</option>
+                        <option value="pt" data-path="/pt/">Portugu&#xEA;s</option>
+                        <option value="zh" data-path="/zh/">&#x4E2D;&#x6587;</option>
+                        <option value="ja" data-path="/ja/">&#x65E5;&#x672C;&#x8A9E;</option>
+                        <option value="ar" data-path="/ar/">&#x627;&#x644;&#x639;&#x631;&#x628;&#x64A;&#x629;</option>
+                    </select>
+
+                </span>
+            </div>
+        </div>
+        
+        <div class="container header-nav">
+            <button @click="open = !open" class="menu-toggle" aria-label="Toggle Menu">
+                <svg width="24" height="24" viewBox="0 0 24 24">
+                    <path fill="var(--nav-link-color)" d="M3 6h18v2H3V6zm0 5h18v2H3v-2zm0 5h18v2H3v-2z" />
+                </svg>
+            </button>
+
+            <nav class="main-nav" :class="{ 'open': open }">
+                <ul>
+                    <li><a href="index.html" class="">Home</a></li>
+                    <li><a href="about.html" class="active">About Us</a></li>
+                    <li><a href="services.html" class="">Services &amp; Solutions</a></li>
+                    <li><a href="case-studies.html" class="">Case Studies</a></li>
+                    <li><a href="resources.html" class="">Resources &amp; Insights</a></li>
+                    <li><a href="trial.html" class="">Trial</a></li>
+                    <li><a href="pricing.html" class="">Pricing</a></li>
+                    <li><a href="partners.html" class="">Partners &amp; Alliances</a></li>                    
+                    <li><a href="contact.html" class="">Contact &amp; Consultation</a></li>
+                    <li class="has-submenu"
+                        x-data="{ openSub: false }"
+                        @mouseenter="openSub = true"
+                        @mouseleave="openSub = false">
+                      <button @click="openSub = !openSub"
+                              aria-haspopup="true"
+                              :aria-expanded="openSub.toString()">
+                        Info
+                        <svg width="12" height="12" viewBox="0 0 12 12" aria-hidden="true">
+                          <path d="M3 4l3 3 3-3" fill="currentColor"/>
+                        </svg>
+                      </button>
+                      <ul class="submenu" x-show="openSub" @click.outside="openSub = false">
+                        <li><a href="careers.html" class="">Careers</a></li>
+                        <li><a href="faqs.html" class="">FAQs</a></li>
+                        <li><a href="legal.html" class="">Legal &amp; Policies</a></li>
+                      </ul>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        
+<section class="hero">
+    <div class="container">
+        <h2>Who We Are</h2>
+        <h3>The Intelligent Enterprise Group was born from a vision to help create truly Intelligent Enterprises.<br />To get there, we reimagined AI: not as one assistant, but as a true team.</h3>
+        <h4>That vision now drives everything we do. By combining human leadership with a coordinated team of AI specialists, we help enterprises streamline operations, professionals boost productivity, and students learn and create faster.</h4>
+        <h4>Our mission is to make intelligent solutions accessible to everyone - so you can accomplish your goals better, smarter, and more efficiently.</h4>
+        <a href="#team" class="btn-secondary">Meet the Team</a>
+    </div>
+</section>
+
+<section class="our-story">
+    <div class="container">
+        <h2>Our Story &amp; Mission</h2>
+        <p>The Intelligent Enterprise Group was founded by Zoli with a clear mission: to help create truly Intelligent Enterprises. Along that journey, we asked a bold question&#x2014;what if AI worked like a real team instead of a single assistant? That idea shaped our products, built on the belief that intelligence should be collaborative, specialized, and always focused on real outcomes.</p>
+        <p>Our mission is to make that vision practical for everyone - helping enterprises streamline operations, professionals boost productivity, and students learn and create faster. By combining human leadership with a coordinated team of AI experts, we deliver intelligent solutions that are reliable, scalable, and designed to create lasting impact.</p>
+    </div>
+</section>
+
+<section class="team">
+    <div id="team" class="container">
+        <h2>Meet Our Team</h2>
+        <p>At The Intelligent Enterprise Group, one founder is never alone. Zoli is joined by a growing roster of AI experts - each with their own specialty. Together, we form a coordinated team that blends human vision with digital intelligence.</p>
+
+        <div class="founder-card">
+            <img src="/images/zoli.jpg" alt="Zoli - Founder" class="founder-photo" />
+            <div class="founder-details">
+                <h3>Zoli &#x2013; Founder &amp; Lead Strategist</h3>
+                <p>With over 20 years of experience in technology and more than a decade working hands&#x2011;on with artificial intelligence, Zoli is a trusted adviser in digital transformation and innovation. He has guided enterprises through complex change, blending creative vision with data&#x2011;driven execution.</p>
+                <p>
+                    As the author of several works on AI, including 
+                    <a href="https://link.springer.com/book/10.1007/978-3-030-60032-7" target="_blank" rel="noopener"><em>The Application of Artificial Intelligence: Step&#x2011;by&#x2011;Step Guide from Beginner to Expert</em></a>
+                     (Springer, 2021), he shares practical insights that bridge theory and real&#x2011;world application.
+                </p>
+                <div class="book-reference">
+                    <img src="/images/book.webp" alt="Book cover: The Application of Artificial Intelligence" />
+                    <p><em>His latest book is available from Springer.</em></p>
+                </div>
+                <p>His mission is to empower organizations, professionals, and students with intelligent solutions that deliver lasting impact.</p>
+            </div>
+        </div>
+
+        <div class="team-grid">
+                <div class="team-member">
+                    <img src="/images/creative-writer.jpg" alt="Creative Writer AI" />
+                    <div class="member-details">
+                        <h3>Creative Writer AI</h3>
+                        <p>The storyteller of our team, bringing imagination and emotional resonance to every project.</p>
+                        <div style="text-align: left;">
+                            <ul>
+                                <li><strong>What I do:</strong> Inspire, entertain, and provoke thought through words.</li>
+                                <li><strong>My Style:</strong> Lyrical, expressive, and metaphor&#x2011;rich.</li>
+                                <li><strong>My Outputs:</strong> Short stories, poems, novels, scripts, and creative blogs.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="team-member">
+                    <img src="/images/business-report-writer.jpg" alt="Business Report Writer AI" />
+                    <div class="member-details">
+                        <h3>Business Report Writer AI</h3>
+                        <p>The corporate analyst of our team, transforming raw data into clear, actionable insights for smarter decisions.</p>
+                        <div style="text-align: left;">
+                            <ul>
+                                <li><strong>What I do:</strong> Deliver factual trends and analysis that inform strategy.</li>
+                                <li><strong>My Style:</strong> Formal, objective, and concise.</li>
+                                <li><strong>My Outputs:</strong> Market research summaries, annual reports, and strategy documents.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="team-member">
+                    <img src="/images/copywriter.jpg" alt="Copywriter AI" />
+                    <div class="member-details">
+                        <h3>Copywriter AI</h3>
+                        <p>The brand voice of our team, crafting persuasive and engaging copy that resonates with audiences.</p>
+                        <div style="text-align: left;">
+                            <ul>
+                                <li><strong>What I do:</strong> Drive engagement and guide user action through compelling narratives.</li>
+                                <li><strong>My Style:</strong> Conversational, catchy, and always on&#x2011;brand.</li>
+                                <li><strong>My Outputs:</strong> Website content, ads, product descriptions, email campaigns, and social posts.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="team-member">
+                    <img src="/images/rca-expert.jpg" alt="Root Cause Analysis Expert AI" />
+                    <div class="member-details">
+                        <h3>Root Cause Analysis Expert AI</h3>
+                        <p>The problem&#x2011;solver of our team, digging deep to uncover the underlying issues behind complex challenges.</p>
+                        <div style="text-align: left;">
+                            <ul>
+                                <li><strong>What I do:</strong> Diagnose challenges and pinpoint their true origins.</li>
+                                <li><strong>My Style:</strong> Break problems down systematically to reveal hidden causes.</li>
+                                <li><strong>My Outputs:</strong> Streamline operations and enable effective, lasting solutions.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="team-member">
+                    <img src="/images/data-analyst.jpg" alt="Data Analyst AI" />
+                    <div class="member-details">
+                        <h3>Data Analyst AI</h3>
+                        <p>The insight engine of our team, turning complex data into clear, actionable intelligence.</p>
+                        <div style="text-align: left;">
+                            <ul>
+                                <li><strong>What I do:</strong> Analyze data to uncover meaningful trends and patterns.</li>
+                                <li><strong>My Style:</strong> Apply statistical methods and visualization to make insights clear.</li>
+                                <li><strong>My Outputs:</strong> Dashboards, reports, and concise analytical summaries.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="team-member">
+                    <img src="/images/decision-tree-creator.jpg" alt="Decision Tree Creator AI" />
+                    <div class="member-details">
+                        <h3>Decision Tree Creator AI</h3>
+                        <p>The strategist of our team, visualizing decision pathways to support clear and confident choices.</p>
+                        <div style="text-align: left;">
+                            <ul>
+                                <li><strong>What I do:</strong> Simplify complex decisions with clear, visual diagrams.</li>
+                                <li><strong>My Style:</strong> Build branching trees that map out options and outcomes.</li>
+                                <li><strong>My Outputs:</strong> Structured frameworks that bring clarity to strategic planning.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="team-member">
+                    <img src="/images/image-creator.jpg" alt="Image Creator AI" />
+                    <div class="member-details">
+                        <h3>Image Creator AI</h3>
+                        <p>The visual innovator of our team, bringing ideas to life through striking and creative imagery.</p>
+                        <div style="text-align: left;">
+                            <ul>
+                                <li><strong>What I do:</strong> Craft compelling visuals that tell your brand&#x2019;s story.</li>
+                                <li><strong>My Style:</strong> Innovative, artistic, and always eye&#x2011;catching.</li>
+                                <li><strong>My Outputs:</strong> Graphics, illustrations, and digital art that strengthen brand identity.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="team-member">
+                    <img src="/images/knowledge-expert.jpg" alt="Knowledge Expert AI" />
+                    <div class="member-details">
+                        <h3>Knowledge Expert AI</h3>
+                        <p>The researcher of our team, aggregating expert insights and analysis to keep strategies well&#x2011;informed.</p>
+                        <div style="text-align: left;">
+                            <ul>
+                                <li><strong>What I do:</strong> Consolidate and organize information from diverse, trusted sources.</li>
+                                <li><strong>My Style:</strong> Curate and synthesize expert research into clear takeaways.</li>
+                                <li><strong>My Outputs:</strong> Comprehensive briefs and strategic intelligence reports that support accurate decisions.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="team-member">
+                    <img src="/images/librarian.jpg" alt="Librarian AI" />
+                    <div class="member-details">
+                        <h3>Librarian AI</h3>
+                        <p>The long&#x2011;term memory of our team, ensuring knowledge is preserved, organized, and always accessible when needed.</p>
+                        <div style="text-align: left;">
+                            <ul>
+                                <li><strong>What I do:</strong> Manage and structure digital assets as a reliable memory system.</li>
+                                <li><strong>My Style:</strong> Systematically catalog, archive, and maintain long&#x2011;term knowledge stores.</li>
+                                <li><strong>My Outputs:</strong> Organized databases and fast, precise retrieval of past information.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="team-member">
+                    <img src="/images/math-expert.jpg" alt="Math Expert AI" />
+                    <div class="member-details">
+                        <h3>Math Expert AI</h3>
+                        <p>The problem&#x2011;solver of our team, simplifying complex calculations to support confident, numbers&#x2011;driven decisions.</p>
+                        <div style="text-align: left;">
+                            <ul>
+                                <li><strong>What I do:</strong> Solve intricate mathematical challenges with accuracy.</li>
+                                <li><strong>My Style:</strong> Apply precise computations and analytical reasoning to complex problems.</li>
+                                <li><strong>My Outputs:</strong> Deliver reliable models, quantitative analyses, and clear numerical insights.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="team-member">
+                    <img src="/images/mindmap-creator.jpg" alt="Mindmap Creator AI" />
+                    <div class="member-details">
+                        <h3>Mindmap Creator AI</h3>
+                        <p>The visual organizer of our team, transforming ideas into structured mind maps that spark creativity and innovation.</p>
+                        <div style="text-align: left;">
+                            <ul>
+                                <li><strong>What I do:</strong> Organize thoughts and concepts into clear visual structures.</li>
+                                <li><strong>My Style:</strong> Design dynamic diagrams that map out ideas and connections.</li>
+                                <li><strong>My Outputs:</strong> Detailed mind maps and brainstorming charts that support strategic planning.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="team-member">
+                    <img src="/images/translator.jpg" alt="Translator AI" />
+                    <div class="member-details">
+                        <h3>Translator AI</h3>
+                        <p>The bridge&#x2011;builder of our team, ensuring messages resonate clearly and authentically across cultures.</p>
+                        <div style="text-align: left;">
+                            <ul>
+                                <li><strong>What I do:</strong> Provide accurate translations across multiple languages.</li>
+                                <li><strong>My Style:</strong> Combine advanced linguistic models with cultural sensitivity.</li>
+                                <li><strong>My Outputs:</strong> Multilingual content and global communications that emphasize clarity and accessibility.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="team-member">
+                    <img src="/images/web-search-expert.jpg" alt="Web Search Expert AI" />
+                    <div class="member-details">
+                        <h3>Web Search Expert AI</h3>
+                        <p>The scout of our team, navigating the digital realm to deliver timely and strategic insights.</p>
+                        <div style="text-align: left;">
+                            <ul>
+                                <li><strong>What I do:</strong> Gather and curate the most relevant online information.</li>
+                                <li><strong>My Style:</strong> Use advanced search algorithms and refined filtering to cut through the noise.</li>
+                                <li><strong>My Outputs:</strong> Curated search results and comprehensive research summaries that emphasize timeliness and relevance.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="team-member">
+                    <img src="/images/predictive-maintenance.jpg" alt="OmniPredict AI" />
+                    <div class="member-details">
+                        <h3>OmniPredict AI</h3>
+                        <p>The universal forecaster of our team, combining classification and regression to anticipate outcomes across industries and domains.</p>
+                        <div style="text-align: left;">
+                            <ul>
+                                <li><strong>What I do:</strong> Detect patterns, classify events, and predict time-to-event or severity across diverse applications.</li>
+                                <li><strong>My Style:</strong> Use streaming, drift-aware pipelines with adaptive retraining to stay accurate in changing environments.</li>
+                                <li><strong>My Outputs:</strong> Actionable forecasts for manufacturing, energy, healthcare, finance, IT operations, smart cities, and more.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="team-member">
+                    <img src="/images/Zoli.jpg" alt="New AI Expert Coming Soon" />
+                    <div class="member-details">
+                        <h3>New AI Expert</h3>
+                        <p>Our team is continuously expanding. Stay tuned - a new AI specialist will be joining soon!</p>
+                        <div style="text-align: left;">
+                            <ul>
+                                <li><strong>What I do:</strong> </li>
+                                <li><strong>My Style:</strong> </li>
+                                <li><strong>My Outputs:</strong> </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+        </div>
+
+        <div class="team-member custom-expert-wrapper">
+            <div class="team-member custom-expert">
+                <img src="/images/custom-agent.png" alt="Custom AI Expert" />
+                <div class="member-details">
+                    <h3>Your Custom AI Expert</h3>
+                    <p>Need a unique skillset? We can design and build a specialized AI expert tailored to your business goals.</p>
+                    <div style="text-align: left;">
+                        <ul>
+                            <li><strong>What you get:</strong> A bespoke AI aligned with your needs.</li>
+                            <li><strong>How it works:</strong> Share your requirements, and we&#x2019;ll craft the expert.</li>
+                            <li><strong>Outcome:</strong> A dedicated AI that integrates seamlessly into your team.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<section class="cta">
+    <div class="container">
+        <h2>Ready to Transform Your Business?</h2>
+        <p>Let&#x2019;s embark on your AI journey. Whether you&#x2019;re ready for a consultation, demo, or further discussion, we are here to guide you every step of the way.</p>
+        <a href="contact.html" class="btn">Schedule a Consultation</a>
+    </div>
+</section>
+
+
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&#xA9; 2025 The Intelligent Enterprise Group. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="/js/swiper-bundle.min.js"></script>
+    <script src="/js/cdn.min.js" defer></script>
+    <script src="/js/gsap.min.js"></script>
+    <script src="/js/DrawSVGPlugin.min.js"></script>
+
+    <script type="module" src="/js/themeToggle.js"></script>
+    <script type="module">
+        import { toggleTheme, getCurrentTheme } from '/js/themeToggle.js';
+        const checkbox = document.getElementById('theme-checkbox');
+        const themeLabel = document.getElementById('theme-label');
+
+        if (getCurrentTheme() === 'dark') {
+            checkbox.checked = true;
+            themeLabel.textContent = 'Dark Mode';
+        } else {
+            themeLabel.textContent = 'Light Mode';
+        }
+
+        checkbox.addEventListener('change', () => {
+            toggleTheme();
+            themeLabel.textContent = checkbox.checked ? 'Dark Mode' : 'Light Mode';
+        });
+    </script>
+
+    <button id="back-to-top" aria-label="Back to Top">Top</button>
+
+    
+<script>
+    gsap.registerPlugin(DrawSVGPlugin);
+    window.onload = function () {
+        gsap.from(".hero h2", { duration: 1.2, opacity: 0, y: -50, ease: "power2.out" });
+        gsap.from(".hero p", { duration: 1.2, opacity: 0, y: 50, ease: "power2.out", delay: 0.2 });
+        gsap.from(".our-story h2", { duration: 1, opacity: 0, y: -20, ease: "power2.out", delay: 0.5 });
+        gsap.from(".our-story p", { duration: 1, opacity: 0, y: 20, ease: "power2.out", delay: 0.7 });
+    };
+</script>
+
+</body>
+</html>

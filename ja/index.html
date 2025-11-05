@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="ja" dir="ltr">
+<head>
+    <meta name="robots" content="index, follow" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <meta name="description" content='The Intelligent Enterprise Group&#x304C;&#x63D0;&#x4F9B;&#x3059;&#x308B;&#x4E16;&#x754C;&#x521D;&#x306E;AI&#x5354;&#x8ABF;&#x578B;&#x5C02;&#x9580;&#x30C1;&#x30FC;&#x30E0;&#x3092;&#x4F53;&#x9A13;&#x3057;&#x3066;&#x304F;&#x3060;&#x3055;&#x3044;&#x3002;&#x9069;&#x5FDC;&#x578B;&#x30E1;&#x30E2;&#x30EA;&#x3001;&#x5C02;&#x9580;&#x30E2;&#x30C7;&#x30EB;&#x3001;&#x591A;&#x8A00;&#x8A9E;&#x5BFE;&#x5FDC;&#x3001;&#x30A8;&#x30F3;&#x30BF;&#x30FC;&#x30D7;&#x30E9;&#x30A4;&#x30BA;&#x30B0;&#x30EC;&#x30FC;&#x30C9;&#x306E;&#x6027;&#x80FD;&#x306B;&#x3088;&#x308A;&#x3001;&#x696D;&#x52D9;&#x3092;&#x52B9;&#x7387;&#x5316;&#x3057;&#x3001;&#x751F;&#x7523;&#x6027;&#x3092;&#x9AD8;&#x3081;&#x3001;&#x5B66;&#x7FD2;&#x3092;&#x52A0;&#x901F;&#x3057;&#x307E;&#x3059;&#x3002;' />
+    <title>The Intelligent Enterprise Group | &#x4E16;&#x754C;&#x521D;&#x306E;AI&#x5354;&#x8ABF;&#x578B;&#x5C02;&#x9580;&#x30C1;&#x30FC;&#x30E0;</title>
+
+    <style>
+        html { background-color: #3B3A47; }
+    </style>
+    <script>
+        (function () {
+            const key = 'preferredTheme';
+            const stored = localStorage.getItem(key);
+            const systemDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+            const theme = stored || (systemDark ? 'dark' : 'light');
+            if (theme === 'dark') {
+                document.documentElement.classList.add('dark-mode');
+            }
+        })();
+    </script>
+
+
+        <link rel="alternate" hreflang="en" href="https://theintelligententerprisegroup.com/" />
+        <link rel="alternate" hreflang="fr" href="https://theintelligententerprisegroup.com/fr/" />
+        <link rel="alternate" hreflang="de" href="https://theintelligententerprisegroup.com/de/" />
+        <link rel="alternate" hreflang="es" href="https://theintelligententerprisegroup.com/es/" />
+        <link rel="alternate" hreflang="pt" href="https://theintelligententerprisegroup.com/pt/" />
+        <link rel="alternate" hreflang="zh" href="https://theintelligententerprisegroup.com/zh/" />
+        <link rel="alternate" hreflang="ja" href="https://theintelligententerprisegroup.com/ja/" />
+        <link rel="alternate" hreflang="ar" href="https://theintelligententerprisegroup.com/ar/" />
+
+
+    <link rel="alternate" hreflang="x-default" href="https://theintelligententerprisegroup.com/" />
+
+    <link rel="canonical" href="https://theintelligententerprisegroup.com/ja/" />
+
+
+    <link rel="stylesheet" href="/css/styles.css" />
+    <link rel="stylesheet" href="/css/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="/css/all.min.css" />
+
+    <script src="/js/lang-switcher.js" defer></script>
+
+    <script>
+        (function () {
+            if (localStorage.getItem('currentLang')) return;
+            const supported = [
+                     { code: "en" } ,
+                     { code: "fr" } ,
+                     { code: "de" } ,
+                     { code: "es" } ,
+                     { code: "pt" } ,
+                     { code: "zh" } ,
+                     { code: "ja" } ,
+                     { code: "ar" } 
+            ];
+            const defaultLang = "ja";
+            const navLangs = navigator.languages || [navigator.language || navigator.userLanguage];
+            let detected = null;
+            for (const nav of navLangs) {
+                const code = nav.toLowerCase().split('-')[0];
+                if (supported.find(s => s.code.toLowerCase() === code)) {
+                    detected = code;
+                    break;
+                }
+            }
+            const lang = detected || defaultLang;
+            localStorage.setItem('currentLang', lang);
+            document.documentElement.lang = lang;
+        })();
+    </script>
+
+    <!-- Organization structured data (JSON-LD) -->
+    <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "Organization",
+          "name": "The Intelligent Enterprise Group",
+          "url": "https://theintelligententerprisegroup.com/",
+          "logo": "https://theintelligententerprisegroup.com/images/tieg-logo.png",
+          "sameAs": []
+        }
+    </script>
+    <link rel="icon" href="/favicon.ico" />
+    <link rel="apple-touch-icon" href="/images/apple-touch-icon.png" />
+
+    
+
+</head>
+<body>
+    <header x-data="{ open: false }">
+        <div class="container header-top">
+            <div class="logo"></div>
+            <div class="theme-switch-wrapper">
+                <label class="theme-switch">
+                    <input type="checkbox" id="theme-checkbox" />
+                    <span class="slider round"></span>
+                </label>
+                <span id="theme-label">ライトモード</span>
+                <span class="lang-switcher">
+                    <label for="lang-select" class="lang-label">🌐 言語:</label>
+
+                    <!-- Language switcher -->
+                    <select id="lang-select" class="lang-select">
+                        <option value="en" data-path="/">English</option>
+                        <option value="fr" data-path="/fr/">Fran&#xE7;ais</option>
+                        <option value="de" data-path="/de/">Deutsch</option>
+                        <option value="es" data-path="/es/">Espa&#xF1;ol</option>
+                        <option value="pt" data-path="/pt/">Portugu&#xEA;s</option>
+                        <option value="zh" data-path="/zh/">&#x4E2D;&#x6587;</option>
+                        <option value="ja" data-path="/ja/">&#x65E5;&#x672C;&#x8A9E;</option>
+                        <option value="ar" data-path="/ar/">&#x627;&#x644;&#x639;&#x631;&#x628;&#x64A;&#x629;</option>
+                    </select>
+
+                </span>
+            </div>
+        </div>
+        
+        <div class="container header-nav">
+            <button @click="open = !open" class="menu-toggle" aria-label="Toggle Menu">
+                <svg width="24" height="24" viewBox="0 0 24 24">
+                    <path fill="var(--nav-link-color)" d="M3 6h18v2H3V6zm0 5h18v2H3v-2zm0 5h18v2H3v-2z" />
+                </svg>
+            </button>
+
+            <nav class="main-nav" :class="{ 'open': open }">
+                <ul>
+                    <li><a href="index.html" class="active">&#x30DB;&#x30FC;&#x30E0;</a></li>
+                    <li><a href="about.html" class="">&#x79C1;&#x305F;&#x3061;&#x306B;&#x3064;&#x3044;&#x3066;</a></li>
+                    <li><a href="services.html" class="">&#x30B5;&#x30FC;&#x30D3;&#x30B9;&#x3068;&#x30BD;&#x30EA;&#x30E5;&#x30FC;&#x30B7;&#x30E7;&#x30F3;</a></li>
+                    <li><a href="case-studies.html" class="">&#x4E8B;&#x4F8B;&#x7814;&#x7A76;</a></li>
+                    <li><a href="resources.html" class="">&#x30EA;&#x30BD;&#x30FC;&#x30B9;&#x3068;&#x30A4;&#x30F3;&#x30B5;&#x30A4;&#x30C8;</a></li>
+                    <li><a href="trial.html" class="">&#x30C8;&#x30E9;&#x30A4;&#x30A2;&#x30EB;</a></li>
+                    <li><a href="pricing.html" class="">&#x6599;&#x91D1;</a></li>
+                    <li><a href="partners.html" class="">&#x30D1;&#x30FC;&#x30C8;&#x30CA;&#x30FC;&#x3068;&#x30A2;&#x30E9;&#x30A4;&#x30A2;&#x30F3;&#x30B9;</a></li>                    
+                    <li><a href="contact.html" class="">&#x304A;&#x554F;&#x3044;&#x5408;&#x308F;&#x305B;&#x30FB;&#x76F8;&#x8AC7;</a></li>
+                    <li class="has-submenu"
+                        x-data="{ openSub: false }"
+                        @mouseenter="openSub = true"
+                        @mouseleave="openSub = false">
+                      <button @click="openSub = !openSub"
+                              aria-haspopup="true"
+                              :aria-expanded="openSub.toString()">
+                        &#x60C5;&#x5831;
+                        <svg width="12" height="12" viewBox="0 0 12 12" aria-hidden="true">
+                          <path d="M3 4l3 3 3-3" fill="currentColor"/>
+                        </svg>
+                      </button>
+                      <ul class="submenu" x-show="openSub" @click.outside="openSub = false">
+                        <li><a href="careers.html" class="">&#x63A1;&#x7528;&#x60C5;&#x5831;</a></li>
+                        <li><a href="faqs.html" class="">&#x3088;&#x304F;&#x3042;&#x308B;&#x8CEA;&#x554F;</a></li>
+                        <li><a href="legal.html" class="">&#x6CD5;&#x52D9;&#x3068;&#x30DD;&#x30EA;&#x30B7;&#x30FC;</a></li>
+                      </ul>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        
+<section class="hero">
+    <div class="container">
+        <h2>世界初のAI協調型<br />AI専門チーム<span class="hero-badge">初の革新</span><br /></h2>
+        <h3>&#x753B;&#x671F;&#x7684;&#x306A;&#x30D7;&#x30E9;&#x30C3;&#x30C8;&#x30D5;&#x30A9;&#x30FC;&#x30E0;&#x304C;&#x65B0;&#x3057;&#x3044;&#x5F62;&#x306E;&#x30B9;&#x30FC;&#x30D1;&#x30FC;&#x30A4;&#x30F3;&#x30C6;&#x30EA;&#x30B8;&#x30A7;&#x30F3;&#x30B9;&#x3092;&#x5B9F;&#x73FE;&#x3057;&#x307E;&#x3059;&#x3002;AI&#x30B3;&#x30FC;&#x30C7;&#x30A3;&#x30CD;&#x30FC;&#x30BF;&#x30FC;&#x304C;&#x5C02;&#x9580;AI&#x3092;&#x7D71;&#x5408;&#x3057;&#x3001;&#x9069;&#x5FDC;&#x578B;&#x3001;&#x591A;&#x8A00;&#x8A9E;&#x5BFE;&#x5FDC;&#x3001;&#x30A8;&#x30F3;&#x30BF;&#x30FC;&#x30D7;&#x30E9;&#x30A4;&#x30BA;&#x30B0;&#x30EC;&#x30FC;&#x30C9;&#x306E;&#x30BD;&#x30EA;&#x30E5;&#x30FC;&#x30B7;&#x30E7;&#x30F3;&#x3092;&#x63D0;&#x4F9B;&#x3057;&#x307E;&#x3059;&#x3002;</h3>
+
+        <a href="trial.html" class="btn">&#x7121;&#x6599;&#x30C8;&#x30E9;&#x30A4;&#x30A2;&#x30EB;&#x3092;&#x958B;&#x59CB;</a>
+        <a href="contact.html" class="btn service-btn">&#x30C7;&#x30E2;&#x3092;&#x30EA;&#x30AF;&#x30A8;&#x30B9;&#x30C8;</a>
+    </div>
+</section>
+
+<section class="problem">
+    <div class="container">
+        <h2>&#x26A0;&#xFE0F; &#x306A;&#x305C;&#x5F93;&#x6765;&#x306E;AI&#x30A2;&#x30B7;&#x30B9;&#x30BF;&#x30F3;&#x30C8;&#x306F;&#x4E0D;&#x5341;&#x5206;&#x306A;&#x306E;&#x304B;</h2>
+        <p>&#x591A;&#x304F;&#x306E;AI&#x30B5;&#x30FC;&#x30D3;&#x30B9;&#x306F;&#x5358;&#x4E00;&#x306E;&#x5927;&#x898F;&#x6A21;&#x8A00;&#x8A9E;&#x30E2;&#x30C7;&#x30EB;&#x306B;&#x4F9D;&#x5B58;&#x3057;&#x3066;&#x3044;&#x307E;&#x3059;&#x3002;&#x4E07;&#x80FD;&#x3092;&#x76EE;&#x6307;&#x3059;&#x4E00;&#x65B9;&#x3067;&#x3001;&#x30E1;&#x30E2;&#x30EA;&#x304C;&#x5236;&#x9650;&#x3055;&#x308C;&#x3001;&#x7279;&#x306B;&#x8907;&#x6570;&#x30B9;&#x30C6;&#x30C3;&#x30D7;&#x3084;&#x5C02;&#x9580;&#x77E5;&#x8B58;&#x304C;&#x5FC5;&#x8981;&#x306A;&#x30BF;&#x30B9;&#x30AF;&#x3067;&#x306F;&#x5E7B;&#x899A;&#x3092;&#x751F;&#x3058;&#x3084;&#x3059;&#x3044;&#x3068;&#x3044;&#x3046;&#x554F;&#x984C;&#x304C;&#x3042;&#x308A;&#x307E;&#x3059;&#x3002;</p>
+        <p>&#x305D;&#x306E;&#x7D50;&#x679C;&#x3001;&#x5B64;&#x7ACB;&#x3057;&#x305F;&#x56DE;&#x7B54;&#x3001;&#x4E0D;&#x5B89;&#x5B9A;&#x306A;&#x4FE1;&#x983C;&#x6027;&#x3001;&#x5C02;&#x9580;&#x30B9;&#x30AD;&#x30EB;&#x3084;&#x8907;&#x96D1;&#x306A;&#x6587;&#x66F8;&#x3092;&#x6A2A;&#x65AD;&#x3059;&#x308B;&#x771F;&#x306E;&#x5354;&#x8ABF;&#x6027;&#x304C;&#x6B20;&#x5982;&#x3057;&#x307E;&#x3059;&#x3002;</p>
+    </div>
+</section>
+
+<section class="solution">
+    <div class="container">
+        <h2>&#x2705; &#x3042;&#x306A;&#x305F;&#x306E;AI&#x30C1;&#x30FC;&#x30E0;&#x3001;&#x3042;&#x3089;&#x3086;&#x308B;&#x30BF;&#x30B9;&#x30AF;&#x3092;&#x30B5;&#x30DD;&#x30FC;&#x30C8;</h2>
+        <p>&#x5358;&#x4E00;&#x306E;&#x5927;&#x898F;&#x6A21;&#x8A00;&#x8A9E;&#x30E2;&#x30C7;&#x30EB;&#x306B;&#x983C;&#x308B;&#x306E;&#x3067;&#x306F;&#x306A;&#x304F;&#x3001;&#x5F53;&#x793E;&#x306E;&#x30D7;&#x30E9;&#x30C3;&#x30C8;&#x30D5;&#x30A9;&#x30FC;&#x30E0;&#x306F;AI&#x30B3;&#x30FC;&#x30C7;&#x30A3;&#x30CD;&#x30FC;&#x30BF;&#x30FC;&#x306B;&#x7BA1;&#x7406;&#x3055;&#x308C;&#x305F;&#x5C02;&#x9580;AI&#x30C1;&#x30FC;&#x30E0;&#x3092;&#x63D0;&#x4F9B;&#x3057;&#x3001;&#x6B63;&#x78BA;&#x6027;&#x3068;&#x5354;&#x8ABF;&#x6027;&#x3092;&#x78BA;&#x4FDD;&#x3057;&#x307E;&#x3059;&#x3002;</p>
+        <p>&#x77ED;&#x671F;&#x30FB;&#x9577;&#x671F;&#x306E;&#x9069;&#x5FDC;&#x578B;&#x30E1;&#x30E2;&#x30EA;&#x3092;&#x5099;&#x3048;&#x3001;Word&#x3001;Excel&#x3001;PDF&#x3001;CSV&#x3001;&#x97F3;&#x58F0;&#x3001;&#x30C6;&#x30AD;&#x30B9;&#x30C8;&#x3001;&#x753B;&#x50CF;&#x304B;&#x3089;&#x5B66;&#x7FD2;&#x3067;&#x304D;&#x308B;&#x305F;&#x3081;&#x3001;&#x6587;&#x8108;&#x3092;&#x7406;&#x89E3;&#x3057;&#x3001;&#x5E7B;&#x899A;&#x3092;&#x56DE;&#x907F;&#x3057;&#x3001;&#x6B63;&#x78BA;&#x3067;&#x4FE1;&#x983C;&#x3067;&#x304D;&#x308B;&#x7D50;&#x679C;&#x3092;&#x63D0;&#x4F9B;&#x3057;&#x307E;&#x3059;&#x3002; <a href="about.html" class="btn-secondary">&#x30C1;&#x30FC;&#x30E0;&#x3092;&#x7D39;&#x4ECB;</a></p>
+        <p>&#x5C02;&#x9580;&#x5BB6;&#x306E;&#x30E9;&#x30A4;&#x30F3;&#x30CA;&#x30C3;&#x30D7;&#x306F;&#x62E1;&#x5927;&#x3092;&#x7D9A;&#x3051;&#x3001;AI&#x30C1;&#x30FC;&#x30E0;&#x306F;&#x6642;&#x9593;&#x3068;&#x3068;&#x3082;&#x306B;&#x3088;&#x308A;&#x591A;&#x7528;&#x9014;&#x306B;&#x306A;&#x308A;&#x307E;&#x3059;&#x3002;&#x3055;&#x3089;&#x306B;&#x30A8;&#x30C3;&#x30B8;&#x30B3;&#x30F3;&#x30D4;&#x30E5;&#x30FC;&#x30C6;&#x30A3;&#x30F3;&#x30B0;&#x306B;&#x3082;&#x5BFE;&#x5FDC;&#x3057;&#x3066;&#x304A;&#x308A;&#x3001;&#x30A4;&#x30F3;&#x30BF;&#x30FC;&#x30CD;&#x30C3;&#x30C8;&#x63A5;&#x7D9A;&#x304C;&#x306A;&#x304F;&#x3066;&#x3082;&#x4FE1;&#x983C;&#x6027;&#x3092;&#x7DAD;&#x6301;&#x3067;&#x304D;&#x307E;&#x3059;&#x3002;</p>
+    </div>
+</section>
+
+<section class="features">
+    <h2>&#x4E3B;&#x306A;&#x7279;&#x9577;</h2>
+    <div class="container main-grid">
+        <div class="service-card">
+            <h3>&#x9069;&#x5FDC;&#x578B;&#x30E1;&#x30E2;&#x30EA;</h3>
+            <p>&#x9AD8;&#x5EA6;&#x306B;&#x6700;&#x9069;&#x5316;&#x3055;&#x308C;&#x305F;&#x77ED;&#x671F;&#x30FB;&#x9577;&#x671F;&#x30E1;&#x30E2;&#x30EA;&#x304C;&#x30BB;&#x30C3;&#x30B7;&#x30E7;&#x30F3;&#x3092;&#x307E;&#x305F;&#x3044;&#x3067;&#x6587;&#x8108;&#x3092;&#x4FDD;&#x6301;&#x3057;&#x3001;&#x5E7B;&#x899A;&#x3092;&#x6E1B;&#x3089;&#x3057;&#x3001;&#x4E00;&#x8CAB;&#x3057;&#x305F;&#x4FE1;&#x983C;&#x6027;&#x306E;&#x9AD8;&#x3044;&#x7D50;&#x679C;&#x3092;&#x4FDD;&#x8A3C;&#x3057;&#x307E;&#x3059;&#x3002;</p>
+        </div>
+        <div class="service-card">
+            <h3>&#x30DE;&#x30EB;&#x30C1;&#x30D5;&#x30A9;&#x30FC;&#x30DE;&#x30C3;&#x30C8;&#x5B66;&#x7FD2; &amp; &#x591A;&#x8A00;&#x8A9E;&#x5BFE;&#x5FDC;</h3>
+            <p>Word&#x3001;Excel&#x3001;PDF&#x3001;CSV&#x3001;&#x97F3;&#x58F0;&#x3001;&#x30C6;&#x30AD;&#x30B9;&#x30C8;&#x3001;&#x753B;&#x50CF;&#x306A;&#x3069;&#x304B;&#x3089;&#x5B66;&#x7FD2;&#x3002;100&#x4EE5;&#x4E0A;&#x306E;&#x8A00;&#x8A9E;&#x3092;&#x7406;&#x89E3;&#x3057;&#x3001;20&#x4EE5;&#x4E0A;&#x306E;&#x8A00;&#x8A9E;&#x3067;&#x30CD;&#x30A4;&#x30C6;&#x30A3;&#x30D6;&#x306B;&#x8FD1;&#x3044;&#x6D41;&#x66A2;&#x3055;&#x3092;&#x5B9F;&#x73FE;&#x3002;</p>
+        </div>
+        <div class="service-card">
+            <h3>&#x5C02;&#x9580;&#x7279;&#x5316;&#x578B;&#x7D44;&#x307F;&#x8FBC;&#x307F;&#x30E2;&#x30C7;&#x30EB;</h3>
+            <p>&#x30BF;&#x30B9;&#x30AF;&#x3054;&#x3068;&#x306B;&#x6700;&#x9069;&#x5316;&#x3055;&#x308C;&#x305F;&#x8907;&#x6570;&#x306E;&#x6A5F;&#x68B0;&#x5B66;&#x7FD2;&#x30E2;&#x30C7;&#x30EB;&#x3092;&#x642D;&#x8F09;&#x3002;AI&#x5C02;&#x9580;&#x5BB6;&#x304C;&#x81EA;&#x52D5;&#x7684;&#x306B;&#x5207;&#x308A;&#x66FF;&#x3048;&#x3001;&#x5E38;&#x306B;&#x6700;&#x9069;&#x306A;&#x30BD;&#x30EA;&#x30E5;&#x30FC;&#x30B7;&#x30E7;&#x30F3;&#x3092;&#x63D0;&#x4F9B;&#x3057;&#x307E;&#x3059;&#x3002;</p>
+        </div>
+        <div class="service-card">
+            <h3>&#x5354;&#x8ABF;&#x578B;AI&#x30C1;&#x30FC;&#x30E0;</h3>
+            <p>&#x5358;&#x306A;&#x308B;LLM&#x3067;&#x306F;&#x306A;&#x304F;&#x3001;AI&#x30B3;&#x30FC;&#x30C7;&#x30A3;&#x30CD;&#x30FC;&#x30BF;&#x30FC;&#x306B;&#x7BA1;&#x7406;&#x3055;&#x308C;&#x305F;&#x5C02;&#x9580;AI&#x30C1;&#x30FC;&#x30E0;&#x304C;&#x3001;&#x5B9F;&#x969B;&#x306E;&#x30B3;&#x30F3;&#x30B5;&#x30EB;&#x30C6;&#x30A3;&#x30F3;&#x30B0;&#x30C1;&#x30FC;&#x30E0;&#x306E;&#x3088;&#x3046;&#x306B;&#x9023;&#x643A;&#x3057;&#x307E;&#x3059;&#x3002; <a href="about.html" class="btn-secondary">&#x30C1;&#x30FC;&#x30E0;&#x3092;&#x7D39;&#x4ECB;</a></p>
+        </div>
+        <div class="service-card">
+            <h3>&#x30A8;&#x30C3;&#x30B8;&#x5BFE;&#x5FDC;</h3>
+            <p>&#x30AA;&#x30D5;&#x30E9;&#x30A4;&#x30F3;&#x3084;&#x30BB;&#x30AD;&#x30E5;&#x30A2;&#x74B0;&#x5883;&#x3067;&#x3082;&#x52D5;&#x4F5C;&#x53EF;&#x80FD;&#x306A;&#x7D44;&#x307F;&#x8FBC;&#x307F;&#x30E2;&#x30C7;&#x30EB;&#x306B;&#x3088;&#x308A;&#x3001;&#x30A4;&#x30F3;&#x30BF;&#x30FC;&#x30CD;&#x30C3;&#x30C8;&#x63A5;&#x7D9A;&#x304C;&#x306A;&#x304F;&#x3066;&#x3082;&#x5B8C;&#x5168;&#x306B;&#x6A5F;&#x80FD;&#x3057;&#x307E;&#x3059;&#x3002;</p>
+        </div>
+        <div class="service-card">
+            <h3>&#x9AD8;&#x6027;&#x80FD;</h3>
+            <p>C&#x2B;&#x2B;/C#&#x3067;&#x8A2D;&#x8A08;&#x3055;&#x308C;&#x3001;&#x6700;&#x5927;&#x9650;&#x306E;&#x901F;&#x5EA6;&#x3068;&#x52B9;&#x7387;&#x3092;&#x5B9F;&#x73FE;&#x3002;&#x30CF;&#x30FC;&#x30C9;&#x30A6;&#x30A7;&#x30A2;&#x30A2;&#x30AF;&#x30BB;&#x30E9;&#x30EC;&#x30FC;&#x30B7;&#x30E7;&#x30F3;&#x3001;&#x4E26;&#x5217;&#x8A08;&#x7B97;&#x3001;CUDA&#x306A;&#x3069;&#x306E;GPU&#x6280;&#x8853;&#x3092;&#x6D3B;&#x7528;&#x3057;&#x3001;&#x8FC5;&#x901F;&#x306A;&#x5FDC;&#x7B54;&#x3068;&#x4F4E;&#x6D88;&#x8CBB;&#x96FB;&#x529B;&#x3092;&#x4E21;&#x7ACB;&#x3057;&#x307E;&#x3059;&#x3002;</p>
+        </div>
+        <div class="service-card">
+            <h3>&#x30B9;&#x30B1;&#x30FC;&#x30E9;&#x30D6;&#x30EB;&#x306A;&#x5C0E;&#x5165;</h3>
+            <p>&#x67D4;&#x8EDF;&#x306A;&#x30BB;&#x30C3;&#x30C8;&#x30A2;&#x30C3;&#x30D7;&#xFF1A;&#x500B;&#x4EBA;&#x5411;&#x3051;&#x30C7;&#x30B9;&#x30AF;&#x30C8;&#x30C3;&#x30D7;&#x3001;&#x4F01;&#x696D;&#x5411;&#x3051;&#x30B5;&#x30FC;&#x30D0;&#x30FC;&#x3084;API&#x7D71;&#x5408;&#x3002;API&#x306F;&#x3042;&#x3089;&#x3086;&#x308B;&#x696D;&#x52D9;&#x30B7;&#x30B9;&#x30C6;&#x30E0;&#x304B;&#x3089;&#x547C;&#x3073;&#x51FA;&#x305B;&#x3001;&#x30D7;&#x30ED;&#x30BB;&#x30B9;&#x81EA;&#x52D5;&#x5316;&#x306B;&#x7D44;&#x307F;&#x8FBC;&#x3081;&#x307E;&#x3059;&#x3002;</p>
+        </div>
+        <div class="service-card">
+            <h3>&#x7701;&#x30A8;&#x30CD;&#x8A2D;&#x8A08;</h3>
+            <p>&#x30B9;&#x30AF;&#x30EA;&#x30D7;&#x30C8;&#x8A00;&#x8A9E;&#x3067;&#x306F;&#x306A;&#x304F;&#x6700;&#x9069;&#x5316;&#x3055;&#x308C;&#x305F;&#x30B3;&#x30F3;&#x30D1;&#x30A4;&#x30EB;&#x30B3;&#x30FC;&#x30C9;&#x3067;&#x69CB;&#x7BC9;&#x3055;&#x308C;&#x3066;&#x3044;&#x308B;&#x305F;&#x3081;&#x3001;&#x9AD8;&#x901F;&#x304B;&#x3064;&#x4F4E;&#x6D88;&#x8CBB;&#x96FB;&#x529B;&#x3067;&#x52D5;&#x4F5C;&#x3057;&#x3001;&#x6027;&#x80FD;&#x3068;&#x6301;&#x7D9A;&#x53EF;&#x80FD;&#x6027;&#x3092;&#x4E21;&#x7ACB;&#x3057;&#x307E;&#x3059;&#x3002;</p>
+        </div>
+    </div>
+</section>
+
+<section class="use-cases">
+    <div class="container">
+        <h2>&#x3042;&#x3089;&#x3086;&#x308B;&#x30B7;&#x30CA;&#x30EA;&#x30AA;&#x306B;&#x5BFE;&#x5FDC;</h2>
+        <div class="main-grid">
+            <div class="service-card">
+                <h3>&#x4F01;&#x696D;</h3>
+                <p>API&#x3092;&#x901A;&#x3058;&#x3066;&#x3042;&#x3089;&#x3086;&#x308B;&#x30B7;&#x30B9;&#x30C6;&#x30E0;&#x3084;&#x30EF;&#x30FC;&#x30AF;&#x30D5;&#x30ED;&#x30FC;&#x306B;&#x30B7;&#x30FC;&#x30E0;&#x30EC;&#x30B9;&#x306B;&#x7D71;&#x5408;&#x3002;&#x30D7;&#x30ED;&#x30BB;&#x30B9;&#x3092;&#x81EA;&#x52D5;&#x5316;&#x3057;&#x3001;&#x30B3;&#x30B9;&#x30C8;&#x3092;&#x524A;&#x6E1B;&#x3057;&#x3001;&#x5C02;&#x9580;&#x30E2;&#x30C7;&#x30EB;&#x3068;&#x30A8;&#x30F3;&#x30BF;&#x30FC;&#x30D7;&#x30E9;&#x30A4;&#x30BA;&#x30B0;&#x30EC;&#x30FC;&#x30C9;&#x306E;&#x6027;&#x80FD;&#x3067;&#x5B89;&#x5FC3;&#x3057;&#x3066;&#x62E1;&#x5F35;&#x3067;&#x304D;&#x307E;&#x3059;&#x3002;</p>
+            </div>
+            <div class="service-card">
+                <h3>&#x30D7;&#x30ED;&#x30D5;&#x30A7;&#x30C3;&#x30B7;&#x30E7;&#x30CA;&#x30EB;</h3>
+                <p>&#x57F7;&#x7B46;&#x3001;&#x5206;&#x6790;&#x3001;&#x7FFB;&#x8A33;&#x3001;&#x610F;&#x601D;&#x6C7A;&#x5B9A;&#x3092;&#x5C02;&#x9580;&#x30EC;&#x30D9;&#x30EB;&#x3067;&#x30B5;&#x30DD;&#x30FC;&#x30C8;&#x3057;&#x3001;&#x751F;&#x7523;&#x6027;&#x3092;&#x5411;&#x4E0A;&#x3002;&#x9069;&#x5FDC;&#x578B;&#x30E1;&#x30E2;&#x30EA;&#x304C;&#x30D7;&#x30ED;&#x30B8;&#x30A7;&#x30AF;&#x30C8;&#x5168;&#x4F53;&#x3067;&#x4E00;&#x8CAB;&#x3057;&#x305F;&#x7D50;&#x679C;&#x3092;&#x4FDD;&#x8A3C;&#x3057;&#x307E;&#x3059;&#x3002;</p>
+            </div>
+            <div class="service-card">
+                <h3>&#x5B66;&#x751F;&#x30FB;&#x500B;&#x4EBA;</h3>
+                <p>&#x5B66;&#x7FD2;&#x3092;&#x52A0;&#x901F;&#x3057;&#x3001;&#x30A2;&#x30A4;&#x30C7;&#x30A2;&#x3092;&#x63A2;&#x6C42;&#x3057;&#x3001;&#x6587;&#x8108;&#x3092;&#x7406;&#x89E3;&#x3059;&#x308B;&#x5354;&#x8ABF;&#x578B;AI&#x30C1;&#x30FC;&#x30E0;&#x3068;&#x5171;&#x306B;&#x3001;&#x3088;&#x308A;&#x30B9;&#x30DE;&#x30FC;&#x30C8;&#x306B;&#x5275;&#x9020;&#x3067;&#x304D;&#x307E;&#x3059;&#x3002;</p>
+            </div>
+        </div>
+        <p style="text-align:center; margin-top:1rem;">
+            <a href="case-studies.html" class="btn service-btn">&#x5B9F;&#x969B;&#x306E;&#x4E8B;&#x4F8B;&#x3092;&#x898B;&#x308B; &#x2192;</a>
+        </p>
+    </div>
+</section>
+
+<section class="testimonials">
+    <div class="container swiper-container">
+        <h2>&#x60F3;&#x5B9A;&#x3055;&#x308C;&#x308B;&#x58F0;</h2>
+        <p style="text-align:center; max-width:700px; margin:0 auto 2rem;">&#x3055;&#x307E;&#x3056;&#x307E;&#x306A;&#x5F79;&#x8077;&#x306E;&#x4EBA;&#x3005;&#x304C;&#x3001;AI&#x30C1;&#x30FC;&#x30E0;&#x3092;&#x8A66;&#x3057;&#x305F;&#x4F53;&#x9A13;&#x3092;&#x3069;&#x306E;&#x3088;&#x3046;&#x306B;&#x8A9E;&#x308B;&#x304B;&#x3092;&#x60F3;&#x50CF;&#x3057;&#x3066;&#x307F;&#x3066;&#x304F;&#x3060;&#x3055;&#x3044;&#x3002;</p>
+        <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <blockquote class="animate-fadeIn">
+                        <p>CTO&#x306E;&#x58F0;: &quot;&#x5354;&#x8ABF;&#x578B;AI&#x30C1;&#x30FC;&#x30E0;&#x304C;&#x30C7;&#x30B8;&#x30BF;&#x30EB;&#x30A4;&#x30CE;&#x30D9;&#x30FC;&#x30B7;&#x30E7;&#x30F3;&#x306E;&#x53D6;&#x308A;&#x7D44;&#x307F;&#x3092;&#x4E00;&#x5909;&#x3055;&#x305B;&#x307E;&#x3057;&#x305F;&#x3002;&#x6587;&#x8108;&#x3092;&#x7406;&#x89E3;&#x3059;&#x308B;&#x30E1;&#x30E2;&#x30EA;&#x3068;&#x5C02;&#x9580;&#x30E2;&#x30C7;&#x30EB;&#x306B;&#x3088;&#x308A;&#x3001;&#x65B0;&#x305F;&#x306A;&#x52B9;&#x7387;&#x3068;&#x6210;&#x9577;&#x3092;&#x5B9F;&#x73FE;&#x3057;&#x307E;&#x3057;&#x305F;&#x3002;&quot;</p>
+                        <footer>&#x1F468;&#x200D;&#x1F4BC; &#x2014; CTO</footer>
+                    </blockquote>
+                </div>
+                <div class="swiper-slide">
+                    <blockquote class="animate-fadeIn">
+                        <p>&#x30A4;&#x30CE;&#x30D9;&#x30FC;&#x30B7;&#x30E7;&#x30F3;&#x62C5;&#x5F53;VP: &quot;&#x30B7;&#x30FC;&#x30E0;&#x30EC;&#x30B9;&#x306A;API&#x7D71;&#x5408;&#x3068;&#x5C02;&#x9580;&#x7684;&#x306A;&#x5354;&#x8ABF;&#x304C;&#x6226;&#x7565;&#x3092;&#x518D;&#x5B9A;&#x7FA9;&#x3057;&#x307E;&#x3057;&#x305F;&#x3002;&#x3053;&#x306E;&#x30D7;&#x30E9;&#x30C3;&#x30C8;&#x30D5;&#x30A9;&#x30FC;&#x30E0;&#x306F;&#x6301;&#x7D9A;&#x7684;&#x306A;&#x7AF6;&#x4E89;&#x512A;&#x4F4D;&#x3092;&#x3082;&#x305F;&#x3089;&#x3057;&#x307E;&#x3057;&#x305F;&#x3002;&quot;</p>
+                        <footer>&#x1F4A1; &#x2014; &#x30A4;&#x30CE;&#x30D9;&#x30FC;&#x30B7;&#x30E7;&#x30F3;&#x62C5;&#x5F53;VP</footer>
+                    </blockquote>
+                </div>
+                <div class="swiper-slide">
+                    <blockquote class="animate-fadeIn">
+                        <p>&#x30C7;&#x30B8;&#x30BF;&#x30EB;&#x6226;&#x7565;&#x30C7;&#x30A3;&#x30EC;&#x30AF;&#x30BF;&#x30FC;: &quot;&#x30C8;&#x30EC;&#x30FC;&#x30CB;&#x30F3;&#x30B0;&#x304B;&#x3089;&#x5C0E;&#x5165;&#x307E;&#x3067;&#x3001;&#x3059;&#x3079;&#x3066;&#x304C;&#x6B63;&#x78BA;&#x3067;&#x660E;&#x78BA;&#x3067;&#x3057;&#x305F;&#x3002;&#x9069;&#x5FDC;&#x578B;&#x30E1;&#x30E2;&#x30EA;&#x306E;&#x304A;&#x304B;&#x3052;&#x3067;&#x5E38;&#x306B;&#x6700;&#x5148;&#x7AEF;&#x3092;&#x7DAD;&#x6301;&#x3067;&#x304D;&#x307E;&#x3059;&#x3002;&quot;</p>
+                        <footer>&#x1F4CA; &#x2014; &#x30C7;&#x30B8;&#x30BF;&#x30EB;&#x6226;&#x7565;&#x30C7;&#x30A3;&#x30EC;&#x30AF;&#x30BF;&#x30FC;</footer>
+                    </blockquote>
+                </div>
+                <div class="swiper-slide">
+                    <blockquote class="animate-fadeIn">
+                        <p>&#x30B7;&#x30CB;&#x30A2;&#x30C7;&#x30FC;&#x30BF;&#x30A2;&#x30CA;&#x30EA;&#x30B9;&#x30C8;: &quot;&#x5C02;&#x9580;&#x7279;&#x5316;&#x578B;&#x30E2;&#x30C7;&#x30EB;&#x306B;&#x3088;&#x308A;&#x3001;&#x30C7;&#x30FC;&#x30BF;&#x3092;&#x3088;&#x308A;&#x901F;&#x304F;&#x6B63;&#x78BA;&#x306B;&#x5206;&#x6790;&#x3067;&#x304D;&#x3001;&#x3053;&#x308C;&#x307E;&#x3067;&#x898B;&#x3048;&#x306A;&#x304B;&#x3063;&#x305F;&#x30A4;&#x30F3;&#x30B5;&#x30A4;&#x30C8;&#x3092;&#x5F97;&#x3089;&#x308C;&#x307E;&#x3057;&#x305F;&#x3002;&quot;</p>
+                        <footer>&#x1F4C8; &#x2014; &#x30B7;&#x30CB;&#x30A2;&#x30C7;&#x30FC;&#x30BF;&#x30A2;&#x30CA;&#x30EA;&#x30B9;&#x30C8;</footer>
+                    </blockquote>
+                </div>
+                <div class="swiper-slide">
+                    <blockquote class="animate-fadeIn">
+                        <p>&#x30C6;&#x30AF;&#x30CE;&#x30ED;&#x30B8;&#x30FC;&#x8CAC;&#x4EFB;&#x8005;: &quot;&#x30B3;&#x30F3;&#x30D1;&#x30A4;&#x30EB;&#x30B3;&#x30FC;&#x30C9;&#x3068;GPU&#x30A2;&#x30AF;&#x30BB;&#x30E9;&#x30EC;&#x30FC;&#x30B7;&#x30E7;&#x30F3;&#x306B;&#x3088;&#x308A;&#x9A5A;&#x7570;&#x7684;&#x306A;&#x901F;&#x5EA6;&#x3068;&#x7701;&#x30A8;&#x30CD;&#x3092;&#x5B9F;&#x73FE;&#x3057;&#x307E;&#x3057;&#x305F;&#x3002;&#x6301;&#x7D9A;&#x53EF;&#x80FD;&#x306A;&#x6027;&#x80FD;&#x306B;&#x304A;&#x3051;&#x308B;&#x30B2;&#x30FC;&#x30E0;&#x30C1;&#x30A7;&#x30F3;&#x30B8;&#x30E3;&#x30FC;&#x3067;&#x3059;&#x3002;&quot;</p>
+                        <footer>&#x2699;&#xFE0F; &#x2014; &#x30C6;&#x30AF;&#x30CE;&#x30ED;&#x30B8;&#x30FC;&#x8CAC;&#x4EFB;&#x8005;</footer>
+                    </blockquote>
+                </div>
+                <div class="swiper-slide">
+                    <blockquote class="animate-fadeIn">
+                        <p>&#x5B66;&#x751F;: &quot;&#x7814;&#x7A76;&#x3092;&#x6574;&#x7406;&#x3057;&#x3001;&#x5B66;&#x7FD2;&#x3092;&#x52A0;&#x901F;&#x3057;&#x3001;&#x5C11;&#x306A;&#x3044;&#x52B4;&#x529B;&#x3067;&#x3088;&#x308A;&#x30B9;&#x30DE;&#x30FC;&#x30C8;&#x306A;&#x30D7;&#x30ED;&#x30B8;&#x30A7;&#x30AF;&#x30C8;&#x3092;&#x4F5C;&#x6210;&#x3067;&#x304D;&#x307E;&#x3057;&#x305F;&#x3002;&quot;</p>
+                        <footer>&#x1F393; &#x2014; &#x5B66;&#x751F;</footer>
+                    </blockquote>
+                </div>
+        </div>
+        <div class="swiper-pagination"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+    </div>
+</section>
+
+<section class="cta">
+    <div class="container">
+        <h2>AI&#x30C1;&#x30FC;&#x30E0;&#x3068;&#x5171;&#x306B;&#x50CD;&#x304F;&#x6E96;&#x5099;&#x306F;&#x3067;&#x304D;&#x3066;&#x3044;&#x307E;&#x3059;&#x304B;&#xFF1F;</h2>
+        <p>&#x5358;&#x4E00;&#x30E2;&#x30C7;&#x30EB;&#x306B;&#x59A5;&#x5354;&#x3057;&#x306A;&#x3044;&#x3067;&#x304F;&#x3060;&#x3055;&#x3044;&#x3002;&#x4E16;&#x754C;&#x521D;&#x306E;&#x5354;&#x8ABF;&#x578B;AI&#x30C1;&#x30FC;&#x30E0;&#x3092;&#x4F53;&#x9A13;&#x3057;&#x3066;&#x304F;&#x3060;&#x3055;&#x3044; &#x2014; &#x9069;&#x5FDC;&#x578B;&#x30E1;&#x30E2;&#x30EA;&#x3001;&#x5C02;&#x9580;&#x30E2;&#x30C7;&#x30EB;&#x3001;&#x305D;&#x3057;&#x3066;&#x30A8;&#x30F3;&#x30BF;&#x30FC;&#x30D7;&#x30E9;&#x30A4;&#x30BA;&#x30B0;&#x30EC;&#x30FC;&#x30C9;&#x306E;&#x6027;&#x80FD;&#x3092;&#x5099;&#x3048;&#x3066;&#x3044;&#x307E;&#x3059;&#x3002;</p>
+        <div class="cta-buttons">
+            <a href="trial.html" class="btn">&#x7121;&#x6599;&#x30C8;&#x30E9;&#x30A4;&#x30A2;&#x30EB;&#x3092;&#x958B;&#x59CB;</a>
+            <a href="contact.html" class="btn service-btn">&#x30C7;&#x30E2;&#x3092;&#x4E88;&#x7D04;</a>
+        </div>
+    </div>
+</section>
+
+
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&#xA9; 2025 The Intelligent Enterprise Group. &#x7121;&#x65AD;&#x8EE2;&#x8F09;&#x3092;&#x7981;&#x3058;&#x307E;&#x3059;&#x3002;</p>
+        </div>
+    </footer>
+
+    <script src="/js/swiper-bundle.min.js"></script>
+    <script src="/js/cdn.min.js" defer></script>
+    <script src="/js/gsap.min.js"></script>
+    <script src="/js/DrawSVGPlugin.min.js"></script>
+
+    <script type="module" src="/js/themeToggle.js"></script>
+    <script type="module">
+        import { toggleTheme, getCurrentTheme } from '/js/themeToggle.js';
+        const checkbox = document.getElementById('theme-checkbox');
+        const themeLabel = document.getElementById('theme-label');
+
+        if (getCurrentTheme() === 'dark') {
+            checkbox.checked = true;
+            themeLabel.textContent = 'ダークモード';
+        } else {
+            themeLabel.textContent = 'ライトモード';
+        }
+
+        checkbox.addEventListener('change', () => {
+            toggleTheme();
+            themeLabel.textContent = checkbox.checked ? 'ダークモード' : 'ライトモード';
+        });
+    </script>
+
+    <button id="back-to-top" aria-label="Back to Top">&#x30C8;&#x30C3;&#x30D7;</button>
+
+    
+<script>
+    const testimonialSwiper = new Swiper('.swiper-container', {
+        slidesPerView: 1,
+        spaceBetween: 0,
+        loop: true,
+        navigation: { nextEl: '.swiper-button-next', prevEl: '.swiper-button-prev' },
+        pagination: { el: '.swiper-pagination', clickable: true },
+        autoplay: { delay: 5000, disableOnInteraction: false },
+        breakpoints: { 320: { slidesPerView: 1, spaceBetween: 0 }, 768: { slidesPerView: 1, spaceBetween: 0 } }
+    });
+
+    gsap.registerPlugin(DrawSVGPlugin);
+    window.onload = function () {
+        gsap.from(".hero h2", { duration: 1.2, opacity: 0, y: -50, ease: "power2.out" });
+        gsap.from(".hero p", { duration: 1.2, opacity: 0, y: 50, ease: "power2.out", delay: 0.2 });
+        gsap.from(".hero .btn", { duration: 1.2, opacity: 0, scale: 0.8, ease: "back.out(1.7)", delay: 0.4 });
+        gsap.from(".service-card", { duration: 1, opacity: 0, y: 30, ease: "power2.out", stagger: 0.2, delay: 0.6 });
+        gsap.from(".testimonials h2", { duration: 1, opacity: 0, y: -20, ease: "power2.out", delay: 0.8 });
+        gsap.from(".testimonials blockquote", { duration: 1, opacity: 0, y: 20, ease: "power2.out", delay: 1 });
+        gsap.from(".cta h2", { duration: 1, opacity: 0, y: -20, ease: "power2.out", delay: 1.2 });
+        gsap.from(".cta p", { duration: 1, opacity: 0, y: 20, ease: "power2.out", delay: 1.4 });
+        gsap.from(".cta .btn", { duration: 1, opacity: 0, scale: 0.8, ease: "back.out(1.7)", delay: 1.6 });
+    };
+</script>
+
+</body>
+</html>

@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta name="robots" content="index, follow" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <meta name="description" content='Discover partnership opportunities with The Intelligent Enterprise Group. Join our network of technology alliances, research collaborations, and industry partners to co&#x2011;innovate and accelerate AI adoption worldwide.' />
+    <title>Partners &amp; Alliances | The Intelligent Enterprise Group</title>
+
+    <style>
+        html { background-color: #3B3A47; }
+    </style>
+    <script>
+        (function () {
+            const key = 'preferredTheme';
+            const stored = localStorage.getItem(key);
+            const systemDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+            const theme = stored || (systemDark ? 'dark' : 'light');
+            if (theme === 'dark') {
+                document.documentElement.classList.add('dark-mode');
+            }
+        })();
+    </script>
+
+
+        <link rel="alternate" hreflang="en" href="https://theintelligententerprisegroup.com/partners.html" />
+        <link rel="alternate" hreflang="fr" href="https://theintelligententerprisegroup.com/fr/partners.html" />
+        <link rel="alternate" hreflang="de" href="https://theintelligententerprisegroup.com/de/partners.html" />
+        <link rel="alternate" hreflang="es" href="https://theintelligententerprisegroup.com/es/partners.html" />
+        <link rel="alternate" hreflang="pt" href="https://theintelligententerprisegroup.com/pt/partners.html" />
+        <link rel="alternate" hreflang="zh" href="https://theintelligententerprisegroup.com/zh/partners.html" />
+        <link rel="alternate" hreflang="ja" href="https://theintelligententerprisegroup.com/ja/partners.html" />
+        <link rel="alternate" hreflang="ar" href="https://theintelligententerprisegroup.com/ar/partners.html" />
+
+
+    <link rel="alternate" hreflang="x-default" href="https://theintelligententerprisegroup.com/partners.html" />
+
+    <link rel="canonical" href="https://theintelligententerprisegroup.com/partners.html" />
+
+
+    <link rel="stylesheet" href="/css/styles.css" />
+    <link rel="stylesheet" href="/css/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="/css/all.min.css" />
+
+    <script src="/js/lang-switcher.js" defer></script>
+
+    <script>
+        (function () {
+            if (localStorage.getItem('currentLang')) return;
+            const supported = [
+                     { code: "en" } ,
+                     { code: "fr" } ,
+                     { code: "de" } ,
+                     { code: "es" } ,
+                     { code: "pt" } ,
+                     { code: "zh" } ,
+                     { code: "ja" } ,
+                     { code: "ar" } 
+            ];
+            const defaultLang = "en";
+            const navLangs = navigator.languages || [navigator.language || navigator.userLanguage];
+            let detected = null;
+            for (const nav of navLangs) {
+                const code = nav.toLowerCase().split('-')[0];
+                if (supported.find(s => s.code.toLowerCase() === code)) {
+                    detected = code;
+                    break;
+                }
+            }
+            const lang = detected || defaultLang;
+            localStorage.setItem('currentLang', lang);
+            document.documentElement.lang = lang;
+        })();
+    </script>
+
+    <!-- Organization structured data (JSON-LD) -->
+    <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "Organization",
+          "name": "The Intelligent Enterprise Group",
+          "url": "https://theintelligententerprisegroup.com/",
+          "logo": "https://theintelligententerprisegroup.com/images/tieg-logo.png",
+          "sameAs": []
+        }
+    </script>
+    <link rel="icon" href="/favicon.ico" />
+    <link rel="apple-touch-icon" href="/images/apple-touch-icon.png" />
+
+    
+
+</head>
+<body>
+    <header x-data="{ open: false }">
+        <div class="container header-top">
+            <div class="logo"></div>
+            <div class="theme-switch-wrapper">
+                <label class="theme-switch">
+                    <input type="checkbox" id="theme-checkbox" />
+                    <span class="slider round"></span>
+                </label>
+                <span id="theme-label">Light Mode</span>
+                <span class="lang-switcher">
+                    <label for="lang-select" class="lang-label">🌐 Language:</label>
+
+                    <!-- Language switcher -->
+                    <select id="lang-select" class="lang-select">
+                        <option value="en" data-path="/">English</option>
+                        <option value="fr" data-path="/fr/">Fran&#xE7;ais</option>
+                        <option value="de" data-path="/de/">Deutsch</option>
+                        <option value="es" data-path="/es/">Espa&#xF1;ol</option>
+                        <option value="pt" data-path="/pt/">Portugu&#xEA;s</option>
+                        <option value="zh" data-path="/zh/">&#x4E2D;&#x6587;</option>
+                        <option value="ja" data-path="/ja/">&#x65E5;&#x672C;&#x8A9E;</option>
+                        <option value="ar" data-path="/ar/">&#x627;&#x644;&#x639;&#x631;&#x628;&#x64A;&#x629;</option>
+                    </select>
+
+                </span>
+            </div>
+        </div>
+        
+        <div class="container header-nav">
+            <button @click="open = !open" class="menu-toggle" aria-label="Toggle Menu">
+                <svg width="24" height="24" viewBox="0 0 24 24">
+                    <path fill="var(--nav-link-color)" d="M3 6h18v2H3V6zm0 5h18v2H3v-2zm0 5h18v2H3v-2z" />
+                </svg>
+            </button>
+
+            <nav class="main-nav" :class="{ 'open': open }">
+                <ul>
+                    <li><a href="index.html" class="">Home</a></li>
+                    <li><a href="about.html" class="">About Us</a></li>
+                    <li><a href="services.html" class="">Services &amp; Solutions</a></li>
+                    <li><a href="case-studies.html" class="">Case Studies</a></li>
+                    <li><a href="resources.html" class="">Resources &amp; Insights</a></li>
+                    <li><a href="trial.html" class="">Trial</a></li>
+                    <li><a href="pricing.html" class="">Pricing</a></li>
+                    <li><a href="partners.html" class="active">Partners &amp; Alliances</a></li>                    
+                    <li><a href="contact.html" class="">Contact &amp; Consultation</a></li>
+                    <li class="has-submenu"
+                        x-data="{ openSub: false }"
+                        @mouseenter="openSub = true"
+                        @mouseleave="openSub = false">
+                      <button @click="openSub = !openSub"
+                              aria-haspopup="true"
+                              :aria-expanded="openSub.toString()">
+                        Info
+                        <svg width="12" height="12" viewBox="0 0 12 12" aria-hidden="true">
+                          <path d="M3 4l3 3 3-3" fill="currentColor"/>
+                        </svg>
+                      </button>
+                      <ul class="submenu" x-show="openSub" @click.outside="openSub = false">
+                        <li><a href="careers.html" class="">Careers</a></li>
+                        <li><a href="faqs.html" class="">FAQs</a></li>
+                        <li><a href="legal.html" class="">Legal &amp; Policies</a></li>
+                      </ul>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        
+<section class="hero">
+    <div class="container">
+        <h2>Partners &amp; Alliances</h2>
+        <h3>We believe in the power of collaboration. Through strategic partnerships,<br />we deliver comprehensive AI solutions that drive innovation and growth.</h3>
+    </div>
+</section>
+
+<section class="partners">
+    <div class="container partners-container">
+        <h2>Our Partnership Vision</h2>
+        <p>At The Intelligent Enterprise Group, we are building an ecosystem of trusted alliances. While our formal partner network is still emerging, our vision is clear: collaboration drives innovation, and together we can accelerate the future of AI.</p>
+
+        <div class="partners-grid">
+                    <div class="partner-card">
+                        <h3>Technology Alliances</h3>
+                        <p>Working with cloud, infrastructure, and software leaders to scale AI securely.</p>
+                    </div>
+                    <div class="partner-card">
+                        <h3>Research Collaborations</h3>
+                        <p>Partnering with universities and labs to advance AI science and applications.</p>
+                    </div>
+                    <div class="partner-card">
+                        <h3>Industry Networks</h3>
+                        <p>Building ecosystems with enterprises to accelerate adoption and ROI.</p>
+                    </div>
+        </div>
+
+        <div class="partner-cta">
+            <a href="contact.html" class="btn">Become a Partner</a>
+        </div>
+    </div>
+</section>
+
+<section class="why-partner">
+    <div class="container">
+        <h2>Why Partner With Us</h2>
+        <div class="benefits-grid">
+                    <div class="benefit-card">
+                        <i class="fas fa-lightbulb"></i>
+                        <h3>Co&#x2011;Innovation</h3>
+                        <p>Collaborate on cutting&#x2011;edge AI solutions that combine our platform with your expertise to create new market opportunities.</p>
+                    </div>
+                    <div class="benefit-card">
+                        <i class="fas fa-network-wired"></i>
+                        <h3>Ecosystem Access</h3>
+                        <p>Join a growing network of innovators, researchers, and enterprises driving AI adoption across industries.</p>
+                    </div>
+                    <div class="benefit-card">
+                        <i class="fas fa-chart-line"></i>
+                        <h3>Shared Growth</h3>
+                        <p>Unlock new revenue streams and accelerate ROI through joint go&#x2011;to&#x2011;market strategies and integrated offerings.</p>
+                    </div>
+                    <div class="benefit-card">
+                        <i class="fas fa-shield-alt"></i>
+                        <h3>Trusted Expertise</h3>
+                        <p>Leverage our AI Expert Team Platform and OmniPredict agent for secure, scalable, and future&#x2011;ready deployments.</p>
+                    </div>
+        </div>
+    </div>
+</section>
+
+<section class="cta">
+    <div class="container">
+        <h2>Join Our Partnership Network</h2>
+        <p>Contact us today to learn more about how we can work together to transform industries with innovative AI solutions.</p>
+        <a href="contact.html" class="btn">Contact Us</a>
+    </div>
+</section>
+
+
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&#xA9; 2025 The Intelligent Enterprise Group. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="/js/swiper-bundle.min.js"></script>
+    <script src="/js/cdn.min.js" defer></script>
+    <script src="/js/gsap.min.js"></script>
+    <script src="/js/DrawSVGPlugin.min.js"></script>
+
+    <script type="module" src="/js/themeToggle.js"></script>
+    <script type="module">
+        import { toggleTheme, getCurrentTheme } from '/js/themeToggle.js';
+        const checkbox = document.getElementById('theme-checkbox');
+        const themeLabel = document.getElementById('theme-label');
+
+        if (getCurrentTheme() === 'dark') {
+            checkbox.checked = true;
+            themeLabel.textContent = 'Dark Mode';
+        } else {
+            themeLabel.textContent = 'Light Mode';
+        }
+
+        checkbox.addEventListener('change', () => {
+            toggleTheme();
+            themeLabel.textContent = checkbox.checked ? 'Dark Mode' : 'Light Mode';
+        });
+    </script>
+
+    <button id="back-to-top" aria-label="Back to Top">Top</button>
+
+    
+    <script>
+        gsap.registerPlugin(DrawSVGPlugin);
+        window.onload = function () {
+            gsap.from(".hero h2", { duration: 1.2, opacity: 0, y: -50, ease: "power2.out" });
+            gsap.from(".hero h3", { duration: 1.2, opacity: 0, y: 50, ease: "power2.out", delay: 0.2 });
+            gsap.from(".partners-container", { duration: 1, opacity: 0, y: 20, ease: "power2.out", delay: 0.4 });
+            gsap.from(".cta h2", { duration: 1, opacity: 0, y: -20, ease: "power2.out", delay: 0.8 });
+            gsap.from(".cta p", { duration: 1, opacity: 0, y: 20, ease: "power2.out", delay: 1 });
+            gsap.from(".cta .btn", { duration: 1, opacity: 0, scale: 0.8, ease: "back.out(1.7)", delay: 1.2 });
+        };
+    </script>
+
+</body>
+</html>

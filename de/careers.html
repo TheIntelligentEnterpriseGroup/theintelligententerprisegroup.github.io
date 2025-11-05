@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="de" dir="ltr">
+<head>
+    <meta name="robots" content="index, follow" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <meta name="description" content='Entdecken Sie Karrierem&#xF6;glichkeiten bei The Intelligent Enterprise Group. Werden Sie Teil eines Pionierunternehmens mit dem weltweit ersten KI&#x2011;koordinierten Expertenteam. Arbeiten Sie an innovativen Projekten, entwickeln Sie Ihre F&#xE4;higkeiten weiter und leisten Sie globalen Einfluss mit KI&#x2011;gest&#xFC;tzten L&#xF6;sungen.' />
+    <title>Karriere bei The Intelligent Enterprise Group | Gestalten Sie die Zukunft der KI</title>
+
+    <style>
+        html { background-color: #3B3A47; }
+    </style>
+    <script>
+        (function () {
+            const key = 'preferredTheme';
+            const stored = localStorage.getItem(key);
+            const systemDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+            const theme = stored || (systemDark ? 'dark' : 'light');
+            if (theme === 'dark') {
+                document.documentElement.classList.add('dark-mode');
+            }
+        })();
+    </script>
+
+
+        <link rel="alternate" hreflang="en" href="https://theintelligententerprisegroup.com/careers.html" />
+        <link rel="alternate" hreflang="fr" href="https://theintelligententerprisegroup.com/fr/careers.html" />
+        <link rel="alternate" hreflang="de" href="https://theintelligententerprisegroup.com/de/careers.html" />
+        <link rel="alternate" hreflang="es" href="https://theintelligententerprisegroup.com/es/careers.html" />
+        <link rel="alternate" hreflang="pt" href="https://theintelligententerprisegroup.com/pt/careers.html" />
+        <link rel="alternate" hreflang="zh" href="https://theintelligententerprisegroup.com/zh/careers.html" />
+        <link rel="alternate" hreflang="ja" href="https://theintelligententerprisegroup.com/ja/careers.html" />
+        <link rel="alternate" hreflang="ar" href="https://theintelligententerprisegroup.com/ar/careers.html" />
+
+
+    <link rel="alternate" hreflang="x-default" href="https://theintelligententerprisegroup.com/careers.html" />
+
+    <link rel="canonical" href="https://theintelligententerprisegroup.com/de/careers.html" />
+
+
+    <link rel="stylesheet" href="/css/styles.css" />
+    <link rel="stylesheet" href="/css/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="/css/all.min.css" />
+
+    <script src="/js/lang-switcher.js" defer></script>
+
+    <script>
+        (function () {
+            if (localStorage.getItem('currentLang')) return;
+            const supported = [
+                     { code: "en" } ,
+                     { code: "fr" } ,
+                     { code: "de" } ,
+                     { code: "es" } ,
+                     { code: "pt" } ,
+                     { code: "zh" } ,
+                     { code: "ja" } ,
+                     { code: "ar" } 
+            ];
+            const defaultLang = "de";
+            const navLangs = navigator.languages || [navigator.language || navigator.userLanguage];
+            let detected = null;
+            for (const nav of navLangs) {
+                const code = nav.toLowerCase().split('-')[0];
+                if (supported.find(s => s.code.toLowerCase() === code)) {
+                    detected = code;
+                    break;
+                }
+            }
+            const lang = detected || defaultLang;
+            localStorage.setItem('currentLang', lang);
+            document.documentElement.lang = lang;
+        })();
+    </script>
+
+    <!-- Organization structured data (JSON-LD) -->
+    <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "Organization",
+          "name": "The Intelligent Enterprise Group",
+          "url": "https://theintelligententerprisegroup.com/",
+          "logo": "https://theintelligententerprisegroup.com/images/tieg-logo.png",
+          "sameAs": []
+        }
+    </script>
+    <link rel="icon" href="/favicon.ico" />
+    <link rel="apple-touch-icon" href="/images/apple-touch-icon.png" />
+
+    
+
+</head>
+<body>
+    <header x-data="{ open: false }">
+        <div class="container header-top">
+            <div class="logo"></div>
+            <div class="theme-switch-wrapper">
+                <label class="theme-switch">
+                    <input type="checkbox" id="theme-checkbox" />
+                    <span class="slider round"></span>
+                </label>
+                <span id="theme-label">Heller Modus</span>
+                <span class="lang-switcher">
+                    <label for="lang-select" class="lang-label">🌐 Sprache:</label>
+
+                    <!-- Language switcher -->
+                    <select id="lang-select" class="lang-select">
+                        <option value="en" data-path="/">English</option>
+                        <option value="fr" data-path="/fr/">Fran&#xE7;ais</option>
+                        <option value="de" data-path="/de/">Deutsch</option>
+                        <option value="es" data-path="/es/">Espa&#xF1;ol</option>
+                        <option value="pt" data-path="/pt/">Portugu&#xEA;s</option>
+                        <option value="zh" data-path="/zh/">&#x4E2D;&#x6587;</option>
+                        <option value="ja" data-path="/ja/">&#x65E5;&#x672C;&#x8A9E;</option>
+                        <option value="ar" data-path="/ar/">&#x627;&#x644;&#x639;&#x631;&#x628;&#x64A;&#x629;</option>
+                    </select>
+
+                </span>
+            </div>
+        </div>
+        
+        <div class="container header-nav">
+            <button @click="open = !open" class="menu-toggle" aria-label="Toggle Menu">
+                <svg width="24" height="24" viewBox="0 0 24 24">
+                    <path fill="var(--nav-link-color)" d="M3 6h18v2H3V6zm0 5h18v2H3v-2zm0 5h18v2H3v-2z" />
+                </svg>
+            </button>
+
+            <nav class="main-nav" :class="{ 'open': open }">
+                <ul>
+                    <li><a href="index.html" class="">Startseite</a></li>
+                    <li><a href="about.html" class="">&#xDC;ber uns</a></li>
+                    <li><a href="services.html" class="">Dienstleistungen &amp; L&#xF6;sungen</a></li>
+                    <li><a href="case-studies.html" class="">Fallstudien</a></li>
+                    <li><a href="resources.html" class="">Ressourcen &amp; Einblicke</a></li>
+                    <li><a href="trial.html" class="">Testversion</a></li>
+                    <li><a href="pricing.html" class="">Preise</a></li>
+                    <li><a href="partners.html" class="">Partner &amp; Allianzen</a></li>                    
+                    <li><a href="contact.html" class="">Kontakt &amp; Beratung</a></li>
+                    <li class="has-submenu"
+                        x-data="{ openSub: false }"
+                        @mouseenter="openSub = true"
+                        @mouseleave="openSub = false">
+                      <button @click="openSub = !openSub"
+                              aria-haspopup="true"
+                              :aria-expanded="openSub.toString()">
+                        Info
+                        <svg width="12" height="12" viewBox="0 0 12 12" aria-hidden="true">
+                          <path d="M3 4l3 3 3-3" fill="currentColor"/>
+                        </svg>
+                      </button>
+                      <ul class="submenu" x-show="openSub" @click.outside="openSub = false">
+                        <li><a href="careers.html" class="active">Karriere</a></li>
+                        <li><a href="faqs.html" class="">FAQs</a></li>
+                        <li><a href="legal.html" class="">Rechtliches &amp; Richtlinien</a></li>
+                      </ul>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        
+<section class="hero">
+    <div class="container">
+        <h2>Karriere</h2>
+        <h3>Werden Sie Teil unseres innovativen Teams und helfen Sie mit, die Zukunft KI‑gestützter Lösungen zu gestalten.<br />Wir suchen stets talentierte Fachkräfte, die sich für Technologie und Innovation begeistern.</h3>
+    </div>
+</section>
+
+<section class="careers" x-data="{ selectedJob: '' }">
+    <div class="jobs-container">
+        <h2>Aktuelle Stellenangebote</h2>
+        <p class="jobs-note">Derzeit stellen wir nicht aktiv ein, aber wir zeigen hier typische Rollen, um Ihnen einen Eindruck von unseren M&#xF6;glichkeiten zu geben. Wenn Sie sich f&#xFC;r KI und Innovation begeistern, freuen wir uns dennoch, von Ihnen zu h&#xF6;ren.</p>
+        <div class="jobs-grid">
+                <article id="job-aiEngineer" class="job-card" :class="{ 'active': selectedJob === 'aiEngineer' }">
+                    <div class="card-content">
+                        <h3>KI&#x2011;Ingenieur</h3>
+                        <p>Entwerfen, entwickeln und implementieren Sie Machine&#x2011;Learning&#x2011;Modelle, um Innovationen voranzutreiben.</p>
+                        <a href="#" class="btn" @click.prevent="selectedJob = 'aiEngineer';$nextTick(() => document.getElementById('expanded-job').scrollIntoView({ behavior: 'smooth', block: 'start' }));">Mehr erfahren</a>
+                    </div>
+                </article>
+                <article id="job-dataScientist" class="job-card" :class="{ 'active': selectedJob === 'dataScientist' }">
+                    <div class="card-content">
+                        <h3>Data Scientist</h3>
+                        <p>Analysieren Sie komplexe Datens&#xE4;tze und entwickeln Sie Vorhersagemodelle, um umsetzbare Erkenntnisse zu gewinnen.</p>
+                        <a href="#" class="btn" @click.prevent="selectedJob = 'dataScientist';$nextTick(() => document.getElementById('expanded-job').scrollIntoView({ behavior: 'smooth', block: 'start' }));">Mehr erfahren</a>
+                    </div>
+                </article>
+                <article id="job-bizDev" class="job-card" :class="{ 'active': selectedJob === 'bizDev' }">
+                    <div class="card-content">
+                        <h3>Business Development Manager</h3>
+                        <p>F&#xF6;rdern Sie Wachstum und bauen Sie strategische Partnerschaften im sich wandelnden Technologiemarkt auf.</p>
+                        <a href="#" class="btn" @click.prevent="selectedJob = 'bizDev';$nextTick(() => document.getElementById('expanded-job').scrollIntoView({ behavior: 'smooth', block: 'start' }));">Mehr erfahren</a>
+                    </div>
+                </article>
+                <article id="job-solutionsArchitect" class="job-card" :class="{ 'active': selectedJob === 'solutionsArchitect' }">
+                    <div class="card-content">
+                        <h3>KI&#x2011;L&#xF6;sungsarchitekt</h3>
+                        <p>&#xDC;berbr&#xFC;cken Sie Kundenbed&#xFC;rfnisse und technisches Design, um skalierbare und effektive KI&#x2011;L&#xF6;sungen sicherzustellen.</p>
+                        <a href="#" class="btn" @click.prevent="selectedJob = 'solutionsArchitect';$nextTick(() => document.getElementById('expanded-job').scrollIntoView({ behavior: 'smooth', block: 'start' }));">Mehr erfahren</a>
+                    </div>
+                </article>
+                <article id="job-projectManager" class="job-card" :class="{ 'active': selectedJob === 'projectManager' }">
+                    <div class="card-content">
+                        <h3>Projektmanager (KI/Technologie)</h3>
+                        <p>Leiten Sie funktions&#xFC;bergreifende Teams, um komplexe KI&#x2011;Projekte termingerecht und wirkungsvoll umzusetzen.</p>
+                        <a href="#" class="btn" @click.prevent="selectedJob = 'projectManager';$nextTick(() => document.getElementById('expanded-job').scrollIntoView({ behavior: 'smooth', block: 'start' }));">Mehr erfahren</a>
+                    </div>
+                </article>
+                <article id="job-uxDesigner" class="job-card" :class="{ 'active': selectedJob === 'uxDesigner' }">
+                    <div class="card-content">
+                        <h3>UX&#x2011;Designer (KI&#x2011;Schnittstellen)</h3>
+                        <p>Gestalten Sie intuitive, nutzerzentrierte KI&#x2011;Schnittstellen, die Benutzerfreundlichkeit und Vertrauen f&#xF6;rdern.</p>
+                        <a href="#" class="btn" @click.prevent="selectedJob = 'uxDesigner';$nextTick(() => document.getElementById('expanded-job').scrollIntoView({ behavior: 'smooth', block: 'start' }));">Mehr erfahren</a>
+                    </div>
+                </article>
+                <article id="job-ethicsSpecialist" class="job-card" :class="{ 'active': selectedJob === 'ethicsSpecialist' }">
+                    <div class="card-content">
+                        <h3>KI&#x2011;Ethik&#x2011; &amp; Compliance&#x2011;Spezialist</h3>
+                        <p>Sorgen Sie f&#xFC;r verantwortungsvolle KI&#x2011;Praktiken, Governance und regulatorische Konformit&#xE4;t in allen Projekten.</p>
+                        <a href="#" class="btn" @click.prevent="selectedJob = 'ethicsSpecialist';$nextTick(() => document.getElementById('expanded-job').scrollIntoView({ behavior: 'smooth', block: 'start' }));">Mehr erfahren</a>
+                    </div>
+                </article>
+                <article id="job-generalApp" class="job-card" :class="{ 'active': selectedJob === 'generalApp' }">
+                    <div class="card-content">
+                        <h3>Initiativbewerbung</h3>
+                        <p>Keine passende Stelle gefunden? Wir freuen uns jederzeit &#xFC;ber au&#xDF;ergew&#xF6;hnliche Talente mit Leidenschaft f&#xFC;r KI und Innovation.</p>
+                        <a href="#" class="btn" @click.prevent="selectedJob = 'generalApp';$nextTick(() => document.getElementById('expanded-job').scrollIntoView({ behavior: 'smooth', block: 'start' }));">Mehr erfahren</a>
+                    </div>
+                </article>
+        </div>
+
+        <template x-if="selectedJob !== ''">
+            <div id="expanded-job" class="expanded-job" x-show="selectedJob !== ''" x-transition>
+                <button class="close-btn" @click="const prev = document.getElementById('job-' + selectedJob);selectedJob = '';$nextTick(() => prev.scrollIntoView({ behavior: 'smooth', block: 'start' }));">&times;</button>
+
+                    <div x-show="selectedJob === 'generalApp'" x-transition>
+                        <h3>Initiativbewerbung</h3>
+                        <h4>&#xDC;berblick</h4>
+                        <p>Wir begr&#xFC;&#xDF;en Initiativbewerbungen von Fachkr&#xE4;ften, die zur Gestaltung der Zukunft KI&#x2011;gest&#xFC;tzter L&#xF6;sungen beitragen m&#xF6;chten.</p>
+                            <p>Bitte nutzen Sie unsere <a href='contact.html'>Kontakt‑ &amp; Beratungsseite</a> und wählen Sie "Karriere", um uns Ihren Hintergrund und Ihre Interessen mitzuteilen.</p>
+                    </div>
+                    <div x-show="selectedJob === 'aiEngineer'" x-transition>
+                        <h3>KI&#x2011;Ingenieur</h3>
+                        <h4>&#xDC;berblick</h4>
+                        <p>Wir suchen einen erfahrenen KI&#x2011;Ingenieur, der fortschrittliche Machine&#x2011;Learning&#x2011;Modelle und KI&#x2011;gest&#xFC;tzte Systeme entwirft und implementiert.</p>
+                            <h5>Aufgaben</h5>
+                            <ul>
+                                    <li>Entwicklung, Test und Implementierung skalierbarer KI&#x2011;Modelle.</li>
+                                    <li>Zusammenarbeit mit funktions&#xFC;bergreifenden Teams zur nahtlosen Integration von KI&#x2011;L&#xF6;sungen.</li>
+                                    <li>Optimierung von Algorithmen hinsichtlich Leistung und Wartbarkeit.</li>
+                            </ul>
+                            <h5>Anforderungen</h5>
+                            <ul>
+                                    <li>Bachelor&#x2011; oder Masterabschluss in Informatik, Ingenieurwesen oder einem verwandten Fachgebiet.</li>
+                                    <li>Fundierte Kenntnisse in Python und Erfahrung mit Frameworks wie TensorFlow oder PyTorch.</li>
+                                    <li>Starke analytische F&#xE4;higkeiten und Leidenschaft f&#xFC;r Innovation.</li>
+                            </ul>
+                            <p>Bitte nutzen Sie unsere <a href='contact.html'>Kontakt‑ &amp; Beratungsseite</a> und wählen Sie "Karriere" als Anfrageart.</p>
+                    </div>
+                    <div x-show="selectedJob === 'dataScientist'" x-transition>
+                        <h3>Data Scientist</h3>
+                        <h4>&#xDC;berblick</h4>
+                        <p>Als Data Scientist analysieren Sie gro&#xDF;e Datens&#xE4;tze, um Vorhersageerkenntnisse zu generieren und strategische Entscheidungen zu unterst&#xFC;tzen.</p>
+                            <h5>Aufgaben</h5>
+                            <ul>
+                                    <li>Analyse strukturierter und unstrukturierter Daten zur Identifizierung von Mustern und Trends.</li>
+                                    <li>Entwicklung von Vorhersagemodellen und Datenvisualisierungen.</li>
+                                    <li>Zusammenarbeit mit Teams, um komplexe Ergebnisse in umsetzbare Strategien zu &#xFC;berf&#xFC;hren.</li>
+                            </ul>
+                            <h5>Anforderungen</h5>
+                            <ul>
+                                    <li>Abschluss in Data Science, Statistik, Mathematik oder einem verwandten Fachgebiet.</li>
+                                    <li>Erfahrung mit Datenanalysetools wie Python, R und SQL.</li>
+                                    <li>Vertrautheit mit Machine&#x2011;Learning&#x2011;Frameworks und Visualisierungstools.</li>
+                            </ul>
+                            <p>Bitte nutzen Sie unsere <a href='contact.html'>Kontakt‑ &amp; Beratungsseite</a> und wählen Sie "Karriere" als Anfrageart.</p>
+                    </div>
+                    <div x-show="selectedJob === 'bizDev'" x-transition>
+                        <h3>Business Development Manager</h3>
+                        <h4>&#xDC;berblick</h4>
+                        <p>Unser Business Development Manager treibt das Wachstum voran, indem er strategische Partnerschaften aufbaut und unsere Marktpr&#xE4;senz erweitert.</p>
+                            <h5>Aufgaben</h5>
+                            <ul>
+                                    <li>Neue Gesch&#xE4;ftsm&#xF6;glichkeiten identifizieren und strategische Partnerschaften entwickeln.</li>
+                                    <li>Mit Marketing&#x2011; und Produktteams zusammenarbeiten, um Wachstumsstrategien zu gestalten.</li>
+                                    <li>Vertr&#xE4;ge verhandeln und starke Kundenbeziehungen aufbauen.</li>
+                            </ul>
+                            <h5>Anforderungen</h5>
+                            <ul>
+                                    <li>Bachelorabschluss in Betriebswirtschaft, Marketing oder einem verwandten Bereich mit nachgewiesener Erfahrung.</li>
+                                    <li>Ausgezeichnete Kommunikations&#x2011;, Verhandlungs&#x2011; und zwischenmenschliche F&#xE4;higkeiten.</li>
+                                    <li>Tiefes Verst&#xE4;ndnis der Technologiebranche und Markttrends.</li>
+                            </ul>
+                            <p>Bitte nutzen Sie unsere <a href='contact.html'>Kontakt‑ &amp; Beratungsseite</a> und wählen Sie "Karriere" als Anfrageart.</p>
+                    </div>
+                    <div x-show="selectedJob === 'solutionsArchitect'" x-transition>
+                        <h3>KI&#x2011;L&#xF6;sungsarchitekt</h3>
+                        <h4>&#xDC;berblick</h4>
+                        <p>Als KI&#x2011;L&#xF6;sungsarchitekt &#xFC;bersetzen Sie Gesch&#xE4;ftsanforderungen in skalierbare KI&#x2011;Systemdesigns und stellen technische Machbarkeit sowie Kundenziele sicher.</p>
+                            <h5>Aufgaben</h5>
+                            <ul>
+                                    <li>Mit Kunden Anforderungen erfassen und L&#xF6;sungsarchitekturen definieren.</li>
+                                    <li>End&#x2011;to&#x2011;End&#x2011;KI&#x2011;Systeme entwerfen, die sich in bestehende Unternehmensplattformen integrieren.</li>
+                                    <li>Mit Ingenieuren, Data Scientists und Projektmanagern zusammenarbeiten, um L&#xF6;sungen zu liefern.</li>
+                            </ul>
+                            <h5>Anforderungen</h5>
+                            <ul>
+                                    <li>Fundierter Hintergrund in Softwarearchitektur und Cloud&#x2011;Plattformen.</li>
+                                    <li>Erfahrung mit KI/ML&#x2011;Frameworks und Deployment&#x2011;Strategien.</li>
+                                    <li>Exzellente Kommunikations&#x2011; und Stakeholder&#x2011;Management&#x2011;F&#xE4;higkeiten.</li>
+                            </ul>
+                            <p>Bitte nutzen Sie unsere <a href='contact.html'>Kontakt‑ &amp; Beratungsseite</a> und wählen Sie "Karriere".</p>
+                    </div>
+                    <div x-show="selectedJob === 'projectManager'" x-transition>
+                        <h3>Projektmanager (KI/Technologie)</h3>
+                        <h4>&#xDC;berblick</h4>
+                        <p>Wir suchen einen Projektmanager, der die Planung und Umsetzung von KI&#x2011;Initiativen &#xFC;berwacht und eine termingerechte Lieferung im Einklang mit den Gesch&#xE4;ftszielen sicherstellt.</p>
+                            <h5>Aufgaben</h5>
+                            <ul>
+                                    <li>Projektzeitpl&#xE4;ne, Budgets und Ergebnisse f&#xFC;r KI&#x2011;Projekte verwalten.</li>
+                                    <li>Funktions&#xFC;bergreifende Teams und externe Stakeholder koordinieren.</li>
+                                    <li>Risiken identifizieren und Gegenma&#xDF;nahmen umsetzen.</li>
+                            </ul>
+                            <h5>Anforderungen</h5>
+                            <ul>
+                                    <li>Nachgewiesene Erfahrung in der Leitung von Technologie&#x2011; oder KI&#x2011;Projekten.</li>
+                                    <li>Starke organisatorische und F&#xFC;hrungsf&#xE4;higkeiten.</li>
+                                    <li>Vertrautheit mit agilen Methoden und Projektmanagement&#x2011;Tools.</li>
+                            </ul>
+                            <p>Bitte nutzen Sie unsere <a href='contact.html'>Kontakt‑ &amp; Beratungsseite</a> und wählen Sie "Karriere".</p>
+                    </div>
+                    <div x-show="selectedJob === 'uxDesigner'" x-transition>
+                        <h3>UX&#x2011;Designer (KI&#x2011;Schnittstellen)</h3>
+                        <h4>&#xDC;berblick</h4>
+                        <p>Als UX&#x2011;Designer konzentrieren Sie sich auf die Gestaltung intuitiver, nutzerzentrierter Schnittstellen f&#xFC;r KI&#x2011;Systeme, die Benutzerfreundlichkeit und Vertrauen f&#xF6;rdern.</p>
+                            <h5>Aufgaben</h5>
+                            <ul>
+                                    <li>User Flows, Wireframes und Prototypen f&#xFC;r KI&#x2011;gest&#xFC;tzte Anwendungen entwerfen.</li>
+                                    <li>Nutzerforschung und Usability&#x2011;Tests durchf&#xFC;hren, um Designs zu verfeinern.</li>
+                                    <li>Mit Ingenieuren und Produktmanagern zusammenarbeiten, um Designs umzusetzen.</li>
+                            </ul>
+                            <h5>Anforderungen</h5>
+                            <ul>
+                                    <li>Erfahrung im UX/UI&#x2011;Design mit einem Portfolio relevanter Projekte.</li>
+                                    <li>Kenntnisse in Barrierefreiheit und nutzerzentrierten Designprinzipien.</li>
+                                    <li>Vertrautheit mit KI&#x2011;gest&#xFC;tzten Schnittstellen ist von Vorteil.</li>
+                            </ul>
+                            <p>Bitte nutzen Sie unsere <a href='contact.html'>Kontakt‑ &amp; Beratungsseite</a> und wählen Sie "Karriere".</p>
+                    </div>
+                    <div x-show="selectedJob === 'ethicsSpecialist'" x-transition>
+                        <h3>KI&#x2011;Ethik&#x2011; &amp; Compliance&#x2011;Spezialist</h3>
+                        <h4>&#xDC;berblick</h4>
+                        <p>Wir suchen einen Ethik&#x2011; &amp; Compliance&#x2011;Spezialisten, der sicherstellt, dass unsere KI&#x2011;L&#xF6;sungen verantwortungsvoll entwickelt und eingesetzt werden &#x2013; im Einklang mit Governance&#x2011; und Regulierungsstandards.</p>
+                            <h5>Aufgaben</h5>
+                            <ul>
+                                    <li>Ethische KI&#x2011;Richtlinien und Compliance&#x2011;Frameworks entwickeln und durchsetzen.</li>
+                                    <li>Projekte auf Einhaltung von Datenschutz&#x2011; und Fairnessstandards &#xFC;berwachen.</li>
+                                    <li>Teams zu regulatorischen Anforderungen und verantwortungsvollen KI&#x2011;Praktiken beraten.</li>
+                            </ul>
+                            <h5>Anforderungen</h5>
+                            <ul>
+                                    <li>Hintergrund in Ethik, Recht, Compliance oder einem verwandten Bereich.</li>
+                                    <li>Verst&#xE4;ndnis von KI&#x2011;Technologien und deren gesellschaftlichen Auswirkungen.</li>
+                                    <li>Starke Kommunikations&#x2011; und Policy&#x2011;Entwicklungsf&#xE4;higkeiten.</li>
+                            </ul>
+                            <p>Bitte nutzen Sie unsere <a href='contact.html'>Kontakt‑ &amp; Beratungsseite</a> und wählen Sie "Karriere".</p>
+                    </div>
+            </div>
+        </template>
+    </div>
+</section>
+
+<section class="what-we-offer">
+    <div class="container">
+        <h2>Was wir bieten</h2>
+        <div class="benefits-grid">
+                <div class="benefit-card">
+                    <i class="fas fa-lightbulb"></i>
+                    <h3>Innovative Projekte</h3>
+                    <p>Arbeiten Sie an wegweisenden KI&#x2011;L&#xF6;sungen, die weltweit Branchen beeinflussen.</p>
+                </div>
+                <div class="benefit-card">
+                    <i class="fas fa-users"></i>
+                    <h3>Kollaborative Kultur</h3>
+                    <p>Werden Sie Teil eines vielf&#xE4;ltigen, unterst&#xFC;tzenden Teams, in dem Ideen gesch&#xE4;tzt und geteilt werden.</p>
+                </div>
+                <div class="benefit-card">
+                    <i class="fas fa-graduation-cap"></i>
+                    <h3>Kontinuierliches Lernen</h3>
+                    <p>Erweitern Sie Ihre F&#xE4;higkeiten durch kontinuierliche Schulungen, Mentoring und Wissensaustausch.</p>
+                </div>
+                <div class="benefit-card">
+                    <i class="fas fa-globe"></i>
+                    <h3>Globaler Einfluss</h3>
+                    <p>Tragen Sie zu Projekten bei, die die Zukunft der KI &#xFC;ber Branchen und Grenzen hinweg gestalten.</p>
+                </div>
+        </div>
+    </div>
+</section>
+
+<section class="cta">
+    <div class="container">
+        <h2>Werden Sie Teil unseres Teams</h2>
+        <p>Sind Sie bereit, die Zukunft KI&#x2011;gest&#xFC;tzter L&#xF6;sungen mitzugestalten? Bewerben Sie sich jetzt oder kontaktieren Sie uns f&#xFC;r weitere Informationen zu Karrierem&#xF6;glichkeiten bei The Intelligent Enterprise Group.</p>
+        <a href="contact.html" class="btn">Kontakt aufnehmen</a>
+    </div>
+</section>
+
+
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&#xA9; 2025 The Intelligent Enterprise Group. Alle Rechte vorbehalten.</p>
+        </div>
+    </footer>
+
+    <script src="/js/swiper-bundle.min.js"></script>
+    <script src="/js/cdn.min.js" defer></script>
+    <script src="/js/gsap.min.js"></script>
+    <script src="/js/DrawSVGPlugin.min.js"></script>
+
+    <script type="module" src="/js/themeToggle.js"></script>
+    <script type="module">
+        import { toggleTheme, getCurrentTheme } from '/js/themeToggle.js';
+        const checkbox = document.getElementById('theme-checkbox');
+        const themeLabel = document.getElementById('theme-label');
+
+        if (getCurrentTheme() === 'dark') {
+            checkbox.checked = true;
+            themeLabel.textContent = 'Dunkler Modus';
+        } else {
+            themeLabel.textContent = 'Heller Modus';
+        }
+
+        checkbox.addEventListener('change', () => {
+            toggleTheme();
+            themeLabel.textContent = checkbox.checked ? 'Dunkler Modus' : 'Heller Modus';
+        });
+    </script>
+
+    <button id="back-to-top" aria-label="Back to Top">Nach oben</button>
+
+    
+<script>
+    gsap.registerPlugin(DrawSVGPlugin);
+    window.onload = function () {
+        gsap.from(".hero h2", { duration: 1.2, opacity: 0, y: -50, ease: "power2.out" });
+        gsap.from(".hero p", { duration: 1.2, opacity: 0, y: 50, ease: "power2.out", delay: 0.2 });
+        gsap.from(".jobs-container", { duration: 1, opacity: 0, y: 20, ease: "power2.out", delay: 0.4 });
+        gsap.from(".expanded-job", { duration: 1, opacity: 0, y: 20, ease: "power2.out", delay: 0.6 });
+        gsap.from(".cta h2", { duration: 1, opacity: 0, y: -20, ease: "power2.out", delay: 0.8 });
+        gsap.from(".cta p", { duration: 1, opacity: 0, y: 20, ease: "power2.out", delay: 1 });
+        gsap.from(".cta .btn", { duration: 1, opacity: 0, scale: 0.8, ease: "back.out(1.7)", delay: 1.2 });
+    };
+</script>
+
+
+</body>
+</html>

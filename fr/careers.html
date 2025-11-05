@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="fr" dir="ltr">
+<head>
+    <meta name="robots" content="index, follow" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <meta name="description" content='D&#xE9;couvrez les carri&#xE8;res au sein de The Intelligent Enterprise Group. Rejoignez une entreprise pionni&#xE8;re offrant la premi&#xE8;re &#xE9;quipe d&#x2019;experts IA coordonn&#xE9;e au monde. Travaillez sur des projets innovants, d&#xE9;veloppez vos comp&#xE9;tences et contribuez &#xE0; un impact mondial gr&#xE2;ce &#xE0; des solutions pilot&#xE9;es par l&#x2019;IA.' />
+    <title>Carri&#xE8;res chez The Intelligent Enterprise Group | Fa&#xE7;onnez l&#x2019;avenir de l&#x2019;IA</title>
+
+    <style>
+        html { background-color: #3B3A47; }
+    </style>
+    <script>
+        (function () {
+            const key = 'preferredTheme';
+            const stored = localStorage.getItem(key);
+            const systemDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+            const theme = stored || (systemDark ? 'dark' : 'light');
+            if (theme === 'dark') {
+                document.documentElement.classList.add('dark-mode');
+            }
+        })();
+    </script>
+
+
+        <link rel="alternate" hreflang="en" href="https://theintelligententerprisegroup.com/careers.html" />
+        <link rel="alternate" hreflang="fr" href="https://theintelligententerprisegroup.com/fr/careers.html" />
+        <link rel="alternate" hreflang="de" href="https://theintelligententerprisegroup.com/de/careers.html" />
+        <link rel="alternate" hreflang="es" href="https://theintelligententerprisegroup.com/es/careers.html" />
+        <link rel="alternate" hreflang="pt" href="https://theintelligententerprisegroup.com/pt/careers.html" />
+        <link rel="alternate" hreflang="zh" href="https://theintelligententerprisegroup.com/zh/careers.html" />
+        <link rel="alternate" hreflang="ja" href="https://theintelligententerprisegroup.com/ja/careers.html" />
+        <link rel="alternate" hreflang="ar" href="https://theintelligententerprisegroup.com/ar/careers.html" />
+
+
+    <link rel="alternate" hreflang="x-default" href="https://theintelligententerprisegroup.com/careers.html" />
+
+    <link rel="canonical" href="https://theintelligententerprisegroup.com/fr/careers.html" />
+
+
+    <link rel="stylesheet" href="/css/styles.css" />
+    <link rel="stylesheet" href="/css/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="/css/all.min.css" />
+
+    <script src="/js/lang-switcher.js" defer></script>
+
+    <script>
+        (function () {
+            if (localStorage.getItem('currentLang')) return;
+            const supported = [
+                     { code: "en" } ,
+                     { code: "fr" } ,
+                     { code: "de" } ,
+                     { code: "es" } ,
+                     { code: "pt" } ,
+                     { code: "zh" } ,
+                     { code: "ja" } ,
+                     { code: "ar" } 
+            ];
+            const defaultLang = "fr";
+            const navLangs = navigator.languages || [navigator.language || navigator.userLanguage];
+            let detected = null;
+            for (const nav of navLangs) {
+                const code = nav.toLowerCase().split('-')[0];
+                if (supported.find(s => s.code.toLowerCase() === code)) {
+                    detected = code;
+                    break;
+                }
+            }
+            const lang = detected || defaultLang;
+            localStorage.setItem('currentLang', lang);
+            document.documentElement.lang = lang;
+        })();
+    </script>
+
+    <!-- Organization structured data (JSON-LD) -->
+    <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "Organization",
+          "name": "The Intelligent Enterprise Group",
+          "url": "https://theintelligententerprisegroup.com/",
+          "logo": "https://theintelligententerprisegroup.com/images/tieg-logo.png",
+          "sameAs": []
+        }
+    </script>
+    <link rel="icon" href="/favicon.ico" />
+    <link rel="apple-touch-icon" href="/images/apple-touch-icon.png" />
+
+    
+
+</head>
+<body>
+    <header x-data="{ open: false }">
+        <div class="container header-top">
+            <div class="logo"></div>
+            <div class="theme-switch-wrapper">
+                <label class="theme-switch">
+                    <input type="checkbox" id="theme-checkbox" />
+                    <span class="slider round"></span>
+                </label>
+                <span id="theme-label">Mode clair</span>
+                <span class="lang-switcher">
+                    <label for="lang-select" class="lang-label">🌐 Langue :</label>
+
+                    <!-- Language switcher -->
+                    <select id="lang-select" class="lang-select">
+                        <option value="en" data-path="/">English</option>
+                        <option value="fr" data-path="/fr/">Fran&#xE7;ais</option>
+                        <option value="de" data-path="/de/">Deutsch</option>
+                        <option value="es" data-path="/es/">Espa&#xF1;ol</option>
+                        <option value="pt" data-path="/pt/">Portugu&#xEA;s</option>
+                        <option value="zh" data-path="/zh/">&#x4E2D;&#x6587;</option>
+                        <option value="ja" data-path="/ja/">&#x65E5;&#x672C;&#x8A9E;</option>
+                        <option value="ar" data-path="/ar/">&#x627;&#x644;&#x639;&#x631;&#x628;&#x64A;&#x629;</option>
+                    </select>
+
+                </span>
+            </div>
+        </div>
+        
+        <div class="container header-nav">
+            <button @click="open = !open" class="menu-toggle" aria-label="Toggle Menu">
+                <svg width="24" height="24" viewBox="0 0 24 24">
+                    <path fill="var(--nav-link-color)" d="M3 6h18v2H3V6zm0 5h18v2H3v-2zm0 5h18v2H3v-2z" />
+                </svg>
+            </button>
+
+            <nav class="main-nav" :class="{ 'open': open }">
+                <ul>
+                    <li><a href="index.html" class="">Accueil</a></li>
+                    <li><a href="about.html" class="">&#xC0; propos</a></li>
+                    <li><a href="services.html" class="">Services &amp; Solutions</a></li>
+                    <li><a href="case-studies.html" class="">&#xC9;tudes de cas</a></li>
+                    <li><a href="resources.html" class="">Ressources &amp; Analyses</a></li>
+                    <li><a href="trial.html" class="">Essai</a></li>
+                    <li><a href="pricing.html" class="">Tarifs</a></li>
+                    <li><a href="partners.html" class="">Partenaires &amp; Alliances</a></li>                    
+                    <li><a href="contact.html" class="">Contact &amp; Consultation</a></li>
+                    <li class="has-submenu"
+                        x-data="{ openSub: false }"
+                        @mouseenter="openSub = true"
+                        @mouseleave="openSub = false">
+                      <button @click="openSub = !openSub"
+                              aria-haspopup="true"
+                              :aria-expanded="openSub.toString()">
+                        Infos
+                        <svg width="12" height="12" viewBox="0 0 12 12" aria-hidden="true">
+                          <path d="M3 4l3 3 3-3" fill="currentColor"/>
+                        </svg>
+                      </button>
+                      <ul class="submenu" x-show="openSub" @click.outside="openSub = false">
+                        <li><a href="careers.html" class="active">Carri&#xE8;res</a></li>
+                        <li><a href="faqs.html" class="">FAQs</a></li>
+                        <li><a href="legal.html" class="">Mentions l&#xE9;gales &amp; Politiques</a></li>
+                      </ul>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        
+<section class="hero">
+    <div class="container">
+        <h2>Carri&#xE8;res</h2>
+        <h3>Rejoignez notre équipe innovante et contribuez à façonner l’avenir des solutions pilotées par l’IA.<br />Nous recherchons toujours des professionnels talentueux et passionnés par la technologie et l’innovation.</h3>
+    </div>
+</section>
+
+<section class="careers" x-data="{ selectedJob: '' }">
+    <div class="jobs-container">
+        <h2>Postes ouverts</h2>
+        <p class="jobs-note">Nous ne recrutons pas activement pour le moment, mais nous pr&#xE9;sentons ici des r&#xF4;les types afin de vous donner une id&#xE9;e des opportunit&#xE9;s que nous offrons. Si vous &#xEA;tes passionn&#xE9; par l&#x2019;IA et l&#x2019;innovation, nous serions ravis d&#x2019;&#xE9;changer avec vous.</p>
+        <div class="jobs-grid">
+                <article id="job-aiEngineer" class="job-card" :class="{ 'active': selectedJob === 'aiEngineer' }">
+                    <div class="card-content">
+                        <h3>Ing&#xE9;nieur IA</h3>
+                        <p>Concevoir, d&#xE9;velopper et d&#xE9;ployer des mod&#xE8;les d&#x2019;apprentissage automatique pour stimuler l&#x2019;innovation.</p>
+                        <a href="#" class="btn" @click.prevent="selectedJob = 'aiEngineer';$nextTick(() => document.getElementById('expanded-job').scrollIntoView({ behavior: 'smooth', block: 'start' }));">En savoir plus</a>
+                    </div>
+                </article>
+                <article id="job-dataScientist" class="job-card" :class="{ 'active': selectedJob === 'dataScientist' }">
+                    <div class="card-content">
+                        <h3>Data Scientist</h3>
+                        <p>Analyser des ensembles de donn&#xE9;es complexes et d&#xE9;velopper des mod&#xE8;les pr&#xE9;dictifs pour d&#xE9;gager des informations exploitables.</p>
+                        <a href="#" class="btn" @click.prevent="selectedJob = 'dataScientist';$nextTick(() => document.getElementById('expanded-job').scrollIntoView({ behavior: 'smooth', block: 'start' }));">En savoir plus</a>
+                    </div>
+                </article>
+                <article id="job-bizDev" class="job-card" :class="{ 'active': selectedJob === 'bizDev' }">
+                    <div class="card-content">
+                        <h3>Responsable D&#xE9;veloppement Commercial</h3>
+                        <p>Stimuler la croissance et &#xE9;tablir des partenariats strat&#xE9;giques dans un paysage technologique en &#xE9;volution.</p>
+                        <a href="#" class="btn" @click.prevent="selectedJob = 'bizDev';$nextTick(() => document.getElementById('expanded-job').scrollIntoView({ behavior: 'smooth', block: 'start' }));">En savoir plus</a>
+                    </div>
+                </article>
+                <article id="job-solutionsArchitect" class="job-card" :class="{ 'active': selectedJob === 'solutionsArchitect' }">
+                    <div class="card-content">
+                        <h3>Architecte de solutions IA</h3>
+                        <p>Faire le lien entre les besoins des clients et la conception technique, en garantissant des solutions IA &#xE9;volutives et efficaces.</p>
+                        <a href="#" class="btn" @click.prevent="selectedJob = 'solutionsArchitect';$nextTick(() => document.getElementById('expanded-job').scrollIntoView({ behavior: 'smooth', block: 'start' }));">En savoir plus</a>
+                    </div>
+                </article>
+                <article id="job-projectManager" class="job-card" :class="{ 'active': selectedJob === 'projectManager' }">
+                    <div class="card-content">
+                        <h3>Chef de projet (IA/Tech)</h3>
+                        <p>Diriger des &#xE9;quipes pluridisciplinaires pour livrer des projets IA complexes dans les d&#xE9;lais et avec impact.</p>
+                        <a href="#" class="btn" @click.prevent="selectedJob = 'projectManager';$nextTick(() => document.getElementById('expanded-job').scrollIntoView({ behavior: 'smooth', block: 'start' }));">En savoir plus</a>
+                    </div>
+                </article>
+                <article id="job-uxDesigner" class="job-card" :class="{ 'active': selectedJob === 'uxDesigner' }">
+                    <div class="card-content">
+                        <h3>Designer UX (Interfaces IA)</h3>
+                        <p>Concevoir des interfaces IA intuitives et centr&#xE9;es sur l&#x2019;humain, favorisant l&#x2019;utilisabilit&#xE9; et la confiance.</p>
+                        <a href="#" class="btn" @click.prevent="selectedJob = 'uxDesigner';$nextTick(() => document.getElementById('expanded-job').scrollIntoView({ behavior: 'smooth', block: 'start' }));">En savoir plus</a>
+                    </div>
+                </article>
+                <article id="job-ethicsSpecialist" class="job-card" :class="{ 'active': selectedJob === 'ethicsSpecialist' }">
+                    <div class="card-content">
+                        <h3>Sp&#xE9;cialiste &#xC9;thique &amp; Conformit&#xE9; IA</h3>
+                        <p>Garantir des pratiques IA responsables, une gouvernance et une conformit&#xE9; r&#xE9;glementaire sur l&#x2019;ensemble des projets.</p>
+                        <a href="#" class="btn" @click.prevent="selectedJob = 'ethicsSpecialist';$nextTick(() => document.getElementById('expanded-job').scrollIntoView({ behavior: 'smooth', block: 'start' }));">En savoir plus</a>
+                    </div>
+                </article>
+                <article id="job-generalApp" class="job-card" :class="{ 'active': selectedJob === 'generalApp' }">
+                    <div class="card-content">
+                        <h3>Candidature spontan&#xE9;e</h3>
+                        <p>Vous ne trouvez pas de poste correspondant &#xE0; votre profil ? Nous sommes toujours ouverts aux candidatures de talents exceptionnels passionn&#xE9;s par l&#x2019;IA et l&#x2019;innovation.</p>
+                        <a href="#" class="btn" @click.prevent="selectedJob = 'generalApp';$nextTick(() => document.getElementById('expanded-job').scrollIntoView({ behavior: 'smooth', block: 'start' }));">En savoir plus</a>
+                    </div>
+                </article>
+        </div>
+
+        <template x-if="selectedJob !== ''">
+            <div id="expanded-job" class="expanded-job" x-show="selectedJob !== ''" x-transition>
+                <button class="close-btn" @click="const prev = document.getElementById('job-' + selectedJob);selectedJob = '';$nextTick(() => prev.scrollIntoView({ behavior: 'smooth', block: 'start' }));">&times;</button>
+
+                    <div x-show="selectedJob === 'generalApp'" x-transition>
+                        <h3>Candidature spontan&#xE9;e</h3>
+                        <h4>Aper&#xE7;u</h4>
+                        <p>Nous accueillons les candidatures spontan&#xE9;es de professionnels souhaitant contribuer &#xE0; fa&#xE7;onner l&#x2019;avenir des solutions pilot&#xE9;es par l&#x2019;IA.</p>
+                            <p>Veuillez utiliser notre <a href='contact.html'>page Contact &amp; Consultation</a> et sélectionner « Carrières » pour partager votre parcours et vos centres d’intérêt.</p>
+                    </div>
+                    <div x-show="selectedJob === 'aiEngineer'" x-transition>
+                        <h3>Ing&#xE9;nieur IA</h3>
+                        <h4>Aper&#xE7;u</h4>
+                        <p>Nous recherchons un ing&#xE9;nieur IA qualifi&#xE9; pour concevoir et d&#xE9;ployer des mod&#xE8;les avanc&#xE9;s d&#x2019;apprentissage automatique et des syst&#xE8;mes aliment&#xE9;s par l&#x2019;IA.</p>
+                            <h5>Responsabilit&#xE9;s</h5>
+                            <ul>
+                                    <li>D&#xE9;velopper, tester et d&#xE9;ployer des mod&#xE8;les IA &#xE9;volutifs.</li>
+                                    <li>Collaborer avec des &#xE9;quipes pluridisciplinaires pour int&#xE9;grer les solutions IA de mani&#xE8;re fluide.</li>
+                                    <li>Optimiser les algorithmes pour la performance et la maintenabilit&#xE9;.</li>
+                            </ul>
+                            <h5>Exigences</h5>
+                            <ul>
+                                    <li>Dipl&#xF4;me de licence ou master en informatique, ing&#xE9;nierie ou domaine connexe.</li>
+                                    <li>Ma&#xEE;trise de Python et exp&#xE9;rience avec des frameworks tels que TensorFlow ou PyTorch.</li>
+                                    <li>Solides comp&#xE9;tences analytiques et passion pour l&#x2019;innovation.</li>
+                            </ul>
+                            <p>Pour postuler, veuillez utiliser notre <a href='contact.html'>page Contact &amp; Consultation</a> et sélectionner « Carrières » comme type de demande.</p>
+                    </div>
+                    <div x-show="selectedJob === 'dataScientist'" x-transition>
+                        <h3>Data Scientist</h3>
+                        <h4>Aper&#xE7;u</h4>
+                        <p>En tant que Data Scientist, vous analyserez de grands ensembles de donn&#xE9;es afin de g&#xE9;n&#xE9;rer des insights pr&#xE9;dictifs et de soutenir les d&#xE9;cisions strat&#xE9;giques.</p>
+                            <h5>Responsabilit&#xE9;s</h5>
+                            <ul>
+                                    <li>Analyser des donn&#xE9;es structur&#xE9;es et non structur&#xE9;es pour identifier des tendances et des motifs.</li>
+                                    <li>D&#xE9;velopper des mod&#xE8;les pr&#xE9;dictifs et des visualisations de donn&#xE9;es.</li>
+                                    <li>Collaborer avec les &#xE9;quipes pour transformer des r&#xE9;sultats complexes en strat&#xE9;gies exploitables.</li>
+                            </ul>
+                            <h5>Exigences</h5>
+                            <ul>
+                                    <li>Dipl&#xF4;me en Data Science, statistiques, math&#xE9;matiques ou domaine connexe.</li>
+                                    <li>Exp&#xE9;rience avec des outils d&#x2019;analyse de donn&#xE9;es tels que Python, R et SQL.</li>
+                                    <li>Connaissance des frameworks de machine learning et des outils de visualisation de donn&#xE9;es.</li>
+                            </ul>
+                            <p>Pour postuler, veuillez utiliser notre <a href='contact.html'>page Contact &amp; Consultation</a> et sélectionner « Carrières » comme type de demande.</p>
+                    </div>
+                    <div x-show="selectedJob === 'bizDev'" x-transition>
+                        <h3>Responsable D&#xE9;veloppement Commercial</h3>
+                        <h4>Aper&#xE7;u</h4>
+                        <p>Notre Responsable D&#xE9;veloppement Commercial stimulera la croissance en &#xE9;tablissant des partenariats strat&#xE9;giques et en renfor&#xE7;ant notre pr&#xE9;sence sur le march&#xE9;.</p>
+                            <h5>Responsabilit&#xE9;s</h5>
+                            <ul>
+                                    <li>Identifier de nouvelles opportunit&#xE9;s commerciales et d&#xE9;velopper des partenariats strat&#xE9;giques.</li>
+                                    <li>Collaborer avec les &#xE9;quipes marketing et produit pour d&#xE9;finir des strat&#xE9;gies de croissance.</li>
+                                    <li>N&#xE9;gocier des contrats et b&#xE2;tir des relations clients solides.</li>
+                            </ul>
+                            <h5>Exigences</h5>
+                            <ul>
+                                    <li>Dipl&#xF4;me en commerce, marketing ou domaine connexe avec une exp&#xE9;rience av&#xE9;r&#xE9;e.</li>
+                                    <li>Excellentes comp&#xE9;tences en communication, n&#xE9;gociation et relations interpersonnelles.</li>
+                                    <li>Bonne compr&#xE9;hension du secteur technologique et des tendances du march&#xE9;.</li>
+                            </ul>
+                            <p>Pour postuler, veuillez utiliser notre <a href='contact.html'>page Contact &amp; Consultation</a> et sélectionner « Carrières » comme type de demande.</p>
+                    </div>
+                    <div x-show="selectedJob === 'solutionsArchitect'" x-transition>
+                        <h3>Architecte de solutions IA</h3>
+                        <h4>Aper&#xE7;u</h4>
+                        <p>En tant qu&#x2019;architecte de solutions IA, vous traduirez les besoins m&#xE9;tiers en conceptions de syst&#xE8;mes IA &#xE9;volutifs, garantissant la faisabilit&#xE9; technique et l&#x2019;alignement avec les objectifs clients.</p>
+                            <h5>Responsabilit&#xE9;s</h5>
+                            <ul>
+                                    <li>Travailler avec les clients pour recueillir les besoins et d&#xE9;finir les architectures de solutions.</li>
+                                    <li>Concevoir des syst&#xE8;mes IA de bout en bout int&#xE9;gr&#xE9;s aux plateformes d&#x2019;entreprise existantes.</li>
+                                    <li>Collaborer avec les ing&#xE9;nieurs, data scientists et chefs de projet pour livrer les solutions.</li>
+                            </ul>
+                            <h5>Exigences</h5>
+                            <ul>
+                                    <li>Solide exp&#xE9;rience en architecture logicielle et plateformes cloud.</li>
+                                    <li>Exp&#xE9;rience avec les frameworks IA/ML et les strat&#xE9;gies de d&#xE9;ploiement.</li>
+                                    <li>Excellentes comp&#xE9;tences en communication et gestion des parties prenantes.</li>
+                            </ul>
+                            <p>Pour postuler, veuillez utiliser notre <a href='contact.html'>page Contact &amp; Consultation</a> et sélectionner « Carrières ».</p>
+                    </div>
+                    <div x-show="selectedJob === 'projectManager'" x-transition>
+                        <h3>Chef de projet (IA/Tech)</h3>
+                        <h4>Aper&#xE7;u</h4>
+                        <p>Nous recherchons un chef de projet pour superviser la planification et l&#x2019;ex&#xE9;cution des initiatives IA, en garantissant une livraison dans les d&#xE9;lais et en ad&#xE9;quation avec les objectifs de l&#x2019;entreprise.</p>
+                            <h5>Responsabilit&#xE9;s</h5>
+                            <ul>
+                                    <li>G&#xE9;rer les d&#xE9;lais, budgets et livrables des projets IA.</li>
+                                    <li>Coordonner les &#xE9;quipes pluridisciplinaires et les parties prenantes externes.</li>
+                                    <li>Identifier les risques et mettre en &#x153;uvre des strat&#xE9;gies d&#x2019;att&#xE9;nuation.</li>
+                            </ul>
+                            <h5>Exigences</h5>
+                            <ul>
+                                    <li>Exp&#xE9;rience av&#xE9;r&#xE9;e dans la gestion de projets technologiques ou li&#xE9;s &#xE0; l&#x2019;IA.</li>
+                                    <li>Solides comp&#xE9;tences organisationnelles et en leadership.</li>
+                                    <li>Connaissance des m&#xE9;thodologies agiles et des outils de gestion de projet.</li>
+                            </ul>
+                            <p>Pour postuler, veuillez utiliser notre <a href='contact.html'>page Contact &amp; Consultation</a> et sélectionner « Carrières ».</p>
+                    </div>
+                    <div x-show="selectedJob === 'uxDesigner'" x-transition>
+                        <h3>Designer UX (Interfaces IA)</h3>
+                        <h4>Aper&#xE7;u</h4>
+                        <p>En tant que designer UX, vous cr&#xE9;erez des interfaces intuitives et centr&#xE9;es sur l&#x2019;humain pour les syst&#xE8;mes IA, garantissant utilisabilit&#xE9; et confiance dans les interactions homme&#x2011;IA.</p>
+                            <h5>Responsabilit&#xE9;s</h5>
+                            <ul>
+                                    <li>Concevoir des parcours utilisateurs, wireframes et prototypes pour des applications pilot&#xE9;es par l&#x2019;IA.</li>
+                                    <li>Mener des recherches utilisateurs et des tests d&#x2019;utilisabilit&#xE9; pour affiner les conceptions.</li>
+                                    <li>Collaborer avec les ing&#xE9;nieurs et chefs de produit pour mettre en &#x153;uvre les designs.</li>
+                            </ul>
+                            <h5>Exigences</h5>
+                            <ul>
+                                    <li>Exp&#xE9;rience en conception UX/UI avec un portfolio de projets pertinents.</li>
+                                    <li>Connaissance des principes d&#x2019;accessibilit&#xE9; et de conception centr&#xE9;e sur l&#x2019;humain.</li>
+                                    <li>La familiarit&#xE9; avec les interfaces pilot&#xE9;es par l&#x2019;IA est un atout.</li>
+                            </ul>
+                            <p>Pour postuler, veuillez utiliser notre <a href='contact.html'>page Contact &amp; Consultation</a> et sélectionner « Carrières ».</p>
+                    </div>
+                    <div x-show="selectedJob === 'ethicsSpecialist'" x-transition>
+                        <h3>Sp&#xE9;cialiste &#xC9;thique &amp; Conformit&#xE9; IA</h3>
+                        <h4>Aper&#xE7;u</h4>
+                        <p>Nous recherchons un sp&#xE9;cialiste &#xC9;thique &amp; Conformit&#xE9; pour garantir que nos solutions IA soient d&#xE9;velopp&#xE9;es et d&#xE9;ploy&#xE9;es de mani&#xE8;re responsable, conform&#xE9;ment aux normes de gouvernance et r&#xE9;glementaires.</p>
+                            <h5>Responsabilit&#xE9;s</h5>
+                            <ul>
+                                    <li>&#xC9;laborer et appliquer des lignes directrices &#xE9;thiques et des cadres de conformit&#xE9; pour l&#x2019;IA.</li>
+                                    <li>Surveiller les projets afin d&#x2019;assurer le respect des normes de confidentialit&#xE9; des donn&#xE9;es et d&#x2019;&#xE9;quit&#xE9;.</li>
+                                    <li>Conseiller les &#xE9;quipes sur les exigences r&#xE9;glementaires et les pratiques d&#x2019;IA responsable.</li>
+                            </ul>
+                            <h5>Exigences</h5>
+                            <ul>
+                                    <li>Formation en &#xE9;thique, droit, conformit&#xE9; ou domaine connexe.</li>
+                                    <li>Compr&#xE9;hension des technologies IA et de leur impact soci&#xE9;tal.</li>
+                                    <li>Excellentes comp&#xE9;tences en communication et en &#xE9;laboration de politiques.</li>
+                            </ul>
+                            <p>Pour postuler, veuillez utiliser notre <a href='contact.html'>page Contact &amp; Consultation</a> et sélectionner « Carrières ».</p>
+                    </div>
+            </div>
+        </template>
+    </div>
+</section>
+
+<section class="what-we-offer">
+    <div class="container">
+        <h2>Ce que nous offrons</h2>
+        <div class="benefits-grid">
+                <div class="benefit-card">
+                    <i class="fas fa-lightbulb"></i>
+                    <h3>Projets innovants</h3>
+                    <p>Travaillez sur des solutions IA de pointe qui transforment les industries &#xE0; l&#x2019;&#xE9;chelle mondiale.</p>
+                </div>
+                <div class="benefit-card">
+                    <i class="fas fa-users"></i>
+                    <h3>Culture collaborative</h3>
+                    <p>Rejoignez une &#xE9;quipe diversifi&#xE9;e et solidaire o&#xF9; les id&#xE9;es sont valoris&#xE9;es et partag&#xE9;es.</p>
+                </div>
+                <div class="benefit-card">
+                    <i class="fas fa-graduation-cap"></i>
+                    <h3>Apprentissage continu</h3>
+                    <p>D&#xE9;veloppez vos comp&#xE9;tences gr&#xE2;ce &#xE0; des formations, du mentorat et le partage de connaissances.</p>
+                </div>
+                <div class="benefit-card">
+                    <i class="fas fa-globe"></i>
+                    <h3>Impact mondial</h3>
+                    <p>Contribuez &#xE0; des projets qui fa&#xE7;onnent l&#x2019;avenir de l&#x2019;IA &#xE0; travers les secteurs et les fronti&#xE8;res.</p>
+                </div>
+        </div>
+    </div>
+</section>
+
+<section class="cta">
+    <div class="container">
+        <h2>Rejoignez notre &#xE9;quipe</h2>
+        <p>&#xCA;tes-vous pr&#xEA;t &#xE0; contribuer &#xE0; fa&#xE7;onner l&#x2019;avenir des solutions pilot&#xE9;es par l&#x2019;IA ? Postulez d&#xE8;s maintenant ou contactez-nous pour plus d&#x2019;informations sur les opportunit&#xE9;s de carri&#xE8;re chez The Intelligent Enterprise Group.</p>
+        <a href="contact.html" class="btn">Contactez-nous</a>
+    </div>
+</section>
+
+
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&#xA9; 2025 The Intelligent Enterprise Group. Tous droits r&#xE9;serv&#xE9;s.</p>
+        </div>
+    </footer>
+
+    <script src="/js/swiper-bundle.min.js"></script>
+    <script src="/js/cdn.min.js" defer></script>
+    <script src="/js/gsap.min.js"></script>
+    <script src="/js/DrawSVGPlugin.min.js"></script>
+
+    <script type="module" src="/js/themeToggle.js"></script>
+    <script type="module">
+        import { toggleTheme, getCurrentTheme } from '/js/themeToggle.js';
+        const checkbox = document.getElementById('theme-checkbox');
+        const themeLabel = document.getElementById('theme-label');
+
+        if (getCurrentTheme() === 'dark') {
+            checkbox.checked = true;
+            themeLabel.textContent = 'Mode sombre';
+        } else {
+            themeLabel.textContent = 'Mode clair';
+        }
+
+        checkbox.addEventListener('change', () => {
+            toggleTheme();
+            themeLabel.textContent = checkbox.checked ? 'Mode sombre' : 'Mode clair';
+        });
+    </script>
+
+    <button id="back-to-top" aria-label="Back to Top">Haut</button>
+
+    
+<script>
+    gsap.registerPlugin(DrawSVGPlugin);
+    window.onload = function () {
+        gsap.from(".hero h2", { duration: 1.2, opacity: 0, y: -50, ease: "power2.out" });
+        gsap.from(".hero p", { duration: 1.2, opacity: 0, y: 50, ease: "power2.out", delay: 0.2 });
+        gsap.from(".jobs-container", { duration: 1, opacity: 0, y: 20, ease: "power2.out", delay: 0.4 });
+        gsap.from(".expanded-job", { duration: 1, opacity: 0, y: 20, ease: "power2.out", delay: 0.6 });
+        gsap.from(".cta h2", { duration: 1, opacity: 0, y: -20, ease: "power2.out", delay: 0.8 });
+        gsap.from(".cta p", { duration: 1, opacity: 0, y: 20, ease: "power2.out", delay: 1 });
+        gsap.from(".cta .btn", { duration: 1, opacity: 0, scale: 0.8, ease: "back.out(1.7)", delay: 1.2 });
+    };
+</script>
+
+
+</body>
+</html>

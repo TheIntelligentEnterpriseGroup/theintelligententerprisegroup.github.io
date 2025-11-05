@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="zh" dir="ltr">
+<head>
+    <meta name="robots" content="index, follow" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <meta name="description" content='&#x4F53;&#x9A8C;&#x6765;&#x81EA;&#x667A;&#x80FD;&#x4F01;&#x4E1A;&#x96C6;&#x56E2;&#x7684;&#x5168;&#x7403;&#x9996;&#x4E2A; AI &#x534F;&#x4F5C;&#x4E13;&#x5BB6;&#x56E2;&#x961F;&#x3002;&#x81EA;&#x9002;&#x5E94;&#x8BB0;&#x5FC6;&#x3001;&#x4E13;&#x4E1A;&#x5316;&#x6A21;&#x578B;&#x3001;&#x591A;&#x8BED;&#x8A00;&#x80FD;&#x529B;&#x548C;&#x4F01;&#x4E1A;&#x7EA7;&#x6027;&#x80FD;&#x2014;&#x2014;&#x65E8;&#x5728;&#x7B80;&#x5316;&#x8FD0;&#x8425;&#x3001;&#x63D0;&#x5347;&#x751F;&#x4EA7;&#x529B;&#x5E76;&#x52A0;&#x901F;&#x5B66;&#x4E60;&#x3002;' />
+    <title>&#x667A;&#x80FD;&#x4F01;&#x4E1A;&#x96C6;&#x56E2; | &#x5168;&#x7403;&#x9996;&#x4E2A; AI &#x534F;&#x4F5C;&#x4E13;&#x5BB6;&#x56E2;&#x961F;</title>
+
+    <style>
+        html { background-color: #3B3A47; }
+    </style>
+    <script>
+        (function () {
+            const key = 'preferredTheme';
+            const stored = localStorage.getItem(key);
+            const systemDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+            const theme = stored || (systemDark ? 'dark' : 'light');
+            if (theme === 'dark') {
+                document.documentElement.classList.add('dark-mode');
+            }
+        })();
+    </script>
+
+
+        <link rel="alternate" hreflang="en" href="https://theintelligententerprisegroup.com/" />
+        <link rel="alternate" hreflang="fr" href="https://theintelligententerprisegroup.com/fr/" />
+        <link rel="alternate" hreflang="de" href="https://theintelligententerprisegroup.com/de/" />
+        <link rel="alternate" hreflang="es" href="https://theintelligententerprisegroup.com/es/" />
+        <link rel="alternate" hreflang="pt" href="https://theintelligententerprisegroup.com/pt/" />
+        <link rel="alternate" hreflang="zh" href="https://theintelligententerprisegroup.com/zh/" />
+        <link rel="alternate" hreflang="ja" href="https://theintelligententerprisegroup.com/ja/" />
+        <link rel="alternate" hreflang="ar" href="https://theintelligententerprisegroup.com/ar/" />
+
+
+    <link rel="alternate" hreflang="x-default" href="https://theintelligententerprisegroup.com/" />
+
+    <link rel="canonical" href="https://theintelligententerprisegroup.com/zh/" />
+
+
+    <link rel="stylesheet" href="/css/styles.css" />
+    <link rel="stylesheet" href="/css/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="/css/all.min.css" />
+
+    <script src="/js/lang-switcher.js" defer></script>
+
+    <script>
+        (function () {
+            if (localStorage.getItem('currentLang')) return;
+            const supported = [
+                     { code: "en" } ,
+                     { code: "fr" } ,
+                     { code: "de" } ,
+                     { code: "es" } ,
+                     { code: "pt" } ,
+                     { code: "zh" } ,
+                     { code: "ja" } ,
+                     { code: "ar" } 
+            ];
+            const defaultLang = "zh";
+            const navLangs = navigator.languages || [navigator.language || navigator.userLanguage];
+            let detected = null;
+            for (const nav of navLangs) {
+                const code = nav.toLowerCase().split('-')[0];
+                if (supported.find(s => s.code.toLowerCase() === code)) {
+                    detected = code;
+                    break;
+                }
+            }
+            const lang = detected || defaultLang;
+            localStorage.setItem('currentLang', lang);
+            document.documentElement.lang = lang;
+        })();
+    </script>
+
+    <!-- Organization structured data (JSON-LD) -->
+    <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "Organization",
+          "name": "The Intelligent Enterprise Group",
+          "url": "https://theintelligententerprisegroup.com/",
+          "logo": "https://theintelligententerprisegroup.com/images/tieg-logo.png",
+          "sameAs": []
+        }
+    </script>
+    <link rel="icon" href="/favicon.ico" />
+    <link rel="apple-touch-icon" href="/images/apple-touch-icon.png" />
+
+    
+
+</head>
+<body>
+    <header x-data="{ open: false }">
+        <div class="container header-top">
+            <div class="logo"></div>
+            <div class="theme-switch-wrapper">
+                <label class="theme-switch">
+                    <input type="checkbox" id="theme-checkbox" />
+                    <span class="slider round"></span>
+                </label>
+                <span id="theme-label">浅色模式</span>
+                <span class="lang-switcher">
+                    <label for="lang-select" class="lang-label">🌐 语言：</label>
+
+                    <!-- Language switcher -->
+                    <select id="lang-select" class="lang-select">
+                        <option value="en" data-path="/">English</option>
+                        <option value="fr" data-path="/fr/">Fran&#xE7;ais</option>
+                        <option value="de" data-path="/de/">Deutsch</option>
+                        <option value="es" data-path="/es/">Espa&#xF1;ol</option>
+                        <option value="pt" data-path="/pt/">Portugu&#xEA;s</option>
+                        <option value="zh" data-path="/zh/">&#x4E2D;&#x6587;</option>
+                        <option value="ja" data-path="/ja/">&#x65E5;&#x672C;&#x8A9E;</option>
+                        <option value="ar" data-path="/ar/">&#x627;&#x644;&#x639;&#x631;&#x628;&#x64A;&#x629;</option>
+                    </select>
+
+                </span>
+            </div>
+        </div>
+        
+        <div class="container header-nav">
+            <button @click="open = !open" class="menu-toggle" aria-label="Toggle Menu">
+                <svg width="24" height="24" viewBox="0 0 24 24">
+                    <path fill="var(--nav-link-color)" d="M3 6h18v2H3V6zm0 5h18v2H3v-2zm0 5h18v2H3v-2z" />
+                </svg>
+            </button>
+
+            <nav class="main-nav" :class="{ 'open': open }">
+                <ul>
+                    <li><a href="index.html" class="active">&#x9996;&#x9875;</a></li>
+                    <li><a href="about.html" class="">&#x5173;&#x4E8E;&#x6211;&#x4EEC;</a></li>
+                    <li><a href="services.html" class="">&#x670D;&#x52A1;&#x4E0E;&#x89E3;&#x51B3;&#x65B9;&#x6848;</a></li>
+                    <li><a href="case-studies.html" class="">&#x6848;&#x4F8B;&#x7814;&#x7A76;</a></li>
+                    <li><a href="resources.html" class="">&#x8D44;&#x6E90;&#x4E0E;&#x6D1E;&#x5BDF;</a></li>
+                    <li><a href="trial.html" class="">&#x8BD5;&#x7528;</a></li>
+                    <li><a href="pricing.html" class="">&#x5B9A;&#x4EF7;</a></li>
+                    <li><a href="partners.html" class="">&#x5408;&#x4F5C;&#x4F19;&#x4F34;&#x4E0E;&#x8054;&#x76DF;</a></li>                    
+                    <li><a href="contact.html" class="">&#x8054;&#x7CFB;&#x4E0E;&#x54A8;&#x8BE2;</a></li>
+                    <li class="has-submenu"
+                        x-data="{ openSub: false }"
+                        @mouseenter="openSub = true"
+                        @mouseleave="openSub = false">
+                      <button @click="openSub = !openSub"
+                              aria-haspopup="true"
+                              :aria-expanded="openSub.toString()">
+                        &#x4FE1;&#x606F;
+                        <svg width="12" height="12" viewBox="0 0 12 12" aria-hidden="true">
+                          <path d="M3 4l3 3 3-3" fill="currentColor"/>
+                        </svg>
+                      </button>
+                      <ul class="submenu" x-show="openSub" @click.outside="openSub = false">
+                        <li><a href="careers.html" class="">&#x804C;&#x4E1A;&#x673A;&#x4F1A;</a></li>
+                        <li><a href="faqs.html" class="">&#x5E38;&#x89C1;&#x95EE;&#x9898;</a></li>
+                        <li><a href="legal.html" class="">&#x6CD5;&#x5F8B;&#x4E0E;&#x653F;&#x7B56;</a></li>
+                      </ul>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        
+<section class="hero">
+    <div class="container">
+        <h2>全球首个 AI 协作<br />AI 专家团队<span class="hero-badge">首创</span><br /></h2>
+        <h3>&#x6211;&#x4EEC;&#x7A81;&#x7834;&#x6027;&#x7684;&#x5E73;&#x53F0;&#x5F15;&#x5165;&#x4E86;&#x4E00;&#x79CD;&#x65B0;&#x7684;&#x8D85;&#x7EA7;&#x667A;&#x80FD;&#x5F62;&#x5F0F;&#x2014;&#x2014;&#x7531; AI &#x534F;&#x8C03;&#x5668;&#x7EDF;&#x7B79;&#xFF0C;&#x8054;&#x5408;&#x4E13;&#x4E1A; AI &#x4E13;&#x5BB6;&#xFF0C;&#x63D0;&#x4F9B;&#x81EA;&#x9002;&#x5E94;&#x3001;&#x591A;&#x8BED;&#x8A00;&#x548C;&#x4F01;&#x4E1A;&#x7EA7;&#x89E3;&#x51B3;&#x65B9;&#x6848;&#x7684;&#x521B;&#x65B0;&#x7C7B;&#x522B;&#x3002;</h3>
+
+        <a href="trial.html" class="btn">&#x5F00;&#x59CB;&#x514D;&#x8D39;&#x8BD5;&#x7528;</a>
+        <a href="contact.html" class="btn service-btn">&#x7533;&#x8BF7;&#x6F14;&#x793A;</a>
+    </div>
+</section>
+
+<section class="problem">
+    <div class="container">
+        <h2>&#x26A0;&#xFE0F; &#x4E3A;&#x4EC0;&#x4E48;&#x5F53;&#x4ECA;&#x7684; AI &#x52A9;&#x624B;&#x4E0D;&#x591F;&#x7406;&#x60F3;</h2>
+        <p>&#x5927;&#x591A;&#x6570; AI &#x670D;&#x52A1;&#x4F9D;&#x8D56;&#x4E8E;&#x5355;&#x4E00;&#x7684;&#x5927;&#x578B;&#x8BED;&#x8A00;&#x6A21;&#x578B;&#x2014;&#x2014;&#x4E00;&#x4E2A;&#x8BD5;&#x56FE;&#x5305;&#x63FD;&#x4E00;&#x5207;&#x7684;&#x901A;&#x624D;&#x3002;&#x8FD9;&#x4E9B;&#x6A21;&#x578B;&#x901A;&#x5E38;&#x5B58;&#x5728;&#x8BB0;&#x5FC6;&#x6709;&#x9650;&#x7684;&#x95EE;&#x9898;&#xFF0C;&#x5E76;&#x53EF;&#x80FD;&#x4EA7;&#x751F;&#x5E7B;&#x89C9;&#xFF0C;&#x5C24;&#x5176;&#x662F;&#x5728;&#x4EFB;&#x52A1;&#x6D89;&#x53CA;&#x591A;&#x4E2A;&#x6B65;&#x9AA4;&#x6216;&#x9700;&#x8981;&#x9886;&#x57DF;&#x4E13;&#x957F;&#x65F6;&#x3002;</p>
+        <p>&#x7ED3;&#x679C;&#x662F;&#x4EC0;&#x4E48;&#xFF1F;&#x5B64;&#x7ACB;&#x7684;&#x7B54;&#x6848;&#x3001;&#x4E0D;&#x4E00;&#x81F4;&#x7684;&#x53EF;&#x9760;&#x6027;&#xFF0C;&#x4EE5;&#x53CA;&#x5728;&#x4E13;&#x4E1A;&#x6280;&#x80FD;&#x6216;&#x590D;&#x6742;&#x6587;&#x6863;&#x4E4B;&#x95F4;&#x7F3A;&#x4E4F;&#x771F;&#x6B63;&#x7684;&#x534F;&#x4F5C;&#x3002;</p>
+    </div>
+</section>
+
+<section class="solution">
+    <div class="container">
+        <h2>&#x2705; &#x60A8;&#x7684; AI &#x56E2;&#x961F;&#xFF0C;&#x968F;&#x65F6;&#x652F;&#x6301;&#x6BCF;&#x4E00;&#x9879;&#x4EFB;&#x52A1;</h2>
+        <p>&#x6211;&#x4EEC;&#x7684;&#x5E73;&#x53F0;&#x5E76;&#x975E;&#x4F9D;&#x8D56;&#x4E8E;&#x4E00;&#x4E2A;&#x8BB0;&#x5FC6;&#x6709;&#x9650;&#x4E14;&#x5BB9;&#x6613;&#x4EA7;&#x751F;&#x5E7B;&#x89C9;&#x7684;&#x5355;&#x4E00;&#x5927;&#x578B;&#x8BED;&#x8A00;&#x6A21;&#x578B;&#xFF0C;&#x800C;&#x662F;&#x4E3A;&#x60A8;&#x63D0;&#x4F9B;&#x4E00;&#x4E2A;&#x7531; AI &#x534F;&#x8C03;&#x5668;&#x7BA1;&#x7406;&#x7684; AI &#x4E13;&#x5BB6;&#x56E2;&#x961F;&#xFF0C;&#x4EE5;&#x786E;&#x4FDD;&#x51C6;&#x786E;&#x6027;&#x548C;&#x534F;&#x4F5C;&#x3002;</p>
+        <p>&#x51ED;&#x501F;&#x81EA;&#x9002;&#x5E94;&#x7684;&#x77ED;&#x671F;&#x548C;&#x957F;&#x671F;&#x8BB0;&#x5FC6;&#xFF0C;&#x4EE5;&#x53CA;&#x4ECE; Word&#x3001;Excel&#x3001;PDF&#x3001;CSV&#x3001;&#x97F3;&#x9891;&#x3001;&#x6587;&#x672C;&#x548C;&#x56FE;&#x50CF;&#x4E2D;&#x5B66;&#x4E60;&#x7684;&#x80FD;&#x529B;&#xFF0C;&#x60A8;&#x7684; AI &#x56E2;&#x961F;&#x80FD;&#x591F;&#x7406;&#x89E3;&#x4E0A;&#x4E0B;&#x6587;&#xFF0C;&#x907F;&#x514D;&#x5E7B;&#x89C9;&#xFF0C;&#x5E76;&#x63D0;&#x4F9B;&#x7CBE;&#x51C6;&#x53EF;&#x9760;&#x7684;&#x7ED3;&#x679C;&#x3002; <a href="about.html" class="btn-secondary">&#x8BA4;&#x8BC6;&#x6211;&#x4EEC;&#x7684;&#x56E2;&#x961F;</a></p>
+        <p>&#x4E13;&#x5BB6;&#x56E2;&#x961F;&#x4E0D;&#x65AD;&#x58EE;&#x5927;&#xFF0C;&#x4F7F;&#x60A8;&#x7684; AI &#x56E2;&#x961F;&#x968F;&#x7740;&#x65F6;&#x95F4;&#x63A8;&#x79FB;&#x66F4;&#x52A0;&#x591A;&#x624D;&#x591A;&#x827A;&#x2014;&#x2014;&#x5B83;&#x751A;&#x81F3;&#x4E3A;&#x8FB9;&#x7F18;&#x8BA1;&#x7B97;&#x800C;&#x8BBE;&#x8BA1;&#xFF0C;&#x56E0;&#x6B64;&#x5373;&#x4F7F;&#x6CA1;&#x6709;&#x4E92;&#x8054;&#x7F51;&#x8BBF;&#x95EE;&#x4E5F;&#x80FD;&#x53EF;&#x9760;&#x8FD0;&#x884C;&#x3002;</p>
+    </div>
+</section>
+
+<section class="features">
+    <h2>&#x4E3B;&#x8981;&#x7279;&#x6027;</h2>
+    <div class="container main-grid">
+        <div class="service-card">
+            <h3>&#x81EA;&#x9002;&#x5E94;&#x8BB0;&#x5FC6;</h3>
+            <p>&#x9AD8;&#x5EA6;&#x4F18;&#x5316;&#x7684;&#x77ED;&#x671F;&#x548C;&#x957F;&#x671F;&#x8BB0;&#x5FC6;&#x53EF;&#x5728;&#x4F1A;&#x8BDD;&#x95F4;&#x4FDD;&#x6301;&#x4E0A;&#x4E0B;&#x6587;&#xFF0C;&#x51CF;&#x5C11;&#x5E7B;&#x89C9;&#x5E76;&#x786E;&#x4FDD;&#x4E00;&#x81F4;&#x53EF;&#x9760;&#x7684;&#x7ED3;&#x679C;&#x3002;</p>
+        </div>
+        <div class="service-card">
+            <h3>&#x591A;&#x683C;&#x5F0F;&#x5B66;&#x4E60;&#x4E0E;&#x591A;&#x8BED;&#x8A00;</h3>
+            <p>&#x53EF;&#x4ECE; Word&#x3001;Excel&#x3001;PDF&#x3001;CSV&#x3001;&#x97F3;&#x9891;&#x3001;&#x6587;&#x672C;&#x3001;&#x56FE;&#x50CF;&#x7B49;&#x5B66;&#x4E60;&#x3002;&#x7406;&#x89E3; 100 &#x591A;&#x79CD;&#x8BED;&#x8A00;&#xFF0C;&#x5E76;&#x5728; 20 &#x591A;&#x79CD;&#x8BED;&#x8A00;&#x4E2D;&#x63A5;&#x8FD1;&#x6BCD;&#x8BED;&#x6C34;&#x5E73;&#x3002;</p>
+        </div>
+        <div class="service-card">
+            <h3>&#x5185;&#x7F6E;&#x4E13;&#x4E1A;&#x6A21;&#x578B;</h3>
+            <p>&#x9488;&#x5BF9;&#x4E0D;&#x540C;&#x4EFB;&#x52A1;&#x5D4C;&#x5165;&#x4E86;&#x591A;&#x4E2A;&#x4F18;&#x5316;&#x7684;&#x673A;&#x5668;&#x5B66;&#x4E60;&#x6A21;&#x578B;&#x3002;AI &#x4E13;&#x5BB6;&#x4F1A;&#x81EA;&#x52A8;&#x6FC0;&#x6D3B;&#x5E76;&#x5207;&#x6362;&#x6A21;&#x578B;&#xFF0C;&#x6BCF;&#x6B21;&#x90FD;&#x63D0;&#x4F9B;&#x6B63;&#x786E;&#x7684;&#x89E3;&#x51B3;&#x65B9;&#x6848;&#x3002;</p>
+        </div>
+        <div class="service-card">
+            <h3>&#x534F;&#x4F5C; AI &#x56E2;&#x961F;</h3>
+            <p>&#x4E0D;&#x4EC5;&#x4EC5;&#x662F;&#x4E00;&#x4E2A; LLM&#x2014;&#x2014;&#x800C;&#x662F;&#x4E00;&#x7EC4;&#x7531; AI &#x534F;&#x8C03;&#x5668;&#x7BA1;&#x7406;&#x7684;&#x4E13;&#x4E1A; AI &#x4E13;&#x5BB6;&#xFF0C;&#x50CF;&#x771F;&#x6B63;&#x7684;&#x54A8;&#x8BE2;&#x56E2;&#x961F;&#x4E00;&#x6837;&#x534F;&#x4F5C;&#x5DE5;&#x4F5C;&#x3002; <a href="about.html" class="btn-secondary">&#x8BA4;&#x8BC6;&#x6211;&#x4EEC;&#x7684;&#x56E2;&#x961F;</a></p>
+        </div>
+        <div class="service-card">
+            <h3>&#x8FB9;&#x7F18;&#x5C31;&#x7EEA;</h3>
+            <p>&#x5373;&#x4F7F;&#x6CA1;&#x6709;&#x4E92;&#x8054;&#x7F51;&#x8BBF;&#x95EE;&#x4E5F;&#x80FD;&#x5B8C;&#x5168;&#x8FD0;&#x884C;&#xFF0C;&#x5F97;&#x76CA;&#x4E8E;&#x4E3A;&#x79BB;&#x7EBF;&#x548C;&#x5B89;&#x5168;&#x73AF;&#x5883;&#x8BBE;&#x8BA1;&#x7684;&#x5185;&#x7F6E;&#x6A21;&#x578B;&#x3002;</p>
+        </div>
+        <div class="service-card">
+            <h3>&#x9AD8;&#x6027;&#x80FD;</h3>
+            <p>&#x4F7F;&#x7528; C&#x2B;&#x2B;/C# &#x6784;&#x5EFA;&#x4EE5;&#x5B9E;&#x73B0;&#x6700;&#x5927;&#x901F;&#x5EA6;&#x548C;&#x6548;&#x7387;&#x3002;&#x5229;&#x7528;&#x786C;&#x4EF6;&#x52A0;&#x901F;&#x3001;&#x5E76;&#x884C;&#x8BA1;&#x7B97;&#x548C; CUDA &#x7B49; GPU &#x6280;&#x672F;&#xFF0C;&#x60A8;&#x7684; AI &#x56E2;&#x961F;&#x80FD;&#x591F;&#x66F4;&#x5FEB;&#x54CD;&#x5E94;&#x5E76;&#x964D;&#x4F4E;&#x80FD;&#x8017;&#x3002;</p>
+        </div>
+        <div class="service-card">
+            <h3>&#x53EF;&#x6269;&#x5C55;&#x90E8;&#x7F72;</h3>
+            <p>&#x7075;&#x6D3B;&#x7684;&#x8BBE;&#x7F6E;&#xFF1A;&#x4E2A;&#x4EBA;&#x684C;&#x9762;&#x7248;&#xFF0C;&#x4F01;&#x4E1A;&#x670D;&#x52A1;&#x5668;&#x548C; API &#x96C6;&#x6210;&#x3002;API &#x53EF;&#x4ECE;&#x4EFB;&#x4F55;&#x4E1A;&#x52A1;&#x7CFB;&#x7EDF;&#x8C03;&#x7528;&#xFF0C;&#x5E76;&#x5D4C;&#x5165;&#x5230;&#x6D41;&#x7A0B;&#x81EA;&#x52A8;&#x5316;&#x5DE5;&#x4F5C;&#x6D41;&#x4E2D;&#x3002;</p>
+        </div>
+        <div class="service-card">
+            <h3>&#x8282;&#x80FD;&#x8BBE;&#x8BA1;</h3>
+            <p>&#x91C7;&#x7528;&#x9AD8;&#x5EA6;&#x4F18;&#x5316;&#x7684;&#x7F16;&#x8BD1;&#x4EE3;&#x7801;&#x800C;&#x975E;&#x811A;&#x672C;&#x8BED;&#x8A00;&#x6784;&#x5EFA;&#xFF0C;&#x60A8;&#x7684; AI &#x56E2;&#x961F;&#x8FD0;&#x884C;&#x66F4;&#x5FEB;&#xFF0C;&#x540C;&#x65F6;&#x80FD;&#x8017;&#x663E;&#x8457;&#x964D;&#x4F4E;&#x2014;&#x2014;&#x517C;&#x987E;&#x6027;&#x80FD;&#x4E0E;&#x53EF;&#x6301;&#x7EED;&#x6027;&#x3002;</p>
+        </div>
+    </div>
+</section>
+
+<section class="use-cases">
+    <div class="container">
+        <h2>&#x4E3A;&#x5404;&#x79CD;&#x573A;&#x666F;&#x800C;&#x8BBE;&#x8BA1;</h2>
+        <div class="main-grid">
+            <div class="service-card">
+                <h3>&#x4F01;&#x4E1A;</h3>
+                <p>&#x901A;&#x8FC7; API &#x65E0;&#x7F1D;&#x96C6;&#x6210;&#x5230;&#x4EFB;&#x4F55;&#x7CFB;&#x7EDF;&#x6216;&#x5DE5;&#x4F5C;&#x6D41;&#x3002;&#x81EA;&#x52A8;&#x5316;&#x6D41;&#x7A0B;&#x3001;&#x964D;&#x4F4E;&#x6210;&#x672C;&#xFF0C;&#x5E76;&#x51ED;&#x501F;&#x4E13;&#x4E1A;&#x6A21;&#x578B;&#x548C;&#x4F01;&#x4E1A;&#x7EA7;&#x6027;&#x80FD;&#x5B9E;&#x73B0;&#x53EF;&#x6269;&#x5C55;&#x6027;&#x3002;</p>
+            </div>
+            <div class="service-card">
+                <h3>&#x4E13;&#x4E1A;&#x4EBA;&#x58EB;</h3>
+                <p>&#x5728;&#x5199;&#x4F5C;&#x3001;&#x5206;&#x6790;&#x3001;&#x7FFB;&#x8BD1;&#x548C;&#x51B3;&#x7B56;&#x65B9;&#x9762;&#x63D0;&#x4F9B;&#x4E13;&#x5BB6;&#x7EA7;&#x652F;&#x6301;&#xFF0C;&#x63D0;&#x5347;&#x751F;&#x4EA7;&#x529B;&#x3002;&#x81EA;&#x9002;&#x5E94;&#x8BB0;&#x5FC6;&#x786E;&#x4FDD;&#x8DE8;&#x9879;&#x76EE;&#x7684;&#x4E00;&#x81F4;&#x7ED3;&#x679C;&#x3002;</p>
+            </div>
+            <div class="service-card">
+                <h3>&#x5B66;&#x751F;&#x4E0E;&#x4E2A;&#x4EBA;</h3>
+                <p>&#x901A;&#x8FC7;&#x4E00;&#x4E2A;&#x7406;&#x89E3;&#x4E0A;&#x4E0B;&#x6587;&#x5E76;&#x80FD;&#x8DE8;&#x591A;&#x79CD;&#x683C;&#x5F0F;&#x5DE5;&#x4F5C;&#x7684; AI &#x534F;&#x4F5C;&#x56E2;&#x961F;&#xFF0C;&#x66F4;&#x5FEB;&#x5B66;&#x4E60;&#x3001;&#x63A2;&#x7D22;&#x521B;&#x610F;&#x5E76;&#x66F4;&#x806A;&#x660E;&#x5730;&#x521B;&#x9020;&#x3002;</p>
+            </div>
+        </div>
+        <p style="text-align:center; margin-top:1rem;">
+            <a href="case-studies.html" class="btn service-btn">&#x67E5;&#x770B;&#x771F;&#x5B9E;&#x6848;&#x4F8B;&#x7814;&#x7A76; &#x2192;</a>
+        </p>
+    </div>
+</section>
+
+<section class="testimonials">
+    <div class="container swiper-container">
+        <h2>&#x4EBA;&#x4EEC;&#x53EF;&#x80FD;&#x4F1A;&#x8BF4;&#x7684;&#x8BDD;</h2>
+        <p style="text-align:center; max-width:700px; margin:0 auto 2rem;">&#x60F3;&#x8C61;&#x4E0D;&#x540C;&#x89D2;&#x8272;&#x5728;&#x4F53;&#x9A8C;&#x6211;&#x4EEC;&#x7684; AI &#x56E2;&#x961F;&#x65F6;&#x4F1A;&#x5982;&#x4F55;&#x63CF;&#x8FF0;&#x4ED6;&#x4EEC;&#x7684;&#x611F;&#x53D7;&#x3002;</p>
+        <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <blockquote class="animate-fadeIn">
+                        <p>&#x4E00;&#x4F4D; CTO &#x53EF;&#x80FD;&#x4F1A;&#x8BF4;&#xFF1A;&#x201C;&#x534F;&#x4F5C; AI &#x56E2;&#x961F;&#x6539;&#x53D8;&#x4E86;&#x6211;&#x4EEC;&#x5BF9;&#x6570;&#x5B57;&#x521B;&#x65B0;&#x7684;&#x65B9;&#x5F0F;&#x3002;&#x51ED;&#x501F;&#x4E0A;&#x4E0B;&#x6587;&#x611F;&#x77E5;&#x8BB0;&#x5FC6;&#x548C;&#x4E13;&#x4E1A;&#x6A21;&#x578B;&#xFF0C;&#x6211;&#x4EEC;&#x89E3;&#x9501;&#x4E86;&#x5168;&#x65B0;&#x7684;&#x6548;&#x7387;&#x548C;&#x589E;&#x957F;&#x6C34;&#x5E73;&#x3002;&#x201D;</p>
+                        <footer>&#x1F468;&#x200D;&#x1F4BC; &#x2014; CTO</footer>
+                    </blockquote>
+                </div>
+                <div class="swiper-slide">
+                    <blockquote class="animate-fadeIn">
+                        <p>&#x4E00;&#x4F4D;&#x521B;&#x65B0;&#x526F;&#x603B;&#x88C1;&#x53EF;&#x80FD;&#x4F1A;&#x8BF4;&#xFF1A;&#x201C;&#x65E0;&#x7F1D;&#x7684; API &#x96C6;&#x6210;&#x548C;&#x4E13;&#x5BB6;&#x534F;&#x4F5C;&#x91CD;&#x65B0;&#x5B9A;&#x4E49;&#x4E86;&#x6211;&#x4EEC;&#x7684;&#x6218;&#x7565;&#x3002;&#x8BE5;&#x5E73;&#x53F0;&#x4E3A;&#x6211;&#x4EEC;&#x5E26;&#x6765;&#x4E86;&#x6301;&#x4E45;&#x7684;&#x7ADE;&#x4E89;&#x4F18;&#x52BF;&#x3002;&#x201D;</p>
+                        <footer>&#x1F4A1; &#x2014; &#x521B;&#x65B0;&#x526F;&#x603B;&#x88C1;</footer>
+                    </blockquote>
+                </div>
+                <div class="swiper-slide">
+                    <blockquote class="animate-fadeIn">
+                        <p>&#x4E00;&#x4F4D;&#x6570;&#x5B57;&#x6218;&#x7565;&#x603B;&#x76D1;&#x53EF;&#x80FD;&#x4F1A;&#x8BF4;&#xFF1A;&#x201C;&#x4ECE;&#x57F9;&#x8BAD;&#x5230;&#x90E8;&#x7F72;&#xFF0C;&#x4E00;&#x5207;&#x90FD;&#x7CBE;&#x51C6;&#x800C;&#x6E05;&#x6670;&#x3002;&#x81EA;&#x9002;&#x5E94;&#x8BB0;&#x5FC6;&#x8BA9;&#x6211;&#x4EEC;&#x59CB;&#x7EC8;&#x7AD9;&#x5728;&#x6280;&#x672F;&#x524D;&#x6CBF;&#x3002;&#x201D;</p>
+                        <footer>&#x1F4CA; &#x2014; &#x6570;&#x5B57;&#x6218;&#x7565;&#x603B;&#x76D1;</footer>
+                    </blockquote>
+                </div>
+                <div class="swiper-slide">
+                    <blockquote class="animate-fadeIn">
+                        <p>&#x4E00;&#x4F4D;&#x9AD8;&#x7EA7;&#x6570;&#x636E;&#x5206;&#x6790;&#x5E08;&#x53EF;&#x80FD;&#x4F1A;&#x8BF4;&#xFF1A;&#x201C;&#x5185;&#x7F6E;&#x7684;&#x4E13;&#x4E1A;&#x6A21;&#x578B;&#x8BA9;&#x6211;&#x4EEC;&#x80FD;&#x591F;&#x66F4;&#x5FEB;&#x3001;&#x66F4;&#x51C6;&#x786E;&#x5730;&#x5206;&#x6790;&#x6570;&#x636E;&#xFF0C;&#x63ED;&#x793A;&#x4E86;&#x4EE5;&#x524D;&#x65E0;&#x6CD5;&#x53D1;&#x73B0;&#x7684;&#x6D1E;&#x5BDF;&#x3002;&#x201D;</p>
+                        <footer>&#x1F4C8; &#x2014; &#x9AD8;&#x7EA7;&#x6570;&#x636E;&#x5206;&#x6790;&#x5E08;</footer>
+                    </blockquote>
+                </div>
+                <div class="swiper-slide">
+                    <blockquote class="animate-fadeIn">
+                        <p>&#x4E00;&#x4F4D;&#x6280;&#x672F;&#x4E3B;&#x7BA1;&#x53EF;&#x80FD;&#x4F1A;&#x8BF4;&#xFF1A;&#x201C;&#x7F16;&#x8BD1;&#x4EE3;&#x7801;&#x548C; GPU &#x52A0;&#x901F;&#x5E26;&#x6765;&#x4E86;&#x60CA;&#x4EBA;&#x7684;&#x901F;&#x5EA6;&#xFF0C;&#x540C;&#x65F6;&#x964D;&#x4F4E;&#x4E86;&#x80FD;&#x8017;&#x3002;&#x8FD9;&#x662F;&#x53EF;&#x6301;&#x7EED;&#x6027;&#x80FD;&#x7684;&#x98A0;&#x8986;&#x8005;&#x3002;&#x201D;</p>
+                        <footer>&#x2699;&#xFE0F; &#x2014; &#x6280;&#x672F;&#x4E3B;&#x7BA1;</footer>
+                    </blockquote>
+                </div>
+                <div class="swiper-slide">
+                    <blockquote class="animate-fadeIn">
+                        <p>&#x4E00;&#x4F4D;&#x5B66;&#x751F;&#x53EF;&#x80FD;&#x4F1A;&#x8BF4;&#xFF1A;&#x201C;&#x5B83;&#x5E2E;&#x52A9;&#x6211;&#x7EC4;&#x7EC7;&#x7814;&#x7A76;&#x3001;&#x66F4;&#x5FEB;&#x5B66;&#x4E60;&#xFF0C;&#x5E76;&#x4EE5;&#x66F4;&#x5C11;&#x7684;&#x52AA;&#x529B;&#x521B;&#x9020;&#x66F4;&#x806A;&#x660E;&#x7684;&#x9879;&#x76EE;&#x3002;&#x201D;</p>
+                        <footer>&#x1F393; &#x2014; &#x5B66;&#x751F;</footer>
+                    </blockquote>
+                </div>
+        </div>
+        <div class="swiper-pagination"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+    </div>
+</section>
+
+<section class="cta">
+    <div class="container">
+        <h2>&#x51C6;&#x5907;&#x597D;&#x4E0E;&#x60A8;&#x7684; AI &#x56E2;&#x961F;&#x5408;&#x4F5C;&#x4E86;&#x5417;&#xFF1F;</h2>
+        <p>&#x4E0D;&#x8981;&#x6EE1;&#x8DB3;&#x4E8E;&#x5355;&#x4E00;&#x6A21;&#x578B;&#x3002;&#x4F53;&#x9A8C;&#x5168;&#x7403;&#x9996;&#x4E2A;&#x534F;&#x4F5C; AI &#x56E2;&#x961F;&#x2014;&#x2014;&#x5177;&#x5907;&#x81EA;&#x9002;&#x5E94;&#x8BB0;&#x5FC6;&#x3001;&#x4E13;&#x4E1A;&#x6A21;&#x578B;&#x548C;&#x4F01;&#x4E1A;&#x7EA7;&#x6027;&#x80FD;&#x3002;</p>
+        <div class="cta-buttons">
+            <a href="trial.html" class="btn">&#x5F00;&#x59CB;&#x514D;&#x8D39;&#x8BD5;&#x7528;</a>
+            <a href="contact.html" class="btn service-btn">&#x9884;&#x7EA6;&#x6F14;&#x793A;</a>
+        </div>
+    </div>
+</section>
+
+
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&#xA9; 2025 &#x667A;&#x80FD;&#x4F01;&#x4E1A;&#x96C6;&#x56E2;&#x3002;&#x4FDD;&#x7559;&#x6240;&#x6709;&#x6743;&#x5229;&#x3002;</p>
+        </div>
+    </footer>
+
+    <script src="/js/swiper-bundle.min.js"></script>
+    <script src="/js/cdn.min.js" defer></script>
+    <script src="/js/gsap.min.js"></script>
+    <script src="/js/DrawSVGPlugin.min.js"></script>
+
+    <script type="module" src="/js/themeToggle.js"></script>
+    <script type="module">
+        import { toggleTheme, getCurrentTheme } from '/js/themeToggle.js';
+        const checkbox = document.getElementById('theme-checkbox');
+        const themeLabel = document.getElementById('theme-label');
+
+        if (getCurrentTheme() === 'dark') {
+            checkbox.checked = true;
+            themeLabel.textContent = '深色模式';
+        } else {
+            themeLabel.textContent = '浅色模式';
+        }
+
+        checkbox.addEventListener('change', () => {
+            toggleTheme();
+            themeLabel.textContent = checkbox.checked ? '深色模式' : '浅色模式';
+        });
+    </script>
+
+    <button id="back-to-top" aria-label="Back to Top">&#x9876;&#x90E8;</button>
+
+    
+<script>
+    const testimonialSwiper = new Swiper('.swiper-container', {
+        slidesPerView: 1,
+        spaceBetween: 0,
+        loop: true,
+        navigation: { nextEl: '.swiper-button-next', prevEl: '.swiper-button-prev' },
+        pagination: { el: '.swiper-pagination', clickable: true },
+        autoplay: { delay: 5000, disableOnInteraction: false },
+        breakpoints: { 320: { slidesPerView: 1, spaceBetween: 0 }, 768: { slidesPerView: 1, spaceBetween: 0 } }
+    });
+
+    gsap.registerPlugin(DrawSVGPlugin);
+    window.onload = function () {
+        gsap.from(".hero h2", { duration: 1.2, opacity: 0, y: -50, ease: "power2.out" });
+        gsap.from(".hero p", { duration: 1.2, opacity: 0, y: 50, ease: "power2.out", delay: 0.2 });
+        gsap.from(".hero .btn", { duration: 1.2, opacity: 0, scale: 0.8, ease: "back.out(1.7)", delay: 0.4 });
+        gsap.from(".service-card", { duration: 1, opacity: 0, y: 30, ease: "power2.out", stagger: 0.2, delay: 0.6 });
+        gsap.from(".testimonials h2", { duration: 1, opacity: 0, y: -20, ease: "power2.out", delay: 0.8 });
+        gsap.from(".testimonials blockquote", { duration: 1, opacity: 0, y: 20, ease: "power2.out", delay: 1 });
+        gsap.from(".cta h2", { duration: 1, opacity: 0, y: -20, ease: "power2.out", delay: 1.2 });
+        gsap.from(".cta p", { duration: 1, opacity: 0, y: 20, ease: "power2.out", delay: 1.4 });
+        gsap.from(".cta .btn", { duration: 1, opacity: 0, scale: 0.8, ease: "back.out(1.7)", delay: 1.6 });
+    };
+</script>
+
+</body>
+</html>

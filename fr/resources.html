@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="fr" dir="ltr">
+<head>
+    <meta name="robots" content="index, follow" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <meta name="description" content='D&#xE9;couvrez les ressources et perspectives de The Intelligent Enterprise Group. Lisez des articles d&#x2019;experts, des guides pratiques et des analyses de tendances en IA pour rester en avance en mati&#xE8;re de strat&#xE9;gie, d&#x2019;innovation et d&#x2019;adoption.' />
+    <title>Ressources &amp; Perspectives | Guides IA &amp; Leadership &#xE9;clair&#xE9; &#x2013; The Intelligent Enterprise Group</title>
+
+    <style>
+        html { background-color: #3B3A47; }
+    </style>
+    <script>
+        (function () {
+            const key = 'preferredTheme';
+            const stored = localStorage.getItem(key);
+            const systemDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+            const theme = stored || (systemDark ? 'dark' : 'light');
+            if (theme === 'dark') {
+                document.documentElement.classList.add('dark-mode');
+            }
+        })();
+    </script>
+
+
+        <link rel="alternate" hreflang="en" href="https://theintelligententerprisegroup.com/resources.html" />
+        <link rel="alternate" hreflang="fr" href="https://theintelligententerprisegroup.com/fr/resources.html" />
+        <link rel="alternate" hreflang="de" href="https://theintelligententerprisegroup.com/de/resources.html" />
+        <link rel="alternate" hreflang="es" href="https://theintelligententerprisegroup.com/es/resources.html" />
+        <link rel="alternate" hreflang="pt" href="https://theintelligententerprisegroup.com/pt/resources.html" />
+        <link rel="alternate" hreflang="zh" href="https://theintelligententerprisegroup.com/zh/resources.html" />
+        <link rel="alternate" hreflang="ja" href="https://theintelligententerprisegroup.com/ja/resources.html" />
+        <link rel="alternate" hreflang="ar" href="https://theintelligententerprisegroup.com/ar/resources.html" />
+
+
+    <link rel="alternate" hreflang="x-default" href="https://theintelligententerprisegroup.com/resources.html" />
+
+    <link rel="canonical" href="https://theintelligententerprisegroup.com/fr/resources.html" />
+
+
+    <link rel="stylesheet" href="/css/styles.css" />
+    <link rel="stylesheet" href="/css/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="/css/all.min.css" />
+
+    <script src="/js/lang-switcher.js" defer></script>
+
+    <script>
+        (function () {
+            if (localStorage.getItem('currentLang')) return;
+            const supported = [
+                     { code: "en" } ,
+                     { code: "fr" } ,
+                     { code: "de" } ,
+                     { code: "es" } ,
+                     { code: "pt" } ,
+                     { code: "zh" } ,
+                     { code: "ja" } ,
+                     { code: "ar" } 
+            ];
+            const defaultLang = "fr";
+            const navLangs = navigator.languages || [navigator.language || navigator.userLanguage];
+            let detected = null;
+            for (const nav of navLangs) {
+                const code = nav.toLowerCase().split('-')[0];
+                if (supported.find(s => s.code.toLowerCase() === code)) {
+                    detected = code;
+                    break;
+                }
+            }
+            const lang = detected || defaultLang;
+            localStorage.setItem('currentLang', lang);
+            document.documentElement.lang = lang;
+        })();
+    </script>
+
+    <!-- Organization structured data (JSON-LD) -->
+    <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "Organization",
+          "name": "The Intelligent Enterprise Group",
+          "url": "https://theintelligententerprisegroup.com/",
+          "logo": "https://theintelligententerprisegroup.com/images/tieg-logo.png",
+          "sameAs": []
+        }
+    </script>
+    <link rel="icon" href="/favicon.ico" />
+    <link rel="apple-touch-icon" href="/images/apple-touch-icon.png" />
+
+    
+
+</head>
+<body>
+    <header x-data="{ open: false }">
+        <div class="container header-top">
+            <div class="logo"></div>
+            <div class="theme-switch-wrapper">
+                <label class="theme-switch">
+                    <input type="checkbox" id="theme-checkbox" />
+                    <span class="slider round"></span>
+                </label>
+                <span id="theme-label">Mode clair</span>
+                <span class="lang-switcher">
+                    <label for="lang-select" class="lang-label">🌐 Langue :</label>
+
+                    <!-- Language switcher -->
+                    <select id="lang-select" class="lang-select">
+                        <option value="en" data-path="/">English</option>
+                        <option value="fr" data-path="/fr/">Fran&#xE7;ais</option>
+                        <option value="de" data-path="/de/">Deutsch</option>
+                        <option value="es" data-path="/es/">Espa&#xF1;ol</option>
+                        <option value="pt" data-path="/pt/">Portugu&#xEA;s</option>
+                        <option value="zh" data-path="/zh/">&#x4E2D;&#x6587;</option>
+                        <option value="ja" data-path="/ja/">&#x65E5;&#x672C;&#x8A9E;</option>
+                        <option value="ar" data-path="/ar/">&#x627;&#x644;&#x639;&#x631;&#x628;&#x64A;&#x629;</option>
+                    </select>
+
+                </span>
+            </div>
+        </div>
+        
+        <div class="container header-nav">
+            <button @click="open = !open" class="menu-toggle" aria-label="Toggle Menu">
+                <svg width="24" height="24" viewBox="0 0 24 24">
+                    <path fill="var(--nav-link-color)" d="M3 6h18v2H3V6zm0 5h18v2H3v-2zm0 5h18v2H3v-2z" />
+                </svg>
+            </button>
+
+            <nav class="main-nav" :class="{ 'open': open }">
+                <ul>
+                    <li><a href="index.html" class="">Accueil</a></li>
+                    <li><a href="about.html" class="">&#xC0; propos</a></li>
+                    <li><a href="services.html" class="">Services &amp; Solutions</a></li>
+                    <li><a href="case-studies.html" class="">&#xC9;tudes de cas</a></li>
+                    <li><a href="resources.html" class="active">Ressources &amp; Analyses</a></li>
+                    <li><a href="trial.html" class="">Essai</a></li>
+                    <li><a href="pricing.html" class="">Tarifs</a></li>
+                    <li><a href="partners.html" class="">Partenaires &amp; Alliances</a></li>                    
+                    <li><a href="contact.html" class="">Contact &amp; Consultation</a></li>
+                    <li class="has-submenu"
+                        x-data="{ openSub: false }"
+                        @mouseenter="openSub = true"
+                        @mouseleave="openSub = false">
+                      <button @click="openSub = !openSub"
+                              aria-haspopup="true"
+                              :aria-expanded="openSub.toString()">
+                        Infos
+                        <svg width="12" height="12" viewBox="0 0 12 12" aria-hidden="true">
+                          <path d="M3 4l3 3 3-3" fill="currentColor"/>
+                        </svg>
+                      </button>
+                      <ul class="submenu" x-show="openSub" @click.outside="openSub = false">
+                        <li><a href="careers.html" class="">Carri&#xE8;res</a></li>
+                        <li><a href="faqs.html" class="">FAQs</a></li>
+                        <li><a href="legal.html" class="">Mentions l&#xE9;gales &amp; Politiques</a></li>
+                      </ul>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        
+<section class="hero">
+    <div class="container">
+        <h2>Ressources &amp; Perspectives</h2>
+        <h3>Découvrez des articles d’experts, des guides pratiques et des analyses sur l’adoption de l’IA,<br />la stratégie et l’innovation – conçus pour vous aider à garder une longueur d’avance dans un paysage en constante évolution.</h3>
+    </div>
+</section>
+
+<section class="resources" x-data="{ selectedResource: '' }">
+    <div class="container">
+        <h2>Derni&#xE8;res perspectives</h2>
+
+        <div class="resources-grid">
+                    <article id="resource-aiFuture" class="resource-card" :class="{ 'active': selectedResource === 'aiFuture' }">
+                        <img src="/images/the-future-of-ai-in-business.jpg" alt="L&#x2019;avenir de l&#x2019;IA dans les affaires" />
+                        <div class="card-content">
+                            <h3>L&#x2019;avenir de l&#x2019;IA dans les affaires</h3>
+                            <p>D&#xE9;couvrez comment l&#x2019;IA transforme les industries et ouvre de nouvelles opportunit&#xE9;s.</p>
+                            <a href="#" class="btn" @click.prevent="selectedResource='aiFuture';$nextTick(() => document.getElementById('expanded-resource').scrollIntoView({ behavior: 'smooth', block: 'start' }));">Lire la suite</a>
+                        </div>
+                    </article>
+                    <article id="resource-roiAI" class="resource-card" :class="{ 'active': selectedResource === 'roiAI' }">
+                        <img src="/images/maximizing-roi-with-ai.jpg" alt="Maximiser le ROI avec l&#x2019;IA" />
+                        <div class="card-content">
+                            <h3>Maximiser le ROI avec l&#x2019;IA</h3>
+                            <p>D&#xE9;couvrez des strat&#xE9;gies pour am&#xE9;liorer les retours gr&#xE2;ce &#xE0; l&#x2019;int&#xE9;gration de l&#x2019;IA.</p>
+                            <a href="#" class="btn" @click.prevent="selectedResource='roiAI';$nextTick(() => document.getElementById('expanded-resource').scrollIntoView({ behavior: 'smooth', block: 'start' }));">Lire la suite</a>
+                        </div>
+                    </article>
+                    <article id="resource-aiTrends" class="resource-card" :class="{ 'active': selectedResource === 'aiTrends' }">
+                        <img src="/images/5-key-ai-trends-2025.jpg" alt="5 tendances cl&#xE9;s de l&#x2019;IA pour 2025" />
+                        <div class="card-content">
+                            <h3>5 tendances cl&#xE9;s de l&#x2019;IA pour 2025</h3>
+                            <p>Anticipez l&#x2019;avenir avec un aper&#xE7;u des tendances qui d&#xE9;finiront l&#x2019;IA dans un futur proche.</p>
+                            <a href="#" class="btn" @click.prevent="selectedResource='aiTrends';$nextTick(() => document.getElementById('expanded-resource').scrollIntoView({ behavior: 'smooth', block: 'start' }));">Lire la suite</a>
+                        </div>
+                    </article>
+                    <article id="resource-aiInnovation" class="resource-card" :class="{ 'active': selectedResource === 'aiInnovation' }">
+                        <img src="/images/innovation-in-ai-integration.jpg" alt="Innovation dans l&#x2019;int&#xE9;gration de l&#x2019;IA" />
+                        <div class="card-content">
+                            <h3>Innovation dans l&#x2019;int&#xE9;gration de l&#x2019;IA</h3>
+                            <p>D&#xE9;couvrez comment les entreprises innovent en int&#xE9;grant l&#x2019;IA dans leurs op&#xE9;rations.</p>
+                            <a href="#" class="btn" @click.prevent="selectedResource='aiInnovation';$nextTick(() => document.getElementById('expanded-resource').scrollIntoView({ behavior: 'smooth', block: 'start' }));">Lire la suite</a>
+                        </div>
+                    </article>
+        </div>
+
+        <template x-if="selectedResource !== ''">
+            <div id="expanded-resource" class="expanded-resource" x-show="selectedResource !== ''" x-transition>
+                <button class="close-btn" @click="const prev=document.getElementById('resource-'+selectedResource);selectedResource='';$nextTick(() => prev.scrollIntoView({ behavior: 'smooth', block: 'start' }));">&times;</button>
+
+                        <div x-show="selectedResource==='aiFuture'" x-transition>
+                            <div class="container article-content">
+                                <header class="article-header">
+                                    <h1>L&#x2019;avenir de l&#x2019;IA dans les affaires</h1>
+                                    <p>Explorer la technologie, la strat&#xE9;gie et l&#x2019;innovation &#xE0; l&#x2019;&#xE8;re num&#xE9;rique</p>
+                                </header>
+
+                                    <section class="article-section">
+                                        <h2>Aper&#xE7;u</h2>
+                                        <p>L’intelligence artificielle (IA) est passée d’un concept futuriste à un atout essentiel. Les entreprises exploitent l’apprentissage automatique, le traitement du langage naturel et la robotique pour optimiser leurs opérations et créer de nouvelles expériences clients. L’IA n’est plus un simple complément ; elle est devenue centrale pour repenser la stratégie concurrentielle dans un marché en évolution rapide.</p>
+                                    </section>
+                                    <section class="article-section">
+                                        <h2>Nouvelles opportunit&#xE9;s</h2>
+                                        <p>En 2025, les technologies émergentes en IA ouvrent de vastes opportunités. Les plateformes génératives et l’analytique prédictive transforment le développement de produits et permettent un engagement hyper‑personnalisé. Les entreprises investissent dans des solutions IA sur site qui renforcent la confidentialité et l’agilité opérationnelle.</p>
+                                    </section>
+                                    <section class="article-section">
+                                        <h2>Int&#xE9;gration et transformation</h2>
+                                        <p>La véritable puissance de l’IA se révèle lorsqu’elle est intégrée dans toutes les facettes des opérations. Les entreprises leaders l’intègrent dans leurs processus décisionnels pour automatiser les flux de travail, permettre des décisions en temps réel et renforcer la cybersécurité. L’IA complète l’expertise humaine et oriente les modèles d’affaires vers l’excellence numérique.</p>
+                                    </section>
+                                    <section class="article-section">
+                                        <h2>D&#xE9;fis et consid&#xE9;rations</h2>
+                                        <p>Avec de grandes promesses viennent de grands défis : dilemmes éthiques, confidentialité des données, pénurie de talents spécialisés. Une gouvernance solide est nécessaire pour équilibrer innovation et responsabilité.<br /><blockquote>« L’avenir de l’IA ne concerne pas seulement la technologie — il s’agit de repenser la stratégie d’entreprise »</blockquote>Ces réflexions soulignent la nécessité d’un déploiement responsable de l’IA.</p>
+                                    </section>
+                                    <section class="article-section">
+                                        <h2>Perspectives d&#x2019;avenir</h2>
+                                        <p>L’IA formera l’épine dorsale de la transformation numérique. Sa convergence avec la blockchain et l’informatique quantique redéfinira des secteurs comme la finance et la santé. Les organisations qui investissent aujourd’hui dans une IA évolutive et éthique seront les leaders de demain.</p>
+                                    </section>
+                                    <section class="article-section">
+                                        <h2>Adopter la r&#xE9;volution IA</h2>
+                                        <p><blockquote>« Le plus grand risque est de ne pas suivre le rythme du changement technologique. S’adapter ou être dépassé. »</blockquote>La fusion de l’ingéniosité humaine et des insights de l’IA transforme les risques en opportunités. Investir dans une IA robuste et éthique garantit une croissance durable.</p>
+                                    </section>
+                                    <section class="article-section">
+                                        <h2>Conclusion</h2>
+                                        <p>L’avenir de l’IA dans les affaires est une histoire d’innovation et de résilience. Bien que le chemin soit semé de défis, les récompenses pour ceux qui investissent judicieusement sont immenses. Les dirigeants doivent adopter l’IA de manière responsable pour redéfinir la compétitivité à l’ère numérique.</p>
+                                    </section>
+
+                                <p class="callout"><strong>Insight The Intelligent Enterprise Group :</strong> Nous aidons les organisations à transformer l’IA d’un mot‑clé en un avantage commercial. Notre plateforme AI Expert Team et nos agents sur mesure rendent les stratégies d’avenir concrètes dès aujourd’hui.</p>
+                            </div>
+                        </div>
+                        <div x-show="selectedResource==='roiAI'" x-transition>
+                            <div class="container article-content">
+                                <header class="article-header">
+                                    <h1>Maximiser le ROI avec l&#x2019;IA</h1>
+                                    <p>Exploiter l&#x2019;intelligence artificielle pour des retours commerciaux in&#xE9;gal&#xE9;s</p>
+                                </header>
+
+                                    <section class="article-section">
+                                        <h2>Introduction</h2>
+                                        <p>À l’ère numérique, l’IA est devenue un levier stratégique de performance. Maximiser le ROI exige d’aligner l’IA avec les stratégies globales.</p>
+                                    </section>
+                                    <section class="article-section">
+                                        <h2>Mise en &#x153;uvre strat&#xE9;gique</h2>
+                                        <p>Des initiatives IA adaptées et alignées sur les objectifs de l’entreprise améliorent l’efficacité et la rentabilité.</p>
+                                    </section>
+                                    <section class="article-section">
+                                        <h2>Mesurer l&#x2019;impact</h2>
+                                        <p>Les indicateurs clés tels que les économies, la croissance du chiffre d’affaires et les gains de productivité mesurent le succès de l’IA. L’optimisation continue assure des retours durables.</p>
+                                    </section>
+                                    <section class="article-section">
+                                        <h2>Points cl&#xE9;s</h2>
+                                        <p><blockquote>« L’intégration stratégique de l’IA crée de la valeur à long terme et maximise les retours. »<br />— Directeur financier, grande entreprise</blockquote>Cette citation illustre une vérité fondamentale : investir dans l’IA exige autant de discipline stratégique que de technologie.</p>
+                                    </section>
+                                    <section class="article-section">
+                                        <h2>Conclusion</h2>
+                                        <p>Maximiser le ROI avec l’IA combine planification, innovation et exécution. Les entreprises qui intègrent profondément l’IA connaîtront une croissance exponentielle et un leadership renforcé.</p>
+                                    </section>
+
+                                <p class="callout"><strong>Insight The Intelligent Enterprise Group :</strong> Maximiser le ROI signifie aligner l’IA sur des résultats mesurables. Notre plateforme accélère l’adoption et nos services de conseil garantissent des retours tangibles.</p>
+                            </div>
+                        </div>
+                        <div x-show="selectedResource==='aiTrends'" x-transition>
+                            <div class="container article-content">
+                                <header class="article-header">
+                                    <h1>5 tendances cl&#xE9;s de l&#x2019;IA pour 2025</h1>
+                                    <p>R&#xE9;v&#xE9;ler les tendances qui red&#xE9;finissent l&#x2019;avenir de l&#x2019;intelligence artificielle</p>
+                                </header>
+
+                                    <section class="article-section">
+                                        <h2>Introduction</h2>
+                                        <p>L’IA évolue à un rythme effréné. En 2025, elle redéfinira la prise de décision et l’intégration dans tous les secteurs. Avec la technologie qui repousse les limites, les organisations doivent anticiper et s’adapter à ces tendances émergentes.</p>
+                                    </section>
+                                    <section class="article-section">
+                                        <h2>Aper&#xE7;u des tendances</h2>
+                                        <p>Cinq tendances dominent : Edge AI, IA explicable, éthique de l’IA, IA en cybersécurité et solutions sectorielles. Elles rendront l’IA plus accessible, responsable et intégrée dans tous les aspects de notre vie.</p>
+                                    </section>
+                                    <section class="article-section">
+                                        <h2>Edge AI</h2>
+                                        <p>Le traitement des données en périphérie (Edge AI) déplace le calcul des serveurs centralisés vers les appareils locaux. Cela réduit la latence, améliore la prise de décision en temps réel et protège les données sensibles. Avec l’expansion de l’IoT, Edge AI devient un catalyseur essentiel d’analyses instantanées.</p>
+                                    </section>
+                                    <section class="article-section">
+                                        <h2>IA explicable</h2>
+                                        <p>À mesure que les systèmes d’IA deviennent plus complexes, la demande de transparence augmente. L’IA explicable (XAI) vise à clarifier les décisions automatisées, offrant des justifications compréhensibles et renforçant la confiance. Elle permet aux organisations de valider leurs choix et de les aligner sur leurs objectifs stratégiques.</p>
+                                    </section>
+                                    <section class="article-section">
+                                        <h2>&#xC9;thique de l&#x2019;IA</h2>
+                                        <p>Avec la prolifération rapide de l’IA, les considérations éthiques deviennent centrales. La mise en place de cadres solides est essentielle pour traiter des enjeux tels que les biais, la confidentialité et la responsabilité. En donnant la priorité à l’éthique, les entreprises respectent les réglementations et bâtissent une confiance durable.</p>
+                                    </section>
+                                    <section class="article-section">
+                                        <h2>IA en cybers&#xE9;curit&#xE9;</h2>
+                                        <p>Les menaces informatiques gagnent en sophistication, et l’IA devient un outil puissant pour la cybersécurité. Les systèmes pilotés par l’IA détectent les vulnérabilités, analysent les schémas en temps réel et réagissent rapidement aux attaques. Cette tendance est cruciale pour protéger les actifs critiques et maintenir des infrastructures résilientes.</p>
+                                    </section>
+                                    <section class="article-section">
+                                        <h2>Solutions sectorielles</h2>
+                                        <p>Il n’existe pas de solution unique. Des applications IA sur mesure sont développées pour répondre aux besoins spécifiques de secteurs comme la santé, la finance et le commerce de détail. Ces solutions optimisent l’efficacité, créent des avantages concurrentiels et améliorent l’expérience client grâce à des innovations ciblées.</p>
+                                    </section>
+                                    <section class="article-section">
+                                        <h2>Conclusion</h2>
+                                        <p>Les tendances de l’IA qui domineront 2025 annoncent un avenir plus réactif, transparent et éthique. Adopter Edge AI, l’explicabilité, l’éthique, la cybersécurité renforcée et les solutions sectorielles sera essentiel pour rester compétitif. Ces tendances redéfiniront non seulement notre rapport à la technologie mais aussi la stratégie d’entreprise.</p>
+                                    </section>
+
+                                <p class="callout"><strong>Insight The Intelligent Enterprise Group :</strong> De l’Edge AI à l’explicabilité, nous intégrons ces tendances dans des solutions concrètes. Notre agent OmniPredict et nos pipelines adaptatifs maintiennent nos clients en avance.</p>
+                            </div>
+                        </div>
+                        <div x-show="selectedResource==='aiInnovation'" x-transition>
+                            <div class="container article-content">
+                                <header class="article-header">
+                                    <h1>Innovation dans l&#x2019;int&#xE9;gration de l&#x2019;IA</h1>
+                                    <p>Transformer les flux de travail traditionnels avec des solutions IA innovantes</p>
+                                </header>
+
+                                    <section class="article-section">
+                                        <h2>Introduction</h2>
+                                        <p>La véritable innovation réside dans la capacité à intégrer de nouvelles idées dans des processus établis. Dans le domaine de l’IA, le potentiel ne se limite pas aux applications autonomes, mais se concrétise dans l’intégration réfléchie de l’IA aux systèmes existants. Cette approche transforme la technologie en résultats mesurables et ouvre la voie à une nouvelle ère d’excellence opérationnelle.</p>
+                                    </section>
+                                    <section class="article-section">
+                                        <h2>Bonnes pratiques</h2>
+                                        <p>Une intégration réussie commence par une évaluation approfondie des systèmes actuels et des objectifs clairs. Les entreprises qui adoptent des tests itératifs, une adaptation agile et une amélioration continue obtiennent des bénéfices significatifs. En alignant les initiatives IA sur les objectifs stratégiques, elles améliorent l’efficacité, la satisfaction client et leur avantage concurrentiel.</p>
+                                    </section>
+                                    <section class="article-section">
+                                        <h2>Applications concr&#xE8;tes</h2>
+                                        <p>L’innovation dans l’intégration de l’IA est visible dans de nombreux secteurs. Des chatbots intelligents qui optimisent le support client aux systèmes de maintenance prédictive qui prolongent la durée de vie des équipements, les applications sont vastes et transformatrices. Elles réduisent les coûts opérationnels et améliorent directement la qualité de l’expérience client.</p>
+                                    </section>
+                                    <section class="article-section">
+                                        <h2>Perspectives sectorielles</h2>
+                                        <p><blockquote>« L’innovation en IA ne concerne pas seulement la technologie — il s’agit de réinventer les processus et de générer de la valeur mesurable. »<br />— CTO, grande entreprise mondiale</blockquote>Ces propos rappellent que l’innovation exige plus que des solutions de pointe : elle implique de repenser la manière dont les entreprises fonctionnent et interagissent avec la technologie, afin de préparer une croissance durable.</p>
+                                    </section>
+                                    <section class="article-section">
+                                        <h2>Conclusion</h2>
+                                        <p>L’innovation dans l’intégration de l’IA représente un tournant majeur dans la façon dont les entreprises exploitent la technologie pour redéfinir le succès. En intégrant l’IA au cœur des processus, elles débloquent une efficacité inédite, améliorent l’expérience client et créent des avantages concurrentiels durables. Le chemin vers l’innovation transformative est un processus d’évolution continue, indispensable pour toute organisation qui veut diriger à l’ère numérique.</p>
+                                    </section>
+
+                                <p class="callout"><strong>Insight The Intelligent Enterprise Group :</strong> L’intégration est l’endroit où la vision devient valeur. Nous combinons la plateforme AI Expert Team avec des équipes d’agents sur mesure et des formations pour assurer une adoption fluide dans toute l’entreprise.</p>
+                            </div>
+                        </div>
+            </div>
+        </template>
+    </div>
+</section>
+
+
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&#xA9; 2025 The Intelligent Enterprise Group. Tous droits r&#xE9;serv&#xE9;s.</p>
+        </div>
+    </footer>
+
+    <script src="/js/swiper-bundle.min.js"></script>
+    <script src="/js/cdn.min.js" defer></script>
+    <script src="/js/gsap.min.js"></script>
+    <script src="/js/DrawSVGPlugin.min.js"></script>
+
+    <script type="module" src="/js/themeToggle.js"></script>
+    <script type="module">
+        import { toggleTheme, getCurrentTheme } from '/js/themeToggle.js';
+        const checkbox = document.getElementById('theme-checkbox');
+        const themeLabel = document.getElementById('theme-label');
+
+        if (getCurrentTheme() === 'dark') {
+            checkbox.checked = true;
+            themeLabel.textContent = 'Mode sombre';
+        } else {
+            themeLabel.textContent = 'Mode clair';
+        }
+
+        checkbox.addEventListener('change', () => {
+            toggleTheme();
+            themeLabel.textContent = checkbox.checked ? 'Mode sombre' : 'Mode clair';
+        });
+    </script>
+
+    <button id="back-to-top" aria-label="Back to Top">Haut</button>
+
+    
+    <script>
+        gsap.registerPlugin(DrawSVGPlugin);
+        window.onload = function () {
+            gsap.from(".hero h2", { duration: 1.2, opacity: 0, y: -50, ease: "power2.out" });
+            gsap.from(".hero h3", { duration: 1.2, opacity: 0, y: 50, ease: "power2.out", delay: 0.2 });
+            gsap.from(".resource-card", { duration: 1, opacity: 0, y: 30, ease: "power2.out", stagger: 0.2, delay: 0.6 });
+        };
+    </script>
+
+</body>
+</html>

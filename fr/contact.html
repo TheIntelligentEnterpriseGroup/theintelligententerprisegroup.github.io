@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="fr" dir="ltr">
+<head>
+    <meta name="robots" content="index, follow" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <meta name="description" content='Contactez The Intelligent Enterprise Group. Planifiez une consultation ou demandez des informations sur notre &#xE9;quipe d&#x2019;experts coordonn&#xE9;e par IA et nos solutions de niveau entreprise. Commencez d&#xE8;s aujourd&#x2019;hui votre parcours vers des op&#xE9;rations plus intelligentes et efficaces.' />
+    <title>Contactez The Intelligent Enterprise Group | Consultation &amp; Solutions IA</title>
+
+    <style>
+        html { background-color: #3B3A47; }
+    </style>
+    <script>
+        (function () {
+            const key = 'preferredTheme';
+            const stored = localStorage.getItem(key);
+            const systemDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+            const theme = stored || (systemDark ? 'dark' : 'light');
+            if (theme === 'dark') {
+                document.documentElement.classList.add('dark-mode');
+            }
+        })();
+    </script>
+
+
+        <link rel="alternate" hreflang="en" href="https://theintelligententerprisegroup.com/contact.html" />
+        <link rel="alternate" hreflang="fr" href="https://theintelligententerprisegroup.com/fr/contact.html" />
+        <link rel="alternate" hreflang="de" href="https://theintelligententerprisegroup.com/de/contact.html" />
+        <link rel="alternate" hreflang="es" href="https://theintelligententerprisegroup.com/es/contact.html" />
+        <link rel="alternate" hreflang="pt" href="https://theintelligententerprisegroup.com/pt/contact.html" />
+        <link rel="alternate" hreflang="zh" href="https://theintelligententerprisegroup.com/zh/contact.html" />
+        <link rel="alternate" hreflang="ja" href="https://theintelligententerprisegroup.com/ja/contact.html" />
+        <link rel="alternate" hreflang="ar" href="https://theintelligententerprisegroup.com/ar/contact.html" />
+
+
+    <link rel="alternate" hreflang="x-default" href="https://theintelligententerprisegroup.com/contact.html" />
+
+    <link rel="canonical" href="https://theintelligententerprisegroup.com/fr/contact.html" />
+
+
+    <link rel="stylesheet" href="/css/styles.css" />
+    <link rel="stylesheet" href="/css/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="/css/all.min.css" />
+
+    <script src="/js/lang-switcher.js" defer></script>
+
+    <script>
+        (function () {
+            if (localStorage.getItem('currentLang')) return;
+            const supported = [
+                     { code: "en" } ,
+                     { code: "fr" } ,
+                     { code: "de" } ,
+                     { code: "es" } ,
+                     { code: "pt" } ,
+                     { code: "zh" } ,
+                     { code: "ja" } ,
+                     { code: "ar" } 
+            ];
+            const defaultLang = "fr";
+            const navLangs = navigator.languages || [navigator.language || navigator.userLanguage];
+            let detected = null;
+            for (const nav of navLangs) {
+                const code = nav.toLowerCase().split('-')[0];
+                if (supported.find(s => s.code.toLowerCase() === code)) {
+                    detected = code;
+                    break;
+                }
+            }
+            const lang = detected || defaultLang;
+            localStorage.setItem('currentLang', lang);
+            document.documentElement.lang = lang;
+        })();
+    </script>
+
+    <!-- Organization structured data (JSON-LD) -->
+    <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "Organization",
+          "name": "The Intelligent Enterprise Group",
+          "url": "https://theintelligententerprisegroup.com/",
+          "logo": "https://theintelligententerprisegroup.com/images/tieg-logo.png",
+          "sameAs": []
+        }
+    </script>
+    <link rel="icon" href="/favicon.ico" />
+    <link rel="apple-touch-icon" href="/images/apple-touch-icon.png" />
+
+    
+
+</head>
+<body>
+    <header x-data="{ open: false }">
+        <div class="container header-top">
+            <div class="logo"></div>
+            <div class="theme-switch-wrapper">
+                <label class="theme-switch">
+                    <input type="checkbox" id="theme-checkbox" />
+                    <span class="slider round"></span>
+                </label>
+                <span id="theme-label">Mode clair</span>
+                <span class="lang-switcher">
+                    <label for="lang-select" class="lang-label">🌐 Langue :</label>
+
+                    <!-- Language switcher -->
+                    <select id="lang-select" class="lang-select">
+                        <option value="en" data-path="/">English</option>
+                        <option value="fr" data-path="/fr/">Fran&#xE7;ais</option>
+                        <option value="de" data-path="/de/">Deutsch</option>
+                        <option value="es" data-path="/es/">Espa&#xF1;ol</option>
+                        <option value="pt" data-path="/pt/">Portugu&#xEA;s</option>
+                        <option value="zh" data-path="/zh/">&#x4E2D;&#x6587;</option>
+                        <option value="ja" data-path="/ja/">&#x65E5;&#x672C;&#x8A9E;</option>
+                        <option value="ar" data-path="/ar/">&#x627;&#x644;&#x639;&#x631;&#x628;&#x64A;&#x629;</option>
+                    </select>
+
+                </span>
+            </div>
+        </div>
+        
+        <div class="container header-nav">
+            <button @click="open = !open" class="menu-toggle" aria-label="Toggle Menu">
+                <svg width="24" height="24" viewBox="0 0 24 24">
+                    <path fill="var(--nav-link-color)" d="M3 6h18v2H3V6zm0 5h18v2H3v-2zm0 5h18v2H3v-2z" />
+                </svg>
+            </button>
+
+            <nav class="main-nav" :class="{ 'open': open }">
+                <ul>
+                    <li><a href="index.html" class="">Accueil</a></li>
+                    <li><a href="about.html" class="">&#xC0; propos</a></li>
+                    <li><a href="services.html" class="">Services &amp; Solutions</a></li>
+                    <li><a href="case-studies.html" class="">&#xC9;tudes de cas</a></li>
+                    <li><a href="resources.html" class="">Ressources &amp; Analyses</a></li>
+                    <li><a href="trial.html" class="">Essai</a></li>
+                    <li><a href="pricing.html" class="">Tarifs</a></li>
+                    <li><a href="partners.html" class="">Partenaires &amp; Alliances</a></li>                    
+                    <li><a href="contact.html" class="active">Contact &amp; Consultation</a></li>
+                    <li class="has-submenu"
+                        x-data="{ openSub: false }"
+                        @mouseenter="openSub = true"
+                        @mouseleave="openSub = false">
+                      <button @click="openSub = !openSub"
+                              aria-haspopup="true"
+                              :aria-expanded="openSub.toString()">
+                        Infos
+                        <svg width="12" height="12" viewBox="0 0 12 12" aria-hidden="true">
+                          <path d="M3 4l3 3 3-3" fill="currentColor"/>
+                        </svg>
+                      </button>
+                      <ul class="submenu" x-show="openSub" @click.outside="openSub = false">
+                        <li><a href="careers.html" class="">Carri&#xE8;res</a></li>
+                        <li><a href="faqs.html" class="">FAQs</a></li>
+                        <li><a href="legal.html" class="">Mentions l&#xE9;gales &amp; Politiques</a></li>
+                      </ul>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        
+<section class="hero">
+    <div class="container">
+        <h2>Formulaire de contact &amp; de demande</h2>
+        <h3>Que vous ayez une question, besoin d’un conseil personnalisé,<br />ou que vous soyez prêt à explorer une solution pilotée par l’IA, nous sommes là pour vous aider.</h3>
+    </div>
+</section>
+
+<section id="contact" class="contact">
+    <div class="container">
+        <div class="contact-form">
+            <h2>Prenez contact</h2>
+
+            <form action="https://formsubmit.co/563435e1141cf899817f240576ed6c66" method="POST">
+                <input type="hidden" name="_subject" value="Nouveau message depuis votre site web" />
+
+                <label for="name">Nom</label>
+                <input type="text" id="name" name="name" placeholder="Votre nom" required />
+
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="Votre adresse email" required />
+
+                <label for="enquiryType">Type de demande</label>
+                <select id="enquiryType" name="enquiryType" required>
+                    <option value="">-- Veuillez choisir une option --</option>
+                            <option value="general">Demande g&#xE9;n&#xE9;rale</option>
+                            <option value="sales">Ventes &amp; Solutions</option>
+                            <option value="trial">Demande de licence d&#x2019;essai</option>
+                            <option value="students">Demande de licence &#xC9;tudiants &amp; Enseignants</option>
+                            <option value="billing">Facturation &amp; Comptes</option>
+                            <option value="legal">Juridique &amp; Conformit&#xE9;</option>
+                            <option value="careers">Carri&#xE8;res / Candidatures</option>
+                            <option value="partners">Partenariats &amp; Alliances</option>
+                            <option value="support">Support technique</option>
+                </select>
+
+                <div id="extraFields" style="display:none; margin-top:1rem;">
+                    <label for="vat">Num&#xE9;ro de TVA</label>
+                    <input type="text" id="vat" name="vat" placeholder="Indiquez votre num&#xE9;ro de TVA si vous en avez un" />
+
+                    <label for="address">Adresse postale</label>
+                    <textarea id="address" name="address" placeholder="Votre adresse postale"></textarea>
+
+                    <div id="schoolField" style="display:none;">
+                        <label for="school">Nom de l&#x2019;&#xE9;cole / universit&#xE9;</label>
+                        <input type="text" id="school" name="school" placeholder="Indiquez le nom de votre &#xE9;cole ou universit&#xE9;" />
+                    </div>
+
+                    <p class="form-hint">Ces champs sont requis par la loi pour une <strong>licence d’essai</strong> ou une <strong>licence Étudiants &amp; Enseignants</strong>.</p>
+                </div>
+
+                <label for="subject">Sujet</label>
+                <input type="text" id="subject" name="subject" placeholder="Sujet" required />
+
+                <label for="message">Message</label>
+                <textarea id="message" name="message" placeholder="Votre message" required></textarea>
+
+                <div style="display:none;">
+                    <label for="honeypot">Laissez ce champ vide</label>
+                    <input type="text" id="honeypot" name="_honey" value="" />
+                </div>
+
+                <button type="submit">Envoyer le message</button>
+                <input type="hidden" name="_captcha" value="false" />
+            </form>
+
+            <div id="form-status" style="display:none; margin-top:1rem;"></div>
+        </div>
+    </div>
+</section>
+
+<section class="company-info">
+    <div class="container">
+        <h2>Informations sur l&#x2019;entreprise</h2>
+        <p><strong>The Intelligent Enterprise Group</strong></p>
+        <p>Nous sommes une entreprise enregistrée en Belgique et opérons à l’échelle mondiale. Pour des raisons de sécurité et de confidentialité, nous utilisons notre formulaire de contact comme principal canal de communication. Voir aussi <a href='legal.html'>page Légale & Politiques</a>.</p>
+        <div class="social-links">
+            <a href="https://www.linkedin.com/in/zsomogyi" target="_blank" rel="noopener" class="linkedin-link">
+                <i class="fab fa-linkedin"></i> Connectez-vous avec nous sur LinkedIn
+            </a>
+        </div>
+    </div>
+</section>
+
+<section class="cta">
+    <div class="container">
+        <h2>Pr&#xEA;t pour une transformation pilot&#xE9;e par l&#x2019;IA ?</h2>
+        <p>Entamons la conversation. Contactez-nous d&#xE8;s aujourd&#x2019;hui et franchissez la premi&#xE8;re &#xE9;tape vers des solutions innovantes pour votre entreprise.</p>
+        <a href="#contact" class="btn">Commencez votre parcours</a>
+    </div>
+</section>
+
+
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&#xA9; 2025 The Intelligent Enterprise Group. Tous droits r&#xE9;serv&#xE9;s.</p>
+        </div>
+    </footer>
+
+    <script src="/js/swiper-bundle.min.js"></script>
+    <script src="/js/cdn.min.js" defer></script>
+    <script src="/js/gsap.min.js"></script>
+    <script src="/js/DrawSVGPlugin.min.js"></script>
+
+    <script type="module" src="/js/themeToggle.js"></script>
+    <script type="module">
+        import { toggleTheme, getCurrentTheme } from '/js/themeToggle.js';
+        const checkbox = document.getElementById('theme-checkbox');
+        const themeLabel = document.getElementById('theme-label');
+
+        if (getCurrentTheme() === 'dark') {
+            checkbox.checked = true;
+            themeLabel.textContent = 'Mode sombre';
+        } else {
+            themeLabel.textContent = 'Mode clair';
+        }
+
+        checkbox.addEventListener('change', () => {
+            toggleTheme();
+            themeLabel.textContent = checkbox.checked ? 'Mode sombre' : 'Mode clair';
+        });
+    </script>
+
+    <button id="back-to-top" aria-label="Back to Top">Haut</button>
+
+    
+    <script>
+        gsap.registerPlugin(DrawSVGPlugin);
+        window.onload = function () {
+            gsap.from(".hero h2", { duration: 1.2, opacity: 0, y: -50, ease: "power2.out" });
+            gsap.from(".hero h3", { duration: 1.2, opacity: 0, y: 50, ease: "power2.out", delay: 0.2 });
+            gsap.from(".contact-form", { duration: 1, opacity: 0, y: 20, ease: "power2.out", delay: 0.4 });
+            gsap.from(".company-info", { duration: 1, opacity: 0, y: 20, ease: "power2.out", delay: 0.6 });
+            gsap.from(".cta h2", { duration: 1, opacity: 0, y: -20, ease: "power2.out", delay: 0.8 });
+            gsap.from(".cta p", { duration: 1, opacity: 0, y: 20, ease: "power2.out", delay: 1 });
+            gsap.from(".cta .btn", { duration: 1, opacity: 0, scale: 0.8, ease: "back.out(1.7)", delay: 1.2 });
+        };
+    </script>
+
+    <script>
+        const enquiryType = document.getElementById("enquiryType");
+        const extraFields = document.getElementById("extraFields");
+        const schoolField = document.getElementById("schoolField");
+
+        function toggleExtraFields() {
+            if (enquiryType.value === "trial") {
+                extraFields.style.display = "block";
+                schoolField.style.display = "none";
+            } else if (enquiryType.value === "students") {
+                extraFields.style.display = "block";
+                schoolField.style.display = "block";
+            } else {
+                extraFields.style.display = "none";
+                schoolField.style.display = "none";
+            }
+        }
+        enquiryType.addEventListener("change", toggleExtraFields);
+
+        const form = document.querySelector("form");
+        const status = document.getElementById("form-status");
+
+        form.addEventListener("submit", async function (e) {
+            e.preventDefault();
+            const formData = new FormData(form);
+
+            try {
+                const response = await fetch(form.action, {
+                    method: "POST",
+                    body: formData,
+                    headers: { 'Accept': 'application/json' }
+                });
+
+                if (response.ok) {
+                    form.reset();
+                    status.style.display = "block";
+                    status.style.color = "green";
+                    status.textContent = "&#x2705; Votre message a &#xE9;t&#xE9; envoy&#xE9; avec succ&#xE8;s !";
+                } else {
+                    status.style.display = "block";
+                    status.style.color = "red";
+                    status.textContent = "&#x26A0;&#xFE0F; Oups ! Une erreur est survenue. Veuillez r&#xE9;essayer.";
+                }
+            } catch (error) {
+                status.style.display = "block";
+                status.style.color = "red";
+                status.textContent = "&#x26A0;&#xFE0F; Erreur r&#xE9;seau. Veuillez r&#xE9;essayer plus tard.";
+            }
+        });
+    </script>
+
+</body>
+</html>
