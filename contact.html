@@ -337,11 +337,39 @@
                 });
 
                 if (response.ok) {
+                    // Collect all submitted fields before resetting
+                    let previewHtml = "<strong>✅ Your message has been sent successfully!</strong><br><br>";
+                    previewHtml += '<span style="font-size:1rem; color:#555;">➡️</span><ul>';
+
+                    for (let [key, value] of formData.entries()) {
+                        // Skip internal fields like _subject, _honey, _captcha
+                        if (key.startsWith("_")) continue;
+                        if (!value) continue;
+
+                        // Make the field name more readable (capitalize first letter)
+                        const label = key.charAt(0).toUpperCase() + key.slice(1);
+                        previewHtml += `<li><strong>${label}:</strong> ${value}</li>`;
+                    }
+
+                    previewHtml += "</ul>";
+
                     form.reset();
+
+                    // Show styled confirmation
                     status.style.display = "block";
                     status.style.color = "green";
-                    status.textContent = "✅ Your message has been sent successfully!";
-                } else {
+                    status.style.padding = "1rem";
+                    status.style.border = "1px solid green";
+                    status.style.background = "#e6ffe6";
+                    status.innerHTML = previewHtml;
+
+                    // Auto-hide after 8 seconds
+                    setTimeout(() => {
+                        status.style.display = "none";
+                        status.innerHTML = "";
+                    }, 8000);
+                }
+                else {
                     status.style.display = "block";
                     status.style.color = "red";
                     status.textContent = "⚠️ Oops! Something went wrong. Please try again.";
