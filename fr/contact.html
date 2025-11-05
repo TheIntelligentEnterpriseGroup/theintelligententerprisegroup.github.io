@@ -340,16 +340,16 @@
                     form.reset();
                     status.style.display = "block";
                     status.style.color = "green";
-                    status.textContent = "&#x2705; Votre message a &#xE9;t&#xE9; envoy&#xE9; avec succ&#xE8;s !";
+                    status.textContent = "✅ Votre message a été envoyé avec succès !";
                 } else {
                     status.style.display = "block";
                     status.style.color = "red";
-                    status.textContent = "&#x26A0;&#xFE0F; Oups ! Une erreur est survenue. Veuillez r&#xE9;essayer.";
+                    status.textContent = "⚠️ Oups ! Une erreur est survenue. Veuillez réessayer.";
                 }
             } catch (error) {
                 status.style.display = "block";
                 status.style.color = "red";
-                status.textContent = "&#x26A0;&#xFE0F; Erreur r&#xE9;seau. Veuillez r&#xE9;essayer plus tard.";
+                status.textContent = "⚠️ Erreur réseau. Veuillez réessayer plus tard.";
             }
         });
     </script>

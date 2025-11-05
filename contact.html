@@ -340,16 +340,16 @@
                     form.reset();
                     status.style.display = "block";
                     status.style.color = "green";
-                    status.textContent = "&#x2705; Your message has been sent successfully!";
+                    status.textContent = "✅ Your message has been sent successfully!";
                 } else {
                     status.style.display = "block";
                     status.style.color = "red";
-                    status.textContent = "&#x26A0;&#xFE0F; Oops! Something went wrong. Please try again.";
+                    status.textContent = "⚠️ Oops! Something went wrong. Please try again.";
                 }
             } catch (error) {
                 status.style.display = "block";
                 status.style.color = "red";
-                status.textContent = "&#x26A0;&#xFE0F; Network error. Please try again later.";
+                status.textContent = "⚠️ Network error. Please try again later.";
             }
         });
     </script>

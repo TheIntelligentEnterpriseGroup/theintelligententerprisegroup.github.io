@@ -340,16 +340,16 @@
                     form.reset();
                     status.style.display = "block";
                     status.style.color = "green";
-                    status.textContent = "&#x2705; Sua mensagem foi enviada com sucesso!";
+                    status.textContent = "✅ Sua mensagem foi enviada com sucesso!";
                 } else {
                     status.style.display = "block";
                     status.style.color = "red";
-                    status.textContent = "&#x26A0;&#xFE0F; Oops! Algo deu errado. Por favor, tente novamente.";
+                    status.textContent = "⚠️ Oops! Algo deu errado. Por favor, tente novamente.";
                 }
             } catch (error) {
                 status.style.display = "block";
                 status.style.color = "red";
-                status.textContent = "&#x26A0;&#xFE0F; Erro de rede. Por favor, tente novamente mais tarde.";
+                status.textContent = "⚠️ Erro de rede. Por favor, tente novamente mais tarde.";
             }
         });
     </script>

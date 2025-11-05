@@ -340,16 +340,16 @@
                     form.reset();
                     status.style.display = "block";
                     status.style.color = "green";
-                    status.textContent = "&#x2705; &#x30E1;&#x30C3;&#x30BB;&#x30FC;&#x30B8;&#x306F;&#x6B63;&#x5E38;&#x306B;&#x9001;&#x4FE1;&#x3055;&#x308C;&#x307E;&#x3057;&#x305F;&#xFF01;";
+                    status.textContent = "✅ メッセージは正常に送信されました！";
                 } else {
                     status.style.display = "block";
                     status.style.color = "red";
-                    status.textContent = "&#x26A0;&#xFE0F; &#x30A8;&#x30E9;&#x30FC;&#x304C;&#x767A;&#x751F;&#x3057;&#x307E;&#x3057;&#x305F;&#x3002;&#x3082;&#x3046;&#x4E00;&#x5EA6;&#x304A;&#x8A66;&#x3057;&#x304F;&#x3060;&#x3055;&#x3044;&#x3002;";
+                    status.textContent = "⚠️ エラーが発生しました。もう一度お試しください。";
                 }
             } catch (error) {
                 status.style.display = "block";
                 status.style.color = "red";
-                status.textContent = "&#x26A0;&#xFE0F; &#x30CD;&#x30C3;&#x30C8;&#x30EF;&#x30FC;&#x30AF;&#x30A8;&#x30E9;&#x30FC;&#x3067;&#x3059;&#x3002;&#x5F8C;&#x3067;&#x3082;&#x3046;&#x4E00;&#x5EA6;&#x304A;&#x8A66;&#x3057;&#x304F;&#x3060;&#x3055;&#x3044;&#x3002;";
+                status.textContent = "⚠️ ネットワークエラーです。後でもう一度お試しください。";
             }
         });
     </script>

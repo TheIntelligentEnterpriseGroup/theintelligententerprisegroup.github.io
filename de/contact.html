@@ -340,16 +340,16 @@
                     form.reset();
                     status.style.display = "block";
                     status.style.color = "green";
-                    status.textContent = "&#x2705; Ihre Nachricht wurde erfolgreich gesendet!";
+                    status.textContent = "✅ Ihre Nachricht wurde erfolgreich gesendet!";
                 } else {
                     status.style.display = "block";
                     status.style.color = "red";
-                    status.textContent = "&#x26A0;&#xFE0F; Uups! Etwas ist schiefgelaufen. Bitte versuchen Sie es erneut.";
+                    status.textContent = "⚠️ Uups! Etwas ist schiefgelaufen. Bitte versuchen Sie es erneut.";
                 }
             } catch (error) {
                 status.style.display = "block";
                 status.style.color = "red";
-                status.textContent = "&#x26A0;&#xFE0F; Netzwerkfehler. Bitte versuchen Sie es sp&#xE4;ter erneut.";
+                status.textContent = "⚠️ Netzwerkfehler. Bitte versuchen Sie es später erneut.";
             }
         });
     </script>

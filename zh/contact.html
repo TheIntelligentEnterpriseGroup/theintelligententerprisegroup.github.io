@@ -340,16 +340,16 @@
                     form.reset();
                     status.style.display = "block";
                     status.style.color = "green";
-                    status.textContent = "&#x2705; &#x60A8;&#x7684;&#x6D88;&#x606F;&#x5DF2;&#x6210;&#x529F;&#x53D1;&#x9001;&#xFF01;";
+                    status.textContent = "✅ 您的消息已成功发送！";
                 } else {
                     status.style.display = "block";
                     status.style.color = "red";
-                    status.textContent = "&#x26A0;&#xFE0F; &#x51FA;&#x9519;&#x4E86;&#xFF01;&#x8BF7;&#x91CD;&#x8BD5;&#x3002;";
+                    status.textContent = "⚠️ 出错了！请重试。";
                 }
             } catch (error) {
                 status.style.display = "block";
                 status.style.color = "red";
-                status.textContent = "&#x26A0;&#xFE0F; &#x7F51;&#x7EDC;&#x9519;&#x8BEF;&#x3002;&#x8BF7;&#x7A0D;&#x540E;&#x518D;&#x8BD5;&#x3002;";
+                status.textContent = "⚠️ 网络错误。请稍后再试。";
             }
         });
     </script>

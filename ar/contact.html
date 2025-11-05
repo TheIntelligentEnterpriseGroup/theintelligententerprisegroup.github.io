@@ -340,16 +340,16 @@
                     form.reset();
                     status.style.display = "block";
                     status.style.color = "green";
-                    status.textContent = "&#x2705; &#x62A;&#x645; &#x625;&#x631;&#x633;&#x627;&#x644; &#x631;&#x633;&#x627;&#x644;&#x62A;&#x643; &#x628;&#x646;&#x62C;&#x627;&#x62D;!";
+                    status.textContent = "✅ تم إرسال رسالتك بنجاح!";
                 } else {
                     status.style.display = "block";
                     status.style.color = "red";
-                    status.textContent = "&#x26A0;&#xFE0F; &#x639;&#x630;&#x631;&#x627;&#x64B;! &#x62D;&#x62F;&#x62B; &#x62E;&#x637;&#x623; &#x645;&#x627;. &#x64A;&#x631;&#x62C;&#x649; &#x627;&#x644;&#x645;&#x62D;&#x627;&#x648;&#x644;&#x629; &#x645;&#x631;&#x629; &#x623;&#x62E;&#x631;&#x649;.";
+                    status.textContent = "⚠️ عذراً! حدث خطأ ما. يرجى المحاولة مرة أخرى.";
                 }
             } catch (error) {
                 status.style.display = "block";
                 status.style.color = "red";
-                status.textContent = "&#x26A0;&#xFE0F; &#x62E;&#x637;&#x623; &#x641;&#x64A; &#x627;&#x644;&#x634;&#x628;&#x643;&#x629;. &#x64A;&#x631;&#x62C;&#x649; &#x627;&#x644;&#x645;&#x62D;&#x627;&#x648;&#x644;&#x629; &#x644;&#x627;&#x62D;&#x642;&#x627;&#x64B;.";
+                status.textContent = "⚠️ خطأ في الشبكة. يرجى المحاولة لاحقاً.";
             }
         });
     </script>
