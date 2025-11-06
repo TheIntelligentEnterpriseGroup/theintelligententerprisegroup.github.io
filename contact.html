@@ -164,9 +164,11 @@
     <main>
         
 <section class="hero">
-    <div class="container">
+    <div class="container hero-container">
         <h2>Contact &amp; Application Form</h2>
-        <h3>Whether you have a question, need personalized advice,<br />or are ready to explore an AI-driven solution, we’re here to help.</h3>
+        <div class="hero-text">
+            <h3>Whether you have a question, need personalized advice,<br />or are ready to explore an AI-driven solution, we’re here to help.</h3>
+        </div>
     </div>
 </section>
 
@@ -238,6 +240,18 @@
         <h2>Company Information</h2>
         <p><strong>The Intelligent Enterprise Group</strong></p>
         <p>We are a registered business in Belgium operating globally. For security and privacy reasons, we use our contact form as the primary channel of communication. See also <a href="legal.html">Legal &amp; Policies page</a>.</p>
+
+        <p>Email: <a id="email-link"></a></p>
+        <script>
+            const user = "info";
+            const domain = "theintelligententerprisegroup";
+            const com = ".com";
+            const email = `${user}@${domain}${com}`;
+            const link = document.getElementById("email-link");
+            link.href = "mailto:" + email;
+            link.textContent = email;
+        </script>
+
         <div class="social-links">
             <a href="https://www.linkedin.com/in/zsomogyi" target="_blank" rel="noopener" class="linkedin-link">
                 <i class="fab fa-linkedin"></i> Connect with us on LinkedIn

@@ -164,9 +164,11 @@
     <main>
         
 <section class="hero">
-    <div class="container">
+    <div class="container hero-container">
         <h2>&#x646;&#x645;&#x648;&#x630;&#x62C; &#x627;&#x644;&#x627;&#x62A;&#x635;&#x627;&#x644; &#x648;&#x627;&#x644;&#x62A;&#x642;&#x62F;&#x64A;&#x645;</h2>
-        <h3>سواء كان لديك سؤال، أو تحتاج إلى نصيحة مخصصة،<br />أو كنت مستعداً لاستكشاف حل مدعوم بالذكاء الاصطناعي، نحن هنا لمساعدتك.</h3>
+        <div class="hero-text">
+            <h3>سواء كان لديك سؤال، أو تحتاج إلى نصيحة مخصصة،<br />أو كنت مستعداً لاستكشاف حل مدعوم بالذكاء الاصطناعي، نحن هنا لمساعدتك.</h3>
+        </div>
     </div>
 </section>
 
@@ -238,6 +240,18 @@
         <h2>&#x645;&#x639;&#x644;&#x648;&#x645;&#x627;&#x62A; &#x627;&#x644;&#x634;&#x631;&#x643;&#x629;</h2>
         <p><strong>The Intelligent Enterprise Group</strong></p>
         <p>نحن شركة مسجلة في بلجيكا ونعمل على مستوى عالمي. لأسباب تتعلق بالأمان والخصوصية، نستخدم نموذج الاتصال كقناة الاتصال الأساسية. انظر أيضاً <a href="legal.html">صفحة السياسات واللوائح</a>.</p>
+
+        <p>&#x627;&#x644;&#x628;&#x631;&#x64A;&#x62F; &#x627;&#x644;&#x625;&#x644;&#x643;&#x62A;&#x631;&#x648;&#x646;&#x64A;: <a id="email-link"></a></p>
+        <script>
+            const user = "info";
+            const domain = "theintelligententerprisegroup";
+            const com = ".com";
+            const email = `${user}@${domain}${com}`;
+            const link = document.getElementById("email-link");
+            link.href = "mailto:" + email;
+            link.textContent = email;
+        </script>
+
         <div class="social-links">
             <a href="https://www.linkedin.com/in/zsomogyi" target="_blank" rel="noopener" class="linkedin-link">
                 <i class="fab fa-linkedin"></i> &#x62A;&#x648;&#x627;&#x635;&#x644; &#x645;&#x639;&#x646;&#x627; &#x639;&#x644;&#x649; LinkedIn

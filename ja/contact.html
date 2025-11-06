@@ -164,9 +164,11 @@
     <main>
         
 <section class="hero">
-    <div class="container">
+    <div class="container hero-container">
         <h2>&#x304A;&#x554F;&#x3044;&#x5408;&#x308F;&#x305B;&#x30FB;&#x7533;&#x8FBC;&#x30D5;&#x30A9;&#x30FC;&#x30E0;</h2>
-        <h3>ご質問がある方、個別のアドバイスが必要な方、<br />またはAI主導のソリューションを検討されている方、私たちがサポートします。</h3>
+        <div class="hero-text">
+            <h3>ご質問がある方、個別のアドバイスが必要な方、<br />またはAI主導のソリューションを検討されている方、私たちがサポートします。</h3>
+        </div>
     </div>
 </section>
 
@@ -238,6 +240,18 @@
         <h2>&#x4F1A;&#x793E;&#x60C5;&#x5831;</h2>
         <p><strong>The Intelligent Enterprise Group</strong></p>
         <p>当社はベルギーに登録された企業で、グローバルに事業を展開しています。セキュリティとプライバシーの理由から、主な連絡手段としてお問い合わせフォームを使用しています。<a href="legal.html">法務・ポリシーページ</a>もご覧ください。</p>
+
+        <p>&#x30E1;&#x30FC;&#x30EB;&#x30A2;&#x30C9;&#x30EC;&#x30B9;: <a id="email-link"></a></p>
+        <script>
+            const user = "info";
+            const domain = "theintelligententerprisegroup";
+            const com = ".com";
+            const email = `${user}@${domain}${com}`;
+            const link = document.getElementById("email-link");
+            link.href = "mailto:" + email;
+            link.textContent = email;
+        </script>
+
         <div class="social-links">
             <a href="https://www.linkedin.com/in/zsomogyi" target="_blank" rel="noopener" class="linkedin-link">
                 <i class="fab fa-linkedin"></i> LinkedIn&#x3067;&#x3064;&#x306A;&#x304C;&#x308B;

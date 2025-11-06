@@ -164,9 +164,11 @@
     <main>
         
 <section class="hero">
-    <div class="container">
+    <div class="container hero-container">
         <h2>Formulaire de contact &amp; de demande</h2>
-        <h3>Que vous ayez une question, besoin d’un conseil personnalisé,<br />ou que vous soyez prêt à explorer une solution pilotée par l’IA, nous sommes là pour vous aider.</h3>
+        <div class="hero-text">
+            <h3>Que vous ayez une question, besoin d’un conseil personnalisé,<br />ou que vous soyez prêt à explorer une solution pilotée par l’IA, nous sommes là pour vous aider.</h3>
+        </div>
     </div>
 </section>
 
@@ -238,6 +240,18 @@
         <h2>Informations sur l&#x2019;entreprise</h2>
         <p><strong>The Intelligent Enterprise Group</strong></p>
         <p>Nous sommes une entreprise enregistrée en Belgique et opérons à l’échelle mondiale. Pour des raisons de sécurité et de confidentialité, nous utilisons notre formulaire de contact comme principal canal de communication. Voir aussi <a href='legal.html'>page Légale & Politiques</a>.</p>
+
+        <p>Email: <a id="email-link"></a></p>
+        <script>
+            const user = "info";
+            const domain = "theintelligententerprisegroup";
+            const com = ".com";
+            const email = `${user}@${domain}${com}`;
+            const link = document.getElementById("email-link");
+            link.href = "mailto:" + email;
+            link.textContent = email;
+        </script>
+
         <div class="social-links">
             <a href="https://www.linkedin.com/in/zsomogyi" target="_blank" rel="noopener" class="linkedin-link">
                 <i class="fab fa-linkedin"></i> Connectez-vous avec nous sur LinkedIn
