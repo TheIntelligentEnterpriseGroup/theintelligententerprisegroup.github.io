@@ -235,6 +235,27 @@
     </div>
 </section>
 
+<section class="trial-steps">
+    <div class="container">
+        <h2>&#x30B5;&#x30DD;&#x30FC;&#x30C8;&#x4F9D;&#x983C;&#x30D5;&#x30A9;&#x30FC;&#x30E0;</h2>
+        <em>&#x6CE8;: &#x30B5;&#x30DD;&#x30FC;&#x30C8;&#x4F9D;&#x983C;&#x30D5;&#x30A9;&#x30FC;&#x30E0;&#x306F;&#x30E9;&#x30A4;&#x30BB;&#x30F3;&#x30B9;&#x3092;&#x6301;&#x3064;&#x30E6;&#x30FC;&#x30B6;&#x30FC;&#x306E;&#x307F;&#x304C;&#x5229;&#x7528;&#x3067;&#x304D;&#x307E;&#x3059;&#x3002;</em>
+        <div>
+            <label>
+                <input type="checkbox"
+                        class="termsCheckbox"
+                        data-target="support-request-form" />
+                &#x79C1;&#x306F;&#x6B21;&#x306B;&#x540C;&#x610F;&#x3057;&#x307E;&#x3059; <a href="legal.html">法務とポリシー</a>
+            </label>
+
+            <!-- Wrapper to control shading/disabled state -->
+            <div id="support-request-form" style="opacity:0.5; pointer-events:none;">
+                <p><a target="_blank" href="https://docs.google.com/forms/d/e/1FAIpQLSfoH9zX_Eog1MdoxpJkjVquvT5F_hf2Ps6ZFlUvR2gqwsZK8A/viewform?usp=sharing&amp;ouid=109591829410352943910">&#x30B5;&#x30DD;&#x30FC;&#x30C8;&#x4F9D;&#x983C;&#x30D5;&#x30A9;&#x30FC;&#x30E0;</a></p>
+            </div>
+        </div>        
+
+    </div>
+</section>
+
 <section class="company-info">
     <div class="container">
         <h2>&#x4F1A;&#x793E;&#x60C5;&#x5831;</h2>
@@ -314,6 +335,20 @@
             gsap.from(".cta h2", { duration: 1, opacity: 0, y: -20, ease: "power2.out", delay: 0.8 });
             gsap.from(".cta p", { duration: 1, opacity: 0, y: 20, ease: "power2.out", delay: 1 });
             gsap.from(".cta .btn", { duration: 1, opacity: 0, scale: 0.8, ease: "back.out(1.7)", delay: 1.2 });
+
+            // Hook up all checkboxes
+            document.querySelectorAll(".termsCheckbox").forEach(function (cb) {
+                cb.addEventListener("change", function () {
+                    var wrapper = document.getElementById(this.dataset.target);
+                    if (this.checked) {
+                        wrapper.style.opacity = "1";
+                        wrapper.style.pointerEvents = "auto";
+                    } else {
+                        wrapper.style.opacity = "0.5";
+                        wrapper.style.pointerEvents = "none";
+                    }
+                });
+            });
         };
     </script>
 

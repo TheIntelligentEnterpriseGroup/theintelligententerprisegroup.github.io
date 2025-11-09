@@ -235,6 +235,27 @@
     </div>
 </section>
 
+<section class="trial-steps">
+    <div class="container">
+        <h2>Formul&#xE1;rio de solicita&#xE7;&#xE3;o de suporte</h2>
+        <em>Observa&#xE7;&#xE3;o: o formul&#xE1;rio de solicita&#xE7;&#xE3;o de suporte &#xE9; apenas para usu&#xE1;rios licenciados.</em>
+        <div>
+            <label>
+                <input type="checkbox"
+                        class="termsCheckbox"
+                        data-target="support-request-form" />
+                Eu concordo com <a href="legal.html">Jurídico e Políticas</a>
+            </label>
+
+            <!-- Wrapper to control shading/disabled state -->
+            <div id="support-request-form" style="opacity:0.5; pointer-events:none;">
+                <p><a target="_blank" href="https://docs.google.com/forms/d/e/1FAIpQLSe6j7jtakbwztQRp6LGZ16ZrRSgQSuppEHCrHPDgXpzcqzALg/viewform?usp=sharing&amp;ouid=109591829410352943910">Formul&#xE1;rio de solicita&#xE7;&#xE3;o de suporte</a></p>
+            </div>
+        </div>        
+
+    </div>
+</section>
+
 <section class="company-info">
     <div class="container">
         <h2>Informa&#xE7;&#xF5;es da Empresa</h2>
@@ -314,6 +335,20 @@
             gsap.from(".cta h2", { duration: 1, opacity: 0, y: -20, ease: "power2.out", delay: 0.8 });
             gsap.from(".cta p", { duration: 1, opacity: 0, y: 20, ease: "power2.out", delay: 1 });
             gsap.from(".cta .btn", { duration: 1, opacity: 0, scale: 0.8, ease: "back.out(1.7)", delay: 1.2 });
+
+            // Hook up all checkboxes
+            document.querySelectorAll(".termsCheckbox").forEach(function (cb) {
+                cb.addEventListener("change", function () {
+                    var wrapper = document.getElementById(this.dataset.target);
+                    if (this.checked) {
+                        wrapper.style.opacity = "1";
+                        wrapper.style.pointerEvents = "auto";
+                    } else {
+                        wrapper.style.opacity = "0.5";
+                        wrapper.style.pointerEvents = "none";
+                    }
+                });
+            });
         };
     </script>
 

@@ -235,6 +235,27 @@
     </div>
 </section>
 
+<section class="trial-steps">
+    <div class="container">
+        <h2>&#x646;&#x645;&#x648;&#x630;&#x62C; &#x637;&#x644;&#x628; &#x627;&#x644;&#x62F;&#x639;&#x645;</h2>
+        <em>&#x645;&#x644;&#x627;&#x62D;&#x638;&#x629;: &#x646;&#x645;&#x648;&#x630;&#x62C; &#x637;&#x644;&#x628; &#x627;&#x644;&#x62F;&#x639;&#x645; &#x645;&#x62E;&#x635;&#x635; &#x644;&#x644;&#x645;&#x633;&#x62A;&#x62E;&#x62F;&#x645;&#x64A;&#x646; &#x627;&#x644;&#x645;&#x631;&#x62E;&#x635;&#x64A;&#x646; &#x641;&#x642;&#x637;.</em>
+        <div>
+            <label>
+                <input type="checkbox"
+                        class="termsCheckbox"
+                        data-target="support-request-form" />
+                &#x623;&#x648;&#x627;&#x641;&#x642; &#x639;&#x644;&#x649; <a href="legal.html">الشؤون القانونية والسياسات</a>
+            </label>
+
+            <!-- Wrapper to control shading/disabled state -->
+            <div id="support-request-form" style="opacity:0.5; pointer-events:none;">
+                <p><a target="_blank" href="https://docs.google.com/forms/d/e/1FAIpQLScPcnlo48qjkTMnvQQtB7qOTqT-Vuqc4eXdJ_IwhsONnoWulA/viewform?usp=sharing&amp;ouid=109591829410352943910">&#x646;&#x645;&#x648;&#x630;&#x62C; &#x637;&#x644;&#x628; &#x627;&#x644;&#x62F;&#x639;&#x645;</a></p>
+            </div>
+        </div>        
+
+    </div>
+</section>
+
 <section class="company-info">
     <div class="container">
         <h2>&#x645;&#x639;&#x644;&#x648;&#x645;&#x627;&#x62A; &#x627;&#x644;&#x634;&#x631;&#x643;&#x629;</h2>
@@ -314,6 +335,20 @@
             gsap.from(".cta h2", { duration: 1, opacity: 0, y: -20, ease: "power2.out", delay: 0.8 });
             gsap.from(".cta p", { duration: 1, opacity: 0, y: 20, ease: "power2.out", delay: 1 });
             gsap.from(".cta .btn", { duration: 1, opacity: 0, scale: 0.8, ease: "back.out(1.7)", delay: 1.2 });
+
+            // Hook up all checkboxes
+            document.querySelectorAll(".termsCheckbox").forEach(function (cb) {
+                cb.addEventListener("change", function () {
+                    var wrapper = document.getElementById(this.dataset.target);
+                    if (this.checked) {
+                        wrapper.style.opacity = "1";
+                        wrapper.style.pointerEvents = "auto";
+                    } else {
+                        wrapper.style.opacity = "0.5";
+                        wrapper.style.pointerEvents = "none";
+                    }
+                });
+            });
         };
     </script>
 

@@ -235,6 +235,27 @@
     </div>
 </section>
 
+<section class="trial-steps">
+    <div class="container">
+        <h2>Formulario de solicitud de soporte</h2>
+        <em>Nota: El formulario de solicitud de soporte es solo para usuarios con licencia.</em>
+        <div>
+            <label>
+                <input type="checkbox"
+                        class="termsCheckbox"
+                        data-target="support-request-form" />
+                Acepto las <a href="legal.html">Aspectos legales y políticas</a>
+            </label>
+
+            <!-- Wrapper to control shading/disabled state -->
+            <div id="support-request-form" style="opacity:0.5; pointer-events:none;">
+                <p><a target="_blank" href="https://docs.google.com/forms/d/e/1FAIpQLSdUlrICgQ05xejZUrTD49dt1vWc8Rme-t53f5ETrHwSO11jkA/viewform?usp=sharing&amp;ouid=109591829410352943910">Formulario de solicitud de soporte</a></p>
+            </div>
+        </div>        
+
+    </div>
+</section>
+
 <section class="company-info">
     <div class="container">
         <h2>Informaci&#xF3;n de la Empresa</h2>
@@ -314,6 +335,20 @@
             gsap.from(".cta h2", { duration: 1, opacity: 0, y: -20, ease: "power2.out", delay: 0.8 });
             gsap.from(".cta p", { duration: 1, opacity: 0, y: 20, ease: "power2.out", delay: 1 });
             gsap.from(".cta .btn", { duration: 1, opacity: 0, scale: 0.8, ease: "back.out(1.7)", delay: 1.2 });
+
+            // Hook up all checkboxes
+            document.querySelectorAll(".termsCheckbox").forEach(function (cb) {
+                cb.addEventListener("change", function () {
+                    var wrapper = document.getElementById(this.dataset.target);
+                    if (this.checked) {
+                        wrapper.style.opacity = "1";
+                        wrapper.style.pointerEvents = "auto";
+                    } else {
+                        wrapper.style.opacity = "0.5";
+                        wrapper.style.pointerEvents = "none";
+                    }
+                });
+            });
         };
     </script>
 
