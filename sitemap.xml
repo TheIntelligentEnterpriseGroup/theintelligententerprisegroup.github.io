@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+        http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+
+  <!-- Homepage -->
+  <url>
+    <loc>https://www.theintelligententerprisegroup.com/</loc>
+    <lastmod>2025-11-09</lastmod>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.theintelligententerprisegroup.com/"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://www.theintelligententerprisegroup.com/zh/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.theintelligententerprisegroup.com/ar/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.theintelligententerprisegroup.com/de/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.theintelligententerprisegroup.com/es/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.theintelligententerprisegroup.com/fr/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.theintelligententerprisegroup.com/ja/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://www.theintelligententerprisegroup.com/pt/"/>
+  </url>
+
+  <!-- Pricing -->
+  <url>
+    <loc>https://www.theintelligententerprisegroup.com/pricing.html</loc>
+    <lastmod>2025-11-09</lastmod>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.theintelligententerprisegroup.com/pricing.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://www.theintelligententerprisegroup.com/zh/pricing.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.theintelligententerprisegroup.com/ar/pricing.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.theintelligententerprisegroup.com/de/pricing.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.theintelligententerprisegroup.com/es/pricing.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.theintelligententerprisegroup.com/fr/pricing.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.theintelligententerprisegroup.com/ja/pricing.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://www.theintelligententerprisegroup.com/pt/pricing.html"/>
+  </url>
+
+  <!-- Resources -->
+  <url>
+    <loc>https://www.theintelligententerprisegroup.com/resources.html</loc>
+    <lastmod>2025-11-09</lastmod>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.theintelligententerprisegroup.com/resources.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://www.theintelligententerprisegroup.com/zh/resources.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.theintelligententerprisegroup.com/ar/resources.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.theintelligententerprisegroup.com/de/resources.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.theintelligententerprisegroup.com/es/resources.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.theintelligententerprisegroup.com/fr/resources.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.theintelligententerprisegroup.com/ja/resources.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://www.theintelligententerprisegroup.com/pt/resources.html"/>
+  </url>
+
+  <!-- services -->
+  <url>
+    <loc>https://www.theintelligententerprisegroup.com/services.html</loc>
+    <lastmod>2025-11-09</lastmod>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.theintelligententerprisegroup.com/services.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://www.theintelligententerprisegroup.com/zh/services.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.theintelligententerprisegroup.com/ar/services.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.theintelligententerprisegroup.com/de/services.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.theintelligententerprisegroup.com/es/services.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.theintelligententerprisegroup.com/fr/services.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.theintelligententerprisegroup.com/ja/services.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://www.theintelligententerprisegroup.com/pt/services.html"/>
+  </url>
+
+<!-- trial -->
+  <url>
+    <loc>https://www.theintelligententerprisegroup.com/trial.html</loc>
+    <lastmod>2025-11-09</lastmod>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.theintelligententerprisegroup.com/trial.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://www.theintelligententerprisegroup.com/zh/trial.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.theintelligententerprisegroup.com/ar/trial.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.theintelligententerprisegroup.com/de/trial.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.theintelligententerprisegroup.com/es/trial.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.theintelligententerprisegroup.com/fr/trial.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.theintelligententerprisegroup.com/ja/trial.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://www.theintelligententerprisegroup.com/pt/trial.html"/>
+  </url>
+
+<!-- about -->
+  <url>
+    <loc>https://www.theintelligententerprisegroup.com/about.html</loc>
+    <lastmod>2025-11-09</lastmod>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.theintelligententerprisegroup.com/about.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://www.theintelligententerprisegroup.com/zh/about.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.theintelligententerprisegroup.com/ar/about.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.theintelligententerprisegroup.com/de/about.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.theintelligententerprisegroup.com/es/about.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.theintelligententerprisegroup.com/fr/about.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.theintelligententerprisegroup.com/ja/about.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://www.theintelligententerprisegroup.com/pt/about.html"/>
+  </url>
+
+<!-- careers -->
+  <url>
+    <loc>https://www.theintelligententerprisegroup.com/careers.html</loc>
+    <lastmod>2025-11-09</lastmod>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.theintelligententerprisegroup.com/careers.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://www.theintelligententerprisegroup.com/zh/careers.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.theintelligententerprisegroup.com/ar/careers.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.theintelligententerprisegroup.com/de/careers.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.theintelligententerprisegroup.com/es/careers.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.theintelligententerprisegroup.com/fr/careers.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.theintelligententerprisegroup.com/ja/careers.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://www.theintelligententerprisegroup.com/pt/careers.html"/>
+  </url>
+
+<!-- case-studies -->
+  <url>
+    <loc>https://www.theintelligententerprisegroup.com/case-studies.html</loc>
+    <lastmod>2025-11-09</lastmod>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.theintelligententerprisegroup.com/case-studies.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://www.theintelligententerprisegroup.com/zh/case-studies.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.theintelligententerprisegroup.com/ar/case-studies.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.theintelligententerprisegroup.com/de/case-studies.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.theintelligententerprisegroup.com/es/case-studies.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.theintelligententerprisegroup.com/fr/case-studies.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.theintelligententerprisegroup.com/ja/case-studies.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://www.theintelligententerprisegroup.com/pt/case-studies.html"/>
+  </url>
+
+<!-- contact -->
+  <url>
+    <loc>https://www.theintelligententerprisegroup.com/contact.html</loc>
+    <lastmod>2025-11-09</lastmod>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.theintelligententerprisegroup.com/contact.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://www.theintelligententerprisegroup.com/zh/contact.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.theintelligententerprisegroup.com/ar/contact.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.theintelligententerprisegroup.com/de/contact.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.theintelligententerprisegroup.com/es/contact.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.theintelligententerprisegroup.com/fr/contact.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.theintelligententerprisegroup.com/ja/contact.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://www.theintelligententerprisegroup.com/pt/contact.html"/>
+  </url>
+
+<!-- faqs -->
+  <url>
+    <loc>https://www.theintelligententerprisegroup.com/faqs.html</loc>
+    <lastmod>2025-11-09</lastmod>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.theintelligententerprisegroup.com/faqs.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://www.theintelligententerprisegroup.com/zh/faqs.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.theintelligententerprisegroup.com/ar/faqs.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.theintelligententerprisegroup.com/de/faqs.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.theintelligententerprisegroup.com/es/faqs.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.theintelligententerprisegroup.com/fr/faqs.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.theintelligententerprisegroup.com/ja/faqs.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://www.theintelligententerprisegroup.com/pt/faqs.html"/>
+  </url>
+
+<!-- legal -->
+  <url>
+    <loc>https://www.theintelligententerprisegroup.com/legal.html</loc>
+    <lastmod>2025-11-09</lastmod>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.theintelligententerprisegroup.com/legal.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://www.theintelligententerprisegroup.com/zh/legal.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.theintelligententerprisegroup.com/ar/legal.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.theintelligententerprisegroup.com/de/legal.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.theintelligententerprisegroup.com/es/legal.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.theintelligententerprisegroup.com/fr/legal.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.theintelligententerprisegroup.com/ja/legal.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://www.theintelligententerprisegroup.com/pt/legal.html"/>
+  </url>
+
+<!-- minsystem -->
+  <url>
+    <loc>https://www.theintelligententerprisegroup.com/minsystem.html</loc>
+    <lastmod>2025-11-09</lastmod>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.theintelligententerprisegroup.com/minsystem.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://www.theintelligententerprisegroup.com/zh/minsystem.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.theintelligententerprisegroup.com/ar/minsystem.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.theintelligententerprisegroup.com/de/minsystem.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.theintelligententerprisegroup.com/es/minsystem.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.theintelligententerprisegroup.com/fr/minsystem.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.theintelligententerprisegroup.com/ja/minsystem.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://www.theintelligententerprisegroup.com/pt/minsystem.html"/>
+  </url>
+
+<!-- partners -->
+  <url>
+    <loc>https://www.theintelligententerprisegroup.com/partners.html</loc>
+    <lastmod>2025-11-09</lastmod>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.theintelligententerprisegroup.com/partners.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://www.theintelligententerprisegroup.com/zh/partners.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.theintelligententerprisegroup.com/ar/partners.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.theintelligententerprisegroup.com/de/partners.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.theintelligententerprisegroup.com/es/partners.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.theintelligententerprisegroup.com/fr/partners.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.theintelligententerprisegroup.com/ja/partners.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://www.theintelligententerprisegroup.com/pt/partners.html"/>
+  </url>
+
+</urlset>
