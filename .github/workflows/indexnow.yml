@@ -8,8 +8,8 @@ jobs:
   indexnow:
     runs-on: ubuntu-latest
     steps:
-      - name: Submit sitemap URLs to IndexNow
-        uses: jakob-bagterp/index-now-submit-sitemap-urls-action@v1
+      - name: Submit sitemap URLs to IndexNow (GitHub Pages variant)
+        uses: jakob-bagterp/index-now-submit-sitemap-gh-pages-action@v1
         with:
           host: theintelligententerprisegroup.com
           api_key: ${{ secrets.INDEXNOW_KEY }}
