@@ -12,5 +12,6 @@ jobs:
         uses: jakob-bagterp/index-now-submit-sitemap-gh-pages-action@v1
         with:
           host: theintelligententerprisegroup.com
+          api_key: ${{ secrets.INDEXNOW_KEY }}
           api_key_location: https://www.theintelligententerprisegroup.com/15df302b5d55448ba51724a4fceb4a4e.txt
           sitemap_locations: https://www.theintelligententerprisegroup.com/sitemap.xml
