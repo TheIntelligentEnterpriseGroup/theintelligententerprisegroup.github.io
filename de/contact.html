@@ -97,7 +97,7 @@
             <div class="logo"></div>
             <div class="theme-switch-wrapper">
                 <label class="theme-switch">
-                    <input type="checkbox" id="theme-checkbox" />
+                    <input type="checkbox" id="theme-checkbox" aria-label="Select theme"/>
                     <span class="slider round"></span>
                 </label>
                 <span id="theme-label">Heller Modus</span>
@@ -177,9 +177,7 @@
         <div class="contact-form">
             <h2>Kontakt aufnehmen</h2>
 
-            <form action="https://formsubmit.co/563435e1141cf899817f240576ed6c66" method="POST">
-                <input type="hidden" name="_subject" value="Neue Nachricht von Ihrer Website" />
-
+            <form id="contactForm">
                 <label for="name">Name</label>
                 <input type="text" id="name" name="name" placeholder="Ihr Name" required />
 
@@ -227,12 +225,60 @@
                 </div>
 
                 <button type="submit">Nachricht senden</button>
-                
-                <input type="hidden" name="_captcha" value="false" />
             </form>
 
             <div id="form-status" style="display:none; margin-top:1rem;"></div>
         </div>
+
+        <script>
+            const user = "info";
+            const domain = "theintelligententerprisegroup";
+            const com = ".com";
+            const recipient = `${user}@${domain}${com}`;
+            function encodeEmail(str) { return str.split("").map(ch => "&#" + ch.charCodeAt(0) + ";").join(""); }
+            document.getElementById("contactForm").addEventListener("submit", function (e) {
+                e.preventDefault();
+                const name = document.getElementById("name").value.trim();
+                const email = document.getElementById("email").value.trim();
+                const enquiryType = document.getElementById("enquiryType").value;
+                const subject = document.getElementById("subject").value.trim();
+                const message = document.getElementById("message").value.trim();
+                const vat = document.getElementById("vat")?.value.trim() || "";
+                const address = document.getElementById("address")?.value.trim() || "";
+                const school = document.getElementById("school")?.value.trim() || "";
+                const bodyLines = [
+                    `Name: ${name}`,
+                    `Email: ${email}`,
+                    `Enquiry Type: ${enquiryType}`,
+                    vat ? `VAT: ${vat}` : "",
+                    address ? `Address: ${address}` : "",
+                    school ? `School: ${school}` : "",
+                    "",
+                    "Message:",
+                    message
+                ].filter(Boolean);
+                const body = encodeURIComponent(bodyLines.join("\n"));
+                const mailto = `mailto:${recipient}?subject=${encodeURIComponent(subject)}&body=${body}`;
+                const status = document.getElementById("form-status");
+                if (mailto.length > 2000) {                    
+                    status.style.display = "block";
+                    status.style.color = "red";
+                    status.innerHTML = "⚠️ Ihre Nachricht ist zu lang. Bitte senden Sie uns direkt eine E-Mail an" + " " + encodeEmail(recipient);
+                } else {
+                    const win = window.open(mailto);
+                    if (!win) {
+                        status.style.display = "block";
+                        status.style.color = "red";
+                        status.innerHTML = "⚠️ Hoppla! Etwas ist schiefgelaufen. Bitte versuchen Sie es erneut oder senden Sie uns direkt eine E-Mail an" + " " + encodeEmail(recipient);
+                    }
+                }
+                setTimeout(() => {
+                    status.style.display = "none";
+                    status.innerHTML = "";
+                }, 5000);
+            });
+        </script>
+
     </div>
 </section>
 
@@ -248,7 +294,6 @@
                 Ich stimme den <a href="legal.html">Rechtliches & Richtlinien</a>
             </label>
 
-            <!-- Wrapper to control shading/disabled state -->
             <div id="support-request-form" style="opacity:0.5; pointer-events:none;">
                 <p><a target="_blank" href="https://docs.google.com/forms/d/e/1FAIpQLSfAknWvpnbukiC9zuCTbXED-3Qqj2HHAiBoTf0_k_rYeu9xkw/viewform?usp=sharing&amp;ouid=109591829410352943910">Support-Anfrageformular</a></p>
             </div>
@@ -265,13 +310,18 @@
 
         <p>E-Mail: <a id="email-link"></a></p>
         <script>
-            const user = "info";
-            const domain = "theintelligententerprisegroup";
-            const com = ".com";
-            const email = `${user}@${domain}${com}`;
-            const link = document.getElementById("email-link");
-            link.href = "mailto:" + email;
-            link.textContent = email;
+            window.addEventListener("DOMContentLoaded", function () {
+                const user = "info";
+                const domain = "theintelligententerprisegroup";
+                const com = ".com";
+                const email = `${user}@${domain}${com}`;
+                function encodeEmail(str) {
+                    return str.split("").map(ch => "&#" + ch.charCodeAt(0) + ";").join("");
+                }
+                const link = document.getElementById("email-link");
+                link.href = "mailto:" + email;
+                link.innerHTML = encodeEmail(email);
+            });
         </script>
 
         <div class="social-links">
@@ -371,65 +421,7 @@
             }
         }
         enquiryType.addEventListener("change", toggleExtraFields);
-
-        const form = document.querySelector("form");
-        const status = document.getElementById("form-status");
-
-        form.addEventListener("submit", async function (e) {
-            e.preventDefault();
-            const formData = new FormData(form);
-
-            try {
-                const response = await fetch(form.action, {
-                    method: "POST",
-                    body: formData,
-                    headers: { 'Accept': 'application/json' }
-                });
-
-                if (response.ok) {
-                    // Collect all submitted fields before resetting
-                    let previewHtml = "<strong>✅ Ihre Nachricht wurde erfolgreich gesendet!</strong><br><br>";
-                    previewHtml += '<span style="font-size:1rem; color:#555;">➡️</span><ul>';
-
-                    for (let [key, value] of formData.entries()) {
-                        // Skip internal fields like _subject, _honey, _captcha
-                        if (key.startsWith("_")) continue;
-                        if (!value) continue;
-
-                        // Make the field name more readable (capitalize first letter)
-                        const label = key.charAt(0).toUpperCase() + key.slice(1);
-                        previewHtml += `<li><strong>${label}:</strong> ${value}</li>`;
-                    }
-
-                    previewHtml += "</ul>";
-
-                    form.reset();
-
-                    // Show styled confirmation
-                    status.style.display = "block";
-                    status.style.color = "green";
-                    status.style.padding = "1rem";
-                    status.style.border = "1px solid green";
-                    status.style.background = "#e6ffe6";
-                    status.innerHTML = previewHtml;
-
-                    // Auto-hide after 8 seconds
-                    setTimeout(() => {
-                        status.style.display = "none";
-                        status.innerHTML = "";
-                    }, 8000);
-                }
-                else {
-                    status.style.display = "block";
-                    status.style.color = "red";
-                    status.textContent = "⚠️ Uups! Etwas ist schiefgelaufen. Bitte versuchen Sie es erneut.";
-                }
-            } catch (error) {
-                status.style.display = "block";
-                status.style.color = "red";
-                status.textContent = "⚠️ Netzwerkfehler. Bitte versuchen Sie es später erneut.";
-            }
-        });
+       
     </script>
 
 </body>
