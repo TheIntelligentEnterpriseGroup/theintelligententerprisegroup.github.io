@@ -13,4 +13,5 @@ jobs:
         with:
           host: theintelligententerprisegroup.com
           api_key: ${{ secrets.INDEXNOW_KEY }}
+          api_key_location: none
           sitemap_locations: https://www.theintelligententerprisegroup.com/sitemap.xml
