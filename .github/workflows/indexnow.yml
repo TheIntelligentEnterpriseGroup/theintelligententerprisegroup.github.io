@@ -1,0 +1,16 @@
+name: Submit sitemap to IndexNow
+on:
+  push:
+    branches: [ main ]
+  workflow_dispatch:
+
+jobs:
+  indexnow:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Submit sitemap URLs to IndexNow
+        uses: jakob-bagterp/index-now-submit-sitemap-urls-action@v1
+        with:
+          host: theintelligententerprisegroup.com
+          api_key: ${{ secrets.INDEXNOW_KEY }}
+          sitemap: https://www.theintelligententerprisegroup.com/sitemap.xml
