@@ -93,67 +93,183 @@
 { "@context": "https://schema.org", "@graph": [{
               "@type": "Product",
               "name": "Trial License",
+              "image": "https://theintelligententerprisegroup.com/images/product-default.jpg",
               "description": "- 1 seat (single desktop license) • - One‑time 6‑month license • - Full desktop application (>35GB download) • - All core AI experts • - Adaptive memory • - Multi‑format learning • - Edge‑ready (offline use) • - Trial Licenses are strictly non‑commercial and may only be used for evaluation, testing, training, or research. • Note: The trial cannot be renewed. After 6 months, upgrade to a full plan.",
-              "brand": { "@id": "https://theintelligententerprisegroup.com/#org" },
+              "brand": { 
+                  "@type": "Brand", 
+                  "@id": "https://theintelligententerprisegroup.com/#org", 
+                  "name": "The Intelligent Enterprise Group" 
+              },
               "offers": { 
                   "@type": "Offer",
                   "price": "39",
                   "priceCurrency": "EUR",
                   "availability": "https://schema.org/InStock",
-                  "url": "https://theintelligententerprisegroup.com/pricing.html" }
+                  "url": "https://theintelligententerprisegroup.com/pricing.html",
+                  "priceValidUntil": "2026-11-12",
+                  "hasMerchantReturnPolicy": {
+                      "@type": "MerchantReturnPolicy",
+                      "returnPolicyCategory": "https://schema.org/NoReturn"
+                  },
+                  "shippingDetails": {
+                      "@type": "OfferShippingDetails",
+                      "shippingDestination": { "@type": "DefinedRegion", "name": "Worldwide" },
+                      "deliveryTime": {
+                          "@type": "ShippingDeliveryTime",
+                          "handlingTime": { "@type": "QuantitativeValue", "value": "0", "unitCode": "DAY" },
+                          "transitTime": { "@type": "QuantitativeValue", "value": "0", "unitCode": "DAY" }
+                      }
+                  } }
             },{
               "@type": "Product",
               "name": "Students & Educators",
-              "description": "- 1 seat (single desktop license) • - Full desktop application • - All core AI experts • - Adaptive memory • - Multi‑format learning • - Edge‑ready (offline use) • - Discounted license for verified students & educators. • We invest in education, so students get a symbolic price!",
-              "brand": { "@id": "https://theintelligententerprisegroup.com/#org" },
+              "image": "https://theintelligententerprisegroup.com/images/product-default.jpg",
+              "description": "- 1 seat (single desktop license) • - Valid for 1 year • - Full desktop application • - All core AI experts • - Adaptive memory • - Multi‑format learning • - Edge‑ready (offline use) • - Discounted license for verified students & educators. • We invest in education, so students get a symbolic price!",
+              "brand": { 
+                  "@type": "Brand", 
+                  "@id": "https://theintelligententerprisegroup.com/#org", 
+                  "name": "The Intelligent Enterprise Group" 
+              },
               "offers": { 
                   "@type": "Offer",
                   "price": "29",
                   "priceCurrency": "EUR",
                   "availability": "https://schema.org/InStock",
-                  "url": "https://theintelligententerprisegroup.com/pricing.html" }
+                  "url": "https://theintelligententerprisegroup.com/pricing.html",
+                  "priceValidUntil": "2026-11-12",
+                  "hasMerchantReturnPolicy": {
+                      "@type": "MerchantReturnPolicy",
+                      "returnPolicyCategory": "https://schema.org/NoReturn"
+                  },
+                  "shippingDetails": {
+                      "@type": "OfferShippingDetails",
+                      "shippingDestination": { "@type": "DefinedRegion", "name": "Worldwide" },
+                      "deliveryTime": {
+                          "@type": "ShippingDeliveryTime",
+                          "handlingTime": { "@type": "QuantitativeValue", "value": "0", "unitCode": "DAY" },
+                          "transitTime": { "@type": "QuantitativeValue", "value": "0", "unitCode": "DAY" }
+                      }
+                  } }
             },{
               "@type": "Product",
               "name": "Professional",
-              "description": "- 1 seat (single desktop license) • - Full desktop application • - All core AI experts • - Adaptive memory • - Edge‑ready (offline use) • - Continuous updates & priority support",
-              "brand": { "@id": "https://theintelligententerprisegroup.com/#org" },
+              "image": "https://theintelligententerprisegroup.com/images/product-default.jpg",
+              "description": "- 1 seat (single desktop license) • - Valid for 1 year • - Full desktop application • - All core AI experts • - Adaptive memory • - Edge‑ready (offline use) • - Continuous updates & priority support",
+              "brand": { 
+                  "@type": "Brand", 
+                  "@id": "https://theintelligententerprisegroup.com/#org", 
+                  "name": "The Intelligent Enterprise Group" 
+              },
               "offers": { 
                   "@type": "Offer",
                   "price": "199",
                   "priceCurrency": "EUR",
                   "availability": "https://schema.org/InStock",
-                  "url": "https://theintelligententerprisegroup.com/pricing.html" }
+                  "url": "https://theintelligententerprisegroup.com/pricing.html",
+                  "priceValidUntil": "2026-11-12",
+                  "hasMerchantReturnPolicy": {
+                      "@type": "MerchantReturnPolicy",
+                      "returnPolicyCategory": "https://schema.org/NoReturn"
+                  },
+                  "shippingDetails": {
+                      "@type": "OfferShippingDetails",
+                      "shippingDestination": { "@type": "DefinedRegion", "name": "Worldwide" },
+                      "deliveryTime": {
+                          "@type": "ShippingDeliveryTime",
+                          "handlingTime": { "@type": "QuantitativeValue", "value": "0", "unitCode": "DAY" },
+                          "transitTime": { "@type": "QuantitativeValue", "value": "0", "unitCode": "DAY" }
+                      }
+                  } }
             },{
               "@type": "Product",
               "name": "Business‑Desktop",
-              "description": "- 3 seats included (separate desktop licenses) • - Same features as Professional • - Volume discount for teams • - Additional seats available at reduced rate",
-              "brand": { "@id": "https://theintelligententerprisegroup.com/#org" },
+              "image": "https://theintelligententerprisegroup.com/images/product-default.jpg",
+              "description": "- 3 seats included (separate desktop licenses) • - Valid for 1 year • - Same features as Professional • - Volume discount for teams • - Additional seats available at reduced rate",
+              "brand": { 
+                  "@type": "Brand", 
+                  "@id": "https://theintelligententerprisegroup.com/#org", 
+                  "name": "The Intelligent Enterprise Group" 
+              },
               "offers": { 
                   "@type": "Offer",
                   "price": "499",
                   "priceCurrency": "EUR",
                   "availability": "https://schema.org/InStock",
-                  "url": "https://theintelligententerprisegroup.com/pricing.html" }
+                  "url": "https://theintelligententerprisegroup.com/pricing.html",
+                  "priceValidUntil": "2026-11-12",
+                  "hasMerchantReturnPolicy": {
+                      "@type": "MerchantReturnPolicy",
+                      "returnPolicyCategory": "https://schema.org/NoReturn"
+                  },
+                  "shippingDetails": {
+                      "@type": "OfferShippingDetails",
+                      "shippingDestination": { "@type": "DefinedRegion", "name": "Worldwide" },
+                      "deliveryTime": {
+                          "@type": "ShippingDeliveryTime",
+                          "handlingTime": { "@type": "QuantitativeValue", "value": "0", "unitCode": "DAY" },
+                          "transitTime": { "@type": "QuantitativeValue", "value": "0", "unitCode": "DAY" }
+                      }
+                  } }
             },{
               "@type": "Product",
               "name": "Business‑Server",
-              "description": "- API Server. Includes 3 user licenses (up to 3 users may access the same server installation). • - Installable server application – deploy on your own servers or in your private cloud • - Provides API access for integration – can be connected to any business system/process that can call the API • - No integration services included (can be ordered separately)",
-              "brand": { "@id": "https://theintelligententerprisegroup.com/#org" },
+              "image": "https://theintelligententerprisegroup.com/images/product-default.jpg",
+              "description": "- API Server. Includes 3 user licenses (up to 3 users may access the same server installation). • - Valid for 1 year • - Installable server application – deploy on your own servers or in your private cloud • - Provides API access for integration – can be connected to any business system/process that can call the API • - No integration services included (can be ordered separately)",
+              "brand": { 
+                  "@type": "Brand", 
+                  "@id": "https://theintelligententerprisegroup.com/#org", 
+                  "name": "The Intelligent Enterprise Group" 
+              },
               "offers": { 
                   "@type": "Offer",
                   "price": "699",
                   "priceCurrency": "EUR",
                   "availability": "https://schema.org/InStock",
-                  "url": "https://theintelligententerprisegroup.com/pricing.html" }
+                  "url": "https://theintelligententerprisegroup.com/pricing.html",
+                  "priceValidUntil": "2026-11-12",
+                  "hasMerchantReturnPolicy": {
+                      "@type": "MerchantReturnPolicy",
+                      "returnPolicyCategory": "https://schema.org/NoReturn"
+                  },
+                  "shippingDetails": {
+                      "@type": "OfferShippingDetails",
+                      "shippingDestination": { "@type": "DefinedRegion", "name": "Worldwide" },
+                      "deliveryTime": {
+                          "@type": "ShippingDeliveryTime",
+                          "handlingTime": { "@type": "QuantitativeValue", "value": "0", "unitCode": "DAY" },
+                          "transitTime": { "@type": "QuantitativeValue", "value": "0", "unitCode": "DAY" }
+                      }
+                  } }
             },{
               "@type": "Product",
               "name": "Enterprise",
+              "image": "https://theintelligententerprisegroup.com/images/product-default.jpg",
               "description": "- Any combination of Desktop and Server plans • - Integration services (ERP, CRM, business process) • - Dedicated support & onboarding • - Security, compliance, SLAs • - Custom AI expert development offered as a professional service (paid) • - Tailored to large organizations",
-              "brand": { "@id": "https://theintelligententerprisegroup.com/#org" },
+              "brand": { 
+                  "@type": "Brand", 
+                  "@id": "https://theintelligententerprisegroup.com/#org", 
+                  "name": "The Intelligent Enterprise Group" 
+              },
               "offers": { 
                   "@type": "Offer",
+                  "price": "0",
+                  "priceCurrency": "EUR",
                   "availability": "https://schema.org/InStock",
-                  "url": "https://theintelligententerprisegroup.com/pricing.html" }
+                  "url": "https://theintelligententerprisegroup.com/pricing.html",
+                  "priceValidUntil": "2026-11-12",
+                  "hasMerchantReturnPolicy": {
+                      "@type": "MerchantReturnPolicy",
+                      "returnPolicyCategory": "https://schema.org/NoReturn"
+                  },
+                  "shippingDetails": {
+                      "@type": "OfferShippingDetails",
+                      "shippingDestination": { "@type": "DefinedRegion", "name": "Worldwide" },
+                      "deliveryTime": {
+                          "@type": "ShippingDeliveryTime",
+                          "handlingTime": { "@type": "QuantitativeValue", "value": "0", "unitCode": "DAY" },
+                          "transitTime": { "@type": "QuantitativeValue", "value": "0", "unitCode": "DAY" }
+                      }
+                  } }
             }] }</script>
 
 
@@ -267,6 +383,7 @@
                             <p><strong>&#x20AC;29 / year</strong> <span class="jobs-note">excl. VAT</span></p>
                             <p style="text-align:left">
 - 1 seat (single desktop license)<br />
+- Valid for 1 year<br />
 - Full desktop application<br />
 - All core AI experts<br />
 - Adaptive memory<br />
@@ -284,6 +401,7 @@
                             <p><strong>&#x20AC;199 / year</strong> <span class="jobs-note">excl. VAT</span></p>
                             <p style="text-align:left">
 - 1 seat (single desktop license)<br />
+- Valid for 1 year<br />
 - Full desktop application<br />
 - All core AI experts<br />
 - Adaptive memory<br />
@@ -299,6 +417,7 @@
                             <p><strong>&#x20AC;499 / year</strong> <span class="jobs-note">excl. VAT</span></p>
                             <p style="text-align:left">
 - 3 seats included (separate desktop licenses)<br />
+- Valid for 1 year<br />
 - Same features as Professional<br />
 - Volume discount for teams<br />
 - Additional seats available at reduced rate<br />
@@ -312,6 +431,7 @@
                             <p><strong>&#x20AC;699 / year</strong> <span class="jobs-note">excl. VAT</span></p>
                             <p style="text-align:left">
 - API Server. Includes 3 user licenses (up to 3 users may access the same server installation).<br />
+- Valid for 1 year<br />
 - Installable server application – deploy on your own servers or in your private cloud<br />
 - Provides API access for integration – can be connected to any business system/process that can call the API<br />
 - No integration services included (can be ordered separately)<br />
@@ -357,7 +477,7 @@
                             <li>
                                 <strong>Perform Payment</strong><br />
 
-                                    <p>Pay the one‑time €29 (excl. VAT) license fee securely via PayPal:</p>
+                                    <p>Pay the €29 (excl. VAT) license fee for a 1‑year license securely online (credit card accepted):</p>
 
                                     <div style="margin-left: 5em;">
                                         <label>

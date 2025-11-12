@@ -93,67 +93,183 @@
 { "@context": "https://schema.org", "@graph": [{
               "@type": "Product",
               "name": "トライアルライセンス",
+              "image": "https://theintelligententerprisegroup.com/images/product-default.jpg",
               "description": "- 1シート（単一デスクトップライセンス） • - 6か月間のワンタイムライセンス • - フルデスクトップアプリケーション（>35GBダウンロード） • - すべてのコアAIエキスパート • - 適応型メモリ • - マルチフォーマット学習 • - エッジ対応（オフライン利用可） • - トライアルライセンスは厳格に非商用であり、評価、テスト、トレーニング、研究のみに使用可能です。 • 注: トライアルは更新できません。6か月後はフルプランにアップグレードしてください。",
-              "brand": { "@id": "https://theintelligententerprisegroup.com/#org" },
+              "brand": { 
+                  "@type": "Brand", 
+                  "@id": "https://theintelligententerprisegroup.com/#org", 
+                  "name": "The Intelligent Enterprise Group" 
+              },
               "offers": { 
                   "@type": "Offer",
                   "price": "39",
                   "priceCurrency": "EUR",
                   "availability": "https://schema.org/InStock",
-                  "url": "https://theintelligententerprisegroup.com/ja/pricing.html" }
+                  "url": "https://theintelligententerprisegroup.com/ja/pricing.html",
+                  "priceValidUntil": "2026-11-12",
+                  "hasMerchantReturnPolicy": {
+                      "@type": "MerchantReturnPolicy",
+                      "returnPolicyCategory": "https://schema.org/NoReturn"
+                  },
+                  "shippingDetails": {
+                      "@type": "OfferShippingDetails",
+                      "shippingDestination": { "@type": "DefinedRegion", "name": "Worldwide" },
+                      "deliveryTime": {
+                          "@type": "ShippingDeliveryTime",
+                          "handlingTime": { "@type": "QuantitativeValue", "value": "0", "unitCode": "DAY" },
+                          "transitTime": { "@type": "QuantitativeValue", "value": "0", "unitCode": "DAY" }
+                      }
+                  } }
             },{
               "@type": "Product",
               "name": "学生・教育機関向け",
-              "description": "- 1シート（単一デスクトップライセンス） • - フルデスクトップアプリケーション • - すべてのコアAIエキスパート • - 適応型メモリ • - マルチフォーマット学習 • - エッジ対応（オフライン利用可） • - 学生・教育機関が認証された場合の割引ライセンス • 教育に投資するため、学生には象徴的な価格で提供します！",
-              "brand": { "@id": "https://theintelligententerprisegroup.com/#org" },
+              "image": "https://theintelligententerprisegroup.com/images/product-default.jpg",
+              "description": "- 1シート（単一デスクトップライセンス） • - 有効期間：1年間 • - フルデスクトップアプリケーション • - すべてのコアAIエキスパート • - 適応型メモリ • - マルチフォーマット学習 • - エッジ対応（オフライン利用可） • - 学生・教育機関が認証された場合の割引ライセンス • 教育に投資するため、学生には象徴的な価格で提供します！",
+              "brand": { 
+                  "@type": "Brand", 
+                  "@id": "https://theintelligententerprisegroup.com/#org", 
+                  "name": "The Intelligent Enterprise Group" 
+              },
               "offers": { 
                   "@type": "Offer",
                   "price": "29",
                   "priceCurrency": "EUR",
                   "availability": "https://schema.org/InStock",
-                  "url": "https://theintelligententerprisegroup.com/ja/pricing.html" }
+                  "url": "https://theintelligententerprisegroup.com/ja/pricing.html",
+                  "priceValidUntil": "2026-11-12",
+                  "hasMerchantReturnPolicy": {
+                      "@type": "MerchantReturnPolicy",
+                      "returnPolicyCategory": "https://schema.org/NoReturn"
+                  },
+                  "shippingDetails": {
+                      "@type": "OfferShippingDetails",
+                      "shippingDestination": { "@type": "DefinedRegion", "name": "Worldwide" },
+                      "deliveryTime": {
+                          "@type": "ShippingDeliveryTime",
+                          "handlingTime": { "@type": "QuantitativeValue", "value": "0", "unitCode": "DAY" },
+                          "transitTime": { "@type": "QuantitativeValue", "value": "0", "unitCode": "DAY" }
+                      }
+                  } }
             },{
               "@type": "Product",
               "name": "プロフェッショナル",
-              "description": "- 1シート（単一デスクトップライセンス） • - フルデスクトップアプリケーション • - すべてのコアAIエキスパート • - 適応型メモリ • - エッジ対応（オフライン利用可） • - 継続的なアップデートと優先サポート",
-              "brand": { "@id": "https://theintelligententerprisegroup.com/#org" },
+              "image": "https://theintelligententerprisegroup.com/images/product-default.jpg",
+              "description": "- 1シート（単一デスクトップライセンス） • - 有効期間：1年間 • - フルデスクトップアプリケーション • - すべてのコアAIエキスパート • - 適応型メモリ • - エッジ対応（オフライン利用可） • - 継続的なアップデートと優先サポート",
+              "brand": { 
+                  "@type": "Brand", 
+                  "@id": "https://theintelligententerprisegroup.com/#org", 
+                  "name": "The Intelligent Enterprise Group" 
+              },
               "offers": { 
                   "@type": "Offer",
                   "price": "199",
                   "priceCurrency": "EUR",
                   "availability": "https://schema.org/InStock",
-                  "url": "https://theintelligententerprisegroup.com/ja/pricing.html" }
+                  "url": "https://theintelligententerprisegroup.com/ja/pricing.html",
+                  "priceValidUntil": "2026-11-12",
+                  "hasMerchantReturnPolicy": {
+                      "@type": "MerchantReturnPolicy",
+                      "returnPolicyCategory": "https://schema.org/NoReturn"
+                  },
+                  "shippingDetails": {
+                      "@type": "OfferShippingDetails",
+                      "shippingDestination": { "@type": "DefinedRegion", "name": "Worldwide" },
+                      "deliveryTime": {
+                          "@type": "ShippingDeliveryTime",
+                          "handlingTime": { "@type": "QuantitativeValue", "value": "0", "unitCode": "DAY" },
+                          "transitTime": { "@type": "QuantitativeValue", "value": "0", "unitCode": "DAY" }
+                      }
+                  } }
             },{
               "@type": "Product",
               "name": "ビジネス‑デスクトップ",
-              "description": "- 3シートを含む（個別デスクトップライセンス） • - プロフェッショナルと同じ機能 • - チーム向けのボリュームディスカウント • - 追加シートは割引価格で提供",
-              "brand": { "@id": "https://theintelligententerprisegroup.com/#org" },
+              "image": "https://theintelligententerprisegroup.com/images/product-default.jpg",
+              "description": "- 3シートを含む（個別デスクトップライセンス） • - 有効期間：1年間 • - プロフェッショナルと同じ機能 • - チーム向けのボリュームディスカウント • - 追加シートは割引価格で提供",
+              "brand": { 
+                  "@type": "Brand", 
+                  "@id": "https://theintelligententerprisegroup.com/#org", 
+                  "name": "The Intelligent Enterprise Group" 
+              },
               "offers": { 
                   "@type": "Offer",
                   "price": "499",
                   "priceCurrency": "EUR",
                   "availability": "https://schema.org/InStock",
-                  "url": "https://theintelligententerprisegroup.com/ja/pricing.html" }
+                  "url": "https://theintelligententerprisegroup.com/ja/pricing.html",
+                  "priceValidUntil": "2026-11-12",
+                  "hasMerchantReturnPolicy": {
+                      "@type": "MerchantReturnPolicy",
+                      "returnPolicyCategory": "https://schema.org/NoReturn"
+                  },
+                  "shippingDetails": {
+                      "@type": "OfferShippingDetails",
+                      "shippingDestination": { "@type": "DefinedRegion", "name": "Worldwide" },
+                      "deliveryTime": {
+                          "@type": "ShippingDeliveryTime",
+                          "handlingTime": { "@type": "QuantitativeValue", "value": "0", "unitCode": "DAY" },
+                          "transitTime": { "@type": "QuantitativeValue", "value": "0", "unitCode": "DAY" }
+                      }
+                  } }
             },{
               "@type": "Product",
               "name": "ビジネス‑サーバー",
-              "description": "- APIサーバー。3ユーザーライセンスを含む（同一サーバーインストールに最大3ユーザーがアクセス可能）。 • - インストール可能なサーバーアプリケーション – 自社サーバーやプライベートクラウドに展開可能 • - 統合用のAPIアクセスを提供 – APIを呼び出せるあらゆる業務システム/プロセスに接続可能 • - 統合サービスは含まれません（別途注文可能）",
-              "brand": { "@id": "https://theintelligententerprisegroup.com/#org" },
+              "image": "https://theintelligententerprisegroup.com/images/product-default.jpg",
+              "description": "- APIサーバー。3ユーザーライセンスを含む（同一サーバーインストールに最大3ユーザーがアクセス可能）。 • - 有効期間：1年間 • - インストール可能なサーバーアプリケーション – 自社サーバーやプライベートクラウドに展開可能 • - 統合用のAPIアクセスを提供 – APIを呼び出せるあらゆる業務システム/プロセスに接続可能 • - 統合サービスは含まれません（別途注文可能）",
+              "brand": { 
+                  "@type": "Brand", 
+                  "@id": "https://theintelligententerprisegroup.com/#org", 
+                  "name": "The Intelligent Enterprise Group" 
+              },
               "offers": { 
                   "@type": "Offer",
                   "price": "699",
                   "priceCurrency": "EUR",
                   "availability": "https://schema.org/InStock",
-                  "url": "https://theintelligententerprisegroup.com/ja/pricing.html" }
+                  "url": "https://theintelligententerprisegroup.com/ja/pricing.html",
+                  "priceValidUntil": "2026-11-12",
+                  "hasMerchantReturnPolicy": {
+                      "@type": "MerchantReturnPolicy",
+                      "returnPolicyCategory": "https://schema.org/NoReturn"
+                  },
+                  "shippingDetails": {
+                      "@type": "OfferShippingDetails",
+                      "shippingDestination": { "@type": "DefinedRegion", "name": "Worldwide" },
+                      "deliveryTime": {
+                          "@type": "ShippingDeliveryTime",
+                          "handlingTime": { "@type": "QuantitativeValue", "value": "0", "unitCode": "DAY" },
+                          "transitTime": { "@type": "QuantitativeValue", "value": "0", "unitCode": "DAY" }
+                      }
+                  } }
             },{
               "@type": "Product",
               "name": "エンタープライズ",
+              "image": "https://theintelligententerprisegroup.com/images/product-default.jpg",
               "description": "- デスクトップとサーバープランの任意の組み合わせ • - 統合サービス（ERP、CRM、業務プロセス） • - 専任サポートとオンボーディング • - セキュリティ、コンプライアンス、SLA • - プロフェッショナルサービスとしてのカスタムAIエキスパート開発（有料） • - 大規模組織向けに調整",
-              "brand": { "@id": "https://theintelligententerprisegroup.com/#org" },
+              "brand": { 
+                  "@type": "Brand", 
+                  "@id": "https://theintelligententerprisegroup.com/#org", 
+                  "name": "The Intelligent Enterprise Group" 
+              },
               "offers": { 
                   "@type": "Offer",
+                  "price": "0",
+                  "priceCurrency": "EUR",
                   "availability": "https://schema.org/InStock",
-                  "url": "https://theintelligententerprisegroup.com/ja/pricing.html" }
+                  "url": "https://theintelligententerprisegroup.com/ja/pricing.html",
+                  "priceValidUntil": "2026-11-12",
+                  "hasMerchantReturnPolicy": {
+                      "@type": "MerchantReturnPolicy",
+                      "returnPolicyCategory": "https://schema.org/NoReturn"
+                  },
+                  "shippingDetails": {
+                      "@type": "OfferShippingDetails",
+                      "shippingDestination": { "@type": "DefinedRegion", "name": "Worldwide" },
+                      "deliveryTime": {
+                          "@type": "ShippingDeliveryTime",
+                          "handlingTime": { "@type": "QuantitativeValue", "value": "0", "unitCode": "DAY" },
+                          "transitTime": { "@type": "QuantitativeValue", "value": "0", "unitCode": "DAY" }
+                      }
+                  } }
             }] }</script>
 
 
@@ -267,6 +383,7 @@
                             <p><strong>&#x20AC;29 / &#x5E74;</strong> <span class="jobs-note">excl. VAT</span></p>
                             <p style="text-align:left">
 - 1シート（単一デスクトップライセンス）<br />
+- 有効期間：1年間<br />
 - フルデスクトップアプリケーション<br />
 - すべてのコアAIエキスパート<br />
 - 適応型メモリ<br />
@@ -284,6 +401,7 @@
                             <p><strong>&#x20AC;199 / &#x5E74;</strong> <span class="jobs-note">excl. VAT</span></p>
                             <p style="text-align:left">
 - 1シート（単一デスクトップライセンス）<br />
+- 有効期間：1年間<br />
 - フルデスクトップアプリケーション<br />
 - すべてのコアAIエキスパート<br />
 - 適応型メモリ<br />
@@ -299,6 +417,7 @@
                             <p><strong>&#x20AC;499 / &#x5E74;</strong> <span class="jobs-note">excl. VAT</span></p>
                             <p style="text-align:left">
 - 3シートを含む（個別デスクトップライセンス）<br />
+- 有効期間：1年間<br />
 - プロフェッショナルと同じ機能<br />
 - チーム向けのボリュームディスカウント<br />
 - 追加シートは割引価格で提供<br />
@@ -312,6 +431,7 @@
                             <p><strong>&#x20AC;699 / &#x5E74;</strong> <span class="jobs-note">excl. VAT</span></p>
                             <p style="text-align:left">
 - APIサーバー。3ユーザーライセンスを含む（同一サーバーインストールに最大3ユーザーがアクセス可能）。<br />
+- 有効期間：1年間<br />
 - インストール可能なサーバーアプリケーション – 自社サーバーやプライベートクラウドに展開可能<br />
 - 統合用のAPIアクセスを提供 – APIを呼び出せるあらゆる業務システム/プロセスに接続可能<br />
 - 統合サービスは含まれません（別途注文可能）<br />
@@ -357,7 +477,7 @@
                             <li>
                                 <strong>&#x652F;&#x6255;&#x3044;&#x3092;&#x884C;&#x3046;</strong><br />
 
-                                    <p>一度限りの€29（VAT除く）ライセンス料金をPayPalで安全にお支払いください:</p>
+                                    <p>1年間のライセンス料として€29（税抜）をオンラインで安全にお支払いください（クレジットカード利用可）：</p>
 
                                     <div style="margin-left: 5em;">
                                         <label>

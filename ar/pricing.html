@@ -93,67 +93,183 @@
 { "@context": "https://schema.org", "@graph": [{
               "@type": "Product",
               "name": "ترخيص تجريبي",
+              "image": "https://theintelligententerprisegroup.com/images/product-default.jpg",
               "description": "- مقعد واحد (ترخيص سطح مكتب فردي) • - ترخيص لمرة واحدة لمدة 6 أشهر • - تطبيق سطح مكتب كامل (>35 جيجابايت للتنزيل) • - جميع خبراء الذكاء الاصطناعي الأساسيين • - ذاكرة تكيفية • - تعلم متعدد الصيغ • - جاهز للعمل دون اتصال • - التراخيص التجريبية مخصصة للاستخدام غير التجاري فقط ويمكن استخدامها للتقييم أو الاختبار أو التدريب أو البحث. • ملاحظة: لا يمكن تجديد التجربة. بعد 6 أشهر، قم بالترقية إلى خطة كاملة.",
-              "brand": { "@id": "https://theintelligententerprisegroup.com/#org" },
+              "brand": { 
+                  "@type": "Brand", 
+                  "@id": "https://theintelligententerprisegroup.com/#org", 
+                  "name": "The Intelligent Enterprise Group" 
+              },
               "offers": { 
                   "@type": "Offer",
                   "price": "39",
                   "priceCurrency": "EUR",
                   "availability": "https://schema.org/InStock",
-                  "url": "https://theintelligententerprisegroup.com/ar/pricing.html" }
+                  "url": "https://theintelligententerprisegroup.com/ar/pricing.html",
+                  "priceValidUntil": "2026-11-12",
+                  "hasMerchantReturnPolicy": {
+                      "@type": "MerchantReturnPolicy",
+                      "returnPolicyCategory": "https://schema.org/NoReturn"
+                  },
+                  "shippingDetails": {
+                      "@type": "OfferShippingDetails",
+                      "shippingDestination": { "@type": "DefinedRegion", "name": "Worldwide" },
+                      "deliveryTime": {
+                          "@type": "ShippingDeliveryTime",
+                          "handlingTime": { "@type": "QuantitativeValue", "value": "0", "unitCode": "DAY" },
+                          "transitTime": { "@type": "QuantitativeValue", "value": "0", "unitCode": "DAY" }
+                      }
+                  } }
             },{
               "@type": "Product",
               "name": "الطلاب والمعلمون",
-              "description": "- مقعد واحد (ترخيص سطح مكتب فردي) • - تطبيق سطح مكتب كامل • - جميع خبراء الذكاء الاصطناعي الأساسيين • - ذاكرة تكيفية • - تعلم متعدد الصيغ • - جاهز للعمل دون اتصال • - ترخيص مخفض للطلاب والمعلمين المعتمدين. • نحن نستثمر في التعليم، لذا يحصل الطلاب على سعر رمزي!",
-              "brand": { "@id": "https://theintelligententerprisegroup.com/#org" },
+              "image": "https://theintelligententerprisegroup.com/images/product-default.jpg",
+              "description": "- مقعد واحد (ترخيص سطح مكتب فردي) • - صالح لمدة سنة واحدة • - تطبيق سطح مكتب كامل • - جميع خبراء الذكاء الاصطناعي الأساسيين • - ذاكرة تكيفية • - تعلم متعدد الصيغ • - جاهز للعمل دون اتصال • - ترخيص مخفض للطلاب والمعلمين المعتمدين. • نحن نستثمر في التعليم، لذا يحصل الطلاب على سعر رمزي!",
+              "brand": { 
+                  "@type": "Brand", 
+                  "@id": "https://theintelligententerprisegroup.com/#org", 
+                  "name": "The Intelligent Enterprise Group" 
+              },
               "offers": { 
                   "@type": "Offer",
                   "price": "29",
                   "priceCurrency": "EUR",
                   "availability": "https://schema.org/InStock",
-                  "url": "https://theintelligententerprisegroup.com/ar/pricing.html" }
+                  "url": "https://theintelligententerprisegroup.com/ar/pricing.html",
+                  "priceValidUntil": "2026-11-12",
+                  "hasMerchantReturnPolicy": {
+                      "@type": "MerchantReturnPolicy",
+                      "returnPolicyCategory": "https://schema.org/NoReturn"
+                  },
+                  "shippingDetails": {
+                      "@type": "OfferShippingDetails",
+                      "shippingDestination": { "@type": "DefinedRegion", "name": "Worldwide" },
+                      "deliveryTime": {
+                          "@type": "ShippingDeliveryTime",
+                          "handlingTime": { "@type": "QuantitativeValue", "value": "0", "unitCode": "DAY" },
+                          "transitTime": { "@type": "QuantitativeValue", "value": "0", "unitCode": "DAY" }
+                      }
+                  } }
             },{
               "@type": "Product",
               "name": "المحترفون",
-              "description": "- مقعد واحد (ترخيص سطح مكتب فردي) • - تطبيق سطح مكتب كامل • - جميع خبراء الذكاء الاصطناعي الأساسيين • - ذاكرة تكيفية • - جاهز للعمل دون اتصال • - تحديثات مستمرة ودعم ذو أولوية",
-              "brand": { "@id": "https://theintelligententerprisegroup.com/#org" },
+              "image": "https://theintelligententerprisegroup.com/images/product-default.jpg",
+              "description": "- مقعد واحد (ترخيص سطح مكتب فردي) • - صالح لمدة سنة واحدة • - تطبيق سطح مكتب كامل • - جميع خبراء الذكاء الاصطناعي الأساسيين • - ذاكرة تكيفية • - جاهز للعمل دون اتصال • - تحديثات مستمرة ودعم ذو أولوية",
+              "brand": { 
+                  "@type": "Brand", 
+                  "@id": "https://theintelligententerprisegroup.com/#org", 
+                  "name": "The Intelligent Enterprise Group" 
+              },
               "offers": { 
                   "@type": "Offer",
                   "price": "199",
                   "priceCurrency": "EUR",
                   "availability": "https://schema.org/InStock",
-                  "url": "https://theintelligententerprisegroup.com/ar/pricing.html" }
+                  "url": "https://theintelligententerprisegroup.com/ar/pricing.html",
+                  "priceValidUntil": "2026-11-12",
+                  "hasMerchantReturnPolicy": {
+                      "@type": "MerchantReturnPolicy",
+                      "returnPolicyCategory": "https://schema.org/NoReturn"
+                  },
+                  "shippingDetails": {
+                      "@type": "OfferShippingDetails",
+                      "shippingDestination": { "@type": "DefinedRegion", "name": "Worldwide" },
+                      "deliveryTime": {
+                          "@type": "ShippingDeliveryTime",
+                          "handlingTime": { "@type": "QuantitativeValue", "value": "0", "unitCode": "DAY" },
+                          "transitTime": { "@type": "QuantitativeValue", "value": "0", "unitCode": "DAY" }
+                      }
+                  } }
             },{
               "@type": "Product",
               "name": "الأعمال – سطح المكتب",
-              "description": "- 3 مقاعد متضمنة (تراخيص سطح مكتب منفصلة) • - نفس ميزات خطة المحترفين • - خصم على الحجم للفرق • - مقاعد إضافية متاحة بسعر مخفض",
-              "brand": { "@id": "https://theintelligententerprisegroup.com/#org" },
+              "image": "https://theintelligententerprisegroup.com/images/product-default.jpg",
+              "description": "- 3 مقاعد متضمنة (تراخيص سطح مكتب منفصلة) • - صالح لمدة سنة واحدة • - نفس ميزات خطة المحترفين • - خصم على الحجم للفرق • - مقاعد إضافية متاحة بسعر مخفض",
+              "brand": { 
+                  "@type": "Brand", 
+                  "@id": "https://theintelligententerprisegroup.com/#org", 
+                  "name": "The Intelligent Enterprise Group" 
+              },
               "offers": { 
                   "@type": "Offer",
                   "price": "499",
                   "priceCurrency": "EUR",
                   "availability": "https://schema.org/InStock",
-                  "url": "https://theintelligententerprisegroup.com/ar/pricing.html" }
+                  "url": "https://theintelligententerprisegroup.com/ar/pricing.html",
+                  "priceValidUntil": "2026-11-12",
+                  "hasMerchantReturnPolicy": {
+                      "@type": "MerchantReturnPolicy",
+                      "returnPolicyCategory": "https://schema.org/NoReturn"
+                  },
+                  "shippingDetails": {
+                      "@type": "OfferShippingDetails",
+                      "shippingDestination": { "@type": "DefinedRegion", "name": "Worldwide" },
+                      "deliveryTime": {
+                          "@type": "ShippingDeliveryTime",
+                          "handlingTime": { "@type": "QuantitativeValue", "value": "0", "unitCode": "DAY" },
+                          "transitTime": { "@type": "QuantitativeValue", "value": "0", "unitCode": "DAY" }
+                      }
+                  } }
             },{
               "@type": "Product",
               "name": "الأعمال – الخادم",
-              "description": "- خادم API. يتضمن 3 تراخيص مستخدمين (حتى 3 مستخدمين يمكنهم الوصول إلى نفس تثبيت الخادم). • - تطبيق خادم قابل للتثبيت – انشره على خوادمك الخاصة أو في سحابتك الخاصة • - يوفر وصول API للتكامل – يمكن ربطه بأي نظام/عملية أعمال يمكنها استدعاء الـ API • - لا تشمل خدمات التكامل (يمكن طلبها بشكل منفصل)",
-              "brand": { "@id": "https://theintelligententerprisegroup.com/#org" },
+              "image": "https://theintelligententerprisegroup.com/images/product-default.jpg",
+              "description": "- خادم API. يتضمن 3 تراخيص مستخدمين (حتى 3 مستخدمين يمكنهم الوصول إلى نفس تثبيت الخادم). • - صالح لمدة سنة واحدة • - تطبيق خادم قابل للتثبيت – انشره على خوادمك الخاصة أو في سحابتك الخاصة • - يوفر وصول API للتكامل – يمكن ربطه بأي نظام/عملية أعمال يمكنها استدعاء الـ API • - لا تشمل خدمات التكامل (يمكن طلبها بشكل منفصل)",
+              "brand": { 
+                  "@type": "Brand", 
+                  "@id": "https://theintelligententerprisegroup.com/#org", 
+                  "name": "The Intelligent Enterprise Group" 
+              },
               "offers": { 
                   "@type": "Offer",
                   "price": "699",
                   "priceCurrency": "EUR",
                   "availability": "https://schema.org/InStock",
-                  "url": "https://theintelligententerprisegroup.com/ar/pricing.html" }
+                  "url": "https://theintelligententerprisegroup.com/ar/pricing.html",
+                  "priceValidUntil": "2026-11-12",
+                  "hasMerchantReturnPolicy": {
+                      "@type": "MerchantReturnPolicy",
+                      "returnPolicyCategory": "https://schema.org/NoReturn"
+                  },
+                  "shippingDetails": {
+                      "@type": "OfferShippingDetails",
+                      "shippingDestination": { "@type": "DefinedRegion", "name": "Worldwide" },
+                      "deliveryTime": {
+                          "@type": "ShippingDeliveryTime",
+                          "handlingTime": { "@type": "QuantitativeValue", "value": "0", "unitCode": "DAY" },
+                          "transitTime": { "@type": "QuantitativeValue", "value": "0", "unitCode": "DAY" }
+                      }
+                  } }
             },{
               "@type": "Product",
               "name": "المؤسسات",
+              "image": "https://theintelligententerprisegroup.com/images/product-default.jpg",
               "description": "- أي مزيج من خطط سطح المكتب والخادم • - خدمات التكامل (ERP، CRM، عمليات الأعمال) • - دعم مخصص وإعداد • - الأمان، الامتثال، اتفاقيات مستوى الخدمة • - تطوير خبراء ذكاء اصطناعي مخصص كخدمة احترافية (مدفوعة) • - مصمم خصيصاً للمؤسسات الكبيرة",
-              "brand": { "@id": "https://theintelligententerprisegroup.com/#org" },
+              "brand": { 
+                  "@type": "Brand", 
+                  "@id": "https://theintelligententerprisegroup.com/#org", 
+                  "name": "The Intelligent Enterprise Group" 
+              },
               "offers": { 
                   "@type": "Offer",
+                  "price": "0",
+                  "priceCurrency": "EUR",
                   "availability": "https://schema.org/InStock",
-                  "url": "https://theintelligententerprisegroup.com/ar/pricing.html" }
+                  "url": "https://theintelligententerprisegroup.com/ar/pricing.html",
+                  "priceValidUntil": "2026-11-12",
+                  "hasMerchantReturnPolicy": {
+                      "@type": "MerchantReturnPolicy",
+                      "returnPolicyCategory": "https://schema.org/NoReturn"
+                  },
+                  "shippingDetails": {
+                      "@type": "OfferShippingDetails",
+                      "shippingDestination": { "@type": "DefinedRegion", "name": "Worldwide" },
+                      "deliveryTime": {
+                          "@type": "ShippingDeliveryTime",
+                          "handlingTime": { "@type": "QuantitativeValue", "value": "0", "unitCode": "DAY" },
+                          "transitTime": { "@type": "QuantitativeValue", "value": "0", "unitCode": "DAY" }
+                      }
+                  } }
             }] }</script>
 
 
@@ -267,6 +383,7 @@
                             <p><strong>&#x20AC;29 / &#x633;&#x646;&#x629;</strong> <span class="jobs-note">excl. VAT</span></p>
                             <p style="text-align:left">
 - مقعد واحد (ترخيص سطح مكتب فردي)<br />
+- صالح لمدة سنة واحدة<br />
 - تطبيق سطح مكتب كامل<br />
 - جميع خبراء الذكاء الاصطناعي الأساسيين<br />
 - ذاكرة تكيفية<br />
@@ -284,6 +401,7 @@
                             <p><strong>&#x20AC;199 / &#x633;&#x646;&#x629;</strong> <span class="jobs-note">excl. VAT</span></p>
                             <p style="text-align:left">
 - مقعد واحد (ترخيص سطح مكتب فردي)<br />
+- صالح لمدة سنة واحدة<br />
 - تطبيق سطح مكتب كامل<br />
 - جميع خبراء الذكاء الاصطناعي الأساسيين<br />
 - ذاكرة تكيفية<br />
@@ -299,6 +417,7 @@
                             <p><strong>&#x20AC;499 / &#x633;&#x646;&#x629;</strong> <span class="jobs-note">excl. VAT</span></p>
                             <p style="text-align:left">
 - 3 مقاعد متضمنة (تراخيص سطح مكتب منفصلة)<br />
+- صالح لمدة سنة واحدة<br />
 - نفس ميزات خطة المحترفين<br />
 - خصم على الحجم للفرق<br />
 - مقاعد إضافية متاحة بسعر مخفض<br />
@@ -312,6 +431,7 @@
                             <p><strong>&#x20AC;699 / &#x633;&#x646;&#x629;</strong> <span class="jobs-note">excl. VAT</span></p>
                             <p style="text-align:left">
 - خادم API. يتضمن 3 تراخيص مستخدمين (حتى 3 مستخدمين يمكنهم الوصول إلى نفس تثبيت الخادم).<br />
+- صالح لمدة سنة واحدة<br />
 - تطبيق خادم قابل للتثبيت – انشره على خوادمك الخاصة أو في سحابتك الخاصة<br />
 - يوفر وصول API للتكامل – يمكن ربطه بأي نظام/عملية أعمال يمكنها استدعاء الـ API<br />
 - لا تشمل خدمات التكامل (يمكن طلبها بشكل منفصل)<br />
@@ -357,7 +477,7 @@
                             <li>
                                 <strong>&#x625;&#x62C;&#x631;&#x627;&#x621; &#x627;&#x644;&#x62F;&#x641;&#x639;</strong><br />
 
-                                    <p>ادفع رسوم الترخيص لمرة واحدة بقيمة €29 (باستثناء ضريبة القيمة المضافة) بشكل آمن عبر PayPal:</p>
+                                    <p>ادفع رسوم الترخيص البالغة 29 يورو (غير شاملة ضريبة القيمة المضافة) للحصول على ترخيص لمدة سنة واحدة عبر الإنترنت بأمان (يُقبل الدفع ببطاقة الائتمان):</p>
 
                                     <div style="margin-left: 5em;">
                                         <label>

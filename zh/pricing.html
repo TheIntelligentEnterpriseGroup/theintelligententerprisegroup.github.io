@@ -93,67 +93,183 @@
 { "@context": "https://schema.org", "@graph": [{
               "@type": "Product",
               "name": "试用许可证",
+              "image": "https://theintelligententerprisegroup.com/images/product-default.jpg",
               "description": "- 1 个席位（单一桌面许可证） • - 一次性 6 个月许可证 • - 完整桌面应用程序（>35GB 下载） • - 所有核心 AI 专家 • - 自适应记忆 • - 多格式学习 • - 边缘就绪（离线使用） • - 试用许可证严格限于非商业用途，仅可用于评估、测试、培训或研究。 • 注意：试用不可续期。6 个月后请升级至完整方案。",
-              "brand": { "@id": "https://theintelligententerprisegroup.com/#org" },
+              "brand": { 
+                  "@type": "Brand", 
+                  "@id": "https://theintelligententerprisegroup.com/#org", 
+                  "name": "The Intelligent Enterprise Group" 
+              },
               "offers": { 
                   "@type": "Offer",
                   "price": "39",
                   "priceCurrency": "EUR",
                   "availability": "https://schema.org/InStock",
-                  "url": "https://theintelligententerprisegroup.com/zh/pricing.html" }
+                  "url": "https://theintelligententerprisegroup.com/zh/pricing.html",
+                  "priceValidUntil": "2026-11-12",
+                  "hasMerchantReturnPolicy": {
+                      "@type": "MerchantReturnPolicy",
+                      "returnPolicyCategory": "https://schema.org/NoReturn"
+                  },
+                  "shippingDetails": {
+                      "@type": "OfferShippingDetails",
+                      "shippingDestination": { "@type": "DefinedRegion", "name": "Worldwide" },
+                      "deliveryTime": {
+                          "@type": "ShippingDeliveryTime",
+                          "handlingTime": { "@type": "QuantitativeValue", "value": "0", "unitCode": "DAY" },
+                          "transitTime": { "@type": "QuantitativeValue", "value": "0", "unitCode": "DAY" }
+                      }
+                  } }
             },{
               "@type": "Product",
               "name": "学生与教育者",
-              "description": "- 1 个席位（单一桌面许可证） • - 完整桌面应用程序 • - 所有核心 AI 专家 • - 自适应记忆 • - 多格式学习 • - 边缘就绪（离线使用） • - 针对已验证的学生与教育者的优惠许可证。 • 我们投资教育，因此学生仅需象征性价格！",
-              "brand": { "@id": "https://theintelligententerprisegroup.com/#org" },
+              "image": "https://theintelligententerprisegroup.com/images/product-default.jpg",
+              "description": "- 1 个席位（单一桌面许可证） • - 有效期为1年 • - 完整桌面应用程序 • - 所有核心 AI 专家 • - 自适应记忆 • - 多格式学习 • - 边缘就绪（离线使用） • - 针对已验证的学生与教育者的优惠许可证。 • 我们投资教育，因此学生仅需象征性价格！",
+              "brand": { 
+                  "@type": "Brand", 
+                  "@id": "https://theintelligententerprisegroup.com/#org", 
+                  "name": "The Intelligent Enterprise Group" 
+              },
               "offers": { 
                   "@type": "Offer",
                   "price": "29",
                   "priceCurrency": "EUR",
                   "availability": "https://schema.org/InStock",
-                  "url": "https://theintelligententerprisegroup.com/zh/pricing.html" }
+                  "url": "https://theintelligententerprisegroup.com/zh/pricing.html",
+                  "priceValidUntil": "2026-11-12",
+                  "hasMerchantReturnPolicy": {
+                      "@type": "MerchantReturnPolicy",
+                      "returnPolicyCategory": "https://schema.org/NoReturn"
+                  },
+                  "shippingDetails": {
+                      "@type": "OfferShippingDetails",
+                      "shippingDestination": { "@type": "DefinedRegion", "name": "Worldwide" },
+                      "deliveryTime": {
+                          "@type": "ShippingDeliveryTime",
+                          "handlingTime": { "@type": "QuantitativeValue", "value": "0", "unitCode": "DAY" },
+                          "transitTime": { "@type": "QuantitativeValue", "value": "0", "unitCode": "DAY" }
+                      }
+                  } }
             },{
               "@type": "Product",
               "name": "专业版",
-              "description": "- 1 个席位（单一桌面许可证） • - 完整桌面应用程序 • - 所有核心 AI 专家 • - 自适应记忆 • - 边缘就绪（离线使用） • - 持续更新与优先支持",
-              "brand": { "@id": "https://theintelligententerprisegroup.com/#org" },
+              "image": "https://theintelligententerprisegroup.com/images/product-default.jpg",
+              "description": "- 1 个席位（单一桌面许可证） • - 有效期为1年 • - 完整桌面应用程序 • - 所有核心 AI 专家 • - 自适应记忆 • - 边缘就绪（离线使用） • - 持续更新与优先支持",
+              "brand": { 
+                  "@type": "Brand", 
+                  "@id": "https://theintelligententerprisegroup.com/#org", 
+                  "name": "The Intelligent Enterprise Group" 
+              },
               "offers": { 
                   "@type": "Offer",
                   "price": "199",
                   "priceCurrency": "EUR",
                   "availability": "https://schema.org/InStock",
-                  "url": "https://theintelligententerprisegroup.com/zh/pricing.html" }
+                  "url": "https://theintelligententerprisegroup.com/zh/pricing.html",
+                  "priceValidUntil": "2026-11-12",
+                  "hasMerchantReturnPolicy": {
+                      "@type": "MerchantReturnPolicy",
+                      "returnPolicyCategory": "https://schema.org/NoReturn"
+                  },
+                  "shippingDetails": {
+                      "@type": "OfferShippingDetails",
+                      "shippingDestination": { "@type": "DefinedRegion", "name": "Worldwide" },
+                      "deliveryTime": {
+                          "@type": "ShippingDeliveryTime",
+                          "handlingTime": { "@type": "QuantitativeValue", "value": "0", "unitCode": "DAY" },
+                          "transitTime": { "@type": "QuantitativeValue", "value": "0", "unitCode": "DAY" }
+                      }
+                  } }
             },{
               "@type": "Product",
               "name": "商业版‑桌面",
-              "description": "- 包含 3 个席位（独立桌面许可证） • - 与专业版相同功能 • - 团队批量折扣 • - 可按优惠价格增加额外席位",
-              "brand": { "@id": "https://theintelligententerprisegroup.com/#org" },
+              "image": "https://theintelligententerprisegroup.com/images/product-default.jpg",
+              "description": "- 包含 3 个席位（独立桌面许可证） • - 有效期为1年 • - 与专业版相同功能 • - 团队批量折扣 • - 可按优惠价格增加额外席位",
+              "brand": { 
+                  "@type": "Brand", 
+                  "@id": "https://theintelligententerprisegroup.com/#org", 
+                  "name": "The Intelligent Enterprise Group" 
+              },
               "offers": { 
                   "@type": "Offer",
                   "price": "499",
                   "priceCurrency": "EUR",
                   "availability": "https://schema.org/InStock",
-                  "url": "https://theintelligententerprisegroup.com/zh/pricing.html" }
+                  "url": "https://theintelligententerprisegroup.com/zh/pricing.html",
+                  "priceValidUntil": "2026-11-12",
+                  "hasMerchantReturnPolicy": {
+                      "@type": "MerchantReturnPolicy",
+                      "returnPolicyCategory": "https://schema.org/NoReturn"
+                  },
+                  "shippingDetails": {
+                      "@type": "OfferShippingDetails",
+                      "shippingDestination": { "@type": "DefinedRegion", "name": "Worldwide" },
+                      "deliveryTime": {
+                          "@type": "ShippingDeliveryTime",
+                          "handlingTime": { "@type": "QuantitativeValue", "value": "0", "unitCode": "DAY" },
+                          "transitTime": { "@type": "QuantitativeValue", "value": "0", "unitCode": "DAY" }
+                      }
+                  } }
             },{
               "@type": "Product",
               "name": "商业版‑服务器",
-              "description": "- API 服务器。包含 3 个用户许可证（最多 3 个用户可访问同一服务器安装）。 • - 可安装的服务器应用程序 – 部署在您自己的服务器或私有云中 • - 提供 API 接口以便集成 – 可连接至任何可调用 API 的业务系统/流程 • - 不包含集成服务（可单独订购）",
-              "brand": { "@id": "https://theintelligententerprisegroup.com/#org" },
+              "image": "https://theintelligententerprisegroup.com/images/product-default.jpg",
+              "description": "- API 服务器。包含 3 个用户许可证（最多 3 个用户可访问同一服务器安装）。 • - 有效期为1年 • - 可安装的服务器应用程序 – 部署在您自己的服务器或私有云中 • - 提供 API 接口以便集成 – 可连接至任何可调用 API 的业务系统/流程 • - 不包含集成服务（可单独订购）",
+              "brand": { 
+                  "@type": "Brand", 
+                  "@id": "https://theintelligententerprisegroup.com/#org", 
+                  "name": "The Intelligent Enterprise Group" 
+              },
               "offers": { 
                   "@type": "Offer",
                   "price": "699",
                   "priceCurrency": "EUR",
                   "availability": "https://schema.org/InStock",
-                  "url": "https://theintelligententerprisegroup.com/zh/pricing.html" }
+                  "url": "https://theintelligententerprisegroup.com/zh/pricing.html",
+                  "priceValidUntil": "2026-11-12",
+                  "hasMerchantReturnPolicy": {
+                      "@type": "MerchantReturnPolicy",
+                      "returnPolicyCategory": "https://schema.org/NoReturn"
+                  },
+                  "shippingDetails": {
+                      "@type": "OfferShippingDetails",
+                      "shippingDestination": { "@type": "DefinedRegion", "name": "Worldwide" },
+                      "deliveryTime": {
+                          "@type": "ShippingDeliveryTime",
+                          "handlingTime": { "@type": "QuantitativeValue", "value": "0", "unitCode": "DAY" },
+                          "transitTime": { "@type": "QuantitativeValue", "value": "0", "unitCode": "DAY" }
+                      }
+                  } }
             },{
               "@type": "Product",
               "name": "企业版",
+              "image": "https://theintelligententerprisegroup.com/images/product-default.jpg",
               "description": "- 桌面版和服务器版方案的任意组合 • - 集成服务（ERP、CRM、业务流程） • - 专属支持与入驻服务 • - 安全、合规、服务级别协议 • - 提供定制 AI 专家开发作为专业服务（付费） • - 针对大型组织量身定制",
-              "brand": { "@id": "https://theintelligententerprisegroup.com/#org" },
+              "brand": { 
+                  "@type": "Brand", 
+                  "@id": "https://theintelligententerprisegroup.com/#org", 
+                  "name": "The Intelligent Enterprise Group" 
+              },
               "offers": { 
                   "@type": "Offer",
+                  "price": "0",
+                  "priceCurrency": "EUR",
                   "availability": "https://schema.org/InStock",
-                  "url": "https://theintelligententerprisegroup.com/zh/pricing.html" }
+                  "url": "https://theintelligententerprisegroup.com/zh/pricing.html",
+                  "priceValidUntil": "2026-11-12",
+                  "hasMerchantReturnPolicy": {
+                      "@type": "MerchantReturnPolicy",
+                      "returnPolicyCategory": "https://schema.org/NoReturn"
+                  },
+                  "shippingDetails": {
+                      "@type": "OfferShippingDetails",
+                      "shippingDestination": { "@type": "DefinedRegion", "name": "Worldwide" },
+                      "deliveryTime": {
+                          "@type": "ShippingDeliveryTime",
+                          "handlingTime": { "@type": "QuantitativeValue", "value": "0", "unitCode": "DAY" },
+                          "transitTime": { "@type": "QuantitativeValue", "value": "0", "unitCode": "DAY" }
+                      }
+                  } }
             }] }</script>
 
 
@@ -267,6 +383,7 @@
                             <p><strong>&#x20AC;29 / &#x5E74;</strong> <span class="jobs-note">excl. VAT</span></p>
                             <p style="text-align:left">
 - 1 个席位（单一桌面许可证）<br />
+- 有效期为1年<br />
 - 完整桌面应用程序<br />
 - 所有核心 AI 专家<br />
 - 自适应记忆<br />
@@ -284,6 +401,7 @@
                             <p><strong>&#x20AC;199 / &#x5E74;</strong> <span class="jobs-note">excl. VAT</span></p>
                             <p style="text-align:left">
 - 1 个席位（单一桌面许可证）<br />
+- 有效期为1年<br />
 - 完整桌面应用程序<br />
 - 所有核心 AI 专家<br />
 - 自适应记忆<br />
@@ -299,6 +417,7 @@
                             <p><strong>&#x20AC;499 / &#x5E74;</strong> <span class="jobs-note">excl. VAT</span></p>
                             <p style="text-align:left">
 - 包含 3 个席位（独立桌面许可证）<br />
+- 有效期为1年<br />
 - 与专业版相同功能<br />
 - 团队批量折扣<br />
 - 可按优惠价格增加额外席位<br />
@@ -312,6 +431,7 @@
                             <p><strong>&#x20AC;699 / &#x5E74;</strong> <span class="jobs-note">excl. VAT</span></p>
                             <p style="text-align:left">
 - API 服务器。包含 3 个用户许可证（最多 3 个用户可访问同一服务器安装）。<br />
+- 有效期为1年<br />
 - 可安装的服务器应用程序 – 部署在您自己的服务器或私有云中<br />
 - 提供 API 接口以便集成 – 可连接至任何可调用 API 的业务系统/流程<br />
 - 不包含集成服务（可单独订购）<br />
@@ -357,7 +477,7 @@
                             <li>
                                 <strong>&#x5B8C;&#x6210;&#x652F;&#x4ED8;</strong><br />
 
-                                    <p>通过 PayPal 安全支付一次性 €29（不含增值税）的许可证费用：</p>
+                                    <p>请在线安全支付 €29（不含增值税）的一年期许可证费用（可使用信用卡）：</p>
 
                                     <div style="margin-left: 5em;">
                                         <label>

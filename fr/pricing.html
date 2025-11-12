@@ -93,67 +93,183 @@
 { "@context": "https://schema.org", "@graph": [{
               "@type": "Product",
               "name": "Licence d’essai",
+              "image": "https://theintelligententerprisegroup.com/images/product-default.jpg",
               "description": "- 1 poste (licence bureau unique) • - Licence unique de 6 mois • - Application de bureau complète (>35 Go à télécharger) • - Tous les experts IA de base • - Mémoire adaptative • - Apprentissage multi‑format • - Prêt pour l’edge (utilisation hors ligne) • - Les licences d’essai sont strictement non commerciales et ne peuvent être utilisées qu’à des fins d’évaluation, de test, de formation ou de recherche. • Remarque : l’essai ne peut pas être renouvelé. Après 6 mois, passez à un plan complet.",
-              "brand": { "@id": "https://theintelligententerprisegroup.com/#org" },
+              "brand": { 
+                  "@type": "Brand", 
+                  "@id": "https://theintelligententerprisegroup.com/#org", 
+                  "name": "The Intelligent Enterprise Group" 
+              },
               "offers": { 
                   "@type": "Offer",
                   "price": "39",
                   "priceCurrency": "EUR",
                   "availability": "https://schema.org/InStock",
-                  "url": "https://theintelligententerprisegroup.com/fr/pricing.html" }
+                  "url": "https://theintelligententerprisegroup.com/fr/pricing.html",
+                  "priceValidUntil": "2026-11-12",
+                  "hasMerchantReturnPolicy": {
+                      "@type": "MerchantReturnPolicy",
+                      "returnPolicyCategory": "https://schema.org/NoReturn"
+                  },
+                  "shippingDetails": {
+                      "@type": "OfferShippingDetails",
+                      "shippingDestination": { "@type": "DefinedRegion", "name": "Worldwide" },
+                      "deliveryTime": {
+                          "@type": "ShippingDeliveryTime",
+                          "handlingTime": { "@type": "QuantitativeValue", "value": "0", "unitCode": "DAY" },
+                          "transitTime": { "@type": "QuantitativeValue", "value": "0", "unitCode": "DAY" }
+                      }
+                  } }
             },{
               "@type": "Product",
               "name": "Étudiants & Enseignants",
-              "description": "- 1 poste (licence bureau unique) • - Application de bureau complète • - Tous les experts IA de base • - Mémoire adaptative • - Apprentissage multi‑format • - Prêt pour l’edge (utilisation hors ligne) • - Licence à tarif réduit pour étudiants et enseignants vérifiés. • Nous investissons dans l’éducation, les étudiants bénéficient donc d’un prix symbolique !",
-              "brand": { "@id": "https://theintelligententerprisegroup.com/#org" },
+              "image": "https://theintelligententerprisegroup.com/images/product-default.jpg",
+              "description": "- 1 poste (licence bureau unique) • - Valable pendant 1 an • - Application de bureau complète • - Tous les experts IA de base • - Mémoire adaptative • - Apprentissage multi‑format • - Prêt pour l’edge (utilisation hors ligne) • - Licence à tarif réduit pour étudiants et enseignants vérifiés. • Nous investissons dans l’éducation, les étudiants bénéficient donc d’un prix symbolique !",
+              "brand": { 
+                  "@type": "Brand", 
+                  "@id": "https://theintelligententerprisegroup.com/#org", 
+                  "name": "The Intelligent Enterprise Group" 
+              },
               "offers": { 
                   "@type": "Offer",
                   "price": "29",
                   "priceCurrency": "EUR",
                   "availability": "https://schema.org/InStock",
-                  "url": "https://theintelligententerprisegroup.com/fr/pricing.html" }
+                  "url": "https://theintelligententerprisegroup.com/fr/pricing.html",
+                  "priceValidUntil": "2026-11-12",
+                  "hasMerchantReturnPolicy": {
+                      "@type": "MerchantReturnPolicy",
+                      "returnPolicyCategory": "https://schema.org/NoReturn"
+                  },
+                  "shippingDetails": {
+                      "@type": "OfferShippingDetails",
+                      "shippingDestination": { "@type": "DefinedRegion", "name": "Worldwide" },
+                      "deliveryTime": {
+                          "@type": "ShippingDeliveryTime",
+                          "handlingTime": { "@type": "QuantitativeValue", "value": "0", "unitCode": "DAY" },
+                          "transitTime": { "@type": "QuantitativeValue", "value": "0", "unitCode": "DAY" }
+                      }
+                  } }
             },{
               "@type": "Product",
               "name": "Professionnel",
-              "description": "- 1 poste (licence bureau unique) • - Application de bureau complète • - Tous les experts IA de base • - Mémoire adaptative • - Prêt pour l’edge (utilisation hors ligne) • - Mises à jour continues & support prioritaire",
-              "brand": { "@id": "https://theintelligententerprisegroup.com/#org" },
+              "image": "https://theintelligententerprisegroup.com/images/product-default.jpg",
+              "description": "- 1 poste (licence bureau unique) • - Valable pendant 1 an • - Application de bureau complète • - Tous les experts IA de base • - Mémoire adaptative • - Prêt pour l’edge (utilisation hors ligne) • - Mises à jour continues & support prioritaire",
+              "brand": { 
+                  "@type": "Brand", 
+                  "@id": "https://theintelligententerprisegroup.com/#org", 
+                  "name": "The Intelligent Enterprise Group" 
+              },
               "offers": { 
                   "@type": "Offer",
                   "price": "199",
                   "priceCurrency": "EUR",
                   "availability": "https://schema.org/InStock",
-                  "url": "https://theintelligententerprisegroup.com/fr/pricing.html" }
+                  "url": "https://theintelligententerprisegroup.com/fr/pricing.html",
+                  "priceValidUntil": "2026-11-12",
+                  "hasMerchantReturnPolicy": {
+                      "@type": "MerchantReturnPolicy",
+                      "returnPolicyCategory": "https://schema.org/NoReturn"
+                  },
+                  "shippingDetails": {
+                      "@type": "OfferShippingDetails",
+                      "shippingDestination": { "@type": "DefinedRegion", "name": "Worldwide" },
+                      "deliveryTime": {
+                          "@type": "ShippingDeliveryTime",
+                          "handlingTime": { "@type": "QuantitativeValue", "value": "0", "unitCode": "DAY" },
+                          "transitTime": { "@type": "QuantitativeValue", "value": "0", "unitCode": "DAY" }
+                      }
+                  } }
             },{
               "@type": "Product",
               "name": "Entreprise‑Bureau",
-              "description": "- 3 postes inclus (licences bureau distinctes) • - Même fonctionnalités que Professionnel • - Remise de volume pour les équipes • - Postes supplémentaires disponibles à tarif réduit",
-              "brand": { "@id": "https://theintelligententerprisegroup.com/#org" },
+              "image": "https://theintelligententerprisegroup.com/images/product-default.jpg",
+              "description": "- 3 postes inclus (licences bureau distinctes) • - Valable pendant 1 an • - Même fonctionnalités que Professionnel • - Remise de volume pour les équipes • - Postes supplémentaires disponibles à tarif réduit",
+              "brand": { 
+                  "@type": "Brand", 
+                  "@id": "https://theintelligententerprisegroup.com/#org", 
+                  "name": "The Intelligent Enterprise Group" 
+              },
               "offers": { 
                   "@type": "Offer",
                   "price": "499",
                   "priceCurrency": "EUR",
                   "availability": "https://schema.org/InStock",
-                  "url": "https://theintelligententerprisegroup.com/fr/pricing.html" }
+                  "url": "https://theintelligententerprisegroup.com/fr/pricing.html",
+                  "priceValidUntil": "2026-11-12",
+                  "hasMerchantReturnPolicy": {
+                      "@type": "MerchantReturnPolicy",
+                      "returnPolicyCategory": "https://schema.org/NoReturn"
+                  },
+                  "shippingDetails": {
+                      "@type": "OfferShippingDetails",
+                      "shippingDestination": { "@type": "DefinedRegion", "name": "Worldwide" },
+                      "deliveryTime": {
+                          "@type": "ShippingDeliveryTime",
+                          "handlingTime": { "@type": "QuantitativeValue", "value": "0", "unitCode": "DAY" },
+                          "transitTime": { "@type": "QuantitativeValue", "value": "0", "unitCode": "DAY" }
+                      }
+                  } }
             },{
               "@type": "Product",
               "name": "Entreprise‑Serveur",
-              "description": "- Serveur API. Inclut 3 licences utilisateur (jusqu’à 3 utilisateurs peuvent accéder à la même installation serveur). • - Application serveur installable – déployez sur vos propres serveurs ou dans votre cloud privé • - Fournit un accès API pour l’intégration – peut être connecté à tout système/processus métier capable d’appeler l’API • - Aucun service d’intégration inclus (peut être commandé séparément)",
-              "brand": { "@id": "https://theintelligententerprisegroup.com/#org" },
+              "image": "https://theintelligententerprisegroup.com/images/product-default.jpg",
+              "description": "- Serveur API. Inclut 3 licences utilisateur (jusqu’à 3 utilisateurs peuvent accéder à la même installation serveur). • - Valable pendant 1 an • - Application serveur installable – déployez sur vos propres serveurs ou dans votre cloud privé • - Fournit un accès API pour l’intégration – peut être connecté à tout système/processus métier capable d’appeler l’API • - Aucun service d’intégration inclus (peut être commandé séparément)",
+              "brand": { 
+                  "@type": "Brand", 
+                  "@id": "https://theintelligententerprisegroup.com/#org", 
+                  "name": "The Intelligent Enterprise Group" 
+              },
               "offers": { 
                   "@type": "Offer",
                   "price": "699",
                   "priceCurrency": "EUR",
                   "availability": "https://schema.org/InStock",
-                  "url": "https://theintelligententerprisegroup.com/fr/pricing.html" }
+                  "url": "https://theintelligententerprisegroup.com/fr/pricing.html",
+                  "priceValidUntil": "2026-11-12",
+                  "hasMerchantReturnPolicy": {
+                      "@type": "MerchantReturnPolicy",
+                      "returnPolicyCategory": "https://schema.org/NoReturn"
+                  },
+                  "shippingDetails": {
+                      "@type": "OfferShippingDetails",
+                      "shippingDestination": { "@type": "DefinedRegion", "name": "Worldwide" },
+                      "deliveryTime": {
+                          "@type": "ShippingDeliveryTime",
+                          "handlingTime": { "@type": "QuantitativeValue", "value": "0", "unitCode": "DAY" },
+                          "transitTime": { "@type": "QuantitativeValue", "value": "0", "unitCode": "DAY" }
+                      }
+                  } }
             },{
               "@type": "Product",
               "name": "Grand Compte",
+              "image": "https://theintelligententerprisegroup.com/images/product-default.jpg",
               "description": "- Toute combinaison de plans Bureau et Serveur • - Services d’intégration (ERP, CRM, processus métier) • - Support & onboarding dédiés • - Sécurité, conformité, SLA • - Développement d’experts IA sur mesure proposé comme service professionnel (payant) • - Adapté aux grandes organisations",
-              "brand": { "@id": "https://theintelligententerprisegroup.com/#org" },
+              "brand": { 
+                  "@type": "Brand", 
+                  "@id": "https://theintelligententerprisegroup.com/#org", 
+                  "name": "The Intelligent Enterprise Group" 
+              },
               "offers": { 
                   "@type": "Offer",
+                  "price": "0",
+                  "priceCurrency": "EUR",
                   "availability": "https://schema.org/InStock",
-                  "url": "https://theintelligententerprisegroup.com/fr/pricing.html" }
+                  "url": "https://theintelligententerprisegroup.com/fr/pricing.html",
+                  "priceValidUntil": "2026-11-12",
+                  "hasMerchantReturnPolicy": {
+                      "@type": "MerchantReturnPolicy",
+                      "returnPolicyCategory": "https://schema.org/NoReturn"
+                  },
+                  "shippingDetails": {
+                      "@type": "OfferShippingDetails",
+                      "shippingDestination": { "@type": "DefinedRegion", "name": "Worldwide" },
+                      "deliveryTime": {
+                          "@type": "ShippingDeliveryTime",
+                          "handlingTime": { "@type": "QuantitativeValue", "value": "0", "unitCode": "DAY" },
+                          "transitTime": { "@type": "QuantitativeValue", "value": "0", "unitCode": "DAY" }
+                      }
+                  } }
             }] }</script>
 
 
@@ -267,6 +383,7 @@
                             <p><strong>29 &#x20AC; / an</strong> <span class="jobs-note">excl. VAT</span></p>
                             <p style="text-align:left">
 - 1 poste (licence bureau unique)<br />
+- Valable pendant 1 an<br />
 - Application de bureau complète<br />
 - Tous les experts IA de base<br />
 - Mémoire adaptative<br />
@@ -284,6 +401,7 @@
                             <p><strong>199 &#x20AC; / an</strong> <span class="jobs-note">excl. VAT</span></p>
                             <p style="text-align:left">
 - 1 poste (licence bureau unique)<br />
+- Valable pendant 1 an<br />
 - Application de bureau complète<br />
 - Tous les experts IA de base<br />
 - Mémoire adaptative<br />
@@ -299,6 +417,7 @@
                             <p><strong>499 &#x20AC; / an</strong> <span class="jobs-note">excl. VAT</span></p>
                             <p style="text-align:left">
 - 3 postes inclus (licences bureau distinctes)<br />
+- Valable pendant 1 an<br />
 - Même fonctionnalités que Professionnel<br />
 - Remise de volume pour les équipes<br />
 - Postes supplémentaires disponibles à tarif réduit<br />
@@ -312,6 +431,7 @@
                             <p><strong>699 &#x20AC; / an</strong> <span class="jobs-note">excl. VAT</span></p>
                             <p style="text-align:left">
 - Serveur API. Inclut 3 licences utilisateur (jusqu’à 3 utilisateurs peuvent accéder à la même installation serveur).<br />
+- Valable pendant 1 an<br />
 - Application serveur installable – déployez sur vos propres serveurs ou dans votre cloud privé<br />
 - Fournit un accès API pour l’intégration – peut être connecté à tout système/processus métier capable d’appeler l’API<br />
 - Aucun service d’intégration inclus (peut être commandé séparément)<br />
@@ -357,7 +477,7 @@
                             <li>
                                 <strong>Effectuer le paiement</strong><br />
 
-                                    <p>Payez les frais uniques de 29 € (hors TVA) en toute sécurité via PayPal :</p>
+                                    <p>Payez les frais de licence de 29 € (hors TVA) pour une licence d’un an en ligne en toute sécurité (carte de crédit acceptée):</p>
 
                                     <div style="margin-left: 5em;">
                                         <label>

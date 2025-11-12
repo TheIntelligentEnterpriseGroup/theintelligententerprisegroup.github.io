@@ -93,67 +93,183 @@
 { "@context": "https://schema.org", "@graph": [{
               "@type": "Product",
               "name": "Licencia de Prueba",
+              "image": "https://theintelligententerprisegroup.com/images/product-default.jpg",
               "description": "- 1 puesto (licencia de escritorio individual) • - Licencia única de 6 meses • - Aplicación de escritorio completa (>35GB de descarga) • - Todos los expertos principales de IA • - Memoria adaptativa • - Aprendizaje multi‑formato • - Preparado para uso sin conexión (edge‑ready) • - Las Licencias de Prueba son estrictamente no comerciales y solo pueden usarse para evaluación, pruebas, formación o investigación. • Nota: La prueba no puede renovarse. Después de 6 meses, actualiza a un plan completo.",
-              "brand": { "@id": "https://theintelligententerprisegroup.com/#org" },
+              "brand": { 
+                  "@type": "Brand", 
+                  "@id": "https://theintelligententerprisegroup.com/#org", 
+                  "name": "The Intelligent Enterprise Group" 
+              },
               "offers": { 
                   "@type": "Offer",
                   "price": "39",
                   "priceCurrency": "EUR",
                   "availability": "https://schema.org/InStock",
-                  "url": "https://theintelligententerprisegroup.com/es/pricing.html" }
+                  "url": "https://theintelligententerprisegroup.com/es/pricing.html",
+                  "priceValidUntil": "2026-11-12",
+                  "hasMerchantReturnPolicy": {
+                      "@type": "MerchantReturnPolicy",
+                      "returnPolicyCategory": "https://schema.org/NoReturn"
+                  },
+                  "shippingDetails": {
+                      "@type": "OfferShippingDetails",
+                      "shippingDestination": { "@type": "DefinedRegion", "name": "Worldwide" },
+                      "deliveryTime": {
+                          "@type": "ShippingDeliveryTime",
+                          "handlingTime": { "@type": "QuantitativeValue", "value": "0", "unitCode": "DAY" },
+                          "transitTime": { "@type": "QuantitativeValue", "value": "0", "unitCode": "DAY" }
+                      }
+                  } }
             },{
               "@type": "Product",
               "name": "Estudiantes y Educadores",
-              "description": "- 1 puesto (licencia de escritorio individual) • - Aplicación de escritorio completa • - Todos los expertos principales de IA • - Memoria adaptativa • - Aprendizaje multi‑formato • - Preparado para uso sin conexión (edge‑ready) • - Licencia con descuento para estudiantes y educadores verificados. • Invertimos en educación, por eso los estudiantes obtienen un precio simbólico.",
-              "brand": { "@id": "https://theintelligententerprisegroup.com/#org" },
+              "image": "https://theintelligententerprisegroup.com/images/product-default.jpg",
+              "description": "- 1 puesto (licencia de escritorio individual) • - Válido por 1 año • - Aplicación de escritorio completa • - Todos los expertos principales de IA • - Memoria adaptativa • - Aprendizaje multi‑formato • - Preparado para uso sin conexión (edge‑ready) • - Licencia con descuento para estudiantes y educadores verificados. • Invertimos en educación, por eso los estudiantes obtienen un precio simbólico.",
+              "brand": { 
+                  "@type": "Brand", 
+                  "@id": "https://theintelligententerprisegroup.com/#org", 
+                  "name": "The Intelligent Enterprise Group" 
+              },
               "offers": { 
                   "@type": "Offer",
                   "price": "29",
                   "priceCurrency": "EUR",
                   "availability": "https://schema.org/InStock",
-                  "url": "https://theintelligententerprisegroup.com/es/pricing.html" }
+                  "url": "https://theintelligententerprisegroup.com/es/pricing.html",
+                  "priceValidUntil": "2026-11-12",
+                  "hasMerchantReturnPolicy": {
+                      "@type": "MerchantReturnPolicy",
+                      "returnPolicyCategory": "https://schema.org/NoReturn"
+                  },
+                  "shippingDetails": {
+                      "@type": "OfferShippingDetails",
+                      "shippingDestination": { "@type": "DefinedRegion", "name": "Worldwide" },
+                      "deliveryTime": {
+                          "@type": "ShippingDeliveryTime",
+                          "handlingTime": { "@type": "QuantitativeValue", "value": "0", "unitCode": "DAY" },
+                          "transitTime": { "@type": "QuantitativeValue", "value": "0", "unitCode": "DAY" }
+                      }
+                  } }
             },{
               "@type": "Product",
               "name": "Profesional",
-              "description": "- 1 puesto (licencia de escritorio individual) • - Aplicación de escritorio completa • - Todos los expertos principales de IA • - Memoria adaptativa • - Preparado para uso sin conexión (edge‑ready) • - Actualizaciones continuas y soporte prioritario",
-              "brand": { "@id": "https://theintelligententerprisegroup.com/#org" },
+              "image": "https://theintelligententerprisegroup.com/images/product-default.jpg",
+              "description": "- 1 puesto (licencia de escritorio individual) • - Válido por 1 año • - Aplicación de escritorio completa • - Todos los expertos principales de IA • - Memoria adaptativa • - Preparado para uso sin conexión (edge‑ready) • - Actualizaciones continuas y soporte prioritario",
+              "brand": { 
+                  "@type": "Brand", 
+                  "@id": "https://theintelligententerprisegroup.com/#org", 
+                  "name": "The Intelligent Enterprise Group" 
+              },
               "offers": { 
                   "@type": "Offer",
                   "price": "199",
                   "priceCurrency": "EUR",
                   "availability": "https://schema.org/InStock",
-                  "url": "https://theintelligententerprisegroup.com/es/pricing.html" }
+                  "url": "https://theintelligententerprisegroup.com/es/pricing.html",
+                  "priceValidUntil": "2026-11-12",
+                  "hasMerchantReturnPolicy": {
+                      "@type": "MerchantReturnPolicy",
+                      "returnPolicyCategory": "https://schema.org/NoReturn"
+                  },
+                  "shippingDetails": {
+                      "@type": "OfferShippingDetails",
+                      "shippingDestination": { "@type": "DefinedRegion", "name": "Worldwide" },
+                      "deliveryTime": {
+                          "@type": "ShippingDeliveryTime",
+                          "handlingTime": { "@type": "QuantitativeValue", "value": "0", "unitCode": "DAY" },
+                          "transitTime": { "@type": "QuantitativeValue", "value": "0", "unitCode": "DAY" }
+                      }
+                  } }
             },{
               "@type": "Product",
               "name": "Business‑Desktop",
-              "description": "- Incluye 3 puestos (licencias de escritorio separadas) • - Mismas características que Profesional • - Descuento por volumen para equipos • - Puestos adicionales disponibles a tarifa reducida",
-              "brand": { "@id": "https://theintelligententerprisegroup.com/#org" },
+              "image": "https://theintelligententerprisegroup.com/images/product-default.jpg",
+              "description": "- Incluye 3 puestos (licencias de escritorio separadas) • - Válido por 1 año • - Mismas características que Profesional • - Descuento por volumen para equipos • - Puestos adicionales disponibles a tarifa reducida",
+              "brand": { 
+                  "@type": "Brand", 
+                  "@id": "https://theintelligententerprisegroup.com/#org", 
+                  "name": "The Intelligent Enterprise Group" 
+              },
               "offers": { 
                   "@type": "Offer",
                   "price": "499",
                   "priceCurrency": "EUR",
                   "availability": "https://schema.org/InStock",
-                  "url": "https://theintelligententerprisegroup.com/es/pricing.html" }
+                  "url": "https://theintelligententerprisegroup.com/es/pricing.html",
+                  "priceValidUntil": "2026-11-12",
+                  "hasMerchantReturnPolicy": {
+                      "@type": "MerchantReturnPolicy",
+                      "returnPolicyCategory": "https://schema.org/NoReturn"
+                  },
+                  "shippingDetails": {
+                      "@type": "OfferShippingDetails",
+                      "shippingDestination": { "@type": "DefinedRegion", "name": "Worldwide" },
+                      "deliveryTime": {
+                          "@type": "ShippingDeliveryTime",
+                          "handlingTime": { "@type": "QuantitativeValue", "value": "0", "unitCode": "DAY" },
+                          "transitTime": { "@type": "QuantitativeValue", "value": "0", "unitCode": "DAY" }
+                      }
+                  } }
             },{
               "@type": "Product",
               "name": "Business‑Server",
-              "description": "- Servidor API. Incluye 3 licencias de usuario (hasta 3 usuarios pueden acceder a la misma instalación del servidor). • - Aplicación de servidor instalable – despliega en tus propios servidores o en tu nube privada • - Proporciona acceso API para integración – puede conectarse a cualquier sistema/proceso empresarial que pueda llamar a la API • - No se incluyen servicios de integración (pueden solicitarse por separado)",
-              "brand": { "@id": "https://theintelligententerprisegroup.com/#org" },
+              "image": "https://theintelligententerprisegroup.com/images/product-default.jpg",
+              "description": "- Servidor API. Incluye 3 licencias de usuario (hasta 3 usuarios pueden acceder a la misma instalación del servidor). • - Válido por 1 año • - Aplicación de servidor instalable – despliega en tus propios servidores o en tu nube privada • - Proporciona acceso API para integración – puede conectarse a cualquier sistema/proceso empresarial que pueda llamar a la API • - No se incluyen servicios de integración (pueden solicitarse por separado)",
+              "brand": { 
+                  "@type": "Brand", 
+                  "@id": "https://theintelligententerprisegroup.com/#org", 
+                  "name": "The Intelligent Enterprise Group" 
+              },
               "offers": { 
                   "@type": "Offer",
                   "price": "699",
                   "priceCurrency": "EUR",
                   "availability": "https://schema.org/InStock",
-                  "url": "https://theintelligententerprisegroup.com/es/pricing.html" }
+                  "url": "https://theintelligententerprisegroup.com/es/pricing.html",
+                  "priceValidUntil": "2026-11-12",
+                  "hasMerchantReturnPolicy": {
+                      "@type": "MerchantReturnPolicy",
+                      "returnPolicyCategory": "https://schema.org/NoReturn"
+                  },
+                  "shippingDetails": {
+                      "@type": "OfferShippingDetails",
+                      "shippingDestination": { "@type": "DefinedRegion", "name": "Worldwide" },
+                      "deliveryTime": {
+                          "@type": "ShippingDeliveryTime",
+                          "handlingTime": { "@type": "QuantitativeValue", "value": "0", "unitCode": "DAY" },
+                          "transitTime": { "@type": "QuantitativeValue", "value": "0", "unitCode": "DAY" }
+                      }
+                  } }
             },{
               "@type": "Product",
               "name": "Enterprise",
+              "image": "https://theintelligententerprisegroup.com/images/product-default.jpg",
               "description": "- Cualquier combinación de planes Desktop y Server • - Servicios de integración (ERP, CRM, procesos empresariales) • - Soporte y onboarding dedicados • - Seguridad, cumplimiento, SLAs • - Desarrollo de expertos en IA a medida ofrecido como servicio profesional (de pago) • - Adaptado a grandes organizaciones",
-              "brand": { "@id": "https://theintelligententerprisegroup.com/#org" },
+              "brand": { 
+                  "@type": "Brand", 
+                  "@id": "https://theintelligententerprisegroup.com/#org", 
+                  "name": "The Intelligent Enterprise Group" 
+              },
               "offers": { 
                   "@type": "Offer",
+                  "price": "0",
+                  "priceCurrency": "EUR",
                   "availability": "https://schema.org/InStock",
-                  "url": "https://theintelligententerprisegroup.com/es/pricing.html" }
+                  "url": "https://theintelligententerprisegroup.com/es/pricing.html",
+                  "priceValidUntil": "2026-11-12",
+                  "hasMerchantReturnPolicy": {
+                      "@type": "MerchantReturnPolicy",
+                      "returnPolicyCategory": "https://schema.org/NoReturn"
+                  },
+                  "shippingDetails": {
+                      "@type": "OfferShippingDetails",
+                      "shippingDestination": { "@type": "DefinedRegion", "name": "Worldwide" },
+                      "deliveryTime": {
+                          "@type": "ShippingDeliveryTime",
+                          "handlingTime": { "@type": "QuantitativeValue", "value": "0", "unitCode": "DAY" },
+                          "transitTime": { "@type": "QuantitativeValue", "value": "0", "unitCode": "DAY" }
+                      }
+                  } }
             }] }</script>
 
 
@@ -267,6 +383,7 @@
                             <p><strong>&#x20AC;29 / a&#xF1;o</strong> <span class="jobs-note">excl. VAT</span></p>
                             <p style="text-align:left">
 - 1 puesto (licencia de escritorio individual)<br />
+- Válido por 1 año<br />
 - Aplicación de escritorio completa<br />
 - Todos los expertos principales de IA<br />
 - Memoria adaptativa<br />
@@ -284,6 +401,7 @@
                             <p><strong>&#x20AC;199 / a&#xF1;o</strong> <span class="jobs-note">excl. VAT</span></p>
                             <p style="text-align:left">
 - 1 puesto (licencia de escritorio individual)<br />
+- Válido por 1 año<br />
 - Aplicación de escritorio completa<br />
 - Todos los expertos principales de IA<br />
 - Memoria adaptativa<br />
@@ -299,6 +417,7 @@
                             <p><strong>&#x20AC;499 / a&#xF1;o</strong> <span class="jobs-note">excl. VAT</span></p>
                             <p style="text-align:left">
 - Incluye 3 puestos (licencias de escritorio separadas)<br />
+- Válido por 1 año<br />
 - Mismas características que Profesional<br />
 - Descuento por volumen para equipos<br />
 - Puestos adicionales disponibles a tarifa reducida<br />
@@ -312,6 +431,7 @@
                             <p><strong>&#x20AC;699 / a&#xF1;o</strong> <span class="jobs-note">excl. VAT</span></p>
                             <p style="text-align:left">
 - Servidor API. Incluye 3 licencias de usuario (hasta 3 usuarios pueden acceder a la misma instalación del servidor).<br />
+- Válido por 1 año<br />
 - Aplicación de servidor instalable – despliega en tus propios servidores o en tu nube privada<br />
 - Proporciona acceso API para integración – puede conectarse a cualquier sistema/proceso empresarial que pueda llamar a la API<br />
 - No se incluyen servicios de integración (pueden solicitarse por separado)<br />
@@ -357,7 +477,7 @@
                             <li>
                                 <strong>Realizar el Pago</strong><br />
 
-                                    <p>Paga la tarifa única de €29 (sin IVA) de forma segura a través de PayPal:</p>
+                                    <p>Pague la tarifa de licencia de 29 € (sin IVA) por una licencia de 1 año de forma segura en línea (se acepta tarjeta de crédito):</p>
 
                                     <div style="margin-left: 5em;">
                                         <label>
