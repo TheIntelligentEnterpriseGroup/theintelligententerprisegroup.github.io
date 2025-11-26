@@ -173,6 +173,25 @@
 </section>
 
 <section class="partners">
+    <div class="container swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <img src="/images/DellPartnerLogo.png" alt="Dell Technologies Partner" class="partner-logo animate-fadeIn" /><br />
+            </div>
+            <div class="swiper-slide">
+                <img src="/images/AwsPartnerLogo.png" alt="AWS Partner" class="partner-logo animate-fadeIn" /><br />
+            </div>
+            <div class="swiper-slide">
+                <img src="/images/SAPPartnerLogo.png" alt="SAP Partner" class="partner-logo animate-fadeIn" /><br />
+            </div>
+        </div>
+        <div class="swiper-pagination"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+    </div>
+</section>
+
+<section class="partners">
     <div class="container partners-container">
         <h2>&#x79C1;&#x305F;&#x3061;&#x306E;&#x30D1;&#x30FC;&#x30C8;&#x30CA;&#x30FC;&#x30B7;&#x30C3;&#x30D7;&#x30D3;&#x30B8;&#x30E7;&#x30F3;</h2>
         <p>The Intelligent Enterprise Group&#x3067;&#x306F;&#x3001;&#x4FE1;&#x983C;&#x3067;&#x304D;&#x308B;&#x30A2;&#x30E9;&#x30A4;&#x30A2;&#x30F3;&#x30B9;&#x306E;&#x30A8;&#x30B3;&#x30B7;&#x30B9;&#x30C6;&#x30E0;&#x3092;&#x69CB;&#x7BC9;&#x3057;&#x3066;&#x3044;&#x307E;&#x3059;&#x3002;&#x6B63;&#x5F0F;&#x306A;&#x30D1;&#x30FC;&#x30C8;&#x30CA;&#x30FC;&#x30CD;&#x30C3;&#x30C8;&#x30EF;&#x30FC;&#x30AF;&#x306F;&#x307E;&#x3060;&#x767A;&#x5C55;&#x9014;&#x4E0A;&#x3067;&#x3059;&#x304C;&#x3001;&#x79C1;&#x305F;&#x3061;&#x306E;&#x30D3;&#x30B8;&#x30E7;&#x30F3;&#x306F;&#x660E;&#x78BA;&#x3067;&#x3059;&#x3002;&#x5354;&#x529B;&#x304C;&#x30A4;&#x30CE;&#x30D9;&#x30FC;&#x30B7;&#x30E7;&#x30F3;&#x3092;&#x751F;&#x307F;&#x51FA;&#x3057;&#x3001;&#x5171;&#x306B;AI&#x306E;&#x672A;&#x6765;&#x3092;&#x52A0;&#x901F;&#x3067;&#x304D;&#x308B;&#x306E;&#x3067;&#x3059;&#x3002;</p>
@@ -281,6 +300,21 @@
             gsap.from(".cta .btn", { duration: 1, opacity: 0, scale: 0.8, ease: "back.out(1.7)", delay: 1.2 });
         };
     </script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const swiper = new Swiper('.swiper-container', {
+                slidesPerView: 1,
+                spaceBetween: 0,
+                loop: true,
+                navigation: { nextEl: '.swiper-button-next', prevEl: '.swiper-button-prev' },
+                pagination: { el: '.swiper-pagination', clickable: true },
+                autoplay: { delay: 3000, disableOnInteraction: false },
+                breakpoints: { 320: { slidesPerView: 1, spaceBetween: 0 }, 768: { slidesPerView: 1, spaceBetween: 0 } }
+            });
+        });
+    </script>
+
 
 </body>
 </html>

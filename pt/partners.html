@@ -173,6 +173,25 @@
 </section>
 
 <section class="partners">
+    <div class="container swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <img src="/images/DellPartnerLogo.png" alt="Dell Technologies Partner" class="partner-logo animate-fadeIn" /><br />
+            </div>
+            <div class="swiper-slide">
+                <img src="/images/AwsPartnerLogo.png" alt="AWS Partner" class="partner-logo animate-fadeIn" /><br />
+            </div>
+            <div class="swiper-slide">
+                <img src="/images/SAPPartnerLogo.png" alt="SAP Partner" class="partner-logo animate-fadeIn" /><br />
+            </div>
+        </div>
+        <div class="swiper-pagination"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+    </div>
+</section>
+
+<section class="partners">
     <div class="container partners-container">
         <h2>Nossa Vis&#xE3;o de Parceria</h2>
         <p>No The Intelligent Enterprise Group, estamos construindo um ecossistema de alian&#xE7;as de confian&#xE7;a. Embora nossa rede formal de parceiros ainda esteja em desenvolvimento, nossa vis&#xE3;o &#xE9; clara: a colabora&#xE7;&#xE3;o impulsiona a inova&#xE7;&#xE3;o e, juntos, podemos acelerar o futuro da IA.</p>
@@ -281,6 +300,21 @@
             gsap.from(".cta .btn", { duration: 1, opacity: 0, scale: 0.8, ease: "back.out(1.7)", delay: 1.2 });
         };
     </script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const swiper = new Swiper('.swiper-container', {
+                slidesPerView: 1,
+                spaceBetween: 0,
+                loop: true,
+                navigation: { nextEl: '.swiper-button-next', prevEl: '.swiper-button-prev' },
+                pagination: { el: '.swiper-pagination', clickable: true },
+                autoplay: { delay: 3000, disableOnInteraction: false },
+                breakpoints: { 320: { slidesPerView: 1, spaceBetween: 0 }, 768: { slidesPerView: 1, spaceBetween: 0 } }
+            });
+        });
+    </script>
+
 
 </body>
 </html>

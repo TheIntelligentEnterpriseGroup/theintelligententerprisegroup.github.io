@@ -173,6 +173,25 @@
 </section>
 
 <section class="partners">
+    <div class="container swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <img src="/images/DellPartnerLogo.png" alt="Dell Technologies Partner" class="partner-logo animate-fadeIn" /><br />
+            </div>
+            <div class="swiper-slide">
+                <img src="/images/AwsPartnerLogo.png" alt="AWS Partner" class="partner-logo animate-fadeIn" /><br />
+            </div>
+            <div class="swiper-slide">
+                <img src="/images/SAPPartnerLogo.png" alt="SAP Partner" class="partner-logo animate-fadeIn" /><br />
+            </div>
+        </div>
+        <div class="swiper-pagination"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+    </div>
+</section>
+
+<section class="partners">
     <div class="container partners-container">
         <h2>&#x6211;&#x4EEC;&#x7684;&#x5408;&#x4F5C;&#x613F;&#x666F;</h2>
         <p>&#x5728;&#x667A;&#x80FD;&#x4F01;&#x4E1A;&#x96C6;&#x56E2;&#xFF0C;&#x6211;&#x4EEC;&#x6B63;&#x5728;&#x6784;&#x5EFA;&#x4E00;&#x4E2A;&#x503C;&#x5F97;&#x4FE1;&#x8D56;&#x7684;&#x8054;&#x76DF;&#x751F;&#x6001;&#x7CFB;&#x7EDF;&#x3002;&#x867D;&#x7136;&#x6211;&#x4EEC;&#x7684;&#x6B63;&#x5F0F;&#x5408;&#x4F5C;&#x4F19;&#x4F34;&#x7F51;&#x7EDC;&#x4ECD;&#x5728;&#x53D1;&#x5C55;&#x4E2D;&#xFF0C;&#x4F46;&#x6211;&#x4EEC;&#x7684;&#x613F;&#x666F;&#x5F88;&#x660E;&#x786E;&#xFF1A;&#x534F;&#x4F5C;&#x63A8;&#x52A8;&#x521B;&#x65B0;&#xFF0C;&#x800C;&#x6211;&#x4EEC;&#x643A;&#x624B;&#x80FD;&#x591F;&#x52A0;&#x901F; AI &#x7684;&#x672A;&#x6765;&#x3002;</p>
@@ -281,6 +300,21 @@
             gsap.from(".cta .btn", { duration: 1, opacity: 0, scale: 0.8, ease: "back.out(1.7)", delay: 1.2 });
         };
     </script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const swiper = new Swiper('.swiper-container', {
+                slidesPerView: 1,
+                spaceBetween: 0,
+                loop: true,
+                navigation: { nextEl: '.swiper-button-next', prevEl: '.swiper-button-prev' },
+                pagination: { el: '.swiper-pagination', clickable: true },
+                autoplay: { delay: 3000, disableOnInteraction: false },
+                breakpoints: { 320: { slidesPerView: 1, spaceBetween: 0 }, 768: { slidesPerView: 1, spaceBetween: 0 } }
+            });
+        });
+    </script>
+
 
 </body>
 </html>
