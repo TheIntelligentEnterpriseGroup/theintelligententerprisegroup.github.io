@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta name="robots" content="index, follow" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <meta name="description" content='&#x627;&#x643;&#x62A;&#x634;&#x641; &#x643;&#x64A;&#x641; &#x62A;&#x636;&#x645;&#x646; &#x645;&#x62C;&#x645;&#x648;&#x639;&#x629; &#x627;&#x644;&#x645;&#x624;&#x633;&#x633;&#x629; &#x627;&#x644;&#x630;&#x643;&#x64A;&#x629; &#x627;&#x644;&#x627;&#x645;&#x62A;&#x62B;&#x627;&#x644; &#x644;&#x644;&#x623;&#x645;&#x646; &#x627;&#x644;&#x633;&#x64A;&#x628;&#x631;&#x627;&#x646;&#x64A; &#x628;&#x627;&#x633;&#x62A;&#x62E;&#x62F;&#x627;&#x645; CyberFundamentals &#x648; NIST CSF &#x648; CIS IG1 &#x648; CMMC &#x627;&#x644;&#x645;&#x633;&#x62A;&#x648;&#x649; 1.' />
+    <title>&#x627;&#x644;&#x627;&#x645;&#x62A;&#x62B;&#x627;&#x644; &#x627;&#x644;&#x623;&#x645;&#x646;&#x64A; | &#x641;&#x631;&#x64A;&#x642; &#x627;&#x644;&#x630;&#x643;&#x627;&#x621; &#x627;&#x644;&#x627;&#x635;&#x637;&#x646;&#x627;&#x639;&#x64A; Desktop &amp; Server | &#x645;&#x62C;&#x645;&#x648;&#x639;&#x629; &#x627;&#x644;&#x645;&#x624;&#x633;&#x633;&#x629; &#x627;&#x644;&#x630;&#x643;&#x64A;&#x629;</title>
+
+    <style>
+        html { background-color: #3B3A47; }
+    </style>
+    <script>
+        (function () {
+            const key = 'preferredTheme';
+            const stored = localStorage.getItem(key);
+            const systemDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+            const theme = stored || (systemDark ? 'dark' : 'light');
+            if (theme === 'dark') {
+                document.documentElement.classList.add('dark-mode');
+            }
+        })();
+    </script>
+
+
+        <link rel="alternate" hreflang="en" href="https://theintelligententerprisegroup.com/security.html" />
+        <link rel="alternate" hreflang="fr" href="https://theintelligententerprisegroup.com/fr/security.html" />
+        <link rel="alternate" hreflang="de" href="https://theintelligententerprisegroup.com/de/security.html" />
+        <link rel="alternate" hreflang="es" href="https://theintelligententerprisegroup.com/es/security.html" />
+        <link rel="alternate" hreflang="pt" href="https://theintelligententerprisegroup.com/pt/security.html" />
+        <link rel="alternate" hreflang="zh" href="https://theintelligententerprisegroup.com/zh/security.html" />
+        <link rel="alternate" hreflang="ja" href="https://theintelligententerprisegroup.com/ja/security.html" />
+        <link rel="alternate" hreflang="ar" href="https://theintelligententerprisegroup.com/ar/security.html" />
+
+
+    <link rel="alternate" hreflang="x-default" href="https://theintelligententerprisegroup.com/security.html" />
+
+    <link rel="canonical" href="https://theintelligententerprisegroup.com/ar/security.html" />
+
+
+    <link rel="stylesheet" href="/css/styles.css" />
+    <link rel="stylesheet" href="/css/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="/css/all.min.css" />
+
+    <script src="/js/lang-switcher.js" defer></script>
+
+    <script>
+        (function () {
+            if (localStorage.getItem('currentLang')) return;
+            const supported = [
+                     { code: "en" } ,
+                     { code: "fr" } ,
+                     { code: "de" } ,
+                     { code: "es" } ,
+                     { code: "pt" } ,
+                     { code: "zh" } ,
+                     { code: "ja" } ,
+                     { code: "ar" } 
+            ];
+            const defaultLang = "ar";
+            const navLangs = navigator.languages || [navigator.language || navigator.userLanguage];
+            let detected = null;
+            for (const nav of navLangs) {
+                const code = nav.toLowerCase().split('-')[0];
+                if (supported.find(s => s.code.toLowerCase() === code)) {
+                    detected = code;
+                    break;
+                }
+            }
+            const lang = detected || defaultLang;
+            localStorage.setItem('currentLang', lang);
+            document.documentElement.lang = lang;
+        })();
+    </script>
+
+    <!-- Organization structured data (JSON-LD) -->
+    <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "Organization",
+          "name": "The Intelligent Enterprise Group",
+          "url": "https://theintelligententerprisegroup.com/",
+          "logo": "https://theintelligententerprisegroup.com/images/tieg-logo.png",
+          "sameAs": []
+        }
+    </script>
+    <link rel="icon" href="/favicon.ico" />
+    <link rel="apple-touch-icon" href="/images/apple-touch-icon.png" />
+
+    
+
+</head>
+<body>
+    <header x-data="{ open: false }">
+        <div class="container header-top">
+            <div class="logo"></div>
+            <div class="theme-switch-wrapper">
+                <label class="theme-switch">
+                    <input type="checkbox" id="theme-checkbox" aria-label="Select theme"/>
+                    <span class="slider round"></span>
+                </label>
+                <span id="theme-label">الوضع الفاتح</span>
+                <span class="lang-switcher">
+                    <label for="lang-select" class="lang-label">🌐 اللغة:</label>
+
+                    <!-- Language switcher -->
+                    <select id="lang-select" class="lang-select">
+                        <option value="en" data-path="/">English</option>
+                        <option value="fr" data-path="/fr/">Fran&#xE7;ais</option>
+                        <option value="de" data-path="/de/">Deutsch</option>
+                        <option value="es" data-path="/es/">Espa&#xF1;ol</option>
+                        <option value="pt" data-path="/pt/">Portugu&#xEA;s</option>
+                        <option value="zh" data-path="/zh/">&#x4E2D;&#x6587;</option>
+                        <option value="ja" data-path="/ja/">&#x65E5;&#x672C;&#x8A9E;</option>
+                        <option value="ar" data-path="/ar/">&#x627;&#x644;&#x639;&#x631;&#x628;&#x64A;&#x629;</option>
+                    </select>
+
+                </span>
+            </div>
+        </div>
+        
+        <div class="container header-nav">
+            <button @click="open = !open" class="menu-toggle" aria-label="Toggle Menu">
+                <svg width="24" height="24" viewBox="0 0 24 24">
+                    <path fill="var(--nav-link-color)" d="M3 6h18v2H3V6zm0 5h18v2H3v-2zm0 5h18v2H3v-2z" />
+                </svg>
+            </button>
+
+            <nav class="main-nav" :class="{ 'open': open }">
+                <ul>
+                    <li><a href="index.html" class="">&#x627;&#x644;&#x631;&#x626;&#x64A;&#x633;&#x64A;&#x629;</a></li>
+                    <li><a href="about.html" class="">&#x645;&#x646; &#x646;&#x62D;&#x646;</a></li>
+                    <li><a href="services.html" class="">&#x627;&#x644;&#x62E;&#x62F;&#x645;&#x627;&#x62A; &#x648;&#x627;&#x644;&#x62D;&#x644;&#x648;&#x644;</a></li>
+                    <li><a href="case-studies.html" class="">&#x62F;&#x631;&#x627;&#x633;&#x627;&#x62A; &#x627;&#x644;&#x62D;&#x627;&#x644;&#x629;</a></li>
+                    <li><a href="resources.html" class="">&#x627;&#x644;&#x645;&#x648;&#x627;&#x631;&#x62F; &#x648;&#x627;&#x644;&#x631;&#x624;&#x649;</a></li>
+                    <li><a href="trial.html" class="">&#x62A;&#x62C;&#x631;&#x628;&#x629;</a></li>
+                    <li><a href="pricing.html" class="">&#x627;&#x644;&#x623;&#x633;&#x639;&#x627;&#x631;</a></li>
+                    <li><a href="partners.html" class="">&#x627;&#x644;&#x634;&#x631;&#x643;&#x627;&#x621; &#x648;&#x627;&#x644;&#x62A;&#x62D;&#x627;&#x644;&#x641;&#x627;&#x62A;</a></li>                    
+                    <li><a href="contact.html" class="">&#x627;&#x644;&#x627;&#x62A;&#x635;&#x627;&#x644; &#x648;&#x627;&#x644;&#x627;&#x633;&#x62A;&#x634;&#x627;&#x631;&#x629;</a></li>
+                    <li class="has-submenu"
+                        x-data="{ openSub: false }"
+                        @mouseenter="openSub = true"
+                        @mouseleave="openSub = false">
+                      <button @click="openSub = !openSub"
+                              aria-haspopup="true"
+                              :aria-expanded="openSub.toString()">
+                        &#x645;&#x639;&#x644;&#x648;&#x645;&#x627;&#x62A;
+                        <svg width="12" height="12" viewBox="0 0 12 12" aria-hidden="true">
+                          <path d="M3 4l3 3 3-3" fill="currentColor"/>
+                        </svg>
+                      </button>
+                      <ul class="submenu" x-show="openSub" @click.outside="openSub = false">
+                        <li><a href="careers.html" class="">&#x627;&#x644;&#x648;&#x638;&#x627;&#x626;&#x641;</a></li>
+                        <li><a href="faqs.html" class="">&#x627;&#x644;&#x623;&#x633;&#x626;&#x644;&#x629; &#x627;&#x644;&#x634;&#x627;&#x626;&#x639;&#x629;</a></li>
+                        <li><a href="legal.html" class="">&#x627;&#x644;&#x633;&#x64A;&#x627;&#x633;&#x627;&#x62A; &#x648;&#x627;&#x644;&#x644;&#x648;&#x627;&#x626;&#x62D;</a></li>
+                      </ul>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        
+<!-- HERO -->
+<section class="hero">
+    <div class="container hero-container">
+        <h2>&#x627;&#x644;&#x627;&#x645;&#x62A;&#x62B;&#x627;&#x644; &#x627;&#x644;&#x623;&#x645;&#x646;&#x64A;</h2>
+        <div class="hero-text">
+            <h3>&#x62A;&#x639;&#x632;&#x64A;&#x632; &#x627;&#x644;&#x627;&#x645;&#x62A;&#x62B;&#x627;&#x644; &#x644;&#x644;&#x623;&#x645;&#x646; &#x627;&#x644;&#x633;&#x64A;&#x628;&#x631;&#x627;&#x646;&#x64A; &#x644;&#x62D;&#x645;&#x627;&#x64A;&#x629; &#x627;&#x644;&#x623;&#x646;&#x638;&#x645;&#x629; &#x648;&#x627;&#x644;&#x645;&#x646;&#x62A;&#x62C;&#x627;&#x62A; &#x648;&#x62B;&#x642;&#x629; &#x627;&#x644;&#x639;&#x645;&#x644;&#x627;&#x621; &#x641;&#x64A; &#x628;&#x64A;&#x626;&#x627;&#x62A; &#x627;&#x644;&#x645;&#x624;&#x633;&#x633;&#x627;&#x62A;.</h3>
+        </div>
+    </div>
+</section>
+
+<section class="overview">
+    <div class="container">
+        <h2 id="overview-title">&#x627;&#x644;&#x633;&#x64A;&#x627;&#x633;&#x629; &#x648;&#x627;&#x644;&#x627;&#x645;&#x62A;&#x62B;&#x627;&#x644; &#x627;&#x644;&#x623;&#x645;&#x646;&#x64A;</h2>
+        <p class="lead">تلتزم مجموعة المؤسسة الذكية بـ<b>الامتثال للأمن السيبراني</b> و<b>إدارة المخاطر</b>. يؤكد هذا البيان الخاص بالامتثال الأمني أننا <b>نلتزم بالكامل</b> بالأطر المعترف بها دولياً: <b>CyberFundamentals في بلجيكا</b>، <b>NIST Cybersecurity Framework (CSF)</b>، <b>CIS Critical Security Controls (IG1)</b>، و<b>شهادة نموذج نضج الأمن السيبراني (CMMC) المستوى 1 التابعة لوزارة الدفاع الأمريكية</b>.</p>
+
+        <table class="frameworks" role="table" aria-label="Security frameworks">
+            <tbody>
+                <tr>
+                    <td class="framework-logo-cell">
+                        <img src="/images/Cyberfundamentals.png" alt="CYBERFUNDAMENTALS logo" class="security-logo" loading="lazy" />
+                    </td>
+                    <td>
+                        <div class="framework-desc">يوفر إطار CyberFundamentals في بلجيكا خارطة طريق منظمة لتعزيز المرونة الرقمية. من خلال تحديد ثلاثة مستويات للنضج — أساسي، مهم، وجوهري — يساعد المؤسسات على تعزيز الامتثال للأمن السيبراني، وتقليل مخاطر الهجمات، والامتثال للمعايير العالمية مثل NIST CSF و ISO 27001 و CIS Controls.</div>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="framework-logo-cell">
+                        <img src="/images/nist_csf.png" alt="NIST CSF logo" class="security-logo" loading="lazy" />
+                    </td>
+                    <td>
+                        <div class="framework-desc">يُعد إطار عمل الأمن السيبراني NIST (CSF) نموذجاً معترفاً به عالمياً لإدارة مخاطر الأمن السيبراني. منظم في خمس وظائف أساسية — التعرف، الحماية، الكشف، الاستجابة، والتعافي — يمكّن المؤسسات من تحسين المرونة، ومواءمة الامتثال مع الأهداف التجارية، واعتماد أفضل ممارسات إدارة المخاطر.</div>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="framework-logo-cell">
+                        <img src="/images/cis_ig1.png" alt="CIS IG1 logo" class="security-logo" loading="lazy" />
+                    </td>
+                    <td>
+                        <div class="framework-desc">يمثل CIS Critical Security Controls Implementation Group 1 (IG1) أساسيات النظافة السيبرانية للمؤسسات. مع 56 إجراءً أساسياً، يوفر حماية أساسية ضد التهديدات الشائعة، ويضمن الامتثال العملي للمؤسسات.</div>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="framework-logo-cell">
+                        <img src="/images/cmmc_l1.png" alt="CMMC L1 logo" class="security-logo" loading="lazy" />
+                    </td>
+                    <td>
+                        <div class="framework-desc">تحدد شهادة نموذج نضج الأمن السيبراني (CMMC) المستوى 1 متطلبات الامتثال لمتعاقدي وزارة الدفاع الأمريكية. يركز على حماية معلومات العقود الفيدرالية (FCI)، ويفرض 15 ممارسة أساسية لضمان امتثال المؤسسات للمعايير الدنيا للأمن السيبراني.</div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</section>
+
+
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&#xA9; 2025 The Intelligent Enterprise Group. &#x62C;&#x645;&#x64A;&#x639; &#x627;&#x644;&#x62D;&#x642;&#x648;&#x642; &#x645;&#x62D;&#x641;&#x648;&#x638;&#x629;.</p>
+        </div>
+    </footer>
+
+    <script src="/js/swiper-bundle.min.js"></script>
+    <script src="/js/cdn.min.js" defer></script>
+    <script src="/js/gsap.min.js"></script>
+    <script src="/js/DrawSVGPlugin.min.js"></script>
+
+    <script type="module" src="/js/themeToggle.js"></script>
+    <script type="module">
+        import { toggleTheme, getCurrentTheme } from '/js/themeToggle.js';
+        const checkbox = document.getElementById('theme-checkbox');
+        const themeLabel = document.getElementById('theme-label');
+
+        if (getCurrentTheme() === 'dark') {
+            checkbox.checked = true;
+            themeLabel.textContent = 'الوضع الداكن';
+        } else {
+            themeLabel.textContent = 'الوضع الفاتح';
+        }
+
+        checkbox.addEventListener('change', () => {
+            toggleTheme();
+            themeLabel.textContent = checkbox.checked ? 'الوضع الداكن' : 'الوضع الفاتح';
+        });
+    </script>
+
+    <button id="back-to-top" aria-label="Back to Top">&#x623;&#x639;&#x644;&#x649;</button>
+
+    
+    <script>
+        gsap.registerPlugin(DrawSVGPlugin);
+        window.onload = function () {
+            gsap.from(".hero h2", { duration: 1.2, opacity: 0, y: -50, ease: "power2.out" });
+            gsap.from(".hero h3", { duration: 1.2, opacity: 0, y: 50, ease: "power2.out", delay: 0.2 });
+            gsap.from(".frameworks tbody tr", { duration: 0.8, opacity: 0, y: 20, ease: "power2.out", stagger: 0.15, delay: 0.5 });
+        };
+    </script>
+
+</body>
+</html>

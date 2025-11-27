@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+<head>
+    <meta name="robots" content="index, follow" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <meta name="description" content='Descubra c&#xF3;mo el Grupo Intelligent Enterprise garantiza el cumplimiento de la ciberseguridad con CyberFundamentals, NIST CSF, CIS IG1 y CMMC Nivel 1.' />
+    <title>Cumplimiento de Seguridad | Equipo de IA Desktop &amp; Server | Grupo Intelligent Enterprise</title>
+
+    <style>
+        html { background-color: #3B3A47; }
+    </style>
+    <script>
+        (function () {
+            const key = 'preferredTheme';
+            const stored = localStorage.getItem(key);
+            const systemDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+            const theme = stored || (systemDark ? 'dark' : 'light');
+            if (theme === 'dark') {
+                document.documentElement.classList.add('dark-mode');
+            }
+        })();
+    </script>
+
+
+        <link rel="alternate" hreflang="en" href="https://theintelligententerprisegroup.com/security.html" />
+        <link rel="alternate" hreflang="fr" href="https://theintelligententerprisegroup.com/fr/security.html" />
+        <link rel="alternate" hreflang="de" href="https://theintelligententerprisegroup.com/de/security.html" />
+        <link rel="alternate" hreflang="es" href="https://theintelligententerprisegroup.com/es/security.html" />
+        <link rel="alternate" hreflang="pt" href="https://theintelligententerprisegroup.com/pt/security.html" />
+        <link rel="alternate" hreflang="zh" href="https://theintelligententerprisegroup.com/zh/security.html" />
+        <link rel="alternate" hreflang="ja" href="https://theintelligententerprisegroup.com/ja/security.html" />
+        <link rel="alternate" hreflang="ar" href="https://theintelligententerprisegroup.com/ar/security.html" />
+
+
+    <link rel="alternate" hreflang="x-default" href="https://theintelligententerprisegroup.com/security.html" />
+
+    <link rel="canonical" href="https://theintelligententerprisegroup.com/es/security.html" />
+
+
+    <link rel="stylesheet" href="/css/styles.css" />
+    <link rel="stylesheet" href="/css/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="/css/all.min.css" />
+
+    <script src="/js/lang-switcher.js" defer></script>
+
+    <script>
+        (function () {
+            if (localStorage.getItem('currentLang')) return;
+            const supported = [
+                     { code: "en" } ,
+                     { code: "fr" } ,
+                     { code: "de" } ,
+                     { code: "es" } ,
+                     { code: "pt" } ,
+                     { code: "zh" } ,
+                     { code: "ja" } ,
+                     { code: "ar" } 
+            ];
+            const defaultLang = "es";
+            const navLangs = navigator.languages || [navigator.language || navigator.userLanguage];
+            let detected = null;
+            for (const nav of navLangs) {
+                const code = nav.toLowerCase().split('-')[0];
+                if (supported.find(s => s.code.toLowerCase() === code)) {
+                    detected = code;
+                    break;
+                }
+            }
+            const lang = detected || defaultLang;
+            localStorage.setItem('currentLang', lang);
+            document.documentElement.lang = lang;
+        })();
+    </script>
+
+    <!-- Organization structured data (JSON-LD) -->
+    <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "Organization",
+          "name": "The Intelligent Enterprise Group",
+          "url": "https://theintelligententerprisegroup.com/",
+          "logo": "https://theintelligententerprisegroup.com/images/tieg-logo.png",
+          "sameAs": []
+        }
+    </script>
+    <link rel="icon" href="/favicon.ico" />
+    <link rel="apple-touch-icon" href="/images/apple-touch-icon.png" />
+
+    
+
+</head>
+<body>
+    <header x-data="{ open: false }">
+        <div class="container header-top">
+            <div class="logo"></div>
+            <div class="theme-switch-wrapper">
+                <label class="theme-switch">
+                    <input type="checkbox" id="theme-checkbox" aria-label="Select theme"/>
+                    <span class="slider round"></span>
+                </label>
+                <span id="theme-label">Modo claro</span>
+                <span class="lang-switcher">
+                    <label for="lang-select" class="lang-label">🌐 Idioma:</label>
+
+                    <!-- Language switcher -->
+                    <select id="lang-select" class="lang-select">
+                        <option value="en" data-path="/">English</option>
+                        <option value="fr" data-path="/fr/">Fran&#xE7;ais</option>
+                        <option value="de" data-path="/de/">Deutsch</option>
+                        <option value="es" data-path="/es/">Espa&#xF1;ol</option>
+                        <option value="pt" data-path="/pt/">Portugu&#xEA;s</option>
+                        <option value="zh" data-path="/zh/">&#x4E2D;&#x6587;</option>
+                        <option value="ja" data-path="/ja/">&#x65E5;&#x672C;&#x8A9E;</option>
+                        <option value="ar" data-path="/ar/">&#x627;&#x644;&#x639;&#x631;&#x628;&#x64A;&#x629;</option>
+                    </select>
+
+                </span>
+            </div>
+        </div>
+        
+        <div class="container header-nav">
+            <button @click="open = !open" class="menu-toggle" aria-label="Toggle Menu">
+                <svg width="24" height="24" viewBox="0 0 24 24">
+                    <path fill="var(--nav-link-color)" d="M3 6h18v2H3V6zm0 5h18v2H3v-2zm0 5h18v2H3v-2z" />
+                </svg>
+            </button>
+
+            <nav class="main-nav" :class="{ 'open': open }">
+                <ul>
+                    <li><a href="index.html" class="">Inicio</a></li>
+                    <li><a href="about.html" class="">Sobre nosotros</a></li>
+                    <li><a href="services.html" class="">Servicios y Soluciones</a></li>
+                    <li><a href="case-studies.html" class="">Casos de Estudio</a></li>
+                    <li><a href="resources.html" class="">Recursos e Ideas</a></li>
+                    <li><a href="trial.html" class="">Prueba</a></li>
+                    <li><a href="pricing.html" class="">Precios</a></li>
+                    <li><a href="partners.html" class="">Socios y Alianzas</a></li>                    
+                    <li><a href="contact.html" class="">Contacto y Consulta</a></li>
+                    <li class="has-submenu"
+                        x-data="{ openSub: false }"
+                        @mouseenter="openSub = true"
+                        @mouseleave="openSub = false">
+                      <button @click="openSub = !openSub"
+                              aria-haspopup="true"
+                              :aria-expanded="openSub.toString()">
+                        Informaci&#xF3;n
+                        <svg width="12" height="12" viewBox="0 0 12 12" aria-hidden="true">
+                          <path d="M3 4l3 3 3-3" fill="currentColor"/>
+                        </svg>
+                      </button>
+                      <ul class="submenu" x-show="openSub" @click.outside="openSub = false">
+                        <li><a href="careers.html" class="">Carreras</a></li>
+                        <li><a href="faqs.html" class="">Preguntas Frecuentes</a></li>
+                        <li><a href="legal.html" class="">Aviso Legal y Pol&#xED;ticas</a></li>
+                      </ul>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        
+<!-- HERO -->
+<section class="hero">
+    <div class="container hero-container">
+        <h2>Cumplimiento de Seguridad</h2>
+        <div class="hero-text">
+            <h3>Fortaleciendo el cumplimiento de la ciberseguridad para proteger sistemas, productos y la confianza de los clientes en entornos empresariales.</h3>
+        </div>
+    </div>
+</section>
+
+<section class="overview">
+    <div class="container">
+        <h2 id="overview-title">Pol&#xED;tica y Cumplimiento de Seguridad</h2>
+        <p class="lead">El Grupo Intelligent Enterprise está comprometido con la <b>conformidad en ciberseguridad</b> y la <b>gestión de riesgos</b>. Esta Declaración de Cumplimiento de Seguridad confirma que <b>cumplimos plenamente</b> con marcos reconocidos internacionalmente: <b>CyberFundamentals de Bélgica</b>, el <b>NIST Cybersecurity Framework (CSF)</b>, los <b>CIS Critical Security Controls (IG1)</b> y la <b>Cybersecurity Maturity Model Certification (CMMC) Nivel 1 del Departamento de Defensa de los Estados Unidos</b>.</p>
+
+        <table class="frameworks" role="table" aria-label="Security frameworks">
+            <tbody>
+                <tr>
+                    <td class="framework-logo-cell">
+                        <img src="/images/Cyberfundamentals.png" alt="CYBERFUNDAMENTALS logo" class="security-logo" loading="lazy" />
+                    </td>
+                    <td>
+                        <div class="framework-desc">El marco CyberFundamentals de Bélgica proporciona una hoja de ruta estructurada para la resiliencia digital. Al definir tres niveles de madurez — Básico, Importante y Esencial — ayuda a las organizaciones a fortalecer el cumplimiento de la ciberseguridad, reducir riesgos de ataque y alinearse con estándares globales como NIST CSF, ISO 27001 y CIS Controls.</div>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="framework-logo-cell">
+                        <img src="/images/nist_csf.png" alt="NIST CSF logo" class="security-logo" loading="lazy" />
+                    </td>
+                    <td>
+                        <div class="framework-desc">El NIST Cybersecurity Framework (CSF) es un modelo reconocido mundialmente para gestionar riesgos de ciberseguridad. Organizado en cinco funciones principales — Identificar, Proteger, Detectar, Responder y Recuperar — permite a las organizaciones mejorar la resiliencia, alinear el cumplimiento con los objetivos empresariales y adoptar mejores prácticas de gestión de riesgos.</div>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="framework-logo-cell">
+                        <img src="/images/cis_ig1.png" alt="CIS IG1 logo" class="security-logo" loading="lazy" />
+                    </td>
+                    <td>
+                        <div class="framework-desc">El CIS Critical Security Controls Implementation Group 1 (IG1) representa la higiene cibernética esencial para las empresas. Con 56 salvaguardas fundamentales, ofrece protección básica contra amenazas comunes, garantizando un cumplimiento práctico para las organizaciones.</div>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="framework-logo-cell">
+                        <img src="/images/cmmc_l1.png" alt="CMMC L1 logo" class="security-logo" loading="lazy" />
+                    </td>
+                    <td>
+                        <div class="framework-desc">La Cybersecurity Maturity Model Certification (CMMC) Nivel 1 establece requisitos de cumplimiento para contratistas del Departamento de Defensa de los Estados Unidos. Centrada en proteger la Federal Contract Information (FCI), exige 15 prácticas básicas para asegurar que las organizaciones cumplan con los estándares mínimos de ciberseguridad.</div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</section>
+
+
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&#xA9; 2025 The Intelligent Enterprise Group. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="/js/swiper-bundle.min.js"></script>
+    <script src="/js/cdn.min.js" defer></script>
+    <script src="/js/gsap.min.js"></script>
+    <script src="/js/DrawSVGPlugin.min.js"></script>
+
+    <script type="module" src="/js/themeToggle.js"></script>
+    <script type="module">
+        import { toggleTheme, getCurrentTheme } from '/js/themeToggle.js';
+        const checkbox = document.getElementById('theme-checkbox');
+        const themeLabel = document.getElementById('theme-label');
+
+        if (getCurrentTheme() === 'dark') {
+            checkbox.checked = true;
+            themeLabel.textContent = 'Modo oscuro';
+        } else {
+            themeLabel.textContent = 'Modo claro';
+        }
+
+        checkbox.addEventListener('change', () => {
+            toggleTheme();
+            themeLabel.textContent = checkbox.checked ? 'Modo oscuro' : 'Modo claro';
+        });
+    </script>
+
+    <button id="back-to-top" aria-label="Back to Top">Arriba</button>
+
+    
+    <script>
+        gsap.registerPlugin(DrawSVGPlugin);
+        window.onload = function () {
+            gsap.from(".hero h2", { duration: 1.2, opacity: 0, y: -50, ease: "power2.out" });
+            gsap.from(".hero h3", { duration: 1.2, opacity: 0, y: 50, ease: "power2.out", delay: 0.2 });
+            gsap.from(".frameworks tbody tr", { duration: 0.8, opacity: 0, y: 20, ease: "power2.out", stagger: 0.15, delay: 0.5 });
+        };
+    </script>
+
+</body>
+</html>

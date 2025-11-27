@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="ja" dir="ltr">
+<head>
+    <meta name="robots" content="index, follow" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <meta name="description" content='&#x30A4;&#x30F3;&#x30C6;&#x30EA;&#x30B8;&#x30A7;&#x30F3;&#x30C8;&#x30A8;&#x30F3;&#x30BF;&#x30FC;&#x30D7;&#x30E9;&#x30A4;&#x30BA;&#x30B0;&#x30EB;&#x30FC;&#x30D7;&#x304C; CyberFundamentals&#x3001;NIST CSF&#x3001;CIS IG1&#x3001;CMMC &#x30EC;&#x30D9;&#x30EB;1 &#x30D5;&#x30EC;&#x30FC;&#x30E0;&#x30EF;&#x30FC;&#x30AF;&#x3092;&#x901A;&#x3058;&#x3066;&#x3069;&#x306E;&#x3088;&#x3046;&#x306B;&#x30BB;&#x30AD;&#x30E5;&#x30EA;&#x30C6;&#x30A3;&#x30B3;&#x30F3;&#x30D7;&#x30E9;&#x30A4;&#x30A2;&#x30F3;&#x30B9;&#x3092;&#x78BA;&#x4FDD;&#x3057;&#x3066;&#x3044;&#x308B;&#x304B;&#x3092;&#x3054;&#x89A7;&#x304F;&#x3060;&#x3055;&#x3044;&#x3002;' />
+    <title>&#x30BB;&#x30AD;&#x30E5;&#x30EA;&#x30C6;&#x30A3;&#x30B3;&#x30F3;&#x30D7;&#x30E9;&#x30A4;&#x30A2;&#x30F3;&#x30B9; | AI &#x30C1;&#x30FC;&#x30E0; Desktop &amp; Server | &#x30A4;&#x30F3;&#x30C6;&#x30EA;&#x30B8;&#x30A7;&#x30F3;&#x30C8;&#x30A8;&#x30F3;&#x30BF;&#x30FC;&#x30D7;&#x30E9;&#x30A4;&#x30BA;&#x30B0;&#x30EB;&#x30FC;&#x30D7;</title>
+
+    <style>
+        html { background-color: #3B3A47; }
+    </style>
+    <script>
+        (function () {
+            const key = 'preferredTheme';
+            const stored = localStorage.getItem(key);
+            const systemDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+            const theme = stored || (systemDark ? 'dark' : 'light');
+            if (theme === 'dark') {
+                document.documentElement.classList.add('dark-mode');
+            }
+        })();
+    </script>
+
+
+        <link rel="alternate" hreflang="en" href="https://theintelligententerprisegroup.com/security.html" />
+        <link rel="alternate" hreflang="fr" href="https://theintelligententerprisegroup.com/fr/security.html" />
+        <link rel="alternate" hreflang="de" href="https://theintelligententerprisegroup.com/de/security.html" />
+        <link rel="alternate" hreflang="es" href="https://theintelligententerprisegroup.com/es/security.html" />
+        <link rel="alternate" hreflang="pt" href="https://theintelligententerprisegroup.com/pt/security.html" />
+        <link rel="alternate" hreflang="zh" href="https://theintelligententerprisegroup.com/zh/security.html" />
+        <link rel="alternate" hreflang="ja" href="https://theintelligententerprisegroup.com/ja/security.html" />
+        <link rel="alternate" hreflang="ar" href="https://theintelligententerprisegroup.com/ar/security.html" />
+
+
+    <link rel="alternate" hreflang="x-default" href="https://theintelligententerprisegroup.com/security.html" />
+
+    <link rel="canonical" href="https://theintelligententerprisegroup.com/ja/security.html" />
+
+
+    <link rel="stylesheet" href="/css/styles.css" />
+    <link rel="stylesheet" href="/css/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="/css/all.min.css" />
+
+    <script src="/js/lang-switcher.js" defer></script>
+
+    <script>
+        (function () {
+            if (localStorage.getItem('currentLang')) return;
+            const supported = [
+                     { code: "en" } ,
+                     { code: "fr" } ,
+                     { code: "de" } ,
+                     { code: "es" } ,
+                     { code: "pt" } ,
+                     { code: "zh" } ,
+                     { code: "ja" } ,
+                     { code: "ar" } 
+            ];
+            const defaultLang = "ja";
+            const navLangs = navigator.languages || [navigator.language || navigator.userLanguage];
+            let detected = null;
+            for (const nav of navLangs) {
+                const code = nav.toLowerCase().split('-')[0];
+                if (supported.find(s => s.code.toLowerCase() === code)) {
+                    detected = code;
+                    break;
+                }
+            }
+            const lang = detected || defaultLang;
+            localStorage.setItem('currentLang', lang);
+            document.documentElement.lang = lang;
+        })();
+    </script>
+
+    <!-- Organization structured data (JSON-LD) -->
+    <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "Organization",
+          "name": "The Intelligent Enterprise Group",
+          "url": "https://theintelligententerprisegroup.com/",
+          "logo": "https://theintelligententerprisegroup.com/images/tieg-logo.png",
+          "sameAs": []
+        }
+    </script>
+    <link rel="icon" href="/favicon.ico" />
+    <link rel="apple-touch-icon" href="/images/apple-touch-icon.png" />
+
+    
+
+</head>
+<body>
+    <header x-data="{ open: false }">
+        <div class="container header-top">
+            <div class="logo"></div>
+            <div class="theme-switch-wrapper">
+                <label class="theme-switch">
+                    <input type="checkbox" id="theme-checkbox" aria-label="Select theme"/>
+                    <span class="slider round"></span>
+                </label>
+                <span id="theme-label">ライトモード</span>
+                <span class="lang-switcher">
+                    <label for="lang-select" class="lang-label">🌐 言語:</label>
+
+                    <!-- Language switcher -->
+                    <select id="lang-select" class="lang-select">
+                        <option value="en" data-path="/">English</option>
+                        <option value="fr" data-path="/fr/">Fran&#xE7;ais</option>
+                        <option value="de" data-path="/de/">Deutsch</option>
+                        <option value="es" data-path="/es/">Espa&#xF1;ol</option>
+                        <option value="pt" data-path="/pt/">Portugu&#xEA;s</option>
+                        <option value="zh" data-path="/zh/">&#x4E2D;&#x6587;</option>
+                        <option value="ja" data-path="/ja/">&#x65E5;&#x672C;&#x8A9E;</option>
+                        <option value="ar" data-path="/ar/">&#x627;&#x644;&#x639;&#x631;&#x628;&#x64A;&#x629;</option>
+                    </select>
+
+                </span>
+            </div>
+        </div>
+        
+        <div class="container header-nav">
+            <button @click="open = !open" class="menu-toggle" aria-label="Toggle Menu">
+                <svg width="24" height="24" viewBox="0 0 24 24">
+                    <path fill="var(--nav-link-color)" d="M3 6h18v2H3V6zm0 5h18v2H3v-2zm0 5h18v2H3v-2z" />
+                </svg>
+            </button>
+
+            <nav class="main-nav" :class="{ 'open': open }">
+                <ul>
+                    <li><a href="index.html" class="">&#x30DB;&#x30FC;&#x30E0;</a></li>
+                    <li><a href="about.html" class="">&#x79C1;&#x305F;&#x3061;&#x306B;&#x3064;&#x3044;&#x3066;</a></li>
+                    <li><a href="services.html" class="">&#x30B5;&#x30FC;&#x30D3;&#x30B9;&#x3068;&#x30BD;&#x30EA;&#x30E5;&#x30FC;&#x30B7;&#x30E7;&#x30F3;</a></li>
+                    <li><a href="case-studies.html" class="">&#x4E8B;&#x4F8B;&#x7814;&#x7A76;</a></li>
+                    <li><a href="resources.html" class="">&#x30EA;&#x30BD;&#x30FC;&#x30B9;&#x3068;&#x30A4;&#x30F3;&#x30B5;&#x30A4;&#x30C8;</a></li>
+                    <li><a href="trial.html" class="">&#x30C8;&#x30E9;&#x30A4;&#x30A2;&#x30EB;</a></li>
+                    <li><a href="pricing.html" class="">&#x6599;&#x91D1;</a></li>
+                    <li><a href="partners.html" class="">&#x30D1;&#x30FC;&#x30C8;&#x30CA;&#x30FC;&#x3068;&#x30A2;&#x30E9;&#x30A4;&#x30A2;&#x30F3;&#x30B9;</a></li>                    
+                    <li><a href="contact.html" class="">&#x304A;&#x554F;&#x3044;&#x5408;&#x308F;&#x305B;&#x30FB;&#x76F8;&#x8AC7;</a></li>
+                    <li class="has-submenu"
+                        x-data="{ openSub: false }"
+                        @mouseenter="openSub = true"
+                        @mouseleave="openSub = false">
+                      <button @click="openSub = !openSub"
+                              aria-haspopup="true"
+                              :aria-expanded="openSub.toString()">
+                        &#x60C5;&#x5831;
+                        <svg width="12" height="12" viewBox="0 0 12 12" aria-hidden="true">
+                          <path d="M3 4l3 3 3-3" fill="currentColor"/>
+                        </svg>
+                      </button>
+                      <ul class="submenu" x-show="openSub" @click.outside="openSub = false">
+                        <li><a href="careers.html" class="">&#x63A1;&#x7528;&#x60C5;&#x5831;</a></li>
+                        <li><a href="faqs.html" class="">&#x3088;&#x304F;&#x3042;&#x308B;&#x8CEA;&#x554F;</a></li>
+                        <li><a href="legal.html" class="">&#x6CD5;&#x52D9;&#x3068;&#x30DD;&#x30EA;&#x30B7;&#x30FC;</a></li>
+                      </ul>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        
+<!-- HERO -->
+<section class="hero">
+    <div class="container hero-container">
+        <h2>&#x30BB;&#x30AD;&#x30E5;&#x30EA;&#x30C6;&#x30A3;&#x30B3;&#x30F3;&#x30D7;&#x30E9;&#x30A4;&#x30A2;&#x30F3;&#x30B9;</h2>
+        <div class="hero-text">
+            <h3>&#x4F01;&#x696D;&#x74B0;&#x5883;&#x306B;&#x304A;&#x3044;&#x3066;&#x3001;&#x30B7;&#x30B9;&#x30C6;&#x30E0;&#x30FB;&#x88FD;&#x54C1;&#x30FB;&#x9867;&#x5BA2;&#x306E;&#x4FE1;&#x983C;&#x3092;&#x5B88;&#x308B;&#x305F;&#x3081;&#x306B;&#x30BB;&#x30AD;&#x30E5;&#x30EA;&#x30C6;&#x30A3;&#x30B3;&#x30F3;&#x30D7;&#x30E9;&#x30A4;&#x30A2;&#x30F3;&#x30B9;&#x3092;&#x5F37;&#x5316;&#x3057;&#x307E;&#x3059;&#x3002;</h3>
+        </div>
+    </div>
+</section>
+
+<section class="overview">
+    <div class="container">
+        <h2 id="overview-title">&#x30BB;&#x30AD;&#x30E5;&#x30EA;&#x30C6;&#x30A3;&#x30DD;&#x30EA;&#x30B7;&#x30FC;&#x3068;&#x30B3;&#x30F3;&#x30D7;&#x30E9;&#x30A4;&#x30A2;&#x30F3;&#x30B9;</h2>
+        <p class="lead">インテリジェントエンタープライズグループは、<b>サイバーセキュリティコンプライアンス</b>と<b>リスク管理</b>に取り組んでいます。本セキュリティコンプライアンス声明は、私たちが国際的に認められたフレームワークに<b>完全に準拠</b>していることを確認します：<b>ベルギーの CyberFundamentals</b>、<b>NIST Cybersecurity Framework (CSF)</b>、<b>CIS Critical Security Controls (IG1)</b>、および<b>米国国防総省の Cybersecurity Maturity Model Certification (CMMC) レベル1</b>。</p>
+
+        <table class="frameworks" role="table" aria-label="Security frameworks">
+            <tbody>
+                <tr>
+                    <td class="framework-logo-cell">
+                        <img src="/images/Cyberfundamentals.png" alt="CYBERFUNDAMENTALS logo" class="security-logo" loading="lazy" />
+                    </td>
+                    <td>
+                        <div class="framework-desc">ベルギーの CyberFundamentals フレームワークは、デジタルレジリエンスのための体系的なロードマップを提供します。基本・重要・本質という3つの成熟度レベルを定義し、組織がセキュリティコンプライアンスを強化し、攻撃リスクを低減し、NIST CSF、ISO 27001、CIS Controls などの国際基準に整合することを支援します。</div>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="framework-logo-cell">
+                        <img src="/images/nist_csf.png" alt="NIST CSF logo" class="security-logo" loading="lazy" />
+                    </td>
+                    <td>
+                        <div class="framework-desc">NIST サイバーセキュリティフレームワーク (CSF) は、サイバーセキュリティリスク管理のための世界的に認められたモデルです。識別・保護・検知・対応・復旧という5つの主要機能に整理され、組織がレジリエンスを向上させ、コンプライアンスを事業目標に整合させ、リスク管理のベストプラクティスを採用できるようにします。</div>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="framework-logo-cell">
+                        <img src="/images/cis_ig1.png" alt="CIS IG1 logo" class="security-logo" loading="lazy" />
+                    </td>
+                    <td>
+                        <div class="framework-desc">CIS 重要セキュリティコントロール実装グループ 1 (IG1) は、企業における基本的なサイバー衛生を表します。56 の基本的なセーフガードにより、一般的な脅威に対する基礎的な防御を提供し、組織の実践的なコンプライアンスを確保します。</div>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="framework-logo-cell">
+                        <img src="/images/cmmc_l1.png" alt="CMMC L1 logo" class="security-logo" loading="lazy" />
+                    </td>
+                    <td>
+                        <div class="framework-desc">サイバーセキュリティ成熟度モデル認証 (CMMC) レベル1 は、米国国防総省の契約業者に対するコンプライアンス要件を定めています。連邦契約情報 (FCI) の保護に焦点を当て、15 の基本的な実践を義務付け、組織が最低限のセキュリティ基準を満たすことを保証します。</div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</section>
+
+
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&#xA9; 2025 The Intelligent Enterprise Group. &#x7121;&#x65AD;&#x8EE2;&#x8F09;&#x3092;&#x7981;&#x3058;&#x307E;&#x3059;&#x3002;</p>
+        </div>
+    </footer>
+
+    <script src="/js/swiper-bundle.min.js"></script>
+    <script src="/js/cdn.min.js" defer></script>
+    <script src="/js/gsap.min.js"></script>
+    <script src="/js/DrawSVGPlugin.min.js"></script>
+
+    <script type="module" src="/js/themeToggle.js"></script>
+    <script type="module">
+        import { toggleTheme, getCurrentTheme } from '/js/themeToggle.js';
+        const checkbox = document.getElementById('theme-checkbox');
+        const themeLabel = document.getElementById('theme-label');
+
+        if (getCurrentTheme() === 'dark') {
+            checkbox.checked = true;
+            themeLabel.textContent = 'ダークモード';
+        } else {
+            themeLabel.textContent = 'ライトモード';
+        }
+
+        checkbox.addEventListener('change', () => {
+            toggleTheme();
+            themeLabel.textContent = checkbox.checked ? 'ダークモード' : 'ライトモード';
+        });
+    </script>
+
+    <button id="back-to-top" aria-label="Back to Top">&#x30C8;&#x30C3;&#x30D7;</button>
+
+    
+    <script>
+        gsap.registerPlugin(DrawSVGPlugin);
+        window.onload = function () {
+            gsap.from(".hero h2", { duration: 1.2, opacity: 0, y: -50, ease: "power2.out" });
+            gsap.from(".hero h3", { duration: 1.2, opacity: 0, y: 50, ease: "power2.out", delay: 0.2 });
+            gsap.from(".frameworks tbody tr", { duration: 0.8, opacity: 0, y: 20, ease: "power2.out", stagger: 0.15, delay: 0.5 });
+        };
+    </script>
+
+</body>
+</html>

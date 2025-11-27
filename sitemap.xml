@@ -20,6 +20,21 @@
     <xhtml:link rel="alternate" hreflang="pt" href="https://www.theintelligententerprisegroup.com/pt/"/>
   </url>
 
+  <!-- Security -->
+  <url>
+    <loc>https://www.theintelligententerprisegroup.com/security.html</loc>
+    <lastmod>2025-11-27</lastmod>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.theintelligententerprisegroup.com/security.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://www.theintelligententerprisegroup.com/zh/security.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.theintelligententerprisegroup.com/ar/security.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.theintelligententerprisegroup.com/de/security.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.theintelligententerprisegroup.com/es/security.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.theintelligententerprisegroup.com/fr/security.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.theintelligententerprisegroup.com/ja/security.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://www.theintelligententerprisegroup.com/pt/security.html"/>
+  </url>
+
   <!-- Pricing -->
   <url>
     <loc>https://www.theintelligententerprisegroup.com/pricing.html</loc>
