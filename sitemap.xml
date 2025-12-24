@@ -8,7 +8,7 @@
   <!-- Homepage -->
   <url>
     <loc>https://www.theintelligententerprisegroup.com/</loc>
-    <lastmod>2025-12-17</lastmod>
+    <lastmod>2025-12-24</lastmod>
     <priority>1.0</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.theintelligententerprisegroup.com/"/>
     <xhtml:link rel="alternate" hreflang="zh" href="https://www.theintelligententerprisegroup.com/zh/"/>
@@ -53,8 +53,8 @@
   <!-- Resources -->
   <url>
     <loc>https://www.theintelligententerprisegroup.com/resources.html</loc>
-    <lastmod>2025-11-12</lastmod>
-    <priority>0.7</priority>
+    <lastmod>2025-12-24</lastmod>
+    <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.theintelligententerprisegroup.com/resources.html"/>
     <xhtml:link rel="alternate" hreflang="zh" href="https://www.theintelligententerprisegroup.com/zh/resources.html"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://www.theintelligententerprisegroup.com/ar/resources.html"/>
@@ -68,7 +68,7 @@
   <!-- services -->
   <url>
     <loc>https://www.theintelligententerprisegroup.com/services.html</loc>
-    <lastmod>2025-11-12</lastmod>
+    <lastmod>2025-12-24</lastmod>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.theintelligententerprisegroup.com/services.html"/>
     <xhtml:link rel="alternate" hreflang="zh" href="https://www.theintelligententerprisegroup.com/zh/services.html"/>
@@ -98,7 +98,7 @@
 <!-- about -->
   <url>
     <loc>https://www.theintelligententerprisegroup.com/about.html</loc>
-    <lastmod>2025-12-17</lastmod>
+    <lastmod>2025-12-24</lastmod>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.theintelligententerprisegroup.com/about.html"/>
     <xhtml:link rel="alternate" hreflang="zh" href="https://www.theintelligententerprisegroup.com/zh/about.html"/>
