@@ -163,15 +163,15 @@
 
     <main>
         
-<section class="hero">
+<section class="hero" style="min-height: 60vh;">
     <div class="container hero-container">
-        <h2>全球首个 AI 协作<br />AI 专家团队<span class="hero-badge">首创</span><br /></h2>
+        <h2>全球首个 AI 协作<br />AI 专家团队</h2>
         <div class="hero-text">
             <h3>&#x6211;&#x4EEC;&#x7A81;&#x7834;&#x6027;&#x7684;&#x5E73;&#x53F0;&#x5F15;&#x5165;&#x4E86;&#x4E00;&#x79CD;&#x65B0;&#x7684;&#x8D85;&#x7EA7;&#x667A;&#x80FD;&#x5F62;&#x5F0F;&#x2014;&#x2014;&#x7531; AI &#x534F;&#x8C03;&#x5668;&#x7EDF;&#x7B79;&#xFF0C;&#x8054;&#x5408;&#x4E13;&#x4E1A; AI &#x4E13;&#x5BB6;&#xFF0C;&#x63D0;&#x4F9B;&#x81EA;&#x9002;&#x5E94;&#x3001;&#x591A;&#x8BED;&#x8A00;&#x548C;&#x4F01;&#x4E1A;&#x7EA7;&#x89E3;&#x51B3;&#x65B9;&#x6848;&#x7684;&#x521B;&#x65B0;&#x7C7B;&#x522B;&#x3002;</h3>
         </div>
         <div class="cta-buttons">
-            <a href="trial.html" class="btn">&#x5F00;&#x59CB;&#x514D;&#x8D39;&#x8BD5;&#x7528;</a>
-            <a href="#live-demo" class="btn service-btn btn-pulse">&#x5B9E;&#x65F6;&#x6F14;&#x793A;</a>
+            <a href="trial.html" class="btn-secondary">&#x5F00;&#x59CB;&#x514D;&#x8D39;&#x8BD5;&#x7528;</a>
+            <a href="#live-demo" class="btn-secondary btn-pulse">&#x5B9E;&#x65F6;&#x6F14;&#x793A;</a>
         </div>
     </div>
 </section>
@@ -179,7 +179,7 @@
 <section class="cta" id="live-demo">
     <div class="container">
         <div class="cta-block">
-            <span class="blueprint-badge">&#x4E92;&#x52A8;&#x6F14;&#x793A;</span>
+            <!--<span class="blueprint-badge">&#x4E92;&#x52A8;&#x6F14;&#x793A;</span>-->
             
             <h2 class="cta-headline">&#x4F53;&#x9A8C; AI &#x7F16;&#x6392;&#x7684;&#x5F3A;&#x5927;&#x80FD;&#x529B;</h2>
             <p class="cta-sub">&#x522B;&#x53EA;&#x542C;&#x6211;&#x4EEC;&#x8BF4;&#x3002;&#x89C2;&#x770B;&#x4E00;&#x4E2A;&#x5B89;&#x5168;&#x7684;&#x672C;&#x5730;&#x90E8;&#x7F72;&#x591A;&#x667A;&#x80FD;&#x4F53; AI &#x56E2;&#x961F;&#x5B9E;&#x65F6;&#x89E3;&#x51B3;&#x590D;&#x6742;&#x7684;&#x4F01;&#x4E1A;&#x6311;&#x6218;&#x2014;&#x2014;&#x4ECE;&#x6839;&#x672C;&#x539F;&#x56E0;&#x5206;&#x6790;&#x5230;&#x5408;&#x89C4;&#x6027;&#x3002;</p>
@@ -188,7 +188,7 @@
                 <a href="demo.html" class="btn btn-pulse">&#x5F00;&#x59CB;&#x5B9E;&#x65F6;&#x6F14;&#x793A;</a>
             </div>
 
-            <h3 style="text-transform: uppercase; letter-spacing: 1.5px; opacity: 0.6; margin-bottom: 0px;">&#x4F01;&#x4E1A;&#x7EA7;&#x5408;&#x89C4;</h3>
+            <h3 style="text-transform: uppercase; letter-spacing: 1.5px; opacity: 0.8; margin-bottom: 0px;">&#x4F01;&#x4E1A;&#x7EA7;&#x5408;&#x89C4;</h3>
             <div class="image-row">
                 <a href="security.html" target="_blank">
                     <img class="security-logo" src="/images/Cyberfundamentals.png" alt="Compliance with Cyberfundamentals" />
@@ -395,7 +395,7 @@
     gsap.registerPlugin(DrawSVGPlugin);
     window.onload = function () {
         gsap.from(".hero h2", { duration: 1.2, opacity: 0, y: -50, ease: "power2.out" });
-        gsap.from(".hero p", { duration: 1.2, opacity: 0, y: 50, ease: "power2.out", delay: 0.2 });
+        gsap.from(".hero h3", { duration: 1.2, opacity: 0, y: 50, ease: "power2.out", delay: 0.2 });
         gsap.from(".hero .btn", { duration: 1.2, opacity: 0, scale: 0.8, ease: "back.out(1.7)", delay: 0.4 });
         gsap.from(".service-card", { duration: 1, opacity: 0, y: 30, ease: "power2.out", stagger: 0.2, delay: 0.6 });
         gsap.from(".testimonials h2", { duration: 1, opacity: 0, y: -20, ease: "power2.out", delay: 0.8 });

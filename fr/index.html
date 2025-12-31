@@ -163,15 +163,15 @@
 
     <main>
         
-<section class="hero">
+<section class="hero" style="min-height: 60vh;">
     <div class="container hero-container">
-        <h2>Première équipe d’experts IA<br />coordonnée au monde<span class="hero-badge">Une première</span><br /></h2>
+        <h2>Première équipe d’experts IA<br />coordonnée au monde</h2>
         <div class="hero-text">
             <h3>Notre plateforme r&#xE9;volutionnaire introduit une nouvelle forme de super&#x2011;intelligence &#x2014; une innovation de cat&#xE9;gorie, orchestr&#xE9;e par un Coordinateur IA, r&#xE9;unissant des experts IA sp&#xE9;cialis&#xE9;s pour fournir des solutions adaptatives, multilingues et de niveau entreprise.</h3>
         </div>
         <div class="cta-buttons">
-            <a href="trial.html" class="btn">Commencer l&#x2019;essai gratuit</a>
-            <a href="#live-demo" class="btn service-btn btn-pulse">D&#xE9;mo en direct</a>
+            <a href="trial.html" class="btn-secondary">Commencer l&#x2019;essai gratuit</a>
+            <a href="#live-demo" class="btn-secondary btn-pulse">D&#xE9;mo en direct</a>
         </div>
     </div>
 </section>
@@ -179,7 +179,7 @@
 <section class="cta" id="live-demo">
     <div class="container">
         <div class="cta-block">
-            <span class="blueprint-badge">D&#xE9;mo interactive</span>
+            <!--<span class="blueprint-badge">D&#xE9;mo interactive</span>-->
             
             <h2 class="cta-headline">D&#xE9;couvrez la puissance de l&#x27;orchestration de l&#x27;IA</h2>
             <p class="cta-sub">Ne vous contentez pas de nous croire sur parole. Regardez une &#xE9;quipe d&#x27;IA multi&#x2011;agents, s&#xE9;curis&#xE9;e et sur site, r&#xE9;soudre en temps r&#xE9;el des d&#xE9;fis d&#x27;entreprise complexes &#x2014; de l&#x27;analyse des causes profondes &#xE0; la conformit&#xE9;.</p>
@@ -188,7 +188,7 @@
                 <a href="demo.html" class="btn btn-pulse">D&#xE9;marrer la d&#xE9;mo en direct</a>
             </div>
 
-            <h3 style="text-transform: uppercase; letter-spacing: 1.5px; opacity: 0.6; margin-bottom: 0px;">Conformit&#xE9; de niveau entreprise</h3>
+            <h3 style="text-transform: uppercase; letter-spacing: 1.5px; opacity: 0.8; margin-bottom: 0px;">Conformit&#xE9; de niveau entreprise</h3>
             <div class="image-row">
                 <a href="security.html" target="_blank">
                     <img class="security-logo" src="/images/Cyberfundamentals.png" alt="Compliance with Cyberfundamentals" />
@@ -395,7 +395,7 @@
     gsap.registerPlugin(DrawSVGPlugin);
     window.onload = function () {
         gsap.from(".hero h2", { duration: 1.2, opacity: 0, y: -50, ease: "power2.out" });
-        gsap.from(".hero p", { duration: 1.2, opacity: 0, y: 50, ease: "power2.out", delay: 0.2 });
+        gsap.from(".hero h3", { duration: 1.2, opacity: 0, y: 50, ease: "power2.out", delay: 0.2 });
         gsap.from(".hero .btn", { duration: 1.2, opacity: 0, scale: 0.8, ease: "back.out(1.7)", delay: 0.4 });
         gsap.from(".service-card", { duration: 1, opacity: 0, y: 30, ease: "power2.out", stagger: 0.2, delay: 0.6 });
         gsap.from(".testimonials h2", { duration: 1, opacity: 0, y: -20, ease: "power2.out", delay: 0.8 });
