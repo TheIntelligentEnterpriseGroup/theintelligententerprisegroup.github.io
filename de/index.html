@@ -169,21 +169,40 @@
         <div class="hero-text">
             <h3>Unsere bahnbrechende Plattform f&#xFC;hrt eine neue Form von Superintelligenz ein &#x2013; eine kategoriedefinierende Innovation, orchestriert von einem KI-Koordinator, der spezialisierte KI-Experten vereint, um adaptive, mehrsprachige und unternehmensgerechte L&#xF6;sungen zu liefern.</h3>
         </div>
-        <a href="trial.html" class="btn">Kostenlose Testversion starten</a>
-        <a href="contact.html" class="btn service-btn">Demo anfordern</a>
-        <div class="image-row">
-            <a href="security.html" target="_blank">
-                <img class="security-logo" src="/images/Cyberfundamentals.png" alt="Compliance with Cyberfundamentals" />
-            </a>
-            <a href="security.html" target="_blank">
-                <img class="security-logo" src="/images/nist_csf.png" alt="Compliance with nist csf" />
-            </a>
-            <a href="security.html" target="_blank">
-                <img class="security-logo" src="/images/cis_ig1.png" alt="Compliance with cis ig1" />
-            </a>
-            <a href="security.html" target="_blank">
-                <img class="security-logo" src="/images/cmmc_l1.png" alt="Compliance with cmmc l1" />
-            </a>
+        <div class="cta-buttons">
+            <a href="trial.html" class="btn">Kostenlose Testversion starten</a>
+            <a href="#live-demo" class="btn service-btn btn-pulse">Live&#x2011;Demo</a>
+        </div>
+    </div>
+</section>
+
+<section class="cta" id="live-demo">
+    <div class="container">
+        <div class="cta-block">
+            <span class="blueprint-badge">Interaktive Demo</span>
+            
+            <h2 class="cta-headline">Erleben Sie die Kraft der KI&#x2011;Orchestrierung</h2>
+            <p class="cta-sub">Nehmen Sie uns nicht nur beim Wort. Sehen Sie zu, wie ein sicheres, vor Ort betriebenes Multi&#x2011;Agenten&#x2011;KI&#x2011;Team komplexe Unternehmensherausforderungen l&#xF6;st &#x2013; von Ursachenanalyse bis Compliance &#x2013; in Echtzeit.</p>
+            
+            <div class="cta-buttons">
+                <a href="demo.html" class="btn btn-pulse">Live&#x2011;Demo starten</a>
+            </div>
+
+            <h3 style="text-transform: uppercase; letter-spacing: 1.5px; opacity: 0.6; margin-bottom: 0px;">Compliance auf Unternehmensniveau</h3>
+            <div class="image-row">
+                <a href="security.html" target="_blank">
+                    <img class="security-logo" src="/images/Cyberfundamentals.png" alt="Compliance with Cyberfundamentals" />
+                </a>
+                <a href="security.html" target="_blank">
+                    <img class="security-logo" src="/images/nist_csf.png" alt="Compliance with nist csf" />
+                </a>
+                <a href="security.html" target="_blank">
+                    <img class="security-logo" src="/images/cis_ig1.png" alt="Compliance with cis ig1" />
+                </a>
+                <a href="security.html" target="_blank">
+                    <img class="security-logo" src="/images/cmmc_l1.png" alt="Compliance with cmmc l1" />
+                </a>
+            </div>
         </div>
     </div>
 </section>
@@ -381,9 +400,10 @@
         gsap.from(".service-card", { duration: 1, opacity: 0, y: 30, ease: "power2.out", stagger: 0.2, delay: 0.6 });
         gsap.from(".testimonials h2", { duration: 1, opacity: 0, y: -20, ease: "power2.out", delay: 0.8 });
         gsap.from(".testimonials blockquote", { duration: 1, opacity: 0, y: 20, ease: "power2.out", delay: 1 });
-        gsap.from(".cta h2", { duration: 1, opacity: 0, y: -20, ease: "power2.out", delay: 1.2 });
-        gsap.from(".cta p", { duration: 1, opacity: 0, y: 20, ease: "power2.out", delay: 1.4 });
-        gsap.from(".cta .btn", { duration: 1, opacity: 0, scale: 0.8, ease: "back.out(1.7)", delay: 1.6 });
+        gsap.from(".cta-block .blueprint-badge", { duration: 1, opacity: 0, y: -20, ease: "power2.out", delay: 1.1 });
+        gsap.from(".cta-block h2", { duration: 1, opacity: 0, y: 20, ease: "power2.out", delay: 1.3 });
+        gsap.from(".cta-block p", { duration: 1, opacity: 0, y: 20, ease: "power2.out", delay: 1.5 });
+        gsap.from(".cta-block .btn", { duration: 1, opacity: 0, scale: 0.9, ease: "back.out(1.7)", delay: 1.7 });
     };
 </script>
 
