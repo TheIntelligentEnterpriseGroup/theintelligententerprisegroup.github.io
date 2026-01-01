@@ -15,10 +15,12 @@
         (function () {
             const key = 'preferredTheme';
             const stored = localStorage.getItem(key);
-            const systemDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-            const theme = stored || (systemDark ? 'dark' : 'light');
+            //const systemDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+            const theme = stored || 'dark'/*(systemDark ? 'dark' : 'light')*/;
             if (theme === 'dark') {
                 document.documentElement.classList.add('dark-mode');
+            } else {
+                document.documentElement.classList.remove('dark-mode');
             }
         })();
     </script>
@@ -163,7 +165,7 @@
 
     <main>
         
-<section class="hero">
+<section class="hero" id="hero" style="position: relative; overflow: visible;">
     <div class="container hero-container">
         <h2>世界初のAI協調型<br />AI専門チーム</h2>
         <div class="hero-text">
@@ -174,6 +176,9 @@
             <a href="#live-demo" class="btn-secondary btn-pulse">&#x30E9;&#x30A4;&#x30D6;&#x30C7;&#x30E2;</a>
         </div>
     </div>
+
+<!-- eye scan anim -->
+  <svg id="hero-overlay" aria-hidden="true" style="position:absolute; inset:0; width:100%; height:100%; pointer-events:none;"></svg>
 </section>
 
 <section class="cta" id="live-demo">
@@ -396,15 +401,256 @@
     window.onload = function () {
         gsap.from(".hero h2", { duration: 1.2, opacity: 0, y: -50, ease: "power2.out" });
         gsap.from(".hero h3", { duration: 1.2, opacity: 0, y: 50, ease: "power2.out", delay: 0.2 });
-        gsap.from(".hero .btn", { duration: 1.2, opacity: 0, scale: 0.8, ease: "back.out(1.7)", delay: 0.4 });
+        /*gsap.from(".hero .btn", { duration: 1.2, opacity: 0, scale: 0.8, ease: "back.out(1.7)", delay: 0.4 });*/
         gsap.from(".service-card", { duration: 1, opacity: 0, y: 30, ease: "power2.out", stagger: 0.2, delay: 0.6 });
         gsap.from(".testimonials h2", { duration: 1, opacity: 0, y: -20, ease: "power2.out", delay: 0.8 });
         gsap.from(".testimonials blockquote", { duration: 1, opacity: 0, y: 20, ease: "power2.out", delay: 1 });
-        gsap.from(".cta-block .blueprint-badge", { duration: 1, opacity: 0, y: -20, ease: "power2.out", delay: 1.1 });
+        /*gsap.from(".cta-block .blueprint-badge", { duration: 1, opacity: 0, y: -20, ease: "power2.out", delay: 1.1 });*/
         gsap.from(".cta-block h2", { duration: 1, opacity: 0, y: 20, ease: "power2.out", delay: 1.3 });
         gsap.from(".cta-block p", { duration: 1, opacity: 0, y: 20, ease: "power2.out", delay: 1.5 });
         gsap.from(".cta-block .btn", { duration: 1, opacity: 0, scale: 0.9, ease: "back.out(1.7)", delay: 1.7 });
     };
+</script>
+
+<script type="module">    
+    (function () {        
+        const hero = document.getElementById('hero');
+        const overlay = document.getElementById('hero-overlay');
+        if (!hero || !overlay) return;
+        if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+        const ORIGINAL_W = 1536;
+        const ORIGINAL_H = 800;
+        // How many pixels from the RIGHT edge and TOP edge of the original image?
+        const EYE_OFFSET_RIGHT = 140;
+        const EYE_OFFSET_TOP = 270;
+        const UNIVERSAL_COLOR = "50, 220, 255";
+
+        function getBgUrl(el) {
+            const bg = getComputedStyle(el).backgroundImage;
+            const m = bg.match(/url\(["']?(.*?)["']?\)/);
+            return m ? m[1] : null;
+        }
+
+        function loadImage(url) {
+            return new Promise((res, rej) => {
+                const img = new Image();
+                img.crossOrigin = 'anonymous';
+                img.onload = () => res(img);
+                img.onerror = rej;
+                img.src = url;
+            });
+        }
+
+        // Logic for 'background-position: center bottom' and 'background-size: cover'
+        function computeCoverTransform(imgW, imgH, contW, contH) {
+            // 1. Determine Scale (Cover logic)
+            const scale = Math.max(contW / imgW, contH / imgH);
+
+            const scaledW = imgW * scale;
+            const scaledH = imgH * scale;
+
+            // 2. Determine Offsets
+            // Center X: (Container Width - Scaled Image Width) / 2
+            const offsetX = (contW - scaledW) / 2;
+
+            // Bottom Y: Container Height - Scaled Image Height
+            // (This aligns the bottom edge of the image with the bottom of the container)
+            const offsetY = contH - scaledH;
+
+            return { scale, offsetX, offsetY };
+        }
+
+        function domRectToHeroRect(domRect, heroRect) {
+            return {
+                x: domRect.left - heroRect.left,
+                y: domRect.top - heroRect.top,
+                width: domRect.width,
+                height: domRect.height
+            };
+        }
+
+        function ensureDefs(svg) {
+            if (svg.querySelector('defs')) return;
+            const ns = 'http://www.w3.org/2000/svg';
+            const defs = document.createElementNS(ns, 'defs');
+            defs.innerHTML = `
+          <filter id="beam-glow" x="-50%" y="-50%" width="200%" height="200%">
+            <feGaussianBlur stdDeviation="6" result="blur"/>
+            <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+          </filter>
+          <linearGradient id="beamGrad" x1="1" y1="0.5" x2="0" y2="0.5">
+            <stop offset="0%" stop-color="rgba(${UNIVERSAL_COLOR}, 0.8)"/>
+            <stop offset="50%" stop-color="rgba(${UNIVERSAL_COLOR}, 0.3)"/>
+            <stop offset="100%" stop-color="rgba(${UNIVERSAL_COLOR}, 0)"/>
+          </linearGradient>
+        `;
+            svg.appendChild(defs);
+        }
+
+        function createBeamElements(svg) {
+            const ns = 'http://www.w3.org/2000/svg';
+            const line = document.createElementNS(ns, 'line');
+            line.setAttribute('class', 'beam-line');
+            // Init off-screen to prevent "white line" artifact
+            line.setAttribute('x1', 0);
+            line.setAttribute('y1', 0);
+            line.setAttribute('x2', 0);
+            line.setAttribute('y2', 0);
+            line.style.visibility = 'hidden';
+
+            const poly = document.createElementNS(ns, 'polygon');
+            poly.setAttribute('class', 'beam-fan');
+            poly.setAttribute('fill', 'url(#beamGrad)');
+            poly.style.opacity = 0;
+
+            svg.appendChild(line);
+            svg.appendChild(poly);
+            return { line, poly };
+        }
+
+        function fanPointsFor(eyeHero, fanTopY, fanBottomY, depth, sourceThickness = 20) {
+            const rightX = eyeHero.x;
+            const apexY = eyeHero.y;
+            const leftX = rightX - depth;
+
+            // Define the two points at the "eye" source
+            const sourceTopY = apexY - (sourceThickness / 2);
+            const sourceBottomY = apexY + (sourceThickness / 2);
+
+            // Points: TopRight -> TopLeft -> BottomLeft -> BottomRight
+            return `${rightX},${sourceTopY} ${leftX},${fanTopY} ${leftX},${fanBottomY} ${rightX},${sourceBottomY}`;
+        }
+
+        async function setup() {
+            const bgUrl = getBgUrl(hero);
+            if (!bgUrl) return;
+
+            let img;
+            try { img = await loadImage(bgUrl); } catch (e) { console.warn('bg load failed', e); return; }
+
+            const canvas = document.createElement('canvas');
+            canvas.width = img.naturalWidth || ORIGINAL_W;
+            canvas.height = img.naturalHeight || ORIGINAL_H;
+            const ctx = canvas.getContext('2d', { willReadFrequently: true });
+            ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
+
+            ensureDefs(overlay);
+            const { line, poly } = createBeamElements(overlay);
+
+            // GSAP Timeline
+            let tl;
+                        
+            function recalc() {
+                const heroRect = hero.getBoundingClientRect();
+
+                // 1. Resize SVG
+                overlay.setAttribute('width', heroRect.width);
+                overlay.setAttribute('height', heroRect.height);
+                overlay.setAttribute('viewBox', `0 0 ${heroRect.width} ${heroRect.height}`);
+
+                // 2. Compute Transform (Center Bottom)
+                const transform = computeCoverTransform(canvas.width, canvas.height, heroRect.width, heroRect.height);
+
+                // 3. Eye Location (Fixed relative to top-right of source image)
+                const eyeOrig = {
+                    x: canvas.width - (typeof EYE_OFFSET_RIGHT !== 'undefined' ? EYE_OFFSET_RIGHT : 150),
+                    y: (typeof EYE_OFFSET_TOP !== 'undefined' ? EYE_OFFSET_TOP : 300)
+                };
+
+                const eyeHero = {
+                    x: eyeOrig.x * transform.scale + transform.offsetX,
+                    y: eyeOrig.y * transform.scale + transform.offsetY
+                };
+
+                // 4. Find Text Target Area
+                const textEl = hero.querySelector('.hero-text') || hero.querySelector('.container');
+                const textHeroRect = textEl
+                    ? domRectToHeroRect(textEl.getBoundingClientRect(), heroRect)
+                    : { x: heroRect.width * 0.1, y: heroRect.height * 0.3, width: heroRect.width * 0.4, height: heroRect.height * 0.4 };
+
+                // 5. Geometry Variables for Scanning
+                const beamDepth = Math.max(100, eyeHero.x - textHeroRect.x + 200);
+                const lineLeftX = eyeHero.x - beamDepth;
+
+                // Vertical points for the scan
+                const textTop = textHeroRect.y - 200; //start 200 higher
+                const textBottom = textHeroRect.y + textHeroRect.height + 100; //go 100 deeper
+                const scanHeight = 120; // The vertical "thickness" of the beam as it scans
+
+                // Define the different "states" of the polygon points
+                const stateStart = fanPointsFor(eyeHero, eyeHero.y, eyeHero.y, beamDepth);
+
+                const stateAtTop = fanPointsFor(eyeHero, textTop - 40, textTop + scanHeight, beamDepth);
+                const stateAtBottom = fanPointsFor(eyeHero, textBottom - scanHeight, textBottom + 40, beamDepth);
+
+                // Reset Elements
+                line.setAttribute('x1', eyeHero.x);
+                line.setAttribute('y1', eyeHero.y);
+                line.setAttribute('x2', eyeHero.x);
+                line.setAttribute('y2', eyeHero.y);
+                poly.setAttribute('points', stateStart);
+
+                // THEME COLORS
+                const stops = overlay.querySelectorAll('#beamGrad stop');
+
+                if (stops.length >= 3) {
+                    stops[0].setAttribute('stop-color', `rgba(${UNIVERSAL_COLOR}, 0.8)`);
+                    stops[1].setAttribute('stop-color', `rgba(${UNIVERSAL_COLOR}, 0.5)`);
+                    stops[2].setAttribute('stop-color', `rgba(${UNIVERSAL_COLOR}, 0)`);
+                }
+
+                // Also update the line color to match
+                line.style.stroke = `rgba(${UNIVERSAL_COLOR}, 0.9)`;
+
+                // 6. The Scan Animation Timeline
+                if (tl) tl.kill();
+                tl = gsap.timeline({ repeat: -1, repeatDelay: 2.0 });
+
+                // Ensure they start invisible
+                tl.set([line, poly], { opacity: 0 });
+
+                // Phase 1: Shoot the line out
+                tl.to(line, { duration: 0.1, opacity: 1 }, 0.1);
+                tl.to(line, { duration: 0.4, attr: { x2: lineLeftX }, ease: "power2.out" }, 0.1);
+
+                // Phase 2: Open the fan to the TOP of the text
+                tl.to(poly, { duration: 0.1, opacity: 0.5 }, 0.4);
+                tl.to(poly, {
+                    duration: 0.5,
+                    attr: { points: stateAtTop },
+                    ease: "power2.out"
+                }, 0.4);
+
+                // Phase 3: SCAN (Move the fan from top to bottom)
+                tl.to(poly, {
+                    duration: 1.5,
+                    attr: { points: stateAtBottom },
+                    ease: "sine.inOut"
+                }, 0.9);
+
+                // Phase 4: Collapse and Fade out
+                // Shrink the points slightly while fading to simulate the light "pulling back"
+                tl.to(poly, {
+                    duration: 0.5,
+                    attr: { points: stateStart },
+                    opacity: 0,
+                    ease: "power2.in"
+                }, 2.4);
+
+                tl.to(line, { duration: 0.3, opacity: 0 }, 2.6);
+            }
+
+            recalc();
+
+            let rt;
+            window.addEventListener('resize', () => {
+                clearTimeout(rt);
+                rt = setTimeout(recalc, 150);
+            });
+        }
+
+        setup();
+    })();
 </script>
 
 </body>
