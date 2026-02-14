@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="zh" dir="ltr">
+<head>
+    <meta name="robots" content="index, follow" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <meta name="description" content='&#x4E0E;&#x6211;&#x4EEC;&#x7684;&#x4E13;&#x5BB6;&#x5408;&#x4F5C;&#xFF0C;&#x8FDB;&#x884C;&#x4F01;&#x4E1A;&#x7EA7; AI &#x6218;&#x7565;&#x54A8;&#x8BE2;&#x548C; AI &#x91C7;&#x7528;&#x5EFA;&#x8BAE;&#x3002;&#x4ECE;&#x53D1;&#x73B0;&#x5230;&#x90E8;&#x7F72;&#xFF0C;&#x6211;&#x4EEC;&#x7BA1;&#x7406;&#x60A8;&#x7684;&#x5B8C;&#x6574; AI &#x751F;&#x547D;&#x5468;&#x671F;&#x3002;' />
+    <title>&#x4F01;&#x4E1A;&#x7EA7;&#x4EBA;&#x5DE5;&#x667A;&#x80FD;&#x6218;&#x7565;&#x54A8;&#x8BE2;&#x4E0E;&#x987E;&#x95EE;&#x670D;&#x52A1; | TIEG</title>
+
+    <style>
+        html { background-color: #3B3A47; }
+    </style>
+    <script>
+        (function () {
+            const key = 'preferredTheme';
+            const stored = localStorage.getItem(key);
+            //const systemDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+            const theme = stored || 'dark'/*(systemDark ? 'dark' : 'light')*/;
+            if (theme === 'dark') {
+                document.documentElement.classList.add('dark-mode');
+            } else {
+                document.documentElement.classList.remove('dark-mode');
+            }
+        })();
+    </script>
+
+
+        <link rel="alternate" hreflang="en" href="https://theintelligententerprisegroup.com/ai-strategy-consulting.html" />
+        <link rel="alternate" hreflang="fr" href="https://theintelligententerprisegroup.com/fr/ai-strategy-consulting.html" />
+        <link rel="alternate" hreflang="de" href="https://theintelligententerprisegroup.com/de/ai-strategy-consulting.html" />
+        <link rel="alternate" hreflang="es" href="https://theintelligententerprisegroup.com/es/ai-strategy-consulting.html" />
+        <link rel="alternate" hreflang="pt" href="https://theintelligententerprisegroup.com/pt/ai-strategy-consulting.html" />
+        <link rel="alternate" hreflang="zh" href="https://theintelligententerprisegroup.com/zh/ai-strategy-consulting.html" />
+        <link rel="alternate" hreflang="ja" href="https://theintelligententerprisegroup.com/ja/ai-strategy-consulting.html" />
+        <link rel="alternate" hreflang="ar" href="https://theintelligententerprisegroup.com/ar/ai-strategy-consulting.html" />
+
+
+    <link rel="alternate" hreflang="x-default" href="https://theintelligententerprisegroup.com/ai-strategy-consulting.html" />
+
+    <link rel="canonical" href="https://theintelligententerprisegroup.com/zh/ai-strategy-consulting.html" />
+
+
+    <link rel="stylesheet" href="/css/styles.css" />
+    <link rel="stylesheet" href="/css/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="/css/all.min.css" />
+
+    <script src="/js/lang-switcher.js" defer></script>
+
+    <script>
+        (function () {
+            if (localStorage.getItem('currentLang')) return;
+            const supported = [
+                     { code: "en" } ,
+                     { code: "fr" } ,
+                     { code: "de" } ,
+                     { code: "es" } ,
+                     { code: "pt" } ,
+                     { code: "zh" } ,
+                     { code: "ja" } ,
+                     { code: "ar" } 
+            ];
+            const defaultLang = "zh";
+            const navLangs = navigator.languages || [navigator.language || navigator.userLanguage];
+            let detected = null;
+            for (const nav of navLangs) {
+                const code = nav.toLowerCase().split('-')[0];
+                if (supported.find(s => s.code.toLowerCase() === code)) {
+                    detected = code;
+                    break;
+                }
+            }
+            const lang = detected || defaultLang;
+            localStorage.setItem('currentLang', lang);
+            document.documentElement.lang = lang;
+        })();
+    </script>
+
+    <!-- Organization structured data (JSON-LD) -->
+    <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "Organization",
+          "name": "The Intelligent Enterprise Group",
+          "url": "https://theintelligententerprisegroup.com/",
+          "logo": "https://theintelligententerprisegroup.com/images/tieg-logo.png",
+          "sameAs": []
+        }
+    </script>
+    <link rel="icon" href="/favicon.ico" />
+    <link rel="apple-touch-icon" href="/images/apple-touch-icon.png" />
+
+    
+
+</head>
+<body>
+    <header x-data="{ open: false }">
+        <div class="container header-top">
+            <div class="logo"></div>
+            <div class="theme-switch-wrapper">
+                <label class="theme-switch">
+                    <input type="checkbox" id="theme-checkbox" aria-label="Select theme"/>
+                    <span class="slider round"></span>
+                </label>
+                <span id="theme-label">浅色模式</span>
+                <span class="lang-switcher">
+                    <label for="lang-select" class="lang-label">🌐 语言：</label>
+
+                    <!-- Language switcher -->
+                    <select id="lang-select" class="lang-select">
+                        <option value="en" data-path="/">English</option>
+                        <option value="fr" data-path="/fr/">Fran&#xE7;ais</option>
+                        <option value="de" data-path="/de/">Deutsch</option>
+                        <option value="es" data-path="/es/">Espa&#xF1;ol</option>
+                        <option value="pt" data-path="/pt/">Portugu&#xEA;s</option>
+                        <option value="zh" data-path="/zh/">&#x4E2D;&#x6587;</option>
+                        <option value="ja" data-path="/ja/">&#x65E5;&#x672C;&#x8A9E;</option>
+                        <option value="ar" data-path="/ar/">&#x627;&#x644;&#x639;&#x631;&#x628;&#x64A;&#x629;</option>
+                    </select>
+
+                </span>
+            </div>
+        </div>
+        
+        <div class="container header-nav">
+            <button @click="open = !open" class="menu-toggle" aria-label="Toggle Menu">
+                <svg width="24" height="24" viewBox="0 0 24 24">
+                    <path fill="var(--nav-link-color)" d="M3 6h18v2H3V6zm0 5h18v2H3v-2zm0 5h18v2H3v-2z" />
+                </svg>
+            </button>
+
+            <nav class="main-nav" :class="{ 'open': open }">
+                <ul>
+                    <li><a href="index.html" class="">&#x9996;&#x9875;</a></li>
+                    <li><a href="about.html" class="">&#x5173;&#x4E8E;&#x6211;&#x4EEC;</a></li>
+                    <li><a href="services.html" class="">&#x670D;&#x52A1;&#x4E0E;&#x89E3;&#x51B3;&#x65B9;&#x6848;</a></li>
+                    <li><a href="case-studies.html" class="">&#x6848;&#x4F8B;&#x7814;&#x7A76;</a></li>
+                    <li><a href="resources.html" class="active">&#x8D44;&#x6E90;&#x4E0E;&#x6D1E;&#x5BDF;</a></li>
+                    <li><a href="trial.html" class="">&#x8BD5;&#x7528;</a></li>
+                    <li><a href="pricing.html" class="">&#x5B9A;&#x4EF7;</a></li>
+                    <li><a href="partners.html" class="">&#x5408;&#x4F5C;&#x4F19;&#x4F34;&#x4E0E;&#x8054;&#x76DF;</a></li>                    
+                    <li><a href="contact.html" class="">&#x8054;&#x7CFB;&#x4E0E;&#x54A8;&#x8BE2;</a></li>
+                    <li class="has-submenu"
+                        x-data="{ openSub: false }"
+                        @mouseenter="openSub = true"
+                        @mouseleave="openSub = false">
+                      <button @click="openSub = !openSub"
+                              aria-haspopup="true"
+                              :aria-expanded="openSub.toString()">
+                        &#x4FE1;&#x606F;
+                        <svg width="12" height="12" viewBox="0 0 12 12" aria-hidden="true">
+                          <path d="M3 4l3 3 3-3" fill="currentColor"/>
+                        </svg>
+                      </button>
+                      <ul class="submenu" x-show="openSub" @click.outside="openSub = false">
+                        <li><a href="careers.html" class="">&#x804C;&#x4E1A;&#x673A;&#x4F1A;</a></li>
+                        <li><a href="faqs.html" class="">&#x5E38;&#x89C1;&#x95EE;&#x9898;</a></li>
+                        <li><a href="legal.html" class="">&#x6CD5;&#x5F8B;&#x4E0E;&#x653F;&#x7B56;</a></li>
+                      </ul>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        
+<section class="hero seo-hero" style="padding: 80px 0 40px; text-align: center; background-color: var(--card-bg2);">
+    <div class="container hero-container">
+        <h1 style="font-size: 3rem; margin-bottom: 1rem;">企业级人工智能战略咨询与顾问服务</h1>
+        <div class="hero-text">
+            <h3 style="font-weight: 400; opacity: 0.9; max-width: 800px; margin: 0 auto;">在数字化转型行业资深人士的战略指导下，定义、优先排序并执行您的人工智能计划。</h3>
+        </div>
+
+                <br/>
+                <p class="lead" style="font-size: 1.15rem; font-weight: 500; color: var(--btn-bg); max-width: 800px; margin: 1.5rem auto 0 auto; line-height: 1.6;">
+                    在快速变化的人工智能领域中导航，不仅仅需要购买软件；它更需要一个全面的、全企业范围的愿景。我们提供战略指导，帮助您定义、优先排序并执行 AI 计划。无论您是希望实现后台操作自动化，实施安全的多智能体工作流，还是彻底改革数据基础设施，我们的企业级 AI 战略咨询都能确保您的投资在保持严格安全和合规性的同时，推动可衡量的投资回报率（ROI）。
+                </p>
+
+    </div>
+</section>
+
+<section class="resources">
+    <div class="container">
+
+ <h2>无计划采用 AI 的陷阱</h2>  <p>急于实施人工智能导致许多组织陷入了昂贵的“影子 IT”陷阱，即各个相互孤立的部门在没有 IT 监管的情况下购买冗余的 SaaS 工具。这种碎片化的方式不仅违反了数据隐私框架，还导致用户采用率低和无法扩展的孤岛现象。</p>  <p>成功的数字化转型需要统一的架构和清晰的路线图。如果没有适当的 AI 采用咨询，企业就有可能在大语言模型 (LLM) 上投入巨资，却无法解决其特定领域内的业务挑战。</p>  <h2>数十年经验支持的领导力</h2>  <p>真正的战略咨询植根于经过验证的实践经验。我们的 AI 咨询业务由深厚的技术专长和行业预见性引领。我们的创始人 Zoli 拥有超过 20 年的企业技术经验，以及超过 10 年的人工智能实战经验。</p>  <p>作为全球组织数字化转型的可靠顾问，他成功应对了将尖端技术集成到遗留系统中的复杂挑战。此外，他还是《人工智能的应用：从入门到专家的分步指南》一书的作者，这巩固了我们公司对思想领导力、教育和可操作 AI 实施战略的承诺。</p>  <h2>使技术与您的愿景保持一致</h2>  <p>我们不主张为了技术而实施技术。我们的顾问会将技术采用与您的总体企业愿景相统一。在推荐任何代码或部署智能体工作流之前，我们会深入了解您的运营挑战。</p>  <p>您的目标是减少供应链瓶颈吗？还是试图加速法律文件的审查？我们绘制出这些精确的目标，并设计一个原生支持您目标的 AI 架构。通过预测和情景规划确保风险规避，我们在潜在障碍（从合规门槛到员工抵触）影响您的部署时间表之前识别它们。</p>  <h2>管理 AI 采用的全生命周期</h2>  <p>一个成功的 AI 战略不是一次性的演示；而是一个持续的合作伙伴关系。从发现和审计到全面部署和推出，我们管理 AI 采用的全生命周期。我们的方法论分为几个明确的、可操作的阶段：</p>                     <ul>
+ <li><strong>发现与审计：</strong> 我们分析您当前的 IT 基础设施、数据就绪情况和组织瓶颈，以确定最高价值的 AI 使用案例。</li>  <li><strong>战略与路线图：</strong> 我们提供一份全面的蓝图，详述所需的硬件（如安全的本地服务器）、软件架构以及成功所需的合规框架。</li>  <li><strong>试点与定制开发：</strong> 我们部署受控的概念验证工作流，利用我们的定制 AI 智能体开发团队构建针对您数据的专用智能体。</li>  <li><strong>部署与变革管理：</strong> 我们监督企业范围内的推广，进行广泛的培训，以确保您的员工能够自信地采用新的数字生态系统。</li>                     </ul>
+ <h2>风险规避与安全至上</h2>  <p>企业级 AI 战略咨询必须将数据安全视为采用的基石。如果不加以管理，集成人工智能会引入数据泄露和知识产权损失的新媒介。</p>  <p>我们的咨询服务重点强调安全的 AI 框架。我们指导组织完成部署物理隔离（air-gapped）系统的复杂过程，确保您的新基础设施符合 NIST CSF、CIS IG1、CMMC Level 1 和欧洲 GDPR 标准。通过预测潜在的网路风险，我们将安全性构建在 AI 路线图的基础中，而不是将其作为事后补救。</p>  <h2>与技术同步转型文化</h2>  <p>AI 采用的最大障碍很少是技术性的，而是文化性的。员工通常担心自动化会取代他们的职位。我们的顾问是变革管理方面的专家。我们将 AI 定位为协作式的“专家团队”，旨在消除琐碎任务并提升员工的战略价值，从而在整个企业中培养创新文化和积极采用的氛围。</p>             <div class="parent-hub-link" style="background-color: var(--card-bg2); padding: 1rem; border-radius: 6px; margin-bottom: 2rem;">
+                <span style="font-size: 0.9rem; color: var(--text-color);">我们综合咨询与开发服务的一部分：</span>
+                <a href="/agentic-ai-workflows.html" style="font-weight: bold; margin-left: 0.5rem; color: var(--btn-bg);">
+                    智能体 AI 工作流与咨询
+                </a>
+            </div>
+            <div class="callout" style="background-color: rgba(161, 144, 217, 0.1); border-left: 4px solid var(--btn-bg); padding: 1.5rem; margin: 2rem 0; border-radius: 4px;">
+                <strong style="display: block; font-size: 1.2rem; margin-bottom: 0.5rem; color: var(--text-color);">
+                    定义您的企业级 AI 路线图
+                </strong>
+                <p style="margin-bottom: 1rem;">不要独自应对 AI 采用的复杂性。与我们的顾问团队合作，构建安全、可扩展的战略。或者，仅需 €39 即可通过 6 个月的桌面版试用直接体验我们的软件。<br><br><span style='font-size: 1.1rem;'>想看看我们的基础技术在实际运行吗？ <a href='/demo.html' style='color: var(--btn-bg); font-weight: bold; text-decoration: underline;'>在此观看我们的现场演示。</a></span></p>
+                <a href="/trial.html" class="btn">开始免费试用</a>
+            </div>
+         
+    </div>
+</section>
+
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&#xA9; 2025 &#x667A;&#x80FD;&#x4F01;&#x4E1A;&#x96C6;&#x56E2;&#x3002;&#x4FDD;&#x7559;&#x6240;&#x6709;&#x6743;&#x5229;&#x3002;</p>
+        </div>
+    </footer>
+
+    <script src="/js/swiper-bundle.min.js"></script>
+    <script src="/js/cdn.min.js" defer></script>
+    <script src="/js/gsap.min.js"></script>
+    <script src="/js/DrawSVGPlugin.min.js"></script>
+
+    <script type="module" src="/js/themeToggle.js"></script>
+    <script type="module">
+        import { toggleTheme, getCurrentTheme } from '/js/themeToggle.js';
+        const checkbox = document.getElementById('theme-checkbox');
+        const themeLabel = document.getElementById('theme-label');
+
+        if (getCurrentTheme() === 'dark') {
+            checkbox.checked = true;
+            themeLabel.textContent = '深色模式';
+        } else {
+            themeLabel.textContent = '浅色模式';
+        }
+
+        checkbox.addEventListener('change', () => {
+            toggleTheme();
+            themeLabel.textContent = checkbox.checked ? '深色模式' : '浅色模式';
+        });
+    </script>
+
+    <button id="back-to-top" aria-label="Back to Top">&#x9876;&#x90E8;</button>
+
+    
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            if (window.innerWidth < 768) return;
+
+            const intro = document.querySelector("#right-intro");
+            if (!intro) return;
+
+            const tl = gsap.timeline();
+            let isClosing = false; // Flag to prevent double-triggering the exit
+
+            // --- 1. DEFINE THE EXIT FUNCTION ---
+            const closeIntro = () => {
+                if (isClosing) return;
+                isClosing = true;
+
+                // Kill the main timeline so it doesn't keep running in the background
+                tl.kill();
+
+                // Create a dedicated exit timeline for a fast, responsive feel
+                const exitTl = gsap.timeline();
+
+                /* ROBOT FAST REVEAL & RUN */
+                exitTl.to(".robot-runner", { opacity: 1, duration: 0.2 });
+                exitTl.to(".robot-runner", {
+                    x: 400,
+                    duration: 0.8,
+                    ease: "power2.in"
+                }, "-=0.1");
+
+                /* PANEL SLIDE-OUT */
+                exitTl.to("#right-intro", {
+                    duration: 0.8,
+                    transform: "translateX(100%)",
+                    ease: "power3.inOut",
+                    onComplete: () => {
+                        intro.style.display = "none";
+                        // Remove scroll listener once closed
+                        window.removeEventListener("scroll", handleScroll);
+                    }
+                }, "-=0.6");
+            };
+
+            // --- 2. THE SCROLL LISTENER ---
+            const handleScroll = () => {
+                if (window.scrollY > 20) { // Trigger after 20px of scrolling
+                    closeIntro();
+                }
+            };
+            window.addEventListener("scroll", handleScroll);
+
+            // --- 3. ORIGINAL ANIMATION SEQUENCE ---
+            /* PANEL SLIDE-IN */
+            tl.to("#right-intro", {
+                duration: 0.8,
+                transform: "translateX(0%)",
+                ease: "power3.out"
+            });
+
+            /* PARTICLES */
+            for (let i = 0; i < 20; i++) {
+                const p = document.createElement("div");
+                p.className = "particle";
+                p.style.position = "absolute";
+                p.style.width = "4px";
+                p.style.height = "4px";
+                p.style.background = "rgba(0,174,239,0.35)";
+                p.style.borderRadius = "50%";
+                p.style.left = Math.random() * 100 + "%";
+                p.style.top = "100%";
+                document.querySelector(".intro-particles").appendChild(p);
+
+                gsap.to(p, {
+                    y: -window.innerHeight - 100,
+                    duration: 4 + Math.random() * 4,
+                    delay: Math.random() * 2,
+                    repeat: -1,
+                    ease: "none"
+                });
+            }
+
+            /* SIGNAL LINE & PULSE */
+            tl.to(".signal-main", { height: "60%", duration: 0.8, ease: "power2.out" })
+                .to(".loading-dots", { opacity: 1, duration: 0.3 })
+                .to(".pulse", { opacity: 1, scale: 1.4, duration: 0.3, stagger: 0.15 })
+                .to(".pulse", { scale: 0.6, opacity: 0.4, duration: 0.3, stagger: 0.15 })
+                .to(".loading-dots", { opacity: 0, duration: 0.3 });
+
+            /* TEXT REVEAL */
+            tl.to(".t1", { opacity: 1, x: 0, duration: 0.6 })
+                .to(".t2", { opacity: 1, x: 0, duration: 0.6 })
+                .to(".t3", { opacity: 1, x: 0, duration: 0.6 })
+                .to(".t4", { opacity: 1, x: 0, duration: 0.6 });
+
+            /* ROBOT ARM/LEG LOOPS (Independent of timeline) */
+            const robotParts = [
+                { el: ".arm-left", r: 30 }, { el: ".arm-right", r: -30 },
+                { el: ".leg-left", r: -30 }, { el: ".leg-right", r: 30 }
+            ];
+            robotParts.forEach(part => {
+                gsap.to(part.el, { rotation: part.r, yoyo: true, repeat: -1, duration: 0.2, ease: "power1.inOut" });
+            });
+
+            // --- 4. AUTO-EXIT (If user doesn't scroll) ---
+            tl.to(".robot-runner", { opacity: 1, duration: 0.3, delay: 5 });
+            tl.to(".robot-runner", { x: 400, duration: 1.2, ease: "power2.inOut" }, "-=0.2");
+            tl.to("#right-intro", {
+                duration: 1,
+                transform: "translateX(100%)",
+                ease: "power3.inOut",
+                onComplete: () => {
+                    if (!isClosing) { // Only hide if scroll didn't already trigger it
+                        intro.style.display = "none";
+                        window.removeEventListener("scroll", handleScroll);
+                    }
+                }
+            }, "-=0.6");
+        });
+    </script>
+</body>
+</html>

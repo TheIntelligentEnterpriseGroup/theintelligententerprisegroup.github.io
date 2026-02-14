@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta name="robots" content="index, follow" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <meta name="description" content='Ensure AI data privacy compliance with our secure AI frameworks. Fully compliant with NIST CSF AI, CIS IG1, CMMC Level 1, and Belgium&#x27;s CyberFundamentals.' />
+    <title>Enterprise AI Data Privacy &amp; Security Compliance | TIEG</title>
+
+    <style>
+        html { background-color: #3B3A47; }
+    </style>
+    <script>
+        (function () {
+            const key = 'preferredTheme';
+            const stored = localStorage.getItem(key);
+            //const systemDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+            const theme = stored || 'dark'/*(systemDark ? 'dark' : 'light')*/;
+            if (theme === 'dark') {
+                document.documentElement.classList.add('dark-mode');
+            } else {
+                document.documentElement.classList.remove('dark-mode');
+            }
+        })();
+    </script>
+
+
+        <link rel="alternate" hreflang="en" href="https://theintelligententerprisegroup.com/ai-data-privacy-compliance.html" />
+        <link rel="alternate" hreflang="fr" href="https://theintelligententerprisegroup.com/fr/ai-data-privacy-compliance.html" />
+        <link rel="alternate" hreflang="de" href="https://theintelligententerprisegroup.com/de/ai-data-privacy-compliance.html" />
+        <link rel="alternate" hreflang="es" href="https://theintelligententerprisegroup.com/es/ai-data-privacy-compliance.html" />
+        <link rel="alternate" hreflang="pt" href="https://theintelligententerprisegroup.com/pt/ai-data-privacy-compliance.html" />
+        <link rel="alternate" hreflang="zh" href="https://theintelligententerprisegroup.com/zh/ai-data-privacy-compliance.html" />
+        <link rel="alternate" hreflang="ja" href="https://theintelligententerprisegroup.com/ja/ai-data-privacy-compliance.html" />
+        <link rel="alternate" hreflang="ar" href="https://theintelligententerprisegroup.com/ar/ai-data-privacy-compliance.html" />
+
+
+    <link rel="alternate" hreflang="x-default" href="https://theintelligententerprisegroup.com/ai-data-privacy-compliance.html" />
+
+    <link rel="canonical" href="https://theintelligententerprisegroup.com/ai-data-privacy-compliance.html" />
+
+
+    <link rel="stylesheet" href="/css/styles.css" />
+    <link rel="stylesheet" href="/css/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="/css/all.min.css" />
+
+    <script src="/js/lang-switcher.js" defer></script>
+
+    <script>
+        (function () {
+            if (localStorage.getItem('currentLang')) return;
+            const supported = [
+                     { code: "en" } ,
+                     { code: "fr" } ,
+                     { code: "de" } ,
+                     { code: "es" } ,
+                     { code: "pt" } ,
+                     { code: "zh" } ,
+                     { code: "ja" } ,
+                     { code: "ar" } 
+            ];
+            const defaultLang = "en";
+            const navLangs = navigator.languages || [navigator.language || navigator.userLanguage];
+            let detected = null;
+            for (const nav of navLangs) {
+                const code = nav.toLowerCase().split('-')[0];
+                if (supported.find(s => s.code.toLowerCase() === code)) {
+                    detected = code;
+                    break;
+                }
+            }
+            const lang = detected || defaultLang;
+            localStorage.setItem('currentLang', lang);
+            document.documentElement.lang = lang;
+        })();
+    </script>
+
+    <!-- Organization structured data (JSON-LD) -->
+    <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "Organization",
+          "name": "The Intelligent Enterprise Group",
+          "url": "https://theintelligententerprisegroup.com/",
+          "logo": "https://theintelligententerprisegroup.com/images/tieg-logo.png",
+          "sameAs": []
+        }
+    </script>
+    <link rel="icon" href="/favicon.ico" />
+    <link rel="apple-touch-icon" href="/images/apple-touch-icon.png" />
+
+    
+
+</head>
+<body>
+    <header x-data="{ open: false }">
+        <div class="container header-top">
+            <div class="logo"></div>
+            <div class="theme-switch-wrapper">
+                <label class="theme-switch">
+                    <input type="checkbox" id="theme-checkbox" aria-label="Select theme"/>
+                    <span class="slider round"></span>
+                </label>
+                <span id="theme-label">Light Mode</span>
+                <span class="lang-switcher">
+                    <label for="lang-select" class="lang-label">🌐 Language:</label>
+
+                    <!-- Language switcher -->
+                    <select id="lang-select" class="lang-select">
+                        <option value="en" data-path="/">English</option>
+                        <option value="fr" data-path="/fr/">Fran&#xE7;ais</option>
+                        <option value="de" data-path="/de/">Deutsch</option>
+                        <option value="es" data-path="/es/">Espa&#xF1;ol</option>
+                        <option value="pt" data-path="/pt/">Portugu&#xEA;s</option>
+                        <option value="zh" data-path="/zh/">&#x4E2D;&#x6587;</option>
+                        <option value="ja" data-path="/ja/">&#x65E5;&#x672C;&#x8A9E;</option>
+                        <option value="ar" data-path="/ar/">&#x627;&#x644;&#x639;&#x631;&#x628;&#x64A;&#x629;</option>
+                    </select>
+
+                </span>
+            </div>
+        </div>
+        
+        <div class="container header-nav">
+            <button @click="open = !open" class="menu-toggle" aria-label="Toggle Menu">
+                <svg width="24" height="24" viewBox="0 0 24 24">
+                    <path fill="var(--nav-link-color)" d="M3 6h18v2H3V6zm0 5h18v2H3v-2zm0 5h18v2H3v-2z" />
+                </svg>
+            </button>
+
+            <nav class="main-nav" :class="{ 'open': open }">
+                <ul>
+                    <li><a href="index.html" class="">Home</a></li>
+                    <li><a href="about.html" class="">About Us</a></li>
+                    <li><a href="services.html" class="">Services &amp; Solutions</a></li>
+                    <li><a href="case-studies.html" class="">Case Studies</a></li>
+                    <li><a href="resources.html" class="active">Resources &amp; Insights</a></li>
+                    <li><a href="trial.html" class="">Trial</a></li>
+                    <li><a href="pricing.html" class="">Pricing</a></li>
+                    <li><a href="partners.html" class="">Partners &amp; Alliances</a></li>                    
+                    <li><a href="contact.html" class="">Contact &amp; Consultation</a></li>
+                    <li class="has-submenu"
+                        x-data="{ openSub: false }"
+                        @mouseenter="openSub = true"
+                        @mouseleave="openSub = false">
+                      <button @click="openSub = !openSub"
+                              aria-haspopup="true"
+                              :aria-expanded="openSub.toString()">
+                        Info
+                        <svg width="12" height="12" viewBox="0 0 12 12" aria-hidden="true">
+                          <path d="M3 4l3 3 3-3" fill="currentColor"/>
+                        </svg>
+                      </button>
+                      <ul class="submenu" x-show="openSub" @click.outside="openSub = false">
+                        <li><a href="careers.html" class="">Careers</a></li>
+                        <li><a href="faqs.html" class="">FAQs</a></li>
+                        <li><a href="legal.html" class="">Legal &amp; Policies</a></li>
+                      </ul>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        
+<section class="hero seo-hero" style="padding: 80px 0 40px; text-align: center; background-color: var(--card-bg2);">
+    <div class="container hero-container">
+        <h1 style="font-size: 3rem; margin-bottom: 1rem;">Enterprise AI Data Privacy & Security Compliance</h1>
+        <div class="hero-text">
+            <h3 style="font-weight: 400; opacity: 0.9; max-width: 800px; margin: 0 auto;">Deploy a digital workforce that operates safely behind your corporate firewall, fully compliant with the world's most rigorous cybersecurity frameworks.</h3>
+        </div>
+
+                <br/>
+                <p class="lead" style="font-size: 1.15rem; font-weight: 500; color: var(--btn-bg); max-width: 800px; margin: 1.5rem auto 0 auto; line-height: 1.6;">
+                    The Intelligent Enterprise Group is fully committed to cybersecurity compliance and risk management. As organizations race to adopt artificial intelligence, the risks of data exfiltration, intellectual property theft, and regulatory penalties have never been higher. We ensure that your digital workforce operates safely behind your corporate firewall. By utilizing an air-gapped, on-premise architecture, our platform achieves absolute AI data privacy compliance, allowing your enterprise to leverage autonomous AI agents without compromising your security posture.
+                </p>
+
+    </div>
+</section>
+
+<section class="resources">
+    <div class="container">
+
+ <h2>The Critical Need for Secure AI Frameworks</h2>  <p>In the modern enterprise, data is the most valuable asset. Standard cloud-based AI solutions require organizations to transmit this data to third-party servers for processing. This fundamental architecture violates the core principles of zero-trust security and creates massive blind spots in corporate risk management.</p>  <p>To safely integrate multi-agent workflows into highly regulated environments - such as finance, healthcare, defense, and legal sectors - organizations must adopt secure AI frameworks. Our Security Compliance Statement confirms that our enterprise AI server operates 100% locally. By eliminating external API calls, we completely remove the network transmission layer from the threat landscape, ensuring your organization fully complies with internationally recognized security frameworks.</p>  <h2>Belgium's CyberFundamentals: European Digital Resilience</h2>  <p>For European organizations and global enterprises operating within the EU, data sovereignty is a paramount concern. Our platform aligns strictly with Belgium's CyberFundamentals framework, a comprehensive set of concrete measures designed to protect data, significantly reduce the risk of successful cyber-attacks, and increase overall digital resilience.</p>  <p>Because our AI Expert Team Platform processes all documents, queries, and analytical tasks locally on your own hardware, it inherently supports European data protection standards, including GDPR. Your proprietary data never crosses international borders, nor is it ever subjected to the jurisdiction of foreign data centers. This localized approach provides the highest tier of digital resilience against external threat actors.</p>  <h2>NIST Cybersecurity Framework (CSF) for AI</h2>  <p>The National Institute of Standards and Technology (NIST) Cybersecurity Framework (CSF) is the global gold standard for managing cybersecurity risk. Integrating AI into an enterprise often complicates the core NIST functions (Identify, Protect, Detect, Respond, Recover). Our offline AI architecture simplifies NIST CSF AI compliance by drastically shrinking your attack surface.</p>  <p>By hosting the AI on-premise, the 'Protect' function is natively fortified. There are no external cloud vendor vulnerabilities to manage, and no continuous internet connections to secure. IT administrators can apply their existing local access controls, encryption standards, and endpoint detection protocols directly to the server hosting the AI, ensuring that your artificial intelligence deployment is covered under your existing NIST risk management umbrella.</p>  <h2>CIS Critical Security Controls (IG1): Essential Cyber Hygiene</h2>  <p>The Center for Internet Security (CIS) Critical Security Controls provide a prioritized path to improving enterprise cybersecurity. Implementation Group 1 (IG1) represents the foundational cyber hygiene that every organization must achieve to defend against the most common attacks.</p>  <p>A major component of CIS IG1 is strict data protection and the secure configuration of enterprise assets. Cloud AI tools often bypass these controls by allowing end-users to upload corporate data to unvetted web browsers (known as Shadow IT). By deploying our secure on-premise AI server, you regain total administrative oversight. You control exactly who has access to the AI models via your own active directory, directly supporting CIS IG1 requirements for access control and secure software deployment.</p>  <h2>CMMC Level 1: Safeguarding Sensitive Information</h2>  <p>For organizations operating within the defense industrial base, the Cybersecurity Maturity Model Certification (CMMC) is a strict prerequisite. CMMC Level 1 focuses specifically on the basic safeguarding of Federal Contract Information (FCI).</p>  <p>Public cloud AI platforms are generally prohibited from processing FCI unless they achieve specific, costly governmental cloud certifications. Our platform bypasses this hurdle entirely. Because the AI engine runs in a fully air-gapped, offline state, it inherits the physical and logical security boundaries of the facility it is installed in. Defense contractors can safely deploy our multi-agent system to analyze complex contracts and technical manuals without risking the exposure of sensitive government information.</p>  <h2>Zero-Trust Architecture: No Telemetry, No Cloud</h2>  <p>True AI data privacy compliance is not just about where the data is stored; it is about ensuring the software has no hidden backdoors. Many 'local' AI wrappers still phone home to report usage analytics, verify licenses, or download silent background updates.</p>  <p>The Intelligent Enterprise Group takes a strict zero-trust approach to software design. Our enterprise solutions contain absolutely no telemetry modules. Once installed on your secure server, the AI functions with complete autonomy. It requires no continuous internet ping, ensuring that your digital workforce remains fully productive even in the most secure, isolated network environments.</p>  <h2>Empower Your Digital Workforce Safely</h2>  <p>Risk management should not mean missing out on the AI revolution. By adhering to Belgium's CyberFundamentals, NIST CSF, CIS IG1, and CMMC Level 1, our platform allows your organization to confidently deploy a digital workforce behind your corporate firewall. You achieve the operational efficiency of an AI expert team while maintaining the uncompromising security posture your stakeholders demand.</p>             <div class="parent-hub-link" style="background-color: var(--card-bg2); padding: 1rem; border-radius: 6px; margin-bottom: 2rem;">
+                <span style="font-size: 0.9rem; color: var(--text-color);">Part of our enterprise server and infrastructure guide:</span>
+                <a href="/secure-on-premise-ai-server.html" style="font-weight: bold; margin-left: 0.5rem; color: var(--btn-bg);">
+                    Secure On-Premise AI Server & Infrastructure
+                </a>
+            </div>
+            <div class="callout" style="background-color: rgba(161, 144, 217, 0.1); border-left: 4px solid var(--btn-bg); padding: 1.5rem; margin: 2rem 0; border-radius: 4px;">
+                <strong style="display: block; font-size: 1.2rem; margin-bottom: 0.5rem; color: var(--text-color);">
+                    Verify Our Security Standards
+                </strong>
+                <p style="margin-bottom: 1rem;">Protect your proprietary data with true air-gapped AI. We offer a comprehensive 6-month trial of our core software for a one-time small administrative fee to test within your secure environment.<br><br><span style='font-size: 1.1rem;'>Want to see how it operates first? <a href='/demo.html' style='color: var(--btn-bg); font-weight: bold; text-decoration: underline;'>Watch our Live Demo here.</a></span></p>
+                <a href="/trial.html" class="btn">Start Free Trial</a>
+            </div>
+         
+    </div>
+</section>
+
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&#xA9; 2025 The Intelligent Enterprise Group. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="/js/swiper-bundle.min.js"></script>
+    <script src="/js/cdn.min.js" defer></script>
+    <script src="/js/gsap.min.js"></script>
+    <script src="/js/DrawSVGPlugin.min.js"></script>
+
+    <script type="module" src="/js/themeToggle.js"></script>
+    <script type="module">
+        import { toggleTheme, getCurrentTheme } from '/js/themeToggle.js';
+        const checkbox = document.getElementById('theme-checkbox');
+        const themeLabel = document.getElementById('theme-label');
+
+        if (getCurrentTheme() === 'dark') {
+            checkbox.checked = true;
+            themeLabel.textContent = 'Dark Mode';
+        } else {
+            themeLabel.textContent = 'Light Mode';
+        }
+
+        checkbox.addEventListener('change', () => {
+            toggleTheme();
+            themeLabel.textContent = checkbox.checked ? 'Dark Mode' : 'Light Mode';
+        });
+    </script>
+
+    <button id="back-to-top" aria-label="Back to Top">Top</button>
+
+    
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            if (window.innerWidth < 768) return;
+
+            const intro = document.querySelector("#right-intro");
+            if (!intro) return;
+
+            const tl = gsap.timeline();
+            let isClosing = false; // Flag to prevent double-triggering the exit
+
+            // --- 1. DEFINE THE EXIT FUNCTION ---
+            const closeIntro = () => {
+                if (isClosing) return;
+                isClosing = true;
+
+                // Kill the main timeline so it doesn't keep running in the background
+                tl.kill();
+
+                // Create a dedicated exit timeline for a fast, responsive feel
+                const exitTl = gsap.timeline();
+
+                /* ROBOT FAST REVEAL & RUN */
+                exitTl.to(".robot-runner", { opacity: 1, duration: 0.2 });
+                exitTl.to(".robot-runner", {
+                    x: 400,
+                    duration: 0.8,
+                    ease: "power2.in"
+                }, "-=0.1");
+
+                /* PANEL SLIDE-OUT */
+                exitTl.to("#right-intro", {
+                    duration: 0.8,
+                    transform: "translateX(100%)",
+                    ease: "power3.inOut",
+                    onComplete: () => {
+                        intro.style.display = "none";
+                        // Remove scroll listener once closed
+                        window.removeEventListener("scroll", handleScroll);
+                    }
+                }, "-=0.6");
+            };
+
+            // --- 2. THE SCROLL LISTENER ---
+            const handleScroll = () => {
+                if (window.scrollY > 20) { // Trigger after 20px of scrolling
+                    closeIntro();
+                }
+            };
+            window.addEventListener("scroll", handleScroll);
+
+            // --- 3. ORIGINAL ANIMATION SEQUENCE ---
+            /* PANEL SLIDE-IN */
+            tl.to("#right-intro", {
+                duration: 0.8,
+                transform: "translateX(0%)",
+                ease: "power3.out"
+            });
+
+            /* PARTICLES */
+            for (let i = 0; i < 20; i++) {
+                const p = document.createElement("div");
+                p.className = "particle";
+                p.style.position = "absolute";
+                p.style.width = "4px";
+                p.style.height = "4px";
+                p.style.background = "rgba(0,174,239,0.35)";
+                p.style.borderRadius = "50%";
+                p.style.left = Math.random() * 100 + "%";
+                p.style.top = "100%";
+                document.querySelector(".intro-particles").appendChild(p);
+
+                gsap.to(p, {
+                    y: -window.innerHeight - 100,
+                    duration: 4 + Math.random() * 4,
+                    delay: Math.random() * 2,
+                    repeat: -1,
+                    ease: "none"
+                });
+            }
+
+            /* SIGNAL LINE & PULSE */
+            tl.to(".signal-main", { height: "60%", duration: 0.8, ease: "power2.out" })
+                .to(".loading-dots", { opacity: 1, duration: 0.3 })
+                .to(".pulse", { opacity: 1, scale: 1.4, duration: 0.3, stagger: 0.15 })
+                .to(".pulse", { scale: 0.6, opacity: 0.4, duration: 0.3, stagger: 0.15 })
+                .to(".loading-dots", { opacity: 0, duration: 0.3 });
+
+            /* TEXT REVEAL */
+            tl.to(".t1", { opacity: 1, x: 0, duration: 0.6 })
+                .to(".t2", { opacity: 1, x: 0, duration: 0.6 })
+                .to(".t3", { opacity: 1, x: 0, duration: 0.6 })
+                .to(".t4", { opacity: 1, x: 0, duration: 0.6 });
+
+            /* ROBOT ARM/LEG LOOPS (Independent of timeline) */
+            const robotParts = [
+                { el: ".arm-left", r: 30 }, { el: ".arm-right", r: -30 },
+                { el: ".leg-left", r: -30 }, { el: ".leg-right", r: 30 }
+            ];
+            robotParts.forEach(part => {
+                gsap.to(part.el, { rotation: part.r, yoyo: true, repeat: -1, duration: 0.2, ease: "power1.inOut" });
+            });
+
+            // --- 4. AUTO-EXIT (If user doesn't scroll) ---
+            tl.to(".robot-runner", { opacity: 1, duration: 0.3, delay: 5 });
+            tl.to(".robot-runner", { x: 400, duration: 1.2, ease: "power2.inOut" }, "-=0.2");
+            tl.to("#right-intro", {
+                duration: 1,
+                transform: "translateX(100%)",
+                ease: "power3.inOut",
+                onComplete: () => {
+                    if (!isClosing) { // Only hide if scroll didn't already trigger it
+                        intro.style.display = "none";
+                        window.removeEventListener("scroll", handleScroll);
+                    }
+                }
+            }, "-=0.6");
+        });
+    </script>
+</body>
+</html>

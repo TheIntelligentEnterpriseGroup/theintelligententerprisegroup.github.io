@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="ja" dir="ltr">
+<head>
+    <meta name="robots" content="index, follow" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <meta name="description" content='&#x30A8;&#x30F3;&#x30BF;&#x30FC;&#x30D7;&#x30E9;&#x30A4;&#x30BA;AI&#x6226;&#x7565;&#x30B3;&#x30F3;&#x30B5;&#x30EB;&#x30C6;&#x30A3;&#x30F3;&#x30B0;&#x3068;AI&#x5C0E;&#x5165;&#x30A2;&#x30C9;&#x30D0;&#x30A4;&#x30B6;&#x30EA;&#x30FC;&#x306E;&#x5C02;&#x9580;&#x5BB6;&#x3068;&#x30D1;&#x30FC;&#x30C8;&#x30CA;&#x30FC;&#x30B7;&#x30C3;&#x30D7;&#x3092;&#x3002;&#x767A;&#x898B;&#x304B;&#x3089;&#x5C55;&#x958B;&#x307E;&#x3067;&#x3001;AI&#x306E;&#x5168;&#x30E9;&#x30A4;&#x30D5;&#x30B5;&#x30A4;&#x30AF;&#x30EB;&#x3092;&#x7BA1;&#x7406;&#x3057;&#x307E;&#x3059;&#x3002;' />
+    <title>&#x30A8;&#x30F3;&#x30BF;&#x30FC;&#x30D7;&#x30E9;&#x30A4;&#x30BA;AI&#x6226;&#x7565;&#x30B3;&#x30F3;&#x30B5;&#x30EB;&#x30C6;&#x30A3;&#x30F3;&#x30B0;&#xFF06;&#x30A2;&#x30C9;&#x30D0;&#x30A4;&#x30B6;&#x30EA;&#x30FC; | TIEG</title>
+
+    <style>
+        html { background-color: #3B3A47; }
+    </style>
+    <script>
+        (function () {
+            const key = 'preferredTheme';
+            const stored = localStorage.getItem(key);
+            //const systemDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+            const theme = stored || 'dark'/*(systemDark ? 'dark' : 'light')*/;
+            if (theme === 'dark') {
+                document.documentElement.classList.add('dark-mode');
+            } else {
+                document.documentElement.classList.remove('dark-mode');
+            }
+        })();
+    </script>
+
+
+        <link rel="alternate" hreflang="en" href="https://theintelligententerprisegroup.com/ai-strategy-consulting.html" />
+        <link rel="alternate" hreflang="fr" href="https://theintelligententerprisegroup.com/fr/ai-strategy-consulting.html" />
+        <link rel="alternate" hreflang="de" href="https://theintelligententerprisegroup.com/de/ai-strategy-consulting.html" />
+        <link rel="alternate" hreflang="es" href="https://theintelligententerprisegroup.com/es/ai-strategy-consulting.html" />
+        <link rel="alternate" hreflang="pt" href="https://theintelligententerprisegroup.com/pt/ai-strategy-consulting.html" />
+        <link rel="alternate" hreflang="zh" href="https://theintelligententerprisegroup.com/zh/ai-strategy-consulting.html" />
+        <link rel="alternate" hreflang="ja" href="https://theintelligententerprisegroup.com/ja/ai-strategy-consulting.html" />
+        <link rel="alternate" hreflang="ar" href="https://theintelligententerprisegroup.com/ar/ai-strategy-consulting.html" />
+
+
+    <link rel="alternate" hreflang="x-default" href="https://theintelligententerprisegroup.com/ai-strategy-consulting.html" />
+
+    <link rel="canonical" href="https://theintelligententerprisegroup.com/ja/ai-strategy-consulting.html" />
+
+
+    <link rel="stylesheet" href="/css/styles.css" />
+    <link rel="stylesheet" href="/css/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="/css/all.min.css" />
+
+    <script src="/js/lang-switcher.js" defer></script>
+
+    <script>
+        (function () {
+            if (localStorage.getItem('currentLang')) return;
+            const supported = [
+                     { code: "en" } ,
+                     { code: "fr" } ,
+                     { code: "de" } ,
+                     { code: "es" } ,
+                     { code: "pt" } ,
+                     { code: "zh" } ,
+                     { code: "ja" } ,
+                     { code: "ar" } 
+            ];
+            const defaultLang = "ja";
+            const navLangs = navigator.languages || [navigator.language || navigator.userLanguage];
+            let detected = null;
+            for (const nav of navLangs) {
+                const code = nav.toLowerCase().split('-')[0];
+                if (supported.find(s => s.code.toLowerCase() === code)) {
+                    detected = code;
+                    break;
+                }
+            }
+            const lang = detected || defaultLang;
+            localStorage.setItem('currentLang', lang);
+            document.documentElement.lang = lang;
+        })();
+    </script>
+
+    <!-- Organization structured data (JSON-LD) -->
+    <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "Organization",
+          "name": "The Intelligent Enterprise Group",
+          "url": "https://theintelligententerprisegroup.com/",
+          "logo": "https://theintelligententerprisegroup.com/images/tieg-logo.png",
+          "sameAs": []
+        }
+    </script>
+    <link rel="icon" href="/favicon.ico" />
+    <link rel="apple-touch-icon" href="/images/apple-touch-icon.png" />
+
+    
+
+</head>
+<body>
+    <header x-data="{ open: false }">
+        <div class="container header-top">
+            <div class="logo"></div>
+            <div class="theme-switch-wrapper">
+                <label class="theme-switch">
+                    <input type="checkbox" id="theme-checkbox" aria-label="Select theme"/>
+                    <span class="slider round"></span>
+                </label>
+                <span id="theme-label">ライトモード</span>
+                <span class="lang-switcher">
+                    <label for="lang-select" class="lang-label">🌐 言語:</label>
+
+                    <!-- Language switcher -->
+                    <select id="lang-select" class="lang-select">
+                        <option value="en" data-path="/">English</option>
+                        <option value="fr" data-path="/fr/">Fran&#xE7;ais</option>
+                        <option value="de" data-path="/de/">Deutsch</option>
+                        <option value="es" data-path="/es/">Espa&#xF1;ol</option>
+                        <option value="pt" data-path="/pt/">Portugu&#xEA;s</option>
+                        <option value="zh" data-path="/zh/">&#x4E2D;&#x6587;</option>
+                        <option value="ja" data-path="/ja/">&#x65E5;&#x672C;&#x8A9E;</option>
+                        <option value="ar" data-path="/ar/">&#x627;&#x644;&#x639;&#x631;&#x628;&#x64A;&#x629;</option>
+                    </select>
+
+                </span>
+            </div>
+        </div>
+        
+        <div class="container header-nav">
+            <button @click="open = !open" class="menu-toggle" aria-label="Toggle Menu">
+                <svg width="24" height="24" viewBox="0 0 24 24">
+                    <path fill="var(--nav-link-color)" d="M3 6h18v2H3V6zm0 5h18v2H3v-2zm0 5h18v2H3v-2z" />
+                </svg>
+            </button>
+
+            <nav class="main-nav" :class="{ 'open': open }">
+                <ul>
+                    <li><a href="index.html" class="">&#x30DB;&#x30FC;&#x30E0;</a></li>
+                    <li><a href="about.html" class="">&#x79C1;&#x305F;&#x3061;&#x306B;&#x3064;&#x3044;&#x3066;</a></li>
+                    <li><a href="services.html" class="">&#x30B5;&#x30FC;&#x30D3;&#x30B9;&#x3068;&#x30BD;&#x30EA;&#x30E5;&#x30FC;&#x30B7;&#x30E7;&#x30F3;</a></li>
+                    <li><a href="case-studies.html" class="">&#x4E8B;&#x4F8B;&#x7814;&#x7A76;</a></li>
+                    <li><a href="resources.html" class="active">&#x30EA;&#x30BD;&#x30FC;&#x30B9;&#x3068;&#x30A4;&#x30F3;&#x30B5;&#x30A4;&#x30C8;</a></li>
+                    <li><a href="trial.html" class="">&#x30C8;&#x30E9;&#x30A4;&#x30A2;&#x30EB;</a></li>
+                    <li><a href="pricing.html" class="">&#x6599;&#x91D1;</a></li>
+                    <li><a href="partners.html" class="">&#x30D1;&#x30FC;&#x30C8;&#x30CA;&#x30FC;&#x3068;&#x30A2;&#x30E9;&#x30A4;&#x30A2;&#x30F3;&#x30B9;</a></li>                    
+                    <li><a href="contact.html" class="">&#x304A;&#x554F;&#x3044;&#x5408;&#x308F;&#x305B;&#x30FB;&#x76F8;&#x8AC7;</a></li>
+                    <li class="has-submenu"
+                        x-data="{ openSub: false }"
+                        @mouseenter="openSub = true"
+                        @mouseleave="openSub = false">
+                      <button @click="openSub = !openSub"
+                              aria-haspopup="true"
+                              :aria-expanded="openSub.toString()">
+                        &#x60C5;&#x5831;
+                        <svg width="12" height="12" viewBox="0 0 12 12" aria-hidden="true">
+                          <path d="M3 4l3 3 3-3" fill="currentColor"/>
+                        </svg>
+                      </button>
+                      <ul class="submenu" x-show="openSub" @click.outside="openSub = false">
+                        <li><a href="careers.html" class="">&#x63A1;&#x7528;&#x60C5;&#x5831;</a></li>
+                        <li><a href="faqs.html" class="">&#x3088;&#x304F;&#x3042;&#x308B;&#x8CEA;&#x554F;</a></li>
+                        <li><a href="legal.html" class="">&#x6CD5;&#x52D9;&#x3068;&#x30DD;&#x30EA;&#x30B7;&#x30FC;</a></li>
+                      </ul>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        
+<section class="hero seo-hero" style="padding: 80px 0 40px; text-align: center; background-color: var(--card-bg2);">
+    <div class="container hero-container">
+        <h1 style="font-size: 3rem; margin-bottom: 1rem;">エンタープライズAI戦略コンサルティング＆アドバイザリー</h1>
+        <div class="hero-text">
+            <h3 style="font-weight: 400; opacity: 0.9; max-width: 800px; margin: 0 auto;">デジタルトランスフォーメーションのベテランによる戦略的ガイダンスで、人工知能イニシアチブを定義、優先順位付け、実行します。</h3>
+        </div>
+
+                <br/>
+                <p class="lead" style="font-size: 1.15rem; font-weight: 500; color: var(--btn-bg); max-width: 800px; margin: 1.5rem auto 0 auto; line-height: 1.6;">
+                    急速に進化する人工知能の展望をナビゲートするには、単なるソフトウェアの購入以上のものが必要です。それは、企業全体の包括的なビジョンを必要とします。私たちは、AIイニシアチブの定義、優先順位付け、実行を支援する戦略的ガイダンスを提供します。バックオフィス業務の自動化、安全なマルチエージェント・ワークフローの導入、あるいはデータインフラの完全な刷新など、当社のエンタープライズAI戦略コンサルティングは、厳格なセキュリティとコンプライアンスを維持しながら、投資が測定可能なROI（投資利益率）を生み出すことを保証します。
+                </p>
+
+    </div>
+</section>
+
+<section class="resources">
+    <div class="container">
+
+ <h2>無計画なAI導入の落とし穴</h2>  <p>人工知能の導入を急ぐあまり、多くの組織がコストのかかる「シャドーIT」の罠に陥っています。これは、バラバラの部署がIT部門の監視なしに冗長なSaaSツールを購入する状態を指します。この断片的なアプローチは、データプライバシーの枠組みに違反するだけでなく、ユーザーの定着率の低下や、拡張性のないサイロ化を招きます。</p>  <p>デジタルトランスフォーメーションを成功させるには、統一されたアーキテクチャと明確なロードマップが必要です。適切なAI導入アドバイザリーがなければ、企業は汎用的な大規模言語モデル（LLM）に多額の投資をしても、特定のドメインレベルのビジネス課題を解決できずに終わるリスクがあります。</p>  <h2>数十年の経験に裏打ちされたリーダーシップ</h2>  <p>真の戦略的コンサルティングは、実証された実践的な経験に基づいています。当社のAIアドバイザリー部門は、深い技術的専門知識と業界の先見性によって導かれています。創設者のZoliは、エンタープライズテクノロジーにおいて20年以上の経験を持ち、10年以上にわたって人工知能に直接携わってきました。</p>  <p>グローバル企業のデジタルトランスフォーメーションにおける信頼できるアドバイザーとして、彼は最先端技術をレガシーシステムに統合する複雑さを乗り越えてきました。さらに、彼は『The Application of Artificial Intelligence: Step-by-Step Guide from Beginner to Expert（人工知能の応用：初心者から専門家へのステップバイステップガイド）』の著者でもあり、ソートリーダーシップ、教育、そして実行可能なAI導入戦略に対する当社の献身を確固たるものにしています。</p>  <h2>テクノロジーとビジョンの整合</h2>  <p>私たちは、テクノロジーを導入すること自体を目的とは考えていません。当社のコンサルタントは、テクノロジーの導入を貴社の全体的な企業ビジョンに整合させます。コードを1行推奨したり、エージェント・ワークフローを展開したりする前に、私たちは貴社の運用上の課題に深く関わります。</p>  <p>サプライチェーンのボトルネックを解消したいですか？ 法務書類のレビューを加速させたいですか？ 私たちはこれらの具体的な目標をマッピングし、貴社の目標をネイティブにサポートするAIアーキテクチャを設計します。予測とシナリオプランニングを通じてリスクを軽減することで、コンプライアンスのハードルから従業員の抵抗まで、導入スケジュールに影響を与える前に潜在的な障害を特定します。</p>  <h2>AI導入の全ライフサイクルを管理</h2>  <p>成功するAI戦略は、一度限りのプレゼンテーションではありません。それは継続的なパートナーシップです。発見と監査から、完全な展開とロールアウトまで、AI導入の全ライフサイクルを管理します。当社の手法は、明確で実行可能なフェーズに分かれています。</p>                     <ul>
+ <li><strong>発見と監査：</strong> 現在のITインフラ、データの準備状況、組織のボトルネックを分析し、最も価値の高いAIユースケースを特定します。</li>  <li><strong>戦略とロードマップ：</strong> 成功に必要なハードウェア（安全なオンプレミスサーバーなど）、ソフトウェアアーキテクチャ、コンプライアンスフレームワークを詳しく説明した包括的な設計図を提供します。</li>  <li><strong>パイロットとカスタム開発：</strong> 制御された概念実証（PoC）ワークフローを展開し、当社のカスタムAIエージェント開発チームを活用して、貴社のデータに合わせた専門のエージェントを構築します。</li>  <li><strong>展開とチェンジマネジメント：</strong> 企業全体のロールアウトを監督し、従業員が自信を持って新しいデジタルエコシステムを採用できるよう、広範なトレーニングを実施します。</li>                     </ul>
+ <h2>リスク軽減とセキュリティ・ファースト</h2>  <p>エンタープライズAI戦略コンサルティングにおいて、データセキュリティは導入の基盤となる柱です。人工知能の統合は、適切に管理されなければ、データの持ち出しや知的財産の損失という新たなベクトルをもたらします。</p>  <p>当社のアドバイザリーサービスは、安全なAIフレームワークを強く重視しています。エアギャップ（隔離）システムの導入といった複雑なプロセスを組織に案内し、新しいインフラがNIST CSF、CIS IG1、CMMCレベル1、および欧州GDPR基準に準拠していることを保証します。潜在的なサイバーリスクを予測することで、セキュリティを後付けとしてではなく、AIロードマップの基礎として組み込みます。</p>  <h2>テクノロジーと共に文化を変革する</h2>  <p>AI導入の最大の障壁が技術的であることは稀です。それは、文化的であることが多いのです。従業員は、自動化が自分の役割を奪うのではないかと恐れることがよくあります。当社のコンサルタントは、チェンジマネジメントの専門家です。AIを、日常的な業務を排除し、従業員の戦略的価値を高めるために設計された「エキスパートチーム」として位置づけ、企業全体にイノベーションの文化と熱意ある採用を育みます。</p>             <div class="parent-hub-link" style="background-color: var(--card-bg2); padding: 1rem; border-radius: 6px; margin-bottom: 2rem;">
+                <span style="font-size: 0.9rem; color: var(--text-color);">当社の包括的なコンサルティングおよび開発サービスの一環です：</span>
+                <a href="/agentic-ai-workflows.html" style="font-weight: bold; margin-left: 0.5rem; color: var(--btn-bg);">
+                    エージェントAIワークフロー＆コンサルティング
+                </a>
+            </div>
+            <div class="callout" style="background-color: rgba(161, 144, 217, 0.1); border-left: 4px solid var(--btn-bg); padding: 1.5rem; margin: 2rem 0; border-radius: 4px;">
+                <strong style="display: block; font-size: 1.2rem; margin-bottom: 0.5rem; color: var(--text-color);">
+                    エンタープライズAIロードマップを定義しましょう
+                </strong>
+                <p style="margin-bottom: 1rem;">AI導入の複雑さを一人で乗り越えないでください。当社の提言チームと協力して、安全で拡張性のある戦略を構築しましょう。あるいは、わずか39ユーロでデスクトップエディションの6ヶ月間トライアルを利用して、当社のソフトウェアを直接体験してください。<br><br><span style='font-size: 1.1rem;'>当社の基盤技術が動いているところを見たいですか？ <a href='/demo.html' style='color: var(--btn-bg); font-weight: bold; text-decoration: underline;'>こちらでライブデモをご覧ください。</a></span></p>
+                <a href="/trial.html" class="btn">無料トライアルを開始する</a>
+            </div>
+         
+    </div>
+</section>
+
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&#xA9; 2025 The Intelligent Enterprise Group. &#x7121;&#x65AD;&#x8EE2;&#x8F09;&#x3092;&#x7981;&#x3058;&#x307E;&#x3059;&#x3002;</p>
+        </div>
+    </footer>
+
+    <script src="/js/swiper-bundle.min.js"></script>
+    <script src="/js/cdn.min.js" defer></script>
+    <script src="/js/gsap.min.js"></script>
+    <script src="/js/DrawSVGPlugin.min.js"></script>
+
+    <script type="module" src="/js/themeToggle.js"></script>
+    <script type="module">
+        import { toggleTheme, getCurrentTheme } from '/js/themeToggle.js';
+        const checkbox = document.getElementById('theme-checkbox');
+        const themeLabel = document.getElementById('theme-label');
+
+        if (getCurrentTheme() === 'dark') {
+            checkbox.checked = true;
+            themeLabel.textContent = 'ダークモード';
+        } else {
+            themeLabel.textContent = 'ライトモード';
+        }
+
+        checkbox.addEventListener('change', () => {
+            toggleTheme();
+            themeLabel.textContent = checkbox.checked ? 'ダークモード' : 'ライトモード';
+        });
+    </script>
+
+    <button id="back-to-top" aria-label="Back to Top">&#x30C8;&#x30C3;&#x30D7;</button>
+
+    
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            if (window.innerWidth < 768) return;
+
+            const intro = document.querySelector("#right-intro");
+            if (!intro) return;
+
+            const tl = gsap.timeline();
+            let isClosing = false; // Flag to prevent double-triggering the exit
+
+            // --- 1. DEFINE THE EXIT FUNCTION ---
+            const closeIntro = () => {
+                if (isClosing) return;
+                isClosing = true;
+
+                // Kill the main timeline so it doesn't keep running in the background
+                tl.kill();
+
+                // Create a dedicated exit timeline for a fast, responsive feel
+                const exitTl = gsap.timeline();
+
+                /* ROBOT FAST REVEAL & RUN */
+                exitTl.to(".robot-runner", { opacity: 1, duration: 0.2 });
+                exitTl.to(".robot-runner", {
+                    x: 400,
+                    duration: 0.8,
+                    ease: "power2.in"
+                }, "-=0.1");
+
+                /* PANEL SLIDE-OUT */
+                exitTl.to("#right-intro", {
+                    duration: 0.8,
+                    transform: "translateX(100%)",
+                    ease: "power3.inOut",
+                    onComplete: () => {
+                        intro.style.display = "none";
+                        // Remove scroll listener once closed
+                        window.removeEventListener("scroll", handleScroll);
+                    }
+                }, "-=0.6");
+            };
+
+            // --- 2. THE SCROLL LISTENER ---
+            const handleScroll = () => {
+                if (window.scrollY > 20) { // Trigger after 20px of scrolling
+                    closeIntro();
+                }
+            };
+            window.addEventListener("scroll", handleScroll);
+
+            // --- 3. ORIGINAL ANIMATION SEQUENCE ---
+            /* PANEL SLIDE-IN */
+            tl.to("#right-intro", {
+                duration: 0.8,
+                transform: "translateX(0%)",
+                ease: "power3.out"
+            });
+
+            /* PARTICLES */
+            for (let i = 0; i < 20; i++) {
+                const p = document.createElement("div");
+                p.className = "particle";
+                p.style.position = "absolute";
+                p.style.width = "4px";
+                p.style.height = "4px";
+                p.style.background = "rgba(0,174,239,0.35)";
+                p.style.borderRadius = "50%";
+                p.style.left = Math.random() * 100 + "%";
+                p.style.top = "100%";
+                document.querySelector(".intro-particles").appendChild(p);
+
+                gsap.to(p, {
+                    y: -window.innerHeight - 100,
+                    duration: 4 + Math.random() * 4,
+                    delay: Math.random() * 2,
+                    repeat: -1,
+                    ease: "none"
+                });
+            }
+
+            /* SIGNAL LINE & PULSE */
+            tl.to(".signal-main", { height: "60%", duration: 0.8, ease: "power2.out" })
+                .to(".loading-dots", { opacity: 1, duration: 0.3 })
+                .to(".pulse", { opacity: 1, scale: 1.4, duration: 0.3, stagger: 0.15 })
+                .to(".pulse", { scale: 0.6, opacity: 0.4, duration: 0.3, stagger: 0.15 })
+                .to(".loading-dots", { opacity: 0, duration: 0.3 });
+
+            /* TEXT REVEAL */
+            tl.to(".t1", { opacity: 1, x: 0, duration: 0.6 })
+                .to(".t2", { opacity: 1, x: 0, duration: 0.6 })
+                .to(".t3", { opacity: 1, x: 0, duration: 0.6 })
+                .to(".t4", { opacity: 1, x: 0, duration: 0.6 });
+
+            /* ROBOT ARM/LEG LOOPS (Independent of timeline) */
+            const robotParts = [
+                { el: ".arm-left", r: 30 }, { el: ".arm-right", r: -30 },
+                { el: ".leg-left", r: -30 }, { el: ".leg-right", r: 30 }
+            ];
+            robotParts.forEach(part => {
+                gsap.to(part.el, { rotation: part.r, yoyo: true, repeat: -1, duration: 0.2, ease: "power1.inOut" });
+            });
+
+            // --- 4. AUTO-EXIT (If user doesn't scroll) ---
+            tl.to(".robot-runner", { opacity: 1, duration: 0.3, delay: 5 });
+            tl.to(".robot-runner", { x: 400, duration: 1.2, ease: "power2.inOut" }, "-=0.2");
+            tl.to("#right-intro", {
+                duration: 1,
+                transform: "translateX(100%)",
+                ease: "power3.inOut",
+                onComplete: () => {
+                    if (!isClosing) { // Only hide if scroll didn't already trigger it
+                        intro.style.display = "none";
+                        window.removeEventListener("scroll", handleScroll);
+                    }
+                }
+            }, "-=0.6");
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="zh" dir="ltr">
+<head>
+    <meta name="robots" content="index, follow" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <meta name="description" content='&#x63A2;&#x7D22;&#x7528;&#x4E8E;&#x5B89;&#x5168; AI &#x4F01;&#x4E1A;&#x641C;&#x7D22;&#x7684;&#x79C1;&#x6709; RAG &#x6280;&#x672F;&#x3002;&#x901A;&#x8FC7;&#x7531; Librarian AI &#x548C;&#x81EA;&#x9002;&#x5E94;&#x8BB0;&#x5FC6;&#x63D0;&#x4F9B;&#x652F;&#x6301;&#x7684;&#x5185;&#x90E8; AI &#x641C;&#x7D22;&#xFF0C;&#x589E;&#x5F3A;&#x60A8;&#x7684;&#x7EC4;&#x7EC7;&#x80FD;&#x529B;&#x3002;' />
+    <title>&#x79C1;&#x6709; RAG &#x6280;&#x672F;&#x4E0E;&#x5B89;&#x5168;&#x4EBA;&#x5DE5;&#x667A;&#x80FD;&#x4F01;&#x4E1A;&#x641C;&#x7D22; | TIEG</title>
+
+    <style>
+        html { background-color: #3B3A47; }
+    </style>
+    <script>
+        (function () {
+            const key = 'preferredTheme';
+            const stored = localStorage.getItem(key);
+            //const systemDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+            const theme = stored || 'dark'/*(systemDark ? 'dark' : 'light')*/;
+            if (theme === 'dark') {
+                document.documentElement.classList.add('dark-mode');
+            } else {
+                document.documentElement.classList.remove('dark-mode');
+            }
+        })();
+    </script>
+
+
+        <link rel="alternate" hreflang="en" href="https://theintelligententerprisegroup.com/private-rag-enterprise-search.html" />
+        <link rel="alternate" hreflang="fr" href="https://theintelligententerprisegroup.com/fr/private-rag-enterprise-search.html" />
+        <link rel="alternate" hreflang="de" href="https://theintelligententerprisegroup.com/de/private-rag-enterprise-search.html" />
+        <link rel="alternate" hreflang="es" href="https://theintelligententerprisegroup.com/es/private-rag-enterprise-search.html" />
+        <link rel="alternate" hreflang="pt" href="https://theintelligententerprisegroup.com/pt/private-rag-enterprise-search.html" />
+        <link rel="alternate" hreflang="zh" href="https://theintelligententerprisegroup.com/zh/private-rag-enterprise-search.html" />
+        <link rel="alternate" hreflang="ja" href="https://theintelligententerprisegroup.com/ja/private-rag-enterprise-search.html" />
+        <link rel="alternate" hreflang="ar" href="https://theintelligententerprisegroup.com/ar/private-rag-enterprise-search.html" />
+
+
+    <link rel="alternate" hreflang="x-default" href="https://theintelligententerprisegroup.com/private-rag-enterprise-search.html" />
+
+    <link rel="canonical" href="https://theintelligententerprisegroup.com/zh/private-rag-enterprise-search.html" />
+
+
+    <link rel="stylesheet" href="/css/styles.css" />
+    <link rel="stylesheet" href="/css/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="/css/all.min.css" />
+
+    <script src="/js/lang-switcher.js" defer></script>
+
+    <script>
+        (function () {
+            if (localStorage.getItem('currentLang')) return;
+            const supported = [
+                     { code: "en" } ,
+                     { code: "fr" } ,
+                     { code: "de" } ,
+                     { code: "es" } ,
+                     { code: "pt" } ,
+                     { code: "zh" } ,
+                     { code: "ja" } ,
+                     { code: "ar" } 
+            ];
+            const defaultLang = "zh";
+            const navLangs = navigator.languages || [navigator.language || navigator.userLanguage];
+            let detected = null;
+            for (const nav of navLangs) {
+                const code = nav.toLowerCase().split('-')[0];
+                if (supported.find(s => s.code.toLowerCase() === code)) {
+                    detected = code;
+                    break;
+                }
+            }
+            const lang = detected || defaultLang;
+            localStorage.setItem('currentLang', lang);
+            document.documentElement.lang = lang;
+        })();
+    </script>
+
+    <!-- Organization structured data (JSON-LD) -->
+    <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "Organization",
+          "name": "The Intelligent Enterprise Group",
+          "url": "https://theintelligententerprisegroup.com/",
+          "logo": "https://theintelligententerprisegroup.com/images/tieg-logo.png",
+          "sameAs": []
+        }
+    </script>
+    <link rel="icon" href="/favicon.ico" />
+    <link rel="apple-touch-icon" href="/images/apple-touch-icon.png" />
+
+    
+
+</head>
+<body>
+    <header x-data="{ open: false }">
+        <div class="container header-top">
+            <div class="logo"></div>
+            <div class="theme-switch-wrapper">
+                <label class="theme-switch">
+                    <input type="checkbox" id="theme-checkbox" aria-label="Select theme"/>
+                    <span class="slider round"></span>
+                </label>
+                <span id="theme-label">浅色模式</span>
+                <span class="lang-switcher">
+                    <label for="lang-select" class="lang-label">🌐 语言：</label>
+
+                    <!-- Language switcher -->
+                    <select id="lang-select" class="lang-select">
+                        <option value="en" data-path="/">English</option>
+                        <option value="fr" data-path="/fr/">Fran&#xE7;ais</option>
+                        <option value="de" data-path="/de/">Deutsch</option>
+                        <option value="es" data-path="/es/">Espa&#xF1;ol</option>
+                        <option value="pt" data-path="/pt/">Portugu&#xEA;s</option>
+                        <option value="zh" data-path="/zh/">&#x4E2D;&#x6587;</option>
+                        <option value="ja" data-path="/ja/">&#x65E5;&#x672C;&#x8A9E;</option>
+                        <option value="ar" data-path="/ar/">&#x627;&#x644;&#x639;&#x631;&#x628;&#x64A;&#x629;</option>
+                    </select>
+
+                </span>
+            </div>
+        </div>
+        
+        <div class="container header-nav">
+            <button @click="open = !open" class="menu-toggle" aria-label="Toggle Menu">
+                <svg width="24" height="24" viewBox="0 0 24 24">
+                    <path fill="var(--nav-link-color)" d="M3 6h18v2H3V6zm0 5h18v2H3v-2zm0 5h18v2H3v-2z" />
+                </svg>
+            </button>
+
+            <nav class="main-nav" :class="{ 'open': open }">
+                <ul>
+                    <li><a href="index.html" class="">&#x9996;&#x9875;</a></li>
+                    <li><a href="about.html" class="">&#x5173;&#x4E8E;&#x6211;&#x4EEC;</a></li>
+                    <li><a href="services.html" class="">&#x670D;&#x52A1;&#x4E0E;&#x89E3;&#x51B3;&#x65B9;&#x6848;</a></li>
+                    <li><a href="case-studies.html" class="">&#x6848;&#x4F8B;&#x7814;&#x7A76;</a></li>
+                    <li><a href="resources.html" class="active">&#x8D44;&#x6E90;&#x4E0E;&#x6D1E;&#x5BDF;</a></li>
+                    <li><a href="trial.html" class="">&#x8BD5;&#x7528;</a></li>
+                    <li><a href="pricing.html" class="">&#x5B9A;&#x4EF7;</a></li>
+                    <li><a href="partners.html" class="">&#x5408;&#x4F5C;&#x4F19;&#x4F34;&#x4E0E;&#x8054;&#x76DF;</a></li>                    
+                    <li><a href="contact.html" class="">&#x8054;&#x7CFB;&#x4E0E;&#x54A8;&#x8BE2;</a></li>
+                    <li class="has-submenu"
+                        x-data="{ openSub: false }"
+                        @mouseenter="openSub = true"
+                        @mouseleave="openSub = false">
+                      <button @click="openSub = !openSub"
+                              aria-haspopup="true"
+                              :aria-expanded="openSub.toString()">
+                        &#x4FE1;&#x606F;
+                        <svg width="12" height="12" viewBox="0 0 12 12" aria-hidden="true">
+                          <path d="M3 4l3 3 3-3" fill="currentColor"/>
+                        </svg>
+                      </button>
+                      <ul class="submenu" x-show="openSub" @click.outside="openSub = false">
+                        <li><a href="careers.html" class="">&#x804C;&#x4E1A;&#x673A;&#x4F1A;</a></li>
+                        <li><a href="faqs.html" class="">&#x5E38;&#x89C1;&#x95EE;&#x9898;</a></li>
+                        <li><a href="legal.html" class="">&#x6CD5;&#x5F8B;&#x4E0E;&#x653F;&#x7B56;</a></li>
+                      </ul>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        
+<section class="hero seo-hero" style="padding: 80px 0 40px; text-align: center; background-color: var(--card-bg2);">
+    <div class="container hero-container">
+        <h1 style="font-size: 3rem; margin-bottom: 1rem;">私有 RAG 技术与安全人工智能企业搜索</h1>
+        <div class="hero-text">
+            <h3 style="font-weight: 400; opacity: 0.9; max-width: 800px; margin: 0 auto;">利用由自适应记忆架构和专业 AI 代理提供支持的物理隔离内部 AI 搜索引擎，释放公司数据的全部潜力。</h3>
+        </div>
+
+                <br/>
+                <p class="lead" style="font-size: 1.15rem; font-weight: 500; color: var(--btn-bg); max-width: 800px; margin: 1.5rem auto 0 auto; line-height: 1.6;">
+                    安全地查找正确的内部知识是现代企业的一个主要瓶颈。虽然公共 AI 模型功能强大，但依靠它们处理专有的公司数据会使组织面临严重的安全和合规风险。我们的平台通过将智能直接引入您的数据来解决这一难题。利用高度优化的自适应记忆架构，我们的多代理系统提供持久的短期和长期记忆，以实现更深层次的上下文理解并减少幻觉。借助私有 RAG 技术，您的数字化工作团队可以完全离线安全地导航、检索和合成您的内部知识库。
+                </p>
+
+    </div>
+</section>
+
+<section class="resources">
+    <div class="container">
+
+ <h2>内部知识发现的瓶颈</h2>  <p>在大型企业中，关键信息通常分散在数千个不相连的文档中——PDF、Word 文件、Excel 表格和历史档案。标准的企业搜索引擎依赖于基本的关键词匹配，这经常无法理解用户查询的实际上下文，导致数小时的生产力浪费。</p>  <p>虽然基于云的大语言模型 (LLM) 擅长理解上下文，但它们存在巨大的安全隐患。将机密业务战略、法律合同或财务审计发送到外部服务器进行分析，对于具有安全意识的组织来说根本不是一个选项。解决方案需要一个根本性的转变：将自主的内部 AI 搜索引擎直接部署在公司防火墙之后。</p>  <h2>什么是私有 RAG 技术？</h2>  <p>检索增强生成 (RAG) 是一种突破性的 AI 方法，允许 AI 在回答问题之前读取并参考您的特定文档。然而，大多数 RAG 实现仍然依赖公共云 API 来生成最终响应。</p>  <p>私有 RAG 技术确保整个过程——从文档索引到最终文本生成——都发生在您安全的本地私有化 AI 服务器或桌面上。当您上传专有文件时，系统会在您的物理隔离环境中创建一个安全的、加密的向量数据库。您的数据永远不会离开您的基础设施，在确保绝对数据主权的同时，提供专家级的内部 AI 搜索能力。</p>  <h2>Librarian AI：您的首席档案管理员</h2>  <p>为了安全高效地管理您的内部数据，我们的平台引入了 Librarian AI。这个专门的代理充当您 AI 专家团队的专用长期记忆。标准的 AI 模型受限于上下文窗口——它们会“忘记”您几小时前上传的内容。</p>  <p>Librarian AI 通过系统地编目、归档和维护长期知识库来消除这个问题。它细致地为您的公司数据编制索引，确保数月甚至数年的内部知识得到安全保存。当启动查询时，Librarian AI 会立即扫描这些海量的本地化档案，以快速、精确地检索过去的信息，确保不会遗漏任何关键细节。</p>  <h2>Knowledge Expert AI：合成复杂数据</h2>  <p>检索文档只是第一步；理解其与其他文档的相关性才是真正的智能所在。一旦 Librarian AI 检索到了必要的原始数据，Knowledge Expert AI 就会接管。</p>  <p>Knowledge Expert AI 旨在进行交叉引用和分析。它将从各种受信任的内部来源检索到的这些信息巩固并组织成全面、易于阅读的简报。如果您需要了解特定合规政策在三年的内部备忘录中的演变过程，Knowledge Expert AI 会将这些不同的文件合成为一个连贯的叙述。这种多代理协作确保您的管理人员收到的是具有行动价值的情报，而不仅仅是搜索结果列表。</p>  <h2>减少幻觉的自适应记忆架构</h2>  <p>标准 AI 的一个臭名昭著的问题是“幻觉”——当模型缺乏特定信息时倾向于虚构事实。在企业环境中，特别是在法律、财务或医疗保健领域，AI 幻觉可能是灾难性的。</p>  <p>我们的安全 AI 企业搜索引擎通过高度优化的自适应记忆架构来对抗这种情况。通过将 AI 的响应严格锁定在 Librarian AI 提供的数据上，并保持对正在进行的对话的持久短期和长期记忆，系统维持了严格的事实边界。AI 在结构上被限制为仅从您的受信任本地文档中合成答案，从而大幅减少了幻觉，并提供了深度情景化、可靠的输出。</p>  <h2>变革企业工作流程</h2>  <p>实施私有 RAG 技术将改变您组织的运作方式。法律团队可以立即检索数十年的案件档案，而不会破坏律师与客户的保密特权。财务审计人员可以安全地交叉引用本地账簿。研发团队可以查询他们自己的专有技术手册，而无需承担知识产权被盗的风险。</p>  <p>通过部署我们的自主代理，您不仅仅是安装了一个搜索栏；您正在整合一支不知疲倦、高度安全的数字化劳动力，从根本上加速企业生产力。</p>             <div class="parent-hub-link" style="background-color: var(--card-bg2); padding: 1rem; border-radius: 6px; margin-bottom: 2rem;">
+                <span style="font-size: 0.9rem; color: var(--text-color);">我们的企业服务器和基础设施指南的一部分：</span>
+                <a href="/secure-on-premise-ai-server.html" style="font-weight: bold; margin-left: 0.5rem; color: var(--btn-bg);">
+                    安全的本地私有化 AI 服务器与基础设施
+                </a>
+            </div>
+            <div class="callout" style="background-color: rgba(161, 144, 217, 0.1); border-left: 4px solid var(--btn-bg); padding: 1.5rem; margin: 2rem 0; border-radius: 4px;">
+                <strong style="display: block; font-size: 1.2rem; margin-bottom: 0.5rem; color: var(--text-color);">
+                    部署您的内部 AI 搜索
+                </strong>
+                <p style="margin-bottom: 1rem;">停止在专有数据上依赖公共云模型。我们为核心软件提供为期 6 个月的全面试用，仅收取一次性的小额行政费用。立即体验真正的私有 RAG。<br><br><span style='font-size: 1.1rem;'>想先看看 Librarian AI 的实际操作吗？ <a href='/demo.html' style='color: var(--btn-bg); font-weight: bold; text-decoration: underline;'>点击此处观看我们的现场演示。</a></span></p>
+                <a href="/trial.html" class="btn">开始免费试用</a>
+            </div>
+         
+    </div>
+</section>
+
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&#xA9; 2025 &#x667A;&#x80FD;&#x4F01;&#x4E1A;&#x96C6;&#x56E2;&#x3002;&#x4FDD;&#x7559;&#x6240;&#x6709;&#x6743;&#x5229;&#x3002;</p>
+        </div>
+    </footer>
+
+    <script src="/js/swiper-bundle.min.js"></script>
+    <script src="/js/cdn.min.js" defer></script>
+    <script src="/js/gsap.min.js"></script>
+    <script src="/js/DrawSVGPlugin.min.js"></script>
+
+    <script type="module" src="/js/themeToggle.js"></script>
+    <script type="module">
+        import { toggleTheme, getCurrentTheme } from '/js/themeToggle.js';
+        const checkbox = document.getElementById('theme-checkbox');
+        const themeLabel = document.getElementById('theme-label');
+
+        if (getCurrentTheme() === 'dark') {
+            checkbox.checked = true;
+            themeLabel.textContent = '深色模式';
+        } else {
+            themeLabel.textContent = '浅色模式';
+        }
+
+        checkbox.addEventListener('change', () => {
+            toggleTheme();
+            themeLabel.textContent = checkbox.checked ? '深色模式' : '浅色模式';
+        });
+    </script>
+
+    <button id="back-to-top" aria-label="Back to Top">&#x9876;&#x90E8;</button>
+
+    
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            if (window.innerWidth < 768) return;
+
+            const intro = document.querySelector("#right-intro");
+            if (!intro) return;
+
+            const tl = gsap.timeline();
+            let isClosing = false; // Flag to prevent double-triggering the exit
+
+            // --- 1. DEFINE THE EXIT FUNCTION ---
+            const closeIntro = () => {
+                if (isClosing) return;
+                isClosing = true;
+
+                // Kill the main timeline so it doesn't keep running in the background
+                tl.kill();
+
+                // Create a dedicated exit timeline for a fast, responsive feel
+                const exitTl = gsap.timeline();
+
+                /* ROBOT FAST REVEAL & RUN */
+                exitTl.to(".robot-runner", { opacity: 1, duration: 0.2 });
+                exitTl.to(".robot-runner", {
+                    x: 400,
+                    duration: 0.8,
+                    ease: "power2.in"
+                }, "-=0.1");
+
+                /* PANEL SLIDE-OUT */
+                exitTl.to("#right-intro", {
+                    duration: 0.8,
+                    transform: "translateX(100%)",
+                    ease: "power3.inOut",
+                    onComplete: () => {
+                        intro.style.display = "none";
+                        // Remove scroll listener once closed
+                        window.removeEventListener("scroll", handleScroll);
+                    }
+                }, "-=0.6");
+            };
+
+            // --- 2. THE SCROLL LISTENER ---
+            const handleScroll = () => {
+                if (window.scrollY > 20) { // Trigger after 20px of scrolling
+                    closeIntro();
+                }
+            };
+            window.addEventListener("scroll", handleScroll);
+
+            // --- 3. ORIGINAL ANIMATION SEQUENCE ---
+            /* PANEL SLIDE-IN */
+            tl.to("#right-intro", {
+                duration: 0.8,
+                transform: "translateX(0%)",
+                ease: "power3.out"
+            });
+
+            /* PARTICLES */
+            for (let i = 0; i < 20; i++) {
+                const p = document.createElement("div");
+                p.className = "particle";
+                p.style.position = "absolute";
+                p.style.width = "4px";
+                p.style.height = "4px";
+                p.style.background = "rgba(0,174,239,0.35)";
+                p.style.borderRadius = "50%";
+                p.style.left = Math.random() * 100 + "%";
+                p.style.top = "100%";
+                document.querySelector(".intro-particles").appendChild(p);
+
+                gsap.to(p, {
+                    y: -window.innerHeight - 100,
+                    duration: 4 + Math.random() * 4,
+                    delay: Math.random() * 2,
+                    repeat: -1,
+                    ease: "none"
+                });
+            }
+
+            /* SIGNAL LINE & PULSE */
+            tl.to(".signal-main", { height: "60%", duration: 0.8, ease: "power2.out" })
+                .to(".loading-dots", { opacity: 1, duration: 0.3 })
+                .to(".pulse", { opacity: 1, scale: 1.4, duration: 0.3, stagger: 0.15 })
+                .to(".pulse", { scale: 0.6, opacity: 0.4, duration: 0.3, stagger: 0.15 })
+                .to(".loading-dots", { opacity: 0, duration: 0.3 });
+
+            /* TEXT REVEAL */
+            tl.to(".t1", { opacity: 1, x: 0, duration: 0.6 })
+                .to(".t2", { opacity: 1, x: 0, duration: 0.6 })
+                .to(".t3", { opacity: 1, x: 0, duration: 0.6 })
+                .to(".t4", { opacity: 1, x: 0, duration: 0.6 });
+
+            /* ROBOT ARM/LEG LOOPS (Independent of timeline) */
+            const robotParts = [
+                { el: ".arm-left", r: 30 }, { el: ".arm-right", r: -30 },
+                { el: ".leg-left", r: -30 }, { el: ".leg-right", r: 30 }
+            ];
+            robotParts.forEach(part => {
+                gsap.to(part.el, { rotation: part.r, yoyo: true, repeat: -1, duration: 0.2, ease: "power1.inOut" });
+            });
+
+            // --- 4. AUTO-EXIT (If user doesn't scroll) ---
+            tl.to(".robot-runner", { opacity: 1, duration: 0.3, delay: 5 });
+            tl.to(".robot-runner", { x: 400, duration: 1.2, ease: "power2.inOut" }, "-=0.2");
+            tl.to("#right-intro", {
+                duration: 1,
+                transform: "translateX(100%)",
+                ease: "power3.inOut",
+                onComplete: () => {
+                    if (!isClosing) { // Only hide if scroll didn't already trigger it
+                        intro.style.display = "none";
+                        window.removeEventListener("scroll", handleScroll);
+                    }
+                }
+            }, "-=0.6");
+        });
+    </script>
+</body>
+</html>

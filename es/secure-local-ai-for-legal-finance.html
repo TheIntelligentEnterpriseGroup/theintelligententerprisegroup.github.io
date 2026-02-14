@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+<head>
+    <meta name="robots" content="index, follow" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <meta name="description" content='Descubra software de IA privado dise&#xF1;ado para flujos de trabajo legales y financieros. Procese documentos sensibles, contratos y datos financieros localmente con cero exposici&#xF3;n a la nube.' />
+    <title>Software de IA local segura para profesionales jur&#xED;dicos y financieros</title>
+
+    <style>
+        html { background-color: #3B3A47; }
+    </style>
+    <script>
+        (function () {
+            const key = 'preferredTheme';
+            const stored = localStorage.getItem(key);
+            //const systemDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+            const theme = stored || 'dark'/*(systemDark ? 'dark' : 'light')*/;
+            if (theme === 'dark') {
+                document.documentElement.classList.add('dark-mode');
+            } else {
+                document.documentElement.classList.remove('dark-mode');
+            }
+        })();
+    </script>
+
+
+        <link rel="alternate" hreflang="en" href="https://theintelligententerprisegroup.com/secure-local-ai-for-legal-finance.html" />
+        <link rel="alternate" hreflang="fr" href="https://theintelligententerprisegroup.com/fr/secure-local-ai-for-legal-finance.html" />
+        <link rel="alternate" hreflang="de" href="https://theintelligententerprisegroup.com/de/secure-local-ai-for-legal-finance.html" />
+        <link rel="alternate" hreflang="es" href="https://theintelligententerprisegroup.com/es/secure-local-ai-for-legal-finance.html" />
+        <link rel="alternate" hreflang="pt" href="https://theintelligententerprisegroup.com/pt/secure-local-ai-for-legal-finance.html" />
+        <link rel="alternate" hreflang="zh" href="https://theintelligententerprisegroup.com/zh/secure-local-ai-for-legal-finance.html" />
+        <link rel="alternate" hreflang="ja" href="https://theintelligententerprisegroup.com/ja/secure-local-ai-for-legal-finance.html" />
+        <link rel="alternate" hreflang="ar" href="https://theintelligententerprisegroup.com/ar/secure-local-ai-for-legal-finance.html" />
+
+
+    <link rel="alternate" hreflang="x-default" href="https://theintelligententerprisegroup.com/secure-local-ai-for-legal-finance.html" />
+
+    <link rel="canonical" href="https://theintelligententerprisegroup.com/es/secure-local-ai-for-legal-finance.html" />
+
+
+    <link rel="stylesheet" href="/css/styles.css" />
+    <link rel="stylesheet" href="/css/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="/css/all.min.css" />
+
+    <script src="/js/lang-switcher.js" defer></script>
+
+    <script>
+        (function () {
+            if (localStorage.getItem('currentLang')) return;
+            const supported = [
+                     { code: "en" } ,
+                     { code: "fr" } ,
+                     { code: "de" } ,
+                     { code: "es" } ,
+                     { code: "pt" } ,
+                     { code: "zh" } ,
+                     { code: "ja" } ,
+                     { code: "ar" } 
+            ];
+            const defaultLang = "es";
+            const navLangs = navigator.languages || [navigator.language || navigator.userLanguage];
+            let detected = null;
+            for (const nav of navLangs) {
+                const code = nav.toLowerCase().split('-')[0];
+                if (supported.find(s => s.code.toLowerCase() === code)) {
+                    detected = code;
+                    break;
+                }
+            }
+            const lang = detected || defaultLang;
+            localStorage.setItem('currentLang', lang);
+            document.documentElement.lang = lang;
+        })();
+    </script>
+
+    <!-- Organization structured data (JSON-LD) -->
+    <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "Organization",
+          "name": "The Intelligent Enterprise Group",
+          "url": "https://theintelligententerprisegroup.com/",
+          "logo": "https://theintelligententerprisegroup.com/images/tieg-logo.png",
+          "sameAs": []
+        }
+    </script>
+    <link rel="icon" href="/favicon.ico" />
+    <link rel="apple-touch-icon" href="/images/apple-touch-icon.png" />
+
+    
+
+</head>
+<body>
+    <header x-data="{ open: false }">
+        <div class="container header-top">
+            <div class="logo"></div>
+            <div class="theme-switch-wrapper">
+                <label class="theme-switch">
+                    <input type="checkbox" id="theme-checkbox" aria-label="Select theme"/>
+                    <span class="slider round"></span>
+                </label>
+                <span id="theme-label">Modo claro</span>
+                <span class="lang-switcher">
+                    <label for="lang-select" class="lang-label">🌐 Idioma:</label>
+
+                    <!-- Language switcher -->
+                    <select id="lang-select" class="lang-select">
+                        <option value="en" data-path="/">English</option>
+                        <option value="fr" data-path="/fr/">Fran&#xE7;ais</option>
+                        <option value="de" data-path="/de/">Deutsch</option>
+                        <option value="es" data-path="/es/">Espa&#xF1;ol</option>
+                        <option value="pt" data-path="/pt/">Portugu&#xEA;s</option>
+                        <option value="zh" data-path="/zh/">&#x4E2D;&#x6587;</option>
+                        <option value="ja" data-path="/ja/">&#x65E5;&#x672C;&#x8A9E;</option>
+                        <option value="ar" data-path="/ar/">&#x627;&#x644;&#x639;&#x631;&#x628;&#x64A;&#x629;</option>
+                    </select>
+
+                </span>
+            </div>
+        </div>
+        
+        <div class="container header-nav">
+            <button @click="open = !open" class="menu-toggle" aria-label="Toggle Menu">
+                <svg width="24" height="24" viewBox="0 0 24 24">
+                    <path fill="var(--nav-link-color)" d="M3 6h18v2H3V6zm0 5h18v2H3v-2zm0 5h18v2H3v-2z" />
+                </svg>
+            </button>
+
+            <nav class="main-nav" :class="{ 'open': open }">
+                <ul>
+                    <li><a href="index.html" class="">Inicio</a></li>
+                    <li><a href="about.html" class="">Sobre nosotros</a></li>
+                    <li><a href="services.html" class="">Servicios y Soluciones</a></li>
+                    <li><a href="case-studies.html" class="">Casos de Estudio</a></li>
+                    <li><a href="resources.html" class="active">Recursos e Ideas</a></li>
+                    <li><a href="trial.html" class="">Prueba</a></li>
+                    <li><a href="pricing.html" class="">Precios</a></li>
+                    <li><a href="partners.html" class="">Socios y Alianzas</a></li>                    
+                    <li><a href="contact.html" class="">Contacto y Consulta</a></li>
+                    <li class="has-submenu"
+                        x-data="{ openSub: false }"
+                        @mouseenter="openSub = true"
+                        @mouseleave="openSub = false">
+                      <button @click="openSub = !openSub"
+                              aria-haspopup="true"
+                              :aria-expanded="openSub.toString()">
+                        Informaci&#xF3;n
+                        <svg width="12" height="12" viewBox="0 0 12 12" aria-hidden="true">
+                          <path d="M3 4l3 3 3-3" fill="currentColor"/>
+                        </svg>
+                      </button>
+                      <ul class="submenu" x-show="openSub" @click.outside="openSub = false">
+                        <li><a href="careers.html" class="">Carreras</a></li>
+                        <li><a href="faqs.html" class="">Preguntas Frecuentes</a></li>
+                        <li><a href="legal.html" class="">Aviso Legal y Pol&#xED;ticas</a></li>
+                      </ul>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        
+<section class="hero seo-hero" style="padding: 80px 0 40px; text-align: center; background-color: var(--card-bg2);">
+    <div class="container hero-container">
+        <h1 style="font-size: 3rem; margin-bottom: 1rem;">Software de IA local segura para profesionales jurídicos y financieros</h1>
+        <div class="hero-text">
+            <h3 style="font-weight: 400; opacity: 0.9; max-width: 800px; margin: 0 auto;">Implemente una solución de software de IA privada que brinde análisis, redacción y soporte para la toma de decisiones a nivel de experto, sin exponer nunca documentos confidenciales a la nube.</h3>
+        </div>
+
+                <br/>
+                <p class="lead" style="font-size: 1.15rem; font-weight: 500; color: var(--btn-bg); max-width: 800px; margin: 1.5rem auto 0 auto; line-height: 1.6;">
+                    Para los profesionales que manejan datos de clientes altamente sensibles, mantener una estricta confidencialidad no es negociable. Ya sea que esté analizando contratos legales complejos, procesando finanzas de fusiones y adquisiciones o redactando comunicaciones privilegiadas, enviar documentos patentados a modelos de IA en la nube pública representa un riesgo inaceptable. Nuestra plataforma ofrece un equipo de IA multi-agente seguro y alojado localmente que procesa todo directamente en su propio hardware, garantizando la soberanía absoluta de los datos y el cumplimiento normativo.
+                </p>
+
+    </div>
+</section>
+
+<section class="resources">
+    <div class="container">
+
+ <h2>El desafío del cumplimiento: por qué la IA en la nube pública es un riesgo</h2>  <p>En los sectores legal y financiero, la adopción de la Inteligencia Artificial se ha visto fuertemente restringida por los marcos de cumplimiento. Las herramientas de IA SaaS estándar procesan las solicitudes de los usuarios y los documentos cargados en servidores externos de terceros. Para un bufete de abogados, esto rompe el privilegio abogado-cliente. Para una institución financiera, esto viola las estrictas leyes de residencia de datos, las regulaciones de la SEC y las directrices de GDPR.</p>  <p>Además, muchos Modelos de Lenguaje Extensos (LLM) basados en la nube entrenan sus futuras iteraciones con las entradas de los usuarios. El riesgo de que datos corporativos patentados o Información de Salud Protegida (PHI) aparezcan inadvertidamente en los resultados de IA pública es una responsabilidad catastrófica. Para aprovechar de forma segura el poder de la IA, los profesionales modernos requieren una arquitectura construida sobre un modelo de confianza cero.</p>  <h2>IA privada real: cero dependencia del servidor</h2>  <p>Nuestra plataforma fue diseñada para resolver exactamente este problema. Al ofrecer software de IA privado real, le proporcionamos un potente sistema de IA multi-agente que se instala y ejecuta completamente en su estación de trabajo local o hardware empresarial. No hay absolutamente ninguna dependencia del servidor ni telemetría que envíe información al exterior.</p>  <p>Debido a que el procesamiento computacional ocurre en su máquina, sus datos nunca abandonan su control físico. Puede implementar de forma segura capacidades avanzadas de IA dentro de redes estrictamente aisladas (air-gapped). Esto permite a los profesionales jurídicos y financieros realizar investigaciones profundas y altamente confidenciales con total tranquilidad, sabiendo que su flujo de trabajo está físicamente aislado de la internet pública.</p>  <h2>Aprendizaje multiformato: analice sus expedientes completos localmente</h2>  <p>Los casos legales y las auditorías financieras rara vez se limitan a un solo archivo de texto. Los profesionales deben sintetizar información de una gran variedad de tipos de documentos. Nuestra aplicación de escritorio de IA local cuenta con un aprendizaje multiformato avanzado, lo que significa que ingiere contexto directamente de sus archivos existentes sin problemas.</p>  <p>Sin convertir formatos ni depender de herramientas de extracción en línea, puede dirigir la IA a sus carpetas locales seguras. El sistema lee e indexa de forma segura sus documentos de Word, hojas de cálculo de Excel, PDF, grabaciones de audio e imágenes localmente. Luego puede consultar toda su base de datos localizada, pidiendo a la IA que cruce un contrato en PDF con una imagen escaneada de un anexo; todo ejecutado de forma instantánea y segura en su propio hardware.</p>  <h2>Información avanzada con la IA de análisis de datos</h2>  <p>El modelado financiero, la evaluación de riesgos y el análisis de mercado requieren analizar miles de filas de datos. Buscar anomalías o tendencias manualmente consume mucho tiempo y es propenso a errores humanos.</p>  <p>Nuestra plataforma incluye una IA de análisis de datos especializada e integrada. Este agente autónomo está diseñado específicamente para descubrir tendencias significativas utilizando métodos estadísticos avanzados. Puede cargar archivos CSV locales o hojas de cálculo de Excel e instruir a la IA para que identifique variaciones de costos, señale posibles anomalías de cumplimiento o proyecte tendencias de ingresos trimestrales. La IA de análisis de datos procesa las matemáticas localmente, brindando información cuantitativa altamente precisa sin exponer nunca sus libros contables financieros a una API externa.</p>  <h2>IA redactora de informes comerciales: de los datos a la narrativa</h2>  <p>Identificar una tendencia financiera es solo la mitad de la batalla; comunicar esa información a las partes interesadas, jurados o juntas corporativas es igualmente crítico. Transformar datos brutos y complejos en una narrativa clara y convincente es donde la IA estándar a menudo falla debido a la pérdida de contexto.</p>  <p>Para cerrar esta brecha, nuestro sistema multi-agente cuenta con la IA redactora de informes comerciales. Este agente especializado trabaja en conjunto con la IA de análisis de datos. Una vez completado el análisis cuantitativo, la IA redactora de informes redacta resúmenes ejecutivos, informes de auditoría integrales o presentaciones listas para la junta directiva. Traduce hallazgos estadísticos densos en información clara y procesable para una toma de decisiones más inteligente, adaptando su tono para ajustarse a sus pautas corporativas específicas.</p>  <h2>IA para profesionales jurídicos: revisión de contratos y traducción</h2>  <p>Para los profesionales del derecho, la precisión lo es todo. Una sola cláusula ambigua puede alterar el resultado de un caso. Nuestra IA para profesionales jurídicos actúa como un asistente legal incansable, revisando instantáneamente cientos de páginas de jurisprudencia o términos contractuales para señalar inconsistencias, cláusulas faltantes o posibles responsabilidades.</p>  <p>Además, los litigios transfronterizos y las finanzas internacionales a menudo requieren el análisis rápido de documentos extranjeros. Nuestro software de IA privado ofrece capacidades de traducción fuera de línea a nivel de experto. Puede traducir contratos extranjeros altamente sensibles o transcripciones de audio localmente, garantizando que se respeten estrictamente las leyes internacionales de privacidad de datos y manteniendo el matiz legal exacto del texto original.</p>  <h2>IA local segura para finanzas: lista para auditorías y verificable</h2>  <p>En el sector financiero, cada decisión debe ser justificable y rastreable. Los chatbots de IA estándar son conocidos por 'alucinar' números, lo cual es inaceptable en un entorno de auditoría.</p>  <p>Debido a que nuestra IA local segura para finanzas utiliza agentes especializados y Generación Aumentada por Recuperación (RAG) anclada a sus documentos locales, proporciona resultados verificables. Cuando la IA genera un resumen financiero o un argumento legal, lo hace basándose estrictamente en los datos objetivos que usted proporcionó en su entorno fuera de línea, reduciendo drásticamente las alucinaciones y proporcionando un rastro de información listo para auditorías.</p>             <div class="parent-hub-link" style="background-color: var(--card-bg2); padding: 1rem; border-radius: 6px; margin-bottom: 2rem;">
+                <span style="font-size: 0.9rem; color: var(--text-color);">Parte de nuestra guía completa sobre:</span>
+                <a href="/offline-ai-desktop-app.html" style="font-weight: bold; margin-left: 0.5rem; color: var(--btn-bg);">
+                    Aplicaciones de escritorio de IA fuera de línea seguras
+                </a>
+            </div>
+            <div class="callout" style="background-color: rgba(161, 144, 217, 0.1); border-left: 4px solid var(--btn-bg); padding: 1.5rem; margin: 2rem 0; border-radius: 4px;">
+                <strong style="display: block; font-size: 1.2rem; margin-bottom: 0.5rem; color: var(--text-color);">
+                    Experimente una privacidad sin concesiones
+                </strong>
+                <p style="margin-bottom: 1rem;">¿Listo para asegurar sus flujos de trabajo? Comience su prueba de 6 meses de nuestra Edición de Escritorio por una pequeña tarifa administrativa única e implemente su propio equipo de IA local hoy mismo.<br><br><span style='font-size: 1.1rem;'>¿Quiere verlo en acción primero? <a href='/demo.html' style='color: var(--btn-bg); font-weight: bold; text-decoration: underline;'>Vea nuestra demostración en vivo aquí.</a></span></p>
+                <a href="/trial.html" class="btn">Comenzar prueba gratuita</a>
+            </div>
+         
+    </div>
+</section>
+
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&#xA9; 2025 The Intelligent Enterprise Group. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="/js/swiper-bundle.min.js"></script>
+    <script src="/js/cdn.min.js" defer></script>
+    <script src="/js/gsap.min.js"></script>
+    <script src="/js/DrawSVGPlugin.min.js"></script>
+
+    <script type="module" src="/js/themeToggle.js"></script>
+    <script type="module">
+        import { toggleTheme, getCurrentTheme } from '/js/themeToggle.js';
+        const checkbox = document.getElementById('theme-checkbox');
+        const themeLabel = document.getElementById('theme-label');
+
+        if (getCurrentTheme() === 'dark') {
+            checkbox.checked = true;
+            themeLabel.textContent = 'Modo oscuro';
+        } else {
+            themeLabel.textContent = 'Modo claro';
+        }
+
+        checkbox.addEventListener('change', () => {
+            toggleTheme();
+            themeLabel.textContent = checkbox.checked ? 'Modo oscuro' : 'Modo claro';
+        });
+    </script>
+
+    <button id="back-to-top" aria-label="Back to Top">Arriba</button>
+
+    
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            if (window.innerWidth < 768) return;
+
+            const intro = document.querySelector("#right-intro");
+            if (!intro) return;
+
+            const tl = gsap.timeline();
+            let isClosing = false; // Flag to prevent double-triggering the exit
+
+            // --- 1. DEFINE THE EXIT FUNCTION ---
+            const closeIntro = () => {
+                if (isClosing) return;
+                isClosing = true;
+
+                // Kill the main timeline so it doesn't keep running in the background
+                tl.kill();
+
+                // Create a dedicated exit timeline for a fast, responsive feel
+                const exitTl = gsap.timeline();
+
+                /* ROBOT FAST REVEAL & RUN */
+                exitTl.to(".robot-runner", { opacity: 1, duration: 0.2 });
+                exitTl.to(".robot-runner", {
+                    x: 400,
+                    duration: 0.8,
+                    ease: "power2.in"
+                }, "-=0.1");
+
+                /* PANEL SLIDE-OUT */
+                exitTl.to("#right-intro", {
+                    duration: 0.8,
+                    transform: "translateX(100%)",
+                    ease: "power3.inOut",
+                    onComplete: () => {
+                        intro.style.display = "none";
+                        // Remove scroll listener once closed
+                        window.removeEventListener("scroll", handleScroll);
+                    }
+                }, "-=0.6");
+            };
+
+            // --- 2. THE SCROLL LISTENER ---
+            const handleScroll = () => {
+                if (window.scrollY > 20) { // Trigger after 20px of scrolling
+                    closeIntro();
+                }
+            };
+            window.addEventListener("scroll", handleScroll);
+
+            // --- 3. ORIGINAL ANIMATION SEQUENCE ---
+            /* PANEL SLIDE-IN */
+            tl.to("#right-intro", {
+                duration: 0.8,
+                transform: "translateX(0%)",
+                ease: "power3.out"
+            });
+
+            /* PARTICLES */
+            for (let i = 0; i < 20; i++) {
+                const p = document.createElement("div");
+                p.className = "particle";
+                p.style.position = "absolute";
+                p.style.width = "4px";
+                p.style.height = "4px";
+                p.style.background = "rgba(0,174,239,0.35)";
+                p.style.borderRadius = "50%";
+                p.style.left = Math.random() * 100 + "%";
+                p.style.top = "100%";
+                document.querySelector(".intro-particles").appendChild(p);
+
+                gsap.to(p, {
+                    y: -window.innerHeight - 100,
+                    duration: 4 + Math.random() * 4,
+                    delay: Math.random() * 2,
+                    repeat: -1,
+                    ease: "none"
+                });
+            }
+
+            /* SIGNAL LINE & PULSE */
+            tl.to(".signal-main", { height: "60%", duration: 0.8, ease: "power2.out" })
+                .to(".loading-dots", { opacity: 1, duration: 0.3 })
+                .to(".pulse", { opacity: 1, scale: 1.4, duration: 0.3, stagger: 0.15 })
+                .to(".pulse", { scale: 0.6, opacity: 0.4, duration: 0.3, stagger: 0.15 })
+                .to(".loading-dots", { opacity: 0, duration: 0.3 });
+
+            /* TEXT REVEAL */
+            tl.to(".t1", { opacity: 1, x: 0, duration: 0.6 })
+                .to(".t2", { opacity: 1, x: 0, duration: 0.6 })
+                .to(".t3", { opacity: 1, x: 0, duration: 0.6 })
+                .to(".t4", { opacity: 1, x: 0, duration: 0.6 });
+
+            /* ROBOT ARM/LEG LOOPS (Independent of timeline) */
+            const robotParts = [
+                { el: ".arm-left", r: 30 }, { el: ".arm-right", r: -30 },
+                { el: ".leg-left", r: -30 }, { el: ".leg-right", r: 30 }
+            ];
+            robotParts.forEach(part => {
+                gsap.to(part.el, { rotation: part.r, yoyo: true, repeat: -1, duration: 0.2, ease: "power1.inOut" });
+            });
+
+            // --- 4. AUTO-EXIT (If user doesn't scroll) ---
+            tl.to(".robot-runner", { opacity: 1, duration: 0.3, delay: 5 });
+            tl.to(".robot-runner", { x: 400, duration: 1.2, ease: "power2.inOut" }, "-=0.2");
+            tl.to("#right-intro", {
+                duration: 1,
+                transform: "translateX(100%)",
+                ease: "power3.inOut",
+                onComplete: () => {
+                    if (!isClosing) { // Only hide if scroll didn't already trigger it
+                        intro.style.display = "none";
+                        window.removeEventListener("scroll", handleScroll);
+                    }
+                }
+            }, "-=0.6");
+        });
+    </script>
+</body>
+</html>

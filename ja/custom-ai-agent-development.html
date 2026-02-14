@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="ja" dir="ltr">
+<head>
+    <meta name="robots" content="index, follow" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <meta name="description" content='&#x30AB;&#x30B9;&#x30BF;&#x30E0;AI&#x30A8;&#x30FC;&#x30B8;&#x30A7;&#x30F3;&#x30C8;&#x958B;&#x767A;&#x3067;&#x3001;&#x3042;&#x306A;&#x305F;&#x306E;AI&#x30A8;&#x30AD;&#x30B9;&#x30D1;&#x30FC;&#x30C8;&#x30C1;&#x30FC;&#x30E0;&#x3092;&#x62E1;&#x5F35;&#x3057;&#x307E;&#x3057;&#x3087;&#x3046;&#x3002;&#x72EC;&#x81EA;&#x306E;&#x30D3;&#x30B8;&#x30CD;&#x30B9;&#x76EE;&#x6A19;&#x306B;&#x5408;&#x308F;&#x305B;&#x3001;&#x30B7;&#x30FC;&#x30E0;&#x30EC;&#x30B9;&#x306B;&#x7D71;&#x5408;&#x3055;&#x308C;&#x308B;&#x30AA;&#x30FC;&#x30C0;&#x30FC;&#x30E1;&#x30A4;&#x30C9;&#x306E;AI&#x30A8;&#x30FC;&#x30B8;&#x30A7;&#x30F3;&#x30C8;&#x3092;&#x8A2D;&#x8A08;&#x30FB;&#x69CB;&#x7BC9;&#x3057;&#x307E;&#x3059;&#x3002;' />
+    <title>&#x30AB;&#x30B9;&#x30BF;&#x30E0;AI&#x30A8;&#x30FC;&#x30B8;&#x30A7;&#x30F3;&#x30C8;&#x958B;&#x767A;&#x3068;&#x30AA;&#x30FC;&#x30C0;&#x30FC;&#x30E1;&#x30A4;&#x30C9;&#x7D71;&#x5408; | TIEG</title>
+
+    <style>
+        html { background-color: #3B3A47; }
+    </style>
+    <script>
+        (function () {
+            const key = 'preferredTheme';
+            const stored = localStorage.getItem(key);
+            //const systemDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+            const theme = stored || 'dark'/*(systemDark ? 'dark' : 'light')*/;
+            if (theme === 'dark') {
+                document.documentElement.classList.add('dark-mode');
+            } else {
+                document.documentElement.classList.remove('dark-mode');
+            }
+        })();
+    </script>
+
+
+        <link rel="alternate" hreflang="en" href="https://theintelligententerprisegroup.com/custom-ai-agent-development.html" />
+        <link rel="alternate" hreflang="fr" href="https://theintelligententerprisegroup.com/fr/custom-ai-agent-development.html" />
+        <link rel="alternate" hreflang="de" href="https://theintelligententerprisegroup.com/de/custom-ai-agent-development.html" />
+        <link rel="alternate" hreflang="es" href="https://theintelligententerprisegroup.com/es/custom-ai-agent-development.html" />
+        <link rel="alternate" hreflang="pt" href="https://theintelligententerprisegroup.com/pt/custom-ai-agent-development.html" />
+        <link rel="alternate" hreflang="zh" href="https://theintelligententerprisegroup.com/zh/custom-ai-agent-development.html" />
+        <link rel="alternate" hreflang="ja" href="https://theintelligententerprisegroup.com/ja/custom-ai-agent-development.html" />
+        <link rel="alternate" hreflang="ar" href="https://theintelligententerprisegroup.com/ar/custom-ai-agent-development.html" />
+
+
+    <link rel="alternate" hreflang="x-default" href="https://theintelligententerprisegroup.com/custom-ai-agent-development.html" />
+
+    <link rel="canonical" href="https://theintelligententerprisegroup.com/ja/custom-ai-agent-development.html" />
+
+
+    <link rel="stylesheet" href="/css/styles.css" />
+    <link rel="stylesheet" href="/css/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="/css/all.min.css" />
+
+    <script src="/js/lang-switcher.js" defer></script>
+
+    <script>
+        (function () {
+            if (localStorage.getItem('currentLang')) return;
+            const supported = [
+                     { code: "en" } ,
+                     { code: "fr" } ,
+                     { code: "de" } ,
+                     { code: "es" } ,
+                     { code: "pt" } ,
+                     { code: "zh" } ,
+                     { code: "ja" } ,
+                     { code: "ar" } 
+            ];
+            const defaultLang = "ja";
+            const navLangs = navigator.languages || [navigator.language || navigator.userLanguage];
+            let detected = null;
+            for (const nav of navLangs) {
+                const code = nav.toLowerCase().split('-')[0];
+                if (supported.find(s => s.code.toLowerCase() === code)) {
+                    detected = code;
+                    break;
+                }
+            }
+            const lang = detected || defaultLang;
+            localStorage.setItem('currentLang', lang);
+            document.documentElement.lang = lang;
+        })();
+    </script>
+
+    <!-- Organization structured data (JSON-LD) -->
+    <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "Organization",
+          "name": "The Intelligent Enterprise Group",
+          "url": "https://theintelligententerprisegroup.com/",
+          "logo": "https://theintelligententerprisegroup.com/images/tieg-logo.png",
+          "sameAs": []
+        }
+    </script>
+    <link rel="icon" href="/favicon.ico" />
+    <link rel="apple-touch-icon" href="/images/apple-touch-icon.png" />
+
+    
+
+</head>
+<body>
+    <header x-data="{ open: false }">
+        <div class="container header-top">
+            <div class="logo"></div>
+            <div class="theme-switch-wrapper">
+                <label class="theme-switch">
+                    <input type="checkbox" id="theme-checkbox" aria-label="Select theme"/>
+                    <span class="slider round"></span>
+                </label>
+                <span id="theme-label">ライトモード</span>
+                <span class="lang-switcher">
+                    <label for="lang-select" class="lang-label">🌐 言語:</label>
+
+                    <!-- Language switcher -->
+                    <select id="lang-select" class="lang-select">
+                        <option value="en" data-path="/">English</option>
+                        <option value="fr" data-path="/fr/">Fran&#xE7;ais</option>
+                        <option value="de" data-path="/de/">Deutsch</option>
+                        <option value="es" data-path="/es/">Espa&#xF1;ol</option>
+                        <option value="pt" data-path="/pt/">Portugu&#xEA;s</option>
+                        <option value="zh" data-path="/zh/">&#x4E2D;&#x6587;</option>
+                        <option value="ja" data-path="/ja/">&#x65E5;&#x672C;&#x8A9E;</option>
+                        <option value="ar" data-path="/ar/">&#x627;&#x644;&#x639;&#x631;&#x628;&#x64A;&#x629;</option>
+                    </select>
+
+                </span>
+            </div>
+        </div>
+        
+        <div class="container header-nav">
+            <button @click="open = !open" class="menu-toggle" aria-label="Toggle Menu">
+                <svg width="24" height="24" viewBox="0 0 24 24">
+                    <path fill="var(--nav-link-color)" d="M3 6h18v2H3V6zm0 5h18v2H3v-2zm0 5h18v2H3v-2z" />
+                </svg>
+            </button>
+
+            <nav class="main-nav" :class="{ 'open': open }">
+                <ul>
+                    <li><a href="index.html" class="">&#x30DB;&#x30FC;&#x30E0;</a></li>
+                    <li><a href="about.html" class="">&#x79C1;&#x305F;&#x3061;&#x306B;&#x3064;&#x3044;&#x3066;</a></li>
+                    <li><a href="services.html" class="">&#x30B5;&#x30FC;&#x30D3;&#x30B9;&#x3068;&#x30BD;&#x30EA;&#x30E5;&#x30FC;&#x30B7;&#x30E7;&#x30F3;</a></li>
+                    <li><a href="case-studies.html" class="">&#x4E8B;&#x4F8B;&#x7814;&#x7A76;</a></li>
+                    <li><a href="resources.html" class="active">&#x30EA;&#x30BD;&#x30FC;&#x30B9;&#x3068;&#x30A4;&#x30F3;&#x30B5;&#x30A4;&#x30C8;</a></li>
+                    <li><a href="trial.html" class="">&#x30C8;&#x30E9;&#x30A4;&#x30A2;&#x30EB;</a></li>
+                    <li><a href="pricing.html" class="">&#x6599;&#x91D1;</a></li>
+                    <li><a href="partners.html" class="">&#x30D1;&#x30FC;&#x30C8;&#x30CA;&#x30FC;&#x3068;&#x30A2;&#x30E9;&#x30A4;&#x30A2;&#x30F3;&#x30B9;</a></li>                    
+                    <li><a href="contact.html" class="">&#x304A;&#x554F;&#x3044;&#x5408;&#x308F;&#x305B;&#x30FB;&#x76F8;&#x8AC7;</a></li>
+                    <li class="has-submenu"
+                        x-data="{ openSub: false }"
+                        @mouseenter="openSub = true"
+                        @mouseleave="openSub = false">
+                      <button @click="openSub = !openSub"
+                              aria-haspopup="true"
+                              :aria-expanded="openSub.toString()">
+                        &#x60C5;&#x5831;
+                        <svg width="12" height="12" viewBox="0 0 12 12" aria-hidden="true">
+                          <path d="M3 4l3 3 3-3" fill="currentColor"/>
+                        </svg>
+                      </button>
+                      <ul class="submenu" x-show="openSub" @click.outside="openSub = false">
+                        <li><a href="careers.html" class="">&#x63A1;&#x7528;&#x60C5;&#x5831;</a></li>
+                        <li><a href="faqs.html" class="">&#x3088;&#x304F;&#x3042;&#x308B;&#x8CEA;&#x554F;</a></li>
+                        <li><a href="legal.html" class="">&#x6CD5;&#x52D9;&#x3068;&#x30DD;&#x30EA;&#x30B7;&#x30FC;</a></li>
+                      </ul>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        
+<section class="hero seo-hero" style="padding: 80px 0 40px; text-align: center; background-color: var(--card-bg2);">
+    <div class="container hero-container">
+        <h1 style="font-size: 3rem; margin-bottom: 1rem;">カスタムAIエージェント開発と統合</h1>
+        <div class="hero-text">
+            <h3 style="font-weight: 400; opacity: 0.9; max-width: 800px; margin: 0 auto;">独自のエンタープライズワークフロー専用に設計されたオーダーメイドのエージェントで、AIエキスパートチームの能力を拡張します。</h3>
+        </div>
+
+                <br/>
+                <p class="lead" style="font-size: 1.15rem; font-weight: 500; color: var(--btn-bg); max-width: 800px; margin: 1.5rem auto 0 auto; line-height: 1.6;">
+                    当社の標準的なAIエキスパートチームは広範なビジネス機能をカバーしていますが、独自の企業には独自のスキルセットが必要になることがよくあります。貴組織には、独自のデータ形式、ニッチな規制当局への提出書類、または複雑な内部ワークフローを処理するための高度に専門化されたエキスパートが必要ですか？私たちは、貴社の正確なビジネス目標に合わせて調整された専門のAIエキスパートを設計・構築できます。当社のカスタムAIエージェント開発サービスは、既製ソフトウェアとオーダーメイドのエンジニアリングの間のギャップを埋め、完全に適応したデジタル従業員を提供します。
+                </p>
+
+    </div>
+</section>
+
+<section class="resources">
+    <div class="container">
+
+ <h2>AIエキスパートチームプラットフォームの拡張</h2>  <p>当社のカスタムAIエージェントチームは、スタンドアロンのボットではありません。コアとなるAIエキスパートチームプラットフォームのネイティブな拡張機能です。個人のプライバシーのためのデスクトップ版でも、企業全体のスケールのためのサーバー版でも、追加のAIエージェントを設計および導入して、システムの機能を指数関数的に拡張できます。</p>  <p>これらのオーダーメイドのエージェントは、既存のプラットフォームアーキテクチャとシームレスに統合されます。これらはAIコーディネーターの管理構造に直接接続され、標準のエキスパート（コピーライターAIやデータアナリストAIなど）と並行して動作し、セットアップ全体を交換または再構成することなく、特殊なユースケースに対応します。</p>  <h2>ニッチなワークフローのためのオーダーメイドAI統合</h2>  <p>一般的なAIモデルは、高度に専門的な業界用語や独自のプロセスに苦労します。汎用的なLLMは、特定の製薬特許出願やニッチな海上物流マニフェストのニュアンスを理解しません。</p>  <p>オーダーメイドのAI統合を通じて、これらの正確なシナリオのために特別に構築されたエージェントを考案します。私たちは貴社の専門家と協力して、エージェントのナレッジベース、運用の制約、および出力形式を定義します。その結果、社内言語を流暢に話し、終身雇用の従業員のような精度で複雑なタスクを実行するカスタムエージェントが誕生します。</p>  <h2>開発プロセスの仕組み</h2>  <p>カスタムエージェントの構築は、価値を迅速に提供するように設計された、協調的で合理化されたプロセスです。要件を共有していただければ、私たちがエキスパートを構築します。</p>  <p>まず、特定の入力データ（PDF、API、データベース）と目的の出力（レポート、コード、電子メール）を理解するためのディスカバリーフェーズを実施します。次に、当社のエンジニアがエージェントのプロンプトアーキテクチャ、ツール使用の定義、およびメモリパラメータを設計します。最後に、サンドボックス環境内でエージェントを厳密にテストしてから、安全な更新パッケージを介して、安全なオンプレミスAIサーバーまたはデスクトップアプリケーションに直接導入します。</p>  <h2>カスタムエージェントの例</h2>  <p>カスタマイズの可能性は事実上無限です。当社は、次のようなエージェントの導入を支援してきました。</p>  <p>**RFQ分析エージェント:** 受信した見積依頼（RFQ）メールを自動的に解析し、ラインアイテムを抽出し、Excelで予備の価格シートをドラフトします。</p>  <p>**人事ポリシーエキスパート:** 数千ページに及ぶ進化し続ける社内ハンドブックを読み込み、福利厚生やコンプライアンスに関する従業員の質問に完璧な精度で答えます。</p>  <p>**レガシーコード移行エージェント:** 独自のレガシーコードベースを最新のC#またはPythonに翻訳するために特別にトレーニングされた専門のコーディングエキスパート。</p>  <h2>既存のITとのシームレスな統合</h2>  <p>カスタムエージェントは、他のソフトウェアとやり取りできるときに最も強力になります。当社の開発プロセスには、オーダーメイドのAPI統合が含まれています。カスタムエージェントを構成して、社内CRMからデータを安全に取得したり、プロジェクト管理ボードに更新をプッシュしたり、SQLデータベースを照会したりできます。</p>  <p>この深い統合により、エージェントは受動的なテキストジェネレーターから、ビジネス自動化ワークフローの能動的な参加者へと変貌し、戦略的なロジックに基づいて現実世界のアクションをトリガーできるようになります。</p>             <div class="parent-hub-link" style="background-color: var(--card-bg2); padding: 1rem; border-radius: 6px; margin-bottom: 2rem;">
+                <span style="font-size: 0.9rem; color: var(--text-color);">当社の包括的なコンサルティングおよび開発サービスの一部:</span>
+                <a href="/agentic-ai-workflows.html" style="font-weight: bold; margin-left: 0.5rem; color: var(--btn-bg);">
+                    エージェンティックAIワークフローとコンサルティング
+                </a>
+            </div>
+            <div class="callout" style="background-color: rgba(161, 144, 217, 0.1); border-left: 4px solid var(--btn-bg); padding: 1.5rem; margin: 2rem 0; border-radius: 4px;">
+                <strong style="display: block; font-size: 1.2rem; margin-bottom: 0.5rem; color: var(--text-color);">
+                    あなたの専門エキスパートを構築しましょう
+                </strong>
+                <p style="margin-bottom: 1rem;">自動化が必要な独自のワークフローがありますか？お客様の要件について話し合いましょう。まずは、わずか39ユーロの一回限りの管理費で、コアソフトウェアの包括的な6ヶ月間のトライアルを提供しています。<br><br><span style='font-size: 1.1rem;'>当社の能力に興味がありますか？ <a href='/demo.html' style='color: var(--btn-bg); font-weight: bold; text-decoration: underline;'>こちらのライブデモをご覧ください。</a></span></p>
+                <a href="/trial.html" class="btn">無料トライアルを開始</a>
+            </div>
+         
+    </div>
+</section>
+
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&#xA9; 2025 The Intelligent Enterprise Group. &#x7121;&#x65AD;&#x8EE2;&#x8F09;&#x3092;&#x7981;&#x3058;&#x307E;&#x3059;&#x3002;</p>
+        </div>
+    </footer>
+
+    <script src="/js/swiper-bundle.min.js"></script>
+    <script src="/js/cdn.min.js" defer></script>
+    <script src="/js/gsap.min.js"></script>
+    <script src="/js/DrawSVGPlugin.min.js"></script>
+
+    <script type="module" src="/js/themeToggle.js"></script>
+    <script type="module">
+        import { toggleTheme, getCurrentTheme } from '/js/themeToggle.js';
+        const checkbox = document.getElementById('theme-checkbox');
+        const themeLabel = document.getElementById('theme-label');
+
+        if (getCurrentTheme() === 'dark') {
+            checkbox.checked = true;
+            themeLabel.textContent = 'ダークモード';
+        } else {
+            themeLabel.textContent = 'ライトモード';
+        }
+
+        checkbox.addEventListener('change', () => {
+            toggleTheme();
+            themeLabel.textContent = checkbox.checked ? 'ダークモード' : 'ライトモード';
+        });
+    </script>
+
+    <button id="back-to-top" aria-label="Back to Top">&#x30C8;&#x30C3;&#x30D7;</button>
+
+    
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            if (window.innerWidth < 768) return;
+
+            const intro = document.querySelector("#right-intro");
+            if (!intro) return;
+
+            const tl = gsap.timeline();
+            let isClosing = false; // Flag to prevent double-triggering the exit
+
+            // --- 1. DEFINE THE EXIT FUNCTION ---
+            const closeIntro = () => {
+                if (isClosing) return;
+                isClosing = true;
+
+                // Kill the main timeline so it doesn't keep running in the background
+                tl.kill();
+
+                // Create a dedicated exit timeline for a fast, responsive feel
+                const exitTl = gsap.timeline();
+
+                /* ROBOT FAST REVEAL & RUN */
+                exitTl.to(".robot-runner", { opacity: 1, duration: 0.2 });
+                exitTl.to(".robot-runner", {
+                    x: 400,
+                    duration: 0.8,
+                    ease: "power2.in"
+                }, "-=0.1");
+
+                /* PANEL SLIDE-OUT */
+                exitTl.to("#right-intro", {
+                    duration: 0.8,
+                    transform: "translateX(100%)",
+                    ease: "power3.inOut",
+                    onComplete: () => {
+                        intro.style.display = "none";
+                        // Remove scroll listener once closed
+                        window.removeEventListener("scroll", handleScroll);
+                    }
+                }, "-=0.6");
+            };
+
+            // --- 2. THE SCROLL LISTENER ---
+            const handleScroll = () => {
+                if (window.scrollY > 20) { // Trigger after 20px of scrolling
+                    closeIntro();
+                }
+            };
+            window.addEventListener("scroll", handleScroll);
+
+            // --- 3. ORIGINAL ANIMATION SEQUENCE ---
+            /* PANEL SLIDE-IN */
+            tl.to("#right-intro", {
+                duration: 0.8,
+                transform: "translateX(0%)",
+                ease: "power3.out"
+            });
+
+            /* PARTICLES */
+            for (let i = 0; i < 20; i++) {
+                const p = document.createElement("div");
+                p.className = "particle";
+                p.style.position = "absolute";
+                p.style.width = "4px";
+                p.style.height = "4px";
+                p.style.background = "rgba(0,174,239,0.35)";
+                p.style.borderRadius = "50%";
+                p.style.left = Math.random() * 100 + "%";
+                p.style.top = "100%";
+                document.querySelector(".intro-particles").appendChild(p);
+
+                gsap.to(p, {
+                    y: -window.innerHeight - 100,
+                    duration: 4 + Math.random() * 4,
+                    delay: Math.random() * 2,
+                    repeat: -1,
+                    ease: "none"
+                });
+            }
+
+            /* SIGNAL LINE & PULSE */
+            tl.to(".signal-main", { height: "60%", duration: 0.8, ease: "power2.out" })
+                .to(".loading-dots", { opacity: 1, duration: 0.3 })
+                .to(".pulse", { opacity: 1, scale: 1.4, duration: 0.3, stagger: 0.15 })
+                .to(".pulse", { scale: 0.6, opacity: 0.4, duration: 0.3, stagger: 0.15 })
+                .to(".loading-dots", { opacity: 0, duration: 0.3 });
+
+            /* TEXT REVEAL */
+            tl.to(".t1", { opacity: 1, x: 0, duration: 0.6 })
+                .to(".t2", { opacity: 1, x: 0, duration: 0.6 })
+                .to(".t3", { opacity: 1, x: 0, duration: 0.6 })
+                .to(".t4", { opacity: 1, x: 0, duration: 0.6 });
+
+            /* ROBOT ARM/LEG LOOPS (Independent of timeline) */
+            const robotParts = [
+                { el: ".arm-left", r: 30 }, { el: ".arm-right", r: -30 },
+                { el: ".leg-left", r: -30 }, { el: ".leg-right", r: 30 }
+            ];
+            robotParts.forEach(part => {
+                gsap.to(part.el, { rotation: part.r, yoyo: true, repeat: -1, duration: 0.2, ease: "power1.inOut" });
+            });
+
+            // --- 4. AUTO-EXIT (If user doesn't scroll) ---
+            tl.to(".robot-runner", { opacity: 1, duration: 0.3, delay: 5 });
+            tl.to(".robot-runner", { x: 400, duration: 1.2, ease: "power2.inOut" }, "-=0.2");
+            tl.to("#right-intro", {
+                duration: 1,
+                transform: "translateX(100%)",
+                ease: "power3.inOut",
+                onComplete: () => {
+                    if (!isClosing) { // Only hide if scroll didn't already trigger it
+                        intro.style.display = "none";
+                        window.removeEventListener("scroll", handleScroll);
+                    }
+                }
+            }, "-=0.6");
+        });
+    </script>
+</body>
+</html>

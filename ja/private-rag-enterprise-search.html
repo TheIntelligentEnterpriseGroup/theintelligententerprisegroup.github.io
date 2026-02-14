@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="ja" dir="ltr">
+<head>
+    <meta name="robots" content="index, follow" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <meta name="description" content='&#x30BB;&#x30AD;&#x30E5;&#x30A2;&#x306A;AI&#x30A8;&#x30F3;&#x30BF;&#x30FC;&#x30D7;&#x30E9;&#x30A4;&#x30BA;&#x691C;&#x7D22;&#x306E;&#x305F;&#x3081;&#x306E;&#x30D7;&#x30E9;&#x30A4;&#x30D9;&#x30FC;&#x30C8;RAG&#x30C6;&#x30AF;&#x30CE;&#x30ED;&#x30B8;&#x30FC;&#x3092;&#x3054;&#x7D39;&#x4ECB;&#x3002;Librarian AI&#x3068;&#x9069;&#x5FDC;&#x578B;&#x30E1;&#x30E2;&#x30EA;&#x3092;&#x6D3B;&#x7528;&#x3057;&#x305F;&#x793E;&#x5185;AI&#x691C;&#x7D22;&#x3067;&#x3001;&#x7D44;&#x7E54;&#x306E;&#x529B;&#x3092;&#x5F15;&#x304D;&#x51FA;&#x3057;&#x307E;&#x3059;&#x3002;' />
+    <title>&#x30D7;&#x30E9;&#x30A4;&#x30D9;&#x30FC;&#x30C8;RAG&#x30C6;&#x30AF;&#x30CE;&#x30ED;&#x30B8;&#x30FC;&#xFF06;&#x30BB;&#x30AD;&#x30E5;&#x30A2;AI&#x30A8;&#x30F3;&#x30BF;&#x30FC;&#x30D7;&#x30E9;&#x30A4;&#x30BA;&#x691C;&#x7D22; | TIEG</title>
+
+    <style>
+        html { background-color: #3B3A47; }
+    </style>
+    <script>
+        (function () {
+            const key = 'preferredTheme';
+            const stored = localStorage.getItem(key);
+            //const systemDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+            const theme = stored || 'dark'/*(systemDark ? 'dark' : 'light')*/;
+            if (theme === 'dark') {
+                document.documentElement.classList.add('dark-mode');
+            } else {
+                document.documentElement.classList.remove('dark-mode');
+            }
+        })();
+    </script>
+
+
+        <link rel="alternate" hreflang="en" href="https://theintelligententerprisegroup.com/private-rag-enterprise-search.html" />
+        <link rel="alternate" hreflang="fr" href="https://theintelligententerprisegroup.com/fr/private-rag-enterprise-search.html" />
+        <link rel="alternate" hreflang="de" href="https://theintelligententerprisegroup.com/de/private-rag-enterprise-search.html" />
+        <link rel="alternate" hreflang="es" href="https://theintelligententerprisegroup.com/es/private-rag-enterprise-search.html" />
+        <link rel="alternate" hreflang="pt" href="https://theintelligententerprisegroup.com/pt/private-rag-enterprise-search.html" />
+        <link rel="alternate" hreflang="zh" href="https://theintelligententerprisegroup.com/zh/private-rag-enterprise-search.html" />
+        <link rel="alternate" hreflang="ja" href="https://theintelligententerprisegroup.com/ja/private-rag-enterprise-search.html" />
+        <link rel="alternate" hreflang="ar" href="https://theintelligententerprisegroup.com/ar/private-rag-enterprise-search.html" />
+
+
+    <link rel="alternate" hreflang="x-default" href="https://theintelligententerprisegroup.com/private-rag-enterprise-search.html" />
+
+    <link rel="canonical" href="https://theintelligententerprisegroup.com/ja/private-rag-enterprise-search.html" />
+
+
+    <link rel="stylesheet" href="/css/styles.css" />
+    <link rel="stylesheet" href="/css/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="/css/all.min.css" />
+
+    <script src="/js/lang-switcher.js" defer></script>
+
+    <script>
+        (function () {
+            if (localStorage.getItem('currentLang')) return;
+            const supported = [
+                     { code: "en" } ,
+                     { code: "fr" } ,
+                     { code: "de" } ,
+                     { code: "es" } ,
+                     { code: "pt" } ,
+                     { code: "zh" } ,
+                     { code: "ja" } ,
+                     { code: "ar" } 
+            ];
+            const defaultLang = "ja";
+            const navLangs = navigator.languages || [navigator.language || navigator.userLanguage];
+            let detected = null;
+            for (const nav of navLangs) {
+                const code = nav.toLowerCase().split('-')[0];
+                if (supported.find(s => s.code.toLowerCase() === code)) {
+                    detected = code;
+                    break;
+                }
+            }
+            const lang = detected || defaultLang;
+            localStorage.setItem('currentLang', lang);
+            document.documentElement.lang = lang;
+        })();
+    </script>
+
+    <!-- Organization structured data (JSON-LD) -->
+    <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "Organization",
+          "name": "The Intelligent Enterprise Group",
+          "url": "https://theintelligententerprisegroup.com/",
+          "logo": "https://theintelligententerprisegroup.com/images/tieg-logo.png",
+          "sameAs": []
+        }
+    </script>
+    <link rel="icon" href="/favicon.ico" />
+    <link rel="apple-touch-icon" href="/images/apple-touch-icon.png" />
+
+    
+
+</head>
+<body>
+    <header x-data="{ open: false }">
+        <div class="container header-top">
+            <div class="logo"></div>
+            <div class="theme-switch-wrapper">
+                <label class="theme-switch">
+                    <input type="checkbox" id="theme-checkbox" aria-label="Select theme"/>
+                    <span class="slider round"></span>
+                </label>
+                <span id="theme-label">ライトモード</span>
+                <span class="lang-switcher">
+                    <label for="lang-select" class="lang-label">🌐 言語:</label>
+
+                    <!-- Language switcher -->
+                    <select id="lang-select" class="lang-select">
+                        <option value="en" data-path="/">English</option>
+                        <option value="fr" data-path="/fr/">Fran&#xE7;ais</option>
+                        <option value="de" data-path="/de/">Deutsch</option>
+                        <option value="es" data-path="/es/">Espa&#xF1;ol</option>
+                        <option value="pt" data-path="/pt/">Portugu&#xEA;s</option>
+                        <option value="zh" data-path="/zh/">&#x4E2D;&#x6587;</option>
+                        <option value="ja" data-path="/ja/">&#x65E5;&#x672C;&#x8A9E;</option>
+                        <option value="ar" data-path="/ar/">&#x627;&#x644;&#x639;&#x631;&#x628;&#x64A;&#x629;</option>
+                    </select>
+
+                </span>
+            </div>
+        </div>
+        
+        <div class="container header-nav">
+            <button @click="open = !open" class="menu-toggle" aria-label="Toggle Menu">
+                <svg width="24" height="24" viewBox="0 0 24 24">
+                    <path fill="var(--nav-link-color)" d="M3 6h18v2H3V6zm0 5h18v2H3v-2zm0 5h18v2H3v-2z" />
+                </svg>
+            </button>
+
+            <nav class="main-nav" :class="{ 'open': open }">
+                <ul>
+                    <li><a href="index.html" class="">&#x30DB;&#x30FC;&#x30E0;</a></li>
+                    <li><a href="about.html" class="">&#x79C1;&#x305F;&#x3061;&#x306B;&#x3064;&#x3044;&#x3066;</a></li>
+                    <li><a href="services.html" class="">&#x30B5;&#x30FC;&#x30D3;&#x30B9;&#x3068;&#x30BD;&#x30EA;&#x30E5;&#x30FC;&#x30B7;&#x30E7;&#x30F3;</a></li>
+                    <li><a href="case-studies.html" class="">&#x4E8B;&#x4F8B;&#x7814;&#x7A76;</a></li>
+                    <li><a href="resources.html" class="active">&#x30EA;&#x30BD;&#x30FC;&#x30B9;&#x3068;&#x30A4;&#x30F3;&#x30B5;&#x30A4;&#x30C8;</a></li>
+                    <li><a href="trial.html" class="">&#x30C8;&#x30E9;&#x30A4;&#x30A2;&#x30EB;</a></li>
+                    <li><a href="pricing.html" class="">&#x6599;&#x91D1;</a></li>
+                    <li><a href="partners.html" class="">&#x30D1;&#x30FC;&#x30C8;&#x30CA;&#x30FC;&#x3068;&#x30A2;&#x30E9;&#x30A4;&#x30A2;&#x30F3;&#x30B9;</a></li>                    
+                    <li><a href="contact.html" class="">&#x304A;&#x554F;&#x3044;&#x5408;&#x308F;&#x305B;&#x30FB;&#x76F8;&#x8AC7;</a></li>
+                    <li class="has-submenu"
+                        x-data="{ openSub: false }"
+                        @mouseenter="openSub = true"
+                        @mouseleave="openSub = false">
+                      <button @click="openSub = !openSub"
+                              aria-haspopup="true"
+                              :aria-expanded="openSub.toString()">
+                        &#x60C5;&#x5831;
+                        <svg width="12" height="12" viewBox="0 0 12 12" aria-hidden="true">
+                          <path d="M3 4l3 3 3-3" fill="currentColor"/>
+                        </svg>
+                      </button>
+                      <ul class="submenu" x-show="openSub" @click.outside="openSub = false">
+                        <li><a href="careers.html" class="">&#x63A1;&#x7528;&#x60C5;&#x5831;</a></li>
+                        <li><a href="faqs.html" class="">&#x3088;&#x304F;&#x3042;&#x308B;&#x8CEA;&#x554F;</a></li>
+                        <li><a href="legal.html" class="">&#x6CD5;&#x52D9;&#x3068;&#x30DD;&#x30EA;&#x30B7;&#x30FC;</a></li>
+                      </ul>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        
+<section class="hero seo-hero" style="padding: 80px 0 40px; text-align: center; background-color: var(--card-bg2);">
+    <div class="container hero-container">
+        <h1 style="font-size: 3rem; margin-bottom: 1rem;">プライベートRAGテクノロジー＆セキュアAIエンタープライズ検索</h1>
+        <div class="hero-text">
+            <h3 style="font-weight: 400; opacity: 0.9; max-width: 800px; margin: 0 auto;">適応型メモリ・アーキテクチャと特化型AIエージェントを搭載した、エアギャップ環境の社内AI検索エンジンで、企業データの可能性を最大限に引き出します。</h3>
+        </div>
+
+                <br/>
+                <p class="lead" style="font-size: 1.15rem; font-weight: 500; color: var(--btn-bg); max-width: 800px; margin: 1.5rem auto 0 auto; line-height: 1.6;">
+                    適切な社内知識を安全に見つけ出すことは、現代の企業にとって大きなボトルネックとなっています。パブリックなAIモデルは強力ですが、独自の企業データの処理をそれらに依存することは、深刻なセキュリティおよびコンプライアンス上のリスクを伴います。当社のプラットフォームは、インテリジェンスをデータに直接持ってくることで、このジレンマを解決します。高度に最適化された適応型メモリ・アーキテクチャを利用し、当社のマルチエージェント・システムは、より深いコンテキストの理解とハルシネーションの抑制のために、永続的な短期および長期メモリを提供します。プライベートRAGテクノロジーにより、デジタルワークフォースは社内知識ベースを完全にオフラインで安全にナビゲート、検索、合成することができます。
+                </p>
+
+    </div>
+</section>
+
+<section class="resources">
+    <div class="container">
+
+ <h2>社内知識発見のボトルネック</h2>  <p>大企業では、重要な情報はPDF、Wordファイル、Excelスプレッドシート、過去のアーカイブなど、数千の断絶されたドキュメントに分散していることがよくあります。標準的なエンタープライズ検索エンジンは基本的なキーワードマッチングに依存しており、ユーザーのクエリの実際の文脈を理解できないことが多く、その結果、何時間もの生産性が無駄になっています。</p>  <p>クラウドベースの大規模言語モデル（LLM）は文脈の理解に優れていますが、大きなリスクを伴います。機密性の高いビジネス戦略、法的契約、または財務監査を分析のために外部サーバーに送信することは、セキュリティ意識の高い組織にとっては選択肢になり得ません。解決策には根本的な転換が必要です。つまり、自律的な社内AI検索エンジンを企業ファイアウォールの内側に直接構築することです。</p>  <h2>プライベートRAGテクノロジーとは？</h2>  <p>検索拡張生成（RAG）は、質問に答える前にAIが特定のドキュメントを読み、参照することを可能にする画期的なAI手法です。しかし、ほとんどのRAG実装は、最終的な回答を生成するために依然としてパブリッククラウドのAPIに依存しています。</p>  <p>プライベートRAGテクノロジーは、ドキュメントのインデックス作成から最終的なテキスト生成までのプロセス全体が、安全なオンプレミスのAIサーバーまたはデスクトップ上でローカルに行われることを保証します。独自のファイルをアップロードすると、システムはエアギャップ環境内に完全に安全で暗号化されたベクトルデータベースを作成します。データがインフラストラクチャの外に出ることは決してなく、絶対的なデータ主権を確保しながら、専門家レベルの社内AI検索機能を提供します。</p>  <h2>Librarian AI：あなたのマスター・アーキビスト</h2>  <p>社内データを安全かつ効率的に管理するために、当社のプラットフォームは「Librarian AI」を導入しています。この特化型エージェントは、AIエキスパートチームの専用の長期メモリとして機能します。標準的なAIモデルはコンテキストウィンドウが狭く、数時間前にアップロードした内容を「忘れて」しまうという問題があります。</p>  <p>Librarian AIは、長期的なナレッジストアを体系的にカタログ化、アーカイブ、維持することで、この問題を解消します。企業データを細心の注意を払ってインデックス化し、数ヶ月あるいは数年にわたる社内知識を安全に保存します。クエリが開始されると、Librarian AIはこれらの巨大なローカルアーカイブを即座にスキャンして、過去の情報を迅速かつ正確に検索し、重要な詳細が見落とされることがないようにします。</p>  <h2>Knowledge Expert AI：複雑なデータの合成</h2>  <p>ドキュメントを検索することは最初の一歩に過ぎません。他のドキュメントとの関連性を理解することこそが、真のインテリジェンスの所在です。Librarian AIが必要な生データを取得すると、Knowledge Expert AIが引き継ぎます。</p>  <p>Knowledge Expert AIは、情報の相互参照と分析を行うように設計されています。信頼できる多様な社内ソースから取得した情報を整理・統合し、包括的で読みやすいブリーフを作成します。例えば、3年間の社内メモにわたる特定のコンプライアンス・ポリシーの変遷を理解する必要がある場合、Knowledge Expert AIはそれらの個別のファイルを1つのまとまりのあるナラティブに合成します。このマルチエージェントの連携により、エグゼクティブは単なる検索結果のリストではなく、アクション可能なインテリジェンスを受け取ることができます。</p>  <h2>ハルシネーションを抑制する適応型メモリ・アーキテクチャ</h2>  <p>標準的なAIの悪名高い問題は「ハルシネーション（幻覚）」、つまりモデルに特定の情報が不足しているときに事実を捏造する傾向です。企業環境、特に法務、財務、ヘルスケアの分野では、AIのハルシネーションは致命的となる可能性があります。</p>  <p>当社のセキュアAIエンタープライズ検索エンジンは、高度に最適化された適応型メモリ・アーキテクチャを通じてこれに対処します。AIの回答をLibrarian AIから提供されたデータのみに厳格に固定し、進行中の会話の短期および長期メモリを永続的に維持することで、システムは厳格な事実の境界を維持します。AIは、信頼できるローカルドキュメントからのみ回答を合成するように構造的に制限されているため、ハルシネーションが劇的に減少し、文脈に即した信頼性の高い出力が得られます。</p>  <h2>企業ワークフローの変革</h2>  <p>プライベートRAGテクノロジーの導入は、組織の運営方法を変革します。法務チームは、弁護士・依頼者間の守秘義務を破ることなく、数十年前の事件ファイルを即座に検索できます。財務監査人は、ローカルの元帳を安全に照合できます。研究開発チームは、知的財産の盗難のリスクを冒すことなく、独自の技術マニュアルにクエリを実行できます。</p>  <p>自律型エージェントを導入することで、単に検索バーを設置するだけではありません。たゆまぬ努力を続け、高度に安全なデジタルワークフォースを統合し、企業の生産性を根本から加速させるのです。</p>             <div class="parent-hub-link" style="background-color: var(--card-bg2); padding: 1rem; border-radius: 6px; margin-bottom: 2rem;">
+                <span style="font-size: 0.9rem; color: var(--text-color);">当社のエンタープライズサーバーおよびインフラストラクチャガイドの一部：</span>
+                <a href="/secure-on-premise-ai-server.html" style="font-weight: bold; margin-left: 0.5rem; color: var(--btn-bg);">
+                    セキュアなオンプレミスAIサーバー＆インフラストラクチャ
+                </a>
+            </div>
+            <div class="callout" style="background-color: rgba(161, 144, 217, 0.1); border-left: 4px solid var(--btn-bg); padding: 1.5rem; margin: 2rem 0; border-radius: 4px;">
+                <strong style="display: block; font-size: 1.2rem; margin-bottom: 0.5rem; color: var(--text-color);">
+                    社内AI検索を導入する
+                </strong>
+                <p style="margin-bottom: 1rem;">独自のデータのためにパブリッククラウドモデルに依存するのはやめましょう。1回限りの少額の事務手数料で、当社のコアソフトウェアの包括的な6ヶ月間トライアルを提供しています。真のプライベートRAGを今すぐ体験してください。<br><br><span style='font-size: 1.1rem;'>まずはLibrarian AIの動作を確認したいですか？ <a href='/demo.html' style='color: var(--btn-bg); font-weight: bold; text-decoration: underline;'>こちらのライブデモをご覧ください。</a></span></p>
+                <a href="/trial.html" class="btn">無料トライアルを開始</a>
+            </div>
+         
+    </div>
+</section>
+
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&#xA9; 2025 The Intelligent Enterprise Group. &#x7121;&#x65AD;&#x8EE2;&#x8F09;&#x3092;&#x7981;&#x3058;&#x307E;&#x3059;&#x3002;</p>
+        </div>
+    </footer>
+
+    <script src="/js/swiper-bundle.min.js"></script>
+    <script src="/js/cdn.min.js" defer></script>
+    <script src="/js/gsap.min.js"></script>
+    <script src="/js/DrawSVGPlugin.min.js"></script>
+
+    <script type="module" src="/js/themeToggle.js"></script>
+    <script type="module">
+        import { toggleTheme, getCurrentTheme } from '/js/themeToggle.js';
+        const checkbox = document.getElementById('theme-checkbox');
+        const themeLabel = document.getElementById('theme-label');
+
+        if (getCurrentTheme() === 'dark') {
+            checkbox.checked = true;
+            themeLabel.textContent = 'ダークモード';
+        } else {
+            themeLabel.textContent = 'ライトモード';
+        }
+
+        checkbox.addEventListener('change', () => {
+            toggleTheme();
+            themeLabel.textContent = checkbox.checked ? 'ダークモード' : 'ライトモード';
+        });
+    </script>
+
+    <button id="back-to-top" aria-label="Back to Top">&#x30C8;&#x30C3;&#x30D7;</button>
+
+    
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            if (window.innerWidth < 768) return;
+
+            const intro = document.querySelector("#right-intro");
+            if (!intro) return;
+
+            const tl = gsap.timeline();
+            let isClosing = false; // Flag to prevent double-triggering the exit
+
+            // --- 1. DEFINE THE EXIT FUNCTION ---
+            const closeIntro = () => {
+                if (isClosing) return;
+                isClosing = true;
+
+                // Kill the main timeline so it doesn't keep running in the background
+                tl.kill();
+
+                // Create a dedicated exit timeline for a fast, responsive feel
+                const exitTl = gsap.timeline();
+
+                /* ROBOT FAST REVEAL & RUN */
+                exitTl.to(".robot-runner", { opacity: 1, duration: 0.2 });
+                exitTl.to(".robot-runner", {
+                    x: 400,
+                    duration: 0.8,
+                    ease: "power2.in"
+                }, "-=0.1");
+
+                /* PANEL SLIDE-OUT */
+                exitTl.to("#right-intro", {
+                    duration: 0.8,
+                    transform: "translateX(100%)",
+                    ease: "power3.inOut",
+                    onComplete: () => {
+                        intro.style.display = "none";
+                        // Remove scroll listener once closed
+                        window.removeEventListener("scroll", handleScroll);
+                    }
+                }, "-=0.6");
+            };
+
+            // --- 2. THE SCROLL LISTENER ---
+            const handleScroll = () => {
+                if (window.scrollY > 20) { // Trigger after 20px of scrolling
+                    closeIntro();
+                }
+            };
+            window.addEventListener("scroll", handleScroll);
+
+            // --- 3. ORIGINAL ANIMATION SEQUENCE ---
+            /* PANEL SLIDE-IN */
+            tl.to("#right-intro", {
+                duration: 0.8,
+                transform: "translateX(0%)",
+                ease: "power3.out"
+            });
+
+            /* PARTICLES */
+            for (let i = 0; i < 20; i++) {
+                const p = document.createElement("div");
+                p.className = "particle";
+                p.style.position = "absolute";
+                p.style.width = "4px";
+                p.style.height = "4px";
+                p.style.background = "rgba(0,174,239,0.35)";
+                p.style.borderRadius = "50%";
+                p.style.left = Math.random() * 100 + "%";
+                p.style.top = "100%";
+                document.querySelector(".intro-particles").appendChild(p);
+
+                gsap.to(p, {
+                    y: -window.innerHeight - 100,
+                    duration: 4 + Math.random() * 4,
+                    delay: Math.random() * 2,
+                    repeat: -1,
+                    ease: "none"
+                });
+            }
+
+            /* SIGNAL LINE & PULSE */
+            tl.to(".signal-main", { height: "60%", duration: 0.8, ease: "power2.out" })
+                .to(".loading-dots", { opacity: 1, duration: 0.3 })
+                .to(".pulse", { opacity: 1, scale: 1.4, duration: 0.3, stagger: 0.15 })
+                .to(".pulse", { scale: 0.6, opacity: 0.4, duration: 0.3, stagger: 0.15 })
+                .to(".loading-dots", { opacity: 0, duration: 0.3 });
+
+            /* TEXT REVEAL */
+            tl.to(".t1", { opacity: 1, x: 0, duration: 0.6 })
+                .to(".t2", { opacity: 1, x: 0, duration: 0.6 })
+                .to(".t3", { opacity: 1, x: 0, duration: 0.6 })
+                .to(".t4", { opacity: 1, x: 0, duration: 0.6 });
+
+            /* ROBOT ARM/LEG LOOPS (Independent of timeline) */
+            const robotParts = [
+                { el: ".arm-left", r: 30 }, { el: ".arm-right", r: -30 },
+                { el: ".leg-left", r: -30 }, { el: ".leg-right", r: 30 }
+            ];
+            robotParts.forEach(part => {
+                gsap.to(part.el, { rotation: part.r, yoyo: true, repeat: -1, duration: 0.2, ease: "power1.inOut" });
+            });
+
+            // --- 4. AUTO-EXIT (If user doesn't scroll) ---
+            tl.to(".robot-runner", { opacity: 1, duration: 0.3, delay: 5 });
+            tl.to(".robot-runner", { x: 400, duration: 1.2, ease: "power2.inOut" }, "-=0.2");
+            tl.to("#right-intro", {
+                duration: 1,
+                transform: "translateX(100%)",
+                ease: "power3.inOut",
+                onComplete: () => {
+                    if (!isClosing) { // Only hide if scroll didn't already trigger it
+                        intro.style.display = "none";
+                        window.removeEventListener("scroll", handleScroll);
+                    }
+                }
+            }, "-=0.6");
+        });
+    </script>
+</body>
+</html>

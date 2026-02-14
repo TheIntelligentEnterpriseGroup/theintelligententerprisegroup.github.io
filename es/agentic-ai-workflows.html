@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+<head>
+    <meta name="robots" content="index, follow" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <meta name="description" content='Vaya m&#xE1;s all&#xE1; de los LLM b&#xE1;sicos con flujos de trabajo de IA ag&#xE9;ntica. Descubra nuestro sistema experto multi-agente gestionado por un Coordinador de IA para la automatizaci&#xF3;n de tareas empresariales complejas.' />
+    <title>Flujos de Trabajo de IA Ag&#xE9;ntica y Sistemas Multi-Agente | TIEG</title>
+
+    <style>
+        html { background-color: #3B3A47; }
+    </style>
+    <script>
+        (function () {
+            const key = 'preferredTheme';
+            const stored = localStorage.getItem(key);
+            //const systemDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+            const theme = stored || 'dark'/*(systemDark ? 'dark' : 'light')*/;
+            if (theme === 'dark') {
+                document.documentElement.classList.add('dark-mode');
+            } else {
+                document.documentElement.classList.remove('dark-mode');
+            }
+        })();
+    </script>
+
+
+        <link rel="alternate" hreflang="en" href="https://theintelligententerprisegroup.com/agentic-ai-workflows.html" />
+        <link rel="alternate" hreflang="fr" href="https://theintelligententerprisegroup.com/fr/agentic-ai-workflows.html" />
+        <link rel="alternate" hreflang="de" href="https://theintelligententerprisegroup.com/de/agentic-ai-workflows.html" />
+        <link rel="alternate" hreflang="es" href="https://theintelligententerprisegroup.com/es/agentic-ai-workflows.html" />
+        <link rel="alternate" hreflang="pt" href="https://theintelligententerprisegroup.com/pt/agentic-ai-workflows.html" />
+        <link rel="alternate" hreflang="zh" href="https://theintelligententerprisegroup.com/zh/agentic-ai-workflows.html" />
+        <link rel="alternate" hreflang="ja" href="https://theintelligententerprisegroup.com/ja/agentic-ai-workflows.html" />
+        <link rel="alternate" hreflang="ar" href="https://theintelligententerprisegroup.com/ar/agentic-ai-workflows.html" />
+
+
+    <link rel="alternate" hreflang="x-default" href="https://theintelligententerprisegroup.com/agentic-ai-workflows.html" />
+
+    <link rel="canonical" href="https://theintelligententerprisegroup.com/es/agentic-ai-workflows.html" />
+
+
+    <link rel="stylesheet" href="/css/styles.css" />
+    <link rel="stylesheet" href="/css/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="/css/all.min.css" />
+
+    <script src="/js/lang-switcher.js" defer></script>
+
+    <script>
+        (function () {
+            if (localStorage.getItem('currentLang')) return;
+            const supported = [
+                     { code: "en" } ,
+                     { code: "fr" } ,
+                     { code: "de" } ,
+                     { code: "es" } ,
+                     { code: "pt" } ,
+                     { code: "zh" } ,
+                     { code: "ja" } ,
+                     { code: "ar" } 
+            ];
+            const defaultLang = "es";
+            const navLangs = navigator.languages || [navigator.language || navigator.userLanguage];
+            let detected = null;
+            for (const nav of navLangs) {
+                const code = nav.toLowerCase().split('-')[0];
+                if (supported.find(s => s.code.toLowerCase() === code)) {
+                    detected = code;
+                    break;
+                }
+            }
+            const lang = detected || defaultLang;
+            localStorage.setItem('currentLang', lang);
+            document.documentElement.lang = lang;
+        })();
+    </script>
+
+    <!-- Organization structured data (JSON-LD) -->
+    <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "Organization",
+          "name": "The Intelligent Enterprise Group",
+          "url": "https://theintelligententerprisegroup.com/",
+          "logo": "https://theintelligententerprisegroup.com/images/tieg-logo.png",
+          "sameAs": []
+        }
+    </script>
+    <link rel="icon" href="/favicon.ico" />
+    <link rel="apple-touch-icon" href="/images/apple-touch-icon.png" />
+
+    
+
+</head>
+<body>
+    <header x-data="{ open: false }">
+        <div class="container header-top">
+            <div class="logo"></div>
+            <div class="theme-switch-wrapper">
+                <label class="theme-switch">
+                    <input type="checkbox" id="theme-checkbox" aria-label="Select theme"/>
+                    <span class="slider round"></span>
+                </label>
+                <span id="theme-label">Modo claro</span>
+                <span class="lang-switcher">
+                    <label for="lang-select" class="lang-label">🌐 Idioma:</label>
+
+                    <!-- Language switcher -->
+                    <select id="lang-select" class="lang-select">
+                        <option value="en" data-path="/">English</option>
+                        <option value="fr" data-path="/fr/">Fran&#xE7;ais</option>
+                        <option value="de" data-path="/de/">Deutsch</option>
+                        <option value="es" data-path="/es/">Espa&#xF1;ol</option>
+                        <option value="pt" data-path="/pt/">Portugu&#xEA;s</option>
+                        <option value="zh" data-path="/zh/">&#x4E2D;&#x6587;</option>
+                        <option value="ja" data-path="/ja/">&#x65E5;&#x672C;&#x8A9E;</option>
+                        <option value="ar" data-path="/ar/">&#x627;&#x644;&#x639;&#x631;&#x628;&#x64A;&#x629;</option>
+                    </select>
+
+                </span>
+            </div>
+        </div>
+        
+        <div class="container header-nav">
+            <button @click="open = !open" class="menu-toggle" aria-label="Toggle Menu">
+                <svg width="24" height="24" viewBox="0 0 24 24">
+                    <path fill="var(--nav-link-color)" d="M3 6h18v2H3V6zm0 5h18v2H3v-2zm0 5h18v2H3v-2z" />
+                </svg>
+            </button>
+
+            <nav class="main-nav" :class="{ 'open': open }">
+                <ul>
+                    <li><a href="index.html" class="">Inicio</a></li>
+                    <li><a href="about.html" class="">Sobre nosotros</a></li>
+                    <li><a href="services.html" class="">Servicios y Soluciones</a></li>
+                    <li><a href="case-studies.html" class="">Casos de Estudio</a></li>
+                    <li><a href="resources.html" class="active">Recursos e Ideas</a></li>
+                    <li><a href="trial.html" class="">Prueba</a></li>
+                    <li><a href="pricing.html" class="">Precios</a></li>
+                    <li><a href="partners.html" class="">Socios y Alianzas</a></li>                    
+                    <li><a href="contact.html" class="">Contacto y Consulta</a></li>
+                    <li class="has-submenu"
+                        x-data="{ openSub: false }"
+                        @mouseenter="openSub = true"
+                        @mouseleave="openSub = false">
+                      <button @click="openSub = !openSub"
+                              aria-haspopup="true"
+                              :aria-expanded="openSub.toString()">
+                        Informaci&#xF3;n
+                        <svg width="12" height="12" viewBox="0 0 12 12" aria-hidden="true">
+                          <path d="M3 4l3 3 3-3" fill="currentColor"/>
+                        </svg>
+                      </button>
+                      <ul class="submenu" x-show="openSub" @click.outside="openSub = false">
+                        <li><a href="careers.html" class="">Carreras</a></li>
+                        <li><a href="faqs.html" class="">Preguntas Frecuentes</a></li>
+                        <li><a href="legal.html" class="">Aviso Legal y Pol&#xED;ticas</a></li>
+                      </ul>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        
+<section class="hero seo-hero" style="padding: 80px 0 40px; text-align: center; background-color: var(--card-bg2);">
+    <div class="container hero-container">
+        <h1 style="font-size: 3rem; margin-bottom: 1rem;">Flujos de Trabajo de IA Agéntica y Sistemas Expertos Multi-Agente</h1>
+        <div class="hero-text">
+            <h3 style="font-weight: 400; opacity: 0.9; max-width: 800px; margin: 0 auto;">Experimente una plataforma pionera guiada por un Coordinador de IA que une equipos de expertos especializados para automatizar tareas empresariales complejas.</h3>
+        </div>
+
+                <br/>
+                <p class="lead" style="font-size: 1.15rem; font-weight: 500; color: var(--btn-bg); max-width: 800px; margin: 1.5rem auto 0 auto; line-height: 1.6;">
+                    La era de depender de un único chatbot generalista ha terminado. Para resolver desafíos empresariales complejos, las organizaciones deben ir más allá de los LLM básicos. Experimente una plataforma pionera guiada por un Coordinador de IA que une equipos de expertos especializados. Nuestra plataforma innovadora introduce una nueva forma de superinteligencia: una innovación que define una categoría en el mundo de la inteligencia artificial. Creemos que la inteligencia debe ser colaborativa, especializada y siempre enfocada en resultados reales. Al utilizar flujos de trabajo avanzados de IA agéntica, nuestro equipo de IA coordinado trabaja en conjunto como un equipo de consultoría real, transformando la forma en que su empresa aborda la estrategia, el análisis y la automatización.
+                </p>
+
+    </div>
+</section>
+
+<section class="resources">
+    <div class="container">
+
+ <h2>Yendo Más Allá de los LLM Básicos</h2>  <p>La mayoría de los despliegues de inteligencia artificial modernos se basan en Modelos de Lenguaje Grandes (LLM) que operan de forma aislada. Un usuario escribe un prompt y un único modelo generalista intenta generar una respuesta completa. Si bien este enfoque monolítico es impresionante para consultas simples, falla en entornos empresariales. Los modelos únicos sufren severas limitaciones de contexto, carecen de matices específicos del dominio y frecuentemente alucinan cuando se enfrentan a tareas de razonamiento de múltiples pasos.</p>  <p>Los flujos de trabajo de IA agéntica representan el siguiente salto evolutivo. En lugar de esperar que un generalista lo haga todo, un sistema agéntico descompone los problemas complejos en subtareas más pequeñas y manejables. Estas tareas se dirigen luego a distintos agentes de IA altamente especializados que poseen habilidades, herramientas y límites operativos específicos.</p>  <h2>El Poder de un Sistema Experto Multi-Agente</h2>  <p>En el núcleo de nuestra plataforma se encuentra un robusto sistema experto multi-agente. Esta arquitectura refleja la estructura de una empresa corporativa de alto rendimiento. Usted no contrata a un solo empleado para que se encargue de su cumplimiento legal, escriba sus textos de marketing y analice sus bases de datos financieras. Contrata a un equipo de especialistas dedicados.</p>  <p>Nuestra fuerza laboral digital opera bajo el mismo principio. Al desplegar múltiples agentes autónomos que pueden comunicarse, debatir y verificar el trabajo de los demás, el sistema logra un nivel de precisión y profundidad que un solo LLM nunca podría alcanzar. Esta superinteligencia colaborativa garantiza que cada aspecto de un proyecto sea manejado por un experto dedicado exclusivamente a ese dominio específico.</p>  <h2>El Coordinador de IA: Gestionando la Fuerza Laboral Digital</h2>  <p>Un equipo de expertos solo es efectivo si se gestiona adecuadamente. Para evitar el caos y asegurar una ejecución perfecta, nuestra plataforma está guiada por un Coordinador de IA central. Este agente ejecutivo actúa como el gestor de proyectos de su fuerza laboral digital.</p>  <p>Cuando usted envía una solicitud compleja, el Coordinador de IA analiza el prompt, deconstruye el objetivo general en pasos secuenciales y delega cada tarea al especialista apropiado en el equipo de IA coordinado. Una vez que los agentes individuales completan su trabajo, el Coordinador de IA revisa los resultados, sintetiza los hallazgos y le presenta un resultado cohesivo y finalizado. Esta orquestación autónoma es la verdadera característica definitoria de los flujos de trabajo de IA agéntica.</p>  <h2>Conozca a los Expertos: De lo Creativo a lo Analítico</h2>  <p>La fuerza de nuestro sistema experto multi-agente reside en la profunda especialización de sus miembros. Debido a que cada agente está estructurado y optimizado mediante prompts para un propósito singular, ofrecen un rendimiento inigualable en sus respectivos campos.</p>  <p>Por ejemplo, al redactar comunicaciones externas, el Coordinador de IA invocará a la IA de Escritura Creativa. Este agente se enfoca completamente en el tono, el compromiso y la estructura narrativa persuasiva, asegurando que la voz de su marca sea convincente y centrada en el ser humano.</p>  <p>Por el contrario, si una línea de fabricación experimenta una caída repentina en el rendimiento, el Coordinador de IA despliega a la IA Experta en Análisis de Causa Raíz. Este agente altamente analítico elimina las emociones y la narrativa, aplicando marcos de diagnóstico rigurosos (como los 5 Porqués o diagramas de Ishikawa) para aislar el fallo mecánico o procedimental exacto en sus datos de telemetría. Trabajan codo con codo, pero desempeñan funciones totalmente diferentes.</p>  <h2>Un Elenco Creciente de Inteligencia Especializada</h2>  <p>Los desafíos empresariales no son estáticos, y nuestra plataforma tampoco. El elenco de expertos sigue creciendo, haciendo que su equipo de IA sea más versátil con el tiempo. A medida que surgen nuevas industrias y evolucionan los marcos de cumplimiento, desarrollamos e integramos continuamente nuevos agentes especializados en el ecosistema central.</p>  <p>Esta arquitectura modular significa que su fuerza laboral digital se vuelve más inteligente y capaz con cada actualización. Ya sea que se esté expandiendo a mercados internacionales o adoptando nuevos estándares de auditoría financiera, su equipo de IA coordinado escala su inteligencia para satisfacer sus demandas operativas.</p>  <h2>Consultoría Estratégica y Flujos de Trabajo Personalizados</h2>  <p>Si bien nuestro equipo de expertos listo para usar cubre una enorme gama de funciones empresariales, la verdadera transformación empresarial a menudo requiere soluciones a medida. Integrar flujos de trabajo de IA agéntica en sistemas de TI heredados o desarrollar agentes altamente patentados requiere una guía estratégica experta.</p>  <p>Aquí es donde nuestros servicios integrales de consultoría y desarrollo personalizado cierran la brecha. No solo proporcionamos el software; proporcionamos los planos arquitectónicos, las API de integración y la asesoría estratégica necesaria para integrar esta inteligencia colaborativa directamente en sus procesos de negocio principales.</p>             <p class="lead" style="font-size: 1.2rem; font-weight: 500; color: var(--btn-bg);">
+                Explore nuestros servicios especializados para el desarrollo de IA a medida, consultoría estratégica y automatización de procesos:
+            </p>            
+                <ul>
+                        <li>
+                            <a href="/custom-ai-agent-development.html">Desarrollo e Integración de Agentes de IA Personalizados</a>
+                        </li> 
+                        <li>
+                            <a href="/ai-strategy-consulting.html">Consultoría y Asesoría de Estrategia de IA Empresarial</a>
+                        </li> 
+                        <li>
+                            <a href="/ai-customer-support-automation.html">Flujos de Trabajo Agénticos para la Automatización de Soporte al Cliente con IA</a>
+                        </li> 
+                </ul>
+            <div class="callout" style="background-color: rgba(161, 144, 217, 0.1); border-left: 4px solid var(--btn-bg); padding: 1.5rem; margin: 2rem 0; border-radius: 4px;">
+                <strong style="display: block; font-size: 1.2rem; margin-bottom: 0.5rem; color: var(--text-color);">
+                    Despliegue su Propio Equipo de IA Coordinado
+                </strong>
+                <p style="margin-bottom: 1rem;">Experimente la próxima generación de inteligencia artificial. Ofrecemos una prueba integral de 6 meses de nuestro software principal por una tarifa administrativa única de solo 39 € para probar estos flujos de trabajo agénticos en su propio entorno.<br><br><span style='font-size: 1.1rem;'>¿Quiere ver al Coordinador de IA gestionar un proyecto primero? <a href='/demo.html' style='color: var(--btn-bg); font-weight: bold; text-decoration: underline;'>Vea nuestra Demostración en Vivo aquí.</a></span></p>
+                <a href="/trial.html" class="btn">Iniciar Prueba Gratuita</a>
+            </div>
+         
+    </div>
+</section>
+
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&#xA9; 2025 The Intelligent Enterprise Group. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="/js/swiper-bundle.min.js"></script>
+    <script src="/js/cdn.min.js" defer></script>
+    <script src="/js/gsap.min.js"></script>
+    <script src="/js/DrawSVGPlugin.min.js"></script>
+
+    <script type="module" src="/js/themeToggle.js"></script>
+    <script type="module">
+        import { toggleTheme, getCurrentTheme } from '/js/themeToggle.js';
+        const checkbox = document.getElementById('theme-checkbox');
+        const themeLabel = document.getElementById('theme-label');
+
+        if (getCurrentTheme() === 'dark') {
+            checkbox.checked = true;
+            themeLabel.textContent = 'Modo oscuro';
+        } else {
+            themeLabel.textContent = 'Modo claro';
+        }
+
+        checkbox.addEventListener('change', () => {
+            toggleTheme();
+            themeLabel.textContent = checkbox.checked ? 'Modo oscuro' : 'Modo claro';
+        });
+    </script>
+
+    <button id="back-to-top" aria-label="Back to Top">Arriba</button>
+
+    
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            if (window.innerWidth < 768) return;
+
+            const intro = document.querySelector("#right-intro");
+            if (!intro) return;
+
+            const tl = gsap.timeline();
+            let isClosing = false; // Flag to prevent double-triggering the exit
+
+            // --- 1. DEFINE THE EXIT FUNCTION ---
+            const closeIntro = () => {
+                if (isClosing) return;
+                isClosing = true;
+
+                // Kill the main timeline so it doesn't keep running in the background
+                tl.kill();
+
+                // Create a dedicated exit timeline for a fast, responsive feel
+                const exitTl = gsap.timeline();
+
+                /* ROBOT FAST REVEAL & RUN */
+                exitTl.to(".robot-runner", { opacity: 1, duration: 0.2 });
+                exitTl.to(".robot-runner", {
+                    x: 400,
+                    duration: 0.8,
+                    ease: "power2.in"
+                }, "-=0.1");
+
+                /* PANEL SLIDE-OUT */
+                exitTl.to("#right-intro", {
+                    duration: 0.8,
+                    transform: "translateX(100%)",
+                    ease: "power3.inOut",
+                    onComplete: () => {
+                        intro.style.display = "none";
+                        // Remove scroll listener once closed
+                        window.removeEventListener("scroll", handleScroll);
+                    }
+                }, "-=0.6");
+            };
+
+            // --- 2. THE SCROLL LISTENER ---
+            const handleScroll = () => {
+                if (window.scrollY > 20) { // Trigger after 20px of scrolling
+                    closeIntro();
+                }
+            };
+            window.addEventListener("scroll", handleScroll);
+
+            // --- 3. ORIGINAL ANIMATION SEQUENCE ---
+            /* PANEL SLIDE-IN */
+            tl.to("#right-intro", {
+                duration: 0.8,
+                transform: "translateX(0%)",
+                ease: "power3.out"
+            });
+
+            /* PARTICLES */
+            for (let i = 0; i < 20; i++) {
+                const p = document.createElement("div");
+                p.className = "particle";
+                p.style.position = "absolute";
+                p.style.width = "4px";
+                p.style.height = "4px";
+                p.style.background = "rgba(0,174,239,0.35)";
+                p.style.borderRadius = "50%";
+                p.style.left = Math.random() * 100 + "%";
+                p.style.top = "100%";
+                document.querySelector(".intro-particles").appendChild(p);
+
+                gsap.to(p, {
+                    y: -window.innerHeight - 100,
+                    duration: 4 + Math.random() * 4,
+                    delay: Math.random() * 2,
+                    repeat: -1,
+                    ease: "none"
+                });
+            }
+
+            /* SIGNAL LINE & PULSE */
+            tl.to(".signal-main", { height: "60%", duration: 0.8, ease: "power2.out" })
+                .to(".loading-dots", { opacity: 1, duration: 0.3 })
+                .to(".pulse", { opacity: 1, scale: 1.4, duration: 0.3, stagger: 0.15 })
+                .to(".pulse", { scale: 0.6, opacity: 0.4, duration: 0.3, stagger: 0.15 })
+                .to(".loading-dots", { opacity: 0, duration: 0.3 });
+
+            /* TEXT REVEAL */
+            tl.to(".t1", { opacity: 1, x: 0, duration: 0.6 })
+                .to(".t2", { opacity: 1, x: 0, duration: 0.6 })
+                .to(".t3", { opacity: 1, x: 0, duration: 0.6 })
+                .to(".t4", { opacity: 1, x: 0, duration: 0.6 });
+
+            /* ROBOT ARM/LEG LOOPS (Independent of timeline) */
+            const robotParts = [
+                { el: ".arm-left", r: 30 }, { el: ".arm-right", r: -30 },
+                { el: ".leg-left", r: -30 }, { el: ".leg-right", r: 30 }
+            ];
+            robotParts.forEach(part => {
+                gsap.to(part.el, { rotation: part.r, yoyo: true, repeat: -1, duration: 0.2, ease: "power1.inOut" });
+            });
+
+            // --- 4. AUTO-EXIT (If user doesn't scroll) ---
+            tl.to(".robot-runner", { opacity: 1, duration: 0.3, delay: 5 });
+            tl.to(".robot-runner", { x: 400, duration: 1.2, ease: "power2.inOut" }, "-=0.2");
+            tl.to("#right-intro", {
+                duration: 1,
+                transform: "translateX(100%)",
+                ease: "power3.inOut",
+                onComplete: () => {
+                    if (!isClosing) { // Only hide if scroll didn't already trigger it
+                        intro.style.display = "none";
+                        window.removeEventListener("scroll", handleScroll);
+                    }
+                }
+            }, "-=0.6");
+        });
+    </script>
+</body>
+</html>

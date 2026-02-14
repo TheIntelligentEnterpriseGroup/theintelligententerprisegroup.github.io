@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="de" dir="ltr">
+<head>
+    <meta name="robots" content="index, follow" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <meta name="description" content='Erfahren Sie, wie Sie edge-f&#xE4;hige Hochleistungs-KI lokal ohne Internet ausf&#xFC;hren. Entdecken Sie Offline-Machine-Learning auf Basis einer C&#x2B;&#x2B; Architektur und integrierten Modellen.' />
+    <title>Hochleistungs-KI lokal ohne Internet ausf&#xFC;hren | TIEG</title>
+
+    <style>
+        html { background-color: #3B3A47; }
+    </style>
+    <script>
+        (function () {
+            const key = 'preferredTheme';
+            const stored = localStorage.getItem(key);
+            //const systemDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+            const theme = stored || 'dark'/*(systemDark ? 'dark' : 'light')*/;
+            if (theme === 'dark') {
+                document.documentElement.classList.add('dark-mode');
+            } else {
+                document.documentElement.classList.remove('dark-mode');
+            }
+        })();
+    </script>
+
+
+        <link rel="alternate" hreflang="en" href="https://theintelligententerprisegroup.com/run-ai-locally-without-internet.html" />
+        <link rel="alternate" hreflang="fr" href="https://theintelligententerprisegroup.com/fr/run-ai-locally-without-internet.html" />
+        <link rel="alternate" hreflang="de" href="https://theintelligententerprisegroup.com/de/run-ai-locally-without-internet.html" />
+        <link rel="alternate" hreflang="es" href="https://theintelligententerprisegroup.com/es/run-ai-locally-without-internet.html" />
+        <link rel="alternate" hreflang="pt" href="https://theintelligententerprisegroup.com/pt/run-ai-locally-without-internet.html" />
+        <link rel="alternate" hreflang="zh" href="https://theintelligententerprisegroup.com/zh/run-ai-locally-without-internet.html" />
+        <link rel="alternate" hreflang="ja" href="https://theintelligententerprisegroup.com/ja/run-ai-locally-without-internet.html" />
+        <link rel="alternate" hreflang="ar" href="https://theintelligententerprisegroup.com/ar/run-ai-locally-without-internet.html" />
+
+
+    <link rel="alternate" hreflang="x-default" href="https://theintelligententerprisegroup.com/run-ai-locally-without-internet.html" />
+
+    <link rel="canonical" href="https://theintelligententerprisegroup.com/de/run-ai-locally-without-internet.html" />
+
+
+    <link rel="stylesheet" href="/css/styles.css" />
+    <link rel="stylesheet" href="/css/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="/css/all.min.css" />
+
+    <script src="/js/lang-switcher.js" defer></script>
+
+    <script>
+        (function () {
+            if (localStorage.getItem('currentLang')) return;
+            const supported = [
+                     { code: "en" } ,
+                     { code: "fr" } ,
+                     { code: "de" } ,
+                     { code: "es" } ,
+                     { code: "pt" } ,
+                     { code: "zh" } ,
+                     { code: "ja" } ,
+                     { code: "ar" } 
+            ];
+            const defaultLang = "de";
+            const navLangs = navigator.languages || [navigator.language || navigator.userLanguage];
+            let detected = null;
+            for (const nav of navLangs) {
+                const code = nav.toLowerCase().split('-')[0];
+                if (supported.find(s => s.code.toLowerCase() === code)) {
+                    detected = code;
+                    break;
+                }
+            }
+            const lang = detected || defaultLang;
+            localStorage.setItem('currentLang', lang);
+            document.documentElement.lang = lang;
+        })();
+    </script>
+
+    <!-- Organization structured data (JSON-LD) -->
+    <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "Organization",
+          "name": "The Intelligent Enterprise Group",
+          "url": "https://theintelligententerprisegroup.com/",
+          "logo": "https://theintelligententerprisegroup.com/images/tieg-logo.png",
+          "sameAs": []
+        }
+    </script>
+    <link rel="icon" href="/favicon.ico" />
+    <link rel="apple-touch-icon" href="/images/apple-touch-icon.png" />
+
+    
+
+</head>
+<body>
+    <header x-data="{ open: false }">
+        <div class="container header-top">
+            <div class="logo"></div>
+            <div class="theme-switch-wrapper">
+                <label class="theme-switch">
+                    <input type="checkbox" id="theme-checkbox" aria-label="Select theme"/>
+                    <span class="slider round"></span>
+                </label>
+                <span id="theme-label">Heller Modus</span>
+                <span class="lang-switcher">
+                    <label for="lang-select" class="lang-label">🌐 Sprache:</label>
+
+                    <!-- Language switcher -->
+                    <select id="lang-select" class="lang-select">
+                        <option value="en" data-path="/">English</option>
+                        <option value="fr" data-path="/fr/">Fran&#xE7;ais</option>
+                        <option value="de" data-path="/de/">Deutsch</option>
+                        <option value="es" data-path="/es/">Espa&#xF1;ol</option>
+                        <option value="pt" data-path="/pt/">Portugu&#xEA;s</option>
+                        <option value="zh" data-path="/zh/">&#x4E2D;&#x6587;</option>
+                        <option value="ja" data-path="/ja/">&#x65E5;&#x672C;&#x8A9E;</option>
+                        <option value="ar" data-path="/ar/">&#x627;&#x644;&#x639;&#x631;&#x628;&#x64A;&#x629;</option>
+                    </select>
+
+                </span>
+            </div>
+        </div>
+        
+        <div class="container header-nav">
+            <button @click="open = !open" class="menu-toggle" aria-label="Toggle Menu">
+                <svg width="24" height="24" viewBox="0 0 24 24">
+                    <path fill="var(--nav-link-color)" d="M3 6h18v2H3V6zm0 5h18v2H3v-2zm0 5h18v2H3v-2z" />
+                </svg>
+            </button>
+
+            <nav class="main-nav" :class="{ 'open': open }">
+                <ul>
+                    <li><a href="index.html" class="">Startseite</a></li>
+                    <li><a href="about.html" class="">&#xDC;ber uns</a></li>
+                    <li><a href="services.html" class="">Dienstleistungen &amp; L&#xF6;sungen</a></li>
+                    <li><a href="case-studies.html" class="">Fallstudien</a></li>
+                    <li><a href="resources.html" class="active">Ressourcen &amp; Einblicke</a></li>
+                    <li><a href="trial.html" class="">Testversion</a></li>
+                    <li><a href="pricing.html" class="">Preise</a></li>
+                    <li><a href="partners.html" class="">Partner &amp; Allianzen</a></li>                    
+                    <li><a href="contact.html" class="">Kontakt &amp; Beratung</a></li>
+                    <li class="has-submenu"
+                        x-data="{ openSub: false }"
+                        @mouseenter="openSub = true"
+                        @mouseleave="openSub = false">
+                      <button @click="openSub = !openSub"
+                              aria-haspopup="true"
+                              :aria-expanded="openSub.toString()">
+                        Info
+                        <svg width="12" height="12" viewBox="0 0 12 12" aria-hidden="true">
+                          <path d="M3 4l3 3 3-3" fill="currentColor"/>
+                        </svg>
+                      </button>
+                      <ul class="submenu" x-show="openSub" @click.outside="openSub = false">
+                        <li><a href="careers.html" class="">Karriere</a></li>
+                        <li><a href="faqs.html" class="">FAQs</a></li>
+                        <li><a href="legal.html" class="">Rechtliches &amp; Richtlinien</a></li>
+                      </ul>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        
+<section class="hero seo-hero" style="padding: 80px 0 40px; text-align: center; background-color: var(--card-bg2);">
+    <div class="container hero-container">
+        <h1 style="font-size: 3rem; margin-bottom: 1rem;">Hochleistungs-KI lokal ohne Internet ausführen</h1>
+        <div class="hero-text">
+            <h3 style="font-weight: 400; opacity: 0.9; max-width: 800px; margin: 0 auto;">Stellen Sie ein edge-fähiges Multi-Agenten-KI-System direkt auf Ihrer Hardware bereit. Erreichen Sie totale Unabhängigkeit von Cloud-Konnektivität und externen APIs.</h3>
+        </div>
+
+                <br/>
+                <p class="lead" style="font-size: 1.15rem; font-weight: 500; color: var(--btn-bg); max-width: 800px; margin: 1.5rem auto 0 auto; line-height: 1.6;">
+                    Wenn kontinuierliche Verfügbarkeit, Ausführung ohne Latenz und absolute Datensicherheit erforderlich sind, ist die Abhängigkeit von Cloud-basierter Künstlicher Intelligenz keine praktikable Option mehr. Unsere Plattform stellt einen Paradigmenwechsel in der Edge-Performance dar und ermöglicht es Ihnen, ein hochentwickeltes, koordiniertes Team von KI-Experten lokal auf Ihrem eigenen Rechner einzusetzen. Indem Sie die Rechenleistung direkt auf Ihre Hardware bringen, erlangen Sie vollständige Unabhängigkeit vom Internet und behalten gleichzeitig die Analyseleistung der Enterprise-Klasse bei.
+                </p>
+
+    </div>
+</section>
+
+<section class="resources">
+    <div class="container">
+
+ <h2>Der Wandel hin zu Edge-Ready AI</h2>  <p>In der Vergangenheit erforderte der Betrieb leistungsstarker Künstlicher Intelligenz riesige Rechenzentren, weitläufige Serverfarmen und eine konstante, breitbandige Cloud-Konnektivität. Dieser zentralisierte Ansatz birgt jedoch erhebliche Schwachstellen für moderne Unternehmen. Internetausfälle stoppen sofort die Produktivität, API-Ratenbegrenzungen drosseln die Leistung bei kritischen Aufgaben, und die Übertragung sensibler Unternehmensdaten an externe Server setzt Organisationen inakzeptablen Datenschutzverletzungen aus.</p>  <p>Edge Computing löst diesen grundlegenden Mangel, indem es die Rechenleistung direkt an die Quelle bringt – Ihr Gerät. Durch die lokale Ausführung von Offline-Machine-Learning-Modellen eliminieren Sie Netzwerklatenzen, sichern Ihre proprietären Daten sicher hinter Ihrer eigenen Firewall und garantieren eine absolute 100%ige Verfügbarkeit, unabhängig von Ihrem Netzwerkstatus.</p>  <h2>Warum eine Air-Gapped KI-Infrastruktur unerlässlich ist</h2>  <p>Für stark regulierte Sektoren wie Verteidigung, Finanzen, Gesundheitswesen und Rechtsdienstleistungen ist die Verbindung eines KI-Assistenten mit dem öffentlichen Internet ein schwerwiegender Compliance-Verstoß. Standard-LLMs protokollieren Benutzereingaben, was versehentlich Geschäftsgeheimnisse oder geschützte Gesundheitsinformationen (PHI) preisgeben kann.</p>  <p>Der Aufbau einer Air-Gapped KI-Infrastruktur bedeutet, dass die Software auf Computern läuft, die physisch oder logisch von unsicheren Netzwerken isoliert sind. Unsere lokale KI-Desktop-Anwendung wurde speziell für diese Zero-Trust-Umgebungen entwickelt. Da die KI niemals „nach Hause telefoniert“ oder Cloud-basierte Lizenzprüfungen erfordert, können Sie strenge Sicherheitsrahmenbedingungen wie NIST CSF, CMMC L1 und DSGVO einhalten, ohne auf modernste Technologie verzichten zu müssen.</p>  <h2>Angetrieben durch Hochgeschwindigkeits-C++ KI-Architektur</h2>  <p>Der lokale Betrieb eines komplexen Multi-Agenten-Systems erfordert immense Recheneffizienz. Standardmäßige webbasierte KI-Tools basieren oft auf schweren Skriptsprachen wie Python, die einen massiven Overhead und eine schleppende Performance verursachen, wenn sie auf Consumer- oder Enterprise-Desktop-Hardware ausgeführt werden.</p>  <p>Um dies zu lösen, wurde unsere Plattform von Grund auf unter Verwendung einer proprietären Hochgeschwindigkeits-C++ KI-Architektur entwickelt. Diese native, kompilierte Codebasis kommuniziert direkt mit dem Prozessor Ihres Rechners und gewährleistet so eine blitzschnelle Ausführung.</p>                     <ul>
+ <li><strong>Hardware-Beschleunigung:</strong> Die Software integriert sich nahtlos in Ihre lokale Hardware-Architektur und nutzt die verfügbaren CPU-Ressourcen voll aus, ohne Ihr Betriebssystem auszubremsen.</li>  <li><strong>Geringer Speicher-Overhead:</strong> Hochoptimierter Code stellt sicher, dass Ihr Multi-Agenten-KI-Team effizient läuft und deutlich weniger RAM und Energie verbraucht als herkömmliche lokale Wrapper.</li>  <li><strong>Latenzfreies Routing:</strong> Der interne KI-Koordinator kann den Kontext zwischen verschiedenen Experten-Agenten in Millisekunden wechseln, und das vollständig lokal.</li>                     </ul>
+ <h2>GPU-beschleunigte lokale KI für maximalen Durchsatz</h2>  <p>Während unsere hochoptimierte CPU-Architektur eine unglaubliche Basisleistung liefert, erfordern anspruchsvolle Analyseaufgaben spezialisierte Hardware. Unsere Plattform unterstützt GPU-beschleunigte lokale KI in vollem Umfang und nutzt die parallele Rechenleistung moderner Grafikkarten.</p>  <p>Durch den Einsatz von Technologien wie CUDA und fortschrittlichem Tensor-Processing verlagert das System rechenintensive Machine-Learning-Berechnungen auf die GPU. Dies führt zu drastisch schnelleren Antwortzeiten bei komplexen generativen Aufgaben, Dokumentenzusammenfassungen und Datenanalysen. Egal, ob Sie eine High-End-Workstation oder einen Enterprise-Laptop verwenden, die Software erkennt und nutzt Ihre Hardware automatisch für maximalen Durchsatz.</p>  <h2>Integrierte Modelle für wahre Autonomie</h2>  <p>Eine häufig gestellte Frage lautet: Woher weiß die KI, was zu tun ist, ohne im Internet zu suchen? Das Geheimnis liegt in unserem umfassenden Offline-Installer. Anstatt als leere Hülle zu fungieren, die eine API anpingt, bettet unsere Desktop-Anwendung mehrere vorab trainierte, stark optimierte Machine-Learning-Modelle während der Installation direkt in Ihr System ein.</p>  <p>Wenn Sie eine Frage stellen, kommuniziert das System nicht mit einem externen Server. Stattdessen bewertet der KI-Koordinator automatisch die Eingabe und aktiviert das spezifische integrierte Modell, das am besten für die Aufgabe geeignet ist. Ob Sie die Copywriter-KI zum Entwerfen einer E-Mail oder die Data-Analyst-KI zum Parsen einer Tabelle benötigen – das Fachwissen befindet sich bereits lokal auf Ihrer Festplatte.</p>  <h2>Private RAG: Offline mit lokalen Dokumenten chatten</h2>  <p>Die Offline-Ausführung von KI ist nur dann nützlich, wenn die KI Ihren spezifischen Geschäftskontext versteht. Standardmäßige Offline-Modelle kennen nur ihre ursprünglichen Trainingsdaten. Unsere Anwendung verfügt über fortschrittliche Enterprise-KI-Suchfunktionen, die durch Private RAG (Retrieval-Augmented Generation) unterstützt werden.</p>  <p>Sie können die KI auf Ihre lokalen Ordner mit PDFs, Word-Dokumenten, Excel-Tabellen und CSVs verweisen. Das System indiziert diese Dateien lokal und erstellt eine sichere Vektordatenbank auf Ihrem Rechner. Sie können dann sofort Ihre eigene interne Wissensdatenbank abfragen. Die KI liest, extrahiert und synthetisiert Antworten aus Ihren proprietären Dateien – und das alles bei vollständiger Trennung vom Web.</p>  <h2>Multi-Agenten-Workflows überall entfesseln</h2>  <p>Durch die Kombination einer Hochleistungs-C++ Architektur, GPU-Beschleunigung und integrierten Modellen sind Sie nicht mehr durch Ihre IT-Umgebung eingeschränkt. Egal, ob Sie in einem sicheren Unternehmens-Intranet arbeiten, auf einem Langstreckenflug unterwegs sind oder an einem abgelegenen Offshore-Standort eingesetzt werden – Ihr KI-Team ist immer bereit, komplexe Multi-Agenten-Workflows auszuführen.</p>             <div class="parent-hub-link" style="background-color: var(--card-bg2); padding: 1rem; border-radius: 6px; margin-bottom: 2rem;">
+                <span style="font-size: 0.9rem; color: var(--text-color);">Teil unseres umfassenden Leitfadens zu:</span>
+                <a href="/offline-ai-desktop-app.html" style="font-weight: bold; margin-left: 0.5rem; color: var(--btn-bg);">
+                    Sichere Offline-KI-Desktop-Anwendungen
+                </a>
+            </div>
+            <div class="callout" style="background-color: rgba(161, 144, 217, 0.1); border-left: 4px solid var(--btn-bg); padding: 1.5rem; margin: 2rem 0; border-radius: 4px;">
+                <strong style="display: block; font-size: 1.2rem; margin-bottom: 0.5rem; color: var(--text-color);">
+                    Erleben Sie echte Edge-Ready KI
+                </strong>
+                <p style="margin-bottom: 1rem;">Bereit, die Verbindung zu trennen? Starten Sie Ihre 6-monatige Testphase unserer Desktop Edition für eine einmalige Verwaltungsgebühr von nur 39 € und stellen Sie noch heute Ihr eigenes lokales KI-Team bereit.<br><br><span style='font-size: 1.1rem;'>Möchten Sie es erst in Aktion sehen? <a href='/demo.html' style='color: var(--btn-bg); font-weight: bold; text-decoration: underline;'>Sehen Sie sich hier unsere Live-Demo an.</a></span></p>
+                <a href="/trial.html" class="btn">Kostenlose Testphase starten</a>
+            </div>
+         
+    </div>
+</section>
+
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&#xA9; 2025 The Intelligent Enterprise Group. Alle Rechte vorbehalten.</p>
+        </div>
+    </footer>
+
+    <script src="/js/swiper-bundle.min.js"></script>
+    <script src="/js/cdn.min.js" defer></script>
+    <script src="/js/gsap.min.js"></script>
+    <script src="/js/DrawSVGPlugin.min.js"></script>
+
+    <script type="module" src="/js/themeToggle.js"></script>
+    <script type="module">
+        import { toggleTheme, getCurrentTheme } from '/js/themeToggle.js';
+        const checkbox = document.getElementById('theme-checkbox');
+        const themeLabel = document.getElementById('theme-label');
+
+        if (getCurrentTheme() === 'dark') {
+            checkbox.checked = true;
+            themeLabel.textContent = 'Dunkler Modus';
+        } else {
+            themeLabel.textContent = 'Heller Modus';
+        }
+
+        checkbox.addEventListener('change', () => {
+            toggleTheme();
+            themeLabel.textContent = checkbox.checked ? 'Dunkler Modus' : 'Heller Modus';
+        });
+    </script>
+
+    <button id="back-to-top" aria-label="Back to Top">Nach oben</button>
+
+    
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            if (window.innerWidth < 768) return;
+
+            const intro = document.querySelector("#right-intro");
+            if (!intro) return;
+
+            const tl = gsap.timeline();
+            let isClosing = false; // Flag to prevent double-triggering the exit
+
+            // --- 1. DEFINE THE EXIT FUNCTION ---
+            const closeIntro = () => {
+                if (isClosing) return;
+                isClosing = true;
+
+                // Kill the main timeline so it doesn't keep running in the background
+                tl.kill();
+
+                // Create a dedicated exit timeline for a fast, responsive feel
+                const exitTl = gsap.timeline();
+
+                /* ROBOT FAST REVEAL & RUN */
+                exitTl.to(".robot-runner", { opacity: 1, duration: 0.2 });
+                exitTl.to(".robot-runner", {
+                    x: 400,
+                    duration: 0.8,
+                    ease: "power2.in"
+                }, "-=0.1");
+
+                /* PANEL SLIDE-OUT */
+                exitTl.to("#right-intro", {
+                    duration: 0.8,
+                    transform: "translateX(100%)",
+                    ease: "power3.inOut",
+                    onComplete: () => {
+                        intro.style.display = "none";
+                        // Remove scroll listener once closed
+                        window.removeEventListener("scroll", handleScroll);
+                    }
+                }, "-=0.6");
+            };
+
+            // --- 2. THE SCROLL LISTENER ---
+            const handleScroll = () => {
+                if (window.scrollY > 20) { // Trigger after 20px of scrolling
+                    closeIntro();
+                }
+            };
+            window.addEventListener("scroll", handleScroll);
+
+            // --- 3. ORIGINAL ANIMATION SEQUENCE ---
+            /* PANEL SLIDE-IN */
+            tl.to("#right-intro", {
+                duration: 0.8,
+                transform: "translateX(0%)",
+                ease: "power3.out"
+            });
+
+            /* PARTICLES */
+            for (let i = 0; i < 20; i++) {
+                const p = document.createElement("div");
+                p.className = "particle";
+                p.style.position = "absolute";
+                p.style.width = "4px";
+                p.style.height = "4px";
+                p.style.background = "rgba(0,174,239,0.35)";
+                p.style.borderRadius = "50%";
+                p.style.left = Math.random() * 100 + "%";
+                p.style.top = "100%";
+                document.querySelector(".intro-particles").appendChild(p);
+
+                gsap.to(p, {
+                    y: -window.innerHeight - 100,
+                    duration: 4 + Math.random() * 4,
+                    delay: Math.random() * 2,
+                    repeat: -1,
+                    ease: "none"
+                });
+            }
+
+            /* SIGNAL LINE & PULSE */
+            tl.to(".signal-main", { height: "60%", duration: 0.8, ease: "power2.out" })
+                .to(".loading-dots", { opacity: 1, duration: 0.3 })
+                .to(".pulse", { opacity: 1, scale: 1.4, duration: 0.3, stagger: 0.15 })
+                .to(".pulse", { scale: 0.6, opacity: 0.4, duration: 0.3, stagger: 0.15 })
+                .to(".loading-dots", { opacity: 0, duration: 0.3 });
+
+            /* TEXT REVEAL */
+            tl.to(".t1", { opacity: 1, x: 0, duration: 0.6 })
+                .to(".t2", { opacity: 1, x: 0, duration: 0.6 })
+                .to(".t3", { opacity: 1, x: 0, duration: 0.6 })
+                .to(".t4", { opacity: 1, x: 0, duration: 0.6 });
+
+            /* ROBOT ARM/LEG LOOPS (Independent of timeline) */
+            const robotParts = [
+                { el: ".arm-left", r: 30 }, { el: ".arm-right", r: -30 },
+                { el: ".leg-left", r: -30 }, { el: ".leg-right", r: 30 }
+            ];
+            robotParts.forEach(part => {
+                gsap.to(part.el, { rotation: part.r, yoyo: true, repeat: -1, duration: 0.2, ease: "power1.inOut" });
+            });
+
+            // --- 4. AUTO-EXIT (If user doesn't scroll) ---
+            tl.to(".robot-runner", { opacity: 1, duration: 0.3, delay: 5 });
+            tl.to(".robot-runner", { x: 400, duration: 1.2, ease: "power2.inOut" }, "-=0.2");
+            tl.to("#right-intro", {
+                duration: 1,
+                transform: "translateX(100%)",
+                ease: "power3.inOut",
+                onComplete: () => {
+                    if (!isClosing) { // Only hide if scroll didn't already trigger it
+                        intro.style.display = "none";
+                        window.removeEventListener("scroll", handleScroll);
+                    }
+                }
+            }, "-=0.6");
+        });
+    </script>
+</body>
+</html>

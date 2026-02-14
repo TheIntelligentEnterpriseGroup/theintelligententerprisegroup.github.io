@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="pt" dir="ltr">
+<head>
+    <meta name="robots" content="index, follow" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <meta name="description" content='Descubra a tecnologia RAG privada para busca empresarial com IA segura. Capacite sua organiza&#xE7;&#xE3;o com busca interna por IA impulsionada pelo Librarian AI e mem&#xF3;ria adaptativa.' />
+    <title>Tecnologia RAG Privada e Busca Empresarial com IA Segura | TIEG</title>
+
+    <style>
+        html { background-color: #3B3A47; }
+    </style>
+    <script>
+        (function () {
+            const key = 'preferredTheme';
+            const stored = localStorage.getItem(key);
+            //const systemDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+            const theme = stored || 'dark'/*(systemDark ? 'dark' : 'light')*/;
+            if (theme === 'dark') {
+                document.documentElement.classList.add('dark-mode');
+            } else {
+                document.documentElement.classList.remove('dark-mode');
+            }
+        })();
+    </script>
+
+
+        <link rel="alternate" hreflang="en" href="https://theintelligententerprisegroup.com/private-rag-enterprise-search.html" />
+        <link rel="alternate" hreflang="fr" href="https://theintelligententerprisegroup.com/fr/private-rag-enterprise-search.html" />
+        <link rel="alternate" hreflang="de" href="https://theintelligententerprisegroup.com/de/private-rag-enterprise-search.html" />
+        <link rel="alternate" hreflang="es" href="https://theintelligententerprisegroup.com/es/private-rag-enterprise-search.html" />
+        <link rel="alternate" hreflang="pt" href="https://theintelligententerprisegroup.com/pt/private-rag-enterprise-search.html" />
+        <link rel="alternate" hreflang="zh" href="https://theintelligententerprisegroup.com/zh/private-rag-enterprise-search.html" />
+        <link rel="alternate" hreflang="ja" href="https://theintelligententerprisegroup.com/ja/private-rag-enterprise-search.html" />
+        <link rel="alternate" hreflang="ar" href="https://theintelligententerprisegroup.com/ar/private-rag-enterprise-search.html" />
+
+
+    <link rel="alternate" hreflang="x-default" href="https://theintelligententerprisegroup.com/private-rag-enterprise-search.html" />
+
+    <link rel="canonical" href="https://theintelligententerprisegroup.com/pt/private-rag-enterprise-search.html" />
+
+
+    <link rel="stylesheet" href="/css/styles.css" />
+    <link rel="stylesheet" href="/css/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="/css/all.min.css" />
+
+    <script src="/js/lang-switcher.js" defer></script>
+
+    <script>
+        (function () {
+            if (localStorage.getItem('currentLang')) return;
+            const supported = [
+                     { code: "en" } ,
+                     { code: "fr" } ,
+                     { code: "de" } ,
+                     { code: "es" } ,
+                     { code: "pt" } ,
+                     { code: "zh" } ,
+                     { code: "ja" } ,
+                     { code: "ar" } 
+            ];
+            const defaultLang = "pt";
+            const navLangs = navigator.languages || [navigator.language || navigator.userLanguage];
+            let detected = null;
+            for (const nav of navLangs) {
+                const code = nav.toLowerCase().split('-')[0];
+                if (supported.find(s => s.code.toLowerCase() === code)) {
+                    detected = code;
+                    break;
+                }
+            }
+            const lang = detected || defaultLang;
+            localStorage.setItem('currentLang', lang);
+            document.documentElement.lang = lang;
+        })();
+    </script>
+
+    <!-- Organization structured data (JSON-LD) -->
+    <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "Organization",
+          "name": "The Intelligent Enterprise Group",
+          "url": "https://theintelligententerprisegroup.com/",
+          "logo": "https://theintelligententerprisegroup.com/images/tieg-logo.png",
+          "sameAs": []
+        }
+    </script>
+    <link rel="icon" href="/favicon.ico" />
+    <link rel="apple-touch-icon" href="/images/apple-touch-icon.png" />
+
+    
+
+</head>
+<body>
+    <header x-data="{ open: false }">
+        <div class="container header-top">
+            <div class="logo"></div>
+            <div class="theme-switch-wrapper">
+                <label class="theme-switch">
+                    <input type="checkbox" id="theme-checkbox" aria-label="Select theme"/>
+                    <span class="slider round"></span>
+                </label>
+                <span id="theme-label">Modo Claro</span>
+                <span class="lang-switcher">
+                    <label for="lang-select" class="lang-label">🌐 Idioma:</label>
+
+                    <!-- Language switcher -->
+                    <select id="lang-select" class="lang-select">
+                        <option value="en" data-path="/">English</option>
+                        <option value="fr" data-path="/fr/">Fran&#xE7;ais</option>
+                        <option value="de" data-path="/de/">Deutsch</option>
+                        <option value="es" data-path="/es/">Espa&#xF1;ol</option>
+                        <option value="pt" data-path="/pt/">Portugu&#xEA;s</option>
+                        <option value="zh" data-path="/zh/">&#x4E2D;&#x6587;</option>
+                        <option value="ja" data-path="/ja/">&#x65E5;&#x672C;&#x8A9E;</option>
+                        <option value="ar" data-path="/ar/">&#x627;&#x644;&#x639;&#x631;&#x628;&#x64A;&#x629;</option>
+                    </select>
+
+                </span>
+            </div>
+        </div>
+        
+        <div class="container header-nav">
+            <button @click="open = !open" class="menu-toggle" aria-label="Toggle Menu">
+                <svg width="24" height="24" viewBox="0 0 24 24">
+                    <path fill="var(--nav-link-color)" d="M3 6h18v2H3V6zm0 5h18v2H3v-2zm0 5h18v2H3v-2z" />
+                </svg>
+            </button>
+
+            <nav class="main-nav" :class="{ 'open': open }">
+                <ul>
+                    <li><a href="index.html" class="">In&#xED;cio</a></li>
+                    <li><a href="about.html" class="">Sobre N&#xF3;s</a></li>
+                    <li><a href="services.html" class="">Servi&#xE7;os e Solu&#xE7;&#xF5;es</a></li>
+                    <li><a href="case-studies.html" class="">Estudos de Caso</a></li>
+                    <li><a href="resources.html" class="active">Recursos e Insights</a></li>
+                    <li><a href="trial.html" class="">Avalia&#xE7;&#xE3;o</a></li>
+                    <li><a href="pricing.html" class="">Pre&#xE7;os</a></li>
+                    <li><a href="partners.html" class="">Parceiros e Alian&#xE7;as</a></li>                    
+                    <li><a href="contact.html" class="">Contato e Consultoria</a></li>
+                    <li class="has-submenu"
+                        x-data="{ openSub: false }"
+                        @mouseenter="openSub = true"
+                        @mouseleave="openSub = false">
+                      <button @click="openSub = !openSub"
+                              aria-haspopup="true"
+                              :aria-expanded="openSub.toString()">
+                        Informa&#xE7;&#xF5;es
+                        <svg width="12" height="12" viewBox="0 0 12 12" aria-hidden="true">
+                          <path d="M3 4l3 3 3-3" fill="currentColor"/>
+                        </svg>
+                      </button>
+                      <ul class="submenu" x-show="openSub" @click.outside="openSub = false">
+                        <li><a href="careers.html" class="">Carreiras</a></li>
+                        <li><a href="faqs.html" class="">Perguntas Frequentes</a></li>
+                        <li><a href="legal.html" class="">Jur&#xED;dico e Pol&#xED;ticas</a></li>
+                      </ul>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        
+<section class="hero seo-hero" style="padding: 80px 0 40px; text-align: center; background-color: var(--card-bg2);">
+    <div class="container hero-container">
+        <h1 style="font-size: 3rem; margin-bottom: 1rem;">Tecnologia RAG Privada e Busca Empresarial com IA Segura</h1>
+        <div class="hero-text">
+            <h3 style="font-weight: 400; opacity: 0.9; max-width: 800px; margin: 0 auto;">Desbloqueie todo o potencial dos seus dados corporativos com um mecanismo de busca interno por IA isolado (air-gapped), impulsionado por uma arquitetura de memória adaptativa e agentes de IA especializados.</h3>
+        </div>
+
+                <br/>
+                <p class="lead" style="font-size: 1.15rem; font-weight: 500; color: var(--btn-bg); max-width: 800px; margin: 1.5rem auto 0 auto; line-height: 1.6;">
+                    Encontrar o conhecimento interno correto de forma segura é um grande gargalo para as empresas modernas. Embora os modelos de IA públicos sejam poderosos, confiar neles para processar dados corporativos proprietários expõe as organizações a graves riscos de segurança e conformidade. Nossa plataforma resolve esse dilema trazendo a inteligência diretamente para os seus dados. Utilizando uma arquitetura de memória adaptativa altamente otimizada, nosso sistema multiagente fornece memória persistente de curto e longo prazo para um contexto mais profundo e menos alucinações. Com a tecnologia RAG privada, sua força de trabalho digital pode navegar, recuperar e sintetizar sua base de conhecimento interna com segurança, de forma totalmente offline.
+                </p>
+
+    </div>
+</section>
+
+<section class="resources">
+    <div class="container">
+
+ <h2>O Gargalo da Descoberta de Conhecimento Interno</h2>  <p>Em uma grande empresa, informações críticas estão frequentemente espalhadas por milhares de documentos desconectados - PDFs, arquivos Word, planilhas Excel e arquivos históricos. Os mecanismos de busca empresarial padrão dependem de correspondência básica de palavras-chave, que frequentemente falha em entender o contexto real da consulta de um usuário, resultando em horas de produtividade desperdiçada.</p>  <p>Embora os Grandes Modelos de Linguagem (LLMs) baseados em nuvem sejam excelentes na compreensão do contexto, eles representam um risco enorme. Enviar estratégias de negócios confidenciais, contratos legais ou auditorias financeiras para um servidor externo para análise simplesmente não é uma opção para organizações preocupadas com a segurança. A solução exige uma mudança fundamental: trazer um mecanismo de busca por IA interno e autônomo diretamente para trás do firewall corporativo.</p>  <h2>O que é a Tecnologia RAG Privada?</h2>  <p>A Geração Aumentada de Recuperação (RAG) é uma metodologia de IA inovadora que permite que uma IA leia e referencie seus documentos específicos antes de responder a uma pergunta. No entanto, a maioria das implementações de RAG ainda depende de APIs de nuvem pública para gerar a resposta final.</p>  <p>A tecnologia RAG privada garante que todo o processo - da indexação de documentos à geração final de texto - ocorra localmente em seu servidor de IA on-premise seguro ou desktop. Quando você faz o upload de seus arquivos proprietários, o sistema cria um banco de dados vetorial seguro e criptografado inteiramente dentro do seu ambiente isolado. Seus dados nunca saem da sua infraestrutura, garantindo soberania absoluta dos dados e fornecendo recursos de busca interna por IA de nível especializado.</p>  <h2>O Librarian AI: Seu Mestre Arquivista</h2>  <p>Para gerenciar seus dados internos com segurança e eficiência, nossa plataforma apresenta o Librarian AI. Este agente especializado atua como a memória dedicada de longo prazo da sua Equipe de Especialistas em IA. Modelos de IA padrão sofrem com janelas de contexto limitadas - eles 'esquecem' o que você carregou há algumas horas.</p>  <p>O Librarian AI elimina esse problema catalogando, arquivando e mantendo sistematicamente repositórios de conhecimento de longo prazo. Ele indexa meticulosamente seus dados corporativos, garantindo que meses ou até anos de conhecimento interno sejam preservados com segurança. Quando uma consulta é iniciada, o Librarian AI varre instantaneamente esses arquivos massivos e localizados para uma recuperação rápida e precisa de informações passadas, garantindo que nenhum detalhe crítico seja esquecido.</p>  <h2>O Knowledge Expert AI: Sintetizando Dados Complexos</h2>  <p>Recuperar um documento é apenas o primeiro passo; entender sua relevância em relação a outros documentos é onde reside a verdadeira inteligência. Assim que o Librarian AI recupera os dados brutos necessários, o Knowledge Expert AI assume o controle.</p>  <p>O Knowledge Expert AI foi projetado para cruzar referências e analisar. Ele consolida e organiza essas informações recuperadas de diversas fontes internas confiáveis em relatórios abrangentes e fáceis de ler. Se você precisar entender a evolução de uma política de conformidade específica ao longo de três anos de memorandos internos, o Knowledge Expert AI sintetiza esses arquivos distintos em uma narrativa única e coerente. Essa colaboração multiagente garante que seus executivos recebam inteligência acionável, não apenas uma lista de resultados de busca.</p>  <h2>Arquitetura de Memória Adaptativa para Menos Alucinações</h2>  <p>Um problema notório com a IA padrão é a 'alucinação' - a tendência de inventar fatos quando o modelo carece de informações específicas. Em um ambiente empresarial, especialmente nos setores jurídico, financeiro ou de saúde, uma alucinação de IA pode ser catastrófica.</p>  <p>Nosso mecanismo de busca empresarial com IA segura combate isso por meio de uma arquitetura de memória adaptativa altamente otimizada. Ao ancorar as respostas da IA estritamente aos dados fornecidos pelo Librarian AI e manter uma memória persistente de curto e longo prazo da conversa em andamento, o sistema mantém limites fatuais rigorosos. A IA é estruturalmente restrita a sintetizar respostas apenas de seus documentos localizados e confiáveis, resultando em uma redução drástica nas alucinações e resultados profundamente contextuais e confiáveis.</p>  <h2>Transformando Fluxos de Trabalho Corporativos</h2>  <p>A implementação da tecnologia RAG privada transforma a forma como sua organização opera. Equipes jurídicas podem pesquisar instantaneamente em décadas de arquivos de casos sem quebrar o privilégio advogado-cliente. Auditores financeiros podem cruzar livros contábeis locais com segurança. Equipes de Pesquisa e Desenvolvimento podem consultar seus próprios manuais técnicos proprietários sem arriscar o roubo de propriedade intelectual.</p>  <p>Ao implantar nossos agentes autônomos, você não está apenas instalando uma barra de pesquisa; você está integrando uma força de trabalho digital incansável e altamente segura que acelera fundamentalmente a produtividade empresarial.</p>             <div class="parent-hub-link" style="background-color: var(--card-bg2); padding: 1rem; border-radius: 6px; margin-bottom: 2rem;">
+                <span style="font-size: 0.9rem; color: var(--text-color);">Parte do nosso guia de servidor e infraestrutura empresarial:</span>
+                <a href="/secure-on-premise-ai-server.html" style="font-weight: bold; margin-left: 0.5rem; color: var(--btn-bg);">
+                    Servidor e Infraestrutura de IA On-Premise Seguros
+                </a>
+            </div>
+            <div class="callout" style="background-color: rgba(161, 144, 217, 0.1); border-left: 4px solid var(--btn-bg); padding: 1.5rem; margin: 2rem 0; border-radius: 4px;">
+                <strong style="display: block; font-size: 1.2rem; margin-bottom: 0.5rem; color: var(--text-color);">
+                    Implante sua Busca Interna por IA
+                </strong>
+                <p style="margin-bottom: 1rem;">Pare de confiar em modelos de nuvem pública para dados proprietários. Oferecemos um teste abrangente de 6 meses do nosso software principal por uma pequena taxa administrativa única. Experimente o verdadeiro RAG Privado hoje.<br><br><span style='font-size: 1.1rem;'>Quer ver o Librarian AI em ação primeiro? <a href='/demo.html' style='color: var(--btn-bg); font-weight: bold; text-decoration: underline;'>Assista à nossa Demonstração ao Vivo aqui.</a></span></p>
+                <a href="/trial.html" class="btn">Iniciar Teste Gratuito</a>
+            </div>
+         
+    </div>
+</section>
+
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&#xA9; 2025 The Intelligent Enterprise Group. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="/js/swiper-bundle.min.js"></script>
+    <script src="/js/cdn.min.js" defer></script>
+    <script src="/js/gsap.min.js"></script>
+    <script src="/js/DrawSVGPlugin.min.js"></script>
+
+    <script type="module" src="/js/themeToggle.js"></script>
+    <script type="module">
+        import { toggleTheme, getCurrentTheme } from '/js/themeToggle.js';
+        const checkbox = document.getElementById('theme-checkbox');
+        const themeLabel = document.getElementById('theme-label');
+
+        if (getCurrentTheme() === 'dark') {
+            checkbox.checked = true;
+            themeLabel.textContent = 'Modo Escuro';
+        } else {
+            themeLabel.textContent = 'Modo Claro';
+        }
+
+        checkbox.addEventListener('change', () => {
+            toggleTheme();
+            themeLabel.textContent = checkbox.checked ? 'Modo Escuro' : 'Modo Claro';
+        });
+    </script>
+
+    <button id="back-to-top" aria-label="Back to Top">Topo</button>
+
+    
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            if (window.innerWidth < 768) return;
+
+            const intro = document.querySelector("#right-intro");
+            if (!intro) return;
+
+            const tl = gsap.timeline();
+            let isClosing = false; // Flag to prevent double-triggering the exit
+
+            // --- 1. DEFINE THE EXIT FUNCTION ---
+            const closeIntro = () => {
+                if (isClosing) return;
+                isClosing = true;
+
+                // Kill the main timeline so it doesn't keep running in the background
+                tl.kill();
+
+                // Create a dedicated exit timeline for a fast, responsive feel
+                const exitTl = gsap.timeline();
+
+                /* ROBOT FAST REVEAL & RUN */
+                exitTl.to(".robot-runner", { opacity: 1, duration: 0.2 });
+                exitTl.to(".robot-runner", {
+                    x: 400,
+                    duration: 0.8,
+                    ease: "power2.in"
+                }, "-=0.1");
+
+                /* PANEL SLIDE-OUT */
+                exitTl.to("#right-intro", {
+                    duration: 0.8,
+                    transform: "translateX(100%)",
+                    ease: "power3.inOut",
+                    onComplete: () => {
+                        intro.style.display = "none";
+                        // Remove scroll listener once closed
+                        window.removeEventListener("scroll", handleScroll);
+                    }
+                }, "-=0.6");
+            };
+
+            // --- 2. THE SCROLL LISTENER ---
+            const handleScroll = () => {
+                if (window.scrollY > 20) { // Trigger after 20px of scrolling
+                    closeIntro();
+                }
+            };
+            window.addEventListener("scroll", handleScroll);
+
+            // --- 3. ORIGINAL ANIMATION SEQUENCE ---
+            /* PANEL SLIDE-IN */
+            tl.to("#right-intro", {
+                duration: 0.8,
+                transform: "translateX(0%)",
+                ease: "power3.out"
+            });
+
+            /* PARTICLES */
+            for (let i = 0; i < 20; i++) {
+                const p = document.createElement("div");
+                p.className = "particle";
+                p.style.position = "absolute";
+                p.style.width = "4px";
+                p.style.height = "4px";
+                p.style.background = "rgba(0,174,239,0.35)";
+                p.style.borderRadius = "50%";
+                p.style.left = Math.random() * 100 + "%";
+                p.style.top = "100%";
+                document.querySelector(".intro-particles").appendChild(p);
+
+                gsap.to(p, {
+                    y: -window.innerHeight - 100,
+                    duration: 4 + Math.random() * 4,
+                    delay: Math.random() * 2,
+                    repeat: -1,
+                    ease: "none"
+                });
+            }
+
+            /* SIGNAL LINE & PULSE */
+            tl.to(".signal-main", { height: "60%", duration: 0.8, ease: "power2.out" })
+                .to(".loading-dots", { opacity: 1, duration: 0.3 })
+                .to(".pulse", { opacity: 1, scale: 1.4, duration: 0.3, stagger: 0.15 })
+                .to(".pulse", { scale: 0.6, opacity: 0.4, duration: 0.3, stagger: 0.15 })
+                .to(".loading-dots", { opacity: 0, duration: 0.3 });
+
+            /* TEXT REVEAL */
+            tl.to(".t1", { opacity: 1, x: 0, duration: 0.6 })
+                .to(".t2", { opacity: 1, x: 0, duration: 0.6 })
+                .to(".t3", { opacity: 1, x: 0, duration: 0.6 })
+                .to(".t4", { opacity: 1, x: 0, duration: 0.6 });
+
+            /* ROBOT ARM/LEG LOOPS (Independent of timeline) */
+            const robotParts = [
+                { el: ".arm-left", r: 30 }, { el: ".arm-right", r: -30 },
+                { el: ".leg-left", r: -30 }, { el: ".leg-right", r: 30 }
+            ];
+            robotParts.forEach(part => {
+                gsap.to(part.el, { rotation: part.r, yoyo: true, repeat: -1, duration: 0.2, ease: "power1.inOut" });
+            });
+
+            // --- 4. AUTO-EXIT (If user doesn't scroll) ---
+            tl.to(".robot-runner", { opacity: 1, duration: 0.3, delay: 5 });
+            tl.to(".robot-runner", { x: 400, duration: 1.2, ease: "power2.inOut" }, "-=0.2");
+            tl.to("#right-intro", {
+                duration: 1,
+                transform: "translateX(100%)",
+                ease: "power3.inOut",
+                onComplete: () => {
+                    if (!isClosing) { // Only hide if scroll didn't already trigger it
+                        intro.style.display = "none";
+                        window.removeEventListener("scroll", handleScroll);
+                    }
+                }
+            }, "-=0.6");
+        });
+    </script>
+</body>
+</html>

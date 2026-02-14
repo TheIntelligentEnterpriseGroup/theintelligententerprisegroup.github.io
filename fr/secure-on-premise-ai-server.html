@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="fr" dir="ltr">
+<head>
+    <meta name="robots" content="index, follow" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <meta name="description" content='D&#xE9;ployez notre serveur IA on-premise s&#xE9;curis&#xE9;. Infrastructure multi-agents de classe entreprise, air-gapped, conforme aux cadres NIST CSF, CIS IG1 et CMMC L1.' />
+    <title>Serveur IA On-Premise S&#xE9;curis&#xE9; &amp; Infrastructure | TIEG</title>
+
+    <style>
+        html { background-color: #3B3A47; }
+    </style>
+    <script>
+        (function () {
+            const key = 'preferredTheme';
+            const stored = localStorage.getItem(key);
+            //const systemDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+            const theme = stored || 'dark'/*(systemDark ? 'dark' : 'light')*/;
+            if (theme === 'dark') {
+                document.documentElement.classList.add('dark-mode');
+            } else {
+                document.documentElement.classList.remove('dark-mode');
+            }
+        })();
+    </script>
+
+
+        <link rel="alternate" hreflang="en" href="https://theintelligententerprisegroup.com/secure-on-premise-ai-server.html" />
+        <link rel="alternate" hreflang="fr" href="https://theintelligententerprisegroup.com/fr/secure-on-premise-ai-server.html" />
+        <link rel="alternate" hreflang="de" href="https://theintelligententerprisegroup.com/de/secure-on-premise-ai-server.html" />
+        <link rel="alternate" hreflang="es" href="https://theintelligententerprisegroup.com/es/secure-on-premise-ai-server.html" />
+        <link rel="alternate" hreflang="pt" href="https://theintelligententerprisegroup.com/pt/secure-on-premise-ai-server.html" />
+        <link rel="alternate" hreflang="zh" href="https://theintelligententerprisegroup.com/zh/secure-on-premise-ai-server.html" />
+        <link rel="alternate" hreflang="ja" href="https://theintelligententerprisegroup.com/ja/secure-on-premise-ai-server.html" />
+        <link rel="alternate" hreflang="ar" href="https://theintelligententerprisegroup.com/ar/secure-on-premise-ai-server.html" />
+
+
+    <link rel="alternate" hreflang="x-default" href="https://theintelligententerprisegroup.com/secure-on-premise-ai-server.html" />
+
+    <link rel="canonical" href="https://theintelligententerprisegroup.com/fr/secure-on-premise-ai-server.html" />
+
+
+    <link rel="stylesheet" href="/css/styles.css" />
+    <link rel="stylesheet" href="/css/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="/css/all.min.css" />
+
+    <script src="/js/lang-switcher.js" defer></script>
+
+    <script>
+        (function () {
+            if (localStorage.getItem('currentLang')) return;
+            const supported = [
+                     { code: "en" } ,
+                     { code: "fr" } ,
+                     { code: "de" } ,
+                     { code: "es" } ,
+                     { code: "pt" } ,
+                     { code: "zh" } ,
+                     { code: "ja" } ,
+                     { code: "ar" } 
+            ];
+            const defaultLang = "fr";
+            const navLangs = navigator.languages || [navigator.language || navigator.userLanguage];
+            let detected = null;
+            for (const nav of navLangs) {
+                const code = nav.toLowerCase().split('-')[0];
+                if (supported.find(s => s.code.toLowerCase() === code)) {
+                    detected = code;
+                    break;
+                }
+            }
+            const lang = detected || defaultLang;
+            localStorage.setItem('currentLang', lang);
+            document.documentElement.lang = lang;
+        })();
+    </script>
+
+    <!-- Organization structured data (JSON-LD) -->
+    <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "Organization",
+          "name": "The Intelligent Enterprise Group",
+          "url": "https://theintelligententerprisegroup.com/",
+          "logo": "https://theintelligententerprisegroup.com/images/tieg-logo.png",
+          "sameAs": []
+        }
+    </script>
+    <link rel="icon" href="/favicon.ico" />
+    <link rel="apple-touch-icon" href="/images/apple-touch-icon.png" />
+
+    
+
+</head>
+<body>
+    <header x-data="{ open: false }">
+        <div class="container header-top">
+            <div class="logo"></div>
+            <div class="theme-switch-wrapper">
+                <label class="theme-switch">
+                    <input type="checkbox" id="theme-checkbox" aria-label="Select theme"/>
+                    <span class="slider round"></span>
+                </label>
+                <span id="theme-label">Mode clair</span>
+                <span class="lang-switcher">
+                    <label for="lang-select" class="lang-label">🌐 Langue :</label>
+
+                    <!-- Language switcher -->
+                    <select id="lang-select" class="lang-select">
+                        <option value="en" data-path="/">English</option>
+                        <option value="fr" data-path="/fr/">Fran&#xE7;ais</option>
+                        <option value="de" data-path="/de/">Deutsch</option>
+                        <option value="es" data-path="/es/">Espa&#xF1;ol</option>
+                        <option value="pt" data-path="/pt/">Portugu&#xEA;s</option>
+                        <option value="zh" data-path="/zh/">&#x4E2D;&#x6587;</option>
+                        <option value="ja" data-path="/ja/">&#x65E5;&#x672C;&#x8A9E;</option>
+                        <option value="ar" data-path="/ar/">&#x627;&#x644;&#x639;&#x631;&#x628;&#x64A;&#x629;</option>
+                    </select>
+
+                </span>
+            </div>
+        </div>
+        
+        <div class="container header-nav">
+            <button @click="open = !open" class="menu-toggle" aria-label="Toggle Menu">
+                <svg width="24" height="24" viewBox="0 0 24 24">
+                    <path fill="var(--nav-link-color)" d="M3 6h18v2H3V6zm0 5h18v2H3v-2zm0 5h18v2H3v-2z" />
+                </svg>
+            </button>
+
+            <nav class="main-nav" :class="{ 'open': open }">
+                <ul>
+                    <li><a href="index.html" class="">Accueil</a></li>
+                    <li><a href="about.html" class="">&#xC0; propos</a></li>
+                    <li><a href="services.html" class="">Services &amp; Solutions</a></li>
+                    <li><a href="case-studies.html" class="">&#xC9;tudes de cas</a></li>
+                    <li><a href="resources.html" class="active">Ressources &amp; Analyses</a></li>
+                    <li><a href="trial.html" class="">Essai</a></li>
+                    <li><a href="pricing.html" class="">Tarifs</a></li>
+                    <li><a href="partners.html" class="">Partenaires &amp; Alliances</a></li>                    
+                    <li><a href="contact.html" class="">Contact &amp; Consultation</a></li>
+                    <li class="has-submenu"
+                        x-data="{ openSub: false }"
+                        @mouseenter="openSub = true"
+                        @mouseleave="openSub = false">
+                      <button @click="openSub = !openSub"
+                              aria-haspopup="true"
+                              :aria-expanded="openSub.toString()">
+                        Infos
+                        <svg width="12" height="12" viewBox="0 0 12 12" aria-hidden="true">
+                          <path d="M3 4l3 3 3-3" fill="currentColor"/>
+                        </svg>
+                      </button>
+                      <ul class="submenu" x-show="openSub" @click.outside="openSub = false">
+                        <li><a href="careers.html" class="">Carri&#xE8;res</a></li>
+                        <li><a href="faqs.html" class="">FAQs</a></li>
+                        <li><a href="legal.html" class="">Mentions l&#xE9;gales &amp; Politiques</a></li>
+                      </ul>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        
+<section class="hero seo-hero" style="padding: 80px 0 40px; text-align: center; background-color: var(--card-bg2);">
+    <div class="container hero-container">
+        <h1 style="font-size: 3rem; margin-bottom: 1rem;">Serveur IA On-Premise Sécurisé & Infrastructure Air-Gapped</h1>
+        <div class="hero-text">
+            <h3 style="font-weight: 400; opacity: 0.9; max-width: 800px; margin: 0 auto;">Déployez un serveur IA multi-agents de classe entreprise sur site ou dans un cloud privé. Bénéficiez d'une conformité stricte, d'une intégration API fluide et d'une souveraineté totale des données.</h3>
+        </div>
+
+                <br/>
+                <p class="lead" style="font-size: 1.15rem; font-weight: 500; color: var(--btn-bg); max-width: 800px; margin: 1.5rem auto 0 auto; line-height: 1.6;">
+                    Les entreprises exigent un contrôle absolu sur leurs données propriétaires et leur infrastructure informatique. Lorsque les solutions d'IA sur cloud public présentent des risques inacceptables en matière de sécurité, de confidentialité et de conformité, les organisations doivent internaliser leurs capacités d'IA. Nous proposons un déploiement de classe entreprise de la plateforme AI Expert Team, hébergée entièrement sur site ou au sein de votre cloud privé. Ce serveur IA on-premise sécurisé offre une infrastructure d'IA air-gapped hautement évolutive, conçue spécifiquement pour les organisations exigeant une gouvernance stricte des données, une intégration système transparente et une automatisation avancée des processus.
+                </p>
+
+    </div>
+</section>
+
+<section class="resources">
+    <div class="container">
+
+ <h2>La nécessité d'une infrastructure IA Air-Gapped</h2>  <p>Dans l'environnement réglementaire actuel, l'envoi de données d'entreprise hautement sensibles - telles que des dossiers financiers, de la propriété intellectuelle ou des informations de santé des patients - à des fournisseurs de LLM tiers sur le cloud public constitue une vulnérabilité critique. Les modèles sur cloud public exposent les organisations à l'exfiltration de données, à la dépendance vis-à-vis des fournisseurs et à des coûts de jetons API imprévisibles.</p>  <p>Une infrastructure d'IA air-gapped neutralise complètement ces risques. En déployant notre serveur d'IA d'entreprise physiquement ou logiquement isolé de l'internet public, vous garantissez qu'aucun octet de données propriétaires ne quitte jamais votre réseau. Le système fonctionne de manière autonome, ne nécessitant aucune télémétrie cloud externe, aucune vérification de licence à distance et aucune connexion internet continue, garantissant une sécurité maximale et une disponibilité ininterrompue.</p>  <h2>Échelle d'entreprise et collaboration centralisée</h2>  <p>Alors que notre logiciel de bureau permet aux professionnels individuels de monter en compétence, notre solution serveur est conçue pour un déploiement à l'échelle de l'entreprise. Un serveur d'IA on-premise sécurisé agit comme le cerveau centralisé de votre organisation, permettant à plusieurs départements de tirer parti simultanément des mêmes flux de travail d'IA multi-agents puissants.</p>  <p>Cette approche centralisée permet une véritable collaboration. Vos équipes juridiques, analystes financiers et départements marketing peuvent tous interagir avec la plateforme AI Expert Team via une interface unifiée. Les administrateurs informatiques conservent une surveillance totale, mettant en œuvre un contrôle d'accès basé sur les rôles (RBAC) strict, auditant les journaux de prompts localement et gérant efficacement les ressources de calcul dans toute l'entreprise.</p>  <h2>Intégration transparente via des API robustes</h2>  <p>Un chatbot IA autonome est utile, mais une IA intégrée de manière transparente dans vos systèmes d'entreprise existants est transformative. Notre serveur d'IA d'entreprise est conçu pour une intégration architecturale profonde. Nous fournissons des API REST complètes et bien documentées qui permettent à vos équipes de développement internes de connecter la plateforme AI Expert Team à votre pile logicielle actuelle.</p>  <p>L'API peut être appelée depuis n'importe quel système d'entreprise, y compris votre intranet d'entreprise, votre CRM interne (tel que Salesforce ou Dynamics) ou vos plateformes ERP propriétaires. Cela signifie que vos employés n'ont pas besoin d'apprendre une nouvelle interface ; la puissance de l'IA multi-agents est délivrée directement dans les outils qu'ils utilisent déjà quotidiennement.</p>  <h2>Intégration de l'IA dans les flux d'automatisation des processus</h2>  <p>Le véritable ROI d'un serveur d'IA d'entreprise réside dans l'automatisation. En intégrant notre IA locale sécurisée dans votre backend, vous pouvez intégrer des agents autonomes directement dans vos flux d'automatisation des processus.</p>  <p>Au lieu que des humains déclenchent manuellement l'IA, vos systèmes peuvent envoyer automatiquement des tâches au coordinateur d'IA via l'API. Par exemple, dès qu'un nouveau contrat de fournisseur est téléchargé sur votre stockage sécurisé, le système peut automatiquement déclencher l'agent IA juridique pour examiner le document, extraire les clauses clés et envoyer un résumé des risques au tableau de bord de votre équipe de conformité. Cela crée des pipelines automatisés de bout en bout hyper-efficaces qui fonctionnent en toute sécurité derrière votre pare-feu.</p>  <h2>Conformité aux cadres de sécurité stricts</h2>  <p>Pour les sous-traitants gouvernementaux, les prestataires de soins de santé et les institutions financières, la conformité est la base de l'acquisition de logiciels. Notre serveur IA on-premise sécurisé est conçu pour aider votre organisation à respecter et à dépasser les cadres de cybersécurité les plus rigoureux.</p>                     <ul>
+ <li><strong>NIST CSF (Cybersecurity Framework) :</strong> En gardant tout le traitement local, vous maintenez une visibilité et un contrôle totaux, simplifiant l'évaluation des risques et la réponse aux incidents.</li>  <li><strong>CIS IG1 (Center for Internet Security) :</strong> L'architecture du serveur prend en charge l'hygiène cybernétique essentielle, garantissant que les déploiements d'IA n'introduisent pas de connexions externes non autorisées.</li>  <li><strong>CMMC L1 (Cybersecurity Maturity Model Certification) :</strong> Les sous-traitants de la défense peuvent traiter en toute sécurité les informations sur les contrats fédéraux (FCI) à l'aide de notre IA, car la nature air-gapped de la plateforme satisfait aux exigences strictes de contrôle d'accès et d'isolation du réseau.</li>                     </ul>
+ <h2>Déploiement sur Bare-Metal ou Cloud Privé</h2>  <p>Nous comprenons que le terme « on-premise » signifie des choses différentes selon les organisations. Notre plateforme offre des options de déploiement hautement flexibles pour correspondre à votre stratégie informatique. Vous pouvez installer le serveur d'IA d'entreprise directement sur votre propre matériel bare-metal au sein de votre centre de données physique, en tirant pleinement parti de l'accélération GPU locale.</p>  <p>Alternativement, si votre organisation utilise un environnement de cloud privé (tel qu'un AWS GovCloud isolé ou un réseau virtuel privé Azure), le serveur peut également y être déployé en toute sécurité. Quel que soit l'emplacement physique, le logiciel reste entièrement sous votre juridiction, offrant une véritable expérience de serveur d'IA en cloud privé.</p>  <h2>Recherche d'entreprise par IA et RAG privé</h2>  <p>Un serveur d'IA d'entreprise est plus puissant lorsqu'il comprend la base de connaissances unique de votre entreprise. Le serveur prend en charge nativement la recherche d'entreprise sécurisée par l'IA, optimisée par la technologie Private RAG (Retrieval-Augmented Generation).</p>  <p>En connectant le serveur à vos bases de données internes, SharePoint ou référentiels de fichiers sécurisés via l'API, l'IA peut indexer en toute sécurité des téraoctets de données d'entreprise. Lorsqu'un employé pose une question, l'IA récupère le document interne exact et synthétise une réponse hautement précise et contextuelle, le tout sans exposer un seul mot-clé au monde extérieur.</p>             <p class="lead" style="font-size: 1.2rem; font-weight: 500; color: var(--btn-bg);">
+                Explorez nos ressources spécialisées pour les entreprises pour en savoir plus sur la mise à l'échelle d'une IA sécurisée :
+            </p>            
+                <ul>
+                        <li>
+                            <a href="/ai-data-privacy-compliance.html">Confidentialité des données d'IA d'entreprise et conformité de sécurité</a>
+                        </li> 
+                        <li>
+                            <a href="/private-rag-enterprise-search.html">Technologie RAG privée et recherche d'entreprise sécurisée par l'IA</a>
+                        </li> 
+                        <li>
+                            <a href="/ai-predictive-maintenance-manufacturing.html">IA sécurisée pour la fabrication et la maintenance prédictive</a>
+                        </li> 
+                </ul>
+            <div class="callout" style="background-color: rgba(161, 144, 217, 0.1); border-left: 4px solid var(--btn-bg); padding: 1.5rem; margin: 2rem 0; border-radius: 4px;">
+                <strong style="display: block; font-size: 1.2rem; margin-bottom: 0.5rem; color: var(--text-color);">
+                    Prêt à mettre votre IA d'entreprise à l'échelle ?
+                </strong>
+                <p style="margin-bottom: 1rem;">Prenez le contrôle total de votre infrastructure. Nous offrons un essai complet de 6 mois de notre logiciel de base pour des frais administratifs minimes et uniques. Faites l'expérience du moteur avant de le déployer à l'échelle de l'entreprise.<br><br><span style='font-size: 1.1rem;'>Vous voulez d'abord voir la plateforme en action ? <a href='/demo.html' style='color: var(--btn-bg); font-weight: bold; text-decoration: underline;'>Regardez notre démo en direct ici.</a></span></p>
+                <a href="/trial.html" class="btn">Commencer l'essai gratuit</a>
+            </div>
+         
+    </div>
+</section>
+
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&#xA9; 2025 The Intelligent Enterprise Group. Tous droits r&#xE9;serv&#xE9;s.</p>
+        </div>
+    </footer>
+
+    <script src="/js/swiper-bundle.min.js"></script>
+    <script src="/js/cdn.min.js" defer></script>
+    <script src="/js/gsap.min.js"></script>
+    <script src="/js/DrawSVGPlugin.min.js"></script>
+
+    <script type="module" src="/js/themeToggle.js"></script>
+    <script type="module">
+        import { toggleTheme, getCurrentTheme } from '/js/themeToggle.js';
+        const checkbox = document.getElementById('theme-checkbox');
+        const themeLabel = document.getElementById('theme-label');
+
+        if (getCurrentTheme() === 'dark') {
+            checkbox.checked = true;
+            themeLabel.textContent = 'Mode sombre';
+        } else {
+            themeLabel.textContent = 'Mode clair';
+        }
+
+        checkbox.addEventListener('change', () => {
+            toggleTheme();
+            themeLabel.textContent = checkbox.checked ? 'Mode sombre' : 'Mode clair';
+        });
+    </script>
+
+    <button id="back-to-top" aria-label="Back to Top">Haut</button>
+
+    
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            if (window.innerWidth < 768) return;
+
+            const intro = document.querySelector("#right-intro");
+            if (!intro) return;
+
+            const tl = gsap.timeline();
+            let isClosing = false; // Flag to prevent double-triggering the exit
+
+            // --- 1. DEFINE THE EXIT FUNCTION ---
+            const closeIntro = () => {
+                if (isClosing) return;
+                isClosing = true;
+
+                // Kill the main timeline so it doesn't keep running in the background
+                tl.kill();
+
+                // Create a dedicated exit timeline for a fast, responsive feel
+                const exitTl = gsap.timeline();
+
+                /* ROBOT FAST REVEAL & RUN */
+                exitTl.to(".robot-runner", { opacity: 1, duration: 0.2 });
+                exitTl.to(".robot-runner", {
+                    x: 400,
+                    duration: 0.8,
+                    ease: "power2.in"
+                }, "-=0.1");
+
+                /* PANEL SLIDE-OUT */
+                exitTl.to("#right-intro", {
+                    duration: 0.8,
+                    transform: "translateX(100%)",
+                    ease: "power3.inOut",
+                    onComplete: () => {
+                        intro.style.display = "none";
+                        // Remove scroll listener once closed
+                        window.removeEventListener("scroll", handleScroll);
+                    }
+                }, "-=0.6");
+            };
+
+            // --- 2. THE SCROLL LISTENER ---
+            const handleScroll = () => {
+                if (window.scrollY > 20) { // Trigger after 20px of scrolling
+                    closeIntro();
+                }
+            };
+            window.addEventListener("scroll", handleScroll);
+
+            // --- 3. ORIGINAL ANIMATION SEQUENCE ---
+            /* PANEL SLIDE-IN */
+            tl.to("#right-intro", {
+                duration: 0.8,
+                transform: "translateX(0%)",
+                ease: "power3.out"
+            });
+
+            /* PARTICLES */
+            for (let i = 0; i < 20; i++) {
+                const p = document.createElement("div");
+                p.className = "particle";
+                p.style.position = "absolute";
+                p.style.width = "4px";
+                p.style.height = "4px";
+                p.style.background = "rgba(0,174,239,0.35)";
+                p.style.borderRadius = "50%";
+                p.style.left = Math.random() * 100 + "%";
+                p.style.top = "100%";
+                document.querySelector(".intro-particles").appendChild(p);
+
+                gsap.to(p, {
+                    y: -window.innerHeight - 100,
+                    duration: 4 + Math.random() * 4,
+                    delay: Math.random() * 2,
+                    repeat: -1,
+                    ease: "none"
+                });
+            }
+
+            /* SIGNAL LINE & PULSE */
+            tl.to(".signal-main", { height: "60%", duration: 0.8, ease: "power2.out" })
+                .to(".loading-dots", { opacity: 1, duration: 0.3 })
+                .to(".pulse", { opacity: 1, scale: 1.4, duration: 0.3, stagger: 0.15 })
+                .to(".pulse", { scale: 0.6, opacity: 0.4, duration: 0.3, stagger: 0.15 })
+                .to(".loading-dots", { opacity: 0, duration: 0.3 });
+
+            /* TEXT REVEAL */
+            tl.to(".t1", { opacity: 1, x: 0, duration: 0.6 })
+                .to(".t2", { opacity: 1, x: 0, duration: 0.6 })
+                .to(".t3", { opacity: 1, x: 0, duration: 0.6 })
+                .to(".t4", { opacity: 1, x: 0, duration: 0.6 });
+
+            /* ROBOT ARM/LEG LOOPS (Independent of timeline) */
+            const robotParts = [
+                { el: ".arm-left", r: 30 }, { el: ".arm-right", r: -30 },
+                { el: ".leg-left", r: -30 }, { el: ".leg-right", r: 30 }
+            ];
+            robotParts.forEach(part => {
+                gsap.to(part.el, { rotation: part.r, yoyo: true, repeat: -1, duration: 0.2, ease: "power1.inOut" });
+            });
+
+            // --- 4. AUTO-EXIT (If user doesn't scroll) ---
+            tl.to(".robot-runner", { opacity: 1, duration: 0.3, delay: 5 });
+            tl.to(".robot-runner", { x: 400, duration: 1.2, ease: "power2.inOut" }, "-=0.2");
+            tl.to("#right-intro", {
+                duration: 1,
+                transform: "translateX(100%)",
+                ease: "power3.inOut",
+                onComplete: () => {
+                    if (!isClosing) { // Only hide if scroll didn't already trigger it
+                        intro.style.display = "none";
+                        window.removeEventListener("scroll", handleScroll);
+                    }
+                }
+            }, "-=0.6");
+        });
+    </script>
+</body>
+</html>

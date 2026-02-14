@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta name="robots" content="index, follow" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <meta name="description" content='Discover our secure offline AI desktop app. Run edge-ready, high-performance AI locally without internet access. Master agentic AI workflows with total privacy.' />
+    <title>Secure Offline AI Desktop Application | TIEG</title>
+
+    <style>
+        html { background-color: #3B3A47; }
+    </style>
+    <script>
+        (function () {
+            const key = 'preferredTheme';
+            const stored = localStorage.getItem(key);
+            //const systemDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+            const theme = stored || 'dark'/*(systemDark ? 'dark' : 'light')*/;
+            if (theme === 'dark') {
+                document.documentElement.classList.add('dark-mode');
+            } else {
+                document.documentElement.classList.remove('dark-mode');
+            }
+        })();
+    </script>
+
+
+        <link rel="alternate" hreflang="en" href="https://theintelligententerprisegroup.com/offline-ai-desktop-app.html" />
+        <link rel="alternate" hreflang="fr" href="https://theintelligententerprisegroup.com/fr/offline-ai-desktop-app.html" />
+        <link rel="alternate" hreflang="de" href="https://theintelligententerprisegroup.com/de/offline-ai-desktop-app.html" />
+        <link rel="alternate" hreflang="es" href="https://theintelligententerprisegroup.com/es/offline-ai-desktop-app.html" />
+        <link rel="alternate" hreflang="pt" href="https://theintelligententerprisegroup.com/pt/offline-ai-desktop-app.html" />
+        <link rel="alternate" hreflang="zh" href="https://theintelligententerprisegroup.com/zh/offline-ai-desktop-app.html" />
+        <link rel="alternate" hreflang="ja" href="https://theintelligententerprisegroup.com/ja/offline-ai-desktop-app.html" />
+        <link rel="alternate" hreflang="ar" href="https://theintelligententerprisegroup.com/ar/offline-ai-desktop-app.html" />
+
+
+    <link rel="alternate" hreflang="x-default" href="https://theintelligententerprisegroup.com/offline-ai-desktop-app.html" />
+
+    <link rel="canonical" href="https://theintelligententerprisegroup.com/offline-ai-desktop-app.html" />
+
+
+    <link rel="stylesheet" href="/css/styles.css" />
+    <link rel="stylesheet" href="/css/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="/css/all.min.css" />
+
+    <script src="/js/lang-switcher.js" defer></script>
+
+    <script>
+        (function () {
+            if (localStorage.getItem('currentLang')) return;
+            const supported = [
+                     { code: "en" } ,
+                     { code: "fr" } ,
+                     { code: "de" } ,
+                     { code: "es" } ,
+                     { code: "pt" } ,
+                     { code: "zh" } ,
+                     { code: "ja" } ,
+                     { code: "ar" } 
+            ];
+            const defaultLang = "en";
+            const navLangs = navigator.languages || [navigator.language || navigator.userLanguage];
+            let detected = null;
+            for (const nav of navLangs) {
+                const code = nav.toLowerCase().split('-')[0];
+                if (supported.find(s => s.code.toLowerCase() === code)) {
+                    detected = code;
+                    break;
+                }
+            }
+            const lang = detected || defaultLang;
+            localStorage.setItem('currentLang', lang);
+            document.documentElement.lang = lang;
+        })();
+    </script>
+
+    <!-- Organization structured data (JSON-LD) -->
+    <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "Organization",
+          "name": "The Intelligent Enterprise Group",
+          "url": "https://theintelligententerprisegroup.com/",
+          "logo": "https://theintelligententerprisegroup.com/images/tieg-logo.png",
+          "sameAs": []
+        }
+    </script>
+    <link rel="icon" href="/favicon.ico" />
+    <link rel="apple-touch-icon" href="/images/apple-touch-icon.png" />
+
+    
+
+</head>
+<body>
+    <header x-data="{ open: false }">
+        <div class="container header-top">
+            <div class="logo"></div>
+            <div class="theme-switch-wrapper">
+                <label class="theme-switch">
+                    <input type="checkbox" id="theme-checkbox" aria-label="Select theme"/>
+                    <span class="slider round"></span>
+                </label>
+                <span id="theme-label">Light Mode</span>
+                <span class="lang-switcher">
+                    <label for="lang-select" class="lang-label">🌐 Language:</label>
+
+                    <!-- Language switcher -->
+                    <select id="lang-select" class="lang-select">
+                        <option value="en" data-path="/">English</option>
+                        <option value="fr" data-path="/fr/">Fran&#xE7;ais</option>
+                        <option value="de" data-path="/de/">Deutsch</option>
+                        <option value="es" data-path="/es/">Espa&#xF1;ol</option>
+                        <option value="pt" data-path="/pt/">Portugu&#xEA;s</option>
+                        <option value="zh" data-path="/zh/">&#x4E2D;&#x6587;</option>
+                        <option value="ja" data-path="/ja/">&#x65E5;&#x672C;&#x8A9E;</option>
+                        <option value="ar" data-path="/ar/">&#x627;&#x644;&#x639;&#x631;&#x628;&#x64A;&#x629;</option>
+                    </select>
+
+                </span>
+            </div>
+        </div>
+        
+        <div class="container header-nav">
+            <button @click="open = !open" class="menu-toggle" aria-label="Toggle Menu">
+                <svg width="24" height="24" viewBox="0 0 24 24">
+                    <path fill="var(--nav-link-color)" d="M3 6h18v2H3V6zm0 5h18v2H3v-2zm0 5h18v2H3v-2z" />
+                </svg>
+            </button>
+
+            <nav class="main-nav" :class="{ 'open': open }">
+                <ul>
+                    <li><a href="index.html" class="">Home</a></li>
+                    <li><a href="about.html" class="">About Us</a></li>
+                    <li><a href="services.html" class="">Services &amp; Solutions</a></li>
+                    <li><a href="case-studies.html" class="">Case Studies</a></li>
+                    <li><a href="resources.html" class="active">Resources &amp; Insights</a></li>
+                    <li><a href="trial.html" class="">Trial</a></li>
+                    <li><a href="pricing.html" class="">Pricing</a></li>
+                    <li><a href="partners.html" class="">Partners &amp; Alliances</a></li>                    
+                    <li><a href="contact.html" class="">Contact &amp; Consultation</a></li>
+                    <li class="has-submenu"
+                        x-data="{ openSub: false }"
+                        @mouseenter="openSub = true"
+                        @mouseleave="openSub = false">
+                      <button @click="openSub = !openSub"
+                              aria-haspopup="true"
+                              :aria-expanded="openSub.toString()">
+                        Info
+                        <svg width="12" height="12" viewBox="0 0 12 12" aria-hidden="true">
+                          <path d="M3 4l3 3 3-3" fill="currentColor"/>
+                        </svg>
+                      </button>
+                      <ul class="submenu" x-show="openSub" @click.outside="openSub = false">
+                        <li><a href="careers.html" class="">Careers</a></li>
+                        <li><a href="faqs.html" class="">FAQs</a></li>
+                        <li><a href="legal.html" class="">Legal &amp; Policies</a></li>
+                      </ul>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        
+<section class="hero seo-hero" style="padding: 80px 0 40px; text-align: center; background-color: var(--card-bg2);">
+    <div class="container hero-container">
+        <h1 style="font-size: 3rem; margin-bottom: 1rem;">Secure Offline AI Desktop Application</h1>
+        <div class="hero-text">
+            <h3 style="font-weight: 400; opacity: 0.9; max-width: 800px; margin: 0 auto;">Run high-performance, multi-agent AI locally. Achieve total data privacy, adaptive memory, and edge-ready execution without ever connecting to the cloud.</h3>
+        </div>
+
+                <br/>
+                <p class="lead" style="font-size: 1.15rem; font-weight: 500; color: var(--btn-bg); max-width: 800px; margin: 1.5rem auto 0 auto; line-height: 1.6;">
+                    When absolute privacy, continuous availability, and enterprise-grade security are required, relying on cloud-based Artificial Intelligence is no longer a viable option. The Intelligent Enterprise Group introduces a category-defining innovation: the world's first AI-coordinated expert team, delivered as a fully secure offline AI desktop application. Built for professionals who cannot compromise on data sovereignty, this local AI software brings the power of agentic AI workflows directly to your local hardware.
+                </p>
+
+    </div>
+</section>
+
+<section class="resources">
+    <div class="container">
+
+ <h2>Why Today’s Cloud AI Assistants Fall Short</h2>  <p>Most modern AI services rely on a single Large Language Model (LLM) hosted on public cloud servers. These are generalists trying to do everything. However, for professionals handling sensitive client data, intellectual property, or classified documents, cloud-based LLMs present several critical vulnerabilities that prevent enterprise adoption:</p>                     <ul>
+ <li><strong>Data Privacy & Compliance Risks:</strong> Sending proprietary documents (like legal briefs, financial data, or patient records) to external servers violates strict compliance frameworks such as HIPAA, GDPR, and CMMC L1.</li>  <li><strong>Internet Dependency:</strong> Cloud models cannot function in air-gapped environments, remote field operations, or secure enterprise zones. If your connection drops, your workflow stops.</li>  <li><strong>Severe Hallucinations & Context Loss:</strong> Single-model LLMs often suffer from limited memory, losing context when tasks span multiple steps or require deep, domain-specific expertise.</li>                     </ul>
+ <h2>The Edge-Ready Multi-Agent Advantage</h2>  <p>To solve the limitations of generic chatbots, our platform pioneers the use of agentic AI workflows. Instead of relying on a single model, our offline AI desktop app provides you with a coordinated team of AI specialists. Managed by a central AI Coordinator, this multi-agent system (MAS) functions like a real consulting team—autonomously cross-checking facts, analyzing complex data, and generating outputs collaboratively.</p>  <p>Because our system relies on built-in machine learning models embedded directly into the software, the AI experts automatically activate and switch between models to deliver the right solution locally. You get the power of superintelligence and autonomous AI agents, entirely contained within your own device.</p>  <h2>High-Performance Edge AI on Local Hardware</h2>  <p>Running advanced multi-agent systems locally requires immense computational efficiency. Unlike standard web-based wrappers, our high-performance edge AI is engineered from the ground up utilizing a robust C++ AI architecture. This ensures low-latency execution and maximum resource efficiency.</p>  <p>By leveraging hardware acceleration, parallel computing, and GPU optimized local AI, your coordinated AI team delivers faster responses while consuming significantly less energy. This offline machine learning capability means you can run complex analytical tasks instantly, without waiting for cloud API queues or suffering from bandwidth throttling.</p>  <h2>AI Enterprise Search & Private RAG Technology</h2>  <p>One of the greatest challenges for modern businesses is securely indexing and retrieving internal knowledge. Our local AI software includes advanced AI enterprise search capabilities powered by Private RAG (Retrieval-Augmented Generation) technology.</p>  <p>You can securely chat with local documents, indexing your internal PDFs, Excel files, and corporate databases without relying on fragile keyword-matching. The system seamlessly ingests context directly from your local files in a strictly air-gapped AI infrastructure. Your data never leaves your computer, guaranteeing secure enterprise knowledge discovery.</p>  <h2>Adaptive Contextual Memory for Reliable Outputs</h2>  <p>A major limitation of standard AI is 'forgetting' what you discussed an hour ago. Our platform utilizes a highly optimized short- and long-term memory architecture. This AI with adaptive memory preserves deep context across daily sessions, significantly reducing hallucinations and ensuring consistent, reliable results day after day.</p>  <h2>Secure Industry-Specific AI Use Cases</h2>  <p>Our offline AI desktop application is designed to meet the strict security requirements of highly regulated industries. By keeping data processing strictly on-premise, organizations can deploy specialized solutions without compliance risks:</p>                     <ul>
+ <li><strong>Secure AI for Legal & Finance:</strong> Analyze highly sensitive contracts, SEC filings, and M&A data locally. Ensure absolute client privilege and adhere to strict data residency laws.</li>  <li><strong>AI for Healthcare Compliance:</strong> Process patient data and complex medical records locally without exposing Protected Health Information (PHI) to third-party cloud providers.</li>  <li><strong>Predictive Maintenance AI for Manufacturing:</strong> Deploy edge-ready AI directly on the factory floor to forecast equipment failures and optimize supply chains without internet connectivity.</li>                     </ul>
+ <h2>Complete Offline Functionality</h2>  <p>Ultimately, the greatest advantage of our platform is true independence. Our desktop application is fully functional even without internet access. With a comprehensive local installer, all core AI experts are installed directly onto your machine. Whether you are on a secure enterprise intranet, traveling on a flight, or working at a remote offshore site, your AI team is always available.</p>             <p class="lead" style="font-size: 1.2rem; font-weight: 500; color: var(--btn-bg);">
+                Below are a collection of specialised resources for you to discover:
+            </p>            
+                <ul>
+                        <li>
+                            <a href="/run-ai-locally-without-internet.html">How to Run High-Performance AI Locally Without Internet</a>
+                        </li> 
+                        <li>
+                            <a href="/secure-local-ai-for-legal-finance.html">Secure Local AI Software for Legal and Financial Professionals</a>
+                        </li> 
+                        <li>
+                            <a href="/gpu-accelerated-local-ai.html">GPU Accelerated Local AI: High-Speed C++ Architecture</a>
+                        </li> 
+                </ul>
+            <div class="callout" style="background-color: rgba(161, 144, 217, 0.1); border-left: 4px solid var(--btn-bg); padding: 1.5rem; margin: 2rem 0; border-radius: 4px;">
+                <strong style="display: block; font-size: 1.2rem; margin-bottom: 0.5rem; color: var(--text-color);">
+                    Ready to Deploy Your Own AI Team?
+                </strong>
+                <p style="margin-bottom: 1rem;">Experience the world's first AI-coordinated expert team. We offer a comprehensive 6-month trial of our Desktop Edition for a one-time administrative fee of just €39.<br><br><span style='font-size: 1.1rem;'>Want to see it in action first? <a href='/demo.html' style='color: var(--btn-bg); font-weight: bold; text-decoration: underline;'>Watch our Live Demo here.</a></span></p>
+                <a href="/trial.html" class="btn">Start Free Trial</a>
+            </div>
+         
+    </div>
+</section>
+
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&#xA9; 2025 The Intelligent Enterprise Group. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="/js/swiper-bundle.min.js"></script>
+    <script src="/js/cdn.min.js" defer></script>
+    <script src="/js/gsap.min.js"></script>
+    <script src="/js/DrawSVGPlugin.min.js"></script>
+
+    <script type="module" src="/js/themeToggle.js"></script>
+    <script type="module">
+        import { toggleTheme, getCurrentTheme } from '/js/themeToggle.js';
+        const checkbox = document.getElementById('theme-checkbox');
+        const themeLabel = document.getElementById('theme-label');
+
+        if (getCurrentTheme() === 'dark') {
+            checkbox.checked = true;
+            themeLabel.textContent = 'Dark Mode';
+        } else {
+            themeLabel.textContent = 'Light Mode';
+        }
+
+        checkbox.addEventListener('change', () => {
+            toggleTheme();
+            themeLabel.textContent = checkbox.checked ? 'Dark Mode' : 'Light Mode';
+        });
+    </script>
+
+    <button id="back-to-top" aria-label="Back to Top">Top</button>
+
+    
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            if (window.innerWidth < 768) return;
+
+            const intro = document.querySelector("#right-intro");
+            if (!intro) return;
+
+            const tl = gsap.timeline();
+            let isClosing = false; // Flag to prevent double-triggering the exit
+
+            // --- 1. DEFINE THE EXIT FUNCTION ---
+            const closeIntro = () => {
+                if (isClosing) return;
+                isClosing = true;
+
+                // Kill the main timeline so it doesn't keep running in the background
+                tl.kill();
+
+                // Create a dedicated exit timeline for a fast, responsive feel
+                const exitTl = gsap.timeline();
+
+                /* ROBOT FAST REVEAL & RUN */
+                exitTl.to(".robot-runner", { opacity: 1, duration: 0.2 });
+                exitTl.to(".robot-runner", {
+                    x: 400,
+                    duration: 0.8,
+                    ease: "power2.in"
+                }, "-=0.1");
+
+                /* PANEL SLIDE-OUT */
+                exitTl.to("#right-intro", {
+                    duration: 0.8,
+                    transform: "translateX(100%)",
+                    ease: "power3.inOut",
+                    onComplete: () => {
+                        intro.style.display = "none";
+                        // Remove scroll listener once closed
+                        window.removeEventListener("scroll", handleScroll);
+                    }
+                }, "-=0.6");
+            };
+
+            // --- 2. THE SCROLL LISTENER ---
+            const handleScroll = () => {
+                if (window.scrollY > 20) { // Trigger after 20px of scrolling
+                    closeIntro();
+                }
+            };
+            window.addEventListener("scroll", handleScroll);
+
+            // --- 3. ORIGINAL ANIMATION SEQUENCE ---
+            /* PANEL SLIDE-IN */
+            tl.to("#right-intro", {
+                duration: 0.8,
+                transform: "translateX(0%)",
+                ease: "power3.out"
+            });
+
+            /* PARTICLES */
+            for (let i = 0; i < 20; i++) {
+                const p = document.createElement("div");
+                p.className = "particle";
+                p.style.position = "absolute";
+                p.style.width = "4px";
+                p.style.height = "4px";
+                p.style.background = "rgba(0,174,239,0.35)";
+                p.style.borderRadius = "50%";
+                p.style.left = Math.random() * 100 + "%";
+                p.style.top = "100%";
+                document.querySelector(".intro-particles").appendChild(p);
+
+                gsap.to(p, {
+                    y: -window.innerHeight - 100,
+                    duration: 4 + Math.random() * 4,
+                    delay: Math.random() * 2,
+                    repeat: -1,
+                    ease: "none"
+                });
+            }
+
+            /* SIGNAL LINE & PULSE */
+            tl.to(".signal-main", { height: "60%", duration: 0.8, ease: "power2.out" })
+                .to(".loading-dots", { opacity: 1, duration: 0.3 })
+                .to(".pulse", { opacity: 1, scale: 1.4, duration: 0.3, stagger: 0.15 })
+                .to(".pulse", { scale: 0.6, opacity: 0.4, duration: 0.3, stagger: 0.15 })
+                .to(".loading-dots", { opacity: 0, duration: 0.3 });
+
+            /* TEXT REVEAL */
+            tl.to(".t1", { opacity: 1, x: 0, duration: 0.6 })
+                .to(".t2", { opacity: 1, x: 0, duration: 0.6 })
+                .to(".t3", { opacity: 1, x: 0, duration: 0.6 })
+                .to(".t4", { opacity: 1, x: 0, duration: 0.6 });
+
+            /* ROBOT ARM/LEG LOOPS (Independent of timeline) */
+            const robotParts = [
+                { el: ".arm-left", r: 30 }, { el: ".arm-right", r: -30 },
+                { el: ".leg-left", r: -30 }, { el: ".leg-right", r: 30 }
+            ];
+            robotParts.forEach(part => {
+                gsap.to(part.el, { rotation: part.r, yoyo: true, repeat: -1, duration: 0.2, ease: "power1.inOut" });
+            });
+
+            // --- 4. AUTO-EXIT (If user doesn't scroll) ---
+            tl.to(".robot-runner", { opacity: 1, duration: 0.3, delay: 5 });
+            tl.to(".robot-runner", { x: 400, duration: 1.2, ease: "power2.inOut" }, "-=0.2");
+            tl.to("#right-intro", {
+                duration: 1,
+                transform: "translateX(100%)",
+                ease: "power3.inOut",
+                onComplete: () => {
+                    if (!isClosing) { // Only hide if scroll didn't already trigger it
+                        intro.style.display = "none";
+                        window.removeEventListener("scroll", handleScroll);
+                    }
+                }
+            }, "-=0.6");
+        });
+    </script>
+</body>
+</html>

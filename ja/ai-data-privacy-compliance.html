@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="ja" dir="ltr">
+<head>
+    <meta name="robots" content="index, follow" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <meta name="description" content='&#x5F53;&#x793E;&#x306E;&#x5B89;&#x5168;&#x306A;AI&#x30D5;&#x30EC;&#x30FC;&#x30E0;&#x30EF;&#x30FC;&#x30AF;&#x3067;AI&#x30C7;&#x30FC;&#x30BF;&#x306E;&#x30D7;&#x30E9;&#x30A4;&#x30D0;&#x30B7;&#x30FC;&#x30B3;&#x30F3;&#x30D7;&#x30E9;&#x30A4;&#x30A2;&#x30F3;&#x30B9;&#x3092;&#x78BA;&#x4FDD;&#x3057;&#x307E;&#x3059;&#x3002;NIST CSF AI&#x3001;CIS IG1&#x3001;CMMC&#x30EC;&#x30D9;&#x30EB;1&#x3001;&#x304A;&#x3088;&#x3073;&#x30D9;&#x30EB;&#x30AE;&#x30FC;&#x306E;CyberFundamentals&#x306B;&#x5B8C;&#x5168;&#x306B;&#x6E96;&#x62E0;&#x3057;&#x3066;&#x3044;&#x307E;&#x3059;&#x3002;' />
+    <title>&#x30A8;&#x30F3;&#x30BF;&#x30FC;&#x30D7;&#x30E9;&#x30A4;&#x30BA;AI&#x30C7;&#x30FC;&#x30BF;&#x30D7;&#x30E9;&#x30A4;&#x30D0;&#x30B7;&#x30FC;&#x3068;&#x30BB;&#x30AD;&#x30E5;&#x30EA;&#x30C6;&#x30A3;&#x30B3;&#x30F3;&#x30D7;&#x30E9;&#x30A4;&#x30A2;&#x30F3;&#x30B9; | TIEG</title>
+
+    <style>
+        html { background-color: #3B3A47; }
+    </style>
+    <script>
+        (function () {
+            const key = 'preferredTheme';
+            const stored = localStorage.getItem(key);
+            //const systemDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+            const theme = stored || 'dark'/*(systemDark ? 'dark' : 'light')*/;
+            if (theme === 'dark') {
+                document.documentElement.classList.add('dark-mode');
+            } else {
+                document.documentElement.classList.remove('dark-mode');
+            }
+        })();
+    </script>
+
+
+        <link rel="alternate" hreflang="en" href="https://theintelligententerprisegroup.com/ai-data-privacy-compliance.html" />
+        <link rel="alternate" hreflang="fr" href="https://theintelligententerprisegroup.com/fr/ai-data-privacy-compliance.html" />
+        <link rel="alternate" hreflang="de" href="https://theintelligententerprisegroup.com/de/ai-data-privacy-compliance.html" />
+        <link rel="alternate" hreflang="es" href="https://theintelligententerprisegroup.com/es/ai-data-privacy-compliance.html" />
+        <link rel="alternate" hreflang="pt" href="https://theintelligententerprisegroup.com/pt/ai-data-privacy-compliance.html" />
+        <link rel="alternate" hreflang="zh" href="https://theintelligententerprisegroup.com/zh/ai-data-privacy-compliance.html" />
+        <link rel="alternate" hreflang="ja" href="https://theintelligententerprisegroup.com/ja/ai-data-privacy-compliance.html" />
+        <link rel="alternate" hreflang="ar" href="https://theintelligententerprisegroup.com/ar/ai-data-privacy-compliance.html" />
+
+
+    <link rel="alternate" hreflang="x-default" href="https://theintelligententerprisegroup.com/ai-data-privacy-compliance.html" />
+
+    <link rel="canonical" href="https://theintelligententerprisegroup.com/ja/ai-data-privacy-compliance.html" />
+
+
+    <link rel="stylesheet" href="/css/styles.css" />
+    <link rel="stylesheet" href="/css/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="/css/all.min.css" />
+
+    <script src="/js/lang-switcher.js" defer></script>
+
+    <script>
+        (function () {
+            if (localStorage.getItem('currentLang')) return;
+            const supported = [
+                     { code: "en" } ,
+                     { code: "fr" } ,
+                     { code: "de" } ,
+                     { code: "es" } ,
+                     { code: "pt" } ,
+                     { code: "zh" } ,
+                     { code: "ja" } ,
+                     { code: "ar" } 
+            ];
+            const defaultLang = "ja";
+            const navLangs = navigator.languages || [navigator.language || navigator.userLanguage];
+            let detected = null;
+            for (const nav of navLangs) {
+                const code = nav.toLowerCase().split('-')[0];
+                if (supported.find(s => s.code.toLowerCase() === code)) {
+                    detected = code;
+                    break;
+                }
+            }
+            const lang = detected || defaultLang;
+            localStorage.setItem('currentLang', lang);
+            document.documentElement.lang = lang;
+        })();
+    </script>
+
+    <!-- Organization structured data (JSON-LD) -->
+    <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "Organization",
+          "name": "The Intelligent Enterprise Group",
+          "url": "https://theintelligententerprisegroup.com/",
+          "logo": "https://theintelligententerprisegroup.com/images/tieg-logo.png",
+          "sameAs": []
+        }
+    </script>
+    <link rel="icon" href="/favicon.ico" />
+    <link rel="apple-touch-icon" href="/images/apple-touch-icon.png" />
+
+    
+
+</head>
+<body>
+    <header x-data="{ open: false }">
+        <div class="container header-top">
+            <div class="logo"></div>
+            <div class="theme-switch-wrapper">
+                <label class="theme-switch">
+                    <input type="checkbox" id="theme-checkbox" aria-label="Select theme"/>
+                    <span class="slider round"></span>
+                </label>
+                <span id="theme-label">ライトモード</span>
+                <span class="lang-switcher">
+                    <label for="lang-select" class="lang-label">🌐 言語:</label>
+
+                    <!-- Language switcher -->
+                    <select id="lang-select" class="lang-select">
+                        <option value="en" data-path="/">English</option>
+                        <option value="fr" data-path="/fr/">Fran&#xE7;ais</option>
+                        <option value="de" data-path="/de/">Deutsch</option>
+                        <option value="es" data-path="/es/">Espa&#xF1;ol</option>
+                        <option value="pt" data-path="/pt/">Portugu&#xEA;s</option>
+                        <option value="zh" data-path="/zh/">&#x4E2D;&#x6587;</option>
+                        <option value="ja" data-path="/ja/">&#x65E5;&#x672C;&#x8A9E;</option>
+                        <option value="ar" data-path="/ar/">&#x627;&#x644;&#x639;&#x631;&#x628;&#x64A;&#x629;</option>
+                    </select>
+
+                </span>
+            </div>
+        </div>
+        
+        <div class="container header-nav">
+            <button @click="open = !open" class="menu-toggle" aria-label="Toggle Menu">
+                <svg width="24" height="24" viewBox="0 0 24 24">
+                    <path fill="var(--nav-link-color)" d="M3 6h18v2H3V6zm0 5h18v2H3v-2zm0 5h18v2H3v-2z" />
+                </svg>
+            </button>
+
+            <nav class="main-nav" :class="{ 'open': open }">
+                <ul>
+                    <li><a href="index.html" class="">&#x30DB;&#x30FC;&#x30E0;</a></li>
+                    <li><a href="about.html" class="">&#x79C1;&#x305F;&#x3061;&#x306B;&#x3064;&#x3044;&#x3066;</a></li>
+                    <li><a href="services.html" class="">&#x30B5;&#x30FC;&#x30D3;&#x30B9;&#x3068;&#x30BD;&#x30EA;&#x30E5;&#x30FC;&#x30B7;&#x30E7;&#x30F3;</a></li>
+                    <li><a href="case-studies.html" class="">&#x4E8B;&#x4F8B;&#x7814;&#x7A76;</a></li>
+                    <li><a href="resources.html" class="active">&#x30EA;&#x30BD;&#x30FC;&#x30B9;&#x3068;&#x30A4;&#x30F3;&#x30B5;&#x30A4;&#x30C8;</a></li>
+                    <li><a href="trial.html" class="">&#x30C8;&#x30E9;&#x30A4;&#x30A2;&#x30EB;</a></li>
+                    <li><a href="pricing.html" class="">&#x6599;&#x91D1;</a></li>
+                    <li><a href="partners.html" class="">&#x30D1;&#x30FC;&#x30C8;&#x30CA;&#x30FC;&#x3068;&#x30A2;&#x30E9;&#x30A4;&#x30A2;&#x30F3;&#x30B9;</a></li>                    
+                    <li><a href="contact.html" class="">&#x304A;&#x554F;&#x3044;&#x5408;&#x308F;&#x305B;&#x30FB;&#x76F8;&#x8AC7;</a></li>
+                    <li class="has-submenu"
+                        x-data="{ openSub: false }"
+                        @mouseenter="openSub = true"
+                        @mouseleave="openSub = false">
+                      <button @click="openSub = !openSub"
+                              aria-haspopup="true"
+                              :aria-expanded="openSub.toString()">
+                        &#x60C5;&#x5831;
+                        <svg width="12" height="12" viewBox="0 0 12 12" aria-hidden="true">
+                          <path d="M3 4l3 3 3-3" fill="currentColor"/>
+                        </svg>
+                      </button>
+                      <ul class="submenu" x-show="openSub" @click.outside="openSub = false">
+                        <li><a href="careers.html" class="">&#x63A1;&#x7528;&#x60C5;&#x5831;</a></li>
+                        <li><a href="faqs.html" class="">&#x3088;&#x304F;&#x3042;&#x308B;&#x8CEA;&#x554F;</a></li>
+                        <li><a href="legal.html" class="">&#x6CD5;&#x52D9;&#x3068;&#x30DD;&#x30EA;&#x30B7;&#x30FC;</a></li>
+                      </ul>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        
+<section class="hero seo-hero" style="padding: 80px 0 40px; text-align: center; background-color: var(--card-bg2);">
+    <div class="container hero-container">
+        <h1 style="font-size: 3rem; margin-bottom: 1rem;">エンタープライズAIデータプライバシーとセキュリティコンプライアンス</h1>
+        <div class="hero-text">
+            <h3 style="font-weight: 400; opacity: 0.9; max-width: 800px; margin: 0 auto;">企業のファイアウォールの背後で安全に動作し、世界で最も厳格なサイバーセキュリティフレームワークに完全に準拠したデジタルワークフォースを導入します。</h3>
+        </div>
+
+                <br/>
+                <p class="lead" style="font-size: 1.15rem; font-weight: 500; color: var(--btn-bg); max-width: 800px; margin: 1.5rem auto 0 auto; line-height: 1.6;">
+                    The Intelligent Enterprise Groupは、サイバーセキュリティのコンプライアンスとリスク管理に全力で取り組んでいます。組織が人工知能の採用を急ぐ中、データの流出、知的財産の盗難、規制による罰金のリスクはかつてないほど高まっています。当社は、お客様のデジタルワークフォースが企業のファイアウォールの背後で安全に動作することを保証します。エアギャップ（物理的隔離）されたオンプレミスアーキテクチャを利用することで、当社のプラットフォームは絶対的なAIデータプライバシーコンプライアンスを実現し、セキュリティ体制を損なうことなく、企業が自律型AIエージェントを活用できるようにします。
+                </p>
+
+    </div>
+</section>
+
+<section class="resources">
+    <div class="container">
+
+ <h2>安全なAIフレームワークの極めて重要な必要性</h2>  <p>現代の企業において、データは最も価値のある資産です。標準的なクラウドベースのAIソリューションでは、組織が処理のためにこのデータをサードパーティのサーバーに送信する必要があります。この基本的なアーキテクチャは、ゼロトラストセキュリティの核となる原則に違反し、企業のリスク管理に重大な死角を生み出します。</p>  <p>金融、ヘルスケア、防衛、法務などの高度に規制された環境にマルチエージェントワークフローを安全に統合するには、組織は安全なAIフレームワークを採用する必要があります。当社のセキュリティコンプライアンスステートメントは、当社のエンタープライズAIサーバーが100%ローカルで動作することを裏付けています。外部APIコールを排除することで、脅威環境からネットワーク伝送層を完全に取り除き、お客様の組織が国際的に認められたセキュリティフレームワークに完全に準拠することを保証します。</p>  <h2>ベルギーのCyberFundamentals：欧州のデジタルレジリエンス</h2>  <p>欧州の組織、およびEU内で活動するグローバル企業にとって、データ主権は最優先事項です。当社のプラットフォームは、ベルギーのCyberFundamentalsフレームワークに厳密に準拠しています。これは、データを保護し、サイバー攻撃が成功するリスクを大幅に軽減し、全体的なデジタルレジリエンスを高めるために設計された包括的な具体的手段のセットです。</p>  <p>当社のAIエキスパートチームプラットフォームは、すべてのドキュメント、クエリ、分析タスクをお客様自身のハードウェア上でローカルに処理するため、GDPRを含む欧州のデータ保護基準を本質的にサポートしています。お客様の独自のデータが国境を越えることはなく、外国のデータセンターの管轄下に置かれることもありません。このローカライズされたアプローチは、外部の脅威主体に対する最高層のデジタルレジリエンスを提供します。</p>  <h2>AI向けNISTサイバーセキュリティフレームワーク（CSF）</h2>  <p>米国国立標準技術研究所（NIST）のサイバーセキュリティフレームワーク（CSF）は、サイバーセキュリティリスクを管理するための世界的なゴールドスタンダードです。AIを企業に統合すると、NISTのコア機能（特定、防御、検知、対応、復旧）が複雑になることがよくあります。当社のオフラインAIアーキテクチャは、攻撃対象領域を劇的に縮小することで、NIST CSF AIへの準拠を簡素化します。</p>  <p>AIをオンプレミスでホストすることにより、「防御」機能がネイティブに強化されます。管理すべき外部クラウドベンダーの脆弱性はなく、固定すべき継続的なインターネット接続もありません。IT管理者は、既存のローカルアクセス制御、暗号化標準、エンドポイント検知プロトコルをAIをホストするサーバーに直接適用でき、AIの導入が既存のNISTリスク管理の傘下でカバーされることを保証します。</p>  <h2>CISクリティカルセキュリティコントロール（IG1）：不可欠なサイバーハイジーン</h2>  <p>Center for Internet Security（CIS）のクリティカルセキュリティコントロールは、企業のサイバーセキュリティを向上させるための優先順位付けされたパスを提供します。インプリメンテーショングループ1（IG1）は、最も一般的な攻撃から防御するためにすべての組織が達成しなければならない基本的なサイバーハイジーン（衛生管理）を表しています。</p>  <p>CIS IG1の主要な構成要素は、厳格なデータ保護と企業資産の安全な構成です。クラウドAIツールは、エンドユーザーが企業のデータを未確認のWebブラウザにアップロードすることを許可することで、これらのコントロールをバイパスすることがよくあります（シャドーITとして知られています）。当社の安全なオンプレミスAIサーバーを導入することで、管理上の監視を完全に取り戻すことができます。独自のアクティブディレクトリを介してAIモデルへのアクセス権を持つユーザーを正確に制御し、アクセス制御と安全なソフトウェア導入に関するCIS IG1の要件を直接サポートします。</p>  <h2>CMMCレベル1：機密情報の保護</h2>  <p>防衛産業基盤内で活動する組織にとって、サイバーセキュリティ成熟度モデル認証（CMMC）は厳格な前提条件です。CMMCレベル1は、特に連邦契約情報（FCI）の基本的な保護に焦点を当てています。</p>  <p>パブリッククラウドAIプラットフォームは、特定の高コストな政府クラウド認証を取得しない限り、通常、FCIの処理を禁止されています。当社のプラットフォームはこのハードルを完全に回避します。AIエンジンは完全にエアギャップされたオフライン状態で動作するため、設置された施設の物理的および論理的なセキュリティ境界を継承します。防衛請負業者は、機密性の高い政府情報の漏洩のリスクを冒すことなく、複雑な契約書や技術マニュアルを分析するために当社のマルチエージェントシステムを安全に導入できます。</p>  <h2>ゼロトラストアーキテクチャ：テレメトリなし、クラウドなし</h2>  <p>真のAIデータプライバシーコンプライアンスは、データの保存場所だけの問題ではありません。ソフトウェアに隠されたバックドアがないことを保証することでもあります。多くの「ローカル」AIラッパーは、使用状況分析の報告、ライセンスの確認、またはサイレントなバックグラウンドアップデートのダウンロードのために、依然として外部と通信（フォーンホーム）を行っています。</p>  <p>The Intelligent Enterprise Groupは、ソフトウェア設計において厳格なゼロトラストのアプローチを取っています。当社のエンタープライズソリューションには、テレメトリモジュールは一切含まれていません。安全なサーバーにインストールされると、AIは完全な自律性を持って機能します。継続的なインターネット接続（ping）を必要とせず、最も安全で隔離されたネットワーク環境でもデジタルワークフォースが十分に生産性を維持できることを保証します。</p>  <h2>デジタルワークフォースを安全に強化</h2>  <p>リスク管理は、AI革命に乗り遅れることを意味すべきではありません。ベルギーのCyberFundamentals、NIST CSF、CIS IG1、およびCMMCレベル1を遵守することで、当社のプラットフォームはお客様の組織が企業のファイアウォールの背後で自信を持ってデジタルワークフォースを導入することを可能にします。ステークホルダーが要求する妥協のないセキュリティ体制を維持しながら、AIエキスパートチームの運用効率を達成できます。</p>             <div class="parent-hub-link" style="background-color: var(--card-bg2); padding: 1rem; border-radius: 6px; margin-bottom: 2rem;">
+                <span style="font-size: 0.9rem; color: var(--text-color);">当社のエンタープライズサーバーおよびインフラストラクチャガイドの一部：</span>
+                <a href="/secure-on-premise-ai-server.html" style="font-weight: bold; margin-left: 0.5rem; color: var(--btn-bg);">
+                    安全なオンプレミスAIサーバーおよびインフラストラクチャ
+                </a>
+            </div>
+            <div class="callout" style="background-color: rgba(161, 144, 217, 0.1); border-left: 4px solid var(--btn-bg); padding: 1.5rem; margin: 2rem 0; border-radius: 4px;">
+                <strong style="display: block; font-size: 1.2rem; margin-bottom: 0.5rem; color: var(--text-color);">
+                    当社のセキュリティ基準を確認する
+                </strong>
+                <p style="margin-bottom: 1rem;">真のエアギャップAIで独自のデータを保護します。安全な環境内でテストするために、わずか39ユーロの一回限りの管理費で、当社のコアソフトウェアの包括的な6ヶ月間のトライアルを提供しています。<br><br><span style='font-size: 1.1rem;'>まず動作を確認したいですか？ <a href='/demo.html' style='color: var(--btn-bg); font-weight: bold; text-decoration: underline;'>こちらでライブデモをご覧ください。</a></span></p>
+                <a href="/trial.html" class="btn">無料トライアルを開始</a>
+            </div>
+         
+    </div>
+</section>
+
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&#xA9; 2025 The Intelligent Enterprise Group. &#x7121;&#x65AD;&#x8EE2;&#x8F09;&#x3092;&#x7981;&#x3058;&#x307E;&#x3059;&#x3002;</p>
+        </div>
+    </footer>
+
+    <script src="/js/swiper-bundle.min.js"></script>
+    <script src="/js/cdn.min.js" defer></script>
+    <script src="/js/gsap.min.js"></script>
+    <script src="/js/DrawSVGPlugin.min.js"></script>
+
+    <script type="module" src="/js/themeToggle.js"></script>
+    <script type="module">
+        import { toggleTheme, getCurrentTheme } from '/js/themeToggle.js';
+        const checkbox = document.getElementById('theme-checkbox');
+        const themeLabel = document.getElementById('theme-label');
+
+        if (getCurrentTheme() === 'dark') {
+            checkbox.checked = true;
+            themeLabel.textContent = 'ダークモード';
+        } else {
+            themeLabel.textContent = 'ライトモード';
+        }
+
+        checkbox.addEventListener('change', () => {
+            toggleTheme();
+            themeLabel.textContent = checkbox.checked ? 'ダークモード' : 'ライトモード';
+        });
+    </script>
+
+    <button id="back-to-top" aria-label="Back to Top">&#x30C8;&#x30C3;&#x30D7;</button>
+
+    
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            if (window.innerWidth < 768) return;
+
+            const intro = document.querySelector("#right-intro");
+            if (!intro) return;
+
+            const tl = gsap.timeline();
+            let isClosing = false; // Flag to prevent double-triggering the exit
+
+            // --- 1. DEFINE THE EXIT FUNCTION ---
+            const closeIntro = () => {
+                if (isClosing) return;
+                isClosing = true;
+
+                // Kill the main timeline so it doesn't keep running in the background
+                tl.kill();
+
+                // Create a dedicated exit timeline for a fast, responsive feel
+                const exitTl = gsap.timeline();
+
+                /* ROBOT FAST REVEAL & RUN */
+                exitTl.to(".robot-runner", { opacity: 1, duration: 0.2 });
+                exitTl.to(".robot-runner", {
+                    x: 400,
+                    duration: 0.8,
+                    ease: "power2.in"
+                }, "-=0.1");
+
+                /* PANEL SLIDE-OUT */
+                exitTl.to("#right-intro", {
+                    duration: 0.8,
+                    transform: "translateX(100%)",
+                    ease: "power3.inOut",
+                    onComplete: () => {
+                        intro.style.display = "none";
+                        // Remove scroll listener once closed
+                        window.removeEventListener("scroll", handleScroll);
+                    }
+                }, "-=0.6");
+            };
+
+            // --- 2. THE SCROLL LISTENER ---
+            const handleScroll = () => {
+                if (window.scrollY > 20) { // Trigger after 20px of scrolling
+                    closeIntro();
+                }
+            };
+            window.addEventListener("scroll", handleScroll);
+
+            // --- 3. ORIGINAL ANIMATION SEQUENCE ---
+            /* PANEL SLIDE-IN */
+            tl.to("#right-intro", {
+                duration: 0.8,
+                transform: "translateX(0%)",
+                ease: "power3.out"
+            });
+
+            /* PARTICLES */
+            for (let i = 0; i < 20; i++) {
+                const p = document.createElement("div");
+                p.className = "particle";
+                p.style.position = "absolute";
+                p.style.width = "4px";
+                p.style.height = "4px";
+                p.style.background = "rgba(0,174,239,0.35)";
+                p.style.borderRadius = "50%";
+                p.style.left = Math.random() * 100 + "%";
+                p.style.top = "100%";
+                document.querySelector(".intro-particles").appendChild(p);
+
+                gsap.to(p, {
+                    y: -window.innerHeight - 100,
+                    duration: 4 + Math.random() * 4,
+                    delay: Math.random() * 2,
+                    repeat: -1,
+                    ease: "none"
+                });
+            }
+
+            /* SIGNAL LINE & PULSE */
+            tl.to(".signal-main", { height: "60%", duration: 0.8, ease: "power2.out" })
+                .to(".loading-dots", { opacity: 1, duration: 0.3 })
+                .to(".pulse", { opacity: 1, scale: 1.4, duration: 0.3, stagger: 0.15 })
+                .to(".pulse", { scale: 0.6, opacity: 0.4, duration: 0.3, stagger: 0.15 })
+                .to(".loading-dots", { opacity: 0, duration: 0.3 });
+
+            /* TEXT REVEAL */
+            tl.to(".t1", { opacity: 1, x: 0, duration: 0.6 })
+                .to(".t2", { opacity: 1, x: 0, duration: 0.6 })
+                .to(".t3", { opacity: 1, x: 0, duration: 0.6 })
+                .to(".t4", { opacity: 1, x: 0, duration: 0.6 });
+
+            /* ROBOT ARM/LEG LOOPS (Independent of timeline) */
+            const robotParts = [
+                { el: ".arm-left", r: 30 }, { el: ".arm-right", r: -30 },
+                { el: ".leg-left", r: -30 }, { el: ".leg-right", r: 30 }
+            ];
+            robotParts.forEach(part => {
+                gsap.to(part.el, { rotation: part.r, yoyo: true, repeat: -1, duration: 0.2, ease: "power1.inOut" });
+            });
+
+            // --- 4. AUTO-EXIT (If user doesn't scroll) ---
+            tl.to(".robot-runner", { opacity: 1, duration: 0.3, delay: 5 });
+            tl.to(".robot-runner", { x: 400, duration: 1.2, ease: "power2.inOut" }, "-=0.2");
+            tl.to("#right-intro", {
+                duration: 1,
+                transform: "translateX(100%)",
+                ease: "power3.inOut",
+                onComplete: () => {
+                    if (!isClosing) { // Only hide if scroll didn't already trigger it
+                        intro.style.display = "none";
+                        window.removeEventListener("scroll", handleScroll);
+                    }
+                }
+            }, "-=0.6");
+        });
+    </script>
+</body>
+</html>

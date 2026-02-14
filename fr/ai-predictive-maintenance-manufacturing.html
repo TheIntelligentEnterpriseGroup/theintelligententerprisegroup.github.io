@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="fr" dir="ltr">
+<head>
+    <meta name="robots" content="index, follow" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <meta name="description" content='D&#xE9;ployez une IA pr&#xE9;dictive hors ligne pour le secteur manufacturier. Utilisez notre OmniPredict AI pour une maintenance pr&#xE9;dictive on-premise s&#xE9;curis&#xE9;e et &#xE9;liminez les temps d&#x27;arr&#xEA;t impr&#xE9;vus.' />
+    <title>IA On-Premise S&#xE9;curis&#xE9;e pour la Maintenance Pr&#xE9;dictive | TIEG</title>
+
+    <style>
+        html { background-color: #3B3A47; }
+    </style>
+    <script>
+        (function () {
+            const key = 'preferredTheme';
+            const stored = localStorage.getItem(key);
+            //const systemDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+            const theme = stored || 'dark'/*(systemDark ? 'dark' : 'light')*/;
+            if (theme === 'dark') {
+                document.documentElement.classList.add('dark-mode');
+            } else {
+                document.documentElement.classList.remove('dark-mode');
+            }
+        })();
+    </script>
+
+
+        <link rel="alternate" hreflang="en" href="https://theintelligententerprisegroup.com/ai-predictive-maintenance-manufacturing.html" />
+        <link rel="alternate" hreflang="fr" href="https://theintelligententerprisegroup.com/fr/ai-predictive-maintenance-manufacturing.html" />
+        <link rel="alternate" hreflang="de" href="https://theintelligententerprisegroup.com/de/ai-predictive-maintenance-manufacturing.html" />
+        <link rel="alternate" hreflang="es" href="https://theintelligententerprisegroup.com/es/ai-predictive-maintenance-manufacturing.html" />
+        <link rel="alternate" hreflang="pt" href="https://theintelligententerprisegroup.com/pt/ai-predictive-maintenance-manufacturing.html" />
+        <link rel="alternate" hreflang="zh" href="https://theintelligententerprisegroup.com/zh/ai-predictive-maintenance-manufacturing.html" />
+        <link rel="alternate" hreflang="ja" href="https://theintelligententerprisegroup.com/ja/ai-predictive-maintenance-manufacturing.html" />
+        <link rel="alternate" hreflang="ar" href="https://theintelligententerprisegroup.com/ar/ai-predictive-maintenance-manufacturing.html" />
+
+
+    <link rel="alternate" hreflang="x-default" href="https://theintelligententerprisegroup.com/ai-predictive-maintenance-manufacturing.html" />
+
+    <link rel="canonical" href="https://theintelligententerprisegroup.com/fr/ai-predictive-maintenance-manufacturing.html" />
+
+
+    <link rel="stylesheet" href="/css/styles.css" />
+    <link rel="stylesheet" href="/css/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="/css/all.min.css" />
+
+    <script src="/js/lang-switcher.js" defer></script>
+
+    <script>
+        (function () {
+            if (localStorage.getItem('currentLang')) return;
+            const supported = [
+                     { code: "en" } ,
+                     { code: "fr" } ,
+                     { code: "de" } ,
+                     { code: "es" } ,
+                     { code: "pt" } ,
+                     { code: "zh" } ,
+                     { code: "ja" } ,
+                     { code: "ar" } 
+            ];
+            const defaultLang = "fr";
+            const navLangs = navigator.languages || [navigator.language || navigator.userLanguage];
+            let detected = null;
+            for (const nav of navLangs) {
+                const code = nav.toLowerCase().split('-')[0];
+                if (supported.find(s => s.code.toLowerCase() === code)) {
+                    detected = code;
+                    break;
+                }
+            }
+            const lang = detected || defaultLang;
+            localStorage.setItem('currentLang', lang);
+            document.documentElement.lang = lang;
+        })();
+    </script>
+
+    <!-- Organization structured data (JSON-LD) -->
+    <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "Organization",
+          "name": "The Intelligent Enterprise Group",
+          "url": "https://theintelligententerprisegroup.com/",
+          "logo": "https://theintelligententerprisegroup.com/images/tieg-logo.png",
+          "sameAs": []
+        }
+    </script>
+    <link rel="icon" href="/favicon.ico" />
+    <link rel="apple-touch-icon" href="/images/apple-touch-icon.png" />
+
+    
+
+</head>
+<body>
+    <header x-data="{ open: false }">
+        <div class="container header-top">
+            <div class="logo"></div>
+            <div class="theme-switch-wrapper">
+                <label class="theme-switch">
+                    <input type="checkbox" id="theme-checkbox" aria-label="Select theme"/>
+                    <span class="slider round"></span>
+                </label>
+                <span id="theme-label">Mode clair</span>
+                <span class="lang-switcher">
+                    <label for="lang-select" class="lang-label">🌐 Langue :</label>
+
+                    <!-- Language switcher -->
+                    <select id="lang-select" class="lang-select">
+                        <option value="en" data-path="/">English</option>
+                        <option value="fr" data-path="/fr/">Fran&#xE7;ais</option>
+                        <option value="de" data-path="/de/">Deutsch</option>
+                        <option value="es" data-path="/es/">Espa&#xF1;ol</option>
+                        <option value="pt" data-path="/pt/">Portugu&#xEA;s</option>
+                        <option value="zh" data-path="/zh/">&#x4E2D;&#x6587;</option>
+                        <option value="ja" data-path="/ja/">&#x65E5;&#x672C;&#x8A9E;</option>
+                        <option value="ar" data-path="/ar/">&#x627;&#x644;&#x639;&#x631;&#x628;&#x64A;&#x629;</option>
+                    </select>
+
+                </span>
+            </div>
+        </div>
+        
+        <div class="container header-nav">
+            <button @click="open = !open" class="menu-toggle" aria-label="Toggle Menu">
+                <svg width="24" height="24" viewBox="0 0 24 24">
+                    <path fill="var(--nav-link-color)" d="M3 6h18v2H3V6zm0 5h18v2H3v-2zm0 5h18v2H3v-2z" />
+                </svg>
+            </button>
+
+            <nav class="main-nav" :class="{ 'open': open }">
+                <ul>
+                    <li><a href="index.html" class="">Accueil</a></li>
+                    <li><a href="about.html" class="">&#xC0; propos</a></li>
+                    <li><a href="services.html" class="">Services &amp; Solutions</a></li>
+                    <li><a href="case-studies.html" class="">&#xC9;tudes de cas</a></li>
+                    <li><a href="resources.html" class="active">Ressources &amp; Analyses</a></li>
+                    <li><a href="trial.html" class="">Essai</a></li>
+                    <li><a href="pricing.html" class="">Tarifs</a></li>
+                    <li><a href="partners.html" class="">Partenaires &amp; Alliances</a></li>                    
+                    <li><a href="contact.html" class="">Contact &amp; Consultation</a></li>
+                    <li class="has-submenu"
+                        x-data="{ openSub: false }"
+                        @mouseenter="openSub = true"
+                        @mouseleave="openSub = false">
+                      <button @click="openSub = !openSub"
+                              aria-haspopup="true"
+                              :aria-expanded="openSub.toString()">
+                        Infos
+                        <svg width="12" height="12" viewBox="0 0 12 12" aria-hidden="true">
+                          <path d="M3 4l3 3 3-3" fill="currentColor"/>
+                        </svg>
+                      </button>
+                      <ul class="submenu" x-show="openSub" @click.outside="openSub = false">
+                        <li><a href="careers.html" class="">Carri&#xE8;res</a></li>
+                        <li><a href="faqs.html" class="">FAQs</a></li>
+                        <li><a href="legal.html" class="">Mentions l&#xE9;gales &amp; Politiques</a></li>
+                      </ul>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        
+<section class="hero seo-hero" style="padding: 80px 0 40px; text-align: center; background-color: var(--card-bg2);">
+    <div class="container hero-container">
+        <h1 style="font-size: 3rem; margin-bottom: 1rem;">IA On-Premise Sécurisée pour la Maintenance Prédictive</h1>
+        <div class="hero-text">
+            <h3 style="font-weight: 400; opacity: 0.9; max-width: 800px; margin: 0 auto;">Prévoyez les pannes d'équipement, minimisez les temps d'arrêt catastrophiques et sécurisez les données de votre usine avec une infrastructure IA multi-agents isolée (air-gapped).</h3>
+        </div>
+
+                <br/>
+                <p class="lead" style="font-size: 1.15rem; font-weight: 500; color: var(--btn-bg); max-width: 800px; margin: 1.5rem auto 0 auto; line-height: 1.6;">
+                    Pour les secteurs à forte intensité d'actifs comme l'industrie et l'énergie, les temps d'arrêt imprévus ne sont pas qu'un simple inconvénient : c'est une dépense catastrophique. Prévoir les défaillances d'équipement avant qu'elles ne surviennent permet aux organisations d'économiser des millions en pertes de production, en réparations d'urgence et en perturbations de la chaîne d'approvisionnement. Cependant, les solutions d'IA standard basées sur le cloud posent un risque de sécurité inacceptable pour les réseaux de technologie opérationnelle (OT). Déployée en toute sécurité sur site (on-premise), notre OmniPredict AI sert de prévisionniste universel à notre équipe multi-agents. En exécutant des modèles d'IA prédictive complexes hors ligne directement derrière le pare-feu de votre entreprise, nous permettons aux leaders industriels d'atteindre l'excellence opérationnelle proactive sans exposer les infrastructures critiques à l'Internet public.
+                </p>
+
+    </div>
+</section>
+
+<section class="resources">
+    <div class="container">
+
+ <h2>Le Coût Élevé de la Maintenance Manufacturière Réactive</h2>  <p>Historiquement, les secteurs de la fabrication et de l'énergie se sont appuyés sur des stratégies de maintenance réactives ou strictement basées sur un calendrier. L'équipement est soit utilisé jusqu'à la panne, provoquant d'énormes goulots d'étranglement opérationnels, soit entretenu prématurément sur la base de dates arbitraires, gaspillant ainsi une main-d'œuvre précieuse et des pièces de rechange.</p>  <p>L'introduction de l'IA dans la fabrication a fondamentalement modifié ce paradigme. La maintenance prédictive par l'IA utilise les données des capteurs des machines, les journaux historiques et les variables environnementales pour anticiper exactement quand un composant va tomber en panne. Cependant, combler l'écart entre la science des données avancée et le plancher de l'usine physique introduit un défi de taille : la sécurité des données.</p>  <h2>L'Impératif de Sécurité pour l'IA Prédictive Hors Ligne</h2>  <p>Les usines modernes et les réseaux énergétiques sont pilotés par des réseaux OT et des systèmes SCADA. Ces systèmes de contrôle industriels sont des cibles hautement sensibles pour les cyberattaques. Transmettre des données de télémétrie en direct de machines lourdes vers une IA sur un cloud public pour analyse ouvre un vecteur dangereux pour l'interception de données et l'infiltration de réseau.</p>  <p>Pour sauvegarder les infrastructures critiques, les systèmes prédictifs doivent être isolés (air-gapped). Notre plateforme offre une véritable IA prédictive hors ligne. En hébergeant le serveur d'IA d'entreprise directement dans vos locaux — complètement déconnecté du web public — vos données de télémétrie sensibles sont traitées localement. Cela garantit que votre IA de fabrication fonctionne dans un environnement zéro-trust, respectant les cadres de conformité les plus stricts tels que NIST CSF et CIS IG1.</p>  <h2>Présentation d'OmniPredict AI : Le Prévisionniste Universel</h2>  <p>Au cœur de nos capacités prédictives se trouve l'OmniPredict AI, un agent autonome hautement spécialisé conçu spécifiquement pour l'analyse industrielle avancée. Servant de prévisionniste universel de notre équipe d'experts en IA, OmniPredict AI est conçu pour ingérer des volumes massifs de données de capteurs complexes, de fichiers journaux et de mesures opérationnelles.</p>  <p>Contrairement aux alertes de seuil basiques qui vous informent simplement lorsqu'une machine devient trop chaude, OmniPredict AI combine des techniques avancées de classification et de régression pour anticiper les résultats dans diverses industries. Il comprend la relation nuancée entre les vibrations, la température, la capacité de charge et les taux de défaillance historiques, offrant une vision holistique de la santé de vos actifs.</p>  <h2>Détection de Motifs et Prévisions de Temps avant Événement</h2>  <p>L'OmniPredict AI n'est pas un modèle linguistique générique ; c'est un moteur de mathématiques industrielles. Il est conçu pour détecter des motifs subtils et invisibles dans vos données de télémétrie que les opérateurs humains et les logiciels hérités manqueraient complètement. Il peut classer des événements opérationnels complexes, en distinguant une anomalie temporaire inoffensive d'une séquence de dégradation critique.</p>  <p>Au-delà de la simple classification, l'agent utilise des modèles de régression profonde pour prédire des mesures précises de temps avant événement. Au lieu d'un vague avertissement, vos équipes de maintenance reçoivent des prévisions hautement spécifiques et exploitables — comme prédire qu'une broche CNC spécifique subira une défaillance de roulement catastrophique dans exactement 72 heures, accompagnée d'une classification de gravité pour aider à prioriser le calendrier de réparation.</p>  <h2>Pipelines de Streaming Sensibles à la Dérive</h2>  <p>Un défaut majeur des modèles traditionnels d'apprentissage automatique est la « dérive du modèle ». Un modèle entraîné en hiver pourrait devenir très imprécis pendant les mois d'été humides à mesure que les variables environnementales changent. Dans un environnement de fabrication dynamique, les modèles statiques se dégradent rapidement.</p>  <p>Notre plateforme résout ce problème grâce à des pipelines de streaming sensibles à la dérive. L'OmniPredict AI surveille en permanence les flux de données entrants en temps réel par rapport à son entraînement de base. S'il détecte que l'environnement d'exploitation fondamental change — peut-être en raison d'un changement de qualité des matières premières ou de fluctuations saisonnières de température — le pipeline reconnaît automatiquement cette dérive et ajuste sa pondération prédictive en conséquence. Il reste précis dans des environnements changeants, garantissant que vos prévisions restent fiables tout au long de l'année.</p>  <h2>Réentraînement Adaptatif pour une Précision Continue</h2>  <p>Pour maintenir une précision à long terme sans avoir besoin de se connecter à un serveur cloud pour les mises à jour, l'OmniPredict AI utilise le réentraînement adaptatif. À mesure que votre serveur local sur site accumule davantage de données historiques provenant de votre usine spécifique, l'IA affine de manière autonome ses propres modèles localisés.</p>  <p>Ce réentraînement adaptatif se produit entièrement hors ligne. L'IA apprend de vos machines spécifiques, de vos opérateurs spécifiques et de vos journaux de maintenance spécifiques. Au fil du temps, l'OmniPredict AI devient un expert hyper-spécialisé adapté exclusivement à l'empreinte opérationnelle unique de votre installation.</p>  <h2>Prévisions Exploitables pour la Fabrication et les Opérations IT</h2>  <p>L'objectif ultime de la maintenance prédictive par l'IA est de combler l'écart entre l'OT et l'IT. Notre serveur d'entreprise sécurisé dispose d'API robustes, permettant à l'OmniPredict AI de pousser ses prévisions exploitables directement dans vos plateformes ERP, CMMS ou de gestion des services IT existantes.</p>  <p>Lorsqu'une panne est prédite, le système peut automatiquement générer un bon de travail, vérifier l'inventaire local pour les pièces de rechange et alerter le chef d'atelier via votre réseau interne. En fournissant des prévisions exploitables pour les opérations de fabrication et d'IT, notre plateforme transforme la science des données complexe en flux de travail opérationnels fluides, sécurisés et automatisés.</p>             <div class="parent-hub-link" style="background-color: var(--card-bg2); padding: 1rem; border-radius: 6px; margin-bottom: 2rem;">
+                <span style="font-size: 0.9rem; color: var(--text-color);">Fait partie de notre guide sur les serveurs d'entreprise et l'infrastructure :</span>
+                <a href="/secure-on-premise-ai-server.html" style="font-weight: bold; margin-left: 0.5rem; color: var(--btn-bg);">
+                    Serveur d'IA On-Premise Sécurisé et Infrastructure
+                </a>
+            </div>
+            <div class="callout" style="background-color: rgba(161, 144, 217, 0.1); border-left: 4px solid var(--btn-bg); padding: 1.5rem; margin: 2rem 0; border-radius: 4px;">
+                <strong style="display: block; font-size: 1.2rem; margin-bottom: 0.5rem; color: var(--text-color);">
+                    Éliminez les Temps d'Arrêt Imprévus en Toute Sécurité
+                </strong>
+                <p style="margin-bottom: 1rem;">Protégez votre infrastructure critique tout en maximisant l'efficacité opérationnelle. Nous proposons un essai complet de 6 mois de notre logiciel de base pour des frais administratifs uniques de seulement 39 €. Déployez votre prévisionniste universel dès aujourd'hui.<br><br><span style='font-size: 1.1rem;'>Vous voulez d'abord voir le moteur d'IA en action ? <a href='/demo.html' style='color: var(--btn-bg); font-weight: bold; text-decoration: underline;'>Regardez notre démo en direct ici.</a></span></p>
+                <a href="/trial.html" class="btn">Commencer l'Essai Gratuit</a>
+            </div>
+         
+    </div>
+</section>
+
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&#xA9; 2025 The Intelligent Enterprise Group. Tous droits r&#xE9;serv&#xE9;s.</p>
+        </div>
+    </footer>
+
+    <script src="/js/swiper-bundle.min.js"></script>
+    <script src="/js/cdn.min.js" defer></script>
+    <script src="/js/gsap.min.js"></script>
+    <script src="/js/DrawSVGPlugin.min.js"></script>
+
+    <script type="module" src="/js/themeToggle.js"></script>
+    <script type="module">
+        import { toggleTheme, getCurrentTheme } from '/js/themeToggle.js';
+        const checkbox = document.getElementById('theme-checkbox');
+        const themeLabel = document.getElementById('theme-label');
+
+        if (getCurrentTheme() === 'dark') {
+            checkbox.checked = true;
+            themeLabel.textContent = 'Mode sombre';
+        } else {
+            themeLabel.textContent = 'Mode clair';
+        }
+
+        checkbox.addEventListener('change', () => {
+            toggleTheme();
+            themeLabel.textContent = checkbox.checked ? 'Mode sombre' : 'Mode clair';
+        });
+    </script>
+
+    <button id="back-to-top" aria-label="Back to Top">Haut</button>
+
+    
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            if (window.innerWidth < 768) return;
+
+            const intro = document.querySelector("#right-intro");
+            if (!intro) return;
+
+            const tl = gsap.timeline();
+            let isClosing = false; // Flag to prevent double-triggering the exit
+
+            // --- 1. DEFINE THE EXIT FUNCTION ---
+            const closeIntro = () => {
+                if (isClosing) return;
+                isClosing = true;
+
+                // Kill the main timeline so it doesn't keep running in the background
+                tl.kill();
+
+                // Create a dedicated exit timeline for a fast, responsive feel
+                const exitTl = gsap.timeline();
+
+                /* ROBOT FAST REVEAL & RUN */
+                exitTl.to(".robot-runner", { opacity: 1, duration: 0.2 });
+                exitTl.to(".robot-runner", {
+                    x: 400,
+                    duration: 0.8,
+                    ease: "power2.in"
+                }, "-=0.1");
+
+                /* PANEL SLIDE-OUT */
+                exitTl.to("#right-intro", {
+                    duration: 0.8,
+                    transform: "translateX(100%)",
+                    ease: "power3.inOut",
+                    onComplete: () => {
+                        intro.style.display = "none";
+                        // Remove scroll listener once closed
+                        window.removeEventListener("scroll", handleScroll);
+                    }
+                }, "-=0.6");
+            };
+
+            // --- 2. THE SCROLL LISTENER ---
+            const handleScroll = () => {
+                if (window.scrollY > 20) { // Trigger after 20px of scrolling
+                    closeIntro();
+                }
+            };
+            window.addEventListener("scroll", handleScroll);
+
+            // --- 3. ORIGINAL ANIMATION SEQUENCE ---
+            /* PANEL SLIDE-IN */
+            tl.to("#right-intro", {
+                duration: 0.8,
+                transform: "translateX(0%)",
+                ease: "power3.out"
+            });
+
+            /* PARTICLES */
+            for (let i = 0; i < 20; i++) {
+                const p = document.createElement("div");
+                p.className = "particle";
+                p.style.position = "absolute";
+                p.style.width = "4px";
+                p.style.height = "4px";
+                p.style.background = "rgba(0,174,239,0.35)";
+                p.style.borderRadius = "50%";
+                p.style.left = Math.random() * 100 + "%";
+                p.style.top = "100%";
+                document.querySelector(".intro-particles").appendChild(p);
+
+                gsap.to(p, {
+                    y: -window.innerHeight - 100,
+                    duration: 4 + Math.random() * 4,
+                    delay: Math.random() * 2,
+                    repeat: -1,
+                    ease: "none"
+                });
+            }
+
+            /* SIGNAL LINE & PULSE */
+            tl.to(".signal-main", { height: "60%", duration: 0.8, ease: "power2.out" })
+                .to(".loading-dots", { opacity: 1, duration: 0.3 })
+                .to(".pulse", { opacity: 1, scale: 1.4, duration: 0.3, stagger: 0.15 })
+                .to(".pulse", { scale: 0.6, opacity: 0.4, duration: 0.3, stagger: 0.15 })
+                .to(".loading-dots", { opacity: 0, duration: 0.3 });
+
+            /* TEXT REVEAL */
+            tl.to(".t1", { opacity: 1, x: 0, duration: 0.6 })
+                .to(".t2", { opacity: 1, x: 0, duration: 0.6 })
+                .to(".t3", { opacity: 1, x: 0, duration: 0.6 })
+                .to(".t4", { opacity: 1, x: 0, duration: 0.6 });
+
+            /* ROBOT ARM/LEG LOOPS (Independent of timeline) */
+            const robotParts = [
+                { el: ".arm-left", r: 30 }, { el: ".arm-right", r: -30 },
+                { el: ".leg-left", r: -30 }, { el: ".leg-right", r: 30 }
+            ];
+            robotParts.forEach(part => {
+                gsap.to(part.el, { rotation: part.r, yoyo: true, repeat: -1, duration: 0.2, ease: "power1.inOut" });
+            });
+
+            // --- 4. AUTO-EXIT (If user doesn't scroll) ---
+            tl.to(".robot-runner", { opacity: 1, duration: 0.3, delay: 5 });
+            tl.to(".robot-runner", { x: 400, duration: 1.2, ease: "power2.inOut" }, "-=0.2");
+            tl.to("#right-intro", {
+                duration: 1,
+                transform: "translateX(100%)",
+                ease: "power3.inOut",
+                onComplete: () => {
+                    if (!isClosing) { // Only hide if scroll didn't already trigger it
+                        intro.style.display = "none";
+                        window.removeEventListener("scroll", handleScroll);
+                    }
+                }
+            }, "-=0.6");
+        });
+    </script>
+</body>
+</html>

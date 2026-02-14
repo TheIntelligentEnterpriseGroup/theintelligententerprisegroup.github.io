@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="de" dir="ltr">
+<head>
+    <meta name="robots" content="index, follow" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <meta name="description" content='Implementieren Sie unseren sicheren On-Premise KI-Server. Enterprise-taugliche, Air-Gapped Multi-Agenten-Infrastruktur, konform mit NIST CSF, CIS IG1 und CMMC L1 Frameworks.' />
+    <title>Sicherer On-Premise KI-Server &amp; Infrastruktur | TIEG</title>
+
+    <style>
+        html { background-color: #3B3A47; }
+    </style>
+    <script>
+        (function () {
+            const key = 'preferredTheme';
+            const stored = localStorage.getItem(key);
+            //const systemDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+            const theme = stored || 'dark'/*(systemDark ? 'dark' : 'light')*/;
+            if (theme === 'dark') {
+                document.documentElement.classList.add('dark-mode');
+            } else {
+                document.documentElement.classList.remove('dark-mode');
+            }
+        })();
+    </script>
+
+
+        <link rel="alternate" hreflang="en" href="https://theintelligententerprisegroup.com/secure-on-premise-ai-server.html" />
+        <link rel="alternate" hreflang="fr" href="https://theintelligententerprisegroup.com/fr/secure-on-premise-ai-server.html" />
+        <link rel="alternate" hreflang="de" href="https://theintelligententerprisegroup.com/de/secure-on-premise-ai-server.html" />
+        <link rel="alternate" hreflang="es" href="https://theintelligententerprisegroup.com/es/secure-on-premise-ai-server.html" />
+        <link rel="alternate" hreflang="pt" href="https://theintelligententerprisegroup.com/pt/secure-on-premise-ai-server.html" />
+        <link rel="alternate" hreflang="zh" href="https://theintelligententerprisegroup.com/zh/secure-on-premise-ai-server.html" />
+        <link rel="alternate" hreflang="ja" href="https://theintelligententerprisegroup.com/ja/secure-on-premise-ai-server.html" />
+        <link rel="alternate" hreflang="ar" href="https://theintelligententerprisegroup.com/ar/secure-on-premise-ai-server.html" />
+
+
+    <link rel="alternate" hreflang="x-default" href="https://theintelligententerprisegroup.com/secure-on-premise-ai-server.html" />
+
+    <link rel="canonical" href="https://theintelligententerprisegroup.com/de/secure-on-premise-ai-server.html" />
+
+
+    <link rel="stylesheet" href="/css/styles.css" />
+    <link rel="stylesheet" href="/css/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="/css/all.min.css" />
+
+    <script src="/js/lang-switcher.js" defer></script>
+
+    <script>
+        (function () {
+            if (localStorage.getItem('currentLang')) return;
+            const supported = [
+                     { code: "en" } ,
+                     { code: "fr" } ,
+                     { code: "de" } ,
+                     { code: "es" } ,
+                     { code: "pt" } ,
+                     { code: "zh" } ,
+                     { code: "ja" } ,
+                     { code: "ar" } 
+            ];
+            const defaultLang = "de";
+            const navLangs = navigator.languages || [navigator.language || navigator.userLanguage];
+            let detected = null;
+            for (const nav of navLangs) {
+                const code = nav.toLowerCase().split('-')[0];
+                if (supported.find(s => s.code.toLowerCase() === code)) {
+                    detected = code;
+                    break;
+                }
+            }
+            const lang = detected || defaultLang;
+            localStorage.setItem('currentLang', lang);
+            document.documentElement.lang = lang;
+        })();
+    </script>
+
+    <!-- Organization structured data (JSON-LD) -->
+    <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "Organization",
+          "name": "The Intelligent Enterprise Group",
+          "url": "https://theintelligententerprisegroup.com/",
+          "logo": "https://theintelligententerprisegroup.com/images/tieg-logo.png",
+          "sameAs": []
+        }
+    </script>
+    <link rel="icon" href="/favicon.ico" />
+    <link rel="apple-touch-icon" href="/images/apple-touch-icon.png" />
+
+    
+
+</head>
+<body>
+    <header x-data="{ open: false }">
+        <div class="container header-top">
+            <div class="logo"></div>
+            <div class="theme-switch-wrapper">
+                <label class="theme-switch">
+                    <input type="checkbox" id="theme-checkbox" aria-label="Select theme"/>
+                    <span class="slider round"></span>
+                </label>
+                <span id="theme-label">Heller Modus</span>
+                <span class="lang-switcher">
+                    <label for="lang-select" class="lang-label">🌐 Sprache:</label>
+
+                    <!-- Language switcher -->
+                    <select id="lang-select" class="lang-select">
+                        <option value="en" data-path="/">English</option>
+                        <option value="fr" data-path="/fr/">Fran&#xE7;ais</option>
+                        <option value="de" data-path="/de/">Deutsch</option>
+                        <option value="es" data-path="/es/">Espa&#xF1;ol</option>
+                        <option value="pt" data-path="/pt/">Portugu&#xEA;s</option>
+                        <option value="zh" data-path="/zh/">&#x4E2D;&#x6587;</option>
+                        <option value="ja" data-path="/ja/">&#x65E5;&#x672C;&#x8A9E;</option>
+                        <option value="ar" data-path="/ar/">&#x627;&#x644;&#x639;&#x631;&#x628;&#x64A;&#x629;</option>
+                    </select>
+
+                </span>
+            </div>
+        </div>
+        
+        <div class="container header-nav">
+            <button @click="open = !open" class="menu-toggle" aria-label="Toggle Menu">
+                <svg width="24" height="24" viewBox="0 0 24 24">
+                    <path fill="var(--nav-link-color)" d="M3 6h18v2H3V6zm0 5h18v2H3v-2zm0 5h18v2H3v-2z" />
+                </svg>
+            </button>
+
+            <nav class="main-nav" :class="{ 'open': open }">
+                <ul>
+                    <li><a href="index.html" class="">Startseite</a></li>
+                    <li><a href="about.html" class="">&#xDC;ber uns</a></li>
+                    <li><a href="services.html" class="">Dienstleistungen &amp; L&#xF6;sungen</a></li>
+                    <li><a href="case-studies.html" class="">Fallstudien</a></li>
+                    <li><a href="resources.html" class="active">Ressourcen &amp; Einblicke</a></li>
+                    <li><a href="trial.html" class="">Testversion</a></li>
+                    <li><a href="pricing.html" class="">Preise</a></li>
+                    <li><a href="partners.html" class="">Partner &amp; Allianzen</a></li>                    
+                    <li><a href="contact.html" class="">Kontakt &amp; Beratung</a></li>
+                    <li class="has-submenu"
+                        x-data="{ openSub: false }"
+                        @mouseenter="openSub = true"
+                        @mouseleave="openSub = false">
+                      <button @click="openSub = !openSub"
+                              aria-haspopup="true"
+                              :aria-expanded="openSub.toString()">
+                        Info
+                        <svg width="12" height="12" viewBox="0 0 12 12" aria-hidden="true">
+                          <path d="M3 4l3 3 3-3" fill="currentColor"/>
+                        </svg>
+                      </button>
+                      <ul class="submenu" x-show="openSub" @click.outside="openSub = false">
+                        <li><a href="careers.html" class="">Karriere</a></li>
+                        <li><a href="faqs.html" class="">FAQs</a></li>
+                        <li><a href="legal.html" class="">Rechtliches &amp; Richtlinien</a></li>
+                      </ul>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        
+<section class="hero seo-hero" style="padding: 80px 0 40px; text-align: center; background-color: var(--card-bg2);">
+    <div class="container hero-container">
+        <h1 style="font-size: 3rem; margin-bottom: 1rem;">Sicherer On-Premise KI-Server & Air-Gapped Infrastruktur</h1>
+        <div class="hero-text">
+            <h3 style="font-weight: 400; opacity: 0.9; max-width: 800px; margin: 0 auto;">Implementieren Sie einen Enterprise-KI-Server mit Multi-Agenten-Struktur vor Ort oder in einer Private Cloud. Erreichen Sie strikte Compliance, nahtlose API-Integration und totale Datensouveränität.</h3>
+        </div>
+
+                <br/>
+                <p class="lead" style="font-size: 1.15rem; font-weight: 500; color: var(--btn-bg); max-width: 800px; margin: 1.5rem auto 0 auto; line-height: 1.6;">
+                    Unternehmen benötigen die absolute Kontrolle über ihre proprietären Daten und ihre IT-Infrastruktur. Wenn öffentliche Cloud-KI-Lösungen unannehmbare Sicherheits-, Datenschutz- und Compliance-Risiken bergen, müssen Unternehmen ihre KI-Fähigkeiten internalisieren. Wir bieten eine Enterprise-Bereitstellung der AI Expert Team Plattform an, die vollständig on-premise oder in Ihrer Private Cloud gehostet wird. Dieser sichere On-Premise KI-Server bietet eine hochskalierbare, Air-Gapped KI-Infrastruktur, die speziell für Organisationen entwickelt wurde, die eine strikte Data Governance, nahtlose Systemintegration und fortschrittliche Prozessautomatisierung fordern.
+                </p>
+
+    </div>
+</section>
+
+<section class="resources">
+    <div class="container">
+
+ <h2>Die Notwendigkeit einer Air-Gapped KI-Infrastruktur</h2>  <p>Im heutigen regulatorischen Umfeld ist das Senden hochsensibler Unternehmensdaten – wie Finanzunterlagen, geistiges Eigentum oder Patientendaten – an öffentliche Drittanbieter von LLMs eine kritische Schwachstelle. Öffentliche Cloud-Modelle setzen Unternehmen dem Risiko von Datenexfiltration, Vendor-Lock-in und unvorhersehbaren API-Token-Kosten aus.</p>  <p>Eine Air-Gapped KI-Infrastruktur neutralisiert diese Risiken vollständig. Durch die Bereitstellung unseres Enterprise-KI-Servers, der physisch oder logisch vom öffentlichen Internet isoliert ist, stellen Sie sicher, dass kein einziges Byte proprietärer Daten jemals Ihr Netzwerk verlässt. Das System arbeitet autonom, benötigt keine externe Cloud-Telemetrie, keine Remote-Lizenzprüfung und keine dauerhafte Internetverbindung, was maximale Sicherheit und ununterbrochene Betriebszeit garantiert.</p>  <h2>Enterprise-Skalierung und zentralisierte Zusammenarbeit</h2>  <p>Während unsere Desktop-Software einzelne Fachkräfte unterstützt, ist unsere Server-Lösung für den unternehmensweiten Einsatz konzipiert. Ein sicherer On-Premise KI-Server fungiert als zentrales Gehirn Ihrer Organisation und ermöglicht es mehreren Abteilungen, gleichzeitig dieselben leistungsstarken Multi-Agenten-KI-Workflows zu nutzen.</p>  <p>Dieser zentralisierte Ansatz ermöglicht echte Zusammenarbeit. Ihre Rechtsabteilung, Finanzanalysten und Marketingabteilungen können alle über eine einheitliche Schnittstelle mit der AI Expert Team Plattform interagieren. IT-Administratoren behalten die volle Übersicht, implementieren strikte rollenbasierte Zugriffskontrollen (RBAC), auditieren Prompt-Logs lokal und verwalten Rechenressourcen effizient im gesamten Unternehmen.</p>  <h2>Nahtlose Integration über robuste APIs</h2>  <p>Ein eigenständiger KI-Chatbot ist nützlich, aber eine nahtlos in Ihre bestehenden Geschäftssysteme integrierte KI ist transformativ. Unser Enterprise-KI-Server ist für eine tiefe architektonische Integration konzipiert. Wir bieten umfassende, gut dokumentierte REST-APIs, die es Ihren internen Entwicklungsteams ermöglichen, die AI Expert Team Plattform mit Ihrem aktuellen Software-Stack zu verbinden.</p>  <p>Die API kann von jedem Geschäftssystem aufgerufen werden, einschließlich Ihres Unternehmens-Intranets, internen CRMs (wie Salesforce oder Dynamics) oder proprietären ERP-Plattformen. Dies bedeutet, dass Ihre Mitarbeiter keine neue Benutzeroberfläche erlernen müssen; die Leistung der Multi-Agenten-KI wird direkt in den Tools bereitgestellt, die sie bereits täglich nutzen.</p>  <h2>Einbettung von KI in Prozessautomatisierungs-Workflows</h2>  <p>Der wahre ROI eines Enterprise-KI-Servers liegt in der Automatisierung. Durch die Integration unserer sicheren lokalen KI in Ihr Backend können Sie autonome Agenten direkt in Ihre Prozessautomatisierungs-Workflows einbetten.</p>  <p>Anstatt dass Menschen die KI manuell auslösen, können Ihre Systeme Aufgaben automatisch über die API an den KI-Koordinator übertragen. Sobald beispielsweise ein neuer Lieferantenvertrag in Ihren sicheren Speicher hochgeladen wird, kann das System automatisch den Rechts-KI-Agenten auslösen, um das Dokument zu prüfen, Schlüsselklauseln zu extrahieren und eine Risikozusammenfassung an das Dashboard Ihres Compliance-Teams zu senden. Dies schafft hypereffiziente End-to-End-Automatisierungspipelines, die sicher hinter Ihrer Firewall operieren.</p>  <h2>Compliance mit strengen Sicherheits-Frameworks</h2>  <p>Für Regierungsauftragnehmer, Gesundheitsdienstleister und Finanzinstitute ist Compliance die Grundvoraussetzung für die Softwarebeschaffung. Unser sicherer On-Premise KI-Server ist darauf ausgelegt, Ihrer Organisation zu helfen, die strengsten Cybersicherheits-Frameworks zu erfüllen und zu übertreffen.</p>                     <ul>
+ <li><strong>NIST CSF (Cybersecurity Framework):</strong> Durch die lokale Verarbeitung behalten Sie die volle Sichtbarkeit und Kontrolle, was die Risikobewertung und die Reaktion auf Vorfälle vereinfacht.</li>  <li><strong>CIS IG1 (Center for Internet Security):</strong> Die Serverarchitektur unterstützt die essenzielle Cyber-Hygiene und stellt sicher, dass KI-Bereitstellungen keine unbefugten externen Verbindungen einführen.</li>  <li><strong>CMMC L1 (Cybersecurity Maturity Model Certification):</strong> Verteidigungsunternehmen können Federal Contract Information (FCI) sicher mit unserer KI verarbeiten, da die Air-Gapped-Natur der Plattform die strengen Anforderungen an Zugriffskontrolle und Netzwerkisolierung erfüllt.</li>                     </ul>
+ <h2>Bereitstellung auf Bare-Metal oder Private Cloud</h2>  <p>Wir wissen, dass 'On-Premise' für verschiedene Organisationen unterschiedliche Bedeutungen hat. Unsere Plattform bietet hochflexible Bereitstellungsoptionen, die zu Ihrer IT-Strategie passen. Sie können den Enterprise-KI-Server direkt auf Ihrer eigenen Bare-Metal-Hardware in Ihrem physischen Rechenzentrum installieren und die Vorteile der lokalen GPU-Beschleunigung voll ausschöpfen.</p>  <p>Alternativ kann der Server, falls Ihr Unternehmen eine Private Cloud-Umgebung nutzt (wie ein isoliertes AWS GovCloud oder ein privates virtuelles Azure-Netzwerk), auch dort sicher bereitgestellt werden. Unabhängig vom physischen Standort bleibt die Software vollständig unter Ihrer Rechtshoheit und bietet ein echtes Private-Cloud-KI-Server-Erlebnis.</p>  <h2>KI-Unternehmenssuche und Private RAG</h2>  <p>Ein Enterprise-KI-Server ist am leistungsfähigsten, wenn er die einzigartige Wissensbasis Ihres Unternehmens versteht. Der Server unterstützt nativ die sichere KI-Unternehmenssuche, powered by Private RAG (Retrieval-Augmented Generation) Technologie.</p>  <p>Durch die Anbindung des Servers an Ihre internen Datenbanken, SharePoint oder sichere Datei-Repositorys über die API kann die KI Terabytes an Unternehmensdaten sicher indexieren. Wenn ein Mitarbeiter eine Frage stellt, ruft die KI das exakte interne Dokument ab und synthetisiert eine hochpräzise, kontextrelevante Antwort – und das alles, ohne ein einziges Keyword nach außen zu geben.</p>             <p class="lead" style="font-size: 1.2rem; font-weight: 500; color: var(--btn-bg);">
+                Erkunden Sie unsere spezialisierten Enterprise-Ressourcen, um mehr über die Skalierung sicherer KI zu erfahren:
+            </p>            
+                <ul>
+                        <li>
+                            <a href="/ai-data-privacy-compliance.html">Enterprise KI-Datenschutz & Security Compliance</a>
+                        </li> 
+                        <li>
+                            <a href="/private-rag-enterprise-search.html">Private RAG Technologie & Sichere KI-Unternehmenssuche</a>
+                        </li> 
+                        <li>
+                            <a href="/ai-predictive-maintenance-manufacturing.html">Sichere KI für Fertigung & Predictive Maintenance</a>
+                        </li> 
+                </ul>
+            <div class="callout" style="background-color: rgba(161, 144, 217, 0.1); border-left: 4px solid var(--btn-bg); padding: 1.5rem; margin: 2rem 0; border-radius: 4px;">
+                <strong style="display: block; font-size: 1.2rem; margin-bottom: 0.5rem; color: var(--text-color);">
+                    Bereit, Ihre Enterprise-KI zu skalieren?
+                </strong>
+                <p style="margin-bottom: 1rem;">Übernehmen Sie die volle Kontrolle über Ihre Infrastruktur. Wir bieten eine umfassende 6-monatige Testphase unserer Kernsoftware gegen eine geringe einmalige Verwaltungsgebühr an. Erleben Sie die Engine, bevor Sie sie unternehmensweit skalieren.<br><br><span style='font-size: 1.1rem;'>Möchten Sie die Plattform zuerst in Aktion sehen? <a href='/demo.html' style='color: var(--btn-bg); font-weight: bold; text-decoration: underline;'>Sehen Sie sich hier unsere Live-Demo an.</a></span></p>
+                <a href="/trial.html" class="btn">Kostenlose Testversion starten</a>
+            </div>
+         
+    </div>
+</section>
+
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&#xA9; 2025 The Intelligent Enterprise Group. Alle Rechte vorbehalten.</p>
+        </div>
+    </footer>
+
+    <script src="/js/swiper-bundle.min.js"></script>
+    <script src="/js/cdn.min.js" defer></script>
+    <script src="/js/gsap.min.js"></script>
+    <script src="/js/DrawSVGPlugin.min.js"></script>
+
+    <script type="module" src="/js/themeToggle.js"></script>
+    <script type="module">
+        import { toggleTheme, getCurrentTheme } from '/js/themeToggle.js';
+        const checkbox = document.getElementById('theme-checkbox');
+        const themeLabel = document.getElementById('theme-label');
+
+        if (getCurrentTheme() === 'dark') {
+            checkbox.checked = true;
+            themeLabel.textContent = 'Dunkler Modus';
+        } else {
+            themeLabel.textContent = 'Heller Modus';
+        }
+
+        checkbox.addEventListener('change', () => {
+            toggleTheme();
+            themeLabel.textContent = checkbox.checked ? 'Dunkler Modus' : 'Heller Modus';
+        });
+    </script>
+
+    <button id="back-to-top" aria-label="Back to Top">Nach oben</button>
+
+    
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            if (window.innerWidth < 768) return;
+
+            const intro = document.querySelector("#right-intro");
+            if (!intro) return;
+
+            const tl = gsap.timeline();
+            let isClosing = false; // Flag to prevent double-triggering the exit
+
+            // --- 1. DEFINE THE EXIT FUNCTION ---
+            const closeIntro = () => {
+                if (isClosing) return;
+                isClosing = true;
+
+                // Kill the main timeline so it doesn't keep running in the background
+                tl.kill();
+
+                // Create a dedicated exit timeline for a fast, responsive feel
+                const exitTl = gsap.timeline();
+
+                /* ROBOT FAST REVEAL & RUN */
+                exitTl.to(".robot-runner", { opacity: 1, duration: 0.2 });
+                exitTl.to(".robot-runner", {
+                    x: 400,
+                    duration: 0.8,
+                    ease: "power2.in"
+                }, "-=0.1");
+
+                /* PANEL SLIDE-OUT */
+                exitTl.to("#right-intro", {
+                    duration: 0.8,
+                    transform: "translateX(100%)",
+                    ease: "power3.inOut",
+                    onComplete: () => {
+                        intro.style.display = "none";
+                        // Remove scroll listener once closed
+                        window.removeEventListener("scroll", handleScroll);
+                    }
+                }, "-=0.6");
+            };
+
+            // --- 2. THE SCROLL LISTENER ---
+            const handleScroll = () => {
+                if (window.scrollY > 20) { // Trigger after 20px of scrolling
+                    closeIntro();
+                }
+            };
+            window.addEventListener("scroll", handleScroll);
+
+            // --- 3. ORIGINAL ANIMATION SEQUENCE ---
+            /* PANEL SLIDE-IN */
+            tl.to("#right-intro", {
+                duration: 0.8,
+                transform: "translateX(0%)",
+                ease: "power3.out"
+            });
+
+            /* PARTICLES */
+            for (let i = 0; i < 20; i++) {
+                const p = document.createElement("div");
+                p.className = "particle";
+                p.style.position = "absolute";
+                p.style.width = "4px";
+                p.style.height = "4px";
+                p.style.background = "rgba(0,174,239,0.35)";
+                p.style.borderRadius = "50%";
+                p.style.left = Math.random() * 100 + "%";
+                p.style.top = "100%";
+                document.querySelector(".intro-particles").appendChild(p);
+
+                gsap.to(p, {
+                    y: -window.innerHeight - 100,
+                    duration: 4 + Math.random() * 4,
+                    delay: Math.random() * 2,
+                    repeat: -1,
+                    ease: "none"
+                });
+            }
+
+            /* SIGNAL LINE & PULSE */
+            tl.to(".signal-main", { height: "60%", duration: 0.8, ease: "power2.out" })
+                .to(".loading-dots", { opacity: 1, duration: 0.3 })
+                .to(".pulse", { opacity: 1, scale: 1.4, duration: 0.3, stagger: 0.15 })
+                .to(".pulse", { scale: 0.6, opacity: 0.4, duration: 0.3, stagger: 0.15 })
+                .to(".loading-dots", { opacity: 0, duration: 0.3 });
+
+            /* TEXT REVEAL */
+            tl.to(".t1", { opacity: 1, x: 0, duration: 0.6 })
+                .to(".t2", { opacity: 1, x: 0, duration: 0.6 })
+                .to(".t3", { opacity: 1, x: 0, duration: 0.6 })
+                .to(".t4", { opacity: 1, x: 0, duration: 0.6 });
+
+            /* ROBOT ARM/LEG LOOPS (Independent of timeline) */
+            const robotParts = [
+                { el: ".arm-left", r: 30 }, { el: ".arm-right", r: -30 },
+                { el: ".leg-left", r: -30 }, { el: ".leg-right", r: 30 }
+            ];
+            robotParts.forEach(part => {
+                gsap.to(part.el, { rotation: part.r, yoyo: true, repeat: -1, duration: 0.2, ease: "power1.inOut" });
+            });
+
+            // --- 4. AUTO-EXIT (If user doesn't scroll) ---
+            tl.to(".robot-runner", { opacity: 1, duration: 0.3, delay: 5 });
+            tl.to(".robot-runner", { x: 400, duration: 1.2, ease: "power2.inOut" }, "-=0.2");
+            tl.to("#right-intro", {
+                duration: 1,
+                transform: "translateX(100%)",
+                ease: "power3.inOut",
+                onComplete: () => {
+                    if (!isClosing) { // Only hide if scroll didn't already trigger it
+                        intro.style.display = "none";
+                        window.removeEventListener("scroll", handleScroll);
+                    }
+                }
+            }, "-=0.6");
+        });
+    </script>
+</body>
+</html>

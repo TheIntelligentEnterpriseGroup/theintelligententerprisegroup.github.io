@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta name="robots" content="index, follow" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <meta name="description" content='&#x627;&#x643;&#x62A;&#x634;&#x641; &#x62A;&#x637;&#x628;&#x64A;&#x642; &#x633;&#x637;&#x62D; &#x627;&#x644;&#x645;&#x643;&#x62A;&#x628; &#x627;&#x644;&#x622;&#x645;&#x646; &#x644;&#x644;&#x630;&#x643;&#x627;&#x621; &#x627;&#x644;&#x627;&#x635;&#x637;&#x646;&#x627;&#x639;&#x64A; &#x627;&#x644;&#x62E;&#x627;&#x635; &#x628;&#x646;&#x627;. &#x642;&#x645; &#x628;&#x62A;&#x634;&#x63A;&#x64A;&#x644; &#x630;&#x643;&#x627;&#x621; &#x627;&#x635;&#x637;&#x646;&#x627;&#x639;&#x64A; &#x639;&#x627;&#x644;&#x64A; &#x627;&#x644;&#x623;&#x62F;&#x627;&#x621; &#x648;&#x62C;&#x627;&#x647;&#x632; &#x644;&#x644;&#x639;&#x645;&#x644; &#x639;&#x644;&#x649; &#x627;&#x644;&#x623;&#x62C;&#x647;&#x632;&#x629; &#x627;&#x644;&#x637;&#x631;&#x641;&#x64A;&#x629; &#x645;&#x62D;&#x644;&#x64A;&#x627;&#x64B; &#x62F;&#x648;&#x646; &#x627;&#x644;&#x62D;&#x627;&#x62C;&#x629; &#x644;&#x644;&#x648;&#x635;&#x648;&#x644; &#x625;&#x644;&#x649; &#x627;&#x644;&#x625;&#x646;&#x62A;&#x631;&#x646;&#x62A;. &#x623;&#x62A;&#x642;&#x646; &#x633;&#x64A;&#x631; &#x639;&#x645;&#x644; &#x627;&#x644;&#x630;&#x643;&#x627;&#x621; &#x627;&#x644;&#x627;&#x635;&#x637;&#x646;&#x627;&#x639;&#x64A; &#x627;&#x644;&#x648;&#x643;&#x64A;&#x644; &#x628;&#x62E;&#x635;&#x648;&#x635;&#x64A;&#x629; &#x62A;&#x627;&#x645;&#x629;.' />
+    <title>&#x62A;&#x637;&#x628;&#x64A;&#x642; &#x633;&#x637;&#x62D; &#x627;&#x644;&#x645;&#x643;&#x62A;&#x628; &#x644;&#x644;&#x630;&#x643;&#x627;&#x621; &#x627;&#x644;&#x627;&#x635;&#x637;&#x646;&#x627;&#x639;&#x64A; &#x627;&#x644;&#x622;&#x645;&#x646; &#x648;&#x627;&#x644;&#x63A;&#x64A;&#x631; &#x645;&#x62A;&#x635;&#x644; &#x628;&#x627;&#x644;&#x625;&#x646;&#x62A;&#x631;&#x646;&#x62A; | TIEG</title>
+
+    <style>
+        html { background-color: #3B3A47; }
+    </style>
+    <script>
+        (function () {
+            const key = 'preferredTheme';
+            const stored = localStorage.getItem(key);
+            //const systemDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+            const theme = stored || 'dark'/*(systemDark ? 'dark' : 'light')*/;
+            if (theme === 'dark') {
+                document.documentElement.classList.add('dark-mode');
+            } else {
+                document.documentElement.classList.remove('dark-mode');
+            }
+        })();
+    </script>
+
+
+        <link rel="alternate" hreflang="en" href="https://theintelligententerprisegroup.com/offline-ai-desktop-app.html" />
+        <link rel="alternate" hreflang="fr" href="https://theintelligententerprisegroup.com/fr/offline-ai-desktop-app.html" />
+        <link rel="alternate" hreflang="de" href="https://theintelligententerprisegroup.com/de/offline-ai-desktop-app.html" />
+        <link rel="alternate" hreflang="es" href="https://theintelligententerprisegroup.com/es/offline-ai-desktop-app.html" />
+        <link rel="alternate" hreflang="pt" href="https://theintelligententerprisegroup.com/pt/offline-ai-desktop-app.html" />
+        <link rel="alternate" hreflang="zh" href="https://theintelligententerprisegroup.com/zh/offline-ai-desktop-app.html" />
+        <link rel="alternate" hreflang="ja" href="https://theintelligententerprisegroup.com/ja/offline-ai-desktop-app.html" />
+        <link rel="alternate" hreflang="ar" href="https://theintelligententerprisegroup.com/ar/offline-ai-desktop-app.html" />
+
+
+    <link rel="alternate" hreflang="x-default" href="https://theintelligententerprisegroup.com/offline-ai-desktop-app.html" />
+
+    <link rel="canonical" href="https://theintelligententerprisegroup.com/ar/offline-ai-desktop-app.html" />
+
+
+    <link rel="stylesheet" href="/css/styles.css" />
+    <link rel="stylesheet" href="/css/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="/css/all.min.css" />
+
+    <script src="/js/lang-switcher.js" defer></script>
+
+    <script>
+        (function () {
+            if (localStorage.getItem('currentLang')) return;
+            const supported = [
+                     { code: "en" } ,
+                     { code: "fr" } ,
+                     { code: "de" } ,
+                     { code: "es" } ,
+                     { code: "pt" } ,
+                     { code: "zh" } ,
+                     { code: "ja" } ,
+                     { code: "ar" } 
+            ];
+            const defaultLang = "ar";
+            const navLangs = navigator.languages || [navigator.language || navigator.userLanguage];
+            let detected = null;
+            for (const nav of navLangs) {
+                const code = nav.toLowerCase().split('-')[0];
+                if (supported.find(s => s.code.toLowerCase() === code)) {
+                    detected = code;
+                    break;
+                }
+            }
+            const lang = detected || defaultLang;
+            localStorage.setItem('currentLang', lang);
+            document.documentElement.lang = lang;
+        })();
+    </script>
+
+    <!-- Organization structured data (JSON-LD) -->
+    <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "Organization",
+          "name": "The Intelligent Enterprise Group",
+          "url": "https://theintelligententerprisegroup.com/",
+          "logo": "https://theintelligententerprisegroup.com/images/tieg-logo.png",
+          "sameAs": []
+        }
+    </script>
+    <link rel="icon" href="/favicon.ico" />
+    <link rel="apple-touch-icon" href="/images/apple-touch-icon.png" />
+
+    
+
+</head>
+<body>
+    <header x-data="{ open: false }">
+        <div class="container header-top">
+            <div class="logo"></div>
+            <div class="theme-switch-wrapper">
+                <label class="theme-switch">
+                    <input type="checkbox" id="theme-checkbox" aria-label="Select theme"/>
+                    <span class="slider round"></span>
+                </label>
+                <span id="theme-label">الوضع الفاتح</span>
+                <span class="lang-switcher">
+                    <label for="lang-select" class="lang-label">🌐 اللغة:</label>
+
+                    <!-- Language switcher -->
+                    <select id="lang-select" class="lang-select">
+                        <option value="en" data-path="/">English</option>
+                        <option value="fr" data-path="/fr/">Fran&#xE7;ais</option>
+                        <option value="de" data-path="/de/">Deutsch</option>
+                        <option value="es" data-path="/es/">Espa&#xF1;ol</option>
+                        <option value="pt" data-path="/pt/">Portugu&#xEA;s</option>
+                        <option value="zh" data-path="/zh/">&#x4E2D;&#x6587;</option>
+                        <option value="ja" data-path="/ja/">&#x65E5;&#x672C;&#x8A9E;</option>
+                        <option value="ar" data-path="/ar/">&#x627;&#x644;&#x639;&#x631;&#x628;&#x64A;&#x629;</option>
+                    </select>
+
+                </span>
+            </div>
+        </div>
+        
+        <div class="container header-nav">
+            <button @click="open = !open" class="menu-toggle" aria-label="Toggle Menu">
+                <svg width="24" height="24" viewBox="0 0 24 24">
+                    <path fill="var(--nav-link-color)" d="M3 6h18v2H3V6zm0 5h18v2H3v-2zm0 5h18v2H3v-2z" />
+                </svg>
+            </button>
+
+            <nav class="main-nav" :class="{ 'open': open }">
+                <ul>
+                    <li><a href="index.html" class="">&#x627;&#x644;&#x631;&#x626;&#x64A;&#x633;&#x64A;&#x629;</a></li>
+                    <li><a href="about.html" class="">&#x645;&#x646; &#x646;&#x62D;&#x646;</a></li>
+                    <li><a href="services.html" class="">&#x627;&#x644;&#x62E;&#x62F;&#x645;&#x627;&#x62A; &#x648;&#x627;&#x644;&#x62D;&#x644;&#x648;&#x644;</a></li>
+                    <li><a href="case-studies.html" class="">&#x62F;&#x631;&#x627;&#x633;&#x627;&#x62A; &#x627;&#x644;&#x62D;&#x627;&#x644;&#x629;</a></li>
+                    <li><a href="resources.html" class="active">&#x627;&#x644;&#x645;&#x648;&#x627;&#x631;&#x62F; &#x648;&#x627;&#x644;&#x631;&#x624;&#x649;</a></li>
+                    <li><a href="trial.html" class="">&#x62A;&#x62C;&#x631;&#x628;&#x629;</a></li>
+                    <li><a href="pricing.html" class="">&#x627;&#x644;&#x623;&#x633;&#x639;&#x627;&#x631;</a></li>
+                    <li><a href="partners.html" class="">&#x627;&#x644;&#x634;&#x631;&#x643;&#x627;&#x621; &#x648;&#x627;&#x644;&#x62A;&#x62D;&#x627;&#x644;&#x641;&#x627;&#x62A;</a></li>                    
+                    <li><a href="contact.html" class="">&#x627;&#x644;&#x627;&#x62A;&#x635;&#x627;&#x644; &#x648;&#x627;&#x644;&#x627;&#x633;&#x62A;&#x634;&#x627;&#x631;&#x629;</a></li>
+                    <li class="has-submenu"
+                        x-data="{ openSub: false }"
+                        @mouseenter="openSub = true"
+                        @mouseleave="openSub = false">
+                      <button @click="openSub = !openSub"
+                              aria-haspopup="true"
+                              :aria-expanded="openSub.toString()">
+                        &#x645;&#x639;&#x644;&#x648;&#x645;&#x627;&#x62A;
+                        <svg width="12" height="12" viewBox="0 0 12 12" aria-hidden="true">
+                          <path d="M3 4l3 3 3-3" fill="currentColor"/>
+                        </svg>
+                      </button>
+                      <ul class="submenu" x-show="openSub" @click.outside="openSub = false">
+                        <li><a href="careers.html" class="">&#x627;&#x644;&#x648;&#x638;&#x627;&#x626;&#x641;</a></li>
+                        <li><a href="faqs.html" class="">&#x627;&#x644;&#x623;&#x633;&#x626;&#x644;&#x629; &#x627;&#x644;&#x634;&#x627;&#x626;&#x639;&#x629;</a></li>
+                        <li><a href="legal.html" class="">&#x627;&#x644;&#x633;&#x64A;&#x627;&#x633;&#x627;&#x62A; &#x648;&#x627;&#x644;&#x644;&#x648;&#x627;&#x626;&#x62D;</a></li>
+                      </ul>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        
+<section class="hero seo-hero" style="padding: 80px 0 40px; text-align: center; background-color: var(--card-bg2);">
+    <div class="container hero-container">
+        <h1 style="font-size: 3rem; margin-bottom: 1rem;">تطبيق سطح المكتب للذكاء الاصطناعي الآمن والغير متصل بالإنترنت</h1>
+        <div class="hero-text">
+            <h3 style="font-weight: 400; opacity: 0.9; max-width: 800px; margin: 0 auto;">قم بتشغيل ذكاء اصطناعي متعدد الوكلاء وعالي الأداء محلياً. حقق خصوصية تامة للبيانات، وذاكرة تكيفية، وتنفيذ جاهز للعمل على الأجهزة الطرفية دون الاتصال بالسحابة أبداً.</h3>
+        </div>
+
+                <br/>
+                <p class="lead" style="font-size: 1.15rem; font-weight: 500; color: var(--btn-bg); max-width: 800px; margin: 1.5rem auto 0 auto; line-height: 1.6;">
+                    عندما تكون الخصوصية المطلقة، والتوافر المستمر، والأمان على مستوى المؤسسات مطلوبة، فإن الاعتماد على الذكاء الاصطناعي المستند إلى السحابة لم يعد خياراً قابلاً للتطبيق. تقدم مجموعة المؤسسات الذكية (TIEG) ابتكاراً يحدد الفئة: أول فريق خبراء منسق بالذكاء الاصطناعي في العالم، يتم تقديمه كتطبيق سطح مكتب آمن تماماً للذكاء الاصطناعي يعمل دون اتصال بالإنترنت. تم بناء هذا البرنامج المحلي للذكاء الاصطناعي للمحترفين الذين لا يمكنهم المساومة على سيادة البيانات، وهو يجلب قوة سير عمل الذكاء الاصطناعي الوكيل مباشرة إلى أجهزتك المحلية.
+                </p>
+
+    </div>
+</section>
+
+<section class="resources">
+    <div class="container">
+
+ <h2>لماذا تقصر مساعدات الذكاء الاصطناعي السحابية الحالية</h2>  <p>تعتمد معظم خدمات الذكاء الاصطناعي الحديثة على نموذج لغوي كبير واحد (LLM) مستضاف على خوادم سحابية عامة. هذه النماذج عامة وتحاول القيام بكل شيء. ومع ذلك، بالنسبة للمحترفين الذين يتعاملون مع بيانات العملاء الحساسة، أو الملكية الفكرية، أو المستندات المصنفة، فإن نماذج اللغة الكبيرة المستندة إلى السحابة تمثل العديد من نقاط الضعف الحرجة التي تمنع اعتماد المؤسسات لها:</p>                     <ul>
+ <li><strong>مخاطر خصوصية البيانات والامتثال:</strong> إن إرسال المستندات السرية (مثل المذكرات القانونية، أو البيانات المالية، أو سجلات المرضى) إلى خوادم خارجية ينتهك أطر الامتثال الصارمة مثل HIPAA و GDPR و CMMC L1.</li>  <li><strong>الاعتماد على الإنترنت:</strong> لا يمكن للنماذج السحابية العمل في البيئات المعزولة مادياً، أو العمليات الميدانية البعيدة، أو مناطق المؤسسات الآمنة. إذا انقطع اتصالك، يتوقف سير عملك.</li>  <li><strong>الهلوسة الشديدة وفقدان السياق:</strong> غالباً ما تعاني نماذج اللغة الكبيرة أحادية النموذج من ذاكرة محدودة، مما يؤدي إلى فقدان السياق عندما تمتد المهام عبر خطوات متعددة أو تتطلب خبرة عميقة ومحددة في المجال.</li>                     </ul>
+ <h2>ميزة الوكيل المتعدد الجاهز للعمل على الأجهزة الطرفية</h2>  <p>لحل قيود برامج الدردشة العامة، رائدت منصتنا في استخدام سير عمل الذكاء الاصطناعي الوكيل. بدلاً من الاعتماد على نموذج واحد، يوفر لك تطبيق سطح المكتب للذكاء الاصطناعي الذي يعمل دون اتصال بالإنترنت فريقاً منسقاً من المتخصصين في الذكاء الاصطناعي. يدار هذا النظام متعدد الوكلاء (MAS) بواسطة منسق ذكاء اصطناعي مركزي، ويعمل كفريق استشاري حقيقي - حيث يقوم بالتحقق من الحقائق بشكل مستقل، وتحليل البيانات المعقدة، وتوليد المخرجات بشكل تعاوني.</p>  <p>نظراً لأن نظامنا يعتمد على نماذج تعلم آلي مدمجة مباشرة في البرنامج، فإن خبراء الذكاء الاصطناعي ينشطون تلقائياً وينتقلون بين النماذج لتقديم الحل الصحيح محلياً. ستحصل على قوة الذكاء الخارق والوكلاء المستقلين للذكاء الاصطناعي، الموجودين بالكامل داخل جهازك الخاص.</p>  <h2>ذكاء اصطناعي عالي الأداء على الأجهزة المحلية</h2>  <p>يتطلب تشغيل أنظمة متعددة الوكلاء المتقدمة محلياً كفاءة حوسبة هائلة. على عكس الأغلفة القياسية القائمة على الويب، تم هندسة الذكاء الاصطناعي عالي الأداء الخاص بنا من الألف إلى الياء باستخدام بنية ذكاء اصطناعي قوية بلغة C++. يضمن ذلك تنفيذاً منخفض الاستجابة وأقصى قدر من الكفاءة في استخدام الموارد.</p>  <p>من خلال الاستفادة من تسريع الأجهزة، والحوسبة المتوازية، والذكاء الاصطناعي المحلي المحسن لوحدات معالجة الرسومات (GPU)، يقدم فريق الذكاء الاصطناعي المنسق استجابات أسرع مع استهلاك طاقة أقل بكثير. تعني قدرة التعلم الآلي هذه دون اتصال بالإنترنت أنه يمكنك تشغيل مهام تحليلية معقدة على الفور، دون انتظار قوائم انتظار واجهة برمجة تطبيقات السحابة أو المعاناة من اختناق النطاق الترددي.</p>  <h2>البحث في المؤسسات بالذكاء الاصطناعي وتقنية RAG الخاصة</h2>  <p>يعد فهرسة واسترجاع المعرفة الداخلية بشكل آمن أحد أكبر التحديات التي تواجه الشركات الحديثة. يتضمن برنامج الذكاء الاصطناعي المحلي لدينا إمكانيات بحث متقدمة في المؤسسات مدعومة بتقنية RAG الخاصة (توليد المستندات المعزز بالاسترجاع).</p>  <p>يمكنك الدردشة بأمان مع المستندات المحلية، وفهرسة ملفات PDF و Excel وقواعد بيانات الشركات دون الاعتماد على مطابقة الكلمات الرئيسية الهشة. يقوم النظام باستيعاب السياق بسلاسة مباشرة من ملفاتك المحلية في بنية تحتية للذكاء الاصطناعي معزولة تماماً. بياناتك لا تغادر جهاز الكمبيوتر الخاص بك أبداً، مما يضمن اكتشافاً آمناً لمعرفة المؤسسة.</p>  <h2>ذاكرة سياقية تكيفية لمخرجات موثوقة</h2>  <p>من القيود الرئيسية للذكاء الاصطناعي القياسي هو 'نسيان' ما ناقشته قبل ساعة. تستخدم منصتنا بنية ذاكرة قصيرة وطويلة المدى محسنة للغاية. يحافظ هذا الذكاء الاصطناعي ذو الذاكرة التكيفية على سياق عميق عبر الجلسات اليومية، مما يقلل بشكل كبير من الهلوسة ويضمن نتائج متسقة وموثوقة يوماً بعد يوم.</p>  <h2>حالات استخدام الذكاء الاصطناعي الآمنة والمحددة للصناعة</h2>  <p>تم تصميم تطبيق سطح المكتب للذكاء الاصطناعي الذي يعمل دون اتصال بالإنترنت لتلبية متطلبات الأمان الصارمة للصناعات شديدة التنظيم. من خلال إبقاء معالجة البيانات محلياً تماماً، يمكن للمؤسسات نشر حلول متخصصة دون مخاطر الامتثال:</p>                     <ul>
+ <li><strong>ذكاء اصطناعي آمن للقانون والتمويل:</strong> تحليل العقود الحساسة للغاية، وملفات هيئة الأوراق المالية والبورصات، وبيانات الاندماج والاستحواذ محلياً. ضمان خصوصية العميل المطلقة والالتزام بقوانين توطين البيانات الصارمة.</li>  <li><strong>ذكاء اصطناعي للامتثال في الرعاية الصحية:</strong> معالجة بيانات المرضى والسجلات الطبية المعقدة محلياً دون تعريض معلومات الصحة المحمية (PHI) لمزودي السحابة من جهات خارجية.</li>  <li><strong>الذكاء الاصطناعي للصيانة التنبؤية في التصنيع:</strong> نشر ذكاء اصطناعي جاهز للعمل على الأجهزة الطرفية مباشرة في أرض المصنع للتنبؤ بأعطال المعدات وتحسين سلاسل التوريد دون اتصال بالإنترنت.</li>                     </ul>
+ <h2>وظائف كاملة دون اتصال بالإنترنت</h2>  <p>في النهاية، الميزة الأكبر لمنصتنا هي الاستقلال الحقيقي. تطبيق سطح المكتب الخاص بنا يعمل بكامل طاقته حتى بدون الوصول إلى الإنترنت. مع برنامج تثبيت محلي شامل، يتم تثبيت جميع خبراء الذكاء الاصطناعي الأساسيين مباشرة على جهازك. سواء كنت على شبكة إنترانت آمنة للمؤسسة، أو تسافر على متن رحلة جوية، أو تعمل في موقع خارجي بعيد، فإن فريق الذكاء الاصطناعي الخاص بك متاح دائماً.</p>             <p class="lead" style="font-size: 1.2rem; font-weight: 500; color: var(--btn-bg);">
+                فيما يلي مجموعة من الموارد المتخصصة لتكتشفها:
+            </p>            
+                <ul>
+                        <li>
+                            <a href="/run-ai-locally-without-internet.html">كيفية تشغيل ذكاء اصطناعي عالي الأداء محلياً بدون إنترنت</a>
+                        </li> 
+                        <li>
+                            <a href="/secure-local-ai-for-legal-finance.html">برنامج ذكاء اصطناعي محلي آمن للمحترفين في المجالات القانونية والمالية</a>
+                        </li> 
+                        <li>
+                            <a href="/gpu-accelerated-local-ai.html">ذكاء اصطناعي محلي متسارع بواسطة وحدة معالجة الرسومات: بنية C++ عالية السرعة</a>
+                        </li> 
+                </ul>
+            <div class="callout" style="background-color: rgba(161, 144, 217, 0.1); border-left: 4px solid var(--btn-bg); padding: 1.5rem; margin: 2rem 0; border-radius: 4px;">
+                <strong style="display: block; font-size: 1.2rem; margin-bottom: 0.5rem; color: var(--text-color);">
+                    هل أنت مستعد لنشر فريق الذكاء الاصطناعي الخاص بك؟
+                </strong>
+                <p style="margin-bottom: 1rem;">اختبر أول فريق خبراء منسق بالذكاء الاصطناعي في العالم. نحن نقدم نسخة تجريبية شاملة لمدة 6 أشهر من إصدار سطح المكتب الخاص بنا مقابل رسوم إدارية لمرة واحدة قدرها 39 يورو فقط.<br><br><span style='font-size: 1.1rem;'>هل تريد رؤيته أثناء العمل أولاً؟ <a href='/demo.html' style='color: var(--btn-bg); font-weight: bold; text-decoration: underline;'>شاهد العرض المباشر هنا.</a></span></p>
+                <a href="/trial.html" class="btn">ابدأ الفترة التجريبية المجانية</a>
+            </div>
+         
+    </div>
+</section>
+
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&#xA9; 2025 The Intelligent Enterprise Group. &#x62C;&#x645;&#x64A;&#x639; &#x627;&#x644;&#x62D;&#x642;&#x648;&#x642; &#x645;&#x62D;&#x641;&#x648;&#x638;&#x629;.</p>
+        </div>
+    </footer>
+
+    <script src="/js/swiper-bundle.min.js"></script>
+    <script src="/js/cdn.min.js" defer></script>
+    <script src="/js/gsap.min.js"></script>
+    <script src="/js/DrawSVGPlugin.min.js"></script>
+
+    <script type="module" src="/js/themeToggle.js"></script>
+    <script type="module">
+        import { toggleTheme, getCurrentTheme } from '/js/themeToggle.js';
+        const checkbox = document.getElementById('theme-checkbox');
+        const themeLabel = document.getElementById('theme-label');
+
+        if (getCurrentTheme() === 'dark') {
+            checkbox.checked = true;
+            themeLabel.textContent = 'الوضع الداكن';
+        } else {
+            themeLabel.textContent = 'الوضع الفاتح';
+        }
+
+        checkbox.addEventListener('change', () => {
+            toggleTheme();
+            themeLabel.textContent = checkbox.checked ? 'الوضع الداكن' : 'الوضع الفاتح';
+        });
+    </script>
+
+    <button id="back-to-top" aria-label="Back to Top">&#x623;&#x639;&#x644;&#x649;</button>
+
+    
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            if (window.innerWidth < 768) return;
+
+            const intro = document.querySelector("#right-intro");
+            if (!intro) return;
+
+            const tl = gsap.timeline();
+            let isClosing = false; // Flag to prevent double-triggering the exit
+
+            // --- 1. DEFINE THE EXIT FUNCTION ---
+            const closeIntro = () => {
+                if (isClosing) return;
+                isClosing = true;
+
+                // Kill the main timeline so it doesn't keep running in the background
+                tl.kill();
+
+                // Create a dedicated exit timeline for a fast, responsive feel
+                const exitTl = gsap.timeline();
+
+                /* ROBOT FAST REVEAL & RUN */
+                exitTl.to(".robot-runner", { opacity: 1, duration: 0.2 });
+                exitTl.to(".robot-runner", {
+                    x: 400,
+                    duration: 0.8,
+                    ease: "power2.in"
+                }, "-=0.1");
+
+                /* PANEL SLIDE-OUT */
+                exitTl.to("#right-intro", {
+                    duration: 0.8,
+                    transform: "translateX(100%)",
+                    ease: "power3.inOut",
+                    onComplete: () => {
+                        intro.style.display = "none";
+                        // Remove scroll listener once closed
+                        window.removeEventListener("scroll", handleScroll);
+                    }
+                }, "-=0.6");
+            };
+
+            // --- 2. THE SCROLL LISTENER ---
+            const handleScroll = () => {
+                if (window.scrollY > 20) { // Trigger after 20px of scrolling
+                    closeIntro();
+                }
+            };
+            window.addEventListener("scroll", handleScroll);
+
+            // --- 3. ORIGINAL ANIMATION SEQUENCE ---
+            /* PANEL SLIDE-IN */
+            tl.to("#right-intro", {
+                duration: 0.8,
+                transform: "translateX(0%)",
+                ease: "power3.out"
+            });
+
+            /* PARTICLES */
+            for (let i = 0; i < 20; i++) {
+                const p = document.createElement("div");
+                p.className = "particle";
+                p.style.position = "absolute";
+                p.style.width = "4px";
+                p.style.height = "4px";
+                p.style.background = "rgba(0,174,239,0.35)";
+                p.style.borderRadius = "50%";
+                p.style.left = Math.random() * 100 + "%";
+                p.style.top = "100%";
+                document.querySelector(".intro-particles").appendChild(p);
+
+                gsap.to(p, {
+                    y: -window.innerHeight - 100,
+                    duration: 4 + Math.random() * 4,
+                    delay: Math.random() * 2,
+                    repeat: -1,
+                    ease: "none"
+                });
+            }
+
+            /* SIGNAL LINE & PULSE */
+            tl.to(".signal-main", { height: "60%", duration: 0.8, ease: "power2.out" })
+                .to(".loading-dots", { opacity: 1, duration: 0.3 })
+                .to(".pulse", { opacity: 1, scale: 1.4, duration: 0.3, stagger: 0.15 })
+                .to(".pulse", { scale: 0.6, opacity: 0.4, duration: 0.3, stagger: 0.15 })
+                .to(".loading-dots", { opacity: 0, duration: 0.3 });
+
+            /* TEXT REVEAL */
+            tl.to(".t1", { opacity: 1, x: 0, duration: 0.6 })
+                .to(".t2", { opacity: 1, x: 0, duration: 0.6 })
+                .to(".t3", { opacity: 1, x: 0, duration: 0.6 })
+                .to(".t4", { opacity: 1, x: 0, duration: 0.6 });
+
+            /* ROBOT ARM/LEG LOOPS (Independent of timeline) */
+            const robotParts = [
+                { el: ".arm-left", r: 30 }, { el: ".arm-right", r: -30 },
+                { el: ".leg-left", r: -30 }, { el: ".leg-right", r: 30 }
+            ];
+            robotParts.forEach(part => {
+                gsap.to(part.el, { rotation: part.r, yoyo: true, repeat: -1, duration: 0.2, ease: "power1.inOut" });
+            });
+
+            // --- 4. AUTO-EXIT (If user doesn't scroll) ---
+            tl.to(".robot-runner", { opacity: 1, duration: 0.3, delay: 5 });
+            tl.to(".robot-runner", { x: 400, duration: 1.2, ease: "power2.inOut" }, "-=0.2");
+            tl.to("#right-intro", {
+                duration: 1,
+                transform: "translateX(100%)",
+                ease: "power3.inOut",
+                onComplete: () => {
+                    if (!isClosing) { // Only hide if scroll didn't already trigger it
+                        intro.style.display = "none";
+                        window.removeEventListener("scroll", handleScroll);
+                    }
+                }
+            }, "-=0.6");
+        });
+    </script>
+</body>
+</html>

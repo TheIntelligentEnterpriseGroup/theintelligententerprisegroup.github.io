@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="zh" dir="ltr">
+<head>
+    <meta name="robots" content="index, follow" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <meta name="description" content='&#x4E86;&#x89E3;&#x5982;&#x4F55;&#x5728;&#x672C;&#x5730;&#x8FD0;&#x884C;&#x8FB9;&#x7F18;&#x5C31;&#x7EEA;&#x7684;&#x9AD8;&#x6027;&#x80FD; AI&#xFF0C;&#x65E0;&#x9700;&#x8054;&#x7F51;&#x3002;&#x63A2;&#x7D22;&#x7531; C&#x2B;&#x2B; &#x67B6;&#x6784;&#x548C;&#x5185;&#x7F6E;&#x6A21;&#x578B;&#x9A71;&#x52A8;&#x7684;&#x79BB;&#x7EBF;&#x673A;&#x5668;&#x5B66;&#x4E60;&#x3002;' />
+    <title>&#x5728;&#x65E0;&#x4E92;&#x8054;&#x7F51;&#x7684;&#x60C5;&#x51B5;&#x4E0B;&#x672C;&#x5730;&#x8FD0;&#x884C;&#x9AD8;&#x6027;&#x80FD; AI | TIEG</title>
+
+    <style>
+        html { background-color: #3B3A47; }
+    </style>
+    <script>
+        (function () {
+            const key = 'preferredTheme';
+            const stored = localStorage.getItem(key);
+            //const systemDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+            const theme = stored || 'dark'/*(systemDark ? 'dark' : 'light')*/;
+            if (theme === 'dark') {
+                document.documentElement.classList.add('dark-mode');
+            } else {
+                document.documentElement.classList.remove('dark-mode');
+            }
+        })();
+    </script>
+
+
+        <link rel="alternate" hreflang="en" href="https://theintelligententerprisegroup.com/run-ai-locally-without-internet.html" />
+        <link rel="alternate" hreflang="fr" href="https://theintelligententerprisegroup.com/fr/run-ai-locally-without-internet.html" />
+        <link rel="alternate" hreflang="de" href="https://theintelligententerprisegroup.com/de/run-ai-locally-without-internet.html" />
+        <link rel="alternate" hreflang="es" href="https://theintelligententerprisegroup.com/es/run-ai-locally-without-internet.html" />
+        <link rel="alternate" hreflang="pt" href="https://theintelligententerprisegroup.com/pt/run-ai-locally-without-internet.html" />
+        <link rel="alternate" hreflang="zh" href="https://theintelligententerprisegroup.com/zh/run-ai-locally-without-internet.html" />
+        <link rel="alternate" hreflang="ja" href="https://theintelligententerprisegroup.com/ja/run-ai-locally-without-internet.html" />
+        <link rel="alternate" hreflang="ar" href="https://theintelligententerprisegroup.com/ar/run-ai-locally-without-internet.html" />
+
+
+    <link rel="alternate" hreflang="x-default" href="https://theintelligententerprisegroup.com/run-ai-locally-without-internet.html" />
+
+    <link rel="canonical" href="https://theintelligententerprisegroup.com/zh/run-ai-locally-without-internet.html" />
+
+
+    <link rel="stylesheet" href="/css/styles.css" />
+    <link rel="stylesheet" href="/css/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="/css/all.min.css" />
+
+    <script src="/js/lang-switcher.js" defer></script>
+
+    <script>
+        (function () {
+            if (localStorage.getItem('currentLang')) return;
+            const supported = [
+                     { code: "en" } ,
+                     { code: "fr" } ,
+                     { code: "de" } ,
+                     { code: "es" } ,
+                     { code: "pt" } ,
+                     { code: "zh" } ,
+                     { code: "ja" } ,
+                     { code: "ar" } 
+            ];
+            const defaultLang = "zh";
+            const navLangs = navigator.languages || [navigator.language || navigator.userLanguage];
+            let detected = null;
+            for (const nav of navLangs) {
+                const code = nav.toLowerCase().split('-')[0];
+                if (supported.find(s => s.code.toLowerCase() === code)) {
+                    detected = code;
+                    break;
+                }
+            }
+            const lang = detected || defaultLang;
+            localStorage.setItem('currentLang', lang);
+            document.documentElement.lang = lang;
+        })();
+    </script>
+
+    <!-- Organization structured data (JSON-LD) -->
+    <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "Organization",
+          "name": "The Intelligent Enterprise Group",
+          "url": "https://theintelligententerprisegroup.com/",
+          "logo": "https://theintelligententerprisegroup.com/images/tieg-logo.png",
+          "sameAs": []
+        }
+    </script>
+    <link rel="icon" href="/favicon.ico" />
+    <link rel="apple-touch-icon" href="/images/apple-touch-icon.png" />
+
+    
+
+</head>
+<body>
+    <header x-data="{ open: false }">
+        <div class="container header-top">
+            <div class="logo"></div>
+            <div class="theme-switch-wrapper">
+                <label class="theme-switch">
+                    <input type="checkbox" id="theme-checkbox" aria-label="Select theme"/>
+                    <span class="slider round"></span>
+                </label>
+                <span id="theme-label">浅色模式</span>
+                <span class="lang-switcher">
+                    <label for="lang-select" class="lang-label">🌐 语言：</label>
+
+                    <!-- Language switcher -->
+                    <select id="lang-select" class="lang-select">
+                        <option value="en" data-path="/">English</option>
+                        <option value="fr" data-path="/fr/">Fran&#xE7;ais</option>
+                        <option value="de" data-path="/de/">Deutsch</option>
+                        <option value="es" data-path="/es/">Espa&#xF1;ol</option>
+                        <option value="pt" data-path="/pt/">Portugu&#xEA;s</option>
+                        <option value="zh" data-path="/zh/">&#x4E2D;&#x6587;</option>
+                        <option value="ja" data-path="/ja/">&#x65E5;&#x672C;&#x8A9E;</option>
+                        <option value="ar" data-path="/ar/">&#x627;&#x644;&#x639;&#x631;&#x628;&#x64A;&#x629;</option>
+                    </select>
+
+                </span>
+            </div>
+        </div>
+        
+        <div class="container header-nav">
+            <button @click="open = !open" class="menu-toggle" aria-label="Toggle Menu">
+                <svg width="24" height="24" viewBox="0 0 24 24">
+                    <path fill="var(--nav-link-color)" d="M3 6h18v2H3V6zm0 5h18v2H3v-2zm0 5h18v2H3v-2z" />
+                </svg>
+            </button>
+
+            <nav class="main-nav" :class="{ 'open': open }">
+                <ul>
+                    <li><a href="index.html" class="">&#x9996;&#x9875;</a></li>
+                    <li><a href="about.html" class="">&#x5173;&#x4E8E;&#x6211;&#x4EEC;</a></li>
+                    <li><a href="services.html" class="">&#x670D;&#x52A1;&#x4E0E;&#x89E3;&#x51B3;&#x65B9;&#x6848;</a></li>
+                    <li><a href="case-studies.html" class="">&#x6848;&#x4F8B;&#x7814;&#x7A76;</a></li>
+                    <li><a href="resources.html" class="active">&#x8D44;&#x6E90;&#x4E0E;&#x6D1E;&#x5BDF;</a></li>
+                    <li><a href="trial.html" class="">&#x8BD5;&#x7528;</a></li>
+                    <li><a href="pricing.html" class="">&#x5B9A;&#x4EF7;</a></li>
+                    <li><a href="partners.html" class="">&#x5408;&#x4F5C;&#x4F19;&#x4F34;&#x4E0E;&#x8054;&#x76DF;</a></li>                    
+                    <li><a href="contact.html" class="">&#x8054;&#x7CFB;&#x4E0E;&#x54A8;&#x8BE2;</a></li>
+                    <li class="has-submenu"
+                        x-data="{ openSub: false }"
+                        @mouseenter="openSub = true"
+                        @mouseleave="openSub = false">
+                      <button @click="openSub = !openSub"
+                              aria-haspopup="true"
+                              :aria-expanded="openSub.toString()">
+                        &#x4FE1;&#x606F;
+                        <svg width="12" height="12" viewBox="0 0 12 12" aria-hidden="true">
+                          <path d="M3 4l3 3 3-3" fill="currentColor"/>
+                        </svg>
+                      </button>
+                      <ul class="submenu" x-show="openSub" @click.outside="openSub = false">
+                        <li><a href="careers.html" class="">&#x804C;&#x4E1A;&#x673A;&#x4F1A;</a></li>
+                        <li><a href="faqs.html" class="">&#x5E38;&#x89C1;&#x95EE;&#x9898;</a></li>
+                        <li><a href="legal.html" class="">&#x6CD5;&#x5F8B;&#x4E0E;&#x653F;&#x7B56;</a></li>
+                      </ul>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        
+<section class="hero seo-hero" style="padding: 80px 0 40px; text-align: center; background-color: var(--card-bg2);">
+    <div class="container hero-container">
+        <h1 style="font-size: 3rem; margin-bottom: 1rem;">如何在无互联网的情况下本地运行高性能 AI</h1>
+        <div class="hero-text">
+            <h3 style="font-weight: 400; opacity: 0.9; max-width: 800px; margin: 0 auto;">直接在您的硬件上部署边缘就绪的多智能体 AI 系统。实现与云端连接和外部 API 的完全独立。</h3>
+        </div>
+
+                <br/>
+                <p class="lead" style="font-size: 1.15rem; font-weight: 500; color: var(--btn-bg); max-width: 800px; margin: 1.5rem auto 0 auto; line-height: 1.6;">
+                    当需要持续可用性、零延迟执行和绝对数据隐私时，依赖基于云的人工智能不再是一个可行的选择。我们的平台引入了边缘就绪性能的范式转变，允许您在自己的机器上本地运行一个成熟的、协作的 AI 专家团队。通过将计算直接引入您的硬件，您可以在保持企业级分析能力的同时，实现与互联网的完全独立。
+                </p>
+
+    </div>
+</section>
+
+<section class="resources">
+    <div class="container">
+
+ <h2>向边缘就绪 AI 的转变</h2>  <p>从历史上看，运行强大的人工智能需要庞大的数据中心、巨大的服务器群以及持续的高带宽云连接。然而，这种集中式方法为现代企业带来了显著的脆弱性。互联网中断会立即导致生产力停滞，API 速率限制会抑制关键任务期间的性能，而将敏感的企业数据传输到外部服务器会使组织面临不可接受的隐私泄露风险。</p>  <p>边缘计算通过将处理能力直接带到源头——您的设备，解决了这一根本缺陷。通过在本地执行离线机器学习模型，您可以消除网络延迟，将您的专有数据安全地保护在自己的防火墙之后，并保证无论网络状态如何，都能实现 100% 的绝对正常运行时间。</p>  <h2>为什么物理隔离的 AI 基础设施至关重要</h2>  <p>对于国防、金融、医疗和法律服务等高度受监管的部门，将 AI 助手连接到公共互联网是严重的合规违规行为。标准的 LLM 会记录用户提示，这可能会无意中泄露商业机密或受保护的健康信息 (PHI)。</p>  <p>建立物理隔离（Air-Gapped）的 AI 基础设施意味着软件在与不安全网络物理或逻辑隔离的计算机上运行。我们的本地 AI 桌面应用程序专为这些零信任环境而设计。由于 AI 永远不会向外通信或需要基于云的许可证检查，您可以严格遵守 NIST CSF、CMMC L1 和 GDPR 等严格的安全框架，而无需牺牲对尖端技术的访问。</p>  <h2>由高速 C++ AI 架构驱动</h2>  <p>在本地运行复杂的多智能体系统需要巨大的计算效率。标准的基于 Web 的 AI 工具通常构建在 Python 等沉重的脚本语言之上，当在消费者或企业桌面硬件上运行时，这些语言会带来巨大的开销和缓慢的性能。</p>  <p>为了解决这个问题，我们的平台从底层开始构建，采用专有的高速 C++ AI 架构。这种原生的编译代码库直接与您的机器处理器通信，确保闪电般的执行速度。</p>                     <ul>
+ <li><strong>硬件加速：</strong> 软件与您的本地硬件架构无缝集成，充分利用可用的 CPU 资源，而不会拖慢您的操作系统。</li>  <li><strong>低内存开销：</strong> 高度优化的代码确保您的多智能体 AI 团队高效运行，消耗的 RAM 和能量明显低于传统的本地封装程序。</li>  <li><strong>零延迟路由：</strong> 内部 AI 协调器可以在毫秒内快速切换不同专家智能体之间的上下文，且完全在本地完成。</li>                     </ul>
+ <h2>GPU 加速的本地 AI 以实现最大吞吐量</h2>  <p>虽然我们高度优化的 CPU 架构提供了令人难以置信的基础性能，但要求苛刻的分析任务需要专门的硬件。我们的平台完全支持 GPU 加速的本地 AI，利用现代显卡的并行处理能力。</p>  <p>通过利用 CUDA 和高级张量处理等技术，系统将繁重的机器学习计算卸载到 GPU。这使得复杂的生成任务、文档摘要和数据分析的响应速度显著加快。无论您是运行高端工作站还是企业级笔记本电脑，软件都会自动检测并利用您的硬件以实现最大吞吐量。</p>  <h2>内置模型实现真正的自主性</h2>  <p>一个常见的问题是：AI 在不搜索互联网的情况下如何知道该做什么？秘密在于我们全面的离线安装程序。我们的桌面应用程序不是充当 ping API 的空壳，而是在安装过程中将多个预训练、高度优化的机器学习模型直接嵌入到您的系统中。</p>  <p>当您提出问题时，系统不会与外部服务器通信。相反，AI 协调器会自动评估提示并激活最适合该任务的特定内置模型。无论您是需要文案 AI 起草电子邮件，还是需要数据分析 AI 解析电子表格，这些专业知识都已经存在于您的本地硬盘中。</p>  <h2>私有 RAG：离线与本地文档聊天</h2>  <p>只有当 AI 理解您特定的业务背景时，离线运行 AI 才有意义。标准的离线模型只知道其原始训练数据。我们的应用程序具有先进的企业 AI 搜索功能，由私有 RAG（检索增强生成）提供支持。</p>  <p>您可以将 AI 指向包含 PDF、Word 文档、Excel 表格和 CSV 的本地文件夹。系统会在本地对这些文件进行索引，在您的机器上创建一个安全的向量数据库。然后，您可以立即查询自己的内部知识库。AI 会从您的专有文件中读取、检索并综合答案，而这一切都在与网络完全断开的情况下完成。</p>  <h2>随时随地释放多智能体工作流</h2>  <p>通过结合高性能 C++ 架构、GPU 加速和内置模型，您不再受 IT 环境的束缚。无论您是在安全的企业内网运行、在长途飞行中，还是部署在偏远的离岸站点，您的 AI 团队都随时准备执行复杂的多智能体工作流。</p>             <div class="parent-hub-link" style="background-color: var(--card-bg2); padding: 1rem; border-radius: 6px; margin-bottom: 2rem;">
+                <span style="font-size: 0.9rem; color: var(--text-color);">我们全面指南的一部分：</span>
+                <a href="/offline-ai-desktop-app.html" style="font-weight: bold; margin-left: 0.5rem; color: var(--btn-bg);">
+                    安全的离线 AI 桌面应用程序
+                </a>
+            </div>
+            <div class="callout" style="background-color: rgba(161, 144, 217, 0.1); border-left: 4px solid var(--btn-bg); padding: 1.5rem; margin: 2rem 0; border-radius: 4px;">
+                <strong style="display: block; font-size: 1.2rem; margin-bottom: 0.5rem; color: var(--text-color);">
+                    体验真正的边缘就绪 AI
+                </strong>
+                <p style="margin-bottom: 1rem;">准备好切断连接了吗？只需支付 39 欧元的单次管理费，即可开始为期 6 个月的桌面版试用，并于今日部署您自己的本地 AI 团队。<br><br><span style='font-size: 1.1rem;'>想先看看实际效果吗？ <a href='/demo.html' style='color: var(--btn-bg); font-weight: bold; text-decoration: underline;'>在此观看我们的现场演示。</a></span></p>
+                <a href="/trial.html" class="btn">开始免费试用</a>
+            </div>
+         
+    </div>
+</section>
+
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&#xA9; 2025 &#x667A;&#x80FD;&#x4F01;&#x4E1A;&#x96C6;&#x56E2;&#x3002;&#x4FDD;&#x7559;&#x6240;&#x6709;&#x6743;&#x5229;&#x3002;</p>
+        </div>
+    </footer>
+
+    <script src="/js/swiper-bundle.min.js"></script>
+    <script src="/js/cdn.min.js" defer></script>
+    <script src="/js/gsap.min.js"></script>
+    <script src="/js/DrawSVGPlugin.min.js"></script>
+
+    <script type="module" src="/js/themeToggle.js"></script>
+    <script type="module">
+        import { toggleTheme, getCurrentTheme } from '/js/themeToggle.js';
+        const checkbox = document.getElementById('theme-checkbox');
+        const themeLabel = document.getElementById('theme-label');
+
+        if (getCurrentTheme() === 'dark') {
+            checkbox.checked = true;
+            themeLabel.textContent = '深色模式';
+        } else {
+            themeLabel.textContent = '浅色模式';
+        }
+
+        checkbox.addEventListener('change', () => {
+            toggleTheme();
+            themeLabel.textContent = checkbox.checked ? '深色模式' : '浅色模式';
+        });
+    </script>
+
+    <button id="back-to-top" aria-label="Back to Top">&#x9876;&#x90E8;</button>
+
+    
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            if (window.innerWidth < 768) return;
+
+            const intro = document.querySelector("#right-intro");
+            if (!intro) return;
+
+            const tl = gsap.timeline();
+            let isClosing = false; // Flag to prevent double-triggering the exit
+
+            // --- 1. DEFINE THE EXIT FUNCTION ---
+            const closeIntro = () => {
+                if (isClosing) return;
+                isClosing = true;
+
+                // Kill the main timeline so it doesn't keep running in the background
+                tl.kill();
+
+                // Create a dedicated exit timeline for a fast, responsive feel
+                const exitTl = gsap.timeline();
+
+                /* ROBOT FAST REVEAL & RUN */
+                exitTl.to(".robot-runner", { opacity: 1, duration: 0.2 });
+                exitTl.to(".robot-runner", {
+                    x: 400,
+                    duration: 0.8,
+                    ease: "power2.in"
+                }, "-=0.1");
+
+                /* PANEL SLIDE-OUT */
+                exitTl.to("#right-intro", {
+                    duration: 0.8,
+                    transform: "translateX(100%)",
+                    ease: "power3.inOut",
+                    onComplete: () => {
+                        intro.style.display = "none";
+                        // Remove scroll listener once closed
+                        window.removeEventListener("scroll", handleScroll);
+                    }
+                }, "-=0.6");
+            };
+
+            // --- 2. THE SCROLL LISTENER ---
+            const handleScroll = () => {
+                if (window.scrollY > 20) { // Trigger after 20px of scrolling
+                    closeIntro();
+                }
+            };
+            window.addEventListener("scroll", handleScroll);
+
+            // --- 3. ORIGINAL ANIMATION SEQUENCE ---
+            /* PANEL SLIDE-IN */
+            tl.to("#right-intro", {
+                duration: 0.8,
+                transform: "translateX(0%)",
+                ease: "power3.out"
+            });
+
+            /* PARTICLES */
+            for (let i = 0; i < 20; i++) {
+                const p = document.createElement("div");
+                p.className = "particle";
+                p.style.position = "absolute";
+                p.style.width = "4px";
+                p.style.height = "4px";
+                p.style.background = "rgba(0,174,239,0.35)";
+                p.style.borderRadius = "50%";
+                p.style.left = Math.random() * 100 + "%";
+                p.style.top = "100%";
+                document.querySelector(".intro-particles").appendChild(p);
+
+                gsap.to(p, {
+                    y: -window.innerHeight - 100,
+                    duration: 4 + Math.random() * 4,
+                    delay: Math.random() * 2,
+                    repeat: -1,
+                    ease: "none"
+                });
+            }
+
+            /* SIGNAL LINE & PULSE */
+            tl.to(".signal-main", { height: "60%", duration: 0.8, ease: "power2.out" })
+                .to(".loading-dots", { opacity: 1, duration: 0.3 })
+                .to(".pulse", { opacity: 1, scale: 1.4, duration: 0.3, stagger: 0.15 })
+                .to(".pulse", { scale: 0.6, opacity: 0.4, duration: 0.3, stagger: 0.15 })
+                .to(".loading-dots", { opacity: 0, duration: 0.3 });
+
+            /* TEXT REVEAL */
+            tl.to(".t1", { opacity: 1, x: 0, duration: 0.6 })
+                .to(".t2", { opacity: 1, x: 0, duration: 0.6 })
+                .to(".t3", { opacity: 1, x: 0, duration: 0.6 })
+                .to(".t4", { opacity: 1, x: 0, duration: 0.6 });
+
+            /* ROBOT ARM/LEG LOOPS (Independent of timeline) */
+            const robotParts = [
+                { el: ".arm-left", r: 30 }, { el: ".arm-right", r: -30 },
+                { el: ".leg-left", r: -30 }, { el: ".leg-right", r: 30 }
+            ];
+            robotParts.forEach(part => {
+                gsap.to(part.el, { rotation: part.r, yoyo: true, repeat: -1, duration: 0.2, ease: "power1.inOut" });
+            });
+
+            // --- 4. AUTO-EXIT (If user doesn't scroll) ---
+            tl.to(".robot-runner", { opacity: 1, duration: 0.3, delay: 5 });
+            tl.to(".robot-runner", { x: 400, duration: 1.2, ease: "power2.inOut" }, "-=0.2");
+            tl.to("#right-intro", {
+                duration: 1,
+                transform: "translateX(100%)",
+                ease: "power3.inOut",
+                onComplete: () => {
+                    if (!isClosing) { // Only hide if scroll didn't already trigger it
+                        intro.style.display = "none";
+                        window.removeEventListener("scroll", handleScroll);
+                    }
+                }
+            }, "-=0.6");
+        });
+    </script>
+</body>
+</html>

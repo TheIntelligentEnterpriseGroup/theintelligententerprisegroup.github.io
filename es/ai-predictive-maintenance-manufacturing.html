@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+<head>
+    <meta name="robots" content="index, follow" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <meta name="description" content='Implemente IA predictiva offline para el sector manufacturero. Utilice nuestra OmniPredict AI para un mantenimiento predictivo local seguro y elimine el tiempo de inactividad no planificado.' />
+    <title>IA Local Segura para Mantenimiento Predictivo | TIEG</title>
+
+    <style>
+        html { background-color: #3B3A47; }
+    </style>
+    <script>
+        (function () {
+            const key = 'preferredTheme';
+            const stored = localStorage.getItem(key);
+            //const systemDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+            const theme = stored || 'dark'/*(systemDark ? 'dark' : 'light')*/;
+            if (theme === 'dark') {
+                document.documentElement.classList.add('dark-mode');
+            } else {
+                document.documentElement.classList.remove('dark-mode');
+            }
+        })();
+    </script>
+
+
+        <link rel="alternate" hreflang="en" href="https://theintelligententerprisegroup.com/ai-predictive-maintenance-manufacturing.html" />
+        <link rel="alternate" hreflang="fr" href="https://theintelligententerprisegroup.com/fr/ai-predictive-maintenance-manufacturing.html" />
+        <link rel="alternate" hreflang="de" href="https://theintelligententerprisegroup.com/de/ai-predictive-maintenance-manufacturing.html" />
+        <link rel="alternate" hreflang="es" href="https://theintelligententerprisegroup.com/es/ai-predictive-maintenance-manufacturing.html" />
+        <link rel="alternate" hreflang="pt" href="https://theintelligententerprisegroup.com/pt/ai-predictive-maintenance-manufacturing.html" />
+        <link rel="alternate" hreflang="zh" href="https://theintelligententerprisegroup.com/zh/ai-predictive-maintenance-manufacturing.html" />
+        <link rel="alternate" hreflang="ja" href="https://theintelligententerprisegroup.com/ja/ai-predictive-maintenance-manufacturing.html" />
+        <link rel="alternate" hreflang="ar" href="https://theintelligententerprisegroup.com/ar/ai-predictive-maintenance-manufacturing.html" />
+
+
+    <link rel="alternate" hreflang="x-default" href="https://theintelligententerprisegroup.com/ai-predictive-maintenance-manufacturing.html" />
+
+    <link rel="canonical" href="https://theintelligententerprisegroup.com/es/ai-predictive-maintenance-manufacturing.html" />
+
+
+    <link rel="stylesheet" href="/css/styles.css" />
+    <link rel="stylesheet" href="/css/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="/css/all.min.css" />
+
+    <script src="/js/lang-switcher.js" defer></script>
+
+    <script>
+        (function () {
+            if (localStorage.getItem('currentLang')) return;
+            const supported = [
+                     { code: "en" } ,
+                     { code: "fr" } ,
+                     { code: "de" } ,
+                     { code: "es" } ,
+                     { code: "pt" } ,
+                     { code: "zh" } ,
+                     { code: "ja" } ,
+                     { code: "ar" } 
+            ];
+            const defaultLang = "es";
+            const navLangs = navigator.languages || [navigator.language || navigator.userLanguage];
+            let detected = null;
+            for (const nav of navLangs) {
+                const code = nav.toLowerCase().split('-')[0];
+                if (supported.find(s => s.code.toLowerCase() === code)) {
+                    detected = code;
+                    break;
+                }
+            }
+            const lang = detected || defaultLang;
+            localStorage.setItem('currentLang', lang);
+            document.documentElement.lang = lang;
+        })();
+    </script>
+
+    <!-- Organization structured data (JSON-LD) -->
+    <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "Organization",
+          "name": "The Intelligent Enterprise Group",
+          "url": "https://theintelligententerprisegroup.com/",
+          "logo": "https://theintelligententerprisegroup.com/images/tieg-logo.png",
+          "sameAs": []
+        }
+    </script>
+    <link rel="icon" href="/favicon.ico" />
+    <link rel="apple-touch-icon" href="/images/apple-touch-icon.png" />
+
+    
+
+</head>
+<body>
+    <header x-data="{ open: false }">
+        <div class="container header-top">
+            <div class="logo"></div>
+            <div class="theme-switch-wrapper">
+                <label class="theme-switch">
+                    <input type="checkbox" id="theme-checkbox" aria-label="Select theme"/>
+                    <span class="slider round"></span>
+                </label>
+                <span id="theme-label">Modo claro</span>
+                <span class="lang-switcher">
+                    <label for="lang-select" class="lang-label">🌐 Idioma:</label>
+
+                    <!-- Language switcher -->
+                    <select id="lang-select" class="lang-select">
+                        <option value="en" data-path="/">English</option>
+                        <option value="fr" data-path="/fr/">Fran&#xE7;ais</option>
+                        <option value="de" data-path="/de/">Deutsch</option>
+                        <option value="es" data-path="/es/">Espa&#xF1;ol</option>
+                        <option value="pt" data-path="/pt/">Portugu&#xEA;s</option>
+                        <option value="zh" data-path="/zh/">&#x4E2D;&#x6587;</option>
+                        <option value="ja" data-path="/ja/">&#x65E5;&#x672C;&#x8A9E;</option>
+                        <option value="ar" data-path="/ar/">&#x627;&#x644;&#x639;&#x631;&#x628;&#x64A;&#x629;</option>
+                    </select>
+
+                </span>
+            </div>
+        </div>
+        
+        <div class="container header-nav">
+            <button @click="open = !open" class="menu-toggle" aria-label="Toggle Menu">
+                <svg width="24" height="24" viewBox="0 0 24 24">
+                    <path fill="var(--nav-link-color)" d="M3 6h18v2H3V6zm0 5h18v2H3v-2zm0 5h18v2H3v-2z" />
+                </svg>
+            </button>
+
+            <nav class="main-nav" :class="{ 'open': open }">
+                <ul>
+                    <li><a href="index.html" class="">Inicio</a></li>
+                    <li><a href="about.html" class="">Sobre nosotros</a></li>
+                    <li><a href="services.html" class="">Servicios y Soluciones</a></li>
+                    <li><a href="case-studies.html" class="">Casos de Estudio</a></li>
+                    <li><a href="resources.html" class="active">Recursos e Ideas</a></li>
+                    <li><a href="trial.html" class="">Prueba</a></li>
+                    <li><a href="pricing.html" class="">Precios</a></li>
+                    <li><a href="partners.html" class="">Socios y Alianzas</a></li>                    
+                    <li><a href="contact.html" class="">Contacto y Consulta</a></li>
+                    <li class="has-submenu"
+                        x-data="{ openSub: false }"
+                        @mouseenter="openSub = true"
+                        @mouseleave="openSub = false">
+                      <button @click="openSub = !openSub"
+                              aria-haspopup="true"
+                              :aria-expanded="openSub.toString()">
+                        Informaci&#xF3;n
+                        <svg width="12" height="12" viewBox="0 0 12 12" aria-hidden="true">
+                          <path d="M3 4l3 3 3-3" fill="currentColor"/>
+                        </svg>
+                      </button>
+                      <ul class="submenu" x-show="openSub" @click.outside="openSub = false">
+                        <li><a href="careers.html" class="">Carreras</a></li>
+                        <li><a href="faqs.html" class="">Preguntas Frecuentes</a></li>
+                        <li><a href="legal.html" class="">Aviso Legal y Pol&#xED;ticas</a></li>
+                      </ul>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        
+<section class="hero seo-hero" style="padding: 80px 0 40px; text-align: center; background-color: var(--card-bg2);">
+    <div class="container hero-container">
+        <h1 style="font-size: 3rem; margin-bottom: 1rem;">IA Local Segura para Mantenimiento Predictivo</h1>
+        <div class="hero-text">
+            <h3 style="font-weight: 400; opacity: 0.9; max-width: 800px; margin: 0 auto;">Prevea fallos en los equipos, minimice los tiempos de inactividad catastróficos y proteja los datos de su fábrica con una infraestructura de IA multiagente aislada (air-gapped).</h3>
+        </div>
+
+                <br/>
+                <p class="lead" style="font-size: 1.15rem; font-weight: 500; color: var(--btn-bg); max-width: 800px; margin: 1.5rem auto 0 auto; line-height: 1.6;">
+                    Para sectores con activos pesados como la fabricación y la energía, el tiempo de inactividad no planificado no es solo un inconveniente: es un gasto catastrófico. Prever los fallos de los equipos antes de que ocurran ahorra a las organizaciones millones en pérdidas de producción, reparaciones de emergencia e interrupciones en la cadena de suministro. Sin embargo, las soluciones estándar de IA basadas en la nube representan un riesgo de seguridad inaceptable para las redes de Tecnología Operativa (OT). Implementada de forma segura de manera local (on-premise), nuestra OmniPredict AI actúa como el predictor universal de nuestro equipo multiagente. Al ejecutar complejos modelos de IA predictiva offline directamente detrás del firewall de su empresa, permitimos a los líderes industriales alcanzar la excelencia operativa proactiva sin exponer la infraestructura crítica a la internet pública.
+                </p>
+
+    </div>
+</section>
+
+<section class="resources">
+    <div class="container">
+
+ <h2>El Alto Coste del Mantenimiento Manufacturero Reactivo</h2>  <p>Históricamente, los sectores de la fabricación y la energía han dependido de estrategias de mantenimiento reactivas o estrictamente programadas. El equipo se utiliza hasta que se rompe, causando cuellos de botella operativos masivos, o se le da mantenimiento prematuramente basándose en fechas arbitrarias del calendario, desperdiciando valiosa mano de obra y piezas de repuesto.</p>  <p>La introducción de la IA en la fabricación ha cambiado fundamentalmente este paradigma. El mantenimiento predictivo con IA utiliza datos de sensores de máquinas, registros históricos y variables ambientales para anticipar exactamente cuándo fallará un componente. Sin embargo, cerrar la brecha entre la ciencia de datos avanzada y la planta física de la fábrica introduce un desafío masivo: la seguridad de los datos.</p>  <h2>El Imperativo de Seguridad para la IA Predictiva Offline</h2>  <p>Las plantas de producción modernas y las redes energéticas son impulsadas por redes OT y sistemas SCADA. Estos sistemas de control industrial son objetivos altamente sensibles para los ciberataques. Transmitir datos de telemetría en vivo desde maquinaria pesada a una IA en la nube pública para su análisis abre un vector peligroso para la interceptación de datos e infiltración de redes.</p>  <p>Para salvaguardar la infraestructura crítica, los sistemas predictivos deben estar aislados (air-gapped). Nuestra plataforma ofrece verdadera IA predictiva offline. Al alojar el servidor de IA empresarial directamente en sus instalaciones —completamente desconectado de la web pública— sus datos de telemetría sensibles se procesan localmente. Esto garantiza que su IA de fabricación opere dentro de un entorno de confianza cero, cumpliendo con los marcos de cumplimiento más estrictos como NIST CSF y CIS IG1.</p>  <h2>Presentamos OmniPredict AI: El Predictor Universal</h2>  <p>En el núcleo de nuestras capacidades predictivas se encuentra OmniPredict AI, un agente autónomo altamente especializado diseñado específicamente para analítica industrial avanzada. Actuando como el predictor universal de nuestro Equipo de Expertos en IA, OmniPredict AI está diseñado para ingerir volúmenes masivos de datos complejos de sensores, archivos de registro y métricas operativas.</p>  <p>A diferencia de las alertas de umbral básicas que simplemente notifican cuando una máquina se calienta demasiado, OmniPredict AI combina técnicas avanzadas de clasificación y regresión para anticipar resultados en diversas industrias. Entiende la relación matizada entre la vibración, la temperatura, la capacidad de carga y las tasas de fallos históricas, proporcionando una visión holística de la salud de sus activos.</p>  <h2>Detección de Patrones y Pronóstico de Tiempo Hasta el Evento</h2>  <p>OmniPredict AI no es un modelo de lenguaje genérico; es un motor de matemáticas industriales. Está diseñado para detectar patrones sutiles e invisibles en sus datos de telemetría que los operadores humanos y el software heredado pasarían por alto por completo. Puede clasificar eventos operativos complejos, distinguiendo entre una anomalía temporal inofensiva y una secuencia de degradación crítica.</p>  <p>Más allá de la simple clasificación, el agente utiliza modelos de regresión profunda para predecir métricas exactas de tiempo hasta el evento. En lugar de una advertencia vaga, sus equipos de mantenimiento reciben pronósticos altamente específicos y accionables, como predecir que un husillo CNC específico sufrirá un fallo de rodamiento catastrófico en exactamente 72 horas, junto con una clasificación de gravedad para ayudar a priorizar el calendario de reparación.</p>  <h2>Pipelines de Streaming con Conciencia de Deriva</h2>  <p>Un fallo importante en los modelos tradicionales de aprendizaje automático es la 'deriva del modelo' (model drift). Un modelo entrenado en invierno podría volverse altamente inexacto durante los meses húmedos de verano a medida que cambian las variables ambientales. En un entorno de fabricación dinámico, los modelos estáticos se degradan rápidamente.</p>  <p>Nuestra plataforma resuelve esto mediante pipelines de streaming con conciencia de deriva. OmniPredict AI monitorea continuamente los flujos de datos entrantes en tiempo real frente a su entrenamiento base. Si detecta que el entorno operativo fundamental está cambiando —quizás debido a un cambio en la calidad de la materia prima o fluctuaciones estacionales de temperatura— el pipeline reconoce automáticamente esta deriva y ajusta su ponderación predictiva en consecuencia. Se mantiene preciso en entornos cambiantes, asegurando que sus pronósticos sigan siendo fiables durante todo el año.</p>  <h2>Reentrenamiento Adaptativo para una Precisión Continua</h2>  <p>Para mantener la precisión a largo plazo sin necesidad de conectarse a un servidor en la nube para actualizaciones, OmniPredict AI utiliza el reentrenamiento adaptativo. A medida que su servidor local on-premise acumula más datos históricos de su planta específica, la IA refina autónomamente sus propios modelos localizados.</p>  <p>Este reentrenamiento adaptativo ocurre completamente offline. La IA aprende de sus máquinas específicas, sus operadores específicos y sus registros de mantenimiento específicos. Con el tiempo, OmniPredict AI se convierte en un experto hiperespecializado adaptado exclusivamente a la huella operativa única de sus instalaciones.</p>  <h2>Pronósticos Accionables para Operaciones de Fabricación e IT</h2>  <p>El objetivo final del mantenimiento predictivo con IA es cerrar la brecha entre OT e IT. Nuestro servidor empresarial seguro cuenta con APIs robustas, lo que permite que OmniPredict AI envíe sus pronósticos accionables directamente a sus plataformas ERP, CMMS o de gestión de servicios de IT existentes.</p>  <p>Cuando se predice un fallo, el sistema puede generar automáticamente una orden de trabajo, verificar el inventario local de piezas de repuesto y alertar al gerente de planta a través de su red interna. Al proporcionar pronósticos accionables tanto para las operaciones de fabricación como para las de IT, nuestra plataforma transforma la ciencia de datos compleja en flujos de trabajo operativos fluidos, seguros y automatizados.</p>             <div class="parent-hub-link" style="background-color: var(--card-bg2); padding: 1rem; border-radius: 6px; margin-bottom: 2rem;">
+                <span style="font-size: 0.9rem; color: var(--text-color);">Parte de nuestra guía de infraestructura y servidor de IA empresarial:</span>
+                <a href="/secure-on-premise-ai-server.html" style="font-weight: bold; margin-left: 0.5rem; color: var(--btn-bg);">
+                    Infraestructura y Servidor de IA Local Seguro
+                </a>
+            </div>
+            <div class="callout" style="background-color: rgba(161, 144, 217, 0.1); border-left: 4px solid var(--btn-bg); padding: 1.5rem; margin: 2rem 0; border-radius: 4px;">
+                <strong style="display: block; font-size: 1.2rem; margin-bottom: 0.5rem; color: var(--text-color);">
+                    Elimine el Tiempo de Inactividad No Planificado de Forma Segura
+                </strong>
+                <p style="margin-bottom: 1rem;">Proteja su infraestructura crítica mientras maximiza la eficiencia operativa. Ofrecemos una prueba completa de 6 meses de nuestro software principal por una tarifa administrativa única de solo 39 €. Implemente su predictor universal hoy mismo.<br><br><span style='font-size: 1.1rem;'>¿Quiere ver el motor de IA en acción primero? <a href='/demo.html' style='color: var(--btn-bg); font-weight: bold; text-decoration: underline;'>Vea nuestra demostración en vivo aquí.</a></span></p>
+                <a href="/trial.html" class="btn">Iniciar Prueba Gratuita</a>
+            </div>
+         
+    </div>
+</section>
+
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&#xA9; 2025 The Intelligent Enterprise Group. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="/js/swiper-bundle.min.js"></script>
+    <script src="/js/cdn.min.js" defer></script>
+    <script src="/js/gsap.min.js"></script>
+    <script src="/js/DrawSVGPlugin.min.js"></script>
+
+    <script type="module" src="/js/themeToggle.js"></script>
+    <script type="module">
+        import { toggleTheme, getCurrentTheme } from '/js/themeToggle.js';
+        const checkbox = document.getElementById('theme-checkbox');
+        const themeLabel = document.getElementById('theme-label');
+
+        if (getCurrentTheme() === 'dark') {
+            checkbox.checked = true;
+            themeLabel.textContent = 'Modo oscuro';
+        } else {
+            themeLabel.textContent = 'Modo claro';
+        }
+
+        checkbox.addEventListener('change', () => {
+            toggleTheme();
+            themeLabel.textContent = checkbox.checked ? 'Modo oscuro' : 'Modo claro';
+        });
+    </script>
+
+    <button id="back-to-top" aria-label="Back to Top">Arriba</button>
+
+    
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            if (window.innerWidth < 768) return;
+
+            const intro = document.querySelector("#right-intro");
+            if (!intro) return;
+
+            const tl = gsap.timeline();
+            let isClosing = false; // Flag to prevent double-triggering the exit
+
+            // --- 1. DEFINE THE EXIT FUNCTION ---
+            const closeIntro = () => {
+                if (isClosing) return;
+                isClosing = true;
+
+                // Kill the main timeline so it doesn't keep running in the background
+                tl.kill();
+
+                // Create a dedicated exit timeline for a fast, responsive feel
+                const exitTl = gsap.timeline();
+
+                /* ROBOT FAST REVEAL & RUN */
+                exitTl.to(".robot-runner", { opacity: 1, duration: 0.2 });
+                exitTl.to(".robot-runner", {
+                    x: 400,
+                    duration: 0.8,
+                    ease: "power2.in"
+                }, "-=0.1");
+
+                /* PANEL SLIDE-OUT */
+                exitTl.to("#right-intro", {
+                    duration: 0.8,
+                    transform: "translateX(100%)",
+                    ease: "power3.inOut",
+                    onComplete: () => {
+                        intro.style.display = "none";
+                        // Remove scroll listener once closed
+                        window.removeEventListener("scroll", handleScroll);
+                    }
+                }, "-=0.6");
+            };
+
+            // --- 2. THE SCROLL LISTENER ---
+            const handleScroll = () => {
+                if (window.scrollY > 20) { // Trigger after 20px of scrolling
+                    closeIntro();
+                }
+            };
+            window.addEventListener("scroll", handleScroll);
+
+            // --- 3. ORIGINAL ANIMATION SEQUENCE ---
+            /* PANEL SLIDE-IN */
+            tl.to("#right-intro", {
+                duration: 0.8,
+                transform: "translateX(0%)",
+                ease: "power3.out"
+            });
+
+            /* PARTICLES */
+            for (let i = 0; i < 20; i++) {
+                const p = document.createElement("div");
+                p.className = "particle";
+                p.style.position = "absolute";
+                p.style.width = "4px";
+                p.style.height = "4px";
+                p.style.background = "rgba(0,174,239,0.35)";
+                p.style.borderRadius = "50%";
+                p.style.left = Math.random() * 100 + "%";
+                p.style.top = "100%";
+                document.querySelector(".intro-particles").appendChild(p);
+
+                gsap.to(p, {
+                    y: -window.innerHeight - 100,
+                    duration: 4 + Math.random() * 4,
+                    delay: Math.random() * 2,
+                    repeat: -1,
+                    ease: "none"
+                });
+            }
+
+            /* SIGNAL LINE & PULSE */
+            tl.to(".signal-main", { height: "60%", duration: 0.8, ease: "power2.out" })
+                .to(".loading-dots", { opacity: 1, duration: 0.3 })
+                .to(".pulse", { opacity: 1, scale: 1.4, duration: 0.3, stagger: 0.15 })
+                .to(".pulse", { scale: 0.6, opacity: 0.4, duration: 0.3, stagger: 0.15 })
+                .to(".loading-dots", { opacity: 0, duration: 0.3 });
+
+            /* TEXT REVEAL */
+            tl.to(".t1", { opacity: 1, x: 0, duration: 0.6 })
+                .to(".t2", { opacity: 1, x: 0, duration: 0.6 })
+                .to(".t3", { opacity: 1, x: 0, duration: 0.6 })
+                .to(".t4", { opacity: 1, x: 0, duration: 0.6 });
+
+            /* ROBOT ARM/LEG LOOPS (Independent of timeline) */
+            const robotParts = [
+                { el: ".arm-left", r: 30 }, { el: ".arm-right", r: -30 },
+                { el: ".leg-left", r: -30 }, { el: ".leg-right", r: 30 }
+            ];
+            robotParts.forEach(part => {
+                gsap.to(part.el, { rotation: part.r, yoyo: true, repeat: -1, duration: 0.2, ease: "power1.inOut" });
+            });
+
+            // --- 4. AUTO-EXIT (If user doesn't scroll) ---
+            tl.to(".robot-runner", { opacity: 1, duration: 0.3, delay: 5 });
+            tl.to(".robot-runner", { x: 400, duration: 1.2, ease: "power2.inOut" }, "-=0.2");
+            tl.to("#right-intro", {
+                duration: 1,
+                transform: "translateX(100%)",
+                ease: "power3.inOut",
+                onComplete: () => {
+                    if (!isClosing) { // Only hide if scroll didn't already trigger it
+                        intro.style.display = "none";
+                        window.removeEventListener("scroll", handleScroll);
+                    }
+                }
+            }, "-=0.6");
+        });
+    </script>
+</body>
+</html>

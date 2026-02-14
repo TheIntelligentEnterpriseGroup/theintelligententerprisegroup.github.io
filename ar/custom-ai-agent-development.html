@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta name="robots" content="index, follow" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <meta name="description" content='&#x642;&#x645; &#x628;&#x62A;&#x648;&#x633;&#x64A;&#x639; &#x641;&#x631;&#x64A;&#x642; &#x62E;&#x628;&#x631;&#x627;&#x621; &#x627;&#x644;&#x630;&#x643;&#x627;&#x621; &#x627;&#x644;&#x627;&#x635;&#x637;&#x646;&#x627;&#x639;&#x64A; &#x627;&#x644;&#x62E;&#x627;&#x635; &#x628;&#x643; &#x645;&#x646; &#x62E;&#x644;&#x627;&#x644; &#x62A;&#x637;&#x648;&#x64A;&#x631; &#x648;&#x643;&#x644;&#x627;&#x621; &#x630;&#x643;&#x627;&#x621; &#x627;&#x635;&#x637;&#x646;&#x627;&#x639;&#x64A; &#x645;&#x62E;&#x635;&#x635;&#x64A;&#x646;. &#x646;&#x62D;&#x646; &#x646;&#x635;&#x645;&#x645; &#x648;&#x646;&#x628;&#x646;&#x64A; &#x648;&#x643;&#x644;&#x627;&#x621; &#x630;&#x643;&#x627;&#x621; &#x627;&#x635;&#x637;&#x646;&#x627;&#x639;&#x64A; &#x645;&#x641;&#x635;&#x644;&#x64A;&#x646; &#x648;&#x641;&#x642;&#x64B;&#x627; &#x644;&#x623;&#x647;&#x62F;&#x627;&#x641; &#x639;&#x645;&#x644;&#x643; &#x627;&#x644;&#x641;&#x631;&#x64A;&#x62F;&#x629; &#x648;&#x646;&#x62F;&#x645;&#x62C;&#x647;&#x645; &#x628;&#x633;&#x644;&#x627;&#x633;&#x629;.' />
+    <title>&#x62A;&#x637;&#x648;&#x64A;&#x631; &#x648;&#x643;&#x64A;&#x644; &#x627;&#x644;&#x630;&#x643;&#x627;&#x621; &#x627;&#x644;&#x627;&#x635;&#x637;&#x646;&#x627;&#x639;&#x64A; &#x627;&#x644;&#x645;&#x62E;&#x635;&#x635; &#x648;&#x627;&#x644;&#x62A;&#x643;&#x627;&#x645;&#x644; &#x627;&#x644;&#x645;&#x641;&#x635;&#x644; | TIEG</title>
+
+    <style>
+        html { background-color: #3B3A47; }
+    </style>
+    <script>
+        (function () {
+            const key = 'preferredTheme';
+            const stored = localStorage.getItem(key);
+            //const systemDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+            const theme = stored || 'dark'/*(systemDark ? 'dark' : 'light')*/;
+            if (theme === 'dark') {
+                document.documentElement.classList.add('dark-mode');
+            } else {
+                document.documentElement.classList.remove('dark-mode');
+            }
+        })();
+    </script>
+
+
+        <link rel="alternate" hreflang="en" href="https://theintelligententerprisegroup.com/custom-ai-agent-development.html" />
+        <link rel="alternate" hreflang="fr" href="https://theintelligententerprisegroup.com/fr/custom-ai-agent-development.html" />
+        <link rel="alternate" hreflang="de" href="https://theintelligententerprisegroup.com/de/custom-ai-agent-development.html" />
+        <link rel="alternate" hreflang="es" href="https://theintelligententerprisegroup.com/es/custom-ai-agent-development.html" />
+        <link rel="alternate" hreflang="pt" href="https://theintelligententerprisegroup.com/pt/custom-ai-agent-development.html" />
+        <link rel="alternate" hreflang="zh" href="https://theintelligententerprisegroup.com/zh/custom-ai-agent-development.html" />
+        <link rel="alternate" hreflang="ja" href="https://theintelligententerprisegroup.com/ja/custom-ai-agent-development.html" />
+        <link rel="alternate" hreflang="ar" href="https://theintelligententerprisegroup.com/ar/custom-ai-agent-development.html" />
+
+
+    <link rel="alternate" hreflang="x-default" href="https://theintelligententerprisegroup.com/custom-ai-agent-development.html" />
+
+    <link rel="canonical" href="https://theintelligententerprisegroup.com/ar/custom-ai-agent-development.html" />
+
+
+    <link rel="stylesheet" href="/css/styles.css" />
+    <link rel="stylesheet" href="/css/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="/css/all.min.css" />
+
+    <script src="/js/lang-switcher.js" defer></script>
+
+    <script>
+        (function () {
+            if (localStorage.getItem('currentLang')) return;
+            const supported = [
+                     { code: "en" } ,
+                     { code: "fr" } ,
+                     { code: "de" } ,
+                     { code: "es" } ,
+                     { code: "pt" } ,
+                     { code: "zh" } ,
+                     { code: "ja" } ,
+                     { code: "ar" } 
+            ];
+            const defaultLang = "ar";
+            const navLangs = navigator.languages || [navigator.language || navigator.userLanguage];
+            let detected = null;
+            for (const nav of navLangs) {
+                const code = nav.toLowerCase().split('-')[0];
+                if (supported.find(s => s.code.toLowerCase() === code)) {
+                    detected = code;
+                    break;
+                }
+            }
+            const lang = detected || defaultLang;
+            localStorage.setItem('currentLang', lang);
+            document.documentElement.lang = lang;
+        })();
+    </script>
+
+    <!-- Organization structured data (JSON-LD) -->
+    <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "Organization",
+          "name": "The Intelligent Enterprise Group",
+          "url": "https://theintelligententerprisegroup.com/",
+          "logo": "https://theintelligententerprisegroup.com/images/tieg-logo.png",
+          "sameAs": []
+        }
+    </script>
+    <link rel="icon" href="/favicon.ico" />
+    <link rel="apple-touch-icon" href="/images/apple-touch-icon.png" />
+
+    
+
+</head>
+<body>
+    <header x-data="{ open: false }">
+        <div class="container header-top">
+            <div class="logo"></div>
+            <div class="theme-switch-wrapper">
+                <label class="theme-switch">
+                    <input type="checkbox" id="theme-checkbox" aria-label="Select theme"/>
+                    <span class="slider round"></span>
+                </label>
+                <span id="theme-label">الوضع الفاتح</span>
+                <span class="lang-switcher">
+                    <label for="lang-select" class="lang-label">🌐 اللغة:</label>
+
+                    <!-- Language switcher -->
+                    <select id="lang-select" class="lang-select">
+                        <option value="en" data-path="/">English</option>
+                        <option value="fr" data-path="/fr/">Fran&#xE7;ais</option>
+                        <option value="de" data-path="/de/">Deutsch</option>
+                        <option value="es" data-path="/es/">Espa&#xF1;ol</option>
+                        <option value="pt" data-path="/pt/">Portugu&#xEA;s</option>
+                        <option value="zh" data-path="/zh/">&#x4E2D;&#x6587;</option>
+                        <option value="ja" data-path="/ja/">&#x65E5;&#x672C;&#x8A9E;</option>
+                        <option value="ar" data-path="/ar/">&#x627;&#x644;&#x639;&#x631;&#x628;&#x64A;&#x629;</option>
+                    </select>
+
+                </span>
+            </div>
+        </div>
+        
+        <div class="container header-nav">
+            <button @click="open = !open" class="menu-toggle" aria-label="Toggle Menu">
+                <svg width="24" height="24" viewBox="0 0 24 24">
+                    <path fill="var(--nav-link-color)" d="M3 6h18v2H3V6zm0 5h18v2H3v-2zm0 5h18v2H3v-2z" />
+                </svg>
+            </button>
+
+            <nav class="main-nav" :class="{ 'open': open }">
+                <ul>
+                    <li><a href="index.html" class="">&#x627;&#x644;&#x631;&#x626;&#x64A;&#x633;&#x64A;&#x629;</a></li>
+                    <li><a href="about.html" class="">&#x645;&#x646; &#x646;&#x62D;&#x646;</a></li>
+                    <li><a href="services.html" class="">&#x627;&#x644;&#x62E;&#x62F;&#x645;&#x627;&#x62A; &#x648;&#x627;&#x644;&#x62D;&#x644;&#x648;&#x644;</a></li>
+                    <li><a href="case-studies.html" class="">&#x62F;&#x631;&#x627;&#x633;&#x627;&#x62A; &#x627;&#x644;&#x62D;&#x627;&#x644;&#x629;</a></li>
+                    <li><a href="resources.html" class="active">&#x627;&#x644;&#x645;&#x648;&#x627;&#x631;&#x62F; &#x648;&#x627;&#x644;&#x631;&#x624;&#x649;</a></li>
+                    <li><a href="trial.html" class="">&#x62A;&#x62C;&#x631;&#x628;&#x629;</a></li>
+                    <li><a href="pricing.html" class="">&#x627;&#x644;&#x623;&#x633;&#x639;&#x627;&#x631;</a></li>
+                    <li><a href="partners.html" class="">&#x627;&#x644;&#x634;&#x631;&#x643;&#x627;&#x621; &#x648;&#x627;&#x644;&#x62A;&#x62D;&#x627;&#x644;&#x641;&#x627;&#x62A;</a></li>                    
+                    <li><a href="contact.html" class="">&#x627;&#x644;&#x627;&#x62A;&#x635;&#x627;&#x644; &#x648;&#x627;&#x644;&#x627;&#x633;&#x62A;&#x634;&#x627;&#x631;&#x629;</a></li>
+                    <li class="has-submenu"
+                        x-data="{ openSub: false }"
+                        @mouseenter="openSub = true"
+                        @mouseleave="openSub = false">
+                      <button @click="openSub = !openSub"
+                              aria-haspopup="true"
+                              :aria-expanded="openSub.toString()">
+                        &#x645;&#x639;&#x644;&#x648;&#x645;&#x627;&#x62A;
+                        <svg width="12" height="12" viewBox="0 0 12 12" aria-hidden="true">
+                          <path d="M3 4l3 3 3-3" fill="currentColor"/>
+                        </svg>
+                      </button>
+                      <ul class="submenu" x-show="openSub" @click.outside="openSub = false">
+                        <li><a href="careers.html" class="">&#x627;&#x644;&#x648;&#x638;&#x627;&#x626;&#x641;</a></li>
+                        <li><a href="faqs.html" class="">&#x627;&#x644;&#x623;&#x633;&#x626;&#x644;&#x629; &#x627;&#x644;&#x634;&#x627;&#x626;&#x639;&#x629;</a></li>
+                        <li><a href="legal.html" class="">&#x627;&#x644;&#x633;&#x64A;&#x627;&#x633;&#x627;&#x62A; &#x648;&#x627;&#x644;&#x644;&#x648;&#x627;&#x626;&#x62D;</a></li>
+                      </ul>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        
+<section class="hero seo-hero" style="padding: 80px 0 40px; text-align: center; background-color: var(--card-bg2);">
+    <div class="container hero-container">
+        <h1 style="font-size: 3rem; margin-bottom: 1rem;">تطوير وتكامل وكيل الذكاء الاصطناعي المخصص</h1>
+        <div class="hero-text">
+            <h3 style="font-weight: 400; opacity: 0.9; max-width: 800px; margin: 0 auto;">قم بتوسيع قدرات فريق خبراء الذكاء الاصطناعي الخاص بك باستخدام وكلاء مفصلين مصممين خصيصًا لسير عمل مؤسستك الفريد.</h3>
+        </div>
+
+                <br/>
+                <p class="lead" style="font-size: 1.15rem; font-weight: 500; color: var(--btn-bg); max-width: 800px; margin: 1.5rem auto 0 auto; line-height: 1.6;">
+                    بينما يغطي فريق خبراء الذكاء الاصطناعي القياسي لدينا مجموعة واسعة من وظائف العمل، غالبًا ما تتطلب المؤسسات الفريدة مجموعات مهارات فريدة. هل تحتاج مؤسستك إلى خبير متخصص للغاية للتعامل مع تنسيقات البيانات المملوكة، أو ملفات التنظيم المتخصصة، أو سير العمل الداخلي المعقد؟ يمكننا تصميم وبناء خبير ذكاء اصطناعي متخصص مصمم خصيصًا لأهداف عملك الدقيقة. تجسر خدمة تطوير وكيل الذكاء الاصطناعي المخصص لدينا الفجوة بين البرمجيات الجاهزة والهندسة المفصلة، مما يوفر موظفًا رقميًا متكيفًا تمامًا.
+                </p>
+
+    </div>
+</section>
+
+<section class="resources">
+    <div class="container">
+
+ <h2>توسيع منصة فريق خبراء الذكاء الاصطناعي</h2>  <p>فرق وكلاء الذكاء الاصطناعي المخصصة لدينا ليست روبوتات قائمة بذاتها؛ إنها امتدادات أصلية لمنصة فريق خبراء الذكاء الاصطناعي الأساسية. سواء كنت تستخدم إصدار سطح المكتب للخصوصية الفردية أو إصدار الخادم للمقاييس على مستوى المؤسسة، يمكننا تصميم ونشر وكلاء ذكاء اصطناعي إضافيين لتوسيع قدرات نظامك بشكل كبير.</p>  <p>تتكامل هذه الوكلاء المفصلة بسلاسة مع بنية منصتك الحالية. يتم توصيلها مباشرة بهيكل إدارة منسق الذكاء الاصطناعي، وتعمل جنبًا إلى جنب مع الخبراء القياسيين (مثل خبير كتابة المحتوى أو محلل البيانات) لمعالجة حالات الاستخدام المتخصصة دون الحاجة إلى استبدال أو إعادة تكوين إعدادك بالكامل.</p>  <h2>تكامل الذكاء الاصطناعي المفصل لسير العمل المتخصص</h2>  <p>تعاني نماذج الذكاء الاصطناعي العامة مع المصطلحات الصناعية المحددة للغاية والعمليات المملوكة. لا يفهم نموذج اللغة الكبير العام الفروق الدقيقة في طلب براءة اختراع صيدلاني محدد أو بيان لوجستي بحري متخصص.</p>  <p>من خلال تكامل الذكاء الاصطناعي المفصل، نصيغ وكلاء مصممين خصيصًا لهذه السيناريوهات الدقيقة. نحن نعمل مع خبراء الموضوع لديك لتحديد قاعدة معرفة الوكيل، والقيود التشغيلية، وتنسيقات المخرجات. والنتيجة هي وكيل مخصص يتحدث لغتك الداخلية بطلاقة وينفذ المهام المعقدة بدقة الموظف المتمرس.</p>  <h2>كيف تعمل عملية التطوير</h2>  <p>بناء وكيل مخصص هو عملية تعاونية ومبسطة مصممة لتقديم القيمة بسرعة. ما عليك سوى مشاركة متطلباتك، وسنقوم بصياغة الخبير.</p>  <p>أولاً، نجري مرحلة اكتشاف لفهم بيانات الإدخال المحددة (PDFs، واجهات برمجة التطبيقات، قواعد البيانات) والمخرجات المطلوبة (التقارير، التعليمات البرمجية، رسائل البريد الإلكتروني). بعد ذلك، يصمم مهندسونا بنية توجيه الوكيل، وتعاريف استخدام الأدوات، ومعايير الذاكرة. أخيرًا، نختبر الوكيل بصرامة داخل بيئة معزولة قبل نشره مباشرة على خادم الذكاء الاصطناعي الآمن في مقر العمل أو تطبيق سطح المكتب عبر حزمة تحديث آمنة.</p>  <h2>أمثلة على الوكلاء المخصصين</h2>  <p>إمكانيات التخصيص لا حدود لها تقريبًا. لقد ساعدنا المؤسسات في نشر وكلاء مثل:</p>  <p>**وكيل تحليل طلبات العروض (RFQ):** يقوم تلقائيًا بتحليل رسائل البريد الإلكتروني الواردة لطلبات العروض، واستخراج بنود السلع، وصياغة ورقة تسعير أولية في Excel.</p>  <p>**خبير سياسة الموارد البشرية:** يستوعب آلاف الصفحات من كتيبات الشركة المتطورة ويجيب على أسئلة الموظفين حول المزايا والامتثال بدقة تامة.</p>  <p>**وكيل ترحيل الأكواد القديمة:** خبير برمجة متخصص مدرب خصيصًا لترجمة كودك المصدري القديم المملوك إلى C# أو Python الحديثة.</p>  <h2>تكامل سلس مع تكنولوجيا المعلومات الحالية</h2>  <p>يكون الوكيل المخصص أقوى عندما يمكنه التفاعل مع برامجك الأخرى. تتضمن عملية التطوير لدينا تكامل واجهة برمجة التطبيقات (API) المفصل. يمكننا تهيئة وكيلك المخصص لسحب البيانات بأمان من نظام إدارة علاقات العملاء (CRM) الداخلي الخاص بك، أو دفع التحديثات إلى لوحات إدارة المشاريع الخاصة بك، أو الاستعلام عن قواعد بيانات SQL الخاصة بك.</p>  <p>هذا التكامل العميق يحول الوكيل من منشئ نصوص سلبي إلى مشارك نشط في سير عمل أتمتة عملك، وقادر على تحفيز إجراءات واقعية بناءً على منطقك الاستراتيجي.</p>             <div class="parent-hub-link" style="background-color: var(--card-bg2); padding: 1rem; border-radius: 6px; margin-bottom: 2rem;">
+                <span style="font-size: 0.9rem; color: var(--text-color);">جزء من خدماتنا الاستشارية والتطويرية الشاملة:</span>
+                <a href="/agentic-ai-workflows.html" style="font-weight: bold; margin-left: 0.5rem; color: var(--btn-bg);">
+                    سير عمل وكلاء الذكاء الاصطناعي والاستشارات
+                </a>
+            </div>
+            <div class="callout" style="background-color: rgba(161, 144, 217, 0.1); border-left: 4px solid var(--btn-bg); padding: 1.5rem; margin: 2rem 0; border-radius: 4px;">
+                <strong style="display: block; font-size: 1.2rem; margin-bottom: 0.5rem; color: var(--text-color);">
+                    ابنِ خبيرك المتخصص
+                </strong>
+                <p style="margin-bottom: 1rem;">هل لديك سير عمل فريد يحتاج إلى أتمتة؟ دعنا نناقش متطلباتك. نحن نقدم تجربة شاملة لمدة 6 أشهر لبرامجنا الأساسية مقابل رسوم إدارية لمرة واحدة قدرها 39 يورو فقط لبدء العمل.<br><br><span style='font-size: 1.1rem;'>هل أنت فضولي بشأن قدراتنا؟ <a href='/demo.html' style='color: var(--btn-bg); font-weight: bold; text-decoration: underline;'>شاهد عرضنا المباشر هنا.</a></span></p>
+                <a href="/trial.html" class="btn">ابدأ التجربة المجانية</a>
+            </div>
+         
+    </div>
+</section>
+
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&#xA9; 2025 The Intelligent Enterprise Group. &#x62C;&#x645;&#x64A;&#x639; &#x627;&#x644;&#x62D;&#x642;&#x648;&#x642; &#x645;&#x62D;&#x641;&#x648;&#x638;&#x629;.</p>
+        </div>
+    </footer>
+
+    <script src="/js/swiper-bundle.min.js"></script>
+    <script src="/js/cdn.min.js" defer></script>
+    <script src="/js/gsap.min.js"></script>
+    <script src="/js/DrawSVGPlugin.min.js"></script>
+
+    <script type="module" src="/js/themeToggle.js"></script>
+    <script type="module">
+        import { toggleTheme, getCurrentTheme } from '/js/themeToggle.js';
+        const checkbox = document.getElementById('theme-checkbox');
+        const themeLabel = document.getElementById('theme-label');
+
+        if (getCurrentTheme() === 'dark') {
+            checkbox.checked = true;
+            themeLabel.textContent = 'الوضع الداكن';
+        } else {
+            themeLabel.textContent = 'الوضع الفاتح';
+        }
+
+        checkbox.addEventListener('change', () => {
+            toggleTheme();
+            themeLabel.textContent = checkbox.checked ? 'الوضع الداكن' : 'الوضع الفاتح';
+        });
+    </script>
+
+    <button id="back-to-top" aria-label="Back to Top">&#x623;&#x639;&#x644;&#x649;</button>
+
+    
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            if (window.innerWidth < 768) return;
+
+            const intro = document.querySelector("#right-intro");
+            if (!intro) return;
+
+            const tl = gsap.timeline();
+            let isClosing = false; // Flag to prevent double-triggering the exit
+
+            // --- 1. DEFINE THE EXIT FUNCTION ---
+            const closeIntro = () => {
+                if (isClosing) return;
+                isClosing = true;
+
+                // Kill the main timeline so it doesn't keep running in the background
+                tl.kill();
+
+                // Create a dedicated exit timeline for a fast, responsive feel
+                const exitTl = gsap.timeline();
+
+                /* ROBOT FAST REVEAL & RUN */
+                exitTl.to(".robot-runner", { opacity: 1, duration: 0.2 });
+                exitTl.to(".robot-runner", {
+                    x: 400,
+                    duration: 0.8,
+                    ease: "power2.in"
+                }, "-=0.1");
+
+                /* PANEL SLIDE-OUT */
+                exitTl.to("#right-intro", {
+                    duration: 0.8,
+                    transform: "translateX(100%)",
+                    ease: "power3.inOut",
+                    onComplete: () => {
+                        intro.style.display = "none";
+                        // Remove scroll listener once closed
+                        window.removeEventListener("scroll", handleScroll);
+                    }
+                }, "-=0.6");
+            };
+
+            // --- 2. THE SCROLL LISTENER ---
+            const handleScroll = () => {
+                if (window.scrollY > 20) { // Trigger after 20px of scrolling
+                    closeIntro();
+                }
+            };
+            window.addEventListener("scroll", handleScroll);
+
+            // --- 3. ORIGINAL ANIMATION SEQUENCE ---
+            /* PANEL SLIDE-IN */
+            tl.to("#right-intro", {
+                duration: 0.8,
+                transform: "translateX(0%)",
+                ease: "power3.out"
+            });
+
+            /* PARTICLES */
+            for (let i = 0; i < 20; i++) {
+                const p = document.createElement("div");
+                p.className = "particle";
+                p.style.position = "absolute";
+                p.style.width = "4px";
+                p.style.height = "4px";
+                p.style.background = "rgba(0,174,239,0.35)";
+                p.style.borderRadius = "50%";
+                p.style.left = Math.random() * 100 + "%";
+                p.style.top = "100%";
+                document.querySelector(".intro-particles").appendChild(p);
+
+                gsap.to(p, {
+                    y: -window.innerHeight - 100,
+                    duration: 4 + Math.random() * 4,
+                    delay: Math.random() * 2,
+                    repeat: -1,
+                    ease: "none"
+                });
+            }
+
+            /* SIGNAL LINE & PULSE */
+            tl.to(".signal-main", { height: "60%", duration: 0.8, ease: "power2.out" })
+                .to(".loading-dots", { opacity: 1, duration: 0.3 })
+                .to(".pulse", { opacity: 1, scale: 1.4, duration: 0.3, stagger: 0.15 })
+                .to(".pulse", { scale: 0.6, opacity: 0.4, duration: 0.3, stagger: 0.15 })
+                .to(".loading-dots", { opacity: 0, duration: 0.3 });
+
+            /* TEXT REVEAL */
+            tl.to(".t1", { opacity: 1, x: 0, duration: 0.6 })
+                .to(".t2", { opacity: 1, x: 0, duration: 0.6 })
+                .to(".t3", { opacity: 1, x: 0, duration: 0.6 })
+                .to(".t4", { opacity: 1, x: 0, duration: 0.6 });
+
+            /* ROBOT ARM/LEG LOOPS (Independent of timeline) */
+            const robotParts = [
+                { el: ".arm-left", r: 30 }, { el: ".arm-right", r: -30 },
+                { el: ".leg-left", r: -30 }, { el: ".leg-right", r: 30 }
+            ];
+            robotParts.forEach(part => {
+                gsap.to(part.el, { rotation: part.r, yoyo: true, repeat: -1, duration: 0.2, ease: "power1.inOut" });
+            });
+
+            // --- 4. AUTO-EXIT (If user doesn't scroll) ---
+            tl.to(".robot-runner", { opacity: 1, duration: 0.3, delay: 5 });
+            tl.to(".robot-runner", { x: 400, duration: 1.2, ease: "power2.inOut" }, "-=0.2");
+            tl.to("#right-intro", {
+                duration: 1,
+                transform: "translateX(100%)",
+                ease: "power3.inOut",
+                onComplete: () => {
+                    if (!isClosing) { // Only hide if scroll didn't already trigger it
+                        intro.style.display = "none";
+                        window.removeEventListener("scroll", handleScroll);
+                    }
+                }
+            }, "-=0.6");
+        });
+    </script>
+</body>
+</html>

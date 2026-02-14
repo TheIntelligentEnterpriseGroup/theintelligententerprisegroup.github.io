@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="pt" dir="ltr">
+<head>
+    <meta name="robots" content="index, follow" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <meta name="description" content='Garanta a conformidade da privacidade de dados de IA com nossos frameworks de IA seguros. Totalmente em conformidade com NIST CSF AI, CIS IG1, CMMC N&#xED;vel 1 e CyberFundamentals da B&#xE9;lgica.' />
+    <title>Conformidade de Privacidade de Dados e Seguran&#xE7;a de IA Corporativa | TIEG</title>
+
+    <style>
+        html { background-color: #3B3A47; }
+    </style>
+    <script>
+        (function () {
+            const key = 'preferredTheme';
+            const stored = localStorage.getItem(key);
+            //const systemDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+            const theme = stored || 'dark'/*(systemDark ? 'dark' : 'light')*/;
+            if (theme === 'dark') {
+                document.documentElement.classList.add('dark-mode');
+            } else {
+                document.documentElement.classList.remove('dark-mode');
+            }
+        })();
+    </script>
+
+
+        <link rel="alternate" hreflang="en" href="https://theintelligententerprisegroup.com/ai-data-privacy-compliance.html" />
+        <link rel="alternate" hreflang="fr" href="https://theintelligententerprisegroup.com/fr/ai-data-privacy-compliance.html" />
+        <link rel="alternate" hreflang="de" href="https://theintelligententerprisegroup.com/de/ai-data-privacy-compliance.html" />
+        <link rel="alternate" hreflang="es" href="https://theintelligententerprisegroup.com/es/ai-data-privacy-compliance.html" />
+        <link rel="alternate" hreflang="pt" href="https://theintelligententerprisegroup.com/pt/ai-data-privacy-compliance.html" />
+        <link rel="alternate" hreflang="zh" href="https://theintelligententerprisegroup.com/zh/ai-data-privacy-compliance.html" />
+        <link rel="alternate" hreflang="ja" href="https://theintelligententerprisegroup.com/ja/ai-data-privacy-compliance.html" />
+        <link rel="alternate" hreflang="ar" href="https://theintelligententerprisegroup.com/ar/ai-data-privacy-compliance.html" />
+
+
+    <link rel="alternate" hreflang="x-default" href="https://theintelligententerprisegroup.com/ai-data-privacy-compliance.html" />
+
+    <link rel="canonical" href="https://theintelligententerprisegroup.com/pt/ai-data-privacy-compliance.html" />
+
+
+    <link rel="stylesheet" href="/css/styles.css" />
+    <link rel="stylesheet" href="/css/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="/css/all.min.css" />
+
+    <script src="/js/lang-switcher.js" defer></script>
+
+    <script>
+        (function () {
+            if (localStorage.getItem('currentLang')) return;
+            const supported = [
+                     { code: "en" } ,
+                     { code: "fr" } ,
+                     { code: "de" } ,
+                     { code: "es" } ,
+                     { code: "pt" } ,
+                     { code: "zh" } ,
+                     { code: "ja" } ,
+                     { code: "ar" } 
+            ];
+            const defaultLang = "pt";
+            const navLangs = navigator.languages || [navigator.language || navigator.userLanguage];
+            let detected = null;
+            for (const nav of navLangs) {
+                const code = nav.toLowerCase().split('-')[0];
+                if (supported.find(s => s.code.toLowerCase() === code)) {
+                    detected = code;
+                    break;
+                }
+            }
+            const lang = detected || defaultLang;
+            localStorage.setItem('currentLang', lang);
+            document.documentElement.lang = lang;
+        })();
+    </script>
+
+    <!-- Organization structured data (JSON-LD) -->
+    <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "Organization",
+          "name": "The Intelligent Enterprise Group",
+          "url": "https://theintelligententerprisegroup.com/",
+          "logo": "https://theintelligententerprisegroup.com/images/tieg-logo.png",
+          "sameAs": []
+        }
+    </script>
+    <link rel="icon" href="/favicon.ico" />
+    <link rel="apple-touch-icon" href="/images/apple-touch-icon.png" />
+
+    
+
+</head>
+<body>
+    <header x-data="{ open: false }">
+        <div class="container header-top">
+            <div class="logo"></div>
+            <div class="theme-switch-wrapper">
+                <label class="theme-switch">
+                    <input type="checkbox" id="theme-checkbox" aria-label="Select theme"/>
+                    <span class="slider round"></span>
+                </label>
+                <span id="theme-label">Modo Claro</span>
+                <span class="lang-switcher">
+                    <label for="lang-select" class="lang-label">🌐 Idioma:</label>
+
+                    <!-- Language switcher -->
+                    <select id="lang-select" class="lang-select">
+                        <option value="en" data-path="/">English</option>
+                        <option value="fr" data-path="/fr/">Fran&#xE7;ais</option>
+                        <option value="de" data-path="/de/">Deutsch</option>
+                        <option value="es" data-path="/es/">Espa&#xF1;ol</option>
+                        <option value="pt" data-path="/pt/">Portugu&#xEA;s</option>
+                        <option value="zh" data-path="/zh/">&#x4E2D;&#x6587;</option>
+                        <option value="ja" data-path="/ja/">&#x65E5;&#x672C;&#x8A9E;</option>
+                        <option value="ar" data-path="/ar/">&#x627;&#x644;&#x639;&#x631;&#x628;&#x64A;&#x629;</option>
+                    </select>
+
+                </span>
+            </div>
+        </div>
+        
+        <div class="container header-nav">
+            <button @click="open = !open" class="menu-toggle" aria-label="Toggle Menu">
+                <svg width="24" height="24" viewBox="0 0 24 24">
+                    <path fill="var(--nav-link-color)" d="M3 6h18v2H3V6zm0 5h18v2H3v-2zm0 5h18v2H3v-2z" />
+                </svg>
+            </button>
+
+            <nav class="main-nav" :class="{ 'open': open }">
+                <ul>
+                    <li><a href="index.html" class="">In&#xED;cio</a></li>
+                    <li><a href="about.html" class="">Sobre N&#xF3;s</a></li>
+                    <li><a href="services.html" class="">Servi&#xE7;os e Solu&#xE7;&#xF5;es</a></li>
+                    <li><a href="case-studies.html" class="">Estudos de Caso</a></li>
+                    <li><a href="resources.html" class="active">Recursos e Insights</a></li>
+                    <li><a href="trial.html" class="">Avalia&#xE7;&#xE3;o</a></li>
+                    <li><a href="pricing.html" class="">Pre&#xE7;os</a></li>
+                    <li><a href="partners.html" class="">Parceiros e Alian&#xE7;as</a></li>                    
+                    <li><a href="contact.html" class="">Contato e Consultoria</a></li>
+                    <li class="has-submenu"
+                        x-data="{ openSub: false }"
+                        @mouseenter="openSub = true"
+                        @mouseleave="openSub = false">
+                      <button @click="openSub = !openSub"
+                              aria-haspopup="true"
+                              :aria-expanded="openSub.toString()">
+                        Informa&#xE7;&#xF5;es
+                        <svg width="12" height="12" viewBox="0 0 12 12" aria-hidden="true">
+                          <path d="M3 4l3 3 3-3" fill="currentColor"/>
+                        </svg>
+                      </button>
+                      <ul class="submenu" x-show="openSub" @click.outside="openSub = false">
+                        <li><a href="careers.html" class="">Carreiras</a></li>
+                        <li><a href="faqs.html" class="">Perguntas Frequentes</a></li>
+                        <li><a href="legal.html" class="">Jur&#xED;dico e Pol&#xED;ticas</a></li>
+                      </ul>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        
+<section class="hero seo-hero" style="padding: 80px 0 40px; text-align: center; background-color: var(--card-bg2);">
+    <div class="container hero-container">
+        <h1 style="font-size: 3rem; margin-bottom: 1rem;">Conformidade de Privacidade de Dados e Segurança de IA Corporativa</h1>
+        <div class="hero-text">
+            <h3 style="font-weight: 400; opacity: 0.9; max-width: 800px; margin: 0 auto;">Implemente uma força de trabalho digital que opere com segurança atrás do seu firewall corporativo, totalmente em conformidade com os frameworks de cibersegurança mais rigorosos do mundo.</h3>
+        </div>
+
+                <br/>
+                <p class="lead" style="font-size: 1.15rem; font-weight: 500; color: var(--btn-bg); max-width: 800px; margin: 1.5rem auto 0 auto; line-height: 1.6;">
+                    O Intelligent Enterprise Group está totalmente comprometido com a conformidade de cibersegurança e gestão de riscos. À medida que as organizações correm para adotar a inteligência artificial, os riscos de exfiltração de dados, roubo de propriedade intelectual e penalidades regulatórias nunca foram tão altos. Garantimos que sua força de trabalho digital opere com segurança atrás do seu firewall corporativo. Ao utilizar uma arquitetura local (on-premise) e isolada (air-gapped), nossa plataforma alcança conformidade absoluta de privacidade de dados de IA, permitindo que sua empresa aproveite agentes de IA autônomos sem comprometer sua postura de segurança.
+                </p>
+
+    </div>
+</section>
+
+<section class="resources">
+    <div class="container">
+
+ <h2>A Necessidade Crítica de Frameworks de IA Seguros</h2>  <p>Na empresa moderna, os dados são o ativo mais valioso. Soluções padrão de IA baseadas em nuvem exigem que as organizações transmitam esses dados para servidores de terceiros para processamento. Esta arquitetura fundamental viola os princípios básicos da segurança zero-trust e cria enormes pontos cegos na gestão de riscos corporativos.</p>  <p>Para integrar com segurança fluxos de trabalho multiagentes em ambientes altamente regulamentados — como setores financeiro, de saúde, defesa e jurídico — as organizações devem adotar frameworks de IA seguros. Nossa Declaração de Conformidade de Segurança confirma que nosso servidor de IA corporativo opera 100% localmente. Ao eliminar chamadas de API externas, removemos completamente a camada de transmissão de rede do cenário de ameaças, garantindo que sua organização cumpra integralmente os frameworks de segurança reconhecidos internacionalmente.</p>  <h2>CyberFundamentals da Bélgica: Resiliência Digital Europeia</h2>  <p>Para organizações europeias e empresas globais que operam na UE, a soberania de dados é uma preocupação primordial. Nossa plataforma alinha-se estritamente ao framework CyberFundamentals da Bélgica, um conjunto abrangente de medidas concretas projetadas para proteger dados, reduzir significativamente o risco de ataques cibernéticos bem-sucedidos e aumentar a resiliência digital geral.</p>  <p>Como nossa Plataforma de Equipe de Especialistas em IA processa todos os documentos, consultas e tarefas analíticas localmente em seu próprio hardware, ela suporta inerentemente os padrões europeus de proteção de dados, incluindo o LGPD/GDPR. Seus dados proprietários nunca cruzam fronteiras internacionais, nem são submetidos à jurisdição de centros de dados estrangeiros. Esta abordagem localizada fornece o nível mais alto de resiliência digital contra agentes de ameaças externos.</p>  <h2>NIST Cybersecurity Framework (CSF) para IA</h2>  <p>O NIST Cybersecurity Framework (CSF) é o padrão ouro global para gerenciar riscos de cibersegurança. Integrar a IA em uma empresa muitas vezes complica as funções centrais do NIST (Identificar, Proteger, Detectar, Responder, Recuperar). Nossa arquitetura de IA offline simplifica a conformidade com o NIST CSF AI ao reduzir drasticamente sua superfície de ataque.</p>  <p>Ao hospedar a IA localmente, a função 'Proteger' é nativamente fortalecida. Não há vulnerabilidades de fornecedores de nuvem externos para gerenciar, nem conexões contínuas de internet para proteger. Os administradores de TI podem aplicar seus controles de acesso local existentes, padrões de criptografia e protocolos de detecção de endpoint diretamente ao servidor que hospeda a IA, garantindo que sua implantação de inteligência artificial esteja coberta sob seu guarda-chuva de gestão de riscos NIST existente.</p>  <h2>Controles de Segurança Críticos CIS (IG1): Higiene Cibernética Essencial</h2>  <p>Os Controles de Segurança Críticos do Center for Internet Security (CIS) fornecem um caminho prioritário para melhorar a cibersegurança corporativa. O Grupo de Implementação 1 (IG1) representa a higiene cibernética fundamental que toda organização deve alcançar para se defender contra os ataques mais comuns.</p>  <p>Um componente importante do CIS IG1 é a proteção rigorosa de dados e a configuração segura de ativos corporativos. Ferramentas de IA em nuvem muitas vezes ignoram esses controles ao permitir que os usuários finais enviem dados corporativos para navegadores da web não verificados (conhecido como Shadow IT). Ao implantar nosso servidor de IA local seguro, você recupera a supervisão administrativa total. Você controla exatamente quem tem acesso aos modelos de IA através do seu próprio active directory, apoiando diretamente os requisitos do CIS IG1 para controle de acesso e implantação segura de software.</p>  <h2>CMMC Nível 1: Salvaguardando Informações Sensíveis</h2>  <p>Para organizações que operam na base industrial de defesa, a Certificação de Modelo de Maturidade em Cibersegurança (CMMC) é um pré-requisito rigoroso. O CMMC Nível 1 concentra-se especificamente na salvaguarda básica de Informações de Contrato Federal (FCI).</p>  <p>Plataformas de IA em nuvem pública são geralmente proibidas de processar FCI, a menos que obtenham certificações governamentais de nuvem específicas e caras. Nossa plataforma ignora esse obstáculo inteiramente. Como o motor de IA funciona em um estado totalmente isolado (air-gapped) e offline, ele herda os limites de segurança física e lógica da instalação em que está instalado. Prestadores de serviços de defesa podem implantar com segurança nosso sistema multiagente para analisar contratos complexos e manuais técnicos sem arriscar a exposição de informações governamentais sensíveis.</p>  <h2>Arquitetura Zero-Trust: Sem Telemetria, Sem Nuvem</h2>  <p>A verdadeira conformidade de privacidade de dados de IA não é apenas sobre onde os dados são armazenados; é sobre garantir que o software não tenha portas dos fundos ocultas. Muitos 'wrappers' de IA locais ainda se comunicam externamente para relatar análises de uso, verificar licenças ou baixar atualizações silenciosas em segundo plano.</p>  <p>O Intelligent Enterprise Group adota uma abordagem rigorosa de zero-trust para o design de software. Nossas soluções corporativas não contêm absolutamente nenhum módulo de telemetria. Uma vez instalada em seu servidor seguro, a IA funciona com autonomia completa. Não requer ping contínuo de internet, garantindo que sua força de trabalho digital permaneça totalmente produtiva mesmo nos ambientes de rede mais seguros e isolados.</p>  <h2>Capacite sua Força de Trabalho Digital com Segurança</h2>  <p>A gestão de riscos não deve significar perder a revolução da IA. Ao aderir ao CyberFundamentals da Bélgica, NIST CSF, CIS IG1 e CMMC Nível 1, nossa plataforma permite que sua organização implemente com confiança uma força de trabalho digital atrás do seu firewall corporativo. Você alcança a eficiência operacional de uma equipe de especialistas em IA enquanto mantém a postura de segurança intransigente que seus stakeholders exigem.</p>             <div class="parent-hub-link" style="background-color: var(--card-bg2); padding: 1rem; border-radius: 6px; margin-bottom: 2rem;">
+                <span style="font-size: 0.9rem; color: var(--text-color);">Parte do nosso guia de servidor e infraestrutura corporativa:</span>
+                <a href="/secure-on-premise-ai-server.html" style="font-weight: bold; margin-left: 0.5rem; color: var(--btn-bg);">
+                    Servidor de IA Local Seguro e Infraestrutura
+                </a>
+            </div>
+            <div class="callout" style="background-color: rgba(161, 144, 217, 0.1); border-left: 4px solid var(--btn-bg); padding: 1.5rem; margin: 2rem 0; border-radius: 4px;">
+                <strong style="display: block; font-size: 1.2rem; margin-bottom: 0.5rem; color: var(--text-color);">
+                    Verifique Nossos Padrões de Segurança
+                </strong>
+                <p style="margin-bottom: 1rem;">Proteja seus dados proprietários com IA verdadeiramente isolada. Oferecemos um teste abrangente de 6 meses do nosso software principal por uma taxa administrativa única de apenas €39 para testar em seu ambiente seguro.<br><br><span style='font-size: 1.1rem;'>Quer ver como funciona primeiro? <a href='/demo.html' style='color: var(--btn-bg); font-weight: bold; text-decoration: underline;'>Assista à nossa Demonstração ao Vivo aqui.</a></span></p>
+                <a href="/trial.html" class="btn">Iniciar Teste Gratuito</a>
+            </div>
+         
+    </div>
+</section>
+
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&#xA9; 2025 The Intelligent Enterprise Group. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="/js/swiper-bundle.min.js"></script>
+    <script src="/js/cdn.min.js" defer></script>
+    <script src="/js/gsap.min.js"></script>
+    <script src="/js/DrawSVGPlugin.min.js"></script>
+
+    <script type="module" src="/js/themeToggle.js"></script>
+    <script type="module">
+        import { toggleTheme, getCurrentTheme } from '/js/themeToggle.js';
+        const checkbox = document.getElementById('theme-checkbox');
+        const themeLabel = document.getElementById('theme-label');
+
+        if (getCurrentTheme() === 'dark') {
+            checkbox.checked = true;
+            themeLabel.textContent = 'Modo Escuro';
+        } else {
+            themeLabel.textContent = 'Modo Claro';
+        }
+
+        checkbox.addEventListener('change', () => {
+            toggleTheme();
+            themeLabel.textContent = checkbox.checked ? 'Modo Escuro' : 'Modo Claro';
+        });
+    </script>
+
+    <button id="back-to-top" aria-label="Back to Top">Topo</button>
+
+    
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            if (window.innerWidth < 768) return;
+
+            const intro = document.querySelector("#right-intro");
+            if (!intro) return;
+
+            const tl = gsap.timeline();
+            let isClosing = false; // Flag to prevent double-triggering the exit
+
+            // --- 1. DEFINE THE EXIT FUNCTION ---
+            const closeIntro = () => {
+                if (isClosing) return;
+                isClosing = true;
+
+                // Kill the main timeline so it doesn't keep running in the background
+                tl.kill();
+
+                // Create a dedicated exit timeline for a fast, responsive feel
+                const exitTl = gsap.timeline();
+
+                /* ROBOT FAST REVEAL & RUN */
+                exitTl.to(".robot-runner", { opacity: 1, duration: 0.2 });
+                exitTl.to(".robot-runner", {
+                    x: 400,
+                    duration: 0.8,
+                    ease: "power2.in"
+                }, "-=0.1");
+
+                /* PANEL SLIDE-OUT */
+                exitTl.to("#right-intro", {
+                    duration: 0.8,
+                    transform: "translateX(100%)",
+                    ease: "power3.inOut",
+                    onComplete: () => {
+                        intro.style.display = "none";
+                        // Remove scroll listener once closed
+                        window.removeEventListener("scroll", handleScroll);
+                    }
+                }, "-=0.6");
+            };
+
+            // --- 2. THE SCROLL LISTENER ---
+            const handleScroll = () => {
+                if (window.scrollY > 20) { // Trigger after 20px of scrolling
+                    closeIntro();
+                }
+            };
+            window.addEventListener("scroll", handleScroll);
+
+            // --- 3. ORIGINAL ANIMATION SEQUENCE ---
+            /* PANEL SLIDE-IN */
+            tl.to("#right-intro", {
+                duration: 0.8,
+                transform: "translateX(0%)",
+                ease: "power3.out"
+            });
+
+            /* PARTICLES */
+            for (let i = 0; i < 20; i++) {
+                const p = document.createElement("div");
+                p.className = "particle";
+                p.style.position = "absolute";
+                p.style.width = "4px";
+                p.style.height = "4px";
+                p.style.background = "rgba(0,174,239,0.35)";
+                p.style.borderRadius = "50%";
+                p.style.left = Math.random() * 100 + "%";
+                p.style.top = "100%";
+                document.querySelector(".intro-particles").appendChild(p);
+
+                gsap.to(p, {
+                    y: -window.innerHeight - 100,
+                    duration: 4 + Math.random() * 4,
+                    delay: Math.random() * 2,
+                    repeat: -1,
+                    ease: "none"
+                });
+            }
+
+            /* SIGNAL LINE & PULSE */
+            tl.to(".signal-main", { height: "60%", duration: 0.8, ease: "power2.out" })
+                .to(".loading-dots", { opacity: 1, duration: 0.3 })
+                .to(".pulse", { opacity: 1, scale: 1.4, duration: 0.3, stagger: 0.15 })
+                .to(".pulse", { scale: 0.6, opacity: 0.4, duration: 0.3, stagger: 0.15 })
+                .to(".loading-dots", { opacity: 0, duration: 0.3 });
+
+            /* TEXT REVEAL */
+            tl.to(".t1", { opacity: 1, x: 0, duration: 0.6 })
+                .to(".t2", { opacity: 1, x: 0, duration: 0.6 })
+                .to(".t3", { opacity: 1, x: 0, duration: 0.6 })
+                .to(".t4", { opacity: 1, x: 0, duration: 0.6 });
+
+            /* ROBOT ARM/LEG LOOPS (Independent of timeline) */
+            const robotParts = [
+                { el: ".arm-left", r: 30 }, { el: ".arm-right", r: -30 },
+                { el: ".leg-left", r: -30 }, { el: ".leg-right", r: 30 }
+            ];
+            robotParts.forEach(part => {
+                gsap.to(part.el, { rotation: part.r, yoyo: true, repeat: -1, duration: 0.2, ease: "power1.inOut" });
+            });
+
+            // --- 4. AUTO-EXIT (If user doesn't scroll) ---
+            tl.to(".robot-runner", { opacity: 1, duration: 0.3, delay: 5 });
+            tl.to(".robot-runner", { x: 400, duration: 1.2, ease: "power2.inOut" }, "-=0.2");
+            tl.to("#right-intro", {
+                duration: 1,
+                transform: "translateX(100%)",
+                ease: "power3.inOut",
+                onComplete: () => {
+                    if (!isClosing) { // Only hide if scroll didn't already trigger it
+                        intro.style.display = "none";
+                        window.removeEventListener("scroll", handleScroll);
+                    }
+                }
+            }, "-=0.6");
+        });
+    </script>
+</body>
+</html>

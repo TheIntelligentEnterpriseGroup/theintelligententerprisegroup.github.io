@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="zh" dir="ltr">
+<head>
+    <meta name="robots" content="index, follow" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <meta name="description" content='&#x4E3A;&#x5236;&#x9020;&#x884C;&#x4E1A;&#x90E8;&#x7F72;&#x79BB;&#x7EBF;&#x9884;&#x6D4B; AI&#x3002;&#x5229;&#x7528;&#x6211;&#x4EEC;&#x7684; OmniPredict AI &#x8FDB;&#x884C;&#x5B89;&#x5168;&#x7684;&#x672C;&#x5730; AI &#x9884;&#x6D4B;&#x6027;&#x7EF4;&#x62A4;&#xFF0C;&#x6D88;&#x9664;&#x8BA1;&#x5212;&#x5916;&#x505C;&#x673A;&#x3002;' />
+    <title>&#x7528;&#x4E8E;&#x9884;&#x6D4B;&#x6027;&#x7EF4;&#x62A4;&#x7684;&#x5B89;&#x5168;&#x672C;&#x5730;&#x90E8;&#x7F72; AI | TIEG</title>
+
+    <style>
+        html { background-color: #3B3A47; }
+    </style>
+    <script>
+        (function () {
+            const key = 'preferredTheme';
+            const stored = localStorage.getItem(key);
+            //const systemDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+            const theme = stored || 'dark'/*(systemDark ? 'dark' : 'light')*/;
+            if (theme === 'dark') {
+                document.documentElement.classList.add('dark-mode');
+            } else {
+                document.documentElement.classList.remove('dark-mode');
+            }
+        })();
+    </script>
+
+
+        <link rel="alternate" hreflang="en" href="https://theintelligententerprisegroup.com/ai-predictive-maintenance-manufacturing.html" />
+        <link rel="alternate" hreflang="fr" href="https://theintelligententerprisegroup.com/fr/ai-predictive-maintenance-manufacturing.html" />
+        <link rel="alternate" hreflang="de" href="https://theintelligententerprisegroup.com/de/ai-predictive-maintenance-manufacturing.html" />
+        <link rel="alternate" hreflang="es" href="https://theintelligententerprisegroup.com/es/ai-predictive-maintenance-manufacturing.html" />
+        <link rel="alternate" hreflang="pt" href="https://theintelligententerprisegroup.com/pt/ai-predictive-maintenance-manufacturing.html" />
+        <link rel="alternate" hreflang="zh" href="https://theintelligententerprisegroup.com/zh/ai-predictive-maintenance-manufacturing.html" />
+        <link rel="alternate" hreflang="ja" href="https://theintelligententerprisegroup.com/ja/ai-predictive-maintenance-manufacturing.html" />
+        <link rel="alternate" hreflang="ar" href="https://theintelligententerprisegroup.com/ar/ai-predictive-maintenance-manufacturing.html" />
+
+
+    <link rel="alternate" hreflang="x-default" href="https://theintelligententerprisegroup.com/ai-predictive-maintenance-manufacturing.html" />
+
+    <link rel="canonical" href="https://theintelligententerprisegroup.com/zh/ai-predictive-maintenance-manufacturing.html" />
+
+
+    <link rel="stylesheet" href="/css/styles.css" />
+    <link rel="stylesheet" href="/css/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="/css/all.min.css" />
+
+    <script src="/js/lang-switcher.js" defer></script>
+
+    <script>
+        (function () {
+            if (localStorage.getItem('currentLang')) return;
+            const supported = [
+                     { code: "en" } ,
+                     { code: "fr" } ,
+                     { code: "de" } ,
+                     { code: "es" } ,
+                     { code: "pt" } ,
+                     { code: "zh" } ,
+                     { code: "ja" } ,
+                     { code: "ar" } 
+            ];
+            const defaultLang = "zh";
+            const navLangs = navigator.languages || [navigator.language || navigator.userLanguage];
+            let detected = null;
+            for (const nav of navLangs) {
+                const code = nav.toLowerCase().split('-')[0];
+                if (supported.find(s => s.code.toLowerCase() === code)) {
+                    detected = code;
+                    break;
+                }
+            }
+            const lang = detected || defaultLang;
+            localStorage.setItem('currentLang', lang);
+            document.documentElement.lang = lang;
+        })();
+    </script>
+
+    <!-- Organization structured data (JSON-LD) -->
+    <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "Organization",
+          "name": "The Intelligent Enterprise Group",
+          "url": "https://theintelligententerprisegroup.com/",
+          "logo": "https://theintelligententerprisegroup.com/images/tieg-logo.png",
+          "sameAs": []
+        }
+    </script>
+    <link rel="icon" href="/favicon.ico" />
+    <link rel="apple-touch-icon" href="/images/apple-touch-icon.png" />
+
+    
+
+</head>
+<body>
+    <header x-data="{ open: false }">
+        <div class="container header-top">
+            <div class="logo"></div>
+            <div class="theme-switch-wrapper">
+                <label class="theme-switch">
+                    <input type="checkbox" id="theme-checkbox" aria-label="Select theme"/>
+                    <span class="slider round"></span>
+                </label>
+                <span id="theme-label">浅色模式</span>
+                <span class="lang-switcher">
+                    <label for="lang-select" class="lang-label">🌐 语言：</label>
+
+                    <!-- Language switcher -->
+                    <select id="lang-select" class="lang-select">
+                        <option value="en" data-path="/">English</option>
+                        <option value="fr" data-path="/fr/">Fran&#xE7;ais</option>
+                        <option value="de" data-path="/de/">Deutsch</option>
+                        <option value="es" data-path="/es/">Espa&#xF1;ol</option>
+                        <option value="pt" data-path="/pt/">Portugu&#xEA;s</option>
+                        <option value="zh" data-path="/zh/">&#x4E2D;&#x6587;</option>
+                        <option value="ja" data-path="/ja/">&#x65E5;&#x672C;&#x8A9E;</option>
+                        <option value="ar" data-path="/ar/">&#x627;&#x644;&#x639;&#x631;&#x628;&#x64A;&#x629;</option>
+                    </select>
+
+                </span>
+            </div>
+        </div>
+        
+        <div class="container header-nav">
+            <button @click="open = !open" class="menu-toggle" aria-label="Toggle Menu">
+                <svg width="24" height="24" viewBox="0 0 24 24">
+                    <path fill="var(--nav-link-color)" d="M3 6h18v2H3V6zm0 5h18v2H3v-2zm0 5h18v2H3v-2z" />
+                </svg>
+            </button>
+
+            <nav class="main-nav" :class="{ 'open': open }">
+                <ul>
+                    <li><a href="index.html" class="">&#x9996;&#x9875;</a></li>
+                    <li><a href="about.html" class="">&#x5173;&#x4E8E;&#x6211;&#x4EEC;</a></li>
+                    <li><a href="services.html" class="">&#x670D;&#x52A1;&#x4E0E;&#x89E3;&#x51B3;&#x65B9;&#x6848;</a></li>
+                    <li><a href="case-studies.html" class="">&#x6848;&#x4F8B;&#x7814;&#x7A76;</a></li>
+                    <li><a href="resources.html" class="active">&#x8D44;&#x6E90;&#x4E0E;&#x6D1E;&#x5BDF;</a></li>
+                    <li><a href="trial.html" class="">&#x8BD5;&#x7528;</a></li>
+                    <li><a href="pricing.html" class="">&#x5B9A;&#x4EF7;</a></li>
+                    <li><a href="partners.html" class="">&#x5408;&#x4F5C;&#x4F19;&#x4F34;&#x4E0E;&#x8054;&#x76DF;</a></li>                    
+                    <li><a href="contact.html" class="">&#x8054;&#x7CFB;&#x4E0E;&#x54A8;&#x8BE2;</a></li>
+                    <li class="has-submenu"
+                        x-data="{ openSub: false }"
+                        @mouseenter="openSub = true"
+                        @mouseleave="openSub = false">
+                      <button @click="openSub = !openSub"
+                              aria-haspopup="true"
+                              :aria-expanded="openSub.toString()">
+                        &#x4FE1;&#x606F;
+                        <svg width="12" height="12" viewBox="0 0 12 12" aria-hidden="true">
+                          <path d="M3 4l3 3 3-3" fill="currentColor"/>
+                        </svg>
+                      </button>
+                      <ul class="submenu" x-show="openSub" @click.outside="openSub = false">
+                        <li><a href="careers.html" class="">&#x804C;&#x4E1A;&#x673A;&#x4F1A;</a></li>
+                        <li><a href="faqs.html" class="">&#x5E38;&#x89C1;&#x95EE;&#x9898;</a></li>
+                        <li><a href="legal.html" class="">&#x6CD5;&#x5F8B;&#x4E0E;&#x653F;&#x7B56;</a></li>
+                      </ul>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        
+<section class="hero seo-hero" style="padding: 80px 0 40px; text-align: center; background-color: var(--card-bg2);">
+    <div class="container hero-container">
+        <h1 style="font-size: 3rem; margin-bottom: 1rem;">用于预测性维护的安全本地部署 AI</h1>
+        <div class="hero-text">
+            <h3 style="font-weight: 400; opacity: 0.9; max-width: 800px; margin: 0 auto;">通过物理隔离的多智能体 AI 基础设施，预测设备故障，最大限度地减少灾难性停机，并保护您的工厂车间数据。</h3>
+        </div>
+
+                <br/>
+                <p class="lead" style="font-size: 1.15rem; font-weight: 500; color: var(--btn-bg); max-width: 800px; margin: 1.5rem auto 0 auto; line-height: 1.6;">
+                    对于制造业和能源等资产密集型行业，计划外停机不仅是不便，更是灾难性的开支。在设备故障发生前对其进行预测，可以为企业节省数百万美元的生产损失、紧急维修和供应链中断成本。然而，标准的基于云的 AI 解决方案会对运营技术 (OT) 网络构成不可接受的安全风险。我们的 OmniPredict AI 安全地部署在本地，充当多智能体团队的通用预测器。通过直接在公司防火墙后执行复杂的离线预测 AI 模型，我们赋能工业领导者实现前瞻性的卓越运营，而无需将关键基础设施暴露在公共互联网中。
+                </p>
+
+    </div>
+</section>
+
+<section class="resources">
+    <div class="container">
+
+ <h2>反应式制造维护的高昂代价</h2>  <p>从历史上看，制造业和能源行业一直依赖反应式或严格基于进度的维护策略。设备要么一直运行到损坏，导致巨大的生产瓶颈；要么根据任意的日历日期提前进行维修，浪费了宝贵的劳动力和备件。</p>  <p>制造 AI 的引入从根本上改变了这一范式。AI 预测性维护利用来自机器传感器、历史日志和环境变量的数据，准确预测组件何时会失效。然而，弥合先进数据科学与物理工厂车间之间的鸿沟带来了一个巨大的挑战：数据安全。</p>  <h2>离线预测 AI 的安全必要性</h2>  <p>现代工厂车间和能源网由 OT 网络和 SCADA 系统驱动。这些工业控制系统是网络攻击的高度敏感目标。将重型机械的实时遥测数据传输到公共云 AI 进行分析，为数据拦截和网络渗透打开了一个危险的媒介。</p>  <p>为了保护关键基础设施，预测系统必须是物理隔离（air-gapped）的。我们的平台提供真正的离线预测 AI。通过直接在您的场所托管企业级 AI 服务器（与公共网络完全断开），您的敏感遥测数据将在本地处理。这保证了您的制造 AI 在零信任环境中运行，符合 NIST CSF 和 CIS IG1 等最严格的合规框架。</p>  <h2>OmniPredict AI 介绍：通用预测器</h2>  <p>我们预测能力的核心是 OmniPredict AI，这是一种专为先进工业分析设计的、高度专业化的自主智能体。作为我们 AI 专家团队的通用预测器，OmniPredict AI 旨在摄取海量复杂的传感器数据、日志文件和运营指标。</p>  <p>与仅在机器过热时通知您的基础阈值警报不同，OmniPredict AI 结合了先进的分类和回归技术，以预测不同行业的结果。它理解振动、温度、负载能力和历史故障率之间的细微关系，提供资产健康状况的全面视图。</p>  <h2>模式检测与事件发生时间预测</h2>  <p>OmniPredict AI 不是一个通用的语言模型；它是一个工业数学引擎。它旨在检测遥测数据中人类操作员和传统软件会完全忽略的微妙、隐形的模式。它可以对复杂的运营事件进行分类，区分无害的临时异常和关键的退化序列。</p>  <p>除了简单的分类，该智能体还利用深度回归模型来预测准确的事件发生时间 (Time-to-Event) 指标。您的维护团队收到的不再是模糊的警告，而是高度具体、可操作的预测——例如预测特定的 CNC 主轴将在整整 72 小时后发生灾难性的轴承故障，并附带严重性分类以帮助确定维修计划的优先级。</p>  <h2>感知漂移的流处理管道</h2>  <p>传统机器学习模型的一个主要缺陷是“模型漂移”。随着环境变量的变化，冬季训练的模型在潮湿的夏季月份可能会变得高度不准确。在动态的制造环境中，静态模型会迅速退化。</p>  <p>我们的平台通过感知漂移的流处理管道解决了这个问题。OmniPredict AI 持续监控实时输入的数据流，并与基准训练进行对比。如果检测到基础运行环境正在发生变化（可能是由于原材料质量的变化或季节性温度波动），管道会自动识别这种漂移并相应调整其预测权重。它在不断变化的环境中保持准确，确保您的预测全年可靠。</p>  <h2>实现持续准确性的自适应再训练</h2>  <p>为了在无需连接云服务器进行更新的情况下保持长期准确性，OmniPredict AI 利用了自适应再训练技术。随着您的本地服务器从特定工厂车间积累更多的历史数据，AI 会自主优化其本地化模型。</p>  <p>这种自适应再训练完全在离线状态下进行。AI 从您的特定机器、特定操作员和特定维护日志中学习。随着时间的推移，OmniPredict AI 将成为专门为您设施独特的运营足迹量身定制的高度专业化专家。</p>  <h2>制造业和 IT 运营的可操作预测</h2>  <p>AI 预测性维护的终极目标是弥合 OT 和 IT 之间的鸿沟。我们的安全企业服务器具有强大的 API，允许 OmniPredict AI 将其可操作的预测直接推送到您现有的 ERP、CMMS 或 IT 服务管理平台。</p>  <p>当预测到故障时，系统可以自动生成工单，检查本地备件库存，并通过您的内部网络提醒车间主管。通过为制造业和 IT 运营提供可操作的预测，我们的平台将复杂的数据科学转化为无缝、安全且自动化的运营工作流。</p>             <div class="parent-hub-link" style="background-color: var(--card-bg2); padding: 1rem; border-radius: 6px; margin-bottom: 2rem;">
+                <span style="font-size: 0.9rem; color: var(--text-color);">我们的企业服务器和基础设施指南的一部分：</span>
+                <a href="/secure-on-premise-ai-server.html" style="font-weight: bold; margin-left: 0.5rem; color: var(--btn-bg);">
+                    安全本地部署 AI 服务器与基础设施
+                </a>
+            </div>
+            <div class="callout" style="background-color: rgba(161, 144, 217, 0.1); border-left: 4px solid var(--btn-bg); padding: 1.5rem; margin: 2rem 0; border-radius: 4px;">
+                <strong style="display: block; font-size: 1.2rem; margin-bottom: 0.5rem; color: var(--text-color);">
+                    安全地消除计划外停机
+                </strong>
+                <p style="margin-bottom: 1rem;">在最大限度提高运营效率的同时保护您的关键基础设施。我们提供为期 6 个月的核心软件全面试用，仅需支付 39 欧元的单次管理费。立即部署您的通用预测器。<br><br><span style='font-size: 1.1rem;'>想先看看 AI 引擎的实际运作吗？<a href='/demo.html' style='color: var(--btn-bg); font-weight: bold; text-decoration: underline;'>点击此处观看我们的现场演示。</a></span></p>
+                <a href="/trial.html" class="btn">开始免费试用</a>
+            </div>
+         
+    </div>
+</section>
+
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&#xA9; 2025 &#x667A;&#x80FD;&#x4F01;&#x4E1A;&#x96C6;&#x56E2;&#x3002;&#x4FDD;&#x7559;&#x6240;&#x6709;&#x6743;&#x5229;&#x3002;</p>
+        </div>
+    </footer>
+
+    <script src="/js/swiper-bundle.min.js"></script>
+    <script src="/js/cdn.min.js" defer></script>
+    <script src="/js/gsap.min.js"></script>
+    <script src="/js/DrawSVGPlugin.min.js"></script>
+
+    <script type="module" src="/js/themeToggle.js"></script>
+    <script type="module">
+        import { toggleTheme, getCurrentTheme } from '/js/themeToggle.js';
+        const checkbox = document.getElementById('theme-checkbox');
+        const themeLabel = document.getElementById('theme-label');
+
+        if (getCurrentTheme() === 'dark') {
+            checkbox.checked = true;
+            themeLabel.textContent = '深色模式';
+        } else {
+            themeLabel.textContent = '浅色模式';
+        }
+
+        checkbox.addEventListener('change', () => {
+            toggleTheme();
+            themeLabel.textContent = checkbox.checked ? '深色模式' : '浅色模式';
+        });
+    </script>
+
+    <button id="back-to-top" aria-label="Back to Top">&#x9876;&#x90E8;</button>
+
+    
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            if (window.innerWidth < 768) return;
+
+            const intro = document.querySelector("#right-intro");
+            if (!intro) return;
+
+            const tl = gsap.timeline();
+            let isClosing = false; // Flag to prevent double-triggering the exit
+
+            // --- 1. DEFINE THE EXIT FUNCTION ---
+            const closeIntro = () => {
+                if (isClosing) return;
+                isClosing = true;
+
+                // Kill the main timeline so it doesn't keep running in the background
+                tl.kill();
+
+                // Create a dedicated exit timeline for a fast, responsive feel
+                const exitTl = gsap.timeline();
+
+                /* ROBOT FAST REVEAL & RUN */
+                exitTl.to(".robot-runner", { opacity: 1, duration: 0.2 });
+                exitTl.to(".robot-runner", {
+                    x: 400,
+                    duration: 0.8,
+                    ease: "power2.in"
+                }, "-=0.1");
+
+                /* PANEL SLIDE-OUT */
+                exitTl.to("#right-intro", {
+                    duration: 0.8,
+                    transform: "translateX(100%)",
+                    ease: "power3.inOut",
+                    onComplete: () => {
+                        intro.style.display = "none";
+                        // Remove scroll listener once closed
+                        window.removeEventListener("scroll", handleScroll);
+                    }
+                }, "-=0.6");
+            };
+
+            // --- 2. THE SCROLL LISTENER ---
+            const handleScroll = () => {
+                if (window.scrollY > 20) { // Trigger after 20px of scrolling
+                    closeIntro();
+                }
+            };
+            window.addEventListener("scroll", handleScroll);
+
+            // --- 3. ORIGINAL ANIMATION SEQUENCE ---
+            /* PANEL SLIDE-IN */
+            tl.to("#right-intro", {
+                duration: 0.8,
+                transform: "translateX(0%)",
+                ease: "power3.out"
+            });
+
+            /* PARTICLES */
+            for (let i = 0; i < 20; i++) {
+                const p = document.createElement("div");
+                p.className = "particle";
+                p.style.position = "absolute";
+                p.style.width = "4px";
+                p.style.height = "4px";
+                p.style.background = "rgba(0,174,239,0.35)";
+                p.style.borderRadius = "50%";
+                p.style.left = Math.random() * 100 + "%";
+                p.style.top = "100%";
+                document.querySelector(".intro-particles").appendChild(p);
+
+                gsap.to(p, {
+                    y: -window.innerHeight - 100,
+                    duration: 4 + Math.random() * 4,
+                    delay: Math.random() * 2,
+                    repeat: -1,
+                    ease: "none"
+                });
+            }
+
+            /* SIGNAL LINE & PULSE */
+            tl.to(".signal-main", { height: "60%", duration: 0.8, ease: "power2.out" })
+                .to(".loading-dots", { opacity: 1, duration: 0.3 })
+                .to(".pulse", { opacity: 1, scale: 1.4, duration: 0.3, stagger: 0.15 })
+                .to(".pulse", { scale: 0.6, opacity: 0.4, duration: 0.3, stagger: 0.15 })
+                .to(".loading-dots", { opacity: 0, duration: 0.3 });
+
+            /* TEXT REVEAL */
+            tl.to(".t1", { opacity: 1, x: 0, duration: 0.6 })
+                .to(".t2", { opacity: 1, x: 0, duration: 0.6 })
+                .to(".t3", { opacity: 1, x: 0, duration: 0.6 })
+                .to(".t4", { opacity: 1, x: 0, duration: 0.6 });
+
+            /* ROBOT ARM/LEG LOOPS (Independent of timeline) */
+            const robotParts = [
+                { el: ".arm-left", r: 30 }, { el: ".arm-right", r: -30 },
+                { el: ".leg-left", r: -30 }, { el: ".leg-right", r: 30 }
+            ];
+            robotParts.forEach(part => {
+                gsap.to(part.el, { rotation: part.r, yoyo: true, repeat: -1, duration: 0.2, ease: "power1.inOut" });
+            });
+
+            // --- 4. AUTO-EXIT (If user doesn't scroll) ---
+            tl.to(".robot-runner", { opacity: 1, duration: 0.3, delay: 5 });
+            tl.to(".robot-runner", { x: 400, duration: 1.2, ease: "power2.inOut" }, "-=0.2");
+            tl.to("#right-intro", {
+                duration: 1,
+                transform: "translateX(100%)",
+                ease: "power3.inOut",
+                onComplete: () => {
+                    if (!isClosing) { // Only hide if scroll didn't already trigger it
+                        intro.style.display = "none";
+                        window.removeEventListener("scroll", handleScroll);
+                    }
+                }
+            }, "-=0.6");
+        });
+    </script>
+</body>
+</html>

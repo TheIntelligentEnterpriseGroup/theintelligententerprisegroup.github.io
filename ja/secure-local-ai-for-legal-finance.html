@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="ja" dir="ltr">
+<head>
+    <meta name="robots" content="index, follow" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <meta name="description" content='&#x6CD5;&#x52D9;&#x304A;&#x3088;&#x3073;&#x91D1;&#x878D;&#x306E;&#x30EF;&#x30FC;&#x30AF;&#x30D5;&#x30ED;&#x30FC;&#x5411;&#x3051;&#x306B;&#x30AB;&#x30B9;&#x30BF;&#x30DE;&#x30A4;&#x30BA;&#x3055;&#x308C;&#x305F;&#x30D7;&#x30E9;&#x30A4;&#x30D9;&#x30FC;&#x30C8;AI&#x30BD;&#x30D5;&#x30C8;&#x30A6;&#x30A7;&#x30A2;&#x3002;&#x6A5F;&#x5BC6;&#x6587;&#x66F8;&#x3001;&#x5951;&#x7D04;&#x66F8;&#x3001;&#x8CA1;&#x52D9;&#x30C7;&#x30FC;&#x30BF;&#x3092;&#x30AF;&#x30E9;&#x30A6;&#x30C9;&#x306B;&#x3055;&#x3089;&#x3059;&#x3053;&#x3068;&#x306A;&#x304F;&#x30ED;&#x30FC;&#x30AB;&#x30EB;&#x3067;&#x51E6;&#x7406;&#x3057;&#x307E;&#x3059;&#x3002;' />
+    <title>&#x6CD5;&#x52D9;&#x30FB;&#x91D1;&#x878D;&#x5C02;&#x9580;&#x5BB6;&#x306E;&#x305F;&#x3081;&#x306E;&#x30BB;&#x30AD;&#x30E5;&#x30A2;&#x306A;&#x30ED;&#x30FC;&#x30AB;&#x30EB;AI&#x30BD;&#x30D5;&#x30C8;&#x30A6;&#x30A7;&#x30A2;</title>
+
+    <style>
+        html { background-color: #3B3A47; }
+    </style>
+    <script>
+        (function () {
+            const key = 'preferredTheme';
+            const stored = localStorage.getItem(key);
+            //const systemDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+            const theme = stored || 'dark'/*(systemDark ? 'dark' : 'light')*/;
+            if (theme === 'dark') {
+                document.documentElement.classList.add('dark-mode');
+            } else {
+                document.documentElement.classList.remove('dark-mode');
+            }
+        })();
+    </script>
+
+
+        <link rel="alternate" hreflang="en" href="https://theintelligententerprisegroup.com/secure-local-ai-for-legal-finance.html" />
+        <link rel="alternate" hreflang="fr" href="https://theintelligententerprisegroup.com/fr/secure-local-ai-for-legal-finance.html" />
+        <link rel="alternate" hreflang="de" href="https://theintelligententerprisegroup.com/de/secure-local-ai-for-legal-finance.html" />
+        <link rel="alternate" hreflang="es" href="https://theintelligententerprisegroup.com/es/secure-local-ai-for-legal-finance.html" />
+        <link rel="alternate" hreflang="pt" href="https://theintelligententerprisegroup.com/pt/secure-local-ai-for-legal-finance.html" />
+        <link rel="alternate" hreflang="zh" href="https://theintelligententerprisegroup.com/zh/secure-local-ai-for-legal-finance.html" />
+        <link rel="alternate" hreflang="ja" href="https://theintelligententerprisegroup.com/ja/secure-local-ai-for-legal-finance.html" />
+        <link rel="alternate" hreflang="ar" href="https://theintelligententerprisegroup.com/ar/secure-local-ai-for-legal-finance.html" />
+
+
+    <link rel="alternate" hreflang="x-default" href="https://theintelligententerprisegroup.com/secure-local-ai-for-legal-finance.html" />
+
+    <link rel="canonical" href="https://theintelligententerprisegroup.com/ja/secure-local-ai-for-legal-finance.html" />
+
+
+    <link rel="stylesheet" href="/css/styles.css" />
+    <link rel="stylesheet" href="/css/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="/css/all.min.css" />
+
+    <script src="/js/lang-switcher.js" defer></script>
+
+    <script>
+        (function () {
+            if (localStorage.getItem('currentLang')) return;
+            const supported = [
+                     { code: "en" } ,
+                     { code: "fr" } ,
+                     { code: "de" } ,
+                     { code: "es" } ,
+                     { code: "pt" } ,
+                     { code: "zh" } ,
+                     { code: "ja" } ,
+                     { code: "ar" } 
+            ];
+            const defaultLang = "ja";
+            const navLangs = navigator.languages || [navigator.language || navigator.userLanguage];
+            let detected = null;
+            for (const nav of navLangs) {
+                const code = nav.toLowerCase().split('-')[0];
+                if (supported.find(s => s.code.toLowerCase() === code)) {
+                    detected = code;
+                    break;
+                }
+            }
+            const lang = detected || defaultLang;
+            localStorage.setItem('currentLang', lang);
+            document.documentElement.lang = lang;
+        })();
+    </script>
+
+    <!-- Organization structured data (JSON-LD) -->
+    <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "Organization",
+          "name": "The Intelligent Enterprise Group",
+          "url": "https://theintelligententerprisegroup.com/",
+          "logo": "https://theintelligententerprisegroup.com/images/tieg-logo.png",
+          "sameAs": []
+        }
+    </script>
+    <link rel="icon" href="/favicon.ico" />
+    <link rel="apple-touch-icon" href="/images/apple-touch-icon.png" />
+
+    
+
+</head>
+<body>
+    <header x-data="{ open: false }">
+        <div class="container header-top">
+            <div class="logo"></div>
+            <div class="theme-switch-wrapper">
+                <label class="theme-switch">
+                    <input type="checkbox" id="theme-checkbox" aria-label="Select theme"/>
+                    <span class="slider round"></span>
+                </label>
+                <span id="theme-label">ライトモード</span>
+                <span class="lang-switcher">
+                    <label for="lang-select" class="lang-label">🌐 言語:</label>
+
+                    <!-- Language switcher -->
+                    <select id="lang-select" class="lang-select">
+                        <option value="en" data-path="/">English</option>
+                        <option value="fr" data-path="/fr/">Fran&#xE7;ais</option>
+                        <option value="de" data-path="/de/">Deutsch</option>
+                        <option value="es" data-path="/es/">Espa&#xF1;ol</option>
+                        <option value="pt" data-path="/pt/">Portugu&#xEA;s</option>
+                        <option value="zh" data-path="/zh/">&#x4E2D;&#x6587;</option>
+                        <option value="ja" data-path="/ja/">&#x65E5;&#x672C;&#x8A9E;</option>
+                        <option value="ar" data-path="/ar/">&#x627;&#x644;&#x639;&#x631;&#x628;&#x64A;&#x629;</option>
+                    </select>
+
+                </span>
+            </div>
+        </div>
+        
+        <div class="container header-nav">
+            <button @click="open = !open" class="menu-toggle" aria-label="Toggle Menu">
+                <svg width="24" height="24" viewBox="0 0 24 24">
+                    <path fill="var(--nav-link-color)" d="M3 6h18v2H3V6zm0 5h18v2H3v-2zm0 5h18v2H3v-2z" />
+                </svg>
+            </button>
+
+            <nav class="main-nav" :class="{ 'open': open }">
+                <ul>
+                    <li><a href="index.html" class="">&#x30DB;&#x30FC;&#x30E0;</a></li>
+                    <li><a href="about.html" class="">&#x79C1;&#x305F;&#x3061;&#x306B;&#x3064;&#x3044;&#x3066;</a></li>
+                    <li><a href="services.html" class="">&#x30B5;&#x30FC;&#x30D3;&#x30B9;&#x3068;&#x30BD;&#x30EA;&#x30E5;&#x30FC;&#x30B7;&#x30E7;&#x30F3;</a></li>
+                    <li><a href="case-studies.html" class="">&#x4E8B;&#x4F8B;&#x7814;&#x7A76;</a></li>
+                    <li><a href="resources.html" class="active">&#x30EA;&#x30BD;&#x30FC;&#x30B9;&#x3068;&#x30A4;&#x30F3;&#x30B5;&#x30A4;&#x30C8;</a></li>
+                    <li><a href="trial.html" class="">&#x30C8;&#x30E9;&#x30A4;&#x30A2;&#x30EB;</a></li>
+                    <li><a href="pricing.html" class="">&#x6599;&#x91D1;</a></li>
+                    <li><a href="partners.html" class="">&#x30D1;&#x30FC;&#x30C8;&#x30CA;&#x30FC;&#x3068;&#x30A2;&#x30E9;&#x30A4;&#x30A2;&#x30F3;&#x30B9;</a></li>                    
+                    <li><a href="contact.html" class="">&#x304A;&#x554F;&#x3044;&#x5408;&#x308F;&#x305B;&#x30FB;&#x76F8;&#x8AC7;</a></li>
+                    <li class="has-submenu"
+                        x-data="{ openSub: false }"
+                        @mouseenter="openSub = true"
+                        @mouseleave="openSub = false">
+                      <button @click="openSub = !openSub"
+                              aria-haspopup="true"
+                              :aria-expanded="openSub.toString()">
+                        &#x60C5;&#x5831;
+                        <svg width="12" height="12" viewBox="0 0 12 12" aria-hidden="true">
+                          <path d="M3 4l3 3 3-3" fill="currentColor"/>
+                        </svg>
+                      </button>
+                      <ul class="submenu" x-show="openSub" @click.outside="openSub = false">
+                        <li><a href="careers.html" class="">&#x63A1;&#x7528;&#x60C5;&#x5831;</a></li>
+                        <li><a href="faqs.html" class="">&#x3088;&#x304F;&#x3042;&#x308B;&#x8CEA;&#x554F;</a></li>
+                        <li><a href="legal.html" class="">&#x6CD5;&#x52D9;&#x3068;&#x30DD;&#x30EA;&#x30B7;&#x30FC;</a></li>
+                      </ul>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        
+<section class="hero seo-hero" style="padding: 80px 0 40px; text-align: center; background-color: var(--card-bg2);">
+    <div class="container hero-container">
+        <h1 style="font-size: 3rem; margin-bottom: 1rem;">法務・金融専門家のためのセキュアなローカルAIソフトウェア</h1>
+        <div class="hero-text">
+            <h3 style="font-weight: 400; opacity: 0.9; max-width: 800px; margin: 0 auto;">機密文書をクラウドにさらすことなく、専門家レベルの分析、執筆、意思決定支援を提供するプライベートAIソフトウェアソリューションを導入しましょう。</h3>
+        </div>
+
+                <br/>
+                <p class="lead" style="font-size: 1.15rem; font-weight: 500; color: var(--btn-bg); max-width: 800px; margin: 1.5rem auto 0 auto; line-height: 1.6;">
+                    機密性の高い顧客データを扱う専門家にとって、厳格な機密保持は譲れません。複雑な法的契約の分析、M&A財務の処理、特権的な通信の起草など、独自のドキュメントをパブリッククラウドAIモデルに送信することは、受け入れがたいリスクを伴います。当社のプラットフォームは、すべての処理をユーザー自身のハードウェア上で直接行う、安全でローカルにホストされたマルチエージェントAIチームを提供し、絶対的なデータ主権と規制遵守を保証します。
+                </p>
+
+    </div>
+</section>
+
+<section class="resources">
+    <div class="container">
+
+ <h2>コンプライアンスの課題：なぜパブリッククラウドAIがリスクになるのか</h2>  <p>法務および金融セクターでは、AIの導入はコンプライアンスの枠組みによって厳しく制限されてきました。標準的なSaaS AIツールは、ユーザーのプロンプトやアップロードされたドキュメントを外部のサードパーティサーバーで処理します。法律事務所にとって、これは弁護士とクライアントの守秘義務を損なうものです。金融機関にとって、これは厳格なデータ居住法、SEC規制、およびGDPRガイドラインに違反します。</p>  <p>さらに、多くのクラウドベースの大規模言語モデル（LLM）は、将来の反復学習のためにユーザー入力を利用します。独自の企業データや保護対象保健情報（PHI）がパブリックAIの出力に意図せず現れるリスクは、壊滅的な責任問題となります。AIの力を安全に活用するために、現代の専門家はゼロトラストモデルに基づいたアーキテクチャを必要としています。</p>  <h2>真のプライベートAIソフトウェア：サーバー依存ゼロ</h2>  <p>当社のプラットフォームは、まさにこの問題を解決するために設計されました。真のプライベートAIソフトウェアを提供することで、ローカルワークステーションやエンタープライズハードウェアに完全にインストールして実行できる、強力なマルチエージェントAIシステムを提供します。サーバーへの依存は一切なく、外部へのテレメトリ送信もありません。</p>  <p>計算処理が自身のマシン上で行われるため、データが物理的な管理下から離れることはありません。厳格にエアギャップされた（外部ネットワークから隔離された）ネットワーク内でも、高度なAI機能を安全に展開できます。これにより、法務および金融の専門家は、ワークフローがパブリックインターネットから物理的に隔離されていることを確信しながら、深い機密調査を安心して行うことができます。</p>  <h2>マルチフォーマット学習：ローカルで全ケースファイルを分析</h2>  <p>法務案件や財務監査が単一のテキストファイルに収まることは稀です。専門家は、多種多様なドキュメントタイプにわたる情報を統合しなければなりません。当社のローカルAIデスクトップアプリケーションは、高度なマルチフォーマット学習機能を備えており、既存のファイルから直接コンテキストをシームレスに取り込むことができます。</p>  <p>形式を変換したりオンラインの抽出ツールに頼ったりすることなく、AIを安全なローカルフォルダに指定するだけです。システムは、Wordドキュメント、Excelスプレッドシート、PDF、音声録音、画像をローカルで安全に読み取り、インデックスを作成します。その後、ローカライズされたデータベース全体を照会し、PDFの契約書とスキャンされた補遺の画像をクロスリファレンスするようにAIに依頼することができます。これらすべてが、自身のハードウェア上で即座に、かつ安全に実行されます。</p>  <h2>データアナリストAIによる高度な洞察</h2>  <p>財務モデリング、リスク評価、市場分析には、何千行ものデータの解析が必要です。異常値やトレンドを手動で探すのは非常に時間がかかり、ヒューマンエラーも発生しやすくなります。</p>  <p>当社のプラットフォームには、専用の組み込みデータアナリストAIが含まれています。この自律型エージェントは、高度な統計手法を使用して意味のあるトレンドを発見するために特別に設計されています。ローカルのCSVファイルやExcelスプレッドシートをアップロードし、コスト差異の特定、潜在的なコンプライアンス異常のフラグ立て、四半期収益トレンドの予測などをAIに指示できます。データアナリストAIは数学的処理をローカルで行い、財務台帳を外部APIにさらすことなく、非常に正確で定量的な洞察を提供します。</p>  <h2>ビジネスレポートライターAI：データからナラティブへ</h2>  <p>財務トレンドを特定することは戦いの半分に過ぎません。その洞察をステークホルダー、陪審員、または取締役会に伝えることも同様に重要です。生の複雑なデータを明確で説得力のあるナラティブ（物語）に変換することは、文脈の喪失により標準的なAIがしばしば苦戦する部分です。</p>  <p>このギャップを埋めるために、当社のマルチエージェントシステムはビジネスレポートライターAIを備えています。この専門エージェントはデータアナリストAIと連携して動作します。定量分析が完了すると、ビジネスレポートライターAIがエグゼクティブサマリー、包括的な監査レポート、または取締役会向けのプレゼンテーションを作成します。密度の高い統計結果を、よりスマートな意思決定のための明確で実行可能な洞察に翻訳し、特定の企業ガイドラインに合わせてトーンを調整します。</p>  <h2>法務専門家向けAI：契約書のレビューと翻訳</h2>  <p>法律実務家にとって、正確さがすべてです。たった一つの曖昧な条項が、事件の結末を変えてしまうこともあります。当社の法務専門家向けAIは、不屈のパラリーガルのように機能し、何百ページもの判例法や契約条件を瞬時にレビューして、矛盾、欠落している条項、または潜在的な法的責任をフラグ立てします。</p>  <p>さらに、国境を越えた訴訟や国際金融では、外国の文書を迅速に分析することが頻繁に求められます。当社のプライベートAIソフトウェアは、専門家レベルのオフライン翻訳機能を提供します。機密性の高い外国の契約書や音声の書き起こしをローカルで翻訳でき、原文の法的なニュアンスを正確に維持しながら、国際的なデータプライバシー法を厳格に尊重することを保証します。</p>  <h2>金融向けセキュアローカルAI：監査対応および検証可能</h2>  <p>金融セクターでは、あらゆる決定に正当性があり、追跡可能でなければなりません。標準的なAIチャットボットは数字を「幻覚（ハルシネーション）」することで悪名高く、これは監査環境では受け入れられません。</p>  <p>当社の金融向けセキュアローカルAIは、専用エージェントとローカルドキュメントに紐付けられた検索拡張生成（RAG）を利用しているため、検証可能な出力を提供します。AIが財務サマリーや法的議論を生成する際、オフライン環境で提供された事実データのみに基づいて行われるため、幻覚を大幅に削減し、監査に対応した洞察のトレースを提供します。</p>             <div class="parent-hub-link" style="background-color: var(--card-bg2); padding: 1rem; border-radius: 6px; margin-bottom: 2rem;">
+                <span style="font-size: 0.9rem; color: var(--text-color);">以下の包括的ガイドの一部です：</span>
+                <a href="/offline-ai-desktop-app.html" style="font-weight: bold; margin-left: 0.5rem; color: var(--btn-bg);">
+                    セキュアなオフラインAIデスクトップアプリケーション
+                </a>
+            </div>
+            <div class="callout" style="background-color: rgba(161, 144, 217, 0.1); border-left: 4px solid var(--btn-bg); padding: 1.5rem; margin: 2rem 0; border-radius: 4px;">
+                <strong style="display: block; font-size: 1.2rem; margin-bottom: 0.5rem; color: var(--text-color);">
+                    妥協のないプライバシーを体験
+                </strong>
+                <p style="margin-bottom: 1rem;">ワークフローを保護する準備はできていますか？ デスクトップ版の6ヶ月トライアルを少額の事務手数料のみで開始し、今すぐ独自のローカルAIチームを導入しましょう。<br><br><span style='font-size: 1.1rem;'>まずは実際の動作を確認したいですか？ <a href='/demo.html' style='color: var(--btn-bg); font-weight: bold; text-decoration: underline;'>ライブデモはこちらからご覧いただけます。</a></span></p>
+                <a href="/trial.html" class="btn">無料トライアルを開始</a>
+            </div>
+         
+    </div>
+</section>
+
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&#xA9; 2025 The Intelligent Enterprise Group. &#x7121;&#x65AD;&#x8EE2;&#x8F09;&#x3092;&#x7981;&#x3058;&#x307E;&#x3059;&#x3002;</p>
+        </div>
+    </footer>
+
+    <script src="/js/swiper-bundle.min.js"></script>
+    <script src="/js/cdn.min.js" defer></script>
+    <script src="/js/gsap.min.js"></script>
+    <script src="/js/DrawSVGPlugin.min.js"></script>
+
+    <script type="module" src="/js/themeToggle.js"></script>
+    <script type="module">
+        import { toggleTheme, getCurrentTheme } from '/js/themeToggle.js';
+        const checkbox = document.getElementById('theme-checkbox');
+        const themeLabel = document.getElementById('theme-label');
+
+        if (getCurrentTheme() === 'dark') {
+            checkbox.checked = true;
+            themeLabel.textContent = 'ダークモード';
+        } else {
+            themeLabel.textContent = 'ライトモード';
+        }
+
+        checkbox.addEventListener('change', () => {
+            toggleTheme();
+            themeLabel.textContent = checkbox.checked ? 'ダークモード' : 'ライトモード';
+        });
+    </script>
+
+    <button id="back-to-top" aria-label="Back to Top">&#x30C8;&#x30C3;&#x30D7;</button>
+
+    
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            if (window.innerWidth < 768) return;
+
+            const intro = document.querySelector("#right-intro");
+            if (!intro) return;
+
+            const tl = gsap.timeline();
+            let isClosing = false; // Flag to prevent double-triggering the exit
+
+            // --- 1. DEFINE THE EXIT FUNCTION ---
+            const closeIntro = () => {
+                if (isClosing) return;
+                isClosing = true;
+
+                // Kill the main timeline so it doesn't keep running in the background
+                tl.kill();
+
+                // Create a dedicated exit timeline for a fast, responsive feel
+                const exitTl = gsap.timeline();
+
+                /* ROBOT FAST REVEAL & RUN */
+                exitTl.to(".robot-runner", { opacity: 1, duration: 0.2 });
+                exitTl.to(".robot-runner", {
+                    x: 400,
+                    duration: 0.8,
+                    ease: "power2.in"
+                }, "-=0.1");
+
+                /* PANEL SLIDE-OUT */
+                exitTl.to("#right-intro", {
+                    duration: 0.8,
+                    transform: "translateX(100%)",
+                    ease: "power3.inOut",
+                    onComplete: () => {
+                        intro.style.display = "none";
+                        // Remove scroll listener once closed
+                        window.removeEventListener("scroll", handleScroll);
+                    }
+                }, "-=0.6");
+            };
+
+            // --- 2. THE SCROLL LISTENER ---
+            const handleScroll = () => {
+                if (window.scrollY > 20) { // Trigger after 20px of scrolling
+                    closeIntro();
+                }
+            };
+            window.addEventListener("scroll", handleScroll);
+
+            // --- 3. ORIGINAL ANIMATION SEQUENCE ---
+            /* PANEL SLIDE-IN */
+            tl.to("#right-intro", {
+                duration: 0.8,
+                transform: "translateX(0%)",
+                ease: "power3.out"
+            });
+
+            /* PARTICLES */
+            for (let i = 0; i < 20; i++) {
+                const p = document.createElement("div");
+                p.className = "particle";
+                p.style.position = "absolute";
+                p.style.width = "4px";
+                p.style.height = "4px";
+                p.style.background = "rgba(0,174,239,0.35)";
+                p.style.borderRadius = "50%";
+                p.style.left = Math.random() * 100 + "%";
+                p.style.top = "100%";
+                document.querySelector(".intro-particles").appendChild(p);
+
+                gsap.to(p, {
+                    y: -window.innerHeight - 100,
+                    duration: 4 + Math.random() * 4,
+                    delay: Math.random() * 2,
+                    repeat: -1,
+                    ease: "none"
+                });
+            }
+
+            /* SIGNAL LINE & PULSE */
+            tl.to(".signal-main", { height: "60%", duration: 0.8, ease: "power2.out" })
+                .to(".loading-dots", { opacity: 1, duration: 0.3 })
+                .to(".pulse", { opacity: 1, scale: 1.4, duration: 0.3, stagger: 0.15 })
+                .to(".pulse", { scale: 0.6, opacity: 0.4, duration: 0.3, stagger: 0.15 })
+                .to(".loading-dots", { opacity: 0, duration: 0.3 });
+
+            /* TEXT REVEAL */
+            tl.to(".t1", { opacity: 1, x: 0, duration: 0.6 })
+                .to(".t2", { opacity: 1, x: 0, duration: 0.6 })
+                .to(".t3", { opacity: 1, x: 0, duration: 0.6 })
+                .to(".t4", { opacity: 1, x: 0, duration: 0.6 });
+
+            /* ROBOT ARM/LEG LOOPS (Independent of timeline) */
+            const robotParts = [
+                { el: ".arm-left", r: 30 }, { el: ".arm-right", r: -30 },
+                { el: ".leg-left", r: -30 }, { el: ".leg-right", r: 30 }
+            ];
+            robotParts.forEach(part => {
+                gsap.to(part.el, { rotation: part.r, yoyo: true, repeat: -1, duration: 0.2, ease: "power1.inOut" });
+            });
+
+            // --- 4. AUTO-EXIT (If user doesn't scroll) ---
+            tl.to(".robot-runner", { opacity: 1, duration: 0.3, delay: 5 });
+            tl.to(".robot-runner", { x: 400, duration: 1.2, ease: "power2.inOut" }, "-=0.2");
+            tl.to("#right-intro", {
+                duration: 1,
+                transform: "translateX(100%)",
+                ease: "power3.inOut",
+                onComplete: () => {
+                    if (!isClosing) { // Only hide if scroll didn't already trigger it
+                        intro.style.display = "none";
+                        window.removeEventListener("scroll", handleScroll);
+                    }
+                }
+            }, "-=0.6");
+        });
+    </script>
+</body>
+</html>
