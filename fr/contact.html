@@ -136,8 +136,6 @@
                     <li><a href="services.html" class="">Services &amp; Solutions</a></li>
                     <li><a href="case-studies.html" class="">&#xC9;tudes de cas</a></li>
                     <li><a href="resources.html" class="">Ressources &amp; Analyses</a></li>
-                    <li><a href="trial.html" class="">Essai</a></li>
-                    <li><a href="pricing.html" class="">Tarifs</a></li>
                     <li><a href="partners.html" class="">Partenaires &amp; Alliances</a></li>                    
                     <li><a href="contact.html" class="active">Contact &amp; Consultation</a></li>
                     <li class="has-submenu"
@@ -195,8 +193,6 @@
                     <option value="">-- Veuillez choisir une option --</option>
                             <option value="general">Demande g&#xE9;n&#xE9;rale</option>
                             <option value="sales">Ventes &amp; Solutions</option>
-                            <option value="trial">Demande de licence d&#x2019;essai</option>
-                            <option value="students">Demande de licence &#xC9;tudiants &amp; Enseignants</option>
                             <option value="billing">Facturation &amp; Comptes</option>
                             <option value="legal">Juridique &amp; Conformit&#xE9;</option>
                             <option value="careers">Carri&#xE8;res / Candidatures</option>
@@ -204,19 +200,14 @@
                             <option value="support">Support technique</option>
                 </select>
 
-                <div id="extraFields" style="display:none; margin-top:1rem;">
+                <div id="companyFields" style="margin-top:1rem;">
                     <label for="vat">Num&#xE9;ro de TVA</label>
                     <input type="text" id="vat" name="vat" placeholder="Indiquez votre num&#xE9;ro de TVA si vous en avez un" />
 
                     <label for="address">Adresse postale</label>
                     <textarea id="address" name="address" placeholder="Votre adresse postale"></textarea>
 
-                    <div id="schoolField" style="display:none;">
-                        <label for="school">Nom de l&#x2019;&#xE9;cole / universit&#xE9;</label>
-                        <input type="text" id="school" name="school" placeholder="Indiquez le nom de votre &#xE9;cole ou universit&#xE9;" />
-                    </div>
-
-                    <p class="form-hint">Ces champs sont requis par la loi pour une <strong>licence d’essai</strong> ou une <strong>licence Étudiants &amp; Enseignants</strong>.</p>
+                    <p class="form-hint">Veuillez fournir les détails de votre entreprise pour nous aider à mieux comprendre votre contexte commercial et accélérer notre consultation.</p>
                 </div>
 
                 <label for="subject">Sujet</label>
@@ -251,14 +242,13 @@
                 const message = document.getElementById("message").value.trim();
                 const vat = document.getElementById("vat")?.value.trim() || "";
                 const address = document.getElementById("address")?.value.trim() || "";
-                const school = document.getElementById("school")?.value.trim() || "";
+
                 const bodyLines = [
                     `Name: ${name}`,
                     `Email: ${email}`,
                     `Enquiry Type: ${enquiryType}`,
                     vat ? `VAT: ${vat}` : "",
                     address ? `Address: ${address}` : "",
-                    school ? `School: ${school}` : "",
                     "",
                     "Message:",
                     message
@@ -288,7 +278,7 @@
     </div>
 </section>
 
-<section class="trial-steps">
+<section class="support-steps">
     <div class="container">
         <h2>Formulaire de demande de support</h2>
         <em>Remarque : le formulaire de demande de support est r&#xE9;serv&#xE9; aux utilisateurs disposant d&#x27;une licence.</em>
@@ -465,18 +455,8 @@
                         <h4>Ressources &amp; Support</h4>
                         <ul>
                                 <li>
-                                    <a href="trial.html">
-                                        Essai Gratuit
-                                    </a>
-                                </li>
-                                <li>
                                     <a href="demo.html">
                                         D&#xE9;mo en Direct
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="pricing.html">
-                                        Tarifs
                                     </a>
                                 </li>
                                 <li>
@@ -487,11 +467,6 @@
                                 <li>
                                     <a href="resources.html">
                                         Ressources &amp; Insights
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="minsystem.html">
-                                        Configuration Requise
                                     </a>
                                 </li>
                                 <li>
@@ -569,26 +544,6 @@
         };
     </script>
 
-    <script>
-        const enquiryType = document.getElementById("enquiryType");
-        const extraFields = document.getElementById("extraFields");
-        const schoolField = document.getElementById("schoolField");
-
-        function toggleExtraFields() {
-            if (enquiryType.value === "trial") {
-                extraFields.style.display = "block";
-                schoolField.style.display = "none";
-            } else if (enquiryType.value === "students") {
-                extraFields.style.display = "block";
-                schoolField.style.display = "block";
-            } else {
-                extraFields.style.display = "none";
-                schoolField.style.display = "none";
-            }
-        }
-        enquiryType.addEventListener("change", toggleExtraFields);
-       
-    </script>
 
 
     <script>

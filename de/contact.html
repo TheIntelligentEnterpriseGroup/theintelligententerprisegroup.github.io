@@ -136,8 +136,6 @@
                     <li><a href="services.html" class="">Dienstleistungen &amp; L&#xF6;sungen</a></li>
                     <li><a href="case-studies.html" class="">Fallstudien</a></li>
                     <li><a href="resources.html" class="">Ressourcen &amp; Einblicke</a></li>
-                    <li><a href="trial.html" class="">Testversion</a></li>
-                    <li><a href="pricing.html" class="">Preise</a></li>
                     <li><a href="partners.html" class="">Partner &amp; Allianzen</a></li>                    
                     <li><a href="contact.html" class="active">Kontakt &amp; Beratung</a></li>
                     <li class="has-submenu"
@@ -195,8 +193,6 @@
                     <option value="">-- Bitte w&#xE4;hlen Sie eine Option --</option>
                             <option value="general">Allgemeine Anfrage</option>
                             <option value="sales">Vertrieb &amp; L&#xF6;sungen</option>
-                            <option value="trial">Antrag Testlizenz</option>
-                            <option value="students">Antrag Studenten- &amp; Dozentenlizenz</option>
                             <option value="billing">Abrechnung &amp; Konten</option>
                             <option value="legal">Recht &amp; Compliance</option>
                             <option value="careers">Karriere / Bewerbungen</option>
@@ -204,19 +200,14 @@
                             <option value="support">Technischer Support</option>
                 </select>
 
-                <div id="extraFields" style="display:none; margin-top:1rem;">
+                <div id="companyFields" style="margin-top:1rem;">
                     <label for="vat">USt-IdNr.</label>
                     <input type="text" id="vat" name="vat" placeholder="Geben Sie Ihre USt-IdNr. ein, falls vorhanden" />
 
                     <label for="address">Postanschrift</label>
                     <textarea id="address" name="address" placeholder="Ihre Postanschrift"></textarea>
 
-                    <div id="schoolField" style="display:none;">
-                        <label for="school">Name der Schule / Universit&#xE4;t</label>
-                        <input type="text" id="school" name="school" placeholder="Geben Sie den Namen Ihrer Schule oder Universit&#xE4;t ein" />
-                    </div>
-
-                    <p class="form-hint">Diese Felder sind gesetzlich vorgeschrieben für eine <strong>Testlizenz</strong> oder eine <strong>Studenten- &amp; Dozentenlizenz</strong>.</p>
+                    <p class="form-hint">Bitte geben Sie Ihre Firmendaten an, damit wir Ihren geschäftlichen Kontext besser verstehen und unsere Beratung beschleunigen können.</p>
                 </div>
 
                 <label for="subject">Betreff</label>
@@ -251,14 +242,13 @@
                 const message = document.getElementById("message").value.trim();
                 const vat = document.getElementById("vat")?.value.trim() || "";
                 const address = document.getElementById("address")?.value.trim() || "";
-                const school = document.getElementById("school")?.value.trim() || "";
+
                 const bodyLines = [
                     `Name: ${name}`,
                     `Email: ${email}`,
                     `Enquiry Type: ${enquiryType}`,
                     vat ? `VAT: ${vat}` : "",
                     address ? `Address: ${address}` : "",
-                    school ? `School: ${school}` : "",
                     "",
                     "Message:",
                     message
@@ -288,7 +278,7 @@
     </div>
 </section>
 
-<section class="trial-steps">
+<section class="support-steps">
     <div class="container">
         <h2>Support-Anfrageformular</h2>
         <em>Hinweis: Das Support-Anfrageformular ist nur f&#xFC;r lizenzierte Benutzer.</em>
@@ -465,18 +455,8 @@
                         <h4>Ressourcen &amp; Support</h4>
                         <ul>
                                 <li>
-                                    <a href="trial.html">
-                                        Kostenlose Testversion
-                                    </a>
-                                </li>
-                                <li>
                                     <a href="demo.html">
                                         Live-Demo
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="pricing.html">
-                                        Preise
                                     </a>
                                 </li>
                                 <li>
@@ -487,11 +467,6 @@
                                 <li>
                                     <a href="resources.html">
                                         Ressourcen &amp; Einblicke
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="minsystem.html">
-                                        Systemanforderungen
                                     </a>
                                 </li>
                                 <li>
@@ -569,26 +544,6 @@
         };
     </script>
 
-    <script>
-        const enquiryType = document.getElementById("enquiryType");
-        const extraFields = document.getElementById("extraFields");
-        const schoolField = document.getElementById("schoolField");
-
-        function toggleExtraFields() {
-            if (enquiryType.value === "trial") {
-                extraFields.style.display = "block";
-                schoolField.style.display = "none";
-            } else if (enquiryType.value === "students") {
-                extraFields.style.display = "block";
-                schoolField.style.display = "block";
-            } else {
-                extraFields.style.display = "none";
-                schoolField.style.display = "none";
-            }
-        }
-        enquiryType.addEventListener("change", toggleExtraFields);
-       
-    </script>
 
 
     <script>

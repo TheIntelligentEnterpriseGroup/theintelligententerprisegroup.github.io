@@ -190,8 +190,6 @@
                     <li><a href="services.html" class="active">&#x30B5;&#x30FC;&#x30D3;&#x30B9;&#x3068;&#x30BD;&#x30EA;&#x30E5;&#x30FC;&#x30B7;&#x30E7;&#x30F3;</a></li>
                     <li><a href="case-studies.html" class="">&#x4E8B;&#x4F8B;&#x7814;&#x7A76;</a></li>
                     <li><a href="resources.html" class="">&#x30EA;&#x30BD;&#x30FC;&#x30B9;&#x3068;&#x30A4;&#x30F3;&#x30B5;&#x30A4;&#x30C8;</a></li>
-                    <li><a href="trial.html" class="">&#x30C8;&#x30E9;&#x30A4;&#x30A2;&#x30EB;</a></li>
-                    <li><a href="pricing.html" class="">&#x6599;&#x91D1;</a></li>
                     <li><a href="partners.html" class="">&#x30D1;&#x30FC;&#x30C8;&#x30CA;&#x30FC;&#x3068;&#x30A2;&#x30E9;&#x30A4;&#x30A2;&#x30F3;&#x30B9;</a></li>                    
                     <li><a href="contact.html" class="">&#x304A;&#x554F;&#x3044;&#x5408;&#x308F;&#x305B;&#x30FB;&#x76F8;&#x8AC7;</a></li>
                     <li class="has-submenu"
@@ -577,18 +575,8 @@
                         <h4>&#x30EA;&#x30BD;&#x30FC;&#x30B9;&#x3068;&#x30B5;&#x30DD;&#x30FC;&#x30C8;</h4>
                         <ul>
                                 <li>
-                                    <a href="trial.html">
-                                        &#x7121;&#x6599;&#x30C8;&#x30E9;&#x30A4;&#x30A2;&#x30EB;
-                                    </a>
-                                </li>
-                                <li>
                                     <a href="demo.html">
                                         &#x30E9;&#x30A4;&#x30D6;&#x30C7;&#x30E2;
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="pricing.html">
-                                        &#x4FA1;&#x683C;
                                     </a>
                                 </li>
                                 <li>
@@ -599,11 +587,6 @@
                                 <li>
                                     <a href="resources.html">
                                         &#x30EA;&#x30BD;&#x30FC;&#x30B9;&#x3068;&#x30A4;&#x30F3;&#x30B5;&#x30A4;&#x30C8;
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="minsystem.html">
-                                        &#x30B7;&#x30B9;&#x30C6;&#x30E0;&#x8981;&#x4EF6;
                                     </a>
                                 </li>
                                 <li>
@@ -698,70 +681,52 @@
                 flowchart TD
                   Start["**&#x30A8;&#x30F3;&#x30B2;&#x30FC;&#x30B8;&#x30E1;&#x30F3;&#x30C8;&#x958B;&#x59CB;**<br><i class='fas fa-handshake'></i>"]
 
-                  %% --- Path 1: Self-Service Adoption ---
-                  subgraph FastTrack["&#x30BB;&#x30EB;&#x30D5;&#x30B5;&#x30FC;&#x30D3;&#x30B9;&#x5C0E;&#x5165;"]
-                    FT1["**&#x30C7;&#x30B9;&#x30AF;&#x30C8;&#x30C3;&#x30D7;&#x30C8;&#x30E9;&#x30A4;&#x30A2;&#x30EB;**<br><i class='fas fa-laptop'></i>"]
-                    FT2["**&#x5546;&#x7528;&#x30E9;&#x30A4;&#x30BB;&#x30F3;&#x30B9;**<br><i class='fas fa-key'></i>"]
-                    FT1 --> FT2
-                  end
-
-                  %% --- Path 2: Guided Evaluation ---
+                  %% --- Path 1: Guided Evaluation ---
                   subgraph Guided["&#x30AC;&#x30A4;&#x30C9;&#x4ED8;&#x304D;&#x8A55;&#x4FA1;"]
                     G1["**&#x30C7;&#x30A3;&#x30B9;&#x30AB;&#x30D0;&#x30EA;&#x30FC;&#x30B3;&#x30FC;&#x30EB;**<br><i class='fas fa-comments'></i>"]
-                    G2["**&#x30C7;&#x30B9;&#x30AF;&#x30C8;&#x30C3;&#x30D7;&#x30C8;&#x30E9;&#x30A4;&#x30A2;&#x30EB;**<br><i class='fas fa-laptop'></i>"]
                     G3["**&#x30D5;&#x30A3;&#x30FC;&#x30C9;&#x30D0;&#x30C3;&#x30AF; &amp; Q&amp;A**<br><i class='fas fa-question-circle'></i>"]
-                    G4["**&#x5546;&#x7528;&#x30E9;&#x30A4;&#x30BB;&#x30F3;&#x30B9;**<br><i class='fas fa-key'></i>"]
-                    G1 --> G2 --> G3 --> G4
+                    G1 --> G3
                   end
 
-                  %% --- Path 3: Strategic Transformation ---
+                  %% --- Path 2: Strategic Transformation ---
                   subgraph Enterprise["&#x6226;&#x7565;&#x7684;&#x5909;&#x9769;"]
                     E1["**&#x30C7;&#x30A3;&#x30B9;&#x30AB;&#x30D0;&#x30EA;&#x30FC; &amp; &#x76E3;&#x67FB;**<br><i class='fas fa-search'></i>"]
-                    E2["**&#x30C7;&#x30B9;&#x30AF;&#x30C8;&#x30C3;&#x30D7;&#x30C8;&#x30E9;&#x30A4;&#x30A2;&#x30EB;**<br><i class='fas fa-laptop'></i>"]
                     E3["**&#x6226;&#x7565; &amp; &#x30ED;&#x30FC;&#x30C9;&#x30DE;&#x30C3;&#x30D7;**<br><i class='fas fa-map'></i>"]
-                    E4["**&#x5B9F;&#x88C5; &amp; &#x7D71;&#x5408;**<br>(Desktop or Server/API)<br><i class='fas fa-robot'></i>"]
+                    E4["**&#x5B9F;&#x88C5; &amp; &#x7D71;&#x5408;**<br><i class='fas fa-robot'></i>"]
                     E5["**&#x30C6;&#x30B9;&#x30C8; &amp; &#x691C;&#x8A3C;**<br><i class='fas fa-flask'></i>"]
                     E6["**&#x5C0E;&#x5165; &amp; &#x30ED;&#x30FC;&#x30EB;&#x30A2;&#x30A6;&#x30C8;**<br><i class='fas fa-rocket'></i>"]
                     E7["**&#x30C8;&#x30EC;&#x30FC;&#x30CB;&#x30F3;&#x30B0; &amp; &#x6700;&#x9069;&#x5316;**<br><i class='fas fa-chalkboard-teacher'></i>"]
-                    E1 --> E2 --> E3 --> E4 --> E5 --> E6 --> E7
+                    E1 --> E3 --> E4 --> E5 --> E6 --> E7
                   end
 
-                  %% --- Path 4: Hybrid Expansion ---
+                  %% --- Path 3: Hybrid Expansion ---
                   subgraph Hybrid["&#x30CF;&#x30A4;&#x30D6;&#x30EA;&#x30C3;&#x30C9;&#x62E1;&#x5F35;"]
-                    H1["**&#x30C7;&#x30B9;&#x30AF;&#x30C8;&#x30C3;&#x30D7;&#x30C8;&#x30E9;&#x30A4;&#x30A2;&#x30EB;**<br><i class='fas fa-laptop'></i>"]
-                    H2["**&#x5546;&#x7528;&#x30E9;&#x30A4;&#x30BB;&#x30F3;&#x30B9;**<br><i class='fas fa-key'></i>"]
                     H3["**&#x30AB;&#x30B9;&#x30BF;&#x30E0;AI&#x30A8;&#x30FC;&#x30B8;&#x30A7;&#x30F3;&#x30C8;**<br><i class='fas fa-users-cog'></i>"]
                     H4["**&#x7D71;&#x5408; &amp; &#x30A2;&#x30C9;&#x30D0;&#x30A4;&#x30B6;&#x30EA;&#x30FC;**<br><i class='fas fa-lightbulb'></i>"]
-                    H1 --> H2 --> H3 --> H4
+                    H3 --> H4
                   end
 
                   %% Connections from Start
-                  Start --> FastTrack
                   Start --> Guided
                   Start --> Enterprise
                   Start --> Hybrid
 
                   %% --- Styling ---
                   classDef start fill:#C8CEE5,stroke:#A190D9,color:#3C3C3C;
-                  classDef fast fill:#EAEAF2,stroke:#A190D9,color:#3C3C3C;
                   classDef guided fill:#F2F4F7,stroke:#66bb6a,color:#3C3C3C;
                   classDef enterprise fill:#fff3e0,stroke:#fb8c00,color:#3C3C3C;
                   classDef hybrid fill:#e3f2fd,stroke:#42a5f5,color:#3C3C3C;
 
                   class Start start;
-                  class FT1,FT2 fast;
-                  class G1,G2,G3,G4 guided;
-                  class E1,E2,E3,E4,E5,E6,E7 enterprise;
-                  class H1,H2,H3,H4 hybrid;
-
+                  class G1,G3 guided;
+                  class E1,E3,E4,E5,E6,E7 enterprise;
+                  class H3,H4 hybrid;
                   linkStyle default stroke:#888,stroke-width:1.5px,stroke-dasharray:2,2
 
-                  style FastTrack fill:transparent,stroke:none
                   style Guided fill:transparent,stroke:none
                   style Enterprise fill:transparent,stroke:none
                   style Hybrid fill:transparent,stroke:none
                 `;
-
 
             const container = document.getElementById('diagram-container');
             container.innerHTML = `<div class="mermaid">${diagramDefinition}</div>`;

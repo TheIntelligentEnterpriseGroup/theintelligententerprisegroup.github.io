@@ -190,8 +190,6 @@
                     <li><a href="services.html" class="active">Services &amp; Solutions</a></li>
                     <li><a href="case-studies.html" class="">&#xC9;tudes de cas</a></li>
                     <li><a href="resources.html" class="">Ressources &amp; Analyses</a></li>
-                    <li><a href="trial.html" class="">Essai</a></li>
-                    <li><a href="pricing.html" class="">Tarifs</a></li>
                     <li><a href="partners.html" class="">Partenaires &amp; Alliances</a></li>                    
                     <li><a href="contact.html" class="">Contact &amp; Consultation</a></li>
                     <li class="has-submenu"
@@ -577,18 +575,8 @@
                         <h4>Ressources &amp; Support</h4>
                         <ul>
                                 <li>
-                                    <a href="trial.html">
-                                        Essai Gratuit
-                                    </a>
-                                </li>
-                                <li>
                                     <a href="demo.html">
                                         D&#xE9;mo en Direct
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="pricing.html">
-                                        Tarifs
                                     </a>
                                 </li>
                                 <li>
@@ -599,11 +587,6 @@
                                 <li>
                                     <a href="resources.html">
                                         Ressources &amp; Insights
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="minsystem.html">
-                                        Configuration Requise
                                     </a>
                                 </li>
                                 <li>
@@ -698,70 +681,52 @@
                 flowchart TD
                   Start["**D&#xE9;marrer l&#x2019;engagement**<br><i class='fas fa-handshake'></i>"]
 
-                  %% --- Path 1: Self-Service Adoption ---
-                  subgraph FastTrack["Adoption en libre&#x2011;service"]
-                    FT1["**Essai Desktop**<br><i class='fas fa-laptop'></i>"]
-                    FT2["**Licence commerciale**<br><i class='fas fa-key'></i>"]
-                    FT1 --> FT2
-                  end
-
-                  %% --- Path 2: Guided Evaluation ---
+                  %% --- Path 1: Guided Evaluation ---
                   subgraph Guided["&#xC9;valuation guid&#xE9;e"]
                     G1["**Appel de d&#xE9;couverte**<br><i class='fas fa-comments'></i>"]
-                    G2["**Essai Desktop**<br><i class='fas fa-laptop'></i>"]
                     G3["**Retour &amp; Questions/R&#xE9;ponses**<br><i class='fas fa-question-circle'></i>"]
-                    G4["**Licence commerciale**<br><i class='fas fa-key'></i>"]
-                    G1 --> G2 --> G3 --> G4
+                    G1 --> G3
                   end
 
-                  %% --- Path 3: Strategic Transformation ---
+                  %% --- Path 2: Strategic Transformation ---
                   subgraph Enterprise["Transformation strat&#xE9;gique"]
                     E1["**D&#xE9;couverte &amp; Audit**<br><i class='fas fa-search'></i>"]
-                    E2["**Essai Desktop**<br><i class='fas fa-laptop'></i>"]
                     E3["**Strat&#xE9;gie &amp; Feuille de route**<br><i class='fas fa-map'></i>"]
-                    E4["**Mise en &#x153;uvre &amp; Int&#xE9;gration**<br>(Desktop or Server/API)<br><i class='fas fa-robot'></i>"]
+                    E4["**Mise en &#x153;uvre &amp; Int&#xE9;gration**<br><i class='fas fa-robot'></i>"]
                     E5["**Tests &amp; Validation**<br><i class='fas fa-flask'></i>"]
                     E6["**D&#xE9;ploiement &amp; Lancement**<br><i class='fas fa-rocket'></i>"]
                     E7["**Formation &amp; Optimisation**<br><i class='fas fa-chalkboard-teacher'></i>"]
-                    E1 --> E2 --> E3 --> E4 --> E5 --> E6 --> E7
+                    E1 --> E3 --> E4 --> E5 --> E6 --> E7
                   end
 
-                  %% --- Path 4: Hybrid Expansion ---
+                  %% --- Path 3: Hybrid Expansion ---
                   subgraph Hybrid["Expansion hybride"]
-                    H1["**Essai Desktop**<br><i class='fas fa-laptop'></i>"]
-                    H2["**Licence commerciale**<br><i class='fas fa-key'></i>"]
                     H3["**Agents IA personnalis&#xE9;s**<br><i class='fas fa-users-cog'></i>"]
                     H4["**Int&#xE9;gration &amp; Conseil**<br><i class='fas fa-lightbulb'></i>"]
-                    H1 --> H2 --> H3 --> H4
+                    H3 --> H4
                   end
 
                   %% Connections from Start
-                  Start --> FastTrack
                   Start --> Guided
                   Start --> Enterprise
                   Start --> Hybrid
 
                   %% --- Styling ---
                   classDef start fill:#C8CEE5,stroke:#A190D9,color:#3C3C3C;
-                  classDef fast fill:#EAEAF2,stroke:#A190D9,color:#3C3C3C;
                   classDef guided fill:#F2F4F7,stroke:#66bb6a,color:#3C3C3C;
                   classDef enterprise fill:#fff3e0,stroke:#fb8c00,color:#3C3C3C;
                   classDef hybrid fill:#e3f2fd,stroke:#42a5f5,color:#3C3C3C;
 
                   class Start start;
-                  class FT1,FT2 fast;
-                  class G1,G2,G3,G4 guided;
-                  class E1,E2,E3,E4,E5,E6,E7 enterprise;
-                  class H1,H2,H3,H4 hybrid;
-
+                  class G1,G3 guided;
+                  class E1,E3,E4,E5,E6,E7 enterprise;
+                  class H3,H4 hybrid;
                   linkStyle default stroke:#888,stroke-width:1.5px,stroke-dasharray:2,2
 
-                  style FastTrack fill:transparent,stroke:none
                   style Guided fill:transparent,stroke:none
                   style Enterprise fill:transparent,stroke:none
                   style Hybrid fill:transparent,stroke:none
                 `;
-
 
             const container = document.getElementById('diagram-container');
             container.innerHTML = `<div class="mermaid">${diagramDefinition}</div>`;

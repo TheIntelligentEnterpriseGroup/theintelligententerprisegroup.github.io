@@ -136,8 +136,6 @@
                     <li><a href="services.html" class="">Services &amp; Solutions</a></li>
                     <li><a href="case-studies.html" class="">Case Studies</a></li>
                     <li><a href="resources.html" class="">Resources &amp; Insights</a></li>
-                    <li><a href="trial.html" class="">Trial</a></li>
-                    <li><a href="pricing.html" class="">Pricing</a></li>
                     <li><a href="partners.html" class="">Partners &amp; Alliances</a></li>                    
                     <li><a href="contact.html" class="active">Contact &amp; Consultation</a></li>
                     <li class="has-submenu"
@@ -195,8 +193,6 @@
                     <option value="">-- Please choose an option --</option>
                             <option value="general">General Inquiry</option>
                             <option value="sales">Sales &amp; Solutions</option>
-                            <option value="trial">Trial License Application</option>
-                            <option value="students">Students &amp; Educators License Application</option>
                             <option value="billing">Billing &amp; Accounts</option>
                             <option value="legal">Legal &amp; Compliance</option>
                             <option value="careers">Careers / Job Applications</option>
@@ -204,19 +200,14 @@
                             <option value="support">Technical Support</option>
                 </select>
 
-                <div id="extraFields" style="display:none; margin-top:1rem;">
+                <div id="companyFields" style="margin-top:1rem;">
                     <label for="vat">VAT Number</label>
                     <input type="text" id="vat" name="vat" placeholder="Enter your VAT number if you have one" />
 
                     <label for="address">Postal Address</label>
                     <textarea id="address" name="address" placeholder="Your postal address"></textarea>
 
-                    <div id="schoolField" style="display:none;">
-                        <label for="school">School / University Name</label>
-                        <input type="text" id="school" name="school" placeholder="Enter your school or university name" />
-                    </div>
-
-                    <p class="form-hint">These fields are required by law for a <strong>Trial License</strong> or a <strong>Students &amp; Educators License</strong>.</p>
+                    <p class="form-hint">Please provide your company details to help us better understand your business context and accelerate our consultation.</p>
                 </div>
 
                 <label for="subject">Subject</label>
@@ -251,14 +242,13 @@
                 const message = document.getElementById("message").value.trim();
                 const vat = document.getElementById("vat")?.value.trim() || "";
                 const address = document.getElementById("address")?.value.trim() || "";
-                const school = document.getElementById("school")?.value.trim() || "";
+
                 const bodyLines = [
                     `Name: ${name}`,
                     `Email: ${email}`,
                     `Enquiry Type: ${enquiryType}`,
                     vat ? `VAT: ${vat}` : "",
                     address ? `Address: ${address}` : "",
-                    school ? `School: ${school}` : "",
                     "",
                     "Message:",
                     message
@@ -288,7 +278,7 @@
     </div>
 </section>
 
-<section class="trial-steps">
+<section class="support-steps">
     <div class="container">
         <h2>Support Request Form</h2>
         <em>Note: The support request form is for licensed users only.</em>
@@ -465,18 +455,8 @@
                         <h4>Resources &amp; Support</h4>
                         <ul>
                                 <li>
-                                    <a href="trial.html">
-                                        Free Trial
-                                    </a>
-                                </li>
-                                <li>
                                     <a href="demo.html">
                                         Live Demo
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="pricing.html">
-                                        Pricing
                                     </a>
                                 </li>
                                 <li>
@@ -487,11 +467,6 @@
                                 <li>
                                     <a href="resources.html">
                                         Resources &amp; Insights
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="minsystem.html">
-                                        System Requirements
                                     </a>
                                 </li>
                                 <li>
@@ -569,26 +544,6 @@
         };
     </script>
 
-    <script>
-        const enquiryType = document.getElementById("enquiryType");
-        const extraFields = document.getElementById("extraFields");
-        const schoolField = document.getElementById("schoolField");
-
-        function toggleExtraFields() {
-            if (enquiryType.value === "trial") {
-                extraFields.style.display = "block";
-                schoolField.style.display = "none";
-            } else if (enquiryType.value === "students") {
-                extraFields.style.display = "block";
-                schoolField.style.display = "block";
-            } else {
-                extraFields.style.display = "none";
-                schoolField.style.display = "none";
-            }
-        }
-        enquiryType.addEventListener("change", toggleExtraFields);
-       
-    </script>
 
 
     <script>

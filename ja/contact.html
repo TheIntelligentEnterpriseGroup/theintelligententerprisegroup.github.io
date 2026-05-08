@@ -136,8 +136,6 @@
                     <li><a href="services.html" class="">&#x30B5;&#x30FC;&#x30D3;&#x30B9;&#x3068;&#x30BD;&#x30EA;&#x30E5;&#x30FC;&#x30B7;&#x30E7;&#x30F3;</a></li>
                     <li><a href="case-studies.html" class="">&#x4E8B;&#x4F8B;&#x7814;&#x7A76;</a></li>
                     <li><a href="resources.html" class="">&#x30EA;&#x30BD;&#x30FC;&#x30B9;&#x3068;&#x30A4;&#x30F3;&#x30B5;&#x30A4;&#x30C8;</a></li>
-                    <li><a href="trial.html" class="">&#x30C8;&#x30E9;&#x30A4;&#x30A2;&#x30EB;</a></li>
-                    <li><a href="pricing.html" class="">&#x6599;&#x91D1;</a></li>
                     <li><a href="partners.html" class="">&#x30D1;&#x30FC;&#x30C8;&#x30CA;&#x30FC;&#x3068;&#x30A2;&#x30E9;&#x30A4;&#x30A2;&#x30F3;&#x30B9;</a></li>                    
                     <li><a href="contact.html" class="active">&#x304A;&#x554F;&#x3044;&#x5408;&#x308F;&#x305B;&#x30FB;&#x76F8;&#x8AC7;</a></li>
                     <li class="has-submenu"
@@ -195,8 +193,6 @@
                     <option value="">-- &#x30AA;&#x30D7;&#x30B7;&#x30E7;&#x30F3;&#x3092;&#x9078;&#x629E;&#x3057;&#x3066;&#x304F;&#x3060;&#x3055;&#x3044; --</option>
                             <option value="general">&#x4E00;&#x822C;&#x7684;&#x306A;&#x304A;&#x554F;&#x3044;&#x5408;&#x308F;&#x305B;</option>
                             <option value="sales">&#x8CA9;&#x58F2;&#x30FB;&#x30BD;&#x30EA;&#x30E5;&#x30FC;&#x30B7;&#x30E7;&#x30F3;</option>
-                            <option value="trial">&#x30C8;&#x30E9;&#x30A4;&#x30A2;&#x30EB;&#x30E9;&#x30A4;&#x30BB;&#x30F3;&#x30B9;&#x7533;&#x8ACB;</option>
-                            <option value="students">&#x5B66;&#x751F;&#x30FB;&#x6559;&#x80B2;&#x6A5F;&#x95A2;&#x5411;&#x3051;&#x30E9;&#x30A4;&#x30BB;&#x30F3;&#x30B9;&#x7533;&#x8ACB;</option>
                             <option value="billing">&#x8ACB;&#x6C42;&#x30FB;&#x30A2;&#x30AB;&#x30A6;&#x30F3;&#x30C8;</option>
                             <option value="legal">&#x6CD5;&#x52D9;&#x30FB;&#x30B3;&#x30F3;&#x30D7;&#x30E9;&#x30A4;&#x30A2;&#x30F3;&#x30B9;</option>
                             <option value="careers">&#x63A1;&#x7528;&#x30FB;&#x6C42;&#x4EBA;&#x5FDC;&#x52DF;</option>
@@ -204,19 +200,14 @@
                             <option value="support">&#x6280;&#x8853;&#x30B5;&#x30DD;&#x30FC;&#x30C8;</option>
                 </select>
 
-                <div id="extraFields" style="display:none; margin-top:1rem;">
+                <div id="companyFields" style="margin-top:1rem;">
                     <label for="vat">VAT&#x756A;&#x53F7;</label>
                     <input type="text" id="vat" name="vat" placeholder="&#x304A;&#x6301;&#x3061;&#x306E;&#x5834;&#x5408;&#x306F;VAT&#x756A;&#x53F7;&#x3092;&#x5165;&#x529B;&#x3057;&#x3066;&#x304F;&#x3060;&#x3055;&#x3044;" />
 
                     <label for="address">&#x4F4F;&#x6240;</label>
                     <textarea id="address" name="address" placeholder="&#x4F4F;&#x6240;&#x3092;&#x5165;&#x529B;&#x3057;&#x3066;&#x304F;&#x3060;&#x3055;&#x3044;"></textarea>
 
-                    <div id="schoolField" style="display:none;">
-                        <label for="school">&#x5B66;&#x6821; / &#x5927;&#x5B66;&#x540D;</label>
-                        <input type="text" id="school" name="school" placeholder="&#x5B66;&#x6821;&#x307E;&#x305F;&#x306F;&#x5927;&#x5B66;&#x540D;&#x3092;&#x5165;&#x529B;&#x3057;&#x3066;&#x304F;&#x3060;&#x3055;&#x3044;" />
-                    </div>
-
-                    <p class="form-hint"><strong>トライアルライセンス</strong> または <strong>学生・教育機関向けライセンス</strong> には、これらの項目が法的に必要です。</p>
+                    <p class="form-hint">ビジネスの背景をよりよく理解し、コンサルティングを迅速に進めるために、貴社の詳細情報をご提供ください。</p>
                 </div>
 
                 <label for="subject">&#x4EF6;&#x540D;</label>
@@ -251,14 +242,13 @@
                 const message = document.getElementById("message").value.trim();
                 const vat = document.getElementById("vat")?.value.trim() || "";
                 const address = document.getElementById("address")?.value.trim() || "";
-                const school = document.getElementById("school")?.value.trim() || "";
+
                 const bodyLines = [
                     `Name: ${name}`,
                     `Email: ${email}`,
                     `Enquiry Type: ${enquiryType}`,
                     vat ? `VAT: ${vat}` : "",
                     address ? `Address: ${address}` : "",
-                    school ? `School: ${school}` : "",
                     "",
                     "Message:",
                     message
@@ -288,7 +278,7 @@
     </div>
 </section>
 
-<section class="trial-steps">
+<section class="support-steps">
     <div class="container">
         <h2>&#x30B5;&#x30DD;&#x30FC;&#x30C8;&#x4F9D;&#x983C;&#x30D5;&#x30A9;&#x30FC;&#x30E0;</h2>
         <em>&#x6CE8;: &#x30B5;&#x30DD;&#x30FC;&#x30C8;&#x4F9D;&#x983C;&#x30D5;&#x30A9;&#x30FC;&#x30E0;&#x306F;&#x30E9;&#x30A4;&#x30BB;&#x30F3;&#x30B9;&#x3092;&#x6301;&#x3064;&#x30E6;&#x30FC;&#x30B6;&#x30FC;&#x306E;&#x307F;&#x304C;&#x5229;&#x7528;&#x3067;&#x304D;&#x307E;&#x3059;&#x3002;</em>
@@ -465,18 +455,8 @@
                         <h4>&#x30EA;&#x30BD;&#x30FC;&#x30B9;&#x3068;&#x30B5;&#x30DD;&#x30FC;&#x30C8;</h4>
                         <ul>
                                 <li>
-                                    <a href="trial.html">
-                                        &#x7121;&#x6599;&#x30C8;&#x30E9;&#x30A4;&#x30A2;&#x30EB;
-                                    </a>
-                                </li>
-                                <li>
                                     <a href="demo.html">
                                         &#x30E9;&#x30A4;&#x30D6;&#x30C7;&#x30E2;
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="pricing.html">
-                                        &#x4FA1;&#x683C;
                                     </a>
                                 </li>
                                 <li>
@@ -487,11 +467,6 @@
                                 <li>
                                     <a href="resources.html">
                                         &#x30EA;&#x30BD;&#x30FC;&#x30B9;&#x3068;&#x30A4;&#x30F3;&#x30B5;&#x30A4;&#x30C8;
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="minsystem.html">
-                                        &#x30B7;&#x30B9;&#x30C6;&#x30E0;&#x8981;&#x4EF6;
                                     </a>
                                 </li>
                                 <li>
@@ -569,26 +544,6 @@
         };
     </script>
 
-    <script>
-        const enquiryType = document.getElementById("enquiryType");
-        const extraFields = document.getElementById("extraFields");
-        const schoolField = document.getElementById("schoolField");
-
-        function toggleExtraFields() {
-            if (enquiryType.value === "trial") {
-                extraFields.style.display = "block";
-                schoolField.style.display = "none";
-            } else if (enquiryType.value === "students") {
-                extraFields.style.display = "block";
-                schoolField.style.display = "block";
-            } else {
-                extraFields.style.display = "none";
-                schoolField.style.display = "none";
-            }
-        }
-        enquiryType.addEventListener("change", toggleExtraFields);
-       
-    </script>
 
 
     <script>

@@ -136,8 +136,6 @@
                     <li><a href="services.html" class="">Servi&#xE7;os e Solu&#xE7;&#xF5;es</a></li>
                     <li><a href="case-studies.html" class="">Estudos de Caso</a></li>
                     <li><a href="resources.html" class="">Recursos e Insights</a></li>
-                    <li><a href="trial.html" class="">Avalia&#xE7;&#xE3;o</a></li>
-                    <li><a href="pricing.html" class="">Pre&#xE7;os</a></li>
                     <li><a href="partners.html" class="">Parceiros e Alian&#xE7;as</a></li>                    
                     <li><a href="contact.html" class="active">Contato e Consultoria</a></li>
                     <li class="has-submenu"
@@ -195,8 +193,6 @@
                     <option value="">-- Por favor, escolha uma op&#xE7;&#xE3;o --</option>
                             <option value="general">Consulta Geral</option>
                             <option value="sales">Vendas e Solu&#xE7;&#xF5;es</option>
-                            <option value="trial">Aplica&#xE7;&#xE3;o para Licen&#xE7;a de Avalia&#xE7;&#xE3;o</option>
-                            <option value="students">Aplica&#xE7;&#xE3;o para Licen&#xE7;a de Estudantes e Educadores</option>
                             <option value="billing">Faturamento e Contas</option>
                             <option value="legal">Jur&#xED;dico e Conformidade</option>
                             <option value="careers">Carreiras / Candidaturas a Vagas</option>
@@ -204,19 +200,14 @@
                             <option value="support">Suporte T&#xE9;cnico</option>
                 </select>
 
-                <div id="extraFields" style="display:none; margin-top:1rem;">
+                <div id="companyFields" style="margin-top:1rem;">
                     <label for="vat">N&#xFA;mero de IVA</label>
                     <input type="text" id="vat" name="vat" placeholder="Insira seu n&#xFA;mero de IVA, se tiver" />
 
                     <label for="address">Endere&#xE7;o Postal</label>
                     <textarea id="address" name="address" placeholder="Seu endere&#xE7;o postal"></textarea>
 
-                    <div id="schoolField" style="display:none;">
-                        <label for="school">Nome da Escola / Universidade</label>
-                        <input type="text" id="school" name="school" placeholder="Insira o nome da sua escola ou universidade" />
-                    </div>
-
-                    <p class="form-hint">Esses campos são exigidos por lei para uma <strong>Licença de Avaliação</strong> ou uma <strong>Licença de Estudantes &amp; Educadores</strong>.</p>
+                    <p class="form-hint">Forneça os detalhes da sua empresa para nos ajudar a entender melhor o seu contexto de negócios e acelerar nossa consultoria.</p>
                 </div>
 
                 <label for="subject">Assunto</label>
@@ -251,14 +242,13 @@
                 const message = document.getElementById("message").value.trim();
                 const vat = document.getElementById("vat")?.value.trim() || "";
                 const address = document.getElementById("address")?.value.trim() || "";
-                const school = document.getElementById("school")?.value.trim() || "";
+
                 const bodyLines = [
                     `Name: ${name}`,
                     `Email: ${email}`,
                     `Enquiry Type: ${enquiryType}`,
                     vat ? `VAT: ${vat}` : "",
                     address ? `Address: ${address}` : "",
-                    school ? `School: ${school}` : "",
                     "",
                     "Message:",
                     message
@@ -288,7 +278,7 @@
     </div>
 </section>
 
-<section class="trial-steps">
+<section class="support-steps">
     <div class="container">
         <h2>Formul&#xE1;rio de solicita&#xE7;&#xE3;o de suporte</h2>
         <em>Observa&#xE7;&#xE3;o: o formul&#xE1;rio de solicita&#xE7;&#xE3;o de suporte &#xE9; apenas para usu&#xE1;rios licenciados.</em>
@@ -465,18 +455,8 @@
                         <h4>Recursos e Suporte</h4>
                         <ul>
                                 <li>
-                                    <a href="trial.html">
-                                        Teste Gratuito
-                                    </a>
-                                </li>
-                                <li>
                                     <a href="demo.html">
                                         Demonstra&#xE7;&#xE3;o ao Vivo
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="pricing.html">
-                                        Pre&#xE7;os
                                     </a>
                                 </li>
                                 <li>
@@ -487,11 +467,6 @@
                                 <li>
                                     <a href="resources.html">
                                         Recursos e Insights
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="minsystem.html">
-                                        Requisitos do Sistema
                                     </a>
                                 </li>
                                 <li>
@@ -569,26 +544,6 @@
         };
     </script>
 
-    <script>
-        const enquiryType = document.getElementById("enquiryType");
-        const extraFields = document.getElementById("extraFields");
-        const schoolField = document.getElementById("schoolField");
-
-        function toggleExtraFields() {
-            if (enquiryType.value === "trial") {
-                extraFields.style.display = "block";
-                schoolField.style.display = "none";
-            } else if (enquiryType.value === "students") {
-                extraFields.style.display = "block";
-                schoolField.style.display = "block";
-            } else {
-                extraFields.style.display = "none";
-                schoolField.style.display = "none";
-            }
-        }
-        enquiryType.addEventListener("change", toggleExtraFields);
-       
-    </script>
 
 
     <script>
