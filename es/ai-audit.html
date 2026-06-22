@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+<head>
+    <meta name="robots" content="index, follow" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <meta name="description" content='Realice nuestra Auditor&#xED;a de ROI y Viabilidad de IA Empresarial de 60 segundos para identificar sus cuellos de botella operativos y trazar un plan de integraci&#xF3;n de IA seguro.' />
+    <title>La Auditor&#xED;a de ROI y Viabilidad de IA Empresarial | TIEG</title>
+
+    <style>
+        html { background-color: #3B3A47; }
+    </style>
+    <script>
+        (function () {
+            const key = 'preferredTheme';
+            const stored = localStorage.getItem(key);
+            //const systemDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+            const theme = stored || 'dark'/*(systemDark ? 'dark' : 'light')*/;
+            if (theme === 'dark') {
+                document.documentElement.classList.add('dark-mode');
+            } else {
+                document.documentElement.classList.remove('dark-mode');
+            }
+        })();
+    </script>
+
+
+        <link rel="alternate" hreflang="en" href="https://theintelligententerprisegroup.com/ai-audit.html" />
+        <link rel="alternate" hreflang="fr" href="https://theintelligententerprisegroup.com/fr/ai-audit.html" />
+        <link rel="alternate" hreflang="de" href="https://theintelligententerprisegroup.com/de/ai-audit.html" />
+        <link rel="alternate" hreflang="es" href="https://theintelligententerprisegroup.com/es/ai-audit.html" />
+        <link rel="alternate" hreflang="pt" href="https://theintelligententerprisegroup.com/pt/ai-audit.html" />
+        <link rel="alternate" hreflang="zh" href="https://theintelligententerprisegroup.com/zh/ai-audit.html" />
+        <link rel="alternate" hreflang="ja" href="https://theintelligententerprisegroup.com/ja/ai-audit.html" />
+        <link rel="alternate" hreflang="ar" href="https://theintelligententerprisegroup.com/ar/ai-audit.html" />
+
+
+    <link rel="alternate" hreflang="x-default" href="https://theintelligententerprisegroup.com/ai-audit.html" />
+
+    <link rel="canonical" href="https://theintelligententerprisegroup.com/es/ai-audit.html" />
+
+
+    <link rel="stylesheet" href="/css/styles.css" />
+    <link rel="stylesheet" href="/css/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="/css/all.min.css" />
+
+    <script src="/js/lang-switcher.js" defer></script>
+
+    <script>
+        (function () {
+            if (localStorage.getItem('currentLang')) return;
+            const supported = [
+                     { code: "en" } ,
+                     { code: "fr" } ,
+                     { code: "de" } ,
+                     { code: "es" } ,
+                     { code: "pt" } ,
+                     { code: "zh" } ,
+                     { code: "ja" } ,
+                     { code: "ar" } 
+            ];
+            const defaultLang = "es";
+            const navLangs = navigator.languages || [navigator.language || navigator.userLanguage];
+            let detected = null;
+            for (const nav of navLangs) {
+                const code = nav.toLowerCase().split('-')[0];
+                if (supported.find(s => s.code.toLowerCase() === code)) {
+                    detected = code;
+                    break;
+                }
+            }
+            const lang = detected || defaultLang;
+            localStorage.setItem('currentLang', lang);
+            document.documentElement.lang = lang;
+        })();
+    </script>
+
+    <!-- Organization structured data (JSON-LD) -->
+    <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "Organization",
+          "name": "The Intelligent Enterprise Group",
+          "url": "https://theintelligententerprisegroup.com/",
+          "logo": "https://theintelligententerprisegroup.com/images/tieg-logo.png",
+          "sameAs": []
+        }
+    </script>
+    <link rel="icon" href="/favicon.ico" />
+    <link rel="apple-touch-icon" href="/images/apple-touch-icon.png" />
+
+    
+
+</head>
+<body>
+    <header x-data="{ open: false }">
+        <div class="container header-top">
+            <div class="logo"></div>
+            <div class="theme-switch-wrapper">
+                <label class="theme-switch">
+                    <input type="checkbox" id="theme-checkbox" aria-label="Select theme"/>
+                    <span class="slider round"></span>
+                </label>
+                <span id="theme-label">Modo claro</span>
+                <span class="lang-switcher">
+                    <label for="lang-select" class="lang-label">🌐 Idioma:</label>
+
+                    <!-- Language switcher -->
+                    <select id="lang-select" class="lang-select">
+                        <option value="en" data-path="/">English</option>
+                        <option value="fr" data-path="/fr/">Fran&#xE7;ais</option>
+                        <option value="de" data-path="/de/">Deutsch</option>
+                        <option value="es" data-path="/es/">Espa&#xF1;ol</option>
+                        <option value="pt" data-path="/pt/">Portugu&#xEA;s</option>
+                        <option value="zh" data-path="/zh/">&#x4E2D;&#x6587;</option>
+                        <option value="ja" data-path="/ja/">&#x65E5;&#x672C;&#x8A9E;</option>
+                        <option value="ar" data-path="/ar/">&#x627;&#x644;&#x639;&#x631;&#x628;&#x64A;&#x629;</option>
+                    </select>
+
+                </span>
+            </div>
+        </div>
+        
+        <div class="container header-nav">
+            <button @click="open = !open" class="menu-toggle" aria-label="Toggle Menu">
+                <svg width="24" height="24" viewBox="0 0 24 24">
+                    <path fill="var(--nav-link-color)" d="M3 6h18v2H3V6zm0 5h18v2H3v-2zm0 5h18v2H3v-2z" />
+                </svg>
+            </button>
+
+            <nav class="main-nav" :class="{ 'open': open }">
+                <ul>
+                    <li><a href="index.html" class="">Inicio</a></li>
+                    <li><a href="about.html" class="">Sobre nosotros</a></li>
+                    <li><a href="services.html" class="">Servicios y Soluciones</a></li>
+                    <li><a href="case-studies.html" class="">Casos de Estudio</a></li>
+                    <li><a href="resources.html" class="">Recursos e Ideas</a></li>
+                    <li><a href="partners.html" class="">Socios y Alianzas</a></li>                    
+                    <li><a href="contact.html" class="">Contacto y Consulta</a></li>
+                    <li class="has-submenu"
+                        x-data="{ openSub: false }"
+                        @mouseenter="openSub = true"
+                        @mouseleave="openSub = false">
+                      <button @click="openSub = !openSub"
+                              aria-haspopup="true"
+                              :aria-expanded="openSub.toString()">
+                        Informaci&#xF3;n
+                        <svg width="12" height="12" viewBox="0 0 12 12" aria-hidden="true">
+                          <path d="M3 4l3 3 3-3" fill="currentColor"/>
+                        </svg>
+                      </button>
+                      <ul class="submenu" x-show="openSub" @click.outside="openSub = false">
+                        <li><a href="careers.html" class="">Carreras</a></li>
+                        <li><a href="faqs.html" class="">Preguntas Frecuentes</a></li>
+                        <li><a href="legal.html" class="">Aviso Legal y Pol&#xED;ticas</a></li>
+                      </ul>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        
+<section class="hero">
+    <div class="container hero-container">
+        <h1>La Auditor&#xED;a de ROI y Viabilidad de IA Empresarial</h1>
+        <div class="hero-text">
+            <h3>&#xBF;Por d&#xF3;nde deber&#xED;a empezar su empresa?</h3>
+        </div>
+    </div>
+</section>
+
+<section class="audit-intro">
+    <div class="container">
+        <div class="support-steps">
+            <h2>Qu&#xE9; esperar</h2>
+            <ol>
+                    <li>
+                        <strong>La auditor&#xED;a de 60 segundos:</strong> Responda a cuatro preguntas estrat&#xE9;gicas para identificar sus cuellos de botella operativos y sus necesidades de soberan&#xED;a de datos.
+                    </li>
+                    <li>
+                        <strong>El diagn&#xF3;stico personalizado:</strong> Un Arquitecto de IA Empresarial de TIEG revisar&#xE1; manualmente su matriz.
+                    </li>
+                    <li>
+                        <strong>El triaje ejecutivo:</strong> Recibir&#xE1; un diagn&#xF3;stico independiente de proveedores por correo electr&#xF3;nico, junto con una invitaci&#xF3;n para una sesi&#xF3;n de triaje ejecutivo gratuita para trazar su plan de integraci&#xF3;n seguro.
+                    </li>
+            </ol>
+        </div>
+    </div>
+</section>
+
+<section class="advisory-callout">
+    <div class="container hero-container" style="text-align: center">
+        <h2>&#xBF;No est&#xE1; listo para una auditor&#xED;a t&#xE9;cnica?</h2>
+        <p style="max-width: 700px; margin: 1rem auto;">Si su equipo de liderazgo a&#xFA;n no se ha alineado sobre las reglas de soberan&#xED;a de datos, riesgos de cumplimiento o una visi&#xF3;n unificada de IA, le recomendamos comenzar con nuestra Estrategia Ejecutiva de IA y Asesor&#xED;a para Juntas Directivas.</p>
+        <a href="services.html#detail-board-advisory" class="btn-secondary">Explorar Asesor&#xED;a para Juntas Directivas</a>
+    </div>
+</section>
+
+<section class="audit-form-section">
+    <div class="container" style="max-width: 800px; margin: 0 auto; padding-bottom: 4rem;">
+        
+        <div class="preview-notice">
+            <i class="fas fa-info-circle"></i> 
+            Tenga en cuenta: Para garantizar la mayor precisi&#xF3;n en nuestra revisi&#xF3;n arquitect&#xF3;nica, la herramienta de diagn&#xF3;stico a continuaci&#xF3;n se ofrece actualmente solo en ingl&#xE9;s.
+        </div>
+
+        <div class="audit-form-wrapper">
+            <iframe data-tally-src="https://tally.so/embed/9qx1y5?alignLeft=1&dynamicHeight=1" loading="lazy" width="100%" height="1499" frameborder="0" marginheight="0" marginwidth="0" title="The Enterprise AI ROI & Feasibility Audit"></iframe>
+        </div>
+     </div>
+</section>
+
+
+    </main>
+
+        <nav class="footer-sitemap" aria-label="Footer Navigation">
+            <div class="container sitemap-grid">
+                    <div class="sitemap-column">
+                        <h4>Empresa</h4>
+                        <ul>
+                                <li>
+                                    <a href="index.html">
+                                        Inicio
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="about.html">
+                                        Qui&#xE9;nes somos
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="partners.html">
+                                        Socios y Alianzas
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="careers.html">
+                                        Carreras
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="contact.html">
+                                        Contacto y Consultor&#xED;a
+                                    </a>
+                                </li>
+                        </ul>
+                    </div>
+                    <div class="sitemap-column">
+                        <h4>Plataforma y Servicios</h4>
+                        <ul>
+                                <li>
+                                    <a href="offline-ai-desktop-app.html">
+                                        App de Escritorio de IA Offline
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="secure-on-premise-ai-server.html">
+                                        Servidor Local Seguro
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="agentic-ai-workflows.html">
+                                        Flujos de Trabajo de IA Ag&#xE9;ntica
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="services.html">
+                                        Servicios y Soluciones
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="custom-ai-agent-development.html">
+                                        Desarrollo de Agentes de IA Personalizados
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="ai-strategy-consulting.html">
+                                        Consultor&#xED;a de Estrategia de IA
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="security.html">
+                                        Resumen de Seguridad
+                                    </a>
+                                </li>
+                        </ul>
+                    </div>
+                    <div class="sitemap-column">
+                        <h4>Tecnolog&#xED;a y Casos de Uso</h4>
+                        <ul>
+                                <li>
+                                    <a href="private-rag-enterprise-search.html">
+                                        RAG Privado y B&#xFA;squeda
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="gpu-accelerated-local-ai.html">
+                                        IA Local Acelerada por GPU
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="run-ai-locally-without-internet.html">
+                                        Ejecutar IA Localmente (Offline)
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="ai-data-privacy-compliance.html">
+                                        Cumplimiento de Privacidad de Datos
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="secure-local-ai-for-legal-finance.html">
+                                        IA para Legal y Finanzas
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="ai-predictive-maintenance-manufacturing.html">
+                                        Mantenimiento Predictivo
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="ai-customer-support-automation.html">
+                                        Automatizaci&#xF3;n de Soporte al Cliente
+                                    </a>
+                                </li>
+                        </ul>
+                    </div>
+                    <div class="sitemap-column">
+                        <h4>Recursos y Soporte</h4>
+                        <ul>
+                                <li>
+                                    <a href="demo.html">
+                                        Demo en Vivo
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="case-studies.html">
+                                        Casos de Estudio
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="resources.html">
+                                        Recursos e Insights
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="faqs.html">
+                                        Preguntas Frecuentes
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="legal.html">
+                                        Legal y Pol&#xED;ticas
+                                    </a>
+                                </li>
+                        </ul>
+                    </div>
+            </div>
+        </nav>
+
+    <footer>
+        <div class="container">
+            <p>&#xA9; 2025 The Intelligent Enterprise Group. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="/js/swiper-bundle.min.js"></script>
+    <script src="/js/cdn.min.js" defer></script>
+    <script src="/js/gsap.min.js"></script>
+    <script src="/js/DrawSVGPlugin.min.js"></script>
+
+    <script type="module" src="/js/themeToggle.js"></script>
+    <script type="module">
+        import { toggleTheme, getCurrentTheme } from '/js/themeToggle.js';
+        const checkbox = document.getElementById('theme-checkbox');
+        const themeLabel = document.getElementById('theme-label');
+
+        if (getCurrentTheme() === 'dark') {
+            checkbox.checked = true;
+            themeLabel.textContent = 'Modo oscuro';
+        } else {
+            themeLabel.textContent = 'Modo claro';
+        }
+
+        checkbox.addEventListener('change', () => {
+            toggleTheme();
+            themeLabel.textContent = checkbox.checked ? 'Modo oscuro' : 'Modo claro';
+        });
+    </script>
+
+    <button id="back-to-top" aria-label="Back to Top">Arriba</button>
+
+    
+<script>
+    var d = document, w = "https://tally.so/widgets/embed.js", v = function () { "undefined" != typeof Tally ? Tally.loadEmbeds() : d.querySelectorAll("iframe[data-tally-src]:not([src])").forEach((function (e) { e.src = e.dataset.tallySrc })) }; if ("undefined" != typeof Tally) v(); else if (d.querySelector('script[src="' + w + '"]') == null) { var s = d.createElement("script"); s.src = w, s.onload = v, s.onerror = v, d.body.appendChild(s); }
+</script>
+
+<script>
+    window.onload = function () {
+        if (typeof gsap !== 'undefined') {
+            gsap.from(".hero h1", { duration: 1.2, opacity: 0, y: -50, ease: "power2.out" });
+            gsap.from(".hero-text h3", { duration: 1.2, opacity: 0, y: 50, ease: "power2.out", delay: 0.2 });
+            gsap.from(".support-steps", { duration: 1, opacity: 0, y: 20, ease: "power2.out", delay: 0.4 });
+            gsap.from(".audit-form-section", { duration: 1, opacity: 0, y: 20, ease: "power2.out", delay: 0.6 });
+        }
+    };
+</script>
+
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            if (window.innerWidth < 768) return;
+
+            const intro = document.querySelector("#right-intro");
+            if (!intro) return;
+
+            const tl = gsap.timeline();
+            let isClosing = false; // Flag to prevent double-triggering the exit
+
+            // --- 1. DEFINE THE EXIT FUNCTION ---
+            const closeIntro = () => {
+                if (isClosing) return;
+                isClosing = true;
+
+                // Kill the main timeline so it doesn't keep running in the background
+                tl.kill();
+
+                // Create a dedicated exit timeline for a fast, responsive feel
+                const exitTl = gsap.timeline();
+
+                /* ROBOT FAST REVEAL & RUN */
+                exitTl.to(".robot-runner", { opacity: 1, duration: 0.2 });
+                exitTl.to(".robot-runner", {
+                    x: 400,
+                    duration: 0.8,
+                    ease: "power2.in"
+                }, "-=0.1");
+
+                /* PANEL SLIDE-OUT */
+                exitTl.to("#right-intro", {
+                    duration: 0.8,
+                    transform: "translateX(100%)",
+                    ease: "power3.inOut",
+                    onComplete: () => {
+                        intro.style.display = "none";
+                        // Remove scroll listener once closed
+                        window.removeEventListener("scroll", handleScroll);
+                    }
+                }, "-=0.6");
+            };
+
+            // --- 2. THE SCROLL LISTENER ---
+            const handleScroll = () => {
+                if (window.scrollY > 20) { // Trigger after 20px of scrolling
+                    closeIntro();
+                }
+            };
+            window.addEventListener("scroll", handleScroll);
+
+            // --- 3. ORIGINAL ANIMATION SEQUENCE ---
+            /* PANEL SLIDE-IN */
+            tl.to("#right-intro", {
+                duration: 0.8,
+                transform: "translateX(0%)",
+                ease: "power3.out"
+            });
+
+            /* PARTICLES */
+            for (let i = 0; i < 20; i++) {
+                const p = document.createElement("div");
+                p.className = "particle";
+                p.style.position = "absolute";
+                p.style.width = "4px";
+                p.style.height = "4px";
+                p.style.background = "rgba(0,174,239,0.35)";
+                p.style.borderRadius = "50%";
+                p.style.left = Math.random() * 100 + "%";
+                p.style.top = "100%";
+                document.querySelector(".intro-particles").appendChild(p);
+
+                gsap.to(p, {
+                    y: -window.innerHeight - 100,
+                    duration: 4 + Math.random() * 4,
+                    delay: Math.random() * 2,
+                    repeat: -1,
+                    ease: "none"
+                });
+            }
+
+            /* SIGNAL LINE & PULSE */
+            tl.to(".signal-main", { height: "60%", duration: 0.8, ease: "power2.out" })
+                .to(".loading-dots", { opacity: 1, duration: 0.3 })
+                .to(".pulse", { opacity: 1, scale: 1.4, duration: 0.3, stagger: 0.15 })
+                .to(".pulse", { scale: 0.6, opacity: 0.4, duration: 0.3, stagger: 0.15 })
+                .to(".loading-dots", { opacity: 0, duration: 0.3 });
+
+            /* TEXT REVEAL */
+            tl.to(".t1", { opacity: 1, x: 0, duration: 0.6 })
+                .to(".t2", { opacity: 1, x: 0, duration: 0.6 })
+                .to(".t3", { opacity: 1, x: 0, duration: 0.6 })
+                .to(".t4", { opacity: 1, x: 0, duration: 0.6 });
+
+            /* ROBOT ARM/LEG LOOPS (Independent of timeline) */
+            const robotParts = [
+                { el: ".arm-left", r: 30 }, { el: ".arm-right", r: -30 },
+                { el: ".leg-left", r: -30 }, { el: ".leg-right", r: 30 }
+            ];
+            robotParts.forEach(part => {
+                gsap.to(part.el, { rotation: part.r, yoyo: true, repeat: -1, duration: 0.2, ease: "power1.inOut" });
+            });
+
+            // --- 4. AUTO-EXIT (If user doesn't scroll) ---
+            tl.to(".robot-runner", { opacity: 1, duration: 0.3, delay: 5 });
+            tl.to(".robot-runner", { x: 400, duration: 1.2, ease: "power2.inOut" }, "-=0.2");
+            tl.to("#right-intro", {
+                duration: 1,
+                transform: "translateX(100%)",
+                ease: "power3.inOut",
+                onComplete: () => {
+                    if (!isClosing) { // Only hide if scroll didn't already trigger it
+                        intro.style.display = "none";
+                        window.removeEventListener("scroll", handleScroll);
+                    }
+                }
+            }, "-=0.6");
+        });
+    </script>
+    <!-- Cloudflare Web Analytics --><script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "e290b7bc8f584d41990f177692bdcf23"}'></script><!-- End Cloudflare Web Analytics -->
+</body>
+</html>
