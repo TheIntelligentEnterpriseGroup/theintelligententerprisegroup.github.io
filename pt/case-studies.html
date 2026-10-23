@@ -175,17 +175,17 @@
 <section class="case-studies" x-data="{ selected: '' }">
     <div class="container">
         <div class="case-studies-grid">
-                    <article id="case-techComp" class="case-study-card" :class="{ 'active': selected === 'techComp' }">
-                            <img src="/images/reenergizing-brand-com.jpg" alt="Startup - Reenergizando a Comunica&#xE7;&#xE3;o da Marca" />
+                    <article id="case-legalComp" class="case-study-card" :class="{ 'active': selected === 'legalComp' }">
+                            <img src="/images/legal-compliance-audit.jpg" alt="Jur&#xED;dico e Financeiro - Due Diligence M&amp;A Isolada" />
                         <div class="card-content">
-                            <h3>Reenergizando a Comunica&#xE7;&#xE3;o da Marca</h3>
+                            <h3>Due Diligence de M&amp;A Isolada (Air-Gapped)</h3>
 
                             <p>
-                              Startup transforma sua mensagem de marca usando IA criativa para entregar campanhas consistentes e envolventes.
- <span>Exemplo ilustrativo de como nosso Aplicativo Desktop (Profissional/Business&#x2011;Desktop) com IA Escritora Criativa e IA Copywriter pode apoiar startups no desenvolvimento de mensagens de marca consistentes e envolventes.</span>                             </p>
+                              Uma empresa de consultoria automatiza auditorias profundas de contratos em pastas de transa&#xE7;&#xF5;es de 500 p&#xE1;ginas sem carregar PI confidencial para a nuvem.
+ <span>Exemplo ilustrativo de como nosso Sovereign Edge Appliance usa Compliance AI e Private RAG para impor um isolamento rigoroso de dados durante auditorias confidenciais.</span>                             </p>
 
                             <a href="#" class="btn"
-                               @click.prevent="selected = 'techComp';$nextTick(() => document.getElementById('expanded-case').scrollIntoView({ behavior: 'smooth', block: 'start' }));">
+                               @click.prevent="selected = 'legalComp';$nextTick(() => document.getElementById('expanded-case').scrollIntoView({ behavior: 'smooth', block: 'start' }));">
                                 Saiba Mais
                             </a>
                         </div>
@@ -319,49 +319,49 @@
                     &times;
                 </button>
 
-                        <div x-show="selected === 'techComp'" x-transition>
-                        <h1>Reenergizando a Comunica&#xE7;&#xE3;o da Marca</h1>
-                        <h3>Cliente: Startup</h3>
+                        <div x-show="selected === 'legalComp'" x-transition>
+                        <h1>Due Diligence de M&amp;A Isolada (Air-Gapped)</h1>
+                        <h3>Cliente: Empresa de Consultoria e Advocacia Tier-1</h3>
 
                         <h4>Contexto</h4>
-                        <p>Uma startup promissora com um produto inovador enfrenta grandes desafios para comunicar sua marca de forma eficaz a investidores e clientes. Apesar das ofertas inovadoras, a mensagem carecia de consist&#xEA;ncia, deixando a narrativa geral fragmentada.</p>
+                        <p>Uma importante empresa de consultoria lida com pastas de transa&#xE7;&#xF5;es de fus&#xF5;es e aquisi&#xE7;&#xF5;es (M&amp;A) altamente confidenciais. Regras estritas da ordem dos advogados e restri&#xE7;&#xF5;es de NDA pro&#xED;bem explicitamente o upload de dados do cliente para LLMs de nuvem externa.</p>
 
                         <h4>Desafio</h4>
-                        <p>O principal desafio era produzir conte&#xFA;do de alta qualidade e envolvente em v&#xE1;rios canais de forma r&#xE1;pida e consistente, possibilitando uma voz de marca unificada e convincente.</p>
+                        <p>A empresa precisava de uma maneira de reduzir drasticamente as horas fatur&#xE1;veis gastas auditando manualmente centenas de contratos em busca de cl&#xE1;usulas de responsabilidade, mantendo uma postura de seguran&#xE7;a 100% isolada (air-gapped).</p>
 
                         <h4>A Solu&#xE7;&#xE3;o com IA</h4>
-                        <p>Ao integrar a IA Escritora Criativa para a idea&#xE7;&#xE3;o inicial e a IA Copywriter para refinar a narrativa, foi desenvolvida uma campanha coesa que se alinhava de perto com os objetivos estrat&#xE9;gicos de marketing.</p>
+                        <p>Ao implantar o Sovereign Edge Appliance localmente, a empresa utilizou o Compliance AI e o Librarian AI para ingerir, fragmentar (shard) e consultar reposit&#xF3;rios massivos de documentos inteiramente on-premise.</p>
 
                         <h4>Processo de Implementa&#xE7;&#xE3;o</h4>
                                 <ol>
                                     <li>
- <strong>Descoberta e An&#xE1;lise:</strong>                                         Foi realizada uma revis&#xE3;o aprofundada das mensagens existentes e do posicionamento geral de mercado.
+ <strong>Implanta&#xE7;&#xE3;o Isolada (Air-Gapped):</strong>                                         Instalou o motor C&#x2B;&#x2B; nativo diretamente em esta&#xE7;&#xF5;es de trabalho de analistas seguras e desconectadas.
                                     </li>
                                     <li>
- <strong>Desenvolvimento de Conte&#xFA;do:</strong>                                         Foram geradas e selecionadas v&#xE1;rias propostas de campanha usando rascunhos impulsionados por IA.
+ <strong>Fragmenta&#xE7;&#xE3;o (Sharding) de Vetores Isolada:</strong>                                         Estruturou os dados do cliente em fragmentos SQLite distintos e fisicamente separados para garantir zero contamina&#xE7;&#xE3;o cruzada entre diferentes negocia&#xE7;&#xF5;es de M&amp;A.
                                     </li>
                                     <li>
- <strong>Otimiza&#xE7;&#xE3;o Cont&#xED;nua:</strong>                                         As mensagens foram testadas e refinadas em v&#xE1;rios canais, com ajustes em tempo real baseados no feedback do p&#xFA;blico.
+ <strong>Extra&#xE7;&#xE3;o Automatizada de Cl&#xE1;usulas:</strong>                                         Executou consultas direcionadas de m&#xFA;ltiplos saltos (multi-hop) para extrair e sinalizar instantaneamente cl&#xE1;usulas de responsabilidade em n&#xE3;o conformidade em mais de 10.000 p&#xE1;ginas de texto.
                                     </li>
                                 </ol>
 
                         <h4>Resultados</h4>
                                 <ul>
-                                    <li>Atingiu um aumento de 50% no engajamento do p&#xFA;blico em 3 meses.</li>
-                                    <li>Maior interesse de investidores, resultando em um aumento de 20% nas consultas de financiamento.</li>
-                                    <li>Redu&#xE7;&#xE3;o de 40% nos ciclos de produ&#xE7;&#xE3;o de conte&#xFA;do, permitindo prazos de entrega mais r&#xE1;pidos.</li>
+                                    <li>Reduziu o tempo das auditorias preliminares de contratos em 60%.</li>
+                                    <li>Alcan&#xE7;ou conformidade absoluta com GDPR e NDA com zero chamadas de API externas.</li>
+                                    <li>Eliminou os custos vari&#xE1;veis de tokens na nuvem, fazendo a transi&#xE7;&#xE3;o da IA para um CapEx previs&#xED;vel.</li>
                                 </ul>
 
                         <h4>Principais Li&#xE7;&#xF5;es</h4>
                                 <ul>
-                                    <li>A integra&#xE7;&#xE3;o estrat&#xE9;gica de IA pode melhorar rapidamente a comunica&#xE7;&#xE3;o da marca.</li>
-                                    <li>Testes em tempo real e ciclos de feedback impulsionam a melhoria cont&#xED;nua.</li>
-                                    <li>M&#xE9;tricas quantific&#xE1;veis, como taxas de engajamento e consultas de financiamento, validam o sucesso.</li>
+                                    <li>A infer&#xEA;ncia local nativa &#xE9; obrigat&#xF3;ria para setores regidos pelo sigilo profissional.</li>
+                                    <li>O sharding particionado do SQLite fornece garantias matem&#xE1;ticas contra o vazamento de dados.</li>
+                                    <li>Modelos de conformidade especializados superam os chatbots em nuvem gen&#xE9;ricos em tarefas regulat&#xF3;rias r&#xED;gidas.</li>
                                 </ul>
 
                             <blockquote>
-                                Nossa narrativa de marca foi transformada da noite para o dia. A abordagem baseada em IA elevou nossa comunica&#xE7;&#xE3;o e deu clareza &#xE0; nossa equipe.
-                                    <br />&#x2014; Poderia dizer um Diretor de Marketing                            </blockquote>
+                                A capacidade de executar an&#xE1;lises avan&#xE7;adas de contratos multiagentes inteiramente atr&#xE1;s de nosso pr&#xF3;prio firewall mudou nossa economia operacional da noite para o dia.
+                                    <br />&#x2014; Poderia dizer um S&#xF3;cio-Gerente, Empresa de Consultoria Jur&#xED;dica                            </blockquote>
 
                         <em>Este estudo de caso &#xE9; um exemplo fict&#xED;cio criado para demonstrar aplica&#xE7;&#xF5;es potenciais da nossa tecnologia. Ele n&#xE3;o descreve um projeto real com cliente (geralmente confidencial).</em>
                     </div>
@@ -786,7 +786,7 @@
                         <ul>
                                 <li>
                                     <a href="offline-ai-desktop-app.html">
-                                        App de Desktop IA Offline
+                                        Appliance Edge Isolado (Air-Gapped)
                                     </a>
                                 </li>
                                 <li>
@@ -836,7 +836,7 @@
                                 </li>
                                 <li>
                                     <a href="run-ai-locally-without-internet.html">
-                                        Executar IA Localmente (Offline)
+                                        Execu&#xE7;&#xE3;o Soberana Zero-Trust
                                     </a>
                                 </li>
                                 <li>

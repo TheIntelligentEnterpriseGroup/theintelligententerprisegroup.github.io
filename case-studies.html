@@ -175,17 +175,17 @@
 <section class="case-studies" x-data="{ selected: '' }">
     <div class="container">
         <div class="case-studies-grid">
-                    <article id="case-techComp" class="case-study-card" :class="{ 'active': selected === 'techComp' }">
-                            <img src="/images/reenergizing-brand-com.jpg" alt="Startup - Re-Energizing Brand Communications" />
+                    <article id="case-legalComp" class="case-study-card" :class="{ 'active': selected === 'legalComp' }">
+                            <img src="/images/legal-compliance-audit.jpg" alt="Legal &amp; Financial - Air-Gapped M&amp;A Due Diligence" />
                         <div class="card-content">
-                            <h3>Re-Energizing Brand Communications</h3>
+                            <h3>Air-Gapped M&amp;A Due Diligence</h3>
 
                             <p>
-                              Startup transforms its brand messaging using creative AI to deliver consistent, compelling campaigns.
- <span>Illustrative example of how our Desktop App (Professional/Business&#x2011;Desktop) with Creative Writer AI and Copywriter AI could support startups in developing consistent, compelling brand messaging.</span>                             </p>
+                              An advisory firm automates deep-dive contract audits on 500-page transaction binders without uploading sensitive IP to the cloud.
+ <span>Illustrative example of how our Sovereign Edge Appliance uses Compliance AI and Private RAG to enforce strict data isolation during confidential audits.</span>                             </p>
 
                             <a href="#" class="btn"
-                               @click.prevent="selected = 'techComp';$nextTick(() => document.getElementById('expanded-case').scrollIntoView({ behavior: 'smooth', block: 'start' }));">
+                               @click.prevent="selected = 'legalComp';$nextTick(() => document.getElementById('expanded-case').scrollIntoView({ behavior: 'smooth', block: 'start' }));">
                                 Read More
                             </a>
                         </div>
@@ -319,49 +319,49 @@
                     &times;
                 </button>
 
-                        <div x-show="selected === 'techComp'" x-transition>
-                        <h1>Re-Energizing Brand Communications</h1>
-                        <h3>Client: Startup</h3>
+                        <div x-show="selected === 'legalComp'" x-transition>
+                        <h1>Air-Gapped M&amp;A Due Diligence</h1>
+                        <h3>Client: Tier-1 Legal &amp; Advisory Firm</h3>
 
                         <h4>Background</h4>
-                        <p>A promising startup with a groundbreaking product faces significant challenges in communicating its brand effectively to investors and customers. Despite innovative offerings, the messaging lacked consistency, leaving the overall narrative fragmented.</p>
+                        <p>A prominent advisory firm handles highly confidential M&amp;A transaction binders. Strict bar association rules and NDA constraints explicitly prohibit uploading client data to external cloud LLMs.</p>
 
                         <h4>Challenge</h4>
-                        <p>The key challenge was to produce high-quality, engaging content across multiple channels swiftly and consistently, enabling a unified and compelling brand voice.</p>
+                        <p>The firm needed a way to drastically reduce the billable hours spent manually auditing hundreds of contracts for liability clauses, while maintaining a 100% air-gapped security posture.</p>
 
                         <h4>The AI-Enabled Solution</h4>
-                        <p>By integrating Creative Writer AI for initial ideation and Copywriter AI for refining the narrative, a cohesive campaign was developed that closely aligned with strategic marketing goals.</p>
+                        <p>By deploying the Sovereign Edge Appliance locally, the firm utilized Compliance AI and the Librarian AI to ingest, shard, and query massive document repositories entirely on-premise.</p>
 
                         <h4>Implementation Process</h4>
                                 <ol>
                                     <li>
- <strong>Discovery &amp; Analysis:</strong>                                         Conducted an in-depth review of existing messaging and overall market positioning.
+ <strong>Air-Gapped Deployment:</strong>                                         Installed the native C&#x2B;&#x2B; engine directly onto secure, disconnected analyst workstations.
                                     </li>
                                     <li>
- <strong>Content Development:</strong>                                         Generated and curated multiple campaign proposals using AI-driven drafts.
+ <strong>Isolated Vector Sharding:</strong>                                         Structured client data into distinct, physically separated SQLite shards to guarantee zero cross-contamination between different M&amp;A deals.
                                     </li>
                                     <li>
- <strong>Continuous Optimization:</strong>                                         Tested and refined messaging across channels, making real-time adjustments based on audience feedback.
+ <strong>Automated Clause Extraction:</strong>                                         Ran targeted multi-hop queries to instantly extract and flag non-compliant liability clauses across 10,000&#x2B; pages of text.
                                     </li>
                                 </ol>
 
                         <h4>Results</h4>
                                 <ul>
-                                    <li>Achieved a 50% increase in audience engagement within 3 months.</li>
-                                    <li>Enhanced investor interest, resulting in a 20% boost in funding inquiries.</li>
-                                    <li>Reduced content production cycles by 40%, enabling faster turnaround times.</li>
+                                    <li>Reduced preliminary contract audit times by 60%.</li>
+                                    <li>Achieved absolute GDPR and NDA compliance with zero external API calls.</li>
+                                    <li>Eliminated variable cloud token costs, transitioning AI to a predictable CapEx.</li>
                                 </ul>
 
                         <h4>Key Takeaways</h4>
                                 <ul>
-                                    <li>Strategic AI integration can rapidly enhance brand communications.</li>
-                                    <li>Real-time testing and feedback loops drive continuous improvement.</li>
-                                    <li>Quantifiable metrics such as engagement rates and funding inquiries validate success.</li>
+                                    <li>Native local inference is mandatory for industries governed by professional secrecy.</li>
+                                    <li>Partitioned SQLite sharding provides mathematical guarantees against data leakage.</li>
+                                    <li>Specialized compliance models out-perform generic cloud chatbots on rigid regulatory tasks.</li>
                                 </ul>
 
                             <blockquote>
-                                Our brand narrative was transformed overnight. The AI-driven approach elevated our communications and empowered our team with clarity.
-                                    <br />&#x2014; A Marketing Director could say                            </blockquote>
+                                The ability to run advanced multi-agent contract analysis entirely behind our own firewall changed our operational economics overnight.
+                                    <br />&#x2014; Managing Partner might say, Legal Advisory Firm                            </blockquote>
 
                         <em>This case study is a fictional example created to demonstrate potential applications of our technology. It does not describe an actual client engagement (usually confidential).</em>
                     </div>
@@ -786,7 +786,7 @@
                         <ul>
                                 <li>
                                     <a href="offline-ai-desktop-app.html">
-                                        Offline AI Desktop App
+                                        Air-Gapped Edge Appliance
                                     </a>
                                 </li>
                                 <li>
@@ -836,7 +836,7 @@
                                 </li>
                                 <li>
                                     <a href="run-ai-locally-without-internet.html">
-                                        Run AI Locally (Offline)
+                                        Zero-Trust Sovereign Execution
                                     </a>
                                 </li>
                                 <li>

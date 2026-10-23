@@ -175,17 +175,17 @@
 <section class="case-studies" x-data="{ selected: '' }">
     <div class="container">
         <div class="case-studies-grid">
-                    <article id="case-techComp" class="case-study-card" :class="{ 'active': selected === 'techComp' }">
-                            <img src="/images/reenergizing-brand-com.jpg" alt="&#x521D;&#x521B;&#x516C;&#x53F8; - &#x91CD;&#x632F;&#x54C1;&#x724C;&#x4F20;&#x64AD;" />
+                    <article id="case-legalComp" class="case-study-card" :class="{ 'active': selected === 'legalComp' }">
+                            <img src="/images/legal-compliance-audit.jpg" alt="&#x6CD5;&#x5F8B;&#x4E0E;&#x91D1;&#x878D; - &#x7269;&#x7406;&#x9694;&#x79BB;&#x7684;&#x5E76;&#x8D2D;&#x5C3D;&#x804C;&#x8C03;&#x67E5;" />
                         <div class="card-content">
-                            <h3>&#x91CD;&#x632F;&#x54C1;&#x724C;&#x4F20;&#x64AD;</h3>
+                            <h3>&#x7269;&#x7406;&#x9694;&#x79BB;&#x7684;&#x5E76;&#x8D2D; (M&amp;A) &#x5C3D;&#x804C;&#x8C03;&#x67E5;</h3>
 
                             <p>
-                              &#x521D;&#x521B;&#x516C;&#x53F8;&#x5229;&#x7528;&#x521B;&#x610F; AI &#x6539;&#x9020;&#x54C1;&#x724C;&#x4FE1;&#x606F;&#xFF0C;&#x6253;&#x9020;&#x4E00;&#x81F4;&#x4E14;&#x6709;&#x5438;&#x5F15;&#x529B;&#x7684;&#x8425;&#x9500;&#x6D3B;&#x52A8;&#x3002;
- <span>&#x793A;&#x4F8B;&#x5C55;&#x793A;&#x6211;&#x4EEC;&#x7684;&#x684C;&#x9762;&#x5E94;&#x7528;&#xFF08;&#x4E13;&#x4E1A;&#x7248;/&#x5546;&#x4E1A;&#x684C;&#x9762;&#x7248;&#xFF09;&#x7ED3;&#x5408;&#x521B;&#x610F;&#x5199;&#x4F5C; AI &#x548C;&#x6587;&#x6848;&#x64B0;&#x5199; AI &#x5982;&#x4F55;&#x5E2E;&#x52A9;&#x521D;&#x521B;&#x516C;&#x53F8;&#x5F00;&#x53D1;&#x4E00;&#x81F4;&#x4E14;&#x6709;&#x5438;&#x5F15;&#x529B;&#x7684;&#x54C1;&#x724C;&#x4FE1;&#x606F;&#x3002;</span>                             </p>
+                              &#x4E00;&#x5BB6;&#x54A8;&#x8BE2;&#x516C;&#x53F8;&#x5728;&#x4E0D;&#x5C06;&#x654F;&#x611F;&#x77E5;&#x8BC6;&#x4EA7;&#x6743;&#x4E0A;&#x4F20;&#x5230;&#x4E91;&#x7AEF;&#x7684;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x5BF9; 500 &#x9875;&#x7684;&#x4EA4;&#x6613;&#x6D3B;&#x9875;&#x5939;&#x8FDB;&#x884C;&#x4E86;&#x6DF1;&#x5EA6;&#x7684;&#x81EA;&#x52A8;&#x5408;&#x540C;&#x5BA1;&#x8BA1;&#x3002;
+ <span>&#x8BF4;&#x660E;&#x4E86;&#x6211;&#x4EEC;&#x7684;&#x4E3B;&#x6743;&#x8FB9;&#x7F18;&#x4E00;&#x4F53;&#x673A;&#x5982;&#x4F55;&#x5728;&#x673A;&#x5BC6;&#x5BA1;&#x8BA1;&#x671F;&#x95F4;&#x4F7F;&#x7528;&#x5408;&#x89C4; AI &#x548C;&#x79C1;&#x6709; RAG &#x5F3A;&#x5236;&#x6267;&#x884C;&#x4E25;&#x683C;&#x7684;&#x6570;&#x636E;&#x9694;&#x79BB;&#x7684;&#x793A;&#x4F8B;&#x3002;</span>                             </p>
 
                             <a href="#" class="btn"
-                               @click.prevent="selected = 'techComp';$nextTick(() => document.getElementById('expanded-case').scrollIntoView({ behavior: 'smooth', block: 'start' }));">
+                               @click.prevent="selected = 'legalComp';$nextTick(() => document.getElementById('expanded-case').scrollIntoView({ behavior: 'smooth', block: 'start' }));">
                                 &#x4E86;&#x89E3;&#x66F4;&#x591A;
                             </a>
                         </div>
@@ -319,49 +319,49 @@
                     &times;
                 </button>
 
-                        <div x-show="selected === 'techComp'" x-transition>
-                        <h1>&#x91CD;&#x632F;&#x54C1;&#x724C;&#x4F20;&#x64AD;</h1>
-                        <h3>&#x5BA2;&#x6237;&#xFF1A;&#x521D;&#x521B;&#x516C;&#x53F8;</h3>
+                        <div x-show="selected === 'legalComp'" x-transition>
+                        <h1>&#x7269;&#x7406;&#x9694;&#x79BB;&#x7684;&#x5E76;&#x8D2D; (M&amp;A) &#x5C3D;&#x804C;&#x8C03;&#x67E5;</h1>
+                        <h3>&#x5BA2;&#x6237;&#xFF1A;&#x4E00;&#x7EA7;&#x6CD5;&#x5F8B;&#x4E0E;&#x54A8;&#x8BE2;&#x516C;&#x53F8;</h3>
 
                         <h4>&#x80CC;&#x666F;</h4>
-                        <p>&#x4E00;&#x5BB6;&#x6709;&#x524D;&#x666F;&#x7684;&#x521D;&#x521B;&#x516C;&#x53F8;&#x62E5;&#x6709;&#x7A81;&#x7834;&#x6027;&#x7684;&#x4EA7;&#x54C1;&#xFF0C;&#x4F46;&#x5728;&#x5411;&#x6295;&#x8D44;&#x8005;&#x548C;&#x5BA2;&#x6237;&#x6709;&#x6548;&#x4F20;&#x8FBE;&#x54C1;&#x724C;&#x65F6;&#x9762;&#x4E34;&#x91CD;&#x5927;&#x6311;&#x6218;&#x3002;&#x5C3D;&#x7BA1;&#x4EA7;&#x54C1;&#x5177;&#x6709;&#x521B;&#x65B0;&#x6027;&#xFF0C;&#x4F46;&#x4FE1;&#x606F;&#x7F3A;&#x4E4F;&#x4E00;&#x81F4;&#x6027;&#xFF0C;&#x5BFC;&#x81F4;&#x6574;&#x4F53;&#x53D9;&#x4E8B;&#x652F;&#x79BB;&#x7834;&#x788E;&#x3002;</p>
+                        <p>&#x4E00;&#x5BB6;&#x8457;&#x540D;&#x7684;&#x54A8;&#x8BE2;&#x516C;&#x53F8;&#x5904;&#x7406;&#x9AD8;&#x5EA6;&#x673A;&#x5BC6;&#x7684;&#x5E76;&#x8D2D; (M&amp;A) &#x4EA4;&#x6613;&#x6D3B;&#x9875;&#x5939;&#x3002;&#x4E25;&#x683C;&#x7684;&#x5F8B;&#x5E08;&#x534F;&#x4F1A;&#x89C4;&#x5219;&#x548C;&#x4FDD;&#x5BC6;&#x534F;&#x8BAE; (NDA) &#x9650;&#x5236;&#x660E;&#x786E;&#x7981;&#x6B62;&#x5C06;&#x5BA2;&#x6237;&#x6570;&#x636E;&#x4E0A;&#x4F20;&#x5230;&#x5916;&#x90E8;&#x4E91; LLM&#x3002;</p>
 
                         <h4>&#x6311;&#x6218;</h4>
-                        <p>&#x4E3B;&#x8981;&#x6311;&#x6218;&#x662F;&#x5728;&#x591A;&#x4E2A;&#x6E20;&#x9053;&#x5FEB;&#x901F;&#x4E14;&#x4E00;&#x81F4;&#x5730;&#x5236;&#x4F5C;&#x9AD8;&#x8D28;&#x91CF;&#x3001;&#x5F15;&#x4EBA;&#x5165;&#x80DC;&#x7684;&#x5185;&#x5BB9;&#xFF0C;&#x4ECE;&#x800C;&#x5F62;&#x6210;&#x7EDF;&#x4E00;&#x4E14;&#x6709;&#x5438;&#x5F15;&#x529B;&#x7684;&#x54C1;&#x724C;&#x58F0;&#x97F3;&#x3002;</p>
+                        <p>&#x8BE5;&#x516C;&#x53F8;&#x9700;&#x8981;&#x4E00;&#x79CD;&#x65B9;&#x6CD5;&#xFF0C;&#x5927;&#x5E45;&#x51CF;&#x5C11;&#x5728;&#x6570;&#x767E;&#x4EFD;&#x5408;&#x540C;&#x4E2D;&#x624B;&#x52A8;&#x5BA1;&#x8BA1;&#x8D23;&#x4EFB;&#x6761;&#x6B3E;&#x6240;&#x82B1;&#x8D39;&#x7684;&#x53EF;&#x8BA1;&#x8D39;&#x65F6;&#x95F4;&#xFF0C;&#x540C;&#x65F6;&#x4FDD;&#x6301; 100% &#x7269;&#x7406;&#x9694;&#x79BB;&#x7684;&#x5B89;&#x5168;&#x72B6;&#x6001;&#x3002;</p>
 
                         <h4>AI &#x9A71;&#x52A8;&#x7684;&#x89E3;&#x51B3;&#x65B9;&#x6848;</h4>
-                        <p>&#x901A;&#x8FC7;&#x6574;&#x5408;&#x521B;&#x610F;&#x5199;&#x4F5C; AI &#x8FDB;&#x884C;&#x521D;&#x6B65;&#x6784;&#x601D;&#xFF0C;&#x5E76;&#x4F7F;&#x7528;&#x6587;&#x6848;&#x64B0;&#x5199; AI &#x6765;&#x5B8C;&#x5584;&#x53D9;&#x4E8B;&#xFF0C;&#x5F00;&#x53D1;&#x51FA;&#x4E00;&#x4E2A;&#x4E0E;&#x6218;&#x7565;&#x8425;&#x9500;&#x76EE;&#x6807;&#x9AD8;&#x5EA6;&#x4E00;&#x81F4;&#x7684;&#x6574;&#x4F53;&#x6D3B;&#x52A8;&#x3002;</p>
+                        <p>&#x901A;&#x8FC7;&#x5728;&#x672C;&#x5730;&#x90E8;&#x7F72;&#x4E3B;&#x6743;&#x8FB9;&#x7F18;&#x4E00;&#x4F53;&#x673A;&#xFF0C;&#x8BE5;&#x516C;&#x53F8;&#x5229;&#x7528;&#x5408;&#x89C4; AI &#x548C;&#x56FE;&#x4E66;&#x7BA1;&#x7406;&#x5458; AI &#x5B8C;&#x5168;&#x5728;&#x672C;&#x5730;&#x63D0;&#x53D6;&#x3001;&#x5206;&#x7247;&#x548C;&#x67E5;&#x8BE2;&#x5E9E;&#x5927;&#x7684;&#x6587;&#x6863;&#x5E93;&#x3002;</p>
 
                         <h4>&#x5B9E;&#x65BD;&#x8FC7;&#x7A0B;</h4>
                                 <ol>
                                     <li>
- <strong>&#x53D1;&#x73B0;&#x4E0E;&#x5206;&#x6790;:</strong>                                         &#x5BF9;&#x73B0;&#x6709;&#x4FE1;&#x606F;&#x4F20;&#x9012;&#x548C;&#x6574;&#x4F53;&#x5E02;&#x573A;&#x5B9A;&#x4F4D;&#x8FDB;&#x884C;&#x4E86;&#x6DF1;&#x5165;&#x5BA1;&#x67E5;&#x3002;
+ <strong>&#x7269;&#x7406;&#x9694;&#x79BB;&#x90E8;&#x7F72;:</strong>                                         &#x5C06;&#x539F;&#x751F; C&#x2B;&#x2B; &#x5F15;&#x64CE;&#x76F4;&#x63A5;&#x5B89;&#x88C5;&#x5230;&#x5B89;&#x5168;&#x3001;&#x65AD;&#x7F51;&#x7684;&#x5206;&#x6790;&#x5E08;&#x5DE5;&#x4F5C;&#x7AD9;&#x4E0A;&#x3002;
                                     </li>
                                     <li>
- <strong>&#x5185;&#x5BB9;&#x5F00;&#x53D1;:</strong>                                         &#x5229;&#x7528; AI &#x751F;&#x6210;&#x7684;&#x8349;&#x7A3F;&#x751F;&#x6210;&#x5E76;&#x7B56;&#x5212;&#x4E86;&#x591A;&#x4E2A;&#x6D3B;&#x52A8;&#x65B9;&#x6848;&#x3002;
+ <strong>&#x9694;&#x79BB;&#x7684;&#x5411;&#x91CF;&#x5206;&#x7247;:</strong>                                         &#x5C06;&#x5BA2;&#x6237;&#x6570;&#x636E;&#x7ED3;&#x6784;&#x5316;&#x4E3A;&#x72EC;&#x7ACB;&#x7684;&#x3001;&#x7269;&#x7406;&#x5206;&#x79BB;&#x7684; SQLite &#x5206;&#x7247;&#xFF0C;&#x4EE5;&#x4FDD;&#x8BC1;&#x4E0D;&#x540C;&#x7684;&#x5E76;&#x8D2D;&#x4EA4;&#x6613;&#x4E4B;&#x95F4;&#x96F6;&#x4EA4;&#x53C9;&#x6C61;&#x67D3;&#x3002;
                                     </li>
                                     <li>
- <strong>&#x6301;&#x7EED;&#x4F18;&#x5316;:</strong>                                         &#x5728;&#x5404;&#x6E20;&#x9053;&#x6D4B;&#x8BD5;&#x5E76;&#x4F18;&#x5316;&#x4FE1;&#x606F;&#x4F20;&#x9012;&#xFF0C;&#x6839;&#x636E;&#x53D7;&#x4F17;&#x53CD;&#x9988;&#x5B9E;&#x65F6;&#x8C03;&#x6574;&#x3002;
+ <strong>&#x81EA;&#x52A8;&#x6761;&#x6B3E;&#x63D0;&#x53D6;:</strong>                                         &#x8FD0;&#x884C;&#x6709;&#x9488;&#x5BF9;&#x6027;&#x7684;&#x591A;&#x8DF3; (Multi-hop) &#x67E5;&#x8BE2;&#xFF0C;&#x5728; 10,000 &#x591A;&#x9875;&#x6587;&#x672C;&#x4E2D;&#x5373;&#x65F6;&#x63D0;&#x53D6;&#x5E76;&#x6807;&#x8BB0;&#x4E0D;&#x5408;&#x89C4;&#x7684;&#x8D23;&#x4EFB;&#x6761;&#x6B3E;&#x3002;
                                     </li>
                                 </ol>
 
                         <h4>&#x7ED3;&#x679C;</h4>
                                 <ul>
-                                    <li>&#x5728; 3 &#x4E2A;&#x6708;&#x5185;&#x5B9E;&#x73B0;&#x53D7;&#x4F17;&#x53C2;&#x4E0E;&#x5EA6;&#x63D0;&#x5347; 50%&#x3002;</li>
-                                    <li>&#x589E;&#x5F3A;&#x4E86;&#x6295;&#x8D44;&#x8005;&#x5174;&#x8DA3;&#xFF0C;&#x878D;&#x8D44;&#x54A8;&#x8BE2;&#x589E;&#x52A0; 20%&#x3002;</li>
-                                    <li>&#x5185;&#x5BB9;&#x751F;&#x4EA7;&#x5468;&#x671F;&#x7F29;&#x77ED; 40%&#xFF0C;&#x5B9E;&#x73B0;&#x66F4;&#x5FEB;&#x7684;&#x4EA4;&#x4ED8;&#x3002;</li>
+                                    <li>&#x521D;&#x6B65;&#x5408;&#x540C;&#x5BA1;&#x8BA1;&#x65F6;&#x95F4;&#x51CF;&#x5C11;&#x4E86; 60%&#x3002;</li>
+                                    <li>&#x5728;&#x96F6;&#x5916;&#x90E8; API &#x8C03;&#x7528;&#x7684;&#x60C5;&#x51B5;&#x4E0B;&#x5B9E;&#x73B0;&#x4E86;&#x7EDD;&#x5BF9;&#x7684; GDPR &#x548C; NDA &#x5408;&#x89C4;&#x3002;</li>
+                                    <li>&#x6D88;&#x9664;&#x4E86;&#x53EF;&#x53D8;&#x7684;&#x4E91;&#x7AEF; Token &#x6210;&#x672C;&#xFF0C;&#x5C06; AI &#x8F6C;&#x53D8;&#x4E3A;&#x53EF;&#x9884;&#x6D4B;&#x7684;&#x8D44;&#x672C;&#x652F;&#x51FA; (CapEx)&#x3002;</li>
                                 </ul>
 
                         <h4>&#x5173;&#x952E;&#x6536;&#x83B7;</h4>
                                 <ul>
-                                    <li>&#x6218;&#x7565;&#x6027; AI &#x96C6;&#x6210;&#x53EF;&#x5FEB;&#x901F;&#x63D0;&#x5347;&#x54C1;&#x724C;&#x4F20;&#x64AD;&#x3002;</li>
-                                    <li>&#x5B9E;&#x65F6;&#x6D4B;&#x8BD5;&#x548C;&#x53CD;&#x9988;&#x5FAA;&#x73AF;&#x63A8;&#x52A8;&#x6301;&#x7EED;&#x6539;&#x8FDB;&#x3002;</li>
-                                    <li>&#x53C2;&#x4E0E;&#x7387;&#x548C;&#x878D;&#x8D44;&#x54A8;&#x8BE2;&#x7B49;&#x91CF;&#x5316;&#x6307;&#x6807;&#x9A8C;&#x8BC1;&#x4E86;&#x6210;&#x529F;&#x3002;</li>
+                                    <li>&#x539F;&#x751F;&#x672C;&#x5730;&#x63A8;&#x7406;&#x5BF9;&#x4E8E;&#x53D7;&#x804C;&#x4E1A;&#x4FDD;&#x5BC6;&#x89C4;&#x5B9A;&#x7EA6;&#x675F;&#x7684;&#x884C;&#x4E1A;&#x662F;&#x5F3A;&#x5236;&#x6027;&#x7684;&#x3002;</li>
+                                    <li>&#x5206;&#x533A;&#x7684; SQLite &#x5206;&#x7247;&#x4E3A;&#x9632;&#x6B62;&#x6570;&#x636E;&#x6CC4;&#x6F0F;&#x63D0;&#x4F9B;&#x4E86;&#x6570;&#x5B66;&#x4FDD;&#x8BC1;&#x3002;</li>
+                                    <li>&#x5728;&#x4E25;&#x683C;&#x7684;&#x76D1;&#x7BA1;&#x4EFB;&#x52A1;&#x4E0A;&#xFF0C;&#x4E13;&#x4E1A;&#x7684;&#x5408;&#x89C4;&#x6A21;&#x578B;&#x4F18;&#x4E8E;&#x901A;&#x7528;&#x7684;&#x4E91;&#x7AEF;&#x804A;&#x5929;&#x673A;&#x5668;&#x4EBA;&#x3002;</li>
                                 </ul>
 
                             <blockquote>
-                                &#x6211;&#x4EEC;&#x7684;&#x54C1;&#x724C;&#x53D9;&#x4E8B;&#x4E00;&#x591C;&#x4E4B;&#x95F4;&#x7115;&#x7136;&#x4E00;&#x65B0;&#x3002;AI &#x9A71;&#x52A8;&#x7684;&#x65B9;&#x6CD5;&#x63D0;&#x5347;&#x4E86;&#x6211;&#x4EEC;&#x7684;&#x4F20;&#x64AD;&#xFF0C;&#x5E76;&#x8D4B;&#x4E88;&#x56E2;&#x961F;&#x6E05;&#x6670;&#x7684;&#x65B9;&#x5411;&#x3002;
-                                    <br />&#x2014; &#x5E02;&#x573A;&#x603B;&#x76D1;&#x53EF;&#x80FD;&#x4F1A;&#x8BF4;                            </blockquote>
+                                &#x5B8C;&#x5168;&#x5728;&#x81EA;&#x5DF1;&#x7684;&#x9632;&#x706B;&#x5899;&#x540E;&#x8FD0;&#x884C;&#x5148;&#x8FDB;&#x7684;&#x591A;&#x4EE3;&#x7406;&#x5408;&#x540C;&#x5206;&#x6790;&#x7684;&#x80FD;&#x529B;&#xFF0C;&#x4E00;&#x591C;&#x4E4B;&#x95F4;&#x6539;&#x53D8;&#x4E86;&#x6211;&#x4EEC;&#x7684;&#x8FD0;&#x8425;&#x7ECF;&#x6D4E;&#x5B66;&#x3002;
+                                    <br />&#x2014; &#x6CD5;&#x5F8B;&#x54A8;&#x8BE2;&#x516C;&#x53F8;&#x7BA1;&#x7406;&#x5408;&#x4F19;&#x4EBA;&#x53EF;&#x80FD;&#x4F1A;&#x8BF4;                            </blockquote>
 
                         <em>&#x672C;&#x6848;&#x4F8B;&#x7814;&#x7A76;&#x662F;&#x4E3A;&#x5C55;&#x793A;&#x6211;&#x4EEC;&#x6280;&#x672F;&#x7684;&#x6F5C;&#x5728;&#x5E94;&#x7528;&#x800C;&#x521B;&#x5EFA;&#x7684;&#x865A;&#x6784;&#x793A;&#x4F8B;&#x3002;&#x5B83;&#x5E76;&#x672A;&#x63CF;&#x8FF0;&#x5B9E;&#x9645;&#x7684;&#x5BA2;&#x6237;&#x5408;&#x4F5C;&#xFF08;&#x901A;&#x5E38;&#x662F;&#x4FDD;&#x5BC6;&#x7684;&#xFF09;&#x3002;</em>
                     </div>
@@ -786,7 +786,7 @@
                         <ul>
                                 <li>
                                     <a href="offline-ai-desktop-app.html">
-                                        &#x79BB;&#x7EBF;AI&#x684C;&#x9762;&#x5E94;&#x7528;
+                                        &#x7269;&#x7406;&#x9694;&#x79BB; (Air-Gapped) &#x8FB9;&#x7F18;&#x4E00;&#x4F53;&#x673A;
                                     </a>
                                 </li>
                                 <li>
@@ -836,7 +836,7 @@
                                 </li>
                                 <li>
                                     <a href="run-ai-locally-without-internet.html">
-                                        &#x672C;&#x5730;&#x8FD0;&#x884C;AI&#xFF08;&#x79BB;&#x7EBF;&#xFF09;
+                                        &#x96F6;&#x4FE1;&#x4EFB;&#x4E3B;&#x6743;&#x6267;&#x884C;
                                     </a>
                                 </li>
                                 <li>

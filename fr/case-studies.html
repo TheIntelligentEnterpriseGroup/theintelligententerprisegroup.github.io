@@ -175,17 +175,17 @@
 <section class="case-studies" x-data="{ selected: '' }">
     <div class="container">
         <div class="case-studies-grid">
-                    <article id="case-techComp" class="case-study-card" :class="{ 'active': selected === 'techComp' }">
-                            <img src="/images/reenergizing-brand-com.jpg" alt="Startup - Relancer la communication de marque" />
+                    <article id="case-legalComp" class="case-study-card" :class="{ 'active': selected === 'legalComp' }">
+                            <img src="/images/legal-compliance-audit.jpg" alt="Juridique &amp; Financier - Due Diligence M&amp;A Isol&#xE9;e" />
                         <div class="card-content">
-                            <h3>Relancer la communication de marque</h3>
+                            <h3>Due Diligence M&amp;A Isol&#xE9;e (Air-Gapped)</h3>
 
                             <p>
-                              Une startup transforme son message de marque gr&#xE2;ce &#xE0; l&#x2019;IA cr&#xE9;ative pour d&#xE9;livrer des campagnes coh&#xE9;rentes et percutantes.
- <span>Exemple illustratif de la fa&#xE7;on dont notre application Desktop (Professional/Business&#x2011;Desktop) avec Creative Writer IA et Copywriter IA peut aider les startups &#xE0; d&#xE9;velopper un message de marque coh&#xE9;rent et percutant.</span>                             </p>
+                              Une soci&#xE9;t&#xE9; de conseil automatise des audits de contrats approfondis sur des classeurs de transactions de 500 pages sans t&#xE9;l&#xE9;charger de PI sensible sur le cloud.
+ <span>Exemple illustratif de la fa&#xE7;on dont notre dispositif Sovereign Edge utilise Compliance AI et Private RAG pour appliquer une isolation stricte des donn&#xE9;es lors d&#x27;audits confidentiels.</span>                             </p>
 
                             <a href="#" class="btn"
-                               @click.prevent="selected = 'techComp';$nextTick(() => document.getElementById('expanded-case').scrollIntoView({ behavior: 'smooth', block: 'start' }));">
+                               @click.prevent="selected = 'legalComp';$nextTick(() => document.getElementById('expanded-case').scrollIntoView({ behavior: 'smooth', block: 'start' }));">
                                 En savoir plus
                             </a>
                         </div>
@@ -319,49 +319,49 @@
                     &times;
                 </button>
 
-                        <div x-show="selected === 'techComp'" x-transition>
-                        <h1>Redynamiser la communication de marque</h1>
-                        <h3>Client : Startup</h3>
+                        <div x-show="selected === 'legalComp'" x-transition>
+                        <h1>Due Diligence M&amp;A Isol&#xE9;e (Air-Gapped)</h1>
+                        <h3>Client : Cabinet de Conseil &amp; Juridique de Premier Plan</h3>
 
                         <h4>Contexte</h4>
-                        <p>Une startup prometteuse avec un produit innovant rencontrait des difficult&#xE9;s &#xE0; communiquer efficacement sa marque aupr&#xE8;s des investisseurs et des clients. Malgr&#xE9; des offres novatrices, le message manquait de coh&#xE9;rence et le r&#xE9;cit global restait fragment&#xE9;.</p>
+                        <p>Un cabinet de conseil de premier plan g&#xE8;re des classeurs de transactions de fusions et acquisitions (M&amp;A) hautement confidentiels. Les r&#xE8;gles strictes du barreau et les contraintes de confidentialit&#xE9; (NDA) interdisent explicitement le t&#xE9;l&#xE9;chargement de donn&#xE9;es clients sur des LLM cloud externes.</p>
 
                         <h4>D&#xE9;fi</h4>
-                        <p>Le d&#xE9;fi principal &#xE9;tait de produire rapidement et de mani&#xE8;re coh&#xE9;rente du contenu de haute qualit&#xE9; sur plusieurs canaux, afin de cr&#xE9;er une voix de marque unifi&#xE9;e et convaincante.</p>
+                        <p>Le cabinet avait besoin d&#x27;un moyen de r&#xE9;duire consid&#xE9;rablement les heures facturables consacr&#xE9;es &#xE0; l&#x27;audit manuel de centaines de contrats &#xE0; la recherche de clauses de responsabilit&#xE9;, tout en maintenant une posture de s&#xE9;curit&#xE9; isol&#xE9;e (air-gapped) &#xE0; 100%.</p>
 
                         <h4>La solution bas&#xE9;e sur l&#x2019;IA</h4>
-                        <p>En int&#xE9;grant un outil d&#x2019;IA cr&#xE9;ative pour l&#x2019;id&#xE9;ation initiale et un outil d&#x2019;IA de r&#xE9;daction pour affiner le r&#xE9;cit, une campagne coh&#xE9;rente a &#xE9;t&#xE9; d&#xE9;velopp&#xE9;e, align&#xE9;e sur les objectifs marketing strat&#xE9;giques.</p>
+                        <p>En d&#xE9;ployant localement l&#x27;appliance Sovereign Edge, le cabinet a utilis&#xE9; Compliance AI et Librarian AI pour ing&#xE9;rer, fragmenter (shard) et interroger d&#x27;&#xE9;normes r&#xE9;f&#xE9;rentiels de documents enti&#xE8;rement sur site.</p>
 
                         <h4>Processus de mise en &#x153;uvre</h4>
                                 <ol>
                                     <li>
- <strong>D&#xE9;couverte &amp; Analyse:</strong>                                         Analyse approfondie des messages existants et du positionnement global sur le march&#xE9;.
+ <strong>D&#xE9;ploiement Isol&#xE9; (Air-Gapped):</strong>                                         Installation du moteur natif C&#x2B;&#x2B; directement sur des stations de travail d&#x27;analystes s&#xE9;curis&#xE9;es et d&#xE9;connect&#xE9;es.
                                     </li>
                                     <li>
- <strong>D&#xE9;veloppement de contenu:</strong>                                         G&#xE9;n&#xE9;ration et s&#xE9;lection de plusieurs propositions de campagne &#xE0; l&#x2019;aide de brouillons produits par l&#x2019;IA.
+ <strong>Fragmentation (Sharding) Vectorielle Isol&#xE9;e:</strong>                                         Structuration des donn&#xE9;es clients en fragments SQLite distincts et physiquement s&#xE9;par&#xE9;s pour garantir l&#x27;absence de contamination crois&#xE9;e entre diff&#xE9;rentes op&#xE9;rations de fusions-acquisitions.
                                     </li>
                                     <li>
- <strong>Optimisation continue:</strong>                                         Tests et ajustements en temps r&#xE9;el des messages sur diff&#xE9;rents canaux en fonction des retours du public.
+ <strong>Extraction Automatis&#xE9;e de Clauses:</strong>                                         Ex&#xE9;cution de requ&#xEA;tes cibl&#xE9;es multi-sauts (multi-hop) pour extraire et signaler instantan&#xE9;ment les clauses de responsabilit&#xE9; non conformes sur plus de 10 000 pages de texte.
                                     </li>
                                 </ol>
 
                         <h4>R&#xE9;sultats</h4>
                                 <ul>
-                                    <li>Augmentation de 50 % de l&#x2019;engagement du public en 3 mois.</li>
-                                    <li>Int&#xE9;r&#xEA;t accru des investisseurs, avec une hausse de 20 % des demandes de financement.</li>
-                                    <li>R&#xE9;duction de 40 % des cycles de production de contenu, permettant des d&#xE9;lais plus courts.</li>
+                                    <li>R&#xE9;duction des temps d&#x27;audit pr&#xE9;liminaire des contrats de 60%.</li>
+                                    <li>Conformit&#xE9; absolue au RGPD et aux NDA avec z&#xE9;ro appel d&#x27;API externe.</li>
+                                    <li>&#xC9;limination des co&#xFB;ts variables des tokens cloud, transformant l&#x27;IA en une d&#xE9;pense d&#x27;investissement (CapEx) pr&#xE9;visible.</li>
                                 </ul>
 
                         <h4>Enseignements cl&#xE9;s</h4>
                                 <ul>
-                                    <li>L&#x2019;int&#xE9;gration strat&#xE9;gique de l&#x2019;IA peut rapidement am&#xE9;liorer la communication de marque.</li>
-                                    <li>Les tests en temps r&#xE9;el et les boucles de r&#xE9;troaction favorisent l&#x2019;am&#xE9;lioration continue.</li>
-                                    <li>Des indicateurs quantifiables comme l&#x2019;engagement et les demandes de financement valident le succ&#xE8;s.</li>
+                                    <li>L&#x27;inf&#xE9;rence locale native est obligatoire pour les industries r&#xE9;gies par le secret professionnel.</li>
+                                    <li>Le partitionnement (sharding) SQLite fournit des garanties math&#xE9;matiques contre les fuites de donn&#xE9;es.</li>
+                                    <li>Les mod&#xE8;les de conformit&#xE9; sp&#xE9;cialis&#xE9;s surpassent les chatbots cloud g&#xE9;n&#xE9;riques sur les t&#xE2;ches r&#xE9;glementaires rigides.</li>
                                 </ul>
 
                             <blockquote>
-                                Notre r&#xE9;cit de marque a &#xE9;t&#xE9; transform&#xE9; du jour au lendemain. L&#x2019;approche pilot&#xE9;e par l&#x2019;IA a &#xE9;lev&#xE9; notre communication et donn&#xE9; de la clart&#xE9; &#xE0; notre &#xE9;quipe.
-                                    <br />&#x2014; Un directeur marketing pourrait le dire                            </blockquote>
+                                La capacit&#xE9; d&#x27;ex&#xE9;cuter des analyses de contrats multi-agents avanc&#xE9;es enti&#xE8;rement derri&#xE8;re notre propre pare-feu a modifi&#xE9; notre &#xE9;conomie op&#xE9;rationnelle du jour au lendemain.
+                                    <br />&#x2014; Pourrait dire un Associ&#xE9; Directeur, Cabinet de Conseil Juridique                            </blockquote>
 
                         <em>Cette &#xE9;tude de cas est un exemple fictif cr&#xE9;&#xE9; pour d&#xE9;montrer les applications potentielles de notre technologie. Elle ne d&#xE9;crit pas une mission client r&#xE9;elle (g&#xE9;n&#xE9;ralement confidentielle).</em>
                     </div>
@@ -786,7 +786,7 @@
                         <ul>
                                 <li>
                                     <a href="offline-ai-desktop-app.html">
-                                        Appli Bureau IA Hors Ligne
+                                        Appliance Edge Isol&#xE9;e (Air-Gapped)
                                     </a>
                                 </li>
                                 <li>
@@ -836,7 +836,7 @@
                                 </li>
                                 <li>
                                     <a href="run-ai-locally-without-internet.html">
-                                        Ex&#xE9;cuter l&#x27;IA Localement (Hors Ligne)
+                                        Ex&#xE9;cution Souveraine Zero-Trust
                                     </a>
                                 </li>
                                 <li>

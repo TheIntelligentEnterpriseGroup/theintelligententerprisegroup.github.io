@@ -175,17 +175,17 @@
 <section class="case-studies" x-data="{ selected: '' }">
     <div class="container">
         <div class="case-studies-grid">
-                    <article id="case-techComp" class="case-study-card" :class="{ 'active': selected === 'techComp' }">
-                            <img src="/images/reenergizing-brand-com.jpg" alt="Startup - Re-Energizando la Comunicaci&#xF3;n de Marca" />
+                    <article id="case-legalComp" class="case-study-card" :class="{ 'active': selected === 'legalComp' }">
+                            <img src="/images/legal-compliance-audit.jpg" alt="Legal y Financiero - Due Diligence M&amp;A Aislada" />
                         <div class="card-content">
-                            <h3>Re-Energizando la Comunicaci&#xF3;n de Marca</h3>
+                            <h3>Due Diligence M&amp;A Aislada (Air-Gapped)</h3>
 
                             <p>
-                              Una startup transforma su mensaje de marca usando IA creativa para entregar campa&#xF1;as consistentes y atractivas.
- <span>Ejemplo ilustrativo de c&#xF3;mo nuestra aplicaci&#xF3;n de escritorio (Profesional/Business&#x2011;Desktop) con IA Escritora Creativa e IA Redactora Publicitaria puede ayudar a startups a desarrollar mensajes de marca consistentes y atractivos.</span>                             </p>
+                              Una firma de asesor&#xED;a automatiza auditor&#xED;as exhaustivas de contratos en carpetas de transacciones de 500 p&#xE1;ginas sin subir PI sensible a la nube.
+ <span>Ejemplo ilustrativo de c&#xF3;mo nuestro Sovereign Edge Appliance utiliza Compliance AI y Private RAG para hacer cumplir un aislamiento estricto de datos durante auditor&#xED;as confidenciales.</span>                             </p>
 
                             <a href="#" class="btn"
-                               @click.prevent="selected = 'techComp';$nextTick(() => document.getElementById('expanded-case').scrollIntoView({ behavior: 'smooth', block: 'start' }));">
+                               @click.prevent="selected = 'legalComp';$nextTick(() => document.getElementById('expanded-case').scrollIntoView({ behavior: 'smooth', block: 'start' }));">
                                 Leer m&#xE1;s
                             </a>
                         </div>
@@ -319,49 +319,49 @@
                     &times;
                 </button>
 
-                        <div x-show="selected === 'techComp'" x-transition>
-                        <h1>Re-Energizando la Comunicaci&#xF3;n de Marca</h1>
-                        <h3>Cliente: Startup</h3>
+                        <div x-show="selected === 'legalComp'" x-transition>
+                        <h1>Due Diligence M&amp;A Aislada (Air-Gapped)</h1>
+                        <h3>Cliente: Firma de Asesor&#xED;a y Legal de Nivel 1</h3>
 
                         <h4>Antecedentes</h4>
-                        <p>Una startup prometedora con un producto innovador enfrentaba grandes desaf&#xED;os para comunicar eficazmente su marca a inversores y clientes. A pesar de sus ofertas innovadoras, el mensaje carec&#xED;a de consistencia, dejando la narrativa fragmentada.</p>
+                        <p>Una destacada firma de asesor&#xED;a maneja carpetas de transacciones de fusiones y adquisiciones (M&amp;A) altamente confidenciales. Las estrictas normas del colegio de abogados y las restricciones de NDA proh&#xED;ben expl&#xED;citamente subir datos de clientes a LLMs externos en la nube.</p>
 
                         <h4>Desaf&#xED;o</h4>
-                        <p>El principal desaf&#xED;o era producir contenido atractivo y de alta calidad en m&#xFA;ltiples canales de manera r&#xE1;pida y consistente, permitiendo una voz de marca unificada y convincente.</p>
+                        <p>La firma necesitaba una forma de reducir dr&#xE1;sticamente las horas facturables invertidas en auditar manualmente cientos de contratos en busca de cl&#xE1;usulas de responsabilidad, manteniendo al mismo tiempo una postura de seguridad 100% aislada (air-gapped).</p>
 
                         <h4>La Soluci&#xF3;n con IA</h4>
-                        <p>Al integrar la IA Escritora Creativa para la ideaci&#xF3;n inicial y la IA Redactora Publicitaria para refinar la narrativa, se desarroll&#xF3; una campa&#xF1;a cohesionada alineada con los objetivos estrat&#xE9;gicos de marketing.</p>
+                        <p>Al implementar localmente el Sovereign Edge Appliance, la firma utiliz&#xF3; Compliance AI y Librarian AI para ingestar, fragmentar (shard) y consultar repositorios de documentos masivos completamente on-premise.</p>
 
                         <h4>Proceso de Implementaci&#xF3;n</h4>
                                 <ol>
                                     <li>
- <strong>Descubrimiento y An&#xE1;lisis:</strong>                                         Se realiz&#xF3; una revisi&#xF3;n exhaustiva del mensaje existente y del posicionamiento general en el mercado.
+ <strong>Implementaci&#xF3;n Aislada (Air-Gapped):</strong>                                         Se instal&#xF3; el motor nativo de C&#x2B;&#x2B; directamente en estaciones de trabajo de analistas seguras y desconectadas.
                                     </li>
                                     <li>
- <strong>Desarrollo de Contenido:</strong>                                         Se generaron y seleccionaron m&#xFA;ltiples propuestas de campa&#xF1;a utilizando borradores impulsados por IA.
+ <strong>Fragmentaci&#xF3;n (Sharding) de Vectores Aislados:</strong>                                         Se estructuraron los datos del cliente en fragmentos (shards) de SQLite distintos y separados f&#xED;sicamente para garantizar cero contaminaci&#xF3;n cruzada entre diferentes acuerdos de M&amp;A.
                                     </li>
                                     <li>
- <strong>Optimizaci&#xF3;n Continua:</strong>                                         Se probaron y refinaron los mensajes en distintos canales, ajust&#xE1;ndolos en tiempo real seg&#xFA;n la retroalimentaci&#xF3;n de la audiencia.
+ <strong>Extracci&#xF3;n Automatizada de Cl&#xE1;usulas:</strong>                                         Se ejecutaron consultas dirigidas de m&#xFA;ltiples saltos (multi-hop) para extraer y marcar instant&#xE1;neamente cl&#xE1;usulas de responsabilidad no conformes en m&#xE1;s de 10.000 p&#xE1;ginas de texto.
                                     </li>
                                 </ol>
 
                         <h4>Resultados</h4>
                                 <ul>
-                                    <li>Se logr&#xF3; un aumento del 50% en la interacci&#xF3;n de la audiencia en 3 meses.</li>
-                                    <li>Se increment&#xF3; el inter&#xE9;s de los inversores, con un aumento del 20% en consultas de financiamiento.</li>
-                                    <li>Se redujo el ciclo de producci&#xF3;n de contenido en un 40%, permitiendo tiempos de entrega m&#xE1;s r&#xE1;pidos.</li>
+                                    <li>Se redujeron los tiempos de auditor&#xED;a de contratos preliminares en un 60%.</li>
+                                    <li>Se logr&#xF3; un cumplimiento absoluto del RGPD y NDA con cero llamadas a API externas.</li>
+                                    <li>Se eliminaron los costes variables de los tokens en la nube, convirtiendo la IA en un gasto de capital (CapEx) predecible.</li>
                                 </ul>
 
                         <h4>Conclusiones Clave</h4>
                                 <ul>
-                                    <li>La integraci&#xF3;n estrat&#xE9;gica de IA puede mejorar r&#xE1;pidamente la comunicaci&#xF3;n de marca.</li>
-                                    <li>Las pruebas en tiempo real y los bucles de retroalimentaci&#xF3;n impulsan la mejora continua.</li>
-                                    <li>M&#xE9;tricas cuantificables como tasas de interacci&#xF3;n y consultas de financiamiento validan el &#xE9;xito.</li>
+                                    <li>La inferencia local nativa es obligatoria para industrias regidas por el secreto profesional.</li>
+                                    <li>El sharding particionado de SQLite proporciona garant&#xED;as matem&#xE1;ticas contra la fuga de datos.</li>
+                                    <li>Los modelos de cumplimiento especializados superan a los chatbots gen&#xE9;ricos de la nube en tareas regulatorias r&#xED;gidas.</li>
                                 </ul>
 
                             <blockquote>
-                                Nuestra narrativa de marca se transform&#xF3; de la noche a la ma&#xF1;ana. El enfoque impulsado por IA elev&#xF3; nuestra comunicaci&#xF3;n y dio claridad a nuestro equipo.
-                                    <br />&#x2014; Podr&#xED;a decirlo un Director de Marketing                            </blockquote>
+                                La capacidad de ejecutar an&#xE1;lisis de contratos multi-agente avanzados completamente detr&#xE1;s de nuestro propio firewall cambi&#xF3; nuestra econom&#xED;a operativa de la noche a la ma&#xF1;ana.
+                                    <br />&#x2014; Podr&#xED;a decir un Socio Director, Firma de Asesor&#xED;a Legal                            </blockquote>
 
                         <em>Este caso de estudio es un ejemplo ficticio creado para demostrar aplicaciones potenciales de nuestra tecnolog&#xED;a. No describe un compromiso real con un cliente (generalmente confidencial).</em>
                     </div>
@@ -786,7 +786,7 @@
                         <ul>
                                 <li>
                                     <a href="offline-ai-desktop-app.html">
-                                        App de Escritorio de IA Offline
+                                        Dispositivo Edge Aislado (Air-Gapped)
                                     </a>
                                 </li>
                                 <li>
@@ -836,7 +836,7 @@
                                 </li>
                                 <li>
                                     <a href="run-ai-locally-without-internet.html">
-                                        Ejecutar IA Localmente (Offline)
+                                        Ejecuci&#xF3;n Soberana Zero-Trust
                                     </a>
                                 </li>
                                 <li>

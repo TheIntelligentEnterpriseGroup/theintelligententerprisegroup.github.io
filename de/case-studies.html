@@ -175,17 +175,17 @@
 <section class="case-studies" x-data="{ selected: '' }">
     <div class="container">
         <div class="case-studies-grid">
-                    <article id="case-techComp" class="case-study-card" :class="{ 'active': selected === 'techComp' }">
-                            <img src="/images/reenergizing-brand-com.jpg" alt="Startup &#x2013; Markenkommunikation neu beleben" />
+                    <article id="case-legalComp" class="case-study-card" :class="{ 'active': selected === 'legalComp' }">
+                            <img src="/images/legal-compliance-audit.jpg" alt="Legal &amp; Financial - Isolierte M&amp;A Due Diligence" />
                         <div class="card-content">
-                            <h3>Markenkommunikation neu beleben</h3>
+                            <h3>Isolierte M&amp;A Due Diligence</h3>
 
                             <p>
-                              Ein Startup transformiert seine Markenbotschaften mit kreativer KI und liefert konsistente, &#xFC;berzeugende Kampagnen.
- <span>Beispiel, wie unsere Desktop-App (Professional/Business&#x2011;Desktop) mit Creative Writer AI und Copywriter AI Startups bei konsistenter, &#xFC;berzeugender Markenkommunikation unterst&#xFC;tzen k&#xF6;nnte.</span>                             </p>
+                              Ein Beratungsunternehmen automatisiert Deep-Dive-Vertragspr&#xFC;fungen von 500-seitigen Transaktionsordnern, ohne sensibles IP in die Cloud hochzuladen.
+ <span>Anschauliches Beispiel daf&#xFC;r, wie unsere Sovereign Edge Appliance Compliance AI und Private RAG nutzt, um eine strikte Datenisolierung w&#xE4;hrend vertraulicher Pr&#xFC;fungen durchzusetzen.</span>                             </p>
 
                             <a href="#" class="btn"
-                               @click.prevent="selected = 'techComp';$nextTick(() => document.getElementById('expanded-case').scrollIntoView({ behavior: 'smooth', block: 'start' }));">
+                               @click.prevent="selected = 'legalComp';$nextTick(() => document.getElementById('expanded-case').scrollIntoView({ behavior: 'smooth', block: 'start' }));">
                                 Mehr erfahren
                             </a>
                         </div>
@@ -319,49 +319,49 @@
                     &times;
                 </button>
 
-                        <div x-show="selected === 'techComp'" x-transition>
-                        <h1>Markenkommunikation neu beleben</h1>
-                        <h3>Kunde: Startup</h3>
+                        <div x-show="selected === 'legalComp'" x-transition>
+                        <h1>Isolierte M&amp;A Due Diligence (Air-Gapped)</h1>
+                        <h3>Kunde: Tier-1 Rechts- &amp; Beratungsunternehmen</h3>
 
                         <h4>Hintergrund</h4>
-                        <p>Ein vielversprechendes Startup mit einem bahnbrechenden Produkt hatte erhebliche Schwierigkeiten, seine Marke effektiv gegen&#xFC;ber Investoren und Kunden zu kommunizieren. Trotz innovativer Angebote fehlte es an Konsistenz in der Botschaft, wodurch die Gesamtgeschichte fragmentiert wirkte.</p>
+                        <p>Ein renommiertes Beratungsunternehmen bearbeitet streng vertrauliche M&amp;A-Transaktionsordner. Strenge standesrechtliche Regeln und NDA-Einschr&#xE4;nkungen verbieten ausdr&#xFC;cklich das Hochladen von Kundendaten auf externe Cloud-LLMs.</p>
 
                         <h4>Herausforderung</h4>
-                        <p>Die zentrale Herausforderung bestand darin, schnell und konsistent hochwertige, ansprechende Inhalte &#xFC;ber mehrere Kan&#xE4;le hinweg zu erstellen, um eine einheitliche und &#xFC;berzeugende Markenstimme zu etablieren.</p>
+                        <p>Das Unternehmen brauchte eine M&#xF6;glichkeit, die abrechenbaren Stunden, die f&#xFC;r die manuelle Pr&#xFC;fung hunderter Vertr&#xE4;ge auf Haftungsklauseln aufgewendet wurden, drastisch zu reduzieren und gleichzeitig einen zu 100% isolierten (air-gapped) Sicherheitsstatus aufrechtzuerhalten.</p>
 
                         <h4>Die KI-gest&#xFC;tzte L&#xF6;sung</h4>
-                        <p>Durch die Integration von Creative Writer AI f&#xFC;r die erste Ideenfindung und Copywriter AI f&#xFC;r die Verfeinerung der Erz&#xE4;hlung wurde eine koh&#xE4;rente Kampagne entwickelt, die eng mit den strategischen Marketingzielen abgestimmt war.</p>
+                        <p>Durch die lokale Bereitstellung der Sovereign Edge Appliance nutzte das Unternehmen Compliance AI und die Librarian AI, um massive Dokumenten-Repositories vollst&#xE4;ndig on-premise zu erfassen, zu sharden und abzufragen.</p>
 
                         <h4>Implementierungsprozess</h4>
                                 <ol>
                                     <li>
- <strong>Analyse &amp; Entdeckung:</strong>                                         Umfassende &#xDC;berpr&#xFC;fung der bestehenden Botschaften und der Marktpositionierung.
+ <strong>Isolierte Bereitstellung (Air-Gapped):</strong>                                         Die native C&#x2B;&#x2B; Engine wurde direkt auf sicheren, getrennten Analysten-Workstations installiert.
                                     </li>
                                     <li>
- <strong>Content-Entwicklung:</strong>                                         Mehrere Kampagnenvorschl&#xE4;ge mit KI-generierten Entw&#xFC;rfen erstellt und kuratiert.
+ <strong>Isoliertes Vector-Sharding:</strong>                                         Strukturierung der Kundendaten in diskrete, physisch getrennte SQLite-Shards, um eine Kreuzkontamination zwischen verschiedenen M&amp;A-Deals absolut auszuschlie&#xDF;en.
                                     </li>
                                     <li>
- <strong>Kontinuierliche Optimierung:</strong>                                         Botschaften kanal&#xFC;bergreifend getestet und in Echtzeit anhand von Feedback angepasst.
+ <strong>Automatisierte Klausel-Extraktion:</strong>                                         Ausf&#xFC;hrung gezielter Multi-Hop-Abfragen, um sofort nicht konforme Haftungsklauseln &#xFC;ber mehr als 10.000 Textseiten hinweg zu extrahieren und zu markieren.
                                     </li>
                                 </ol>
 
                         <h4>Ergebnisse</h4>
                                 <ul>
-                                    <li>50 % mehr Engagement innerhalb von 3 Monaten.</li>
-                                    <li>20 % mehr Investorenanfragen durch gesteigertes Interesse.</li>
-                                    <li>40 % k&#xFC;rzere Produktionszyklen f&#xFC;r Inhalte.</li>
+                                    <li>Reduzierung der vorl&#xE4;ufigen Vertragspr&#xFC;fungszeiten um 60%.</li>
+                                    <li>Absolute DSGVO- und NDA-Konformit&#xE4;t bei null externen API-Aufrufen erreicht.</li>
+                                    <li>Variable Cloud-Token-Kosten eliminiert, was KI zu kalkulierbaren Investitionsausgaben (CapEx) macht.</li>
                                 </ul>
 
                         <h4>Wichtige Erkenntnisse</h4>
                                 <ul>
-                                    <li>Strategische KI-Integration kann Markenkommunikation schnell verbessern.</li>
-                                    <li>Echtzeit-Tests und Feedbackschleifen f&#xF6;rdern kontinuierliche Optimierung.</li>
-                                    <li>Messbare Kennzahlen wie Engagement und Anfragen belegen den Erfolg.</li>
+                                    <li>Native lokale Inferenz ist zwingend erforderlich f&#xFC;r Branchen, die der beruflichen Schweigepflicht unterliegen.</li>
+                                    <li>Partitioniertes SQLite-Sharding bietet mathematische Garantien gegen Datenlecks.</li>
+                                    <li>Spezialisierte Compliance-Modelle &#xFC;bertreffen generische Cloud-Chatbots bei strengen regulatorischen Aufgaben.</li>
                                 </ul>
 
                             <blockquote>
-                                Unsere Markenbotschaft wurde &#xFC;ber Nacht transformiert. Der KI-gest&#xFC;tzte Ansatz hat unsere Kommunikation auf ein neues Niveau gehoben.
-                                    <br />&#x2014; Marketingdirektor eines Startups                            </blockquote>
+                                Die F&#xE4;higkeit, fortschrittliche Multi-Agenten-Vertragsanalysen vollst&#xE4;ndig hinter unserer eigenen Firewall durchzuf&#xFC;hren, hat unsere Betriebswirtschaft &#xFC;ber Nacht ver&#xE4;ndert.
+                                    <br />&#x2014; Ein Managing Partner k&#xF6;nnte sagen, Rechtsberatungsunternehmen                            </blockquote>
 
                         <em>Diese Fallstudie ist ein fiktives Beispiel, das m&#xF6;gliche Anwendungen unserer Technologie demonstriert. Sie beschreibt kein tats&#xE4;chliches Kundenprojekt (in der Regel vertraulich).</em>
                     </div>
@@ -786,7 +786,7 @@
                         <ul>
                                 <li>
                                     <a href="offline-ai-desktop-app.html">
-                                        Offline-KI-Desktop-App
+                                        Air-Gapped Edge Appliance
                                     </a>
                                 </li>
                                 <li>
@@ -836,7 +836,7 @@
                                 </li>
                                 <li>
                                     <a href="run-ai-locally-without-internet.html">
-                                        KI lokal ausf&#xFC;hren (Offline)
+                                        Zero-Trust Souver&#xE4;ne Ausf&#xFC;hrung
                                     </a>
                                 </li>
                                 <li>
