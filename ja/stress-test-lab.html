@@ -1,0 +1,2086 @@
+<!DOCTYPE html>
+<html lang="ja" dir="ltr">
+<head>
+    <meta name="robots" content="index, follow" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <meta name="description" content='MindML&#x30AD;&#x30CD;&#x30C6;&#x30A3;&#x30C3;&#x30AF;&#x30A8;&#x30F3;&#x30B8;&#x30F3;&#x3092;&#x30E9;&#x30A4;&#x30D6;&#x3067;&#x30C6;&#x30B9;&#x30C8;&#x3002;&#x78BA;&#x5B9A;&#x7684;&#x306A;&#x5951;&#x7D04;&#x30C1;&#x30A7;&#x30C3;&#x30AF;&#x3001;&#x81EA;&#x52D5;&#x5316;&#x3055;&#x308C;&#x305F;&#x30C7;&#x30A3;&#x30FC;&#x30EB;&#x518D;&#x69CB;&#x7BC9;&#x3001;&#x4EBA;&#x9593;&#x306E;&#x627F;&#x8A8D;&#x30B2;&#x30FC;&#x30C8;&#x306B;&#x3088;&#x308B;&#x5B9F;&#x884C;&#x304C;&#x3001;&#x30D3;&#x30B8;&#x30CD;&#x30B9;&#x5168;&#x4F53;&#x306B;&#x304A;&#x3051;&#x308B;&#x30B3;&#x30B9;&#x30C8;&#x306E;&#x304B;&#x304B;&#x308B;&#x6CE2;&#x53CA;&#x52B9;&#x679C;&#x3092;&#x3044;&#x304B;&#x306B;&#x9632;&#x3050;&#x304B;&#x3092;&#x3054;&#x78BA;&#x8A8D;&#x304F;&#x3060;&#x3055;&#x3044;&#x3002;' />
+    <title>&#x904B;&#x7528;AI&#x30B9;&#x30C8;&#x30EC;&#x30B9;&#x30C6;&#x30B9;&#x30C8;&#x30E9;&#x30DC; | The Intelligent Enterprise Group</title>
+
+    <style>
+        html { background-color: #3B3A47; }
+    </style>
+    <script>
+        (function () {
+            const key = 'preferredTheme';
+            const stored = localStorage.getItem(key);
+            //const systemDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+            const theme = stored || 'dark'/*(systemDark ? 'dark' : 'light')*/;
+            if (theme === 'dark') {
+                document.documentElement.classList.add('dark-mode');
+            } else {
+                document.documentElement.classList.remove('dark-mode');
+            }
+        })();
+    </script>
+
+
+        <link rel="alternate" hreflang="en" href="https://theintelligententerprisegroup.com/stress-test-lab.html" />
+        <link rel="alternate" hreflang="fr" href="https://theintelligententerprisegroup.com/fr/stress-test-lab.html" />
+        <link rel="alternate" hreflang="de" href="https://theintelligententerprisegroup.com/de/stress-test-lab.html" />
+        <link rel="alternate" hreflang="es" href="https://theintelligententerprisegroup.com/es/stress-test-lab.html" />
+        <link rel="alternate" hreflang="pt" href="https://theintelligententerprisegroup.com/pt/stress-test-lab.html" />
+        <link rel="alternate" hreflang="zh" href="https://theintelligententerprisegroup.com/zh/stress-test-lab.html" />
+        <link rel="alternate" hreflang="ja" href="https://theintelligententerprisegroup.com/ja/stress-test-lab.html" />
+        <link rel="alternate" hreflang="ar" href="https://theintelligententerprisegroup.com/ar/stress-test-lab.html" />
+
+
+    <link rel="alternate" hreflang="x-default" href="https://theintelligententerprisegroup.com/stress-test-lab.html" />
+
+    <link rel="canonical" href="https://theintelligententerprisegroup.com/ja/stress-test-lab.html" />
+
+
+    <link rel="stylesheet" href="/css/styles.css" />
+    <link rel="stylesheet" href="/css/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="/css/all.min.css" />
+
+    <script src="/js/lang-switcher.js" defer></script>
+
+    <script>
+        (function () {
+            if (localStorage.getItem('currentLang')) return;
+            const supported = [
+                     { code: "en" } ,
+                     { code: "fr" } ,
+                     { code: "de" } ,
+                     { code: "es" } ,
+                     { code: "pt" } ,
+                     { code: "zh" } ,
+                     { code: "ja" } ,
+                     { code: "ar" } 
+            ];
+            const defaultLang = "ja";
+            const navLangs = navigator.languages || [navigator.language || navigator.userLanguage];
+            let detected = null;
+            for (const nav of navLangs) {
+                const code = nav.toLowerCase().split('-')[0];
+                if (supported.find(s => s.code.toLowerCase() === code)) {
+                    detected = code;
+                    break;
+                }
+            }
+            const lang = detected || defaultLang;
+            localStorage.setItem('currentLang', lang);
+            document.documentElement.lang = lang;
+        })();
+    </script>
+
+    <!-- Organization structured data (JSON-LD) -->
+    <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "Organization",
+          "name": "The Intelligent Enterprise Group",
+          "url": "https://theintelligententerprisegroup.com/",
+          "logo": "https://theintelligententerprisegroup.com/images/tieg-logo.png",
+          "sameAs": []
+        }
+    </script>
+    <link rel="icon" href="/favicon.ico" />
+    <link rel="apple-touch-icon" href="/images/apple-touch-icon.png" />
+
+    
+
+</head>
+<body>
+    <header x-data="{ open: false }">
+        <div class="container header-top">
+            <div class="logo"></div>
+            <div class="theme-switch-wrapper">
+                <label class="theme-switch">
+                    <input type="checkbox" id="theme-checkbox" aria-label="Select theme"/>
+                    <span class="slider round"></span>
+                </label>
+                <span id="theme-label">ライトモード</span>
+                <span class="lang-switcher">
+                    <label for="lang-select" class="lang-label">🌐 言語:</label>
+
+                    <!-- Language switcher -->
+                    <select id="lang-select" class="lang-select">
+                        <option value="en" data-path="/">English</option>
+                        <option value="fr" data-path="/fr/">Fran&#xE7;ais</option>
+                        <option value="de" data-path="/de/">Deutsch</option>
+                        <option value="es" data-path="/es/">Espa&#xF1;ol</option>
+                        <option value="pt" data-path="/pt/">Portugu&#xEA;s</option>
+                        <option value="zh" data-path="/zh/">&#x4E2D;&#x6587;</option>
+                        <option value="ja" data-path="/ja/">&#x65E5;&#x672C;&#x8A9E;</option>
+                        <option value="ar" data-path="/ar/">&#x627;&#x644;&#x639;&#x631;&#x628;&#x64A;&#x629;</option>
+                    </select>
+
+                </span>
+            </div>
+        </div>
+        
+        <div class="container header-nav">
+            <button @click="open = !open" class="menu-toggle" aria-label="Toggle Menu">
+                <svg width="24" height="24" viewBox="0 0 24 24">
+                    <path fill="var(--nav-link-color)" d="M3 6h18v2H3V6zm0 5h18v2H3v-2zm0 5h18v2H3v-2z" />
+                </svg>
+            </button>
+
+            <nav class="main-nav" :class="{ 'open': open }">
+                <ul>
+                    <li><a href="index.html" class="">&#x30DB;&#x30FC;&#x30E0;</a></li>
+                    <li><a href="about.html" class="">&#x79C1;&#x305F;&#x3061;&#x306B;&#x3064;&#x3044;&#x3066;</a></li>
+                    <li><a href="services.html" class="">&#x30B5;&#x30FC;&#x30D3;&#x30B9;&#x3068;&#x30BD;&#x30EA;&#x30E5;&#x30FC;&#x30B7;&#x30E7;&#x30F3;</a></li>
+                    <li><a href="case-studies.html" class="">&#x4E8B;&#x4F8B;&#x7814;&#x7A76;</a></li>
+                    <li><a href="resources.html" class="">&#x30EA;&#x30BD;&#x30FC;&#x30B9;&#x3068;&#x30A4;&#x30F3;&#x30B5;&#x30A4;&#x30C8;</a></li>
+                    <li><a href="partners.html" class="">&#x30D1;&#x30FC;&#x30C8;&#x30CA;&#x30FC;&#x3068;&#x30A2;&#x30E9;&#x30A4;&#x30A2;&#x30F3;&#x30B9;</a></li>                    
+                    <li><a href="contact.html" class="">&#x304A;&#x554F;&#x3044;&#x5408;&#x308F;&#x305B;&#x30FB;&#x76F8;&#x8AC7;</a></li>
+                    <li class="has-submenu"
+                        x-data="{ openSub: false }"
+                        @mouseenter="openSub = true"
+                        @mouseleave="openSub = false">
+                      <button @click="openSub = !openSub"
+                              aria-haspopup="true"
+                              :aria-expanded="openSub.toString()">
+                        &#x60C5;&#x5831;
+                        <svg width="12" height="12" viewBox="0 0 12 12" aria-hidden="true">
+                          <path d="M3 4l3 3 3-3" fill="currentColor"/>
+                        </svg>
+                      </button>
+                      <ul class="submenu" x-show="openSub" @click.outside="openSub = false">
+                        <li><a href="careers.html" class="">&#x63A1;&#x7528;&#x60C5;&#x5831;</a></li>
+                        <li><a href="faqs.html" class="">&#x3088;&#x304F;&#x3042;&#x308B;&#x8CEA;&#x554F;</a></li>
+                        <li><a href="legal.html" class="">&#x6CD5;&#x52D9;&#x3068;&#x30DD;&#x30EA;&#x30B7;&#x30FC;</a></li>
+                      </ul>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        
+<section class="kinetic-lab-hero">
+    <div class="container">
+        <span class="kinetic-eyebrow-badge">
+            <i class="fas fa-atom"></i> MINDML &#x30AD;&#x30CD;&#x30C6;&#x30A3;&#x30C3;&#x30AF;&#x30A8;&#x30F3;&#x30B8;&#x30F3; - &#x5BFE;&#x8A71;&#x578B;&#x610F;&#x601D;&#x6C7A;&#x5B9A;&#x30B7;&#x30DF;&#x30E5;&#x30EC;&#x30FC;&#x30BF;&#x30FC;
+        </span>
+        <h1>&#x904B;&#x7528;&#x30AC;&#x30D0;&#x30CA;&#x30F3;&#x30B9;&#xFF06;&#x53D6;&#x5F15;&#x30B9;&#x30C8;&#x30EC;&#x30B9;&#x30C6;&#x30B9;&#x30C8;&#x30E9;&#x30DC;</h1>
+        <p class="kinetic-hero-sub">&#x6A19;&#x6E96;&#x7684;&#x306A;AI&#x30C1;&#x30E3;&#x30C3;&#x30C8;&#x30DC;&#x30C3;&#x30C8;&#x306F;&#x6587;&#x66F8;&#x3092;&#x8981;&#x7D04;&#x3059;&#x308B;&#x3060;&#x3051;&#x3067;&#x3059;&#x3002;MindML&#x30AD;&#x30CD;&#x30C6;&#x30A3;&#x30C3;&#x30AF;&#x30A8;&#x30F3;&#x30B8;&#x30F3;&#x306F;&#x3001;&#x5951;&#x7D04;&#x3001;&#x7269;&#x7406;&#x7684;&#x306A;&#x9001;&#x96FB;&#x7DB2;&#x306E;&#x5236;&#x9650;&#x3001;&#x7269;&#x6D41;&#x3001;&#x5B89;&#x5168;&#x5730;&#x5E2F;&#x3068;&#x3044;&#x3063;&#x305F;&#x8CB4;&#x793E;&#x56FA;&#x6709;&#x306E;&#x30D3;&#x30B8;&#x30CD;&#x30B9;&#x30AA;&#x30F3;&#x30C8;&#x30ED;&#x30B8;&#x30FC;&#x3092;&#x30EA;&#x30A2;&#x30EB;&#x30BF;&#x30A4;&#x30E0;&#x306E;&#x6570;&#x5B66;&#x7684;&#x30B0;&#x30E9;&#x30D5;&#x3068;&#x3057;&#x3066;&#x53D6;&#x308A;&#x8FBC;&#x307F;&#x307E;&#x3059;&#x3002;&#x3053;&#x306E;&#x30B7;&#x30DF;&#x30E5;&#x30EC;&#x30FC;&#x30BF;&#x30FC;&#x3092;&#x901A;&#x3058;&#x3066;&#x3001;&#x96A0;&#x308C;&#x305F;&#x904B;&#x7528;&#x306E;&#x30C8;&#x30EA;&#x30AC;&#x30FC;&#x3092;&#x691C;&#x77E5;&#x3057;&#x3001;&#x610F;&#x601D;&#x6C7A;&#x5B9A;&#x3092;&#x6700;&#x9069;&#x5316;&#x3057;&#x3001;&#x4EBA;&#x9593;&#x306E;&#x627F;&#x8A8D;&#x304C;&#x5F97;&#x3089;&#x308C;&#x308B;&#x307E;&#x3067;&#x5B9F;&#x884C;&#x3092;&#x30ED;&#x30C3;&#x30AF;&#x3059;&#x308B;&#x4ED5;&#x7D44;&#x307F;&#x3092;&#x3054;&#x78BA;&#x8A8D;&#x304F;&#x3060;&#x3055;&#x3044;&#x3002;</p>
+    </div>
+</section>
+
+<section class="kinetic-lab-section">
+    <div class="kinetic-workbench-container" id="kinetic-workbench">
+
+        <!-- INTERACTIVE 3-STEP QUICK-START GUIDE BAR -->
+        <div class="kinetic-guide-banner" id="kinetic-guide-banner">
+            <div class="guide-banner-top">
+                <div class="guide-banner-title">
+                    <i class="fas fa-compass"></i>
+                    <span>3&#x30B9;&#x30C6;&#x30C3;&#x30D7;&#x3067;&#x4F53;&#x9A13;&#x3059;&#x308B;&#x672C;&#x30C7;&#x30E2;&#x306E;&#x624B;&#x9806;&#xFF1A;</span>
+                </div>
+                <div class="guide-banner-actions">
+                    <button type="button" class="guide-help-toggle-btn" onclick="toggleHelpExplainer()">
+                        <i class="fas fa-circle-question"></i>
+                        <span id="help-btn-label">&#x4F55;&#x304C;&#x8868;&#x793A;&#x3055;&#x308C;&#x3066;&#x3044;&#x307E;&#x3059;&#x304B;&#xFF1F;</span>
+                    </button>
+                    <button type="button" class="kinetic-util-btn" onclick="toggleLabFullscreen()">
+                        <i class="fas fa-expand" id="lab-fs-icon"></i>
+                        <span id="lab-fs-text">&#x5168;&#x753B;&#x9762;&#x8868;&#x793A;</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Collapsible Plain-English Executive Explainer -->
+            <div class="guide-explainer-drawer" id="guide-explainer-drawer" style="display: none;">
+                <strong>ビジネスにとって極めて重要な理由：</strong> 通常のAIツールは次の単語を予測するだけです。キネティックエンジンは貴社独自の<strong>ビジネスオントロジー</strong>をマッピングし、法的条項、物理的メガワット、地理的緩衝地帯を確定的かつ数学的なグラフへ変換します。運用上の意思決定を行う際、企業全体にわたる複数ホップの波及効果を即座に計算し、最適な結果を導き出し、改ざん防止台帳に実行をステージングします。
+            </div>
+
+           <!-- 3 Interactive Spotlight Cards -->
+            <div class="guide-steps-grid">
+                <div class="guide-step-card active" id="tour-card-1" onclick="runGuidedStep(1)">
+                    <div class="gs-header">
+                        <span class="gs-title">1. &#x6F5C;&#x5728;&#x7684;&#x306A;&#x904B;&#x7528;&#x306E;&#x6CE2;&#x53CA;&#x52B9;&#x679C;&#x3092;&#x7279;&#x5B9A;&#x3059;&#x308B;</span>
+                        <span class="gs-action-pill"><i class="fas fa-eye"></i> &#x6CE2;&#x53CA;&#x52B9;&#x679C;&#x3092;&#x8868;&#x793A;</span>
+                    </div>
+                    <p class="gs-desc" id="step1-desc-text">&#x30AA;&#x30F3;&#x30C8;&#x30ED;&#x30B8;&#x30FC;&#x30B0;&#x30E9;&#x30D5;&#x3092;&#x3054;&#x89A7;&#x304F;&#x3060;&#x3055;&#x3044;&#xFF1A;{recipient}&#x306E;&#x6761;&#x4EF6;&#x3092;&#x5909;&#x66F4;&#x3059;&#x308B;&#x3068;&#x3001;{container}&#x5168;&#x4F53;&#x306B;&#x9023;&#x9396;&#x53CD;&#x5FDC;&#x304C;&#x5373;&#x5EA7;&#x306B;&#x767A;&#x751F;&#x3057;&#x3001;&#x5B89;&#x5168;&#x898F;&#x5247;&#x3001;&#x7269;&#x6D41;&#x3001;&#x30B3;&#x30F3;&#x30D7;&#x30E9;&#x30A4;&#x30A2;&#x30F3;&#x30B9;&#x306B;&#x5F71;&#x97FF;&#x3092;&#x4E0E;&#x3048;&#x307E;&#x3059;&#x3002;</p>
+                </div>
+
+                <div class="guide-step-card" id="tour-card-2" onclick="runGuidedStep(2)">
+                    <div class="gs-header">
+                        <span class="gs-title">2. AI&#x306B;&#x3088;&#x308B;&#x7D50;&#x679C;&#x306E;&#x6700;&#x9069;&#x5316;</span>
+                        <span class="gs-action-pill gold"><i class="fas fa-wand-magic-sparkles"></i> &#x610F;&#x601D;&#x6C7A;&#x5B9A;&#x306E;&#x81EA;&#x52D5;&#x6700;&#x9069;&#x5316;</span>
+                    </div>
+                    <p class="gs-desc" id="step2-desc-text">&#x5DE6;&#x5074;&#x306E;&#x30B9;&#x30E9;&#x30A4;&#x30C0;&#x30FC;&#x3092;&#x52D5;&#x304B;&#x3059;&#x304B;&#x3001;&#x3053;&#x3053;&#x3092;&#x30AF;&#x30EA;&#x30C3;&#x30AF;&#x3057;&#x3066;&#x3001;&#x30DC;&#x30C8;&#x30EB;&#x30CD;&#x30C3;&#x30AF;&#x3092;&#x9632;&#x304E;&#x3001;&#x9055;&#x7D04;&#x91D1;&#x3092;&#x56DE;&#x907F;&#x3057;&#x3001;&#x8FC5;&#x901F;&#x627F;&#x8A8D;&#xFF08;&#x30D5;&#x30A1;&#x30B9;&#x30C8;&#x30C8;&#x30E9;&#x30C3;&#x30AF;&#xFF09;&#x3092;&#x89E3;&#x9664;&#x3059;&#x308B;&#x305F;&#x3081;&#x306E;&#x6B63;&#x78BA;&#x306A;&#x904B;&#x7528;&#x4E0A;&#x9650;&#x3092;MindML&#x304C;&#x7B97;&#x51FA;&#x3059;&#x308B;&#x69D8;&#x5B50;&#x3092;&#x3054;&#x89A7;&#x304F;&#x3060;&#x3055;&#x3044;&#x3002;</p>
+                </div>
+
+                <div class="guide-step-card" id="tour-card-3" onclick="runGuidedStep(3)">
+                    <div class="gs-header">
+                        <span class="gs-title">3. &#x30B9;&#x30C6;&#x30FC;&#x30C8;&#x30D5;&#x30EB;&#x30BB;&#x30AD;&#x30E5;&#x30EA;&#x30C6;&#x30A3;&#x30B2;&#x30FC;&#x30C8;&#x306E;&#x691C;&#x8A3C;</span>
+                        <span class="gs-action-pill emerald"><i class="fas fa-shield-halved"></i> &#x30BB;&#x30FC;&#x30D5;&#x30C6;&#x30A3;&#x30B2;&#x30FC;&#x30C8;&#x3092;&#x958B;&#x304F;</span>
+                    </div>
+                    <p class="gs-desc">&#x627F;&#x8A8D;&#x30B2;&#x30FC;&#x30C8;&#x30BF;&#x30D6;&#x3092;&#x958B;&#x3044;&#x3066;&#x5909;&#x66F4;&#x3092;&#x627F;&#x8A8D;&#x3059;&#x308B;&#x304B;&#x3001;&#x30EF;&#x30F3;&#x30AF;&#x30EA;&#x30C3;&#x30AF;&#x53D6;&#x308A;&#x6D88;&#x3057;&#x3092;&#x30C6;&#x30B9;&#x30C8;&#x3059;&#x308B;&#x304B;&#x3001;MindML&#x304C;&#x540C;&#x6642;&#x7DE8;&#x96C6;&#x306E;&#x885D;&#x7A81;&#x3084;&#x30C7;&#x30FC;&#x30BF;&#x30D9;&#x30FC;&#x30B9;&#x306E;&#x6539;&#x3056;&#x3093;&#x3092;&#x3069;&#x306E;&#x3088;&#x3046;&#x306B;&#x906E;&#x65AD;&#x3059;&#x308B;&#x304B;&#x3092;&#x30B7;&#x30DF;&#x30E5;&#x30EC;&#x30FC;&#x30C8;&#x3057;&#x3066;&#x304F;&#x3060;&#x3055;&#x3044;&#x3002;</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- MAIN 2-COLUMN COMMAND DECK (STICKY LEFT CONTROLS + TABBED RIGHT STAGE) -->
+        <div class="kinetic-main-grid">
+
+            <!-- LEFT CONTROL DECK: SCENARIOS + LIVE STRESS-TEST SLIDERS -->
+            <aside class="kinetic-left-deck">
+                <div class="deck-panel">
+                    <div class="deck-panel-header">
+                        <i class="fas fa-layer-group"></i> 1. &#x696D;&#x754C;&#x30B7;&#x30CA;&#x30EA;&#x30AA;&#x3092;&#x9078;&#x629E;
+                    </div>
+                    <div class="scenario-selector-list" id="scenario-list">
+                            <button type="button" class="scenario-card-btn" data-scenario-id="sec1_energy" onclick="selectScenario('sec1_energy')">
+                                <div class="sc-card-top">
+                                    <span class="sc-sector-tag"><i class="fas fa-bolt"></i> &#x30A8;&#x30CD;&#x30EB;&#x30AE;&#x30FC;&#xFF06;&#x7523;&#x696D;&#x30CF;&#x30D6;</span>
+                                </div>
+                                <div class="sc-card-title">AntwerpEnergyHub - &#x96FB;&#x529B;&#x91CF;&#x6599;&#x91D1;&#x5272;&#x5F15;&#xFF06;&#x5B89;&#x5168;&#x5730;&#x5E2F;</div>
+                            </button>
+                            <button type="button" class="scenario-card-btn" data-scenario-id="sec3_pharma" onclick="selectScenario('sec3_pharma')">
+                                <div class="sc-card-top">
+                                    <span class="sc-sector-tag"><i class="fas fa-snowflake"></i> &#x533B;&#x85AC;&#x54C1;&#x30B5;&#x30D7;&#x30E9;&#x30A4;&#x30C1;&#x30A7;&#x30FC;&#x30F3;&#xFF06;&#x7269;&#x6D41;</span>
+                                </div>
+                                <div class="sc-card-title">EuroLogisticsHub - &#x56DE;&#x5ECA;&#x9593;&#x6CE2;&#x53CA;&#xFF06;&#x7D0D;&#x54C1;&#x9045;&#x5EF6;</div>
+                            </button>
+                            <button type="button" class="scenario-card-btn" data-scenario-id="sec6_aerospace" onclick="selectScenario('sec6_aerospace')">
+                                <div class="sc-card-top">
+                                    <span class="sc-sector-tag"><i class="fas fa-fighter-jet"></i> &#x822A;&#x7A7A;&#x5B87;&#x5B99;&#xFF06;&#x9632;&#x885B;&#x88FD;&#x9020;</span>
+                                </div>
+                                <div class="sc-card-title">EuroDroneConsortium - &#x30B5;&#x30D7;&#x30E9;&#x30A4;&#x30E4;&#x30FC;&#x30ED;&#x30A4;&#x30E4;&#x30EB;&#x30C6;&#x30A3;&#x4E0A;&#x9650;&#xFF06;&#x4E88;&#x7B97;&#x5929;&#x4E95;</div>
+                            </button>
+                            <button type="button" class="scenario-card-btn" data-scenario-id="sec7_hvdc" onclick="selectScenario('sec7_hvdc')">
+                                <div class="sc-card-top">
+                                    <span class="sc-sector-tag"><i class="fas fa-plug"></i> &#x96FB;&#x529B;&#x7DB2;&#xFF06;&#x516C;&#x76CA;&#x4E8B;&#x696D;&#xFF08;&#x30E1;&#x30AC;&#x30EF;&#x30C3;&#x30C8;&#xFF09;</span>
+                                </div>
+                                <div class="sc-card-title">NorthSeaHVDCSubstation - &#x975E;&#x91D1;&#x92AD;&#x7684;&#x30E1;&#x30AC;&#x30EF;&#x30C3;&#x30C8;&#xFF08;MW&#xFF09;&#x8CA0;&#x8377;&#x30D0;&#x30E9;&#x30F3;&#x30B7;&#x30F3;&#x30B0;</div>
+                            </button>
+                            <button type="button" class="scenario-card-btn" data-scenario-id="sec8_pe_fund" onclick="selectScenario('sec8_pe_fund')">
+                                <div class="sc-card-top">
+                                    <span class="sc-sector-tag"><i class="fas fa-scale-balanced"></i> &#x30D7;&#x30E9;&#x30A4;&#x30D9;&#x30FC;&#x30C8;&#x30A8;&#x30AF;&#x30A4;&#x30C6;&#x30A3;&#x3001;&#x6CD5;&#x52D9;&#xFF06;M&amp;A</span>
+                                </div>
+                                <div class="sc-card-title">ApexGlobalBuyoutVIII - &#x6539;&#x5B9A;&#x30B5;&#x30A4;&#x30C9;&#x30EC;&#x30BF;&#x30FC;&#xFF06;&#x6295;&#x8CC7;&#x5BB6;&#x5831;&#x916C;&#x30D1;&#x30EA;&#x30C6;&#x30A3;</div>
+                            </button>
+                            <button type="button" class="scenario-card-btn" data-scenario-id="sec9_normative" onclick="selectScenario('sec9_normative')">
+                                <div class="sc-card-top">
+                                    <span class="sc-sector-tag"><i class="fas fa-gavel"></i> &#x898F;&#x5236;&#x5909;&#x66F4;&#xFF06;&#x53F8;&#x6CD5;&#x5224;&#x65AD;</span>
+                                </div>
+                                <div class="sc-card-title">SovereignInfraFundIX - &#x5224;&#x6C7A;&#x306E;&#x5F71;&#x97FF;&#x7BC4;&#x56F2;&#xFF06;&#x898F;&#x5236;&#x30D6;&#x30E9;&#x30B9;&#x30C8;&#x534A;&#x5F84;</div>
+                            </button>
+                    </div>
+                </div>
+
+                <!-- INTERACTIVE PARAMETER SLIDERS -->
+                <div class="deck-panel" id="left-controls-panel">
+                    <div class="deck-panel-header">
+                        <i class="fas fa-sliders"></i> 2. &#x53D6;&#x5F15;&#x30D1;&#x30E9;&#x30E1;&#x30FC;&#x30BF;&#x3092;&#x30EA;&#x30A2;&#x30EB;&#x30BF;&#x30A4;&#x30E0;&#x8ABF;&#x6574;
+                    </div>
+                    <div class="deck-controls-body">
+                        <!-- Slider 1: Concession Magnitude -->
+                        <div class="control-group">
+                            <div class="control-label-row">
+                                <label for="slider-concession">&#x63D0;&#x793A;&#x5272;&#x5F15; / &#x8A31;&#x5BB9;&#x5024;</label>
+                                <span class="control-live-val" id="val-concession">20 bps</span>
+                            </div>
+                            <input type="range" id="slider-concession" class="kinetic-slider" min="2" max="50" step="1" value="20" oninput="onParameterInput()" />
+                            <div class="slider-Endpoints">
+                                <span id="min-concession-lbl">2 bps</span>
+                                <span id="breakeven-marker-lbl" class="breakeven-hint">9.9 bps</span>
+                                <span id="max-concession-lbl">50 bps</span>
+                            </div>
+                        </div>
+
+                        <!-- Slider 2: Recipient Commitment Step-Up -->
+                        <div class="control-group">
+                            <div class="control-label-row">
+                                <label for="slider-stepup">&#x9867;&#x5BA2;&#x6700;&#x4F4E;&#x30B3;&#x30DF;&#x30C3;&#x30C8;&#x30E1;&#x30F3;&#x30C8; / &#x5F15;&#x53D7;&#x6570;&#x91CF;</label>
+                                <span class="control-live-val" id="val-stepup">$20M</span>
+                            </div>
+                            <input type="range" id="slider-stepup" class="kinetic-slider" min="20" max="160" step="5" value="20" oninput="onParameterInput()" />
+                            <div class="slider-Endpoints">
+                                <span id="min-stepup-lbl">$20M</span>
+                                <span id="max-stepup-lbl">$160M</span>
+                            </div>
+                        </div>
+
+                        <!-- Toggle 3: Normative / Amendment / Safe-Harbor Switch -->
+                        <div class="control-group variant-toggle-box">
+                            <label class="variant-checkbox-label">
+                                <input type="checkbox" id="toggle-variant" onchange="onParameterInput()" />
+                                <span class="variant-custom-check"></span>
+                                <span id="lbl-variant-toggle">&#x65B9;&#x91DD; / &#x5951;&#x7D04;&#x5909;&#x66F4;</span>
+                            </label>
+                        </div>
+
+                        <!-- Quick Action Buttons -->
+                        <div class="control-quick-btns">
+                            <button type="button" class="kinetic-action-btn outline" onclick="resetScenarioBaseline()">
+                                <i class="fas fa-rotate-left"></i> &#x521D;&#x671F;&#x5024;&#x306B;&#x30EA;&#x30BB;&#x30C3;&#x30C8;
+                            </button>
+                            <button type="button" class="kinetic-action-btn gold" id="btn-apply-pareto" onclick="applyParetoOptimal()">
+                                <i class="fas fa-wand-magic-sparkles"></i> &#x6700;&#x9069;&#x306A;&#x5B89;&#x5168;&#x53D6;&#x5F15;&#xFF08;CF-02&#xFF09;&#x3092;&#x9069;&#x7528;
+                            </button>
+                        </div>
+
+                        <!-- Live Synthesized Natural Language Prompt -->
+                        <div class="live-prompt-box">
+                            <div class="live-prompt-header">
+                                <span><i class="fas fa-terminal"></i> AI&#x30C1;&#x30FC;&#x30E0;&#x3078;&#x306E;&#x6307;&#x793A;&#x5185;&#x5BB9;</span>
+                                <span class="gbnf-tag">&#x610F;&#x56F3;&#x691C;&#x8A3C;&#x6E08;&#x307F;</span>
+                            </div>
+                            <div class="live-prompt-text" id="live-prompt-display"></div>
+                        </div>
+
+                        <!-- Active Container Metamodel Summary -->
+                        <div class="metamodel-mini-stats" id="metamodel-summary-box"></div>
+                    </div>
+                </div>
+            </aside>
+
+            <!-- RIGHT STAGE: 4 KPI CARDS + 4 PROGRESSIVE DISCLOSURE TABS -->
+            <div class="kinetic-center-stage">
+
+                <!-- REAL-TIME EXECUTIVE KPI STRIP -->
+                <div class="kinetic-kpi-strip">
+                    <div class="kpi-card" id="kpi-card-drag">
+                        <span class="kpi-title">&#x5E74;&#x9593;&#x306E;&#x6CE2;&#x53CA;&#x30B3;&#x30B9;&#x30C8;</span>
+                        <div class="kpi-main-val" id="kpi-val-drag"></div>
+                        <span class="kpi-sub-val" id="kpi-sub-drag"></span>
+                    </div>
+                    <div class="kpi-card" id="kpi-card-omni">
+                        <span class="kpi-title">5&#x5E74;&#x9593;&#x306E;&#x4E88;&#x6E2C;&#x30EA;&#x30B9;&#x30AF;&#x30A8;&#x30AF;&#x30B9;&#x30DD;&#x30FC;&#x30B8;&#x30E3;&#x30FC;</span>
+                        <div class="kpi-main-val" id="kpi-val-omni"></div>
+                        <span class="kpi-sub-val" id="kpi-sub-omni"></span>
+                    </div>
+                    <div class="kpi-card kpi-pareto-card" onclick="applyParetoOptimal()" style="cursor: pointer;" title="Click to apply optimal deal">
+                        <span class="kpi-title">&#x6700;&#x9069;&#x5316;&#x53D6;&#x5F15;&#x306B;&#x3088;&#x308B;&#x524A;&#x6E1B;&#x984D;&#xFF08;CF-02&#xFF09;</span>
+                        <div class="kpi-main-val accent-emerald" id="kpi-val-savings"></div>
+                        <span class="kpi-sub-val" id="kpi-sub-savings"></span>
+                    </div>
+                    <div class="kpi-card" id="kpi-card-tier">
+                        <span class="kpi-title">&#x5FC5;&#x8981;&#x306A;&#x627F;&#x8A8D;&#x30EC;&#x30D9;&#x30EB;</span>
+                        <div class="kpi-tier-badge" id="kpi-val-tier"></div>
+                        <span class="kpi-sub-val" id="kpi-sub-tier"></span>
+                    </div>
+                </div>
+
+                <!-- 4-TAB STAGE CONTAINER (SHOWS ONE FOCUSED VIEW AT A TIME) -->
+                <div class="stage-panel">
+                    <div class="stage-tabs-header">
+                        <div class="stage-tab-buttons" role="tablist">
+                            <button type="button" class="stage-tab-btn active" data-tab="overview" onclick="switchMainTab('overview')">
+                                <i class="fas fa-project-diagram"></i> 1. &#x5F71;&#x97FF;&#x30DE;&#x30C3;&#x30D7;&#xFF06;&#x53D6;&#x5F15;&#x30AA;&#x30D7;&#x30C6;&#x30A3;&#x30DE;&#x30A4;&#x30B6;&#x30FC;
+                            </button>
+                            <button type="button" class="stage-tab-btn" data-tab="proof" onclick="switchMainTab('proof')">
+                                <i class="fas fa-file-contract"></i> 2. &#x5951;&#x7D04;&#x6839;&#x62E0;&#xFF06;&#x6CD5;&#x7684;&#x901A;&#x77E5;&#x66F8;
+                                <span class="tab-count-badge" id="badge-proof-count">2</span>
+                            </button>
+                            <button type="button" class="stage-tab-btn" data-tab="specialists" onclick="switchMainTab('specialists')">
+                                <i class="fas fa-user-shield"></i> 3. AI&#x30B9;&#x30DA;&#x30B7;&#x30E3;&#x30EA;&#x30B9;&#x30C8;&#x691C;&#x8A3C;
+                                <span class="tab-count-badge" id="badge-spec-count">4</span>
+                            </button>
+                            <button type="button" class="stage-tab-btn" data-tab="gate" onclick="switchMainTab('gate')">
+                                <i class="fas fa-lock"></i> 4. &#x627F;&#x8A8D;&#x30B2;&#x30FC;&#x30C8;&#xFF06;&#x76E3;&#x67FB;&#x30ED;&#x30B0;
+                                <span class="tab-status-dot" id="badge-gate-dot"></span>
+                            </button>
+                        </div>
+
+                        <!-- Compact Audit Seal Status Pill -->
+                        <div class="merkle-telemetry-box" id="merkle-status-pill" onclick="switchMainTab('gate')" style="cursor:pointer;">
+                            <span class="telemetry-value merkle-valid" id="merkle-badge-text">
+                                <i class="fas fa-shield-halved"></i> &#x5C01;&#x5370;&#xFF06;&#x691C;&#x8A3C;&#x5B8C;&#x4E86;
+                            </span>
+                            <span class="telemetry-value" id="live-entity-version">&#x30EC;&#x30B3;&#x30FC;&#x30C9; v1</span>
+                        </div>
+                    </div>
+
+                    <!-- =========================================================
+                         TAB 1 (DEFAULT): IMPACT MAP & DEAL OPTIMIZER
+                         ========================================================= -->
+                    <div id="tab-pane-overview" class="tab-pane-content">
+                        <!-- Visual Legend Bar -->
+                        <div class="graph-legend-bar">
+                            <span><span class="legend-dot triggered"></span> &#x30C8;&#x30EA;&#x30AC;&#x30FC;&#x3055;&#x308C;&#x305F;&#x6761;&#x9805;&#xFF08;&#x30B3;&#x30B9;&#x30C8;&#x767A;&#x751F;&#xFF09;</span>
+                            <span><span class="legend-dot cleared"></span> &#x5B89;&#x5168; / &#x6761;&#x9805;&#x30C8;&#x30EA;&#x30AC;&#x30FC;&#x306A;&#x3057;</span>
+                            <span><span class="legend-dot contagion"></span> &#x9023;&#x643A;&#x65BD;&#x8A2D;&#x3078;&#x306E;&#x6CE2;&#x53CA;</span>
+                        </div>
+
+                        <!-- 100% PURE HTML/CSS RESPONSIVE RIPPLE-EFFECT BOARD (Zero SVG Overlap) -->
+                        <div class="impact-flow-viewport" id="view-graph-container">
+                            <div id="impact-flow-board" class="impact-flow-board"></div>
+                        </div>
+
+                        <!-- Governance Alert Banner + Clickable Pareto Restructuring Table -->
+                        <div class="universal-governance-card">
+                            <div class="gov-card-banner" id="gov-banner">
+                                <div class="gov-banner-left">
+                                    <i class="fas fa-triangle-exclamation" id="gov-banner-icon"></i>
+                                    <div>
+                                        <h3 id="gov-banner-title"></h3>
+                                        <p id="gov-banner-sub"></p>
+                                    </div>
+                                </div>
+                                <button type="button" class="actionlog-id-pill" id="gov-actionlog-pill" onclick="switchMainTab('gate')" title="Click to open Approval Gate"></button>
+                            </div>
+
+                            <div class="gov-section">
+                                <div class="gov-section-header">
+                                    <h4><i class="fas fa-chess-knight"></i> &#x53D6;&#x5F15;&#x518D;&#x69CB;&#x7BC9;&#x30AA;&#x30D7;&#x30B7;&#x30E7;&#x30F3;&#xFF08;&#x6CE2;&#x53CA;&#x30B3;&#x30B9;&#x30C8;&#x306E;&#x56DE;&#x907F;&#x7B56;&#xFF09;</h4>
+                                    <span class="pareto-hint"><i class="fas fa-hand-pointer"></i> &#x4EE5;&#x4E0B;&#x306E;&#x30AA;&#x30D7;&#x30B7;&#x30E7;&#x30F3;&#x884C;&#x3092;&#x30AF;&#x30EA;&#x30C3;&#x30AF;&#x3057;&#x3066;&#x3001;&#x6570;&#x5024;&#x3092;&#x30EA;&#x30A2;&#x30EB;&#x30BF;&#x30A4;&#x30E0;&#x3067;&#x30C6;&#x30B9;&#x30C8;&#x3057;&#x3066;&#x304F;&#x3060;&#x3055;&#x3044;</span>
+                                </div>
+                                <div class="pareto-recommendation-callout" id="pareto-callout"></div>
+                                <div class="table-responsive">
+                                    <table class="kinetic-pareto-table">
+                                        <thead>
+                                            <tr>
+                                                <th>&#x30AA;&#x30D7;&#x30B7;&#x30E7;&#x30F3;</th>
+                                                <th>&#x53D6;&#x5F15;&#x306E;&#x518D;&#x69CB;&#x7BC9;&#x65B9;&#x91DD;</th>
+                                                <th>&#x5272;&#x5F15; / &#x8A31;&#x5BB9;&#x5024;</th>
+                                                <th>&#x5FC5;&#x8981;&#x9867;&#x5BA2;&#x6570;&#x91CF;</th>
+                                                <th>&#x30C8;&#x30EA;&#x30AC;&#x30FC;&#x5BFE;&#x8C61;</th>
+                                                <th>&#x5E74;&#x9593;&#x6CE2;&#x53CA;&#x30B3;&#x30B9;&#x30C8;</th>
+                                                <th>&#x5E74;&#x9593;&#x524A;&#x6E1B;&#x984D;</th>
+                                                <th>&#x627F;&#x8A8D;&#x6A29;&#x9650;&#x8005;</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody id="pareto-table-body"></tbody>
+                                    </table>
+                                </div>
+                                <div class="keystone-waiver-bar" id="keystone-waiver-box"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- =========================================================
+                         TAB 2: CONTRACT PROOF & TRANSLATED LEGAL NOTICES
+                         ========================================================= -->
+                    <div id="tab-pane-proof" class="tab-pane-content" style="display: none;">
+                        <div class="universal-governance-card">
+                            <div class="gov-details-grid">
+                                <div class="gov-detail-col">
+                                    <h4><i class="fas fa-book-bookmark"></i> &#x6B63;&#x78BA;&#x306A;&#x5951;&#x7D04;&#x6839;&#x62E0;&#xFF08;&#x7F72;&#x540D;&#x6E08;&#x307F;&#x5408;&#x610F;&#x66F8;&#x304B;&#x3089;&#x76F4;&#x63A5;&#x62BD;&#x51FA;&#xFF09;</h4>
+                                    <div id="verbatim-citation-box" class="citation-card"></div>
+
+                                    <h4 style="margin-top: 1.5rem;"><i class="fas fa-file-shield"></i> &#x78BA;&#x8A8D;&#x30FB;&#x30C0;&#x30A6;&#x30F3;&#x30ED;&#x30FC;&#x30C9;&#x53EF;&#x80FD;&#x306A;&#x751F;&#x6210;&#x6E08;&#x307F;&#x6587;&#x66F8;</h4>
+                                    <div id="staged-artifacts-box" class="artifacts-pill-list"></div>
+                                </div>
+                                <div class="gov-detail-col">
+                                    <h4><i class="fas fa-globe"></i> &#x9001;&#x4FE1;&#x6E96;&#x5099;&#x6E08;&#x307F;&#x30D1;&#x30FC;&#x30C8;&#x30CA;&#x30FC;&#x901A;&#x77E5;&#xFF08;&#x4FDD;&#x8B77;&#x3055;&#x308C;&#x305F;&#x6B63;&#x5F0F;&#x540D;&#x79F0;&#x3067;&#x7FFB;&#x8A33;&#xFF09;</h4>
+                                    <div id="localized-notices-box" class="notices-stack"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- =========================================================
+                         TAB 3: AI SPECIALIST TEAM & EXACT RULE VERIFICATION
+                         ========================================================= -->
+                    <div id="tab-pane-specialists" class="tab-pane-content" style="display: none;">
+                        <div class="universal-governance-card">
+                            <!-- 4-Step Pipeline Selector Inside Specialist Tab -->
+                            <div class="kinetic-pipeline-bar" role="tablist">
+                                    <button type="button" class="pipeline-stage-pill active" data-stage="sa1" onclick="highlightPipelineStage('sa1')">
+                                        <div class="stage-num">01</div>
+                                        <div class="stage-info">
+                                            <div class="stage-name">&#x8981;&#x6C42;&#x30FB;&#x5F53;&#x4E8B;&#x8005;&#x7167;&#x5408;</div>
+                                            <div class="stage-sub">&#x6307;&#x793A;&#x3068;&#x6B63;&#x78BA;&#x306A;&#x5951;&#x7D04;&#x3092;&#x7D10;&#x4ED8;&#x3051;</div>
+                                        </div>
+                                        <span class="stage-badge">&#x5373;&#x6642;</span>
+                                    </button>
+                                    <button type="button" class="pipeline-stage-pill " data-stage="sa2" onclick="highlightPipelineStage('sa2')">
+                                        <div class="stage-num">02</div>
+                                        <div class="stage-info">
+                                            <div class="stage-name">100%&#x30DD;&#x30FC;&#x30C8;&#x30D5;&#x30A9;&#x30EA;&#x30AA;&#x691C;&#x67FB;</div>
+                                            <div class="stage-sub">&#x6F5C;&#x5728;&#x7684;&#x4FA1;&#x683C;&#x9023;&#x52D5;&#x30C8;&#x30EA;&#x30AC;&#x30FC;&#x3092;&#x691C;&#x51FA;</div>
+                                        </div>
+                                        <span class="stage-badge">&#x898B;&#x843D;&#x3068;&#x3057;&#x30BC;&#x30ED;</span>
+                                    </button>
+                                    <button type="button" class="pipeline-stage-pill " data-stage="opt" onclick="highlightPipelineStage('opt')">
+                                        <div class="stage-num">03</div>
+                                        <div class="stage-info">
+                                            <div class="stage-name">&#x53D6;&#x5F15;&#x30AA;&#x30D7;&#x30C6;&#x30A3;&#x30DE;&#x30A4;&#x30B6;&#x30FC;</div>
+                                            <div class="stage-sub">&#x6700;&#x3082;&#x5B89;&#x5168;&#x306A;&#x5272;&#x5F15;&#x4E0A;&#x9650;&#x3092;&#x8A08;&#x7B97;</div>
+                                        </div>
+                                        <span class="stage-badge">&#x30B3;&#x30B9;&#x30C8;&#x524A;&#x6E1B;</span>
+                                    </button>
+                                    <button type="button" class="pipeline-stage-pill " data-stage="sa3" onclick="highlightPipelineStage('sa3')">
+                                        <div class="stage-num">04</div>
+                                        <div class="stage-info">
+                                            <div class="stage-name">&#x4EBA;&#x7684;&#x627F;&#x8A8D;&#x30B2;&#x30FC;&#x30C8;</div>
+                                            <div class="stage-sub">&#x6587;&#x66F8;&#x3092;&#x6E96;&#x5099;&#x3057;&#x7F72;&#x540D;&#x5F85;&#x3061;</div>
+                                        </div>
+                                        <span class="stage-badge">&#x5B89;&#x5168;&#x30ED;&#x30C3;&#x30AF;</span>
+                                    </button>
+                            </div>
+                            <div class="subagent-diagnostic-strip" id="subagent-diagnostic-bar"></div>
+
+                            <h4><i class="fas fa-network-wired"></i> AI&#x30B9;&#x30DA;&#x30B7;&#x30E3;&#x30EA;&#x30B9;&#x30C8;&#x30C1;&#x30FC;&#x30E0;&#x691C;&#x8A3C;&#xFF08;&#x8CA1;&#x52D9;&#x3001;&#x6CD5;&#x52D9;&#x3001;&#x30EA;&#x30B9;&#x30AF;&#x3001;&#x904B;&#x7528;&#xFF09;</h4>
+                            <div id="specialists-advisory-box" class="specialists-grid-2col"></div>
+
+                            <div class="ast-split-grid" style="margin-top: 1rem;">
+                                <div class="ast-box">
+                                    <h4><i class="fas fa-microchip"></i> &#x53B3;&#x5BC6;&#x306A;&#x5951;&#x7D04;&#x30EB;&#x30FC;&#x30EB;&#x691C;&#x8A3C;&#xFF08;AI&#x306E;&#x63A8;&#x6E2C;&#x3067;&#x306F;&#x306A;&#x304F;&#x3001;&#x6570;&#x5B66;&#x7684;&#x691C;&#x8A3C;&#xFF09;</h4>
+                                    <pre id="jsonlogic-ast-code" class="ast-code-block"></pre>
+                                </div>
+                                <div class="ast-box">
+                                    <h4><i class="fas fa-magnifying-glass-chart"></i> &#x7279;&#x5B9A;&#x3055;&#x308C;&#x305F;&#x5951;&#x7D04;&#x6761;&#x9805;&#xFF08;&#x30BF;&#x30A4;&#x30C8;&#x30EB;&#x306E;&#x307F;&#x306E;&#x8A00;&#x53CA;&#x306F;&#x9664;&#x5916;&#xFF09;</h4>
+                                    <div id="aho-corasick-table-wrap"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- =========================================================
+                         TAB 4: HUMAN APPROVAL GATE & TAMPER-PROOF AUDIT LOG
+                         ========================================================= -->
+                    <div id="tab-pane-gate" class="tab-pane-content" style="display: none;">
+                        <div class="acid-gate-panel" id="acid-gate-section" style="border: none; box-shadow: none;">
+                            <div class="acid-gate-header">
+                                <div>
+                                    <h4><i class="fas fa-lock"></i> &#x4EBA;&#x7684;&#x627F;&#x8A8D;&#x30B2;&#x30FC;&#x30C8;&#xFF06;&#x6539;&#x3056;&#x3093;&#x9632;&#x6B62;&#x76E3;&#x67FB;&#x30ED;&#x30B0;</h4>
+                                    <span class="acid-status-pill pending" id="acid-state-badge">&#x627F;&#x8A8D;&#x5F85;&#x3061;</span>
+                                </div>
+                                <div class="acid-chaos-controls">
+                                    <button type="button" class="chaos-btn occ-btn" onclick="simulateOccConflict()">
+                                        <i class="fas fa-users-slash"></i> &#x30C6;&#x30B9;&#x30C8;&#xFF1A;&#x540C;&#x50DA;&#x304C;&#x540C;&#x6642;&#x306B;&#x7DE8;&#x96C6;&#x3057;&#x305F;&#x5834;&#x5408;
+                                    </button>
+                                    <button type="button" class="chaos-btn tamper-btn" id="btn-tamper-toggle" onclick="toggleMerkleTamperSimulation()">
+                                        <i class="fas fa-bug"></i> <span id="tamper-btn-text">&#x30C6;&#x30B9;&#x30C8;&#xFF1A;&#x76E3;&#x67FB;&#x30ED;&#x30B0;&#x304C;&#x6539;&#x3056;&#x3093;&#x3055;&#x308C;&#x305F;&#x5834;&#x5408;</span>
+                                    </button>
+                                </div>
+                            </div>
+
+                            <!-- HUMAN-IN-THE-LOOP TRANSACTIONAL GATE BUTTONS -->
+                            <div class="acid-commit-bar">
+                                <div class="acid-feedback-msg" id="acid-feedback-banner">
+                                    権限者による署名を待機中。AIがすべての準備を整えましたが、承認をクリックするまで<strong>本番環境の企業データは一切変更されません</strong>。
+                                </div>
+                                <div class="acid-action-buttons">
+                                    <button type="button" class="acid-btn reject" id="btn-acid-reject" onclick="executeAcidTransition('REJECTED')">
+                                        <i class="fas fa-xmark"></i> &#x30EA;&#x30AF;&#x30A8;&#x30B9;&#x30C8;&#x3092;&#x30AD;&#x30E3;&#x30F3;&#x30BB;&#x30EB;
+                                    </button>
+                                    <button type="button" class="acid-btn rollback" id="btn-acid-rollback" onclick="executeAcidTransition('ROLLED_BACK')" disabled>
+                                        <i class="fas fa-rotate-left"></i> &#x30EF;&#x30F3;&#x30AF;&#x30EA;&#x30C3;&#x30AF;&#x53D6;&#x308A;&#x6D88;&#x3057;&#xFF08;&#x524D;&#x56DE;&#x306E;&#x72B6;&#x614B;&#x306B;&#x623B;&#x3059;&#xFF09;
+                                    </button>
+                                    <button type="button" class="acid-btn confirm" id="btn-acid-confirm" onclick="executeAcidTransition('COMMITTED')">
+                                        <i class="fas fa-check-double"></i> &#x627F;&#x8A8D;&#x3057;&#x3066;&#x5909;&#x66F4;&#x3092;&#x9069;&#x7528;
+                                    </button>
+                                </div>
+                            </div>
+
+                            <!-- APPEND-ONLY ACTIONLOG MERKLE CHAIN TABLE -->
+                            <div class="merkle-ledger-wrap">
+                                <div class="merkle-ledger-title">
+                                    <span><i class="fas fa-link"></i> &#x6052;&#x4E45;&#x7684;&#x306A;&#x30B3;&#x30F3;&#x30D7;&#x30E9;&#x30A4;&#x30A2;&#x30F3;&#x30B9;&#x76E3;&#x67FB;&#x30ED;&#x30B0;&#xFF08;&#x6697;&#x53F7;&#x6280;&#x8853;&#x306B;&#x3088;&#x308B;&#x5C01;&#x5370;&#xFF09;</span>
+                                    <span class="merkle-formula-hint">&#x3059;&#x3079;&#x3066;&#x306E;&#x30A8;&#x30F3;&#x30C8;&#x30EA;&#x306F;&#x524D;&#x306E;&#x884C;&#x306B;&#x30EA;&#x30F3;&#x30AF;&#x3057;&#x305F;&#x30C7;&#x30B8;&#x30BF;&#x30EB;&#x7F72;&#x540D;&#x306B;&#x3088;&#x3063;&#x3066;&#x5C01;&#x5370;&#x3055;&#x308C;&#x3066;&#x3044;&#x307E;&#x3059;&#x3002;&#x4E0D;&#x6B63;&#x306A;&#x30C7;&#x30FC;&#x30BF;&#x30D9;&#x30FC;&#x30B9;&#x66F8;&#x304D;&#x63DB;&#x3048;&#x306F;&#x5373;&#x5EA7;&#x306B;&#x691C;&#x77E5;&#x3055;&#x308C;&#x307E;&#x3059;&#x3002;</span>
+                                </div>
+                                <div class="table-responsive">
+                                    <table class="merkle-ledger-table">
+                                        <thead>
+                                            <tr>
+                                                <th>&#x30ED;&#x30B0;&#x756A;&#x53F7;</th>
+                                                <th>&#x30BF;&#x30A4;&#x30E0;&#x30B9;&#x30BF;&#x30F3;&#x30D7; (UTC)</th>
+                                                <th>&#x30E6;&#x30FC;&#x30B6;&#x30FC; / &#x30B7;&#x30B9;&#x30C6;&#x30E0;</th>
+                                                <th>&#x64CD;&#x4F5C;&#x5185;&#x5BB9;&#xFF06;&#x5BFE;&#x8C61;&#x9867;&#x5BA2;</th>
+                                                <th>&#x30EC;&#x30B3;&#x30FC;&#x30C9;&#x30D0;&#x30FC;&#x30B8;&#x30E7;&#x30F3;&#x7167;&#x5408;</th>
+                                                <th>&#x30B9;&#x30C6;&#x30FC;&#x30BF;&#x30B9;</th>
+                                                <th>&#x76F4;&#x524D;&#x30CF;&#x30C3;&#x30B7;&#x30E5;</th>
+                                                <th>&#x30C7;&#x30B8;&#x30BF;&#x30EB;&#x5370;&#x7AE0; (SHA-256)</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody id="merkle-ledger-tbody"></tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+    </main>
+
+        <nav class="footer-sitemap" aria-label="Footer Navigation">
+            <div class="container sitemap-grid">
+                    <div class="sitemap-column">
+                        <h4>&#x4F1A;&#x793E;&#x60C5;&#x5831;</h4>
+                        <ul>
+                                <li>
+                                    <a href="index.html">
+                                        &#x30DB;&#x30FC;&#x30E0;
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="about.html">
+                                        &#x79C1;&#x305F;&#x3061;&#x306B;&#x3064;&#x3044;&#x3066;
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="partners.html">
+                                        &#x30D1;&#x30FC;&#x30C8;&#x30CA;&#x30FC;&#x3068;&#x63D0;&#x643A;
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="careers.html">
+                                        &#x63A1;&#x7528;&#x60C5;&#x5831;
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="contact.html">
+                                        &#x304A;&#x554F;&#x3044;&#x5408;&#x308F;&#x305B;&#x30FB;&#x3054;&#x76F8;&#x8AC7;
+                                    </a>
+                                </li>
+                        </ul>
+                    </div>
+                    <div class="sitemap-column">
+                        <h4>&#x30D7;&#x30E9;&#x30C3;&#x30C8;&#x30D5;&#x30A9;&#x30FC;&#x30E0;&#x3068;&#x30B5;&#x30FC;&#x30D3;&#x30B9;</h4>
+                        <ul>
+                                <li>
+                                    <a href="offline-ai-desktop-app.html">
+                                        &#x30A8;&#x30A2;&#x30AE;&#x30E3;&#x30C3;&#x30D7;&#x30FB;&#x30A8;&#x30C3;&#x30B8;&#x30FB;&#x30A2;&#x30D7;&#x30E9;&#x30A4;&#x30A2;&#x30F3;&#x30B9;
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="secure-on-premise-ai-server.html">
+                                        &#x30BB;&#x30AD;&#x30E5;&#x30A2;&#x306A;&#x30AA;&#x30F3;&#x30D7;&#x30EC;&#x30DF;&#x30B9;&#x30B5;&#x30FC;&#x30D0;&#x30FC;
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="agentic-ai-workflows.html">
+                                        &#x81EA;&#x5F8B;&#x578B;AI&#x30EF;&#x30FC;&#x30AF;&#x30D5;&#x30ED;&#x30FC;
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="services.html">
+                                        &#x30B5;&#x30FC;&#x30D3;&#x30B9;&#x3068;&#x30BD;&#x30EA;&#x30E5;&#x30FC;&#x30B7;&#x30E7;&#x30F3;
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="custom-ai-agent-development.html">
+                                        &#x30AB;&#x30B9;&#x30BF;&#x30E0;AI&#x30A8;&#x30FC;&#x30B8;&#x30A7;&#x30F3;&#x30C8;&#x958B;&#x767A;
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="ai-strategy-consulting.html">
+                                        AI&#x6226;&#x7565;&#x30B3;&#x30F3;&#x30B5;&#x30EB;&#x30C6;&#x30A3;&#x30F3;&#x30B0;
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="security.html">
+                                        &#x30BB;&#x30AD;&#x30E5;&#x30EA;&#x30C6;&#x30A3;&#x6982;&#x8981;
+                                    </a>
+                                </li>
+                        </ul>
+                    </div>
+                    <div class="sitemap-column">
+                        <h4>&#x6280;&#x8853;&#x3068;&#x30E6;&#x30FC;&#x30B9;&#x30B1;&#x30FC;&#x30B9;</h4>
+                        <ul>
+                                <li>
+                                    <a href="private-rag-enterprise-search.html">
+                                        &#x30D7;&#x30E9;&#x30A4;&#x30D9;&#x30FC;&#x30C8;RAG&#x3068;&#x691C;&#x7D22;
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="gpu-accelerated-local-ai.html">
+                                        GPU&#x9AD8;&#x901F;&#x5316;&#x30ED;&#x30FC;&#x30AB;&#x30EB;AI
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="run-ai-locally-without-internet.html">
+                                        &#x30BC;&#x30ED;&#x30C8;&#x30E9;&#x30B9;&#x30C8;&#x4E3B;&#x6A29;&#x5B9F;&#x884C;
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="ai-data-privacy-compliance.html">
+                                        &#x30C7;&#x30FC;&#x30BF;&#x30D7;&#x30E9;&#x30A4;&#x30D0;&#x30B7;&#x30FC;&#x30B3;&#x30F3;&#x30D7;&#x30E9;&#x30A4;&#x30A2;&#x30F3;&#x30B9;
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="secure-local-ai-for-legal-finance.html">
+                                        &#x6CD5;&#x52D9;&#x30FB;&#x91D1;&#x878D;&#x5411;&#x3051;AI
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="ai-predictive-maintenance-manufacturing.html">
+                                        &#x4E88;&#x77E5;&#x4FDD;&#x5168;
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="ai-customer-support-automation.html">
+                                        &#x30AB;&#x30B9;&#x30BF;&#x30DE;&#x30FC;&#x30B5;&#x30DD;&#x30FC;&#x30C8;&#x306E;&#x81EA;&#x52D5;&#x5316;
+                                    </a>
+                                </li>
+                        </ul>
+                    </div>
+                    <div class="sitemap-column">
+                        <h4>&#x30EA;&#x30BD;&#x30FC;&#x30B9;&#x3068;&#x30B5;&#x30DD;&#x30FC;&#x30C8;</h4>
+                        <ul>
+                                <li>
+                                    <a href="stress-test-lab.html">
+                                        &#x30B9;&#x30C8;&#x30EC;&#x30B9;&#x30C6;&#x30B9;&#x30C8;&#x30E9;&#x30DC;
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="demo.html">
+                                        &#x30E9;&#x30A4;&#x30D6;&#x30C7;&#x30E2;
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="case-studies.html">
+                                        &#x5C0E;&#x5165;&#x4E8B;&#x4F8B;
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="resources.html">
+                                        &#x30EA;&#x30BD;&#x30FC;&#x30B9;&#x3068;&#x30A4;&#x30F3;&#x30B5;&#x30A4;&#x30C8;
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="faqs.html">
+                                        &#x3088;&#x304F;&#x3042;&#x308B;&#x8CEA;&#x554F;
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="legal.html">
+                                        &#x6CD5;&#x7684;&#x60C5;&#x5831;&#x3068;&#x30DD;&#x30EA;&#x30B7;&#x30FC;
+                                    </a>
+                                </li>
+                        </ul>
+                    </div>
+            </div>
+        </nav>
+
+    <footer>
+        <div class="container">
+            <p>&#xA9; 2025 The Intelligent Enterprise Group. &#x7121;&#x65AD;&#x8EE2;&#x8F09;&#x3092;&#x7981;&#x3058;&#x307E;&#x3059;&#x3002;</p>
+        </div>
+    </footer>
+
+    <script src="/js/swiper-bundle.min.js"></script>
+    <script src="/js/cdn.min.js" defer></script>
+    <script src="/js/gsap.min.js"></script>
+    <script src="/js/DrawSVGPlugin.min.js"></script>
+
+    <script type="module" src="/js/themeToggle.js"></script>
+    <script type="module">
+        import { toggleTheme, getCurrentTheme } from '/js/themeToggle.js';
+        const checkbox = document.getElementById('theme-checkbox');
+        const themeLabel = document.getElementById('theme-label');
+
+        if (getCurrentTheme() === 'dark') {
+            checkbox.checked = true;
+            themeLabel.textContent = 'ダークモード';
+        } else {
+            themeLabel.textContent = 'ライトモード';
+        }
+
+        checkbox.addEventListener('change', () => {
+            toggleTheme();
+            themeLabel.textContent = checkbox.checked ? 'ダークモード' : 'ライトモード';
+        });
+    </script>
+
+    <button id="back-to-top" aria-label="Back to Top">&#x30C8;&#x30C3;&#x30D7;</button>
+
+    
+<script>
+    // 1. Load Localized Dictionaries & Scenarios from JSON Model
+    const SCENARIOS = [{"Id":"sec1_energy","SectorBadge":"\u30A8\u30CD\u30EB\u30AE\u30FC\uFF06\u7523\u696D\u30CF\u30D6","Title":"AntwerpEnergyHub - \u96FB\u529B\u91CF\u6599\u91D1\u5272\u5F15\uFF06\u5B89\u5168\u5730\u5E2F","Icon":"fa-bolt","ContainerId":"CON-3F82B110","ContainerName":"AntwerpEnergyHub","ContainerTarget":"$1,000,000,000","BaseRate":"\u57FA\u6E96\u6599\u91D1 2.00%","ActionVerb":"\u96FB\u6C17\u6599\u91D1\u5272\u5F15\u306E\u4ED8\u4E0E","PromptTemplate":"AntwerpEnergyHub\u306B\u304A\u3051\u308BPort Terminal Operator\u306B\u5BFE\u3059\u308B{concession} bps\u306E\u6599\u91D1\u5272\u5F15\u3092\u8A31\u53EF\u3059\u308B{stepUpClause}\u3002","RecipientId":"PAR-9A21C401","RecipientName":"Port Terminal Operator","RecipientJurisdiction":"US-TX","Unit":"bps","UnitType":"bps_currency","CurrencySymbol":"$","DefaultConcession":20,"MinConcession":2,"MaxConcession":40,"ConcessionStep":1,"DefaultRecipientCommitment":20,"MinRecipientCommitment":20,"MaxRecipientCommitment":150,"CommitmentStep":5,"CommitmentUnit":"$M","Tier1Ceiling":250000,"Tier3Threshold":250000,"Tier1Label":"\u7B2C1\u5C64\uFF1A\u904B\u884C\u7D71\u62EC\u8CAC\u4EFB\u8005","Tier1SignOff":"\u904B\u884C\u7D71\u62EC\u8CAC\u4EFB\u8005\uFF082\u65E5\u9593\u306E\u8FC5\u901F\u627F\u8A8D\uFF09","Tier2Label":"\u7B2C2\u5C64\uFF1A\u6CD5\u52D9\u30FB\u30B3\u30F3\u30D7\u30E9\u30A4\u30A2\u30F3\u30B9","Tier2SignOff":"\u30B3\u30F3\u30D7\u30E9\u30A4\u30A2\u30F3\u30B9\u30AA\u30D5\u30A3\u30B5\u30FC\uFF06\u6CD5\u52D9\u9867\u554F\uFF085\u65E5\u9593\u306E\u5BE9\u67FB\uFF09","Tier3Label":"\u7B2C3\u5C64\uFF1A\u53D6\u7DE0\u5F79\u4F1A\uFF06\u7DCF\u62EC\u6CD5\u52D9\u8CAC\u4EFB\u8005","Tier3SignOff":"\u7DCF\u62EC\u6CD5\u52D9\u8CAC\u4EFB\u8005\u3001CFO\uFF06\u53D6\u7DE0\u5F79\u4F1A\u4F1A\u9577\uFF0810\u65E5\u9593\u306E\u4E8B\u524D\u901A\u77E5\uFF09","VariantToggleLabel":"\u7DCA\u6025\u5B89\u5168\u533A\u57DF\u514D\u8CAC\u3092\u9069\u7528\uFF08\u4FA1\u683C\u9023\u52D5\u3092\u514D\u9664\uFF09","VariantEffect":"safe_harbor","SourceDoc":"Energy_Grid_Charter.pdf","SectionRef":"\u7B2C1\u6761 - \u96FB\u529B\u7DB2\u5272\u308A\u5F53\u3066\uFF06\u6599\u91D1\u30D1\u30EA\u30C6\u30A3","ChunkId":"Clause-1.4","VerbatimQuote":"AntwerpEnergyHub manages $1,000,000,000 in grid capacity at a 2.00% base tariff... Under the Most Favored Nation (MFN) clause, if AntwerpEnergyHub grants a lower tariff rate to any operator with an equal or smaller commitment, anchor partners BASF Antwerp ($140M) and RWE Ruhr ($110M) are entitled to claim that same lower rate.","Counterparties":[{"Id":"PAR-1042B8","Name":"BASF Antwerp Chemical Plant","CommitmentM":140,"ThresholdM":50,"ParityRequired":true,"CovenantId":"COV-8192A1","RuleType":"\u4FA1\u683C\u9023\u52D5\u6761\u9805","Jurisdiction":"BE","Locale":"nl-BE","SignalBadge":"\u5B89\u5168\u7DE9\u885D\u5730\u5E2F\uFF1A5,000m\u78BA\u8A8D\u6E08\u307F","NoticeTitle":"Formele Kennisgeving van Tariefpariteit en Keuzerecht","NoticeBody":"Formele kennisgeving voor BASF Antwerp Chemical Plant (BE): De voorgestelde tariefkorting ({concession} bps) in AntwerpEnergyHub activeert uw contractuele recht op hetzelfde tarief."},{"Id":"PAR-2091C4","Name":"RWE Ruhr Power Station","CommitmentM":110,"ThresholdM":50,"ParityRequired":true,"CovenantId":"COV-8192A2","RuleType":"\u4FA1\u683C\u9023\u52D5\u6761\u9805","Jurisdiction":"DE","Locale":"de-DE","SignalBadge":"\u5B89\u5168\u7DE9\u885D\u5730\u5E2F\uFF1A3,500m\u78BA\u8A8D\u6E08\u307F","NoticeTitle":"Formelle Mitteilung \u00FCber Tarifparit\u00E4t und Wahlrecht","NoticeBody":"Formelle Mitteilung f\u00FCr RWE Ruhr Power Station (DE): Die vorgeschlagene Tarifsenkung ({concession} bps) in AntwerpEnergyHub l\u00F6st Ihr vertragliches Recht auf Tarifanpassung aus."}],"TransitiveHop":null,"Specialists":[{"Agent":"GeoAnalyst AI","Role":"\u65BD\u8A2D\u5B89\u5168\u7DE9\u885D\u5730\u5E2F\u306E\u78BA\u8A8D","Status":"VERIFIED","Text":"\u4E21\u7523\u696D\u30D7\u30E9\u30F3\u30C8\u306E\u7269\u7406\u7684\u5B89\u5168\u533A\u57DF\u3092\u691C\u8A3C\uFF1ABASF\u30A2\u30F3\u30C8\u30EF\u30FC\u30D7\uFF085,000m\u7DE9\u885D\u57FA\u6E96\u9069\u5408\uFF09\u304A\u3088\u3073RWE\u30EB\u30FC\u30EB\uFF083,500m\u7DE9\u885D\u57FA\u6E96\u9069\u5408\uFF09\u3002"},{"Agent":"Translator AI","Role":"\u591A\u8A00\u8A9E\u6CD5\u7684\u901A\u77E5\u66F8\u4F5C\u6210","Status":"VERIFIED","Text":"\u516C\u5F0F\u4F01\u696D\u540D\u304A\u3088\u3073\u5951\u7D04\u8B58\u5225\u756A\u53F7\u3092\u4FDD\u8B77\u3057\u305F\u4E0A\u3067\u3001\u30AA\u30E9\u30F3\u30C0\u8A9E\uFF08nl-BE\uFF09\u304A\u3088\u3073\u30C9\u30A4\u30C4\u8A9E\uFF08de-DE\uFF09\u3067\u6B63\u5F0F\u306A\u6CD5\u7684\u901A\u77E5\u66F8\u3092\u4F5C\u6210\u3002"}]},{"Id":"sec3_pharma","SectorBadge":"\u533B\u85AC\u54C1\u30B5\u30D7\u30E9\u30A4\u30C1\u30A7\u30FC\u30F3\uFF06\u7269\u6D41","Title":"EuroLogisticsHub - \u56DE\u5ECA\u9593\u6CE2\u53CA\uFF06\u7D0D\u54C1\u9045\u5EF6","Icon":"fa-snowflake","ContainerId":"CON-5D19A200","ContainerName":"EuroLogisticsHub","ContainerTarget":"$900,000,000","BaseRate":"\u8377\u5F79\u624B\u6570\u6599 2.00%","ActionVerb":"\u8377\u5F79\u624B\u6570\u6599\u5272\u5F15\u306E\u4ED8\u4E0E","PromptTemplate":"EuroLogisticsHub\u306B\u304A\u3051\u308BRegional Express Carrier\u306B\u5BFE\u3059\u308B{concession} bps\u306E\u624B\u6570\u6599\u5272\u5F15\u3092\u4ED8\u4E0E\u3059\u308B{stepUpClause}\u3002","RecipientId":"PAR-7C11E309","RecipientName":"Regional Express Carrier","RecipientJurisdiction":"US-NY","Unit":"bps","UnitType":"bps_currency","CurrencySymbol":"$","DefaultConcession":30,"MinConcession":5,"MaxConcession":50,"ConcessionStep":1,"DefaultRecipientCommitment":15,"MinRecipientCommitment":15,"MaxRecipientCommitment":170,"CommitmentStep":5,"CommitmentUnit":"$M","Tier1Ceiling":250000,"Tier3Threshold":250000,"Tier1Label":"\u7B2C1\u5C64\uFF1A\u30CF\u30D6\u7D71\u62EC\u30C7\u30A3\u30EC\u30AF\u30BF\u30FC","Tier1SignOff":"\u7269\u6D41\u30CF\u30D6\u7D71\u62EC\u8CAC\u4EFB\u8005\uFF082\u65E5\u9593\u306E\u8FC5\u901F\u627F\u8A8D\uFF09","Tier2Label":"\u7B2C2\u5C64\uFF1A\u30B5\u30D7\u30E9\u30A4\u30C1\u30A7\u30FC\u30F3\u6CD5\u52D9","Tier2SignOff":"\u30B5\u30D7\u30E9\u30A4\u30C1\u30A7\u30FC\u30F3\u6CD5\u52D9\u9867\u554F\uFF085\u65E5\u9593\u306E\u5BE9\u67FB\uFF09","Tier3Label":"\u7B2C3\u5C64\uFF1A\u30B0\u30ED\u30FC\u30D0\u30EB\u30B5\u30D7\u30E9\u30A4\u30C1\u30A7\u30FC\u30F3\u62C5\u5F53\u526F\u793E\u9577\uFF06CFO","Tier3SignOff":"\u30B0\u30ED\u30FC\u30D0\u30EBSCM\u62C5\u5F53\u526F\u793E\u9577\u3001\u7DCF\u62EC\u6CD5\u52D9\u8CAC\u4EFB\u8005\uFF06CFO\uFF0810\u65E5\u9593\u306E\u4E8B\u524D\u901A\u77E5\uFF09","VariantToggleLabel":"\u4E3B\u8981\u30CF\u30D6\u306E\u9694\u96E2\uFF08\u9023\u52D5\u3059\u308B\u30D5\u30E9\u30F3\u30AF\u30D5\u30EB\u30C8\u56DE\u5ECA\u3092\u5272\u5F15\u5BFE\u8C61\u304B\u3089\u9664\u5916\uFF09","VariantEffect":"sever_hop","SourceDoc":"Pharma_ColdChain_Master_Agreement.pdf","SectionRef":"\u7B2C1\u6761\uFF06\u7B2C2\u6761 - \u9023\u643A\u30B3\u30FC\u30EB\u30C9\u30C1\u30A7\u30FC\u30F3\u56DE\u5ECA\u30D1\u30EA\u30C6\u30A3","ChunkId":"Clause-2.1","VerbatimQuote":"If EuroLogisticsHub grants a handling fee discount to any carrier, anchor shippers Sanofi Biologics ($160M) and Bayer Pharma ($90M) are entitled to the same lower fee. Because EuroLogisticsHub is contractually linked to FrankfurtColdCorridor, discounts also trigger matching rights for Roche Diagnostics ($70M).","Counterparties":[{"Id":"PAR-3310F1","Name":"Sanofi Biologics Freight","CommitmentM":160,"ThresholdM":50,"ParityRequired":true,"CovenantId":"COV-9921B1","RuleType":"\u624B\u6570\u6599\u9023\u52D5\u6761\u9805","Jurisdiction":"FR","Locale":"fr-FR","SignalBadge":"\u30EA\u30FC\u30C9\u30BF\u30A4\u30E0\uFF1A10\u65E5 | \u6B20\u54C1\uFF1A4\u56DE","NoticeTitle":"Notification Formelle de Parit\u00E9 Tarifaire","NoticeBody":"Notification formelle pour Sanofi Biologics Freight (FR) : La remise tarifaire ({concession} bps) accord\u00E9e dans EuroLogisticsHub active votre droit au tarif pr\u00E9f\u00E9rentiel."},{"Id":"PAR-3310F2","Name":"Bayer Pharma Distribution","CommitmentM":90,"ThresholdM":50,"ParityRequired":true,"CovenantId":"COV-9921B2","RuleType":"\u624B\u6570\u6599\u9023\u52D5\u6761\u9805","Jurisdiction":"DE","Locale":"de-DE","SignalBadge":"\u30EA\u30FC\u30C9\u30BF\u30A4\u30E0\uFF1A7\u65E5 | \u6B20\u54C1\uFF1A2\u56DE","NoticeTitle":"Formelle Mitteilung \u00FCber Frachtraten-Parit\u00E4t","NoticeBody":"Formelle Mitteilung f\u00FCr Bayer Pharma Distribution (DE): Der vorgeschlagene Geb\u00FChrenrabatt ({concession} bps) in EuroLogisticsHub l\u00F6st Ihr Anpassungsrecht aus."}],"TransitiveHop":{"HopDepth":1,"RelationType":"\u63D0\u643A\u56DE\u5ECA\u5408\u610F","ContainerId":"CON-8821F0","ContainerName":"FrankfurtColdCorridor","CounterpartyName":"Roche Diagnostics Logistics","CommitmentM":70,"ThresholdM":50},"Specialists":[{"Agent":"Root Cause Analysis AI","Role":"SCM\u30DC\u30C8\u30EB\u30CD\u30C3\u30AF\uFF06\u6CE2\u53CA\u691C\u67FB","Status":"REVIEW_REQUIRED","Text":"EuroLogisticsHub\u3078\u306E\u5272\u5F15\u9069\u7528\u304CFrankfurtColdCorridor\uFF08\u30ED\u30B7\u30E5 $70M\uFF09\u306B\u6CE2\u53CA\u3059\u308B\u3053\u3068\u3092\u691C\u77E5\u3002\u30B5\u30CE\u30D5\u30A3\u306E\u8F38\u9001\u30EB\u30FC\u30C8\u3067\u306F\u73FE\u5728\u30EA\u30FC\u30C9\u30BF\u30A4\u30E010\u65E5\u30FB\u76F4\u8FD14\u56DE\u306E\u6B20\u54C1\u3092\u8A18\u9332\u4E2D\u3002"},{"Agent":"OmniPredict AI","Role":"5\u5E74\u9593\u306E\u53CE\u76CA\u5F71\u97FF\u4E88\u6E2C","Status":"VERIFIED","Text":"\u63A5\u7D9A\u3055\u308C\u305F\u4E21\u7269\u6D41\u30CF\u30D6\u306B\u308F\u305F\u308A\u30015\u5E74\u9593\u306E\u5951\u7D04\u671F\u9593\u5185\u3067\u767A\u751F\u3059\u308B\u30D1\u30FC\u30C8\u30CA\u30FC\u306E\u540C\u7B49\u8ACB\u6C42\u30EA\u30B9\u30AF\u3092\u8A66\u7B97\u3002"}]},{"Id":"sec6_aerospace","SectorBadge":"\u822A\u7A7A\u5B87\u5B99\uFF06\u9632\u885B\u88FD\u9020","Title":"EuroDroneConsortium - \u30B5\u30D7\u30E9\u30A4\u30E4\u30FC\u30ED\u30A4\u30E4\u30EB\u30C6\u30A3\u4E0A\u9650\uFF06\u4E88\u7B97\u5929\u4E95","Icon":"fa-fighter-jet","ContainerId":"CON-9012D400","ContainerName":"EuroDroneConsortium","ContainerTarget":"$1,500,000,000","BaseRate":"\u30ED\u30A4\u30E4\u30EB\u30C6\u30A3 2.50%","ActionVerb":"\u30ED\u30A4\u30E4\u30EB\u30C6\u30A3\u5272\u5F15\u306E\u4ED8\u4E0E","PromptTemplate":"EuroDroneConsortium\u306B\u304A\u3051\u308BComposite Rotor Supplier\u306B\u5BFE\u3059\u308B{concession} bps\u306E\u30ED\u30A4\u30E4\u30EB\u30C6\u30A3\u5272\u5F15\u3092\u8A8D\u3081\u308B{stepUpClause}\u3002","RecipientId":"PAR-6612A0","RecipientName":"Composite Rotor Supplier","RecipientJurisdiction":"US-WA","Unit":"bps","UnitType":"bps_currency","CurrencySymbol":"$","DefaultConcession":40,"MinConcession":5,"MaxConcession":60,"ConcessionStep":1,"DefaultRecipientCommitment":30,"MinRecipientCommitment":30,"MaxRecipientCommitment":320,"CommitmentStep":10,"CommitmentUnit":"$M","Tier1Ceiling":1000000,"Tier3Threshold":1000000,"Tier1Label":"\u7B2C1\u5C64\uFF1A\u30D7\u30ED\u30B0\u30E9\u30E0\u30C7\u30A3\u30EC\u30AF\u30BF\u30FC\uFF08100\u4E07\u30C9\u30EB\u672A\u6E80\uFF09","Tier1SignOff":"\u30B3\u30F3\u30BD\u30FC\u30B7\u30A2\u30E0\u30D7\u30ED\u30B0\u30E9\u30E0\u30C7\u30A3\u30EC\u30AF\u30BF\u30FC\uFF082\u65E5\u9593\u306E\u8FC5\u901F\u627F\u8A8D\uFF09","Tier2Label":"\u7B2C2\u5C64\uFF1A\u9632\u885B\u8ABF\u9054\u6CD5\u52D9","Tier2SignOff":"\u8ABF\u9054\u6CD5\u52D9\u9867\u554F\uFF06\u8F38\u51FA\u7BA1\u7406\u8CAC\u4EFB\u8005\uFF085\u65E5\u9593\u306E\u5BE9\u67FB\uFF09","Tier3Label":"\u7B2C3\u5C64\uFF1A\u9632\u885B\u57F7\u884C\u59D4\u54E1\u4F1A","Tier3SignOff":"\u9632\u885B\u57F7\u884C\u59D4\u54E1\u4F1A\u3001\u7DCF\u62EC\u6CD5\u52D9\u8CAC\u4EFB\u8005\uFF06CFO\uFF0810\u65E5\u9593\u306E\u4E8B\u524D\u901A\u77E5\uFF09","VariantToggleLabel":"\u30A8\u30A2\u30D0\u30B9\u30FB\u30C7\u30A3\u30D5\u30A7\u30F3\u30B9\uFF08\u4E3B\u5E79\u30D1\u30FC\u30C8\u30CA\u30FC 3\u5104\u30C9\u30EB\uFF09\u306E\u500B\u5225\u6A29\u5229\u653E\u68C4\u3092\u9069\u7528","VariantEffect":"waive_first","SourceDoc":"EuroDrone_Consortium_Charter.pdf","SectionRef":"\u7B2C4.2\u9805 - \u4E3B\u5951\u7D04\u8005\u30ED\u30A4\u30E4\u30EB\u30C6\u30A3\u30D1\u30EA\u30C6\u30A3","ChunkId":"Clause-4.2","VerbatimQuote":"The EuroDroneConsortium program ($1.5B total volume) enforces strict royalty parity. If any supplier receives a royalty reduction, prime contractors Airbus Defense ($300M) and Thales Avionics ($200M) are entitled to the same reduction. Any ripple cost exceeding $1,000,000/yr requires full Defense Executive Board approval.","Counterparties":[{"Id":"PAR-4011A1","Name":"Airbus Defense Systems","CommitmentM":300,"ThresholdM":100,"ParityRequired":true,"CovenantId":"COV-4011C1","RuleType":"\u30ED\u30A4\u30E4\u30EB\u30C6\u30A3\u30D1\u30EA\u30C6\u30A3","Jurisdiction":"FR","Locale":"fr-FR","SignalBadge":"\u30C8\u30A5\u30FC\u30EB\u30FC\u30BA\u98DB\u884C\u8A66\u9A13\u533A\u57DF\uFF1A4,000m","NoticeTitle":"Notification d\u0027Ajustement de Redevances - Consortium EuroDrone","NoticeBody":"Notification officielle pour Airbus Defense Systems (FR) : La concession de redevance ({concession} bps) accord\u00E9e dans EuroDroneConsortium active votre clause de parit\u00E9."},{"Id":"PAR-4011A2","Name":"Thales Avionics Division","CommitmentM":200,"ThresholdM":100,"ParityRequired":true,"CovenantId":"COV-4011C2","RuleType":"\u30ED\u30A4\u30E4\u30EB\u30C6\u30A3\u30D1\u30EA\u30C6\u30A3","Jurisdiction":"FR","Locale":"fr-FR","SignalBadge":"\u5FC5\u9808\u30BB\u30AD\u30E5\u30EA\u30C6\u30A3\u30FB\u54C1\u8CEA\u76E3\u67FB\u5BFE\u8C61","NoticeTitle":"Notification de Parit\u00E9 Consortium - Thales Avionics","NoticeBody":"Notification officielle pour Thales Avionics Division (FR) : Ajustement de redevance ({concession} bps) enregistr\u00E9 sous le plafond de gouvernance du programme."}],"TransitiveHop":null,"Specialists":[{"Agent":"GeoAnalyst AI","Role":"\u7A7A\u57DF\u304A\u3088\u3073\u65BD\u8A2D\u5468\u8FBA\u30BB\u30AD\u30E5\u30EA\u30C6\u30A3\u78BA\u8A8D","Status":"VERIFIED","Text":"\u30B3\u30F3\u30BD\u30FC\u30B7\u30A2\u30E0\u306E\u5B89\u5168\u898F\u7A0B\u3067\u8981\u6C42\u3055\u308C\u308B\u30C8\u30A5\u30FC\u30EB\u30FC\u30BA\u98DB\u884C\u8A66\u9A13\u533A\u57DF\uFF08\u5317\u7DEF43.6290\u5EA6\u3001\u6771\u7D4C1.3638\u5EA6\u3001\u534A\u5F844,000m\u306E\u5236\u9650\u7A7A\u57DF\uFF09\u3092\u78BA\u8A8D\u5B8C\u4E86\u3002"},{"Agent":"Root Cause Analysis AI","Role":"\u30B5\u30D7\u30E9\u30A4\u30E4\u30FC\u88FD\u9020\u6B69\u7559\u307E\u308A\u691C\u8A3C","Status":"VERIFIED","Text":"\u30ED\u30FC\u30BF\u30FC\u306E\u30ED\u30C3\u30C8\u751F\u7523\u6B69\u7559\u307E\u308A\u3092\u76F8\u4E92\u691C\u8A3C\u3057\u3001\u30B5\u30D7\u30E9\u30A4\u30E4\u30FC\u306E\u8981\u6C42\u3059\u308B\u5272\u5F15\u304C\u539F\u6750\u6599\u8CBB\u9AD8\u9A30\u306B\u3088\u308A\u59A5\u5F53\u3067\u3042\u308B\u304B\u3092\u691C\u8A3C\u5B8C\u4E86\u3002"}]},{"Id":"sec7_hvdc","SectorBadge":"\u96FB\u529B\u7DB2\uFF06\u516C\u76CA\u4E8B\u696D\uFF08\u30E1\u30AC\u30EF\u30C3\u30C8\uFF09","Title":"NorthSeaHVDCSubstation - \u975E\u91D1\u92AD\u7684\u30E1\u30AC\u30EF\u30C3\u30C8\uFF08MW\uFF09\u8CA0\u8377\u30D0\u30E9\u30F3\u30B7\u30F3\u30B0","Icon":"fa-plug","ContainerId":"CON-8A91D004","ContainerName":"NorthSeaHVDCSubstation","ContainerTarget":"500 MW","BaseRate":"\u7CFB\u7D71\u5BB9\u91CF 500 MW","ActionVerb":"\u51FA\u529B\u6291\u5236\u514D\u8CAC\u306E\u4ED8\u4E0E","PromptTemplate":"NorthSeaHVDCSubstation\u306B\u304A\u3051\u308BBackup Peaker Unit\u306B\u5BFE\u3059\u308B{concession} MW\u306E\u51FA\u529B\u6291\u5236\u514D\u8CAC\u3092\u4ED8\u4E0E\u3059\u308B{stepUpClause}\u3002","RecipientId":"PAR-5E10C221","RecipientName":"Backup Peaker Unit","RecipientJurisdiction":"NL","Unit":"MW","UnitType":"physical_mw","CurrencySymbol":"","DefaultConcession":50,"MinConcession":5,"MaxConcession":100,"ConcessionStep":5,"DefaultRecipientCommitment":25,"MinRecipientCommitment":25,"MaxRecipientCommitment":220,"CommitmentStep":15,"CommitmentUnit":"MW","Tier1Ceiling":35,"Tier3Threshold":35,"Tier1Label":"\u7B2C1\u5C64\uFF1A\u5F53\u76F4\u7CFB\u7D71\u7D66\u96FB\u6307\u4EE4\u8CAC\u4EFB\u8005","Tier1SignOff":"\u5F53\u76F4\u7D66\u96FB\u6307\u4EE4\u54E1\uFF08\u5373\u6642\u7D66\u96FB\uFF09","Tier2Label":"\u7B2C2\u5C64\uFF1A\u4E0A\u5E2D\u5909\u96FB\u6240\u30A8\u30F3\u30B8\u30CB\u30A2","Tier2SignOff":"\u4E0A\u5E2D\u5909\u96FB\u6240\u30A8\u30F3\u30B8\u30CB\u30A2\uFF082\u65E5\u9593\u306E\u5BE9\u67FB\uFF09","Tier3Label":"\u7B2C3\u5C64\uFF1A\u7CFB\u7D71\u7D66\u96FB\u6700\u9AD8\u8A55\u8B70\u4F1A","Tier3SignOff":"\u6700\u9AD8\u6280\u8853\u8CAC\u4EFB\u8005\uFF06HVDC\u5B89\u5168\u7BA1\u7406\u8CAC\u4EFB\u8005\uFF0810\u65E5\u9593\u306E\u5BE9\u67FB\uFF09","VariantToggleLabel":"\u30D4\u30FC\u30AF\u4E88\u5099\u7D66\u96FB\u30E2\u30FC\u30C9\u3078\u79FB\u884C\uFF08\u5B89\u5168\u7D66\u96FB\u4E0A\u9650\u309235 MW\u304B\u3089122.5 MW\u3078\u5F15\u304D\u4E0A\u3052\uFF09","VariantEffect":"raise_mw_ceiling","SourceDoc":"HVDC_Substation_Operating_Charter.pdf","SectionRef":"\u7B2C1\u6761 - \u7269\u7406\u7684\u30E1\u30AC\u30EF\u30C3\u30C8\u7CFB\u7D71\u5BB9\u91CF\u5272\u308A\u5F53\u3066","ChunkId":"Clause-1.1","VerbatimQuote":"NorthSeaHVDCSubstation manages 500 MW of physical grid capacity. Under the Load Parity SLA, if any generator is granted a power curtailment exemption (in MW), anchor generators Offshore Wind Array Alpha (200 MW) and Hydrogen Electrolyzer Plant (150 MW) are entitled to an identical MW exemption.","Counterparties":[{"Id":"PAR-7011W1","Name":"Offshore Wind Array Alpha","CommitmentM":200,"ThresholdM":100,"ParityRequired":true,"CovenantId":"COV-7011L1","RuleType":"MW\u8CA0\u8377\u30D1\u30EA\u30C6\u30A3","Jurisdiction":"NL","Locale":"nl-NL","SignalBadge":"\u30D9\u30FC\u30B9\u30ED\u30FC\u30C9 200 MW | \u6BCD\u7DDAA","NoticeTitle":"Kennisgeving van Fysieke Belastingspariteit (Megawatt)","NoticeBody":"Kennisgeving voor Offshore Wind Array Alpha (NL): Een afschakelingsvrijstelling van {concession} MW in NorthSeaHVDCSubstation activeert uw recht op gelijke netcapaciteit."},{"Id":"PAR-7011W2","Name":"Hydrogen Electrolyzer Plant","CommitmentM":150,"ThresholdM":100,"ParityRequired":true,"CovenantId":"COV-7011L2","RuleType":"MW\u8CA0\u8377\u30D1\u30EA\u30C6\u30A3","Jurisdiction":"DE","Locale":"de-DE","SignalBadge":"\u30D9\u30FC\u30B9\u30ED\u30FC\u30C9 150 MW | \u6BCD\u7DDAB","NoticeTitle":"Mitteilung \u00FCber Lastparit\u00E4ts-Garantie (Megawatt)","NoticeBody":"Mitteilung f\u00FCr Hydrogen Electrolyzer Plant (DE): Die Freigabe von {concession} MW in NorthSeaHVDCSubstation l\u00F6st Ihren Anspruch auf gleiche Netzkapazit\u00E4t aus."}],"TransitiveHop":null,"Specialists":[{"Agent":"Decision Tree AI","Role":"\u7269\u7406\u7684\u7CFB\u7D71\u8CA0\u8377\u30EB\u30FC\u30C6\u30A3\u30F3\u30B0","Status":"REVIEW_REQUIRED","Text":"\u91D1\u984D\u3067\u306F\u306A\u304F\u7269\u7406\u5358\u4F4D\uFF08\u30E1\u30AC\u30EF\u30C3\u30C8\uFF09\u3092\u8A8D\u8B58\u3002\u5F71\u97FF\u3092\u53D7\u3051\u308B\u5408\u8A08\u8CA0\u8377\u304C\u5909\u96FB\u6240\u5BB9\u91CF\u306E10%\u3092\u8D85\u904E\u3059\u308B\u305F\u3081\u7CFB\u7D71\u7D66\u96FB\u6700\u9AD8\u8A55\u8B70\u4F1A\u3078\u30A8\u30B9\u30AB\u30EC\u30FC\u30B7\u30E7\u30F3\u3002"}]},{"Id":"sec8_pe_fund","SectorBadge":"\u30D7\u30E9\u30A4\u30D9\u30FC\u30C8\u30A8\u30AF\u30A4\u30C6\u30A3\u3001\u6CD5\u52D9\uFF06M\u0026A","Title":"ApexGlobalBuyoutVIII - \u6539\u5B9A\u30B5\u30A4\u30C9\u30EC\u30BF\u30FC\uFF06\u6295\u8CC7\u5BB6\u5831\u916C\u30D1\u30EA\u30C6\u30A3","Icon":"fa-scale-balanced","ContainerId":"CON-1182F900","ContainerName":"ApexGlobalBuyoutVIII","ContainerTarget":"$2,000,000,000","BaseRate":"\u7BA1\u7406\u5831\u916C 1.75%","ActionVerb":"\u7BA1\u7406\u5831\u916C\u5272\u5F15\u306E\u4ED8\u4E0E","PromptTemplate":"ApexGlobalBuyoutVIII\u306B\u304A\u3051\u308BSeed Co-Invest Vehicle\u306B\u5BFE\u3059\u308B{concession} bps\u306E\u7BA1\u7406\u5831\u916C\u5272\u5F15\u3092\u8A8D\u3081\u308B{stepUpClause}\u3002","RecipientId":"PAR-8812S0","RecipientName":"Seed Co-Invest Vehicle","RecipientJurisdiction":"US-DE","Unit":"bps","UnitType":"bps_currency","CurrencySymbol":"$","DefaultConcession":20,"MinConcession":5,"MaxConcession":45,"ConcessionStep":1,"DefaultRecipientCommitment":25,"MinRecipientCommitment":25,"MaxRecipientCommitment":200,"CommitmentStep":5,"CommitmentUnit":"$M","Tier1Ceiling":250000,"Tier3Threshold":250000,"Tier1Label":"\u7B2C1\u5C64\uFF1A\u30D5\u30A1\u30F3\u30C9\u904B\u55B6\u62C5\u5F53\u30D1\u30FC\u30C8\u30CA\u30FC","Tier1SignOff":"\u30D5\u30A1\u30F3\u30C9\u904B\u55B6\u30D1\u30FC\u30C8\u30CA\u30FC\uFF082\u65E5\u9593\u306E\u8FC5\u901F\u627F\u8A8D\uFF09","Tier2Label":"\u7B2C2\u5C64\uFF1A\u30D5\u30A1\u30F3\u30C9\u7D44\u6210\u6CD5\u52D9","Tier2SignOff":"\u30D5\u30A1\u30F3\u30C9\u6CD5\u52D9\u9867\u554F\uFF06\u6700\u9AD8\u30B3\u30F3\u30D7\u30E9\u30A4\u30A2\u30F3\u30B9\u8CAC\u4EFB\u8005\uFF085\u65E5\u9593\u306E\u5BE9\u67FB\uFF09","Tier3Label":"\u7B2C3\u5C64\uFF1A\u6295\u8CC7\u59D4\u54E1\u4F1A\uFF06\u30DE\u30CD\u30FC\u30B8\u30F3\u30B0\u30D1\u30FC\u30C8\u30CA\u30FC","Tier3SignOff":"\u30DE\u30CD\u30FC\u30B8\u30F3\u30B0\u30D1\u30FC\u30C8\u30CA\u30FC\u3001\u7DCF\u62EC\u6CD5\u52D9\u8CAC\u4EFB\u8005\uFF06LP\u8AEE\u554F\u59D4\u54E1\u4F1A\uFF0810\u65E5\u9593\u306E\u4E8B\u524D\u901A\u77E5\uFF09","VariantToggleLabel":"\u7B2C2\u56DE\u6539\u5B9A\u30B5\u30A4\u30C9\u30EC\u30BF\u30FC\u3092\u9069\u7528\uFF08\u5BFE\u8C61\u6295\u8CC7\u5BB6\u306E\u51FA\u8CC7\u57FA\u6E96\u309250M\u30C9\u30EB\u304B\u3089150M\u30C9\u30EB\u3078\u5F15\u304D\u4E0A\u3052\uFF09","VariantEffect":"amendment_v2","SourceDoc":"Apex_Buyout_SideLetter_Compendium.pdf","SectionRef":"\u7B2C3.1\u6761 - \u6539\u5B9A\u6295\u8CC7\u5BB6MFN\u57FA\u6E96","ChunkId":"Clause-3.1","VerbatimQuote":"Under the Round-2 Amended Side Letter Compendium, the original $50M fee-matching threshold is replaced. Only institutional investors committing $150M or more - specifically GPIF Tokyo Pension Trust ($180M) - retain automatic fee-matching rights, while sub-$150M investors are excluded.","Counterparties":[{"Id":"PAR-9001J1","Name":"GPIF Tokyo Pension Trust","CommitmentM":180,"ThresholdM":50,"AmendedThresholdM":150,"ParityRequired":true,"CovenantId":"COV-9001M1-V2","RuleType":"\u6295\u8CC7\u5BB6MFN\u6761\u9805","Jurisdiction":"JP","Locale":"ja-JP","SignalBadge":"1.8\u5104\u30C9\u30EB \u30A2\u30F3\u30AB\u30FCLP\uFF08v1\u304A\u3088\u3073v2\u3067\u5BFE\u8C61\uFF09","NoticeTitle":"\u6700\u6075\u56FD\u5F85\u9047\uFF08MFN\uFF09\u6761\u9805\u306B\u57FA\u3065\u304F\u7BA1\u7406\u5831\u916C\u5F15\u304D\u4E0B\u3052\u9078\u629E\u6A29\u306E\u6B63\u5F0F\u901A\u77E5","NoticeBody":"GPIF Tokyo Pension Trust (JP) \u5FA1\u4E2D\uFF1AApexGlobalBuyoutVIII \u306B\u304A\u3051\u308B\u7BA1\u7406\u5831\u916C\u306E\u5F15\u304D\u4E0B\u3052\uFF08{concession} bps\uFF09\u306B\u4F34\u3044\u3001\u8CB4\u57FA\u91D1\u306E\u5951\u7D04\u4E0A\u306E\u540C\u4E00\u6761\u4EF6\u9078\u629E\u6A29\u304C\u767A\u52D5\u3055\u308C\u307E\u3057\u305F\u3002"},{"Id":"PAR-9001S2","Name":"Nordic Sovereign Fund","CommitmentM":90,"ThresholdM":50,"AmendedThresholdM":150,"ParityRequired":true,"CovenantId":"COV-9001M2-V2","RuleType":"\u6295\u8CC7\u5BB6MFN\u6761\u9805","Jurisdiction":"SE","Locale":"sv-SE","SignalBadge":"9,000\u4E07\u30C9\u30EB LP\uFF081.5\u5104\u30C9\u30EB\u6539\u5B9A\u306B\u3088\u308A\u9664\u5916\uFF09","NoticeTitle":"Formellt Meddelande om MFN-Paritetsr\u00E4ttigheter","NoticeBody":"Formellt meddelande till Nordic Sovereign Fund (SE): Den f\u00F6reslagna avgiftsrabatten ({concession} bps) i ApexGlobalBuyoutVIII aktiverar er MFN-klausul under ursprungligt avtal ($50M gr\u00E4ns)."}],"TransitiveHop":null,"Specialists":[{"Agent":"Librarian AI","Role":"\u5951\u7D04\u6539\u5B9A\u5C65\u6B74\u8FFD\u8DE1","Status":"VERIFIED","Text":"\u904E\u53BB\u306E\u5B8C\u5168\u306A\u76E3\u67FB\u8A18\u9332\u3092\u4FDD\u6301\u3057\u305F\u307E\u307E\u3001\u7B2C1\u30E9\u30A6\u30F3\u30C9\u306E\u30B5\u30A4\u30C9\u30EC\u30BF\u30FC\u57FA\u6E96\uFF085,000\u4E07\u30C9\u30EB\u5236\u9650\uFF09\u3092\u7B2C2\u30E9\u30A6\u30F3\u30C9\u306E\u6539\u5B9A\u57FA\u6E96\uFF081\u51045,000\u4E07\u30C9\u30EB\u5236\u9650\uFF09\u306B\u81EA\u52D5\u7F6E\u63DB\u3002"},{"Agent":"Translator AI","Role":"\u65E5\u672C\u8A9E\u304A\u3088\u3073\u30B9\u30A6\u30A7\u30FC\u30C7\u30F3\u8A9E\u6295\u8CC7\u5BB6\u901A\u77E5","Status":"VERIFIED","Text":"\u30D5\u30A1\u30F3\u30C9\u540D\u7FA9\u304A\u3088\u3073\u6CD5\u7684\u6A29\u5229\u3092\u6B63\u78BA\u306B\u7DAD\u6301\u3057\u305F\u4E0A\u3067\u3001\u65E5\u672C\u8A9E\uFF08ja-JP\uFF09\u304A\u3088\u3073\u30B9\u30A6\u30A7\u30FC\u30C7\u30F3\u8A9E\uFF08sv-SE\uFF09\u3067\u6B63\u5F0F\u306A\u6295\u8CC7\u5BB6\u901A\u77E5\u66F8\u3092\u4F5C\u6210\u3002"}]},{"Id":"sec9_normative","SectorBadge":"\u898F\u5236\u5909\u66F4\uFF06\u53F8\u6CD5\u5224\u65AD","Title":"SovereignInfraFundIX - \u5224\u6C7A\u306E\u5F71\u97FF\u7BC4\u56F2\uFF06\u898F\u5236\u30D6\u30E9\u30B9\u30C8\u534A\u5F84","Icon":"fa-gavel","ContainerId":"CON-7712A100","ContainerName":"SovereignInfraFundIX","ContainerTarget":"$1,200,000,000","BaseRate":"\u57FA\u6E96\u624B\u6570\u6599 2.00%","ActionVerb":"\u512A\u9047\u624B\u6570\u6599\u514D\u8CAC\u306E\u4ED8\u4E0E","PromptTemplate":"SovereignInfraFundIX\u306B\u304A\u3051\u308BMunicipal Co-Investor\u306B\u5BFE\u3059\u308B{concession} bps\u306E\u512A\u9047\u624B\u6570\u6599\u514D\u8CAC\u3092\u8A8D\u3081\u308B{stepUpClause}\u3002","RecipientId":"PAR-5510M0","RecipientName":"Municipal Co-Investor","RecipientJurisdiction":"US-CA","Unit":"bps","UnitType":"bps_currency","CurrencySymbol":"$","DefaultConcession":25,"MinConcession":5,"MaxConcession":50,"ConcessionStep":1,"DefaultRecipientCommitment":20,"MinRecipientCommitment":20,"MaxRecipientCommitment":160,"CommitmentStep":5,"CommitmentUnit":"$M","Tier1Ceiling":250000,"Tier3Threshold":250000,"Tier1Label":"\u7B2C1\u5C64\uFF1A\u30D5\u30A1\u30F3\u30C9\u6CD5\u52D9\uFF08\u5224\u6C7A\u5F8C\u8FC5\u901F\u30D1\u30B9\uFF09","Tier1SignOff":"\u30D5\u30A1\u30F3\u30C9\u6CD5\u52D9\u9867\u554F\uFF082\u65E5\u9593\u306E\u8FC5\u901F\u627F\u8A8D - \u898F\u5236\u547D\u4EE4\u306E\u7121\u52B9\u5316\u306B\u4F34\u3046\uFF09","Tier2Label":"\u7B2C2\u5C64\uFF1A\u898F\u5236\u30B3\u30F3\u30D7\u30E9\u30A4\u30A2\u30F3\u30B9","Tier2SignOff":"\u898F\u5236\u30B3\u30F3\u30D7\u30E9\u30A4\u30A2\u30F3\u30B9\u9867\u554F\uFF085\u65E5\u9593\u306E\u5BE9\u67FB\uFF09","Tier3Label":"\u7B2C3\u5C64\uFF1A\u30EA\u30B9\u30AF\uFF06\u30AC\u30D0\u30CA\u30F3\u30B9\u59D4\u54E1\u4F1A","Tier3SignOff":"\u7DCF\u62EC\u6CD5\u52D9\u8CAC\u4EFB\u8005\uFF06\u6700\u9AD8\u30EA\u30B9\u30AF\u7BA1\u7406\u8CAC\u4EFB\u8005\uFF0810\u65E5\u9593\u306E\u4E8B\u524D\u901A\u77E5\uFF09","VariantToggleLabel":"\u6700\u9AD8\u88C1\u5224\u6240\u5224\u6C7A 598 U.S. 44\u3092\u9069\u7528\uFF08SEC\u30D1\u30EA\u30C6\u30A3\u547D\u4EE4\u3092\u7121\u52B9\u5316\uFF09","VariantEffect":"court_vacatur","SourceDoc":"Regulatory_Compliance_Charter.pdf","SectionRef":"\u7B2C6.1\u9805 - \u5916\u90E8\u898F\u5236\u547D\u4EE4\u306B\u9023\u52D5\u3059\u308B\u6761\u9805","ChunkId":"Clause-6.1","VerbatimQuote":"The fee-matching clauses held by Allianz Global Infrastructure ($150M) and CDPQ Quebec Pension ($110M) depend directly on SEC Mandate \u00A7 1332. Following Supreme Court Ruling 598 U.S. 44 overturning that mandate, all downstream clauses tied to that regulation are automatically deactivated.","Counterparties":[{"Id":"PAR-1102A9","Name":"Allianz Global Infrastructure","CommitmentM":150,"ThresholdM":50,"ParityRequired":true,"CovenantId":"COV-1092B3","RuleType":"\u898F\u5236\u9023\u52D5\u30D1\u30EA\u30C6\u30A3","Jurisdiction":"DE","Locale":"de-DE","SignalBadge":"SEC\u898F\u5247 \u00A7 1332\u306B\u9023\u52D5","NoticeTitle":"Mitteilung \u00FCber Regulatorische Pr\u00E4zedenzwirkung \u0026 Parit\u00E4t","NoticeBody":"Formelle Mitteilung f\u00FCr Allianz Global Infrastructure (DE): Status Ihrer abgeleiteten Parit\u00E4tsklausel (COV-1092B3) unter Ber\u00FCcksichtigung des Urteils 598 U.S. 44."},{"Id":"PAR-4491B2","Name":"CDPQ Quebec Pension","CommitmentM":110,"ThresholdM":50,"ParityRequired":true,"CovenantId":"COV-8831C4","RuleType":"\u898F\u5236\u9023\u52D5\u30D1\u30EA\u30C6\u30A3","Jurisdiction":"CA-QC","Locale":"fr-CA","SignalBadge":"SEC\u898F\u5247 \u00A7 1332\u306B\u9023\u52D5","NoticeTitle":"Avis d\u0027Impact R\u00E9glementaire et de Pr\u00E9s\u00E9ance Juridique","NoticeBody":"Avis formel pour CDPQ Quebec Pension (CA-QC) : \u00C9valuation de la clause COV-8831C4 suite \u00E0 la d\u00E9cision 598 U.S. 44."}],"TransitiveHop":null,"Specialists":[{"Agent":"Compliance AI","Role":"\u898F\u5236\u5F71\u97FF\u7BC4\u56F2\u30B9\u30AD\u30E3\u30CA\u30FC","Status":"VERIFIED","Text":"\u5168\u5951\u7D04\u30DD\u30FC\u30C8\u30D5\u30A9\u30EA\u30AA\u306B\u308F\u305F\u308A\u6700\u9AD8\u88C1\u5224\u6C7A\u306E\u5F71\u97FF\u3092\u8FFD\u8DE1\u3002\u898F\u5236\u6761\u9805\u304C\u5931\u52B9\u3057\u305F\u30D1\u30FC\u30C8\u30CA\u30FC\u30B3\u30DF\u30C3\u30C8\u30E1\u30F3\u30C8\u7DCF\u984D2\u51046,000\u4E07\u30C9\u30EB\u3092\u7279\u5B9A\u5B8C\u4E86\u3002"}]}];
+    const QUICK_GUIDE = {"BannerTitle":"3\u30B9\u30C6\u30C3\u30D7\u3067\u4F53\u9A13\u3059\u308B\u672C\u30C7\u30E2\u306E\u624B\u9806\uFF1A","BtnShowHelp":"\u4F55\u304C\u8868\u793A\u3055\u308C\u3066\u3044\u307E\u3059\u304B\uFF1F","BtnHideHelp":"\u30AC\u30A4\u30C9\u3092\u96A0\u3059","Step1Title":"1. \u6F5C\u5728\u7684\u306A\u904B\u7528\u306E\u6CE2\u53CA\u52B9\u679C\u3092\u7279\u5B9A\u3059\u308B","Step1Desc":"\u30AA\u30F3\u30C8\u30ED\u30B8\u30FC\u30B0\u30E9\u30D5\u3092\u3054\u89A7\u304F\u3060\u3055\u3044\uFF1A{recipient}\u306E\u6761\u4EF6\u3092\u5909\u66F4\u3059\u308B\u3068\u3001{container}\u5168\u4F53\u306B\u9023\u9396\u53CD\u5FDC\u304C\u5373\u5EA7\u306B\u767A\u751F\u3057\u3001\u5B89\u5168\u898F\u5247\u3001\u7269\u6D41\u3001\u30B3\u30F3\u30D7\u30E9\u30A4\u30A2\u30F3\u30B9\u306B\u5F71\u97FF\u3092\u4E0E\u3048\u307E\u3059\u3002","Step1Action":"\u6CE2\u53CA\u52B9\u679C\u3092\u8868\u793A","Step2Title":"2. AI\u306B\u3088\u308B\u7D50\u679C\u306E\u6700\u9069\u5316","Step2Desc":"\u5DE6\u5074\u306E\u30B9\u30E9\u30A4\u30C0\u30FC\u3092\u52D5\u304B\u3059\u304B\u3001\u3053\u3053\u3092\u30AF\u30EA\u30C3\u30AF\u3057\u3066\u3001\u30DC\u30C8\u30EB\u30CD\u30C3\u30AF\u3092\u9632\u304E\u3001\u9055\u7D04\u91D1\u3092\u56DE\u907F\u3057\u3001\u8FC5\u901F\u627F\u8A8D\uFF08\u30D5\u30A1\u30B9\u30C8\u30C8\u30E9\u30C3\u30AF\uFF09\u3092\u89E3\u9664\u3059\u308B\u305F\u3081\u306E\u6B63\u78BA\u306A\u904B\u7528\u4E0A\u9650\u3092MindML\u304C\u7B97\u51FA\u3059\u308B\u69D8\u5B50\u3092\u3054\u89A7\u304F\u3060\u3055\u3044\u3002","Step2Action":"\u610F\u601D\u6C7A\u5B9A\u306E\u81EA\u52D5\u6700\u9069\u5316","Step3Title":"3. \u30B9\u30C6\u30FC\u30C8\u30D5\u30EB\u30BB\u30AD\u30E5\u30EA\u30C6\u30A3\u30B2\u30FC\u30C8\u306E\u691C\u8A3C","Step3Desc":"\u627F\u8A8D\u30B2\u30FC\u30C8\u30BF\u30D6\u3092\u958B\u3044\u3066\u5909\u66F4\u3092\u627F\u8A8D\u3059\u308B\u304B\u3001\u30EF\u30F3\u30AF\u30EA\u30C3\u30AF\u53D6\u308A\u6D88\u3057\u3092\u30C6\u30B9\u30C8\u3059\u308B\u304B\u3001MindML\u304C\u540C\u6642\u7DE8\u96C6\u306E\u885D\u7A81\u3084\u30C7\u30FC\u30BF\u30D9\u30FC\u30B9\u306E\u6539\u3056\u3093\u3092\u3069\u306E\u3088\u3046\u306B\u906E\u65AD\u3059\u308B\u304B\u3092\u30B7\u30DF\u30E5\u30EC\u30FC\u30C8\u3057\u3066\u304F\u3060\u3055\u3044\u3002","Step3Action":"\u30BB\u30FC\u30D5\u30C6\u30A3\u30B2\u30FC\u30C8\u3092\u958B\u304F","HelpExplainerHtml":"\u003Cstrong\u003E\u30D3\u30B8\u30CD\u30B9\u306B\u3068\u3063\u3066\u6975\u3081\u3066\u91CD\u8981\u306A\u7406\u7531\uFF1A\u003C/strong\u003E \u901A\u5E38\u306EAI\u30C4\u30FC\u30EB\u306F\u6B21\u306E\u5358\u8A9E\u3092\u4E88\u6E2C\u3059\u308B\u3060\u3051\u3067\u3059\u3002\u30AD\u30CD\u30C6\u30A3\u30C3\u30AF\u30A8\u30F3\u30B8\u30F3\u306F\u8CB4\u793E\u72EC\u81EA\u306E\u003Cstrong\u003E\u30D3\u30B8\u30CD\u30B9\u30AA\u30F3\u30C8\u30ED\u30B8\u30FC\u003C/strong\u003E\u3092\u30DE\u30C3\u30D4\u30F3\u30B0\u3057\u3001\u6CD5\u7684\u6761\u9805\u3001\u7269\u7406\u7684\u30E1\u30AC\u30EF\u30C3\u30C8\u3001\u5730\u7406\u7684\u7DE9\u885D\u5730\u5E2F\u3092\u78BA\u5B9A\u7684\u304B\u3064\u6570\u5B66\u7684\u306A\u30B0\u30E9\u30D5\u3078\u5909\u63DB\u3057\u307E\u3059\u3002\u904B\u7528\u4E0A\u306E\u610F\u601D\u6C7A\u5B9A\u3092\u884C\u3046\u969B\u3001\u4F01\u696D\u5168\u4F53\u306B\u308F\u305F\u308B\u8907\u6570\u30DB\u30C3\u30D7\u306E\u6CE2\u53CA\u52B9\u679C\u3092\u5373\u5EA7\u306B\u8A08\u7B97\u3057\u3001\u6700\u9069\u306A\u7D50\u679C\u3092\u5C0E\u304D\u51FA\u3057\u3001\u6539\u3056\u3093\u9632\u6B62\u53F0\u5E33\u306B\u5B9F\u884C\u3092\u30B9\u30C6\u30FC\u30B8\u30F3\u30B0\u3057\u307E\u3059\u3002"};
+    const TELEMETRY_STRINGS = {"EngineModeLabel":"\u5224\u5B9A\u30A8\u30F3\u30B8\u30F3","EngineModeVal":"100%\u30EB\u30FC\u30EB\u691C\u8A3C\u6E08\u307F\uFF08AI\u306B\u3088\u308B\u63A8\u6E2C\u30BC\u30ED\uFF09","GroundingLatencyLabel":"\u30DD\u30FC\u30C8\u30D5\u30A9\u30EA\u30AA\u76F8\u4E92\u691C\u8A3C","GroundingLatencyVal":"1\u30DF\u30EA\u79D2\u672A\u6E80\uFF08\u5951\u7D04\u306E100%\u3092\u691C\u8A3C\u6E08\u307F\uFF09","StorageEngineLabel":"\u30C7\u30FC\u30BF\u30BB\u30AD\u30E5\u30EA\u30C6\u30A3","StorageEngineVal":"100%\u30AA\u30F3\u30D7\u30EC\u30DF\u30B9\u6697\u53F7\u5316\u30DC\u30EB\u30C8","EntityVersionPrefix":"\u30EC\u30B3\u30FC\u30C9 v","MerkleStatusLabel":"\u76E3\u67FB\u8A3C\u8DE1","MerkleValidText":"\u5C01\u5370\uFF06\u691C\u8A3C\u5B8C\u4E86","MerkleTamperedText":"\u6539\u3056\u3093\u30A2\u30E9\u30FC\u30C8","BtnFullscreen":"\u5168\u753B\u9762\u8868\u793A","BtnExitFullscreen":"\u5168\u753B\u9762\u8868\u793A\u3092\u7D42\u4E86"};
+    const LEFT_STRINGS = {"SectorSelectTitle":"1. \u696D\u754C\u30B7\u30CA\u30EA\u30AA\u3092\u9078\u629E","ControlsTitle":"2. \u53D6\u5F15\u30D1\u30E9\u30E1\u30FC\u30BF\u3092\u30EA\u30A2\u30EB\u30BF\u30A4\u30E0\u8ABF\u6574","SliderConcessionLabel":"\u63D0\u793A\u5272\u5F15 / \u8A31\u5BB9\u5024","SliderStepUpLabel":"\u9867\u5BA2\u6700\u4F4E\u30B3\u30DF\u30C3\u30C8\u30E1\u30F3\u30C8 / \u5F15\u53D7\u6570\u91CF","BaselinePrefix":"\u73FE\u884C","StepUpPrefix":"\u5F15\u304D\u4E0A\u3052\u5F8C","BreakevenCapPrefix":"\u5B89\u5168\u5236\u9650\u5024\uFF1A","ToggleVariantLabel":"\u65B9\u91DD / \u5951\u7D04\u5909\u66F4","BtnResetBaseline":"\u521D\u671F\u5024\u306B\u30EA\u30BB\u30C3\u30C8","BtnApplyPareto":"\u6700\u9069\u306A\u5B89\u5168\u53D6\u5F15\uFF08CF-02\uFF09\u3092\u9069\u7528","LivePromptTitle":"AI\u30C1\u30FC\u30E0\u3078\u306E\u6307\u793A\u5185\u5BB9","GbnfTagText":"\u610F\u56F3\u691C\u8A3C\u6E08\u307F","StepUpPromptClause":"\uFF08\u30B3\u30DF\u30C3\u30C8\u30E1\u30F3\u30C8\u3092{stepUp}\u306B\u5F15\u304D\u4E0A\u3052\u308B\u5834\u5408\uFF09","MetaContainerLabel":"\u30D3\u30B8\u30CD\u30B9\u30CF\u30D6 / \u30D7\u30ED\u30B0\u30E9\u30E0\uFF1A","MetaRecipientLabel":"\u5BFE\u8C61\u9867\u5BA2 / \u30D1\u30FC\u30C8\u30CA\u30FC\uFF1A","MetaCapacityLabel":"\u7DCF\u5BB9\u91CF / \u57FA\u6E96\u30EC\u30FC\u30C8\uFF1A"};
+    const CENTER_STRINGS = {"TabOverview":"1. \u5F71\u97FF\u30DE\u30C3\u30D7\uFF06\u53D6\u5F15\u30AA\u30D7\u30C6\u30A3\u30DE\u30A4\u30B6\u30FC","TabProof":"2. \u5951\u7D04\u6839\u62E0\uFF06\u6CD5\u7684\u901A\u77E5\u66F8","TabSpecialists":"3. AI\u30B9\u30DA\u30B7\u30E3\u30EA\u30B9\u30C8\u691C\u8A3C","TabGate":"4. \u627F\u8A8D\u30B2\u30FC\u30C8\uFF06\u76E3\u67FB\u30ED\u30B0","AstBoxTitle":"\u53B3\u5BC6\u306A\u5951\u7D04\u30EB\u30FC\u30EB\u691C\u8A3C\uFF08AI\u306E\u63A8\u6E2C\u3067\u306F\u306A\u304F\u3001\u6570\u5B66\u7684\u691C\u8A3C\uFF09","GroundingBoxTitle":"\u7279\u5B9A\u3055\u308C\u305F\u5951\u7D04\u6761\u9805\uFF08\u30BF\u30A4\u30C8\u30EB\u306E\u307F\u306E\u8A00\u53CA\u306F\u9664\u5916\uFF09","AhoColEntity":"\u5951\u7D04\u5F53\u4E8B\u8005 / \u30CF\u30D6","AhoColId":"\u30B7\u30B9\u30C6\u30E0ID","AhoColRole":"\u30D3\u30B8\u30CD\u30B9\u4E0A\u306E\u5F79\u5272","AhoColChunk":"\u6761\u9805\u53C2\u7167","AhoColConfidence":"\u691C\u8A3C\u30B9\u30C6\u30FC\u30BF\u30B9","AhoConfPrimary":"\u691C\u8A3C\u6E08\u307F\u4E3B\u8981\u5F53\u4E8B\u8005","AhoConfConstraint":"\u62D8\u675F\u529B\u306E\u3042\u308B\u8A72\u5F53\u6761\u9805","AhoHeaderMention":"\u30DA\u30FC\u30B8\u30D8\u30C3\u30C0\u30FC / \u30BF\u30A4\u30C8\u30EB\u8A00\u53CA\u306E\u307F","AhoConfHeader":"\u9664\u5916\uFF08\u62D8\u675F\u529B\u306E\u3042\u308B\u6761\u9805\u3067\u306F\u3042\u308A\u307E\u305B\u3093\uFF09","GraphLegendTriggered":"\u30C8\u30EA\u30AC\u30FC\u3055\u308C\u305F\u6761\u9805\uFF08\u30B3\u30B9\u30C8\u767A\u751F\uFF09","GraphLegendCleared":"\u5B89\u5168 / \u6761\u9805\u30C8\u30EA\u30AC\u30FC\u306A\u3057","GraphLegendBreakeven":"\u5B89\u5168\u627F\u8A8D\u9650\u5EA6\u5185","GraphLegendContagion":"\u9023\u643A\u65BD\u8A2D\u3078\u306E\u6CE2\u53CA","KpiCascadeLabel":"\u5E74\u9593\u306E\u6CE2\u53CA\u30B3\u30B9\u30C8","KpiOmniLabel":"5\u5E74\u9593\u306E\u4E88\u6E2C\u30EA\u30B9\u30AF\u30A8\u30AF\u30B9\u30DD\u30FC\u30B8\u30E3\u30FC","KpiBreakevenLabel":"\u6700\u9069\u5316\u53D6\u5F15\u306B\u3088\u308B\u524A\u6E1B\u984D\uFF08CF-02\uFF09","KpiTierLabel":"\u5FC5\u8981\u306A\u627F\u8A8D\u30EC\u30D9\u30EB","PerYearSuffix":"/ \u5E74","KpiTriggeredSub":"{total}\u793E\u4E2D{triggered}\u793E\u306E\u4ED6\u793E\u30D1\u30FC\u30C8\u30CA\u30FC\u304C\u540C\u6761\u4EF6\u3092\u8ACB\u6C42\u53EF\u80FD\uFF08\u8A08{exposure}{unit}\uFF09","KpiZeroTriggeredSub":"\u4ED6\u793E\u30D1\u30FC\u30C8\u30CA\u30FC\u306E\u30C8\u30EA\u30AC\u30FC\u306A\u3057\uFF08\u5BFE\u8C61\u9867\u5BA2\u306E\u307F\u306B\u9069\u7528\uFF09","KpiOmniSub":"\u30D1\u30FC\u30C8\u30CA\u30FC\u306E\u8ACB\u6C42\u78BA\u7387 {rate}% | \u30EA\u30B9\u30AF\uFF1A{severity}","KpiSavingsSub":"{cap} {unit}\u306B\u5236\u9650 -\u003E \u8FC5\u901F\u627F\u8A8D\u3092\u89E3\u9664","SeverityCleared":"\u4F4E\uFF08\u30AF\u30EA\u30A2\uFF09","SeverityModerate":"\u4E2D\u7A0B\u5EA6","SeverityHigh":"\u9AD8","SeverityCritical":"\u6975\u3081\u3066\u5371\u967A","ParetoSectionTitle":"\u53D6\u5F15\u518D\u69CB\u7BC9\u30AA\u30D7\u30B7\u30E7\u30F3\uFF08\u6CE2\u53CA\u30B3\u30B9\u30C8\u306E\u56DE\u907F\u7B56\uFF09","ParetoClickHint":"\u4EE5\u4E0B\u306E\u30AA\u30D7\u30B7\u30E7\u30F3\u884C\u3092\u30AF\u30EA\u30C3\u30AF\u3057\u3066\u3001\u6570\u5024\u3092\u30EA\u30A2\u30EB\u30BF\u30A4\u30E0\u3067\u30C6\u30B9\u30C8\u3057\u3066\u304F\u3060\u3055\u3044","ColScenario":"\u30AA\u30D7\u30B7\u30E7\u30F3","ColStrategy":"\u53D6\u5F15\u306E\u518D\u69CB\u7BC9\u65B9\u91DD","ColConcession":"\u5272\u5F15 / \u8A31\u5BB9\u5024","ColMinCommitment":"\u5FC5\u8981\u9867\u5BA2\u6570\u91CF","ColTriggers":"\u30C8\u30EA\u30AC\u30FC\u5BFE\u8C61","ColAnnualDrag":"\u5E74\u9593\u6CE2\u53CA\u30B3\u30B9\u30C8","ColSavings":"\u5E74\u9593\u524A\u6E1B\u984D","ColGovernanceTier":"\u627F\u8A8D\u6A29\u9650\u8005","BestBadge":"\u2605\u0026nbsp;\u63A8\u5968","CitationsTitle":"\u6B63\u78BA\u306A\u5951\u7D04\u6839\u62E0\uFF08\u7F72\u540D\u6E08\u307F\u5408\u610F\u66F8\u304B\u3089\u76F4\u63A5\u62BD\u51FA\uFF09","ConfidenceLabel":"100%\u691C\u8A3C\u6E08\u307F\u5F15\u7528","NoticesTitle":"\u9001\u4FE1\u6E96\u5099\u6E08\u307F\u30D1\u30FC\u30C8\u30CA\u30FC\u901A\u77E5\uFF08\u4FDD\u8B77\u3055\u308C\u305F\u6B63\u5F0F\u540D\u79F0\u3067\u7FFB\u8A33\uFF09","GlossaryLockSuffix":"\u540D\u79F0\u4FDD\u8B77\u6E08\u307F","NoNoticesRequired":"\u4ED6\u793E\u30D1\u30FC\u30C8\u30CA\u30FC\u3078\u306E\u5F71\u97FF\u306F\u3042\u308A\u307E\u305B\u3093 \u2014 \u5916\u90E8\u5411\u3051\u6CD5\u7684\u901A\u77E5\u306F\u4E0D\u8981\u3067\u3059\u3002","SpecialistsTitle":"AI\u30B9\u30DA\u30B7\u30E3\u30EA\u30B9\u30C8\u30C1\u30FC\u30E0\u691C\u8A3C\uFF08\u8CA1\u52D9\u3001\u6CD5\u52D9\u3001\u30EA\u30B9\u30AF\u3001\u904B\u7528\uFF09","ArtifactsTitle":"\u78BA\u8A8D\u30FB\u30C0\u30A6\u30F3\u30ED\u30FC\u30C9\u53EF\u80FD\u306A\u751F\u6210\u6E08\u307F\u6587\u66F8"};
+    const ACID_STRINGS = {"GateTitle":"\u4EBA\u7684\u627F\u8A8D\u30B2\u30FC\u30C8\uFF06\u6539\u3056\u3093\u9632\u6B62\u76E3\u67FB\u30ED\u30B0","StatePending":"\u627F\u8A8D\u5F85\u3061","StateCommitted":"\u627F\u8A8D\u6E08\u307F\uFF06\u672C\u756A\u30C7\u30FC\u30BF\u3078\u30B3\u30DF\u30C3\u30C8\u5B8C\u4E86","StateRejected":"\u30AD\u30E3\u30F3\u30BB\u30EB\u6E08\u307F\uFF08\u5909\u66F4\u306F\u9069\u7528\u3055\u308C\u307E\u305B\u3093\u3067\u3057\u305F\uFF09","StateRolledBack":"\u53D6\u308A\u6D88\u3057\u5B8C\u4E86\uFF08\u4EE5\u524D\u306E\u72B6\u614B\u306B\u5FA9\u5143\u3055\u308C\u307E\u3057\u305F\uFF09","StateOccConflict":"\u7AF6\u5408\u30D6\u30ED\u30C3\u30AF\uFF1A\u5225\u306E\u30E6\u30FC\u30B6\u30FC\u304C\u3053\u306E\u30EC\u30B3\u30FC\u30C9\u3092\u66F4\u65B0\u3057\u307E\u3057\u305F","InitialFeedbackHtml":"\u6A29\u9650\u8005\u306B\u3088\u308B\u7F72\u540D\u3092\u5F85\u6A5F\u4E2D\u3002AI\u304C\u3059\u3079\u3066\u306E\u6E96\u5099\u3092\u6574\u3048\u307E\u3057\u305F\u304C\u3001\u627F\u8A8D\u3092\u30AF\u30EA\u30C3\u30AF\u3059\u308B\u307E\u3067\u003Cstrong\u003E\u672C\u756A\u74B0\u5883\u306E\u4F01\u696D\u30C7\u30FC\u30BF\u306F\u4E00\u5207\u5909\u66F4\u3055\u308C\u307E\u305B\u3093\u003C/strong\u003E\u3002","BtnConfirm":"\u627F\u8A8D\u3057\u3066\u5909\u66F4\u3092\u9069\u7528","BtnReject":"\u30EA\u30AF\u30A8\u30B9\u30C8\u3092\u30AD\u30E3\u30F3\u30BB\u30EB","BtnRollback":"\u30EF\u30F3\u30AF\u30EA\u30C3\u30AF\u53D6\u308A\u6D88\u3057\uFF08\u524D\u56DE\u306E\u72B6\u614B\u306B\u623B\u3059\uFF09","BtnSimOcc":"\u30C6\u30B9\u30C8\uFF1A\u540C\u50DA\u304C\u540C\u6642\u306B\u7DE8\u96C6\u3057\u305F\u5834\u5408","BtnSimTamper":"\u30C6\u30B9\u30C8\uFF1A\u76E3\u67FB\u30ED\u30B0\u304C\u6539\u3056\u3093\u3055\u308C\u305F\u5834\u5408","BtnRestoreTamper":"\u76E3\u67FB\u30ED\u30B0\u3092\u4FEE\u5FA9\u3057\u3066\u518D\u691C\u8A3C","LedgerTableTitle":"\u6052\u4E45\u7684\u306A\u30B3\u30F3\u30D7\u30E9\u30A4\u30A2\u30F3\u30B9\u76E3\u67FB\u30ED\u30B0\uFF08\u6697\u53F7\u6280\u8853\u306B\u3088\u308B\u5C01\u5370\uFF09","MerkleFormulaHint":"\u3059\u3079\u3066\u306E\u30A8\u30F3\u30C8\u30EA\u306F\u524D\u306E\u884C\u306B\u30EA\u30F3\u30AF\u3057\u305F\u30C7\u30B8\u30BF\u30EB\u7F72\u540D\u306B\u3088\u3063\u3066\u5C01\u5370\u3055\u308C\u3066\u3044\u307E\u3059\u3002\u4E0D\u6B63\u306A\u30C7\u30FC\u30BF\u30D9\u30FC\u30B9\u66F8\u304D\u63DB\u3048\u306F\u5373\u5EA7\u306B\u691C\u77E5\u3055\u308C\u307E\u3059\u3002","ColEventId":"\u30ED\u30B0\u756A\u53F7","ColTimestamp":"\u30BF\u30A4\u30E0\u30B9\u30BF\u30F3\u30D7 (UTC)","ColActorId":"\u30E6\u30FC\u30B6\u30FC / \u30B7\u30B9\u30C6\u30E0","ColActionName":"\u64CD\u4F5C\u5185\u5BB9\uFF06\u5BFE\u8C61\u9867\u5BA2","ColOccSnapshot":"\u30EC\u30B3\u30FC\u30C9\u30D0\u30FC\u30B8\u30E7\u30F3\u7167\u5408","ColStatus":"\u30B9\u30C6\u30FC\u30BF\u30B9","ColPrevHash":"\u76F4\u524D\u30CF\u30C3\u30B7\u30E5","ColEventHash":"\u30C7\u30B8\u30BF\u30EB\u5370\u7AE0 (SHA-256)","FlagHashMismatch":"\u6539\u3056\u3093\u30EC\u30B3\u30FC\u30C9","FlagChainBroken":"\u7F72\u540D\u30C1\u30A7\u30FC\u30F3\u5207\u65AD"};
+    const TPL = {"DiagSa1":"\u003Cstrong\u003E[\u30B9\u30C6\u30C3\u30D7 01 - \u8981\u6C42\u30FB\u5F53\u4E8B\u8005\u7167\u5408]\u003C/strong\u003E \u6307\u793A \u003Ccode\u003E{action} ({concession} {unit})\u003C/code\u003E \u3092\u89E3\u6790\u3057\u3001\u63A8\u6E2C\u3092\u631F\u3080\u3053\u3068\u306A\u304F1\u30DF\u30EA\u79D2\u672A\u6E80\u3067\u003Cstrong\u003E{count}\u4EF6\u306E\u5951\u7D04\u5F53\u4E8B\u8005\u003C/strong\u003E\u3068\u7167\u5408\u3057\u307E\u3057\u305F\u3002","DiagSa2":"\u003Cstrong\u003E[\u30B9\u30C6\u30C3\u30D7 02 - 100%\u30DD\u30FC\u30C8\u30D5\u30A9\u30EA\u30AA\u691C\u67FB]\u003C/strong\u003E \u003Ccode\u003E{containerId}\u003C/code\u003E \u304A\u3088\u3073 \u003Ccode\u003E{recipientId}\u003C/code\u003E \u306B\u95A2\u9023\u4ED8\u3051\u3089\u308C\u305F\u3059\u3079\u3066\u306E\u5951\u7D04\u3092\u691C\u67FB -\u003E \u003Cstrong\u003E{total}\u4EF6\u4E2D{triggered}\u4EF6\u306E\u4FA1\u683C\u9023\u52D5\u6761\u9805\u304C\u30C8\u30EA\u30AC\u30FC\u003C/strong\u003E\u3055\u308C\u307E\u3057\u305F\u3002","DiagOpt":"\u003Cstrong\u003E[\u30B9\u30C6\u30C3\u30D7 03 - \u53D6\u5F15\u30AA\u30D7\u30C6\u30A3\u30DE\u30A4\u30B6\u30FC]\u003C/strong\u003E {ceiling}\u306E\u8FC5\u901F\u627F\u8A8D\u67A0\u5185\u306B\u53CE\u3081\u308B\u305F\u3081\u306E\u5B89\u5168\u306A\u5272\u5F15\u4E0A\u9650\uFF08\u003Ccode\u003ECF-02 = {cap} {unit}\u003C/code\u003E\uFF09\u3092\u7B97\u51FA\u3057\u307E\u3057\u305F\u3002","DiagSa3":"\u003Cstrong\u003E[\u30B9\u30C6\u30C3\u30D7 04 - \u4EBA\u7684\u627F\u8A8D\u30B2\u30FC\u30C8]\u003C/strong\u003E \u003Cstrong\u003E{specialists}\u4F53\u306EAI\u30B9\u30DA\u30B7\u30E3\u30EA\u30B9\u30C8\u003C/strong\u003E\u3092\u7D71\u62EC\u3057\u3001\u5373\u6642\u53D6\u308A\u6D88\u3057\u7528\u306E\u30D0\u30C3\u30AF\u30A2\u30C3\u30D7\u30B9\u30CA\u30C3\u30D7\u30B7\u30E7\u30C3\u30C8\uFF08v{stagedVer}\uFF09\u3092\u4FDD\u6301\u3057\u305F\u4E0A\u3067\u3001\u7F72\u540D\u5BFE\u8C61\u3068\u3057\u3066\u003Ccode\u003ELog #{eventId}\u003C/code\u003E\u3092\u6E96\u5099\u3057\u307E\u3057\u305F\u3002","BypassThreshold":"\u30D1\u30FC\u30C8\u30CA\u30FC\u306E\u53D6\u5F15\u898F\u6A21\uFF08{holderM}{unit}\uFF09\u304C\u66F4\u65B0\u5F8C\u306E\u9069\u683C\u57FA\u6E96\uFF08{threshM}{unit}\uFF09\u3092\u4E0B\u56DE\u3063\u3066\u3044\u307E\u3059","BypassStepUp":"\u5BFE\u8C61\u9867\u5BA2\u306E\u65B0\u305F\u306A\u53D6\u5F15\u898F\u6A21\uFF08{stepUpM}{unit}\uFF09\u304C\u5F53\u8A72\u30D1\u30FC\u30C8\u30CA\u30FC\u306E\u53D6\u5F15\u898F\u6A21\uFF08{holderM}{unit}\uFF09\u3092\u4E0A\u56DE\u3063\u3066\u3044\u307E\u3059","BypassSafeHarbor":"\u7DCA\u6025\u5B89\u5168\u514D\u8CAC\u6761\u9805\u306B\u57FA\u3065\u304D\u9069\u7528\u304C\u9664\u5916\u3055\u308C\u3066\u3044\u307E\u3059","BypassVacatur":"\u6839\u62E0\u3068\u306A\u3063\u3066\u3044\u305F\u898F\u5236\u547D\u4EE4\u304C\u88C1\u5224\u6240\u306E\u5224\u6C7A\u306B\u3088\u308A\u7121\u52B9\u5316\u3055\u308C\u307E\u3057\u305F","BypassWaiver":"\u30D1\u30FC\u30C8\u30CA\u30FC\u304C\u672C\u53D6\u5F15\u306B\u95A2\u3059\u308B\u500B\u5225\u306E\u6A29\u5229\u653E\u68C4\u306B\u5408\u610F\u3057\u307E\u3057\u305F","SvgTriggered":"\u30C8\u30EA\u30AC\u30FC\uFF08{drag}\uFF09","SvgBypassed":"\u30C8\u30EA\u30AC\u30FC\u306A\u3057\uFF08\u30B3\u30B9\u30C80\uFF09","SvgCommitment":"\u5951\u7D04\u91CF\uFF1A","SvgTarget":"\u7DCF\u5BB9\u91CF\uFF1A","SvgHopActive":"\u6CE2\u53CA\u767A\u751F\u4E2D\uFF08${commitment}M \u5BFE\u8C61\uFF09","SvgHopIsolated":"\u30CF\u30D6\u9694\u96E2\uFF08\u6CE2\u53CA\u306A\u3057\uFF09","SvgSupremeCourtTitle":"\u6700\u9AD8\u88C1\u6C7A\u8B70 598 U.S. 44\uFF08\u898F\u5236\u547D\u4EE4\u306E\u7121\u52B9\u5316\u5224\u6C7A\uFF09","SvgVacaturActive":"\u898F\u5236\u7121\u52B9\u5316 -\u003E \u6761\u9805\u306E\u9069\u7528\u304C\u505C\u6B62\u3055\u308C\u307E\u3057\u305F","SvgVacaturInactive":"\u5224\u6C7A\u3092\u9069\u7528\u3059\u308B\u306B\u306F\u5DE6\u5074\u306E\u30C1\u30A7\u30C3\u30AF\u30DC\u30C3\u30AF\u30B9\u3092\u6709\u52B9\u306B\u3057\u3066\u304F\u3060\u3055\u3044","BannerAlertTitle":"\u30AC\u30D0\u30CA\u30F3\u30B9\u30A2\u30E9\u30FC\u30C8\uFF1A\u4FA1\u683C\u9023\u52D5\u6761\u9805\uFF08\u540C\u7B49\u5F85\u9047\uFF09\u304C\u30C8\u30EA\u30AC\u30FC\u3055\u308C\u307E\u3057\u305F","BannerAlertSub":"\u003Cstrong\u003E{recipient}\u003C/strong\u003E\uFF08\u003Ccode\u003E{recipientId}\u003C/code\u003E\uFF09\u3078\u003Cstrong\u003E{action}\u003C/strong\u003E\uFF08\u003Ccode\u003E{concession} {unit}\u003C/code\u003E\uFF09\u3092\u4ED8\u4E0E\u3059\u308B\u3068\u3001\u003Cstrong\u003E{container}\u003C/strong\u003E\u5185\u306E\u003Cstrong\u003E\u305D\u306E\u4ED6\u4E3B\u8981\u30D1\u30FC\u30C8\u30CA\u30FC{triggered}\u793E\u003C/strong\u003E\u306B\u5BFE\u3057\u3066\u5168\u304F\u540C\u4E00\u306E\u6761\u4EF6\u3092\u8981\u6C42\u3059\u308B\u6A29\u5229\u304C\u81EA\u52D5\u7684\u306B\u767A\u751F\u3057\u307E\u3059\u3002","BannerClearedTitle":"\u8FC5\u901F\u627F\u8A8D\u30AF\u30EA\u30A2\uFF08\u7AF6\u5408\u6761\u9805\u306A\u3057\uFF09","BannerClearedSub":"\u003Cstrong\u003E{recipient}\u003C/strong\u003E\uFF08\u003Ccode\u003E{recipientId}\u003C/code\u003E\uFF09\u3078\u003Cstrong\u003E{action}\u003C/strong\u003E\uFF08\u003Ccode\u003E{concession} {unit}\u003C/code\u003E\uFF09\u3092\u4ED8\u4E0E\u3057\u3066\u3082\u3001\u003Cstrong\u003E{container}\u003C/strong\u003E\u5185\u306E\u4ED6\u30D1\u30FC\u30C8\u30CA\u30FC\u306B\u5BFE\u3059\u308B\u4FA1\u683C\u9023\u52D5\u6761\u9805\u306F\u003Cstrong\u003E\u4E00\u5207\u30C8\u30EA\u30AC\u30FC\u3055\u308C\u307E\u305B\u3093\u003C/strong\u003E\u3002","ParetoCalloutHtml":"\u003Cstrong\u003E\u003Ci class=\u0027fas fa-award\u0027\u003E\u003C/i\u003E \u63A8\u5968\u53D6\u5F15\u69CB\u6210\uFF08\u003Ccode\u003ECF-02\u003C/code\u003E\uFF09\uFF1A\u003C/strong\u003E \u5272\u5F15\u3092\u003Ccode\u003E{cap} {unit}\u003C/code\u003E\u306B\u5236\u9650\u3059\u308B\u3053\u3068\u3067\u6CE2\u53CA\u30B3\u30B9\u30C8\u3092\u003Cstrong\u003E{drag}\u003C/strong\u003E\u306B\u6291\u3048\u3001\u5B9F\u8CEA\u003Cstrong class=\u0027accent-emerald\u0027\u003E{savings}\u003C/strong\u003E\u3092\u524A\u6E1B\u3057\u3066\u003Ccode\u003E{tier}\u003C/code\u003E\u306E\u5BFE\u8C61\u3068\u306A\u308A\u307E\u3059\u3002","StrategyCf02":"\u5B89\u5168\u5236\u9650\u5024\u3067\u5272\u5F15\u3092\u30AD\u30E3\u30C3\u30D7\uFF08\u4E88\u7B97\u4E0A\u9650{ceiling}\u3092\u9075\u5B88\uFF09","StrategyCf03":"\u9867\u5BA2\u30B3\u30DF\u30C3\u30C8\u30E1\u30F3\u30C8\u306E\u5F15\u304D\u4E0A\u3052\u8981\u6C42\uFF08{lowestM}{unit}\u4EE5\u4E0B\u306E\u30D1\u30FC\u30C8\u30CA\u30FC\u3092\u8FC2\u56DE\uFF09","StrategyCf04":"\u59A5\u5354\u6848\u306E\u9069\u7528\uFF08\u5272\u5F15\u309250%\u6E1B\u306E{half} {unit}\u306B\u6291\u5236\uFF09","StrategyCf01":"\u73FE\u5728\u306E\u30B9\u30E9\u30A4\u30C0\u30FC\u8A2D\u5B9A\uFF08\u53D6\u5F15\u898F\u6A21{stepUp}{commitUnit}\u306B\u5BFE\u3057\u3066{concession} {unit}\uFF09","KeystoneWaiverHtml":"\u003Ci class=\u0027fas fa-key\u0027\u003E\u003C/i\u003E \u003Cstrong\u003E\u30B3\u30B9\u30C8\u306E\u4E3B\u56E0\uFF1A\u003C/strong\u003E \u003Cstrong\u003E{cp0Name}\u003C/strong\u003E\uFF08{cp0M}{unit}\uFF09\u304A\u3088\u3073\u003Cstrong\u003E{cp1Name}\u003C/strong\u003E\uFF08{cp1M}{unit}\uFF09\u304B\u3089\u500B\u5225\u306E\u6A29\u5229\u653E\u68C4\u3092\u53D6\u308A\u4ED8\u3051\u308B\u3053\u3068\u3067\u3001\u6CE2\u53CA\u30B3\u30B9\u30C8\u306E\u003Cstrong\u003E100%\u003C/strong\u003E\u3092\u5B8C\u5168\u306B\u56DE\u907F\u3067\u304D\u307E\u3059\u3002","MultiHopAlertHtml":"\u003Cspan class=\u0027hop-alert-inline\u0027\u003E\u003Ci class=\u0027fas fa-diagram-next\u0027\u003E\u003C/i\u003E \u003Cstrong\u003E\u30CF\u30D6\u9593\u6CE2\u53CA\u30A2\u30E9\u30FC\u30C8\uFF1A\u003C/strong\u003E \u3053\u306E\u5272\u5F15\u306F\u003Cstrong\u003E{hopContainer}\u003C/strong\u003E\uFF08{hopCp}\uFF09\u306E\u9023\u643A\u5951\u7D04\u306B\u3082\u9023\u9396\u3057\u307E\u3059\u3002\u003C/span\u003E","CompRole":"\u898F\u7A0B\u304A\u3088\u3073\u5951\u7D04\u306E\u81EA\u52D5\u691C\u8A3C","CompTextTriggered":"\u300C{container}\u300D\u5185\u306E\u65E2\u5B58\u5951\u7D04{triggered}\u4EF6\u306B\u540C\u7B49\u8ACB\u6C42\u6A29\u304C\u3042\u308B\u3053\u3068\u3092\u78BA\u8A8D\u3002\u7F72\u540D\u524D\u306B\u6B63\u5F0F\u306A\u4E8B\u524D\u901A\u77E5\u671F\u9593\u304C\u5FC5\u8981\u3067\u3059\u3002","CompTextCleared":"\u300C{container}\u300D\u306B\u304A\u3051\u308B\u300C{recipient}\u300D\u3068\u306E\u53D6\u5F15\u306B\u3064\u3044\u3066\u3001\u7AF6\u5408\u3059\u308B\u30D1\u30FC\u30C8\u30CA\u30FC\u6761\u9805\u304C\u5B58\u5728\u3057\u306A\u3044\u3053\u3068\u3092\u78BA\u8A8D\u3002\u901A\u5E38\u306E\u627F\u8A8D\u624B\u7D9A\u304D\u3092\u9032\u3081\u3089\u308C\u307E\u3059\u3002","MathRole":"\u8CA1\u52D9\u304A\u3088\u3073\u5F15\u53D7\u6570\u91CF\u306E\u5F71\u97FF\u76E3\u67FB","MathTextTriggered":"\u8A72\u5F53\u3059\u308B\u30D1\u30FC\u30C8\u30CA\u30FC\u53D6\u5F15\u9AD8{exposure}{unit}\u306B\u308F\u305F\u308A\u3001\u5408\u8A08{drag}/\u5E74\u306E\u6CE2\u53CA\u30B3\u30B9\u30C8\u304C\u767A\u751F\u3059\u308B\u3053\u3068\u3092\u8A08\u7B97\u30FB\u8A3C\u660E\u3002","MathTextCleared":"\u5BFE\u8C61\u9867\u5BA2\u306E\u53D6\u5F15\u9AD8{stepUp}{unit}\u306B\u5BFE\u3059\u308B\u76F4\u63A5\u5272\u5F15\u30B3\u30B9\u30C8{direct}/\u5E74\u3092\u78BA\u8A8D\uFF08\u4ED6\u793E\u3078\u306E\u9023\u9396\u306A\u3057\uFF09\u3002","VersionSnapshotFmt":"v{stagedVer}\u4E0A\u3067\u6E96\u5099\uFF08\u672C\u756A\uFF1Av{liveVer}\uFF09","FeedbackOccAbortHtml":"\u003Cstrong\u003E\u003Ci class=\u0027fas fa-ban\u0027\u003E\u003C/i\u003E \u540C\u6642\u7DE8\u96C6\u306E\u7AF6\u5408\u3092\u9632\u6B62\uFF1A\u003C/strong\u003E \u003Ccode\u003E{containerId}\u003C/code\u003E\u306E\u003Ccode\u003E\u30EC\u30B3\u30FC\u30C9 v{stagedVer}\u003C/code\u003E\u306B\u57FA\u3065\u3044\u3066\u51E6\u7406\u3092\u6E96\u5099\u4E2D\u306B\u3001\u5225\u306E\u30E6\u30FC\u30B6\u30FC\u304C\u672C\u756A\u30EC\u30B3\u30FC\u30C9\u3092\u003Ccode\u003Ev{liveVer}\u003C/code\u003E\u306B\u66F4\u65B0\u3057\u307E\u3057\u305F\u3002\u53E4\u3044\u30C7\u30FC\u30BF\u3078\u306E\u4E0A\u66F8\u304D\u3092\u9632\u3050\u305F\u3081\u51E6\u7406\u3092\u906E\u65AD\u3057\u307E\u3057\u305F\u3002\u5DE6\u5074\u306E\u003Cstrong\u003E\u521D\u671F\u5024\u306B\u30EA\u30BB\u30C3\u30C8\u003C/strong\u003E\u3092\u30AF\u30EA\u30C3\u30AF\u3057\u3066\u6700\u65B0\u30C7\u30FC\u30BF\u3092\u518D\u8AAD\u307F\u8FBC\u307F\u3057\u3066\u304F\u3060\u3055\u3044\u3002","FeedbackCommittedHtml":"\u003Cstrong\u003E\u003Ci class=\u0027fas fa-circle-check\u0027\u003E\u003C/i\u003E \u627F\u8A8D\uFF06\u30B3\u30DF\u30C3\u30C8\u5B8C\u4E86\uFF08\u30ED\u30B0 #{eventId}\uFF09\uFF1A\u003C/strong\u003E \u7AF6\u5408\u30C1\u30A7\u30C3\u30AF\u306B\u5408\u683C\u3057\u307E\u3057\u305F\u3002\u672C\u756A\u30EC\u30B3\u30FC\u30C9\u304C\u003Ccode\u003Ev{liveVer}\u003C/code\u003E\u306B\u66F4\u65B0\u3055\u308C\u3001\u76E3\u67FB\u30ED\u30B0\u306B\u5C01\u5370\u3055\u308C\u307E\u3057\u305F\u3002\u003Cstrong\u003E\u30EF\u30F3\u30AF\u30EA\u30C3\u30AF\u53D6\u308A\u6D88\u3057\u003C/strong\u003E\u306E\u30C6\u30B9\u30C8\u304C\u53EF\u80FD\u3067\u3059\u3002","FeedbackRejectedHtml":"\u003Cstrong\u003E\u003Ci class=\u0027fas fa-circle-xmark\u0027\u003E\u003C/i\u003E \u7533\u8ACB\u5374\u4E0B\uFF08\u30ED\u30B0 #{eventId}\uFF09\uFF1A\u003C/strong\u003E \u63D0\u6848\u306F\u7834\u68C4\u3055\u308C\u307E\u3057\u305F\u3002\u672C\u756A\u30EC\u30B3\u30FC\u30C9\u3078\u306E\u5909\u66F4\u306F\u4E00\u5207\u884C\u308F\u308C\u305A\u3001\u5374\u4E0B\u4E8B\u5B9F\u306E\u307F\u304C\u76E3\u67FB\u7528\u306B\u8A18\u9332\u3055\u308C\u307E\u3057\u305F\u3002","FeedbackRolledBackHtml":"\u003Cstrong\u003E\u003Ci class=\u0027fas fa-rotate-left\u0027\u003E\u003C/i\u003E \u30EF\u30F3\u30AF\u30EA\u30C3\u30AF\u53D6\u308A\u6D88\u3057\u5B8C\u4E86\uFF08\u30ED\u30B0 #{eventId}\uFF09\uFF1A\u003C/strong\u003E \u30D0\u30C3\u30AF\u30A2\u30C3\u30D7\u30B9\u30CA\u30C3\u30D7\u30B7\u30E7\u30C3\u30C8\u306B\u57FA\u3065\u304D\u3001\u003Ccode\u003E{container}\u003C/code\u003E\u304A\u3088\u3073\u3059\u3079\u3066\u306E\u95A2\u9023\u5951\u7D04\u6761\u4EF6\u3092\u003Ccode\u003Ev{liveVer}\u003C/code\u003E\u3078\u5373\u5EA7\u306B\u5FA9\u5143\u3057\u307E\u3057\u305F\u3002","FeedbackOccSimHtml":"\u003Cstrong\u003E\u003Ci class=\u0027fas fa-bolt\u0027\u003E\u003C/i\u003E \u540C\u50DA\u306B\u3088\u308B\u540C\u6642\u7DE8\u96C6\u3092\u30B7\u30DF\u30E5\u30EC\u30FC\u30C8\uFF1A\u003C/strong\u003E \u753B\u9762\u304C\u003Ccode\u003Ev{stagedVer}\u003C/code\u003E\u3092\u4FDD\u6301\u3057\u3066\u3044\u308B\u9593\u306B\u3001\u5225\u306E\u7BA1\u7406\u8005\u304C\u003Ccode\u003E{container}\u003C/code\u003E\u3092\u66F4\u65B0\u3057\u3066\u672C\u756A\u30EC\u30B3\u30FC\u30C9\u304C\u003Ccode\u003Ev{liveVer}\u003C/code\u003E\u306B\u9032\u3093\u3060\u72B6\u614B\u3092\u518D\u73FE\u3057\u307E\u3057\u305F\u3002\u003Cstrong\u003E\u627F\u8A8D\u3057\u3066\u5909\u66F4\u3092\u9069\u7528\u003C/strong\u003E\u3092\u30AF\u30EA\u30C3\u30AF\u3057\u3066\u3001MindML\u304C\u4E0A\u66F8\u304D\u3092\u9632\u6B62\u3059\u308B\u52D5\u4F5C\u3092\u3054\u78BA\u8A8D\u304F\u3060\u3055\u3044\u3002","FeedbackTamperActiveHtml":"\u003Cstrong\u003E\u003Ci class=\u0027fas fa-radiation\u0027\u003E\u003C/i\u003E \u30C7\u30FC\u30BF\u30D9\u30FC\u30B9\u306E\u4E0D\u6B63\u6539\u3056\u3093\u3092\u691C\u77E5\uFF1A\u003C/strong\u003E \u30C7\u30FC\u30BF\u30D9\u30FC\u30B9\u4E0A\u306E\u003Ccode\u003E\u30ED\u30B0 #101\u003C/code\u003E\u306B\u5BFE\u3059\u308B\u4E0D\u6B63\u306A\u66F8\u304D\u63DB\u3048\u304C\u8A66\u884C\u3055\u308C\u307E\u3057\u305F\u3002MindML\u306E\u30C7\u30B8\u30BF\u30EB\u5370\u7AE0\u691C\u8A3C\u304C\u5BFE\u8C61\u884C\u3092\u5373\u5EA7\u306B\u691C\u77E5\u3057\u3001\u5F8C\u7D9A\u306E\u30EC\u30B3\u30FC\u30C9\uFF08\u003Ccode\u003E\u30ED\u30B0 #{eventId}\u003C/code\u003E\uFF09\u3078\u306E\u30A2\u30AF\u30BB\u30B9\u3092\u30ED\u30C3\u30AF\u3057\u307E\u3057\u305F\u3002","FeedbackTamperRestoredHtml":"\u003Cstrong\u003E\u003Ci class=\u0027fas fa-shield-check\u0027\u003E\u003C/i\u003E \u76E3\u67FB\u30ED\u30B0\u4FEE\u5FA9\u5B8C\u4E86\uFF1A\u003C/strong\u003E \u5143\u306E\u6B63\u5E38\u306A\u30EC\u30B3\u30FC\u30C9\u304C\u5FA9\u5143\u3055\u308C\u307E\u3057\u305F\u3002\u3059\u3079\u3066\u306E\u30C7\u30B8\u30BF\u30EB\u5370\u7AE0\u304C\u6709\u52B9\u3067\u3042\u308B\u3053\u3068\u304C\u518D\u78BA\u8A8D\u3055\u308C\u307E\u3057\u305F\u3002"};
+
+    function fmt(template, vars) {
+        if (!template) return "";
+        return template.replace(/\{(\w+)\}/g, (match, key) => (vars[key] !== undefined ? vars[key] : match));
+    }
+
+    // 2. Live Workbench State
+    let activeScenario = SCENARIOS[0];
+    let currentConcession = activeScenario.DefaultConcession;
+    let currentStepUp = activeScenario.DefaultRecipientCommitment;
+    let variantEnabled = false;
+    let activeSubagentStage = "sa1";
+    let activeTab = "overview";
+
+    let entityVersion = 1;
+    let stagedOpeningVersion = 1;
+    let occConflictSimulated = false;
+    let merkleTampered = false;
+    let currentEventId = 102;
+    let currentActionStatus = "PENDING";
+    let actionLedger = [];
+    let lastComputedEval = null;
+
+    const GENESIS_HASH = "0000000000000000000000000000000000000000000000000000000000000000";
+
+    // Interactive Quick-Start Guide Controller
+    function toggleHelpExplainer() {
+        const drawer = document.getElementById('guide-explainer-drawer');
+        const lbl = document.getElementById('help-btn-label');
+        const isHidden = drawer.style.display === "none";
+        drawer.style.display = isHidden ? "block" : "none";
+        lbl.textContent = isHidden ? QUICK_GUIDE.BtnHideHelp : QUICK_GUIDE.BtnShowHelp;
+    }
+
+    function runGuidedStep(stepNumber) {
+        document.querySelectorAll('.guide-step-card').forEach((c, idx) => {
+            c.classList.toggle('active', (idx + 1) === stepNumber);
+        });
+
+        if (stepNumber === 1) {
+            switchMainTab('overview');
+            resetScenarioBaseline();
+            pulseElement('view-graph-container');
+        } else if (stepNumber === 2) {
+            switchMainTab('overview');
+            applyParetoOptimal();
+            pulseElement('left-controls-panel');
+        } else if (stepNumber === 3) {
+            switchMainTab('gate');
+            pulseElement('acid-gate-section');
+        }
+    }
+
+    function pulseElement(elId) {
+        const el = document.getElementById(elId);
+        if (!el) return;
+        el.classList.remove('guide-spotlight-pulse');
+        void el.offsetWidth;
+        el.classList.add('guide-spotlight-pulse');
+    }
+
+    // 4-Tab Progressive Disclosure Controller
+    function switchMainTab(tabId) {
+        activeTab = tabId;
+        document.querySelectorAll('.stage-tab-btn').forEach(btn => {
+            btn.classList.toggle('active', btn.getAttribute('data-tab') === tabId);
+        });
+
+        const tabs = ['overview', 'proof', 'specialists', 'gate'];
+        tabs.forEach(t => {
+            const pane = document.getElementById('tab-pane-' + t);
+            if (pane) pane.style.display = (t === tabId) ? 'block' : 'none';
+        });
+    }
+
+    // 3. Deterministic 64-char SHA-256 Hex Simulator
+    function computeDeterministicSha256(inputStr) {
+        let h1 = 0xdeadbeef ^ inputStr.length;
+        let h2 = 0x41c6ce57 ^ inputStr.length;
+        let h3 = 0x9e3779b9 ^ inputStr.length;
+        let h4 = 0x85ebca6b ^ inputStr.length;
+        let h5 = 0xc2b2ae35 ^ inputStr.length;
+        let h6 = 0x27d4eb2f ^ inputStr.length;
+        let h7 = 0x165667b1 ^ inputStr.length;
+        let h8 = 0xd3a2646c ^ inputStr.length;
+
+        for (let i = 0, ch; i < inputStr.length; i++) {
+            ch = inputStr.charCodeAt(i);
+            h1 = Math.imul(h1 ^ ch, 2654435761);
+            h2 = Math.imul(h2 ^ ch, 1597334677);
+            h3 = Math.imul(h3 ^ (ch << 3), 2246822507);
+            h4 = Math.imul(h4 ^ (ch << 7), 3266489909);
+            h5 = Math.imul(h5 ^ (ch << 2), 2654435761);
+            h6 = Math.imul(h6 ^ (ch << 5), 1597334677);
+            h7 = Math.imul(h7 ^ (ch << 11), 2246822507);
+            h8 = Math.imul(h8 ^ (ch << 13), 3266489909);
+        }
+
+        const mix = (a, b) => {
+            let x = Math.imul(a ^ (a >>> 16), 2246822507) ^ Math.imul(b ^ (b >>> 13), 3266489909);
+            return (x ^ (x >>> 16)) >>> 0;
+        };
+
+        return [
+            mix(h1, h2), mix(h2, h3), mix(h3, h4), mix(h4, h5),
+            mix(h5, h6), mix(h6, h7), mix(h7, h8), mix(h8, h1)
+        ].map(n => n.toString(16).padStart(8, '0')).join('');
+    }
+
+    function formatCurrencyOrUnit(amount, sc, showSign = false) {
+        const absVal = Math.abs(Math.round(amount));
+        const sign = amount < 0 ? "-" : (showSign && amount > 0 ? "+" : "");
+        if (sc.UnitType === "physical_mw") {
+            return `${sign}${absVal.toLocaleString('en-US')} MW`;
+        }
+        return `${sign}${sc.CurrencySymbol}${absVal.toLocaleString('en-US')}`;
+    }
+
+    // 4. Scenario Selection & Initialization
+    function selectScenario(scId) {
+        const found = SCENARIOS.find(s => s.Id === scId);
+        if (!found) return;
+        activeScenario = found;
+
+        document.querySelectorAll('.scenario-card-btn').forEach(btn => {
+            btn.classList.toggle('active', btn.getAttribute('data-scenario-id') === scId);
+        });
+
+        const sConc = document.getElementById('slider-concession');
+        sConc.min = activeScenario.MinConcession;
+        sConc.max = activeScenario.MaxConcession;
+        sConc.step = activeScenario.ConcessionStep;
+        sConc.value = activeScenario.DefaultConcession;
+
+        const sStep = document.getElementById('slider-stepup');
+        sStep.min = activeScenario.MinRecipientCommitment;
+        sStep.max = activeScenario.MaxRecipientCommitment;
+        sStep.step = activeScenario.CommitmentStep;
+        sStep.value = activeScenario.DefaultRecipientCommitment;
+
+        const chkVar = document.getElementById('toggle-variant');
+        chkVar.checked = false;
+        document.getElementById('lbl-variant-toggle').textContent = activeScenario.VariantToggleLabel;
+
+        document.getElementById('min-concession-lbl').textContent = `${activeScenario.MinConcession} ${activeScenario.Unit}`;
+        document.getElementById('max-concession-lbl').textContent = `${activeScenario.MaxConcession} ${activeScenario.Unit}`;
+        document.getElementById('min-stepup-lbl').textContent = `${LEFT_STRINGS.BaselinePrefix} (${activeScenario.DefaultRecipientCommitment} ${activeScenario.CommitmentUnit})`;
+        document.getElementById('max-stepup-lbl').textContent = `${LEFT_STRINGS.StepUpPrefix} (${activeScenario.MaxRecipientCommitment} ${activeScenario.CommitmentUnit})`;
+
+        entityVersion = 1;
+        stagedOpeningVersion = 1;
+        occConflictSimulated = false;
+        merkleTampered = false;
+        currentEventId = 102;
+        currentActionStatus = "PENDING";
+
+        document.getElementById('acid-feedback-banner').className = "acid-feedback-msg";
+        document.getElementById('acid-feedback-banner').innerHTML = ACID_STRINGS.InitialFeedbackHtml;
+
+        seedInitialLedger();
+        onParameterInput();
+    }
+
+    function seedInitialLedger() {
+        const ts1 = "2026-11-05T08:15:00Z";
+        const payload1 = `{"container":"${activeScenario.ContainerId}","schema_bootstrapped":true}`;
+        const prevState1 = `{"Version":1,"Status":"ACTIVE"}`;
+        const raw1 = `${GENESIS_HASH}|101|${ts1}|sys_ingestion_pipeline|bootstrap_container_ontology|${payload1}|${prevState1}|COMMITTED`;
+        const hash1 = computeDeterministicSha256(raw1);
+
+        actionLedger = [
+            {
+                EventId: 101,
+                Timestamp: ts1,
+                ActorId: "sys_ingestion_pipeline",
+                ActionName: `ingest_charter (${activeScenario.ContainerName})`,
+                PayloadJSON: payload1,
+                OriginalPayloadJSON: payload1,
+                PreviousStateJSON: prevState1,
+                VersionSnapshot: "v1 -> v1",
+                Status: "COMMITTED",
+                PreviousHash: GENESIS_HASH.substring(0, 16) + "...",
+                FullPreviousHash: GENESIS_HASH,
+                EventHash: hash1,
+                Tampered: false
+            }
+        ];
+    }
+
+    function resetScenarioBaseline() {
+        document.getElementById('slider-concession').value = activeScenario.DefaultConcession;
+        document.getElementById('slider-stepup').value = activeScenario.DefaultRecipientCommitment;
+        document.getElementById('toggle-variant').checked = false;
+        occConflictSimulated = false;
+        stagedOpeningVersion = entityVersion;
+        currentActionStatus = "PENDING";
+        document.getElementById('acid-feedback-banner').className = "acid-feedback-msg";
+        document.getElementById('acid-feedback-banner').innerHTML = ACID_STRINGS.InitialFeedbackHtml;
+        onParameterInput();
+    }
+
+    // 5. Core Deterministic Simulation & Evaluation Engine
+    function evaluateScenarioModel(sc, concessionVal, stepUpVal, isVariantOn) {
+        const evaluatedCounterparties = sc.Counterparties.map((cp, idx) => {
+            const activeThreshold = (isVariantOn && sc.VariantEffect === "amendment_v2" && cp.AmendedThresholdM)
+                ? cp.AmendedThresholdM
+                : cp.ThresholdM;
+
+            const holderQualifies = cp.CommitmentM >= activeThreshold;
+            const paritySatisfied = !cp.ParityRequired || (stepUpVal <= cp.CommitmentM);
+
+            let bypassedReason = null;
+            if (!holderQualifies) {
+                bypassedReason = fmt(TPL.BypassThreshold, { holderM: cp.CommitmentM, unit: sc.CommitmentUnit, threshM: activeThreshold });
+            } else if (!paritySatisfied) {
+                bypassedReason = fmt(TPL.BypassStepUp, { stepUpM: stepUpVal, unit: sc.CommitmentUnit, holderM: cp.CommitmentM });
+            } else if (isVariantOn && sc.VariantEffect === "safe_harbor") {
+                bypassedReason = TPL.BypassSafeHarbor;
+            } else if (isVariantOn && sc.VariantEffect === "court_vacatur") {
+                bypassedReason = TPL.BypassVacatur;
+            } else if (isVariantOn && sc.VariantEffect === "waive_first" && idx === 0) {
+                bypassedReason = TPL.BypassWaiver;
+            }
+
+            const isTriggered = (bypassedReason === null);
+            let dragAmount = 0;
+            if (isTriggered) {
+                if (sc.UnitType === "physical_mw") {
+                    dragAmount = concessionVal;
+                } else {
+                    dragAmount = (cp.CommitmentM * 1000000) * (concessionVal / 10000);
+                }
+            }
+
+            return {
+                ...cp,
+                activeThreshold,
+                holderQualifies,
+                paritySatisfied,
+                isTriggered,
+                bypassedReason,
+                dragAmount
+            };
+        });
+
+        const triggeredList = evaluatedCounterparties.filter(c => c.isTriggered);
+        const triggeredCount = triggeredList.length;
+        const aggregateExposureM = triggeredList.reduce((acc, c) => acc + c.CommitmentM, 0);
+        const totalCascadeDrag = triggeredList.reduce((acc, c) => acc + c.dragAmount, 0);
+
+        const directRecipientImpact = sc.UnitType === "physical_mw"
+            ? concessionVal
+            : (stepUpVal * 1000000) * (concessionVal / 10000);
+
+        const effectiveCeiling = (isVariantOn && sc.VariantEffect === "raise_mw_ceiling")
+            ? 122.5
+            : sc.Tier1Ceiling;
+
+        let breakevenCap = sc.DefaultConcession;
+        const baselineAllExposureM = sc.Counterparties.reduce((acc, c) => acc + c.CommitmentM, 0);
+
+        if (sc.UnitType === "physical_mw") {
+            const countForBreakeven = Math.max(1, sc.Counterparties.length);
+            breakevenCap = Math.floor(((effectiveCeiling * 0.99) / countForBreakeven) * 10) / 10;
+        } else {
+            const aggDollars = (aggregateExposureM > 0 ? aggregateExposureM : baselineAllExposureM) * 1000000;
+            const factorMax = (effectiveCeiling * 0.99) / aggDollars;
+            breakevenCap = Math.floor((factorMax * 10000) * 100) / 100;
+        }
+
+        // FIX #1: If current request is already safe, don't recommend a higher cap!
+        if (totalCascadeDrag <= effectiveCeiling) {
+            breakevenCap = Math.min(breakevenCap, concessionVal);
+        }
+
+        let governanceTier = sc.Tier1Label;
+        let governanceSignOff = sc.Tier1SignOff;
+        let tierLevel = 1;
+
+        if (triggeredCount === 0 || totalCascadeDrag <= effectiveCeiling) {
+            governanceTier = sc.Tier1Label;
+            governanceSignOff = sc.Tier1SignOff;
+            tierLevel = 1;
+        } else if (totalCascadeDrag < sc.Tier3Threshold * 1.6 && triggeredCount === 1) {
+            governanceTier = sc.Tier2Label;
+            governanceSignOff = sc.Tier2SignOff;
+            tierLevel = 2;
+        } else {
+            governanceTier = sc.Tier3Label;
+            governanceSignOff = sc.Tier3SignOff;
+            tierLevel = 3;
+        }
+
+        let hopActive = false;
+        if (sc.TransitiveHop && !(isVariantOn && sc.VariantEffect === "sever_hop") && triggeredCount > 0) {
+            hopActive = true;
+        }
+
+        const electionProb = triggeredCount === 0 ? 0 : (triggeredCount === 1 ? 0.75 : 0.85);
+        const riskWeightedAnnual = totalCascadeDrag * electionProb;
+        const fiveYearHorizon = riskWeightedAnnual * 5;
+        const severityLabel = triggeredCount === 0
+            ? CENTER_STRINGS.SeverityCleared
+            : (tierLevel === 3 ? (totalCascadeDrag >= effectiveCeiling * 2 ? CENTER_STRINGS.SeverityCritical : CENTER_STRINGS.SeverityHigh) : CENTER_STRINGS.SeverityModerate);
+
+        return {
+            concessionVal,
+            stepUpVal,
+            isVariantOn,
+            evaluatedCounterparties,
+            triggeredList,
+            triggeredCount,
+            aggregateExposureM,
+            totalCascadeDrag,
+            directRecipientImpact,
+            effectiveCeiling,
+            breakevenCap,
+            governanceTier,
+            governanceSignOff,
+            tierLevel,
+            hopActive,
+            electionProb,
+            riskWeightedAnnual,
+            fiveYearHorizon,
+            severityLabel
+        };
+    }
+
+    // 6. Handle Live Slider & Toggle Input
+    function onParameterInput() {
+        currentConcession = parseFloat(document.getElementById('slider-concession').value);
+        currentStepUp = parseFloat(document.getElementById('slider-stepup').value);
+        variantEnabled = document.getElementById('toggle-variant').checked;
+
+        document.getElementById('val-concession').textContent = `${currentConcession} ${activeScenario.Unit}`;
+        document.getElementById('val-stepup').textContent = activeScenario.UnitType === "physical_mw"
+            ? `${currentStepUp} MW`
+            : `$${currentStepUp}M`;
+
+        if (currentActionStatus !== "PENDING") {
+            currentEventId++;
+            currentActionStatus = "PENDING";
+            stagedOpeningVersion = entityVersion;
+        }
+
+        recalculateEngine();
+    }
+
+    function applyParetoOptimal() {
+        const evalResult = evaluateScenarioModel(activeScenario, currentConcession, currentStepUp, variantEnabled);
+        document.getElementById('slider-concession').value = evalResult.breakevenCap;
+        onParameterInput();
+    }
+
+    function applyParetoRow(concessionTarget, stepUpTarget) {
+        document.getElementById('slider-concession').value = concessionTarget;
+        document.getElementById('slider-stepup').value = stepUpTarget;
+        onParameterInput();
+    }
+
+    // 7. Master UI Synchronization
+    function recalculateEngine() {
+        const ev = evaluateScenarioModel(activeScenario, currentConcession, currentStepUp, variantEnabled);
+        lastComputedEval = ev;
+
+        const baselineEv = evaluateScenarioModel(activeScenario, activeScenario.DefaultConcession, activeScenario.DefaultRecipientCommitment, false);
+        const cf02Ev = evaluateScenarioModel(activeScenario, ev.breakevenCap, currentStepUp, variantEnabled);
+        const savingsVsBaseline = Math.max(0, baselineEv.totalCascadeDrag - cf02Ev.totalCascadeDrag);
+
+        const step1El = document.getElementById('step1-desc-text');
+        const step2El = document.getElementById('step2-desc-text');
+        if (step1El) {
+            step1El.textContent = fmt(QUICK_GUIDE.Step1Desc, {
+                recipient: activeScenario.RecipientName,
+                baselineDrag: formatCurrencyOrUnit(-baselineEv.totalCascadeDrag, activeScenario),
+                container: activeScenario.ContainerName
+            });
+        }
+        if (step2El) {
+            step2El.textContent = fmt(QUICK_GUIDE.Step2Desc, {
+                cap: ev.breakevenCap,
+                unit: activeScenario.Unit,
+                savings: formatCurrencyOrUnit(savingsVsBaseline, activeScenario, true)
+            });
+        }
+
+        document.getElementById('breakeven-marker-lbl').textContent = `${LEFT_STRINGS.BreakevenCapPrefix} ${ev.breakevenCap} ${activeScenario.Unit}`;
+        document.getElementById('live-entity-version').textContent = `${TELEMETRY_STRINGS.EntityVersionPrefix}${entityVersion}`;
+
+        document.getElementById('badge-proof-count').textContent = ev.triggeredCount > 0 ? `${ev.triggeredCount} Notices` : `Cleared`;
+        document.getElementById('badge-spec-count').textContent = `${2 + activeScenario.Specialists.length}`;
+        const gateDot = document.getElementById('badge-gate-dot');
+        gateDot.className = `tab-status-dot status-${currentActionStatus.toLowerCase()}`;
+
+        const stepFormatted = activeScenario.UnitType === "physical_mw" ? `${currentStepUp} MW` : `$${currentStepUp}M`;
+        const stepClause = currentStepUp > activeScenario.DefaultRecipientCommitment
+            ? fmt(LEFT_STRINGS.StepUpPromptClause, { stepUp: stepFormatted })
+            : "";
+        const promptText = activeScenario.PromptTemplate
+            .replace("{concession}", currentConcession)
+            .replace("{stepUpClause}", stepClause);
+        document.getElementById('live-prompt-display').textContent = `"${promptText}"`;
+
+        document.getElementById('metamodel-summary-box').innerHTML = `
+            <div class="mm-stat-row"><span>${LEFT_STRINGS.MetaContainerLabel}</span> <code>${activeScenario.ContainerName}</code></div>
+            <div class="mm-stat-row"><span>${LEFT_STRINGS.MetaRecipientLabel}</span> <code>${activeScenario.RecipientName}</code></div>
+            <div class="mm-stat-row"><span>${LEFT_STRINGS.MetaCapacityLabel}</span> <strong>${activeScenario.ContainerTarget} (${activeScenario.BaseRate})</strong></div>
+        `;
+
+        const isPhysical = (activeScenario.UnitType === "physical_mw");
+
+        // Dynamically update KPI Titles for Physics vs Finance
+        document.querySelector('#kpi-card-drag .kpi-title').textContent = isPhysical ? "Peak Ripple-Effect Load" : CENTER_STRINGS.KpiCascadeLabel;
+        document.querySelector('#kpi-card-tier .kpi-title').textContent = CENTER_STRINGS.KpiTierLabel;
+
+        const dragEl = document.getElementById('kpi-val-drag');
+        const subDragEl = document.getElementById('kpi-sub-drag');
+        if (ev.triggeredCount > 0) {
+            dragEl.textContent = `${formatCurrencyOrUnit(-ev.totalCascadeDrag, activeScenario)} ${isPhysical ? "" : CENTER_STRINGS.PerYearSuffix}`;
+            dragEl.className = "kpi-main-val accent-crimson";
+
+            let subText = fmt(CENTER_STRINGS.KpiTriggeredSub, {
+                triggered: ev.triggeredCount,
+                total: activeScenario.Counterparties.length,
+                exposure: ev.aggregateExposureM,
+                unit: activeScenario.CommitmentUnit
+            });
+            // Clarify Hop-1 Contagion
+            if (ev.hopActive) subText += " (Excludes Hop-1 Contagion)";
+            subDragEl.textContent = subText;
+        } else {
+            dragEl.textContent = `${formatCurrencyOrUnit(-ev.directRecipientImpact, activeScenario)} ${isPhysical ? "" : CENTER_STRINGS.PerYearSuffix}`;
+            dragEl.className = "kpi-main-val accent-emerald";
+            subDragEl.textContent = CENTER_STRINGS.KpiZeroTriggeredSub;
+        }
+
+        const omniEl = document.getElementById('kpi-val-omni');
+        const subOmniEl = document.getElementById('kpi-sub-omni');
+        const titleOmni = document.querySelector('#kpi-card-omni .kpi-title');
+
+        // FIX #2: Megawatt Physics vs Financial Horizons
+        if (isPhysical) {
+            titleOmni.textContent = "Risk-Weighted Peak Load";
+            omniEl.textContent = ev.triggeredCount > 0
+                ? formatCurrencyOrUnit(-ev.riskWeightedAnnual, activeScenario)
+                : formatCurrencyOrUnit(0, activeScenario);
+        } else {
+            titleOmni.textContent = CENTER_STRINGS.KpiOmniLabel;
+            omniEl.textContent = ev.triggeredCount > 0
+                ? formatCurrencyOrUnit(-ev.fiveYearHorizon, activeScenario)
+                : formatCurrencyOrUnit(0, activeScenario);
+        }
+
+        subOmniEl.textContent = fmt(CENTER_STRINGS.KpiOmniSub, {
+            rate: Math.round(ev.electionProb * 100),
+            severity: ev.severityLabel
+        });
+
+        document.getElementById('kpi-val-savings').textContent = `${formatCurrencyOrUnit(savingsVsBaseline, activeScenario, true)} ${isPhysical ? "" : CENTER_STRINGS.PerYearSuffix}`;
+
+        let savingsSub = fmt(CENTER_STRINGS.KpiSavingsSub, {
+            cap: ev.breakevenCap,
+            unit: activeScenario.Unit
+        });
+        if (ev.totalCascadeDrag <= ev.effectiveCeiling) {
+            savingsSub = `Already compliant (< ${ev.effectiveCeiling} ${activeScenario.Unit})`;
+        }
+        document.getElementById('kpi-sub-savings').textContent = savingsSub;
+
+        const tierBadgeEl = document.getElementById('kpi-val-tier');
+        tierBadgeEl.textContent = ev.governanceTier;
+        tierBadgeEl.className = `kpi-tier-badge tier-lvl-${ev.tierLevel}`;
+        document.getElementById('kpi-sub-tier').textContent = ev.governanceSignOff;
+
+        renderTopologicalHtmlGraph(activeScenario, ev);
+        renderJsonLogicAndGrounding(activeScenario, ev);
+        renderGovernanceCard(activeScenario, ev, baselineEv);
+        syncStagedActionToLedger(activeScenario, ev);
+        renderSubagentDiagnosticBar(activeSubagentStage);
+    }
+
+    // 8. 100% PURE HTML/CSS RESPONSIVE RIPPLE-EFFECT BOARD (Zero SVG Overlap)
+    function renderTopologicalHtmlGraph(sc, ev) {
+        const board = document.getElementById('impact-flow-board');
+        if (!board) return;
+
+        const hasHop = sc.TransitiveHop !== null;
+        const hasVacatur = sc.VariantEffect === "court_vacatur";
+
+        let hubAddonHtml = "";
+        if (hasVacatur) {
+            const normActive = ev.isVariantOn;
+            hubAddonHtml = `
+                <div class="ifb-subcard ${normActive ? 'ifb-sub-cleared' : 'ifb-sub-warn'}">
+                    <div class="ifb-sub-header">
+                        <i class="fas fa-gavel"></i> <span>${TPL.SvgSupremeCourtTitle}</span>
+                    </div>
+                    <div class="ifb-sub-status">
+                        ${normActive ? TPL.SvgVacaturActive : TPL.SvgVacaturInactive}
+                    </div>
+                </div>
+            `;
+        } else if (hasHop) {
+            const hop = sc.TransitiveHop;
+            hubAddonHtml = `
+                <div class="ifb-subcard ${ev.hopActive ? 'ifb-sub-contagion' : 'ifb-sub-cleared'}">
+                    <div class="ifb-sub-header">
+                        <i class="fas fa-diagram-next"></i> <span>${hop.RelationType}: ${hop.ContainerName}</span>
+                    </div>
+                    <div class="ifb-sub-party">${hop.CounterpartyName}</div>
+                    <div class="ifb-sub-status">
+                        ${ev.hopActive ? fmt(TPL.SvgHopActive, { commitment: hop.CommitmentM }) : TPL.SvgHopIsolated}
+                    </div>
+                </div>
+            `;
+        }
+
+        const partnerCardsHtml = ev.evaluatedCounterparties.map(cp => {
+            const statusLabel = cp.isTriggered
+                ? fmt(TPL.SvgTriggered, { drag: formatCurrencyOrUnit(-cp.dragAmount, sc) + (sc.UnitType === "physical_mw" ? "" : "/yr") })
+                : TPL.SvgBypassed;
+            const stateClass = cp.isTriggered ? "ifb-card-triggered" : "ifb-card-cleared";
+            const iconClass = cp.isTriggered ? "fa-triangle-exclamation" : "fa-circle-check";
+
+            return `
+                <div class="ifb-card ${stateClass}">
+                    <div class="ifb-clause-ribbon">
+                        <span class="ifb-clause-name"><i class="fas ${iconClass}"></i> ${cp.RuleType}</span>
+                        <span class="ifb-clause-verdict">${statusLabel}</span>
+                    </div>
+                    <div class="ifb-card-body">
+                        <div class="ifb-card-title">${cp.Name}</div>
+                        <div class="ifb-card-meta">
+                            <span><code>${cp.Id}</code> (${cp.Jurisdiction})</span>
+                            <span><strong>${TPL.SvgCommitment} ${cp.CommitmentM}${sc.CommitmentUnit}</strong></span>
+                        </div>
+                        <div class="ifb-card-signal">${cp.SignalBadge}</div>
+                    </div>
+                </div>
+            `;
+        }).join('');
+
+        const overallFlowAlert = ev.triggeredCount > 0 ? "flow-alert" : "flow-safe";
+
+        board.innerHTML = `
+            <div class="ifb-stage">
+                <div class="ifb-stage-label">1. Target Client & Proposed Deal</div>
+                <div class="ifb-card ifb-card-recipient">
+                    <div class="ifb-clause-ribbon ribbon-cyan">
+                        <span><i class="fas fa-handshake"></i> ${sc.ActionVerb}</span>
+                        <span class="ifb-clause-verdict">${ev.concessionVal} ${sc.Unit}</span>
+                    </div>
+                    <div class="ifb-card-body">
+                        <div class="ifb-card-title">${sc.RecipientName}</div>
+                        <div class="ifb-card-meta">
+                            <span><code>${sc.RecipientId}</code> (${sc.RecipientJurisdiction})</span>
+                        </div>
+                        <div class="ifb-card-signal">${TPL.SvgCommitment} <strong>${ev.stepUpVal}${sc.CommitmentUnit}</strong></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="ifb-connector flow-cyan" aria-hidden="true">
+                <div class="ifb-conn-badge">${ev.concessionVal} ${sc.Unit}</div>
+                <div class="ifb-conn-line">
+                    <i class="fas fa-arrow-right desktop-arrow"></i>
+                    <i class="fas fa-arrow-down mobile-arrow"></i>
+                </div>
+            </div>
+
+            <div class="ifb-stage">
+                <div class="ifb-stage-label">2. Business Hub & Active Rules</div>
+                <div class="ifb-card ifb-card-container">
+                    <div class="ifb-clause-ribbon ribbon-purple">
+                        <span><i class="fas fa-building-shield"></i> ${TELEMETRY_STRINGS.EntityVersionPrefix}${entityVersion}</span>
+                        <span>${sc.BaseRate}</span>
+                    </div>
+                    <div class="ifb-card-body">
+                        <div class="ifb-card-title">${sc.ContainerName}</div>
+                        <div class="ifb-card-meta">
+                            <span><code>${sc.ContainerId}</code></span>
+                            <span><strong>${TPL.SvgTarget} ${sc.ContainerTarget}</strong></span>
+                        </div>
+                        ${hubAddonHtml}
+                    </div>
+                </div>
+            </div>
+
+            <div class="ifb-connector ${overallFlowAlert}" aria-hidden="true">
+                <div class="ifb-conn-badge">
+                    ${ev.triggeredCount > 0 ? `${ev.triggeredCount} Triggered` : `0 Triggered`}
+                </div>
+                <div class="ifb-conn-line">
+                    <i class="fas fa-arrow-right desktop-arrow"></i>
+                    <i class="fas fa-arrow-down mobile-arrow"></i>
+                </div>
+            </div>
+
+            <div class="ifb-stage ifb-stage-partners">
+                <div class="ifb-stage-label">3. Partner Contract Ripple Effects (100% Checked)</div>
+                <div class="ifb-partners-stack">
+                    ${partnerCardsHtml}
+                </div>
+            </div>
+        `;
+    }
+
+    // 9. Exact Contract Rule Verification Inspector
+    function renderJsonLogicAndGrounding(sc, ev) {
+        const firstCp = ev.evaluatedCounterparties[0];
+        const ruleSummaryObj = {
+            "Contract_Clause_ID": firstCp.CovenantId,
+            "Clause_Type": firstCp.RuleType,
+            "Checked_Partner": firstCp.Name,
+            "Partner_Qualifying_Check": {
+                "Partner_Current_Volume": `${firstCp.CommitmentM}${sc.CommitmentUnit}`,
+                "Required_Minimum_Threshold": `${firstCp.activeThreshold}${sc.CommitmentUnit}`,
+                "Meets_Minimum_Volume": firstCp.holderQualifies
+            },
+            "Target_Deal_Comparison": {
+                "Target_Client": sc.RecipientName,
+                "Target_Client_Volume": `${ev.stepUpVal}${sc.CommitmentUnit}`,
+                "Proposed_Adjustment": `${ev.concessionVal} ${sc.Unit}`,
+                "Partner_Has_Equal_Or_Larger_Volume": firstCp.paritySatisfied,
+                "Policy_Or_Court_Exemption_Active": ev.isVariantOn
+            },
+            "Final_Rule_Verdict": firstCp.isTriggered
+                ? "CLAUSE TRIGGERED — Partner is entitled to matching terms"
+                : `NOT TRIGGERED — ${firstCp.bypassedReason}`
+        };
+        document.getElementById('jsonlogic-ast-code').textContent = JSON.stringify(ruleSummaryObj, null, 2);
+
+        const groundingHtml = `
+            <table class="aho-grounding-table">
+                <thead>
+                    <tr>
+                        <th>${CENTER_STRINGS.AhoColEntity}</th>
+                        <th>${CENTER_STRINGS.AhoColId}</th>
+                        <th>${CENTER_STRINGS.AhoColRole}</th>
+                        <th>${CENTER_STRINGS.AhoColChunk}</th>
+                        <th>${CENTER_STRINGS.AhoColConfidence}</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>${sc.ContainerName}</strong></td>
+                        <td><code>${sc.ContainerId}</code></td>
+                        <td><code>Business Hub</code></td>
+                        <td><code>${sc.ChunkId}</code></td>
+                        <td><span class="conf-pill conf-100">${CENTER_STRINGS.AhoConfPrimary}</span></td>
+                    </tr>
+                    <tr>
+                        <td><strong>${sc.RecipientName}</strong></td>
+                        <td><code>${sc.RecipientId}</code></td>
+                        <td><code>Target Client</code></td>
+                        <td><code>${sc.ChunkId}</code></td>
+                        <td><span class="conf-pill conf-100">${CENTER_STRINGS.AhoConfPrimary}</span></td>
+                    </tr>
+                    ${ev.evaluatedCounterparties.map(cp => `
+                        <tr>
+                            <td><strong>${cp.Name}</strong></td>
+                            <td><code>${cp.Id}</code></td>
+                            <td><code>Existing Partner</code></td>
+                            <td><code>${sc.ChunkId}</code></td>
+                            <td><span class="conf-pill conf-100">${CENTER_STRINGS.AhoConfConstraint}</span></td>
+                        </tr>
+                    `).join('')}
+                    <tr>
+                        <td><em>${CENTER_STRINGS.AhoHeaderMention}</em></td>
+                        <td><code>${sc.ContainerId}</code></td>
+                        <td><code>Document Title</code></td>
+                        <td><code>Title-Page</code></td>
+                        <td><span class="conf-pill conf-065">${CENTER_STRINGS.AhoConfHeader}</span></td>
+                    </tr>
+                </tbody>
+            </table>
+        `;
+        document.getElementById('aho-corasick-table-wrap').innerHTML = groundingHtml;
+    }
+
+    // 10. Universal UI Governance Card & Pareto Frontier Table
+    function renderGovernanceCard(sc, ev, baselineEv) {
+        const banner = document.getElementById('gov-banner');
+        const bannerIcon = document.getElementById('gov-banner-icon');
+        const bannerTitle = document.getElementById('gov-banner-title');
+        const bannerSub = document.getElementById('gov-banner-sub');
+        const isPhysical = (sc.UnitType === "physical_mw");
+        const thDrag = document.querySelector('.kinetic-pareto-table thead tr th:nth-child(6)');
+        const thSave = document.querySelector('.kinetic-pareto-table thead tr th:nth-child(7)');
+        if (thDrag && thSave) {
+            thDrag.textContent = isPhysical ? "Peak Ripple Load" : CENTER_STRINGS.ColAnnualDrag;
+            thSave.textContent = isPhysical ? "Peak Load Saved" : CENTER_STRINGS.ColSavings;
+        }
+
+        if (ev.triggeredCount > 0) {
+            banner.className = "gov-card-banner alert-mode";
+            bannerIcon.className = "fas fa-triangle-exclamation";
+            bannerTitle.textContent = TPL.BannerAlertTitle;
+            bannerSub.innerHTML = fmt(TPL.BannerAlertSub, {
+                action: sc.ActionVerb,
+                concession: ev.concessionVal,
+                unit: sc.Unit,
+                recipient: sc.RecipientName,
+                recipientId: sc.RecipientId,
+                triggered: ev.triggeredCount,
+                container: sc.ContainerName,
+                containerId: sc.ContainerId
+            });
+        } else {
+            banner.className = "gov-card-banner cleared-mode";
+            bannerIcon.className = "fas fa-circle-check";
+            bannerTitle.textContent = TPL.BannerClearedTitle;
+            bannerSub.innerHTML = fmt(TPL.BannerClearedSub, {
+                action: sc.ActionVerb,
+                concession: ev.concessionVal,
+                unit: sc.Unit,
+                recipient: sc.RecipientName,
+                recipientId: sc.RecipientId,
+                container: sc.ContainerName
+            });
+        }
+
+        const logPill = document.getElementById('gov-actionlog-pill');
+        logPill.className = `actionlog-id-pill status-${currentActionStatus.toLowerCase()}`;
+        logPill.innerHTML = `<i class="fas fa-shield-halved"></i> Log #${currentEventId} [${currentActionStatus}] <i class="fas fa-arrow-right"></i>`;
+
+        const lowestCpCommitment = Math.min(...sc.Counterparties.map(c => c.CommitmentM));
+        const stepUpTarget = Math.min(sc.MaxRecipientCommitment, lowestCpCommitment + sc.CommitmentStep);
+
+        const cf01 = evaluateScenarioModel(sc, ev.concessionVal, ev.stepUpVal, ev.isVariantOn);
+        const cf02 = evaluateScenarioModel(sc, ev.breakevenCap, ev.stepUpVal, ev.isVariantOn);
+        const cf03 = evaluateScenarioModel(sc, ev.concessionVal, stepUpTarget, ev.isVariantOn);
+        const halfConcession = Math.max(sc.MinConcession, Math.round((ev.concessionVal * 0.5) * 10) / 10);
+        const cf04 = evaluateScenarioModel(sc, halfConcession, ev.stepUpVal, ev.isVariantOn);
+
+        const paretoRows = [
+            {
+                code: "CF-02",
+                recommended: true,
+                strategy: fmt(TPL.StrategyCf02, { ceiling: formatCurrencyOrUnit(ev.effectiveCeiling, sc) }),
+                concession: ev.breakevenCap,
+                stepUp: ev.stepUpVal,
+                evalObj: cf02
+            },
+            {
+                code: "CF-03",
+                recommended: false,
+                strategy: fmt(TPL.StrategyCf03, { lowestM: lowestCpCommitment, unit: sc.CommitmentUnit }),
+                concession: ev.concessionVal,
+                stepUp: stepUpTarget,
+                evalObj: cf03
+            },
+            {
+                code: "CF-04",
+                recommended: false,
+                strategy: fmt(TPL.StrategyCf04, { half: halfConcession, unit: sc.Unit }),
+                concession: halfConcession,
+                stepUp: ev.stepUpVal,
+                evalObj: cf04
+            },
+            {
+                code: "CF-01",
+                recommended: false,
+                strategy: fmt(TPL.StrategyCf01, { concession: ev.concessionVal, unit: sc.Unit, stepUp: ev.stepUpVal, commitUnit: sc.CommitmentUnit }),
+                concession: ev.concessionVal,
+                stepUp: ev.stepUpVal,
+                evalObj: cf01
+            }
+        ];
+
+        const savingsCf02 = Math.max(0, cf01.totalCascadeDrag - cf02.totalCascadeDrag);
+
+        // Dynamic Pareto Callout for Already Compliant Deals
+        let calloutHtml = "";
+        if (ev.totalCascadeDrag <= ev.effectiveCeiling) {
+            calloutHtml = `
+                <div>
+                    <strong><i class='fas fa-check-circle'></i> Deal is Compliant (<code>CF-01</code>):</strong>
+                    Current parameters generate <strong>${formatCurrencyOrUnit(-ev.totalCascadeDrag, sc)}</strong> in cascade drag, which is safely below the ${formatCurrencyOrUnit(ev.effectiveCeiling, sc)} limit. You are cleared for <code>${ev.governanceTier}</code>.
+                </div>
+            `;
+        } else {
+            calloutHtml = fmt(TPL.ParetoCalloutHtml, {
+                cap: ev.breakevenCap,
+                unit: sc.Unit,
+                drag: formatCurrencyOrUnit(-cf02.totalCascadeDrag, sc) + (isPhysical ? "" : "/yr"),
+                savings: formatCurrencyOrUnit(savingsCf02, sc, true) + (isPhysical ? "" : "/yr"),
+                tier: cf02.governanceTier
+            });
+        }
+        document.getElementById('pareto-callout').innerHTML = calloutHtml;
+
+        const tbody = document.getElementById('pareto-table-body');
+        tbody.innerHTML = paretoRows.map(r => {
+            const rowSavings = Math.max(0, baselineEv.totalCascadeDrag - r.evalObj.totalCascadeDrag);
+            const isCurrentActive = (Math.abs(r.concession - ev.concessionVal) < 0.05 && Math.abs(r.stepUp - ev.stepUpVal) < 0.05);
+            return `
+                <tr class="pareto-row ${r.recommended ? 'pareto-recommended' : ''} ${isCurrentActive ? 'pareto-active-row' : ''}"
+                    onclick="applyParetoRow(${r.concession}, ${r.stepUp})">
+                    <td><code>${r.code}</code> ${r.recommended ? `<span class="opt-star">${CENTER_STRINGS.BestBadge}</span>` : ''}</td>
+                    <td>${r.strategy}</td>
+                    <td><code>${r.concession} ${sc.Unit}</code></td>
+                    <td>${isPhysical ? r.stepUp + " MW" : "$" + r.stepUp + "M"}</td>
+                    <td>${r.evalObj.triggeredCount}</td>
+                    <td class="${r.evalObj.totalCascadeDrag > 0 ? 'accent-crimson' : 'accent-emerald'}">
+                        ${formatCurrencyOrUnit(-r.evalObj.totalCascadeDrag, sc)}${isPhysical ? "" : CENTER_STRINGS.PerYearSuffix}
+                    </td>
+                    <td class="accent-emerald"><strong>${formatCurrencyOrUnit(rowSavings, sc, true)}${isPhysical ? "" : CENTER_STRINGS.PerYearSuffix}</strong></td>
+                    <td><span class="mini-tier-pill tier-lvl-${r.evalObj.tierLevel}">${r.evalObj.governanceTier}</span></td>
+                </tr>
+            `;
+        }).join('');
+
+        const cp0 = ev.evaluatedCounterparties[0];
+        const cp1 = ev.evaluatedCounterparties[1];
+        const hopHtml = ev.hopActive
+            ? fmt(TPL.MultiHopAlertHtml, { relType: sc.TransitiveHop.RelationType, hopContainer: sc.TransitiveHop.ContainerName, hopCp: sc.TransitiveHop.CounterpartyName })
+            : "";
+        document.getElementById('keystone-waiver-box').innerHTML = fmt(TPL.KeystoneWaiverHtml, {
+            cp0Name: cp0.Name,
+            cp0M: cp0.CommitmentM,
+            cp1Name: cp1 ? cp1.Name : "",
+            cp1M: cp1 ? cp1.CommitmentM : "",
+            unit: sc.CommitmentUnit
+        }) + " " + hopHtml;
+
+        document.getElementById('verbatim-citation-box').innerHTML = `
+            <div class="citation-meta">
+                <span><i class="fas fa-file-contract"></i> <strong>${sc.SourceDoc}</strong> (${sc.SectionRef})</span>
+                <span class="chunk-guid-tag">Chunk #${sc.ChunkId} | ${CENTER_STRINGS.ConfidenceLabel}</span>
+            </div>
+            <blockquote class="verbatim-quote">"${sc.VerbatimQuote}"</blockquote>
+        `;
+
+        document.getElementById('staged-artifacts-box').innerHTML = `
+            <span class="artifact-pill"><i class="fas fa-file-word"></i> Staged_Amendment_${sc.ContainerId}_${sc.RecipientId}.docx</span>
+            <span class="artifact-pill"><i class="fas fa-file-pdf"></i> ActionLog_Audit_Packet_${sc.ContainerId}_#${currentEventId}.pdf</span>
+            <span class="artifact-pill"><i class="fas fa-file-zipper"></i> Counterparty_Election_Notices_${sc.ContainerId}.zip</span>
+        `;
+
+        const noticesBox = document.getElementById('localized-notices-box');
+        if (ev.triggeredCount === 0) {
+            noticesBox.innerHTML = `<div class="notice-empty"><i class="fas fa-check-circle"></i> ${CENTER_STRINGS.NoNoticesRequired}</div>`;
+        } else {
+            noticesBox.innerHTML = ev.triggeredList.map(cp => `
+                <div class="localized-notice-item">
+                    <div class="notice-top">
+                        <strong>${cp.Name}</strong>
+                        <span class="locale-tag">${cp.Jurisdiction} / ${cp.Locale} (${CENTER_STRINGS.GlossaryLockSuffix})</span>
+                    </div>
+                    <div class="notice-title-line">${cp.NoticeTitle}</div>
+                    <div class="notice-body-line">${cp.NoticeBody.replace("{concession}", ev.concessionVal)}</div>
+                </div>
+            `).join('');
+        }
+
+        const baseSpecialists = [
+            {
+                Agent: "Compliance AI",
+                Role: TPL.CompRole,
+                Status: ev.triggeredCount > 0 ? "REVIEW_REQUIRED" : "CLEARED",
+                Text: ev.triggeredCount > 0
+                    ? fmt(TPL.CompTextTriggered, { triggered: ev.triggeredCount, container: sc.ContainerName })
+                    : fmt(TPL.CompTextCleared, { recipient: sc.RecipientName, container: sc.ContainerName })
+            },
+            {
+                Agent: "Math Expert AI",
+                Role: TPL.MathRole,
+                Status: "VERIFIED",
+                Text: ev.triggeredCount > 0
+                    ? fmt(TPL.MathTextTriggered, { drag: formatCurrencyOrUnit(-ev.totalCascadeDrag, sc), exposure: ev.aggregateExposureM, unit: sc.CommitmentUnit })
+                    : fmt(TPL.MathTextCleared, { direct: formatCurrencyOrUnit(-ev.directRecipientImpact, sc), stepUp: ev.stepUpVal, unit: sc.CommitmentUnit })
+            },
+            ...sc.Specialists
+        ];
+
+        document.getElementById('specialists-advisory-box').innerHTML = baseSpecialists.map(sp => `
+            <div class="specialist-item">
+                <div class="sp-top">
+                    <strong><i class="fas fa-robot"></i> ${sp.Agent}</strong>
+                    <span class="sp-status-badge status-${sp.Status.toLowerCase()}">${sp.Status}</span>
+                </div>
+                <div class="sp-role">${sp.Role}</div>
+                <div class="sp-text">${sp.Text}</div>
+            </div>
+        `).join('');
+    }
+
+    // 11. Two-Phase ACID Gate, OCC Conflict & SHA-256 Merkle Chain Engine
+    function syncStagedActionToLedger(sc, ev) {
+        const tsNow = new Date().toISOString().split('.')[0] + "Z";
+        const payload = JSON.stringify({
+            action: sc.ActionVerb,
+            recipient: sc.RecipientId,
+            value: ev.concessionVal,
+            unit: sc.Unit,
+            step_up: ev.stepUpVal,
+            triggers: ev.triggeredCount
+        });
+        const prevState = JSON.stringify({
+            ContainerId: sc.ContainerId,
+            Version: stagedOpeningVersion,
+            BaseRate: sc.BaseRate
+        });
+
+        const prevRow = actionLedger[0];
+        const prevHashFull = prevRow.EventHash;
+        const rawCanonical = `${prevHashFull}|${currentEventId}|${tsNow}|usr_exec_operator_01|${sc.ActionVerb}|${payload}|${prevState}|${currentActionStatus}`;
+        const eventHash = computeDeterministicSha256(rawCanonical);
+
+        const stagedRow = {
+            EventId: currentEventId,
+            Timestamp: tsNow,
+            ActorId: "usr_exec_operator_01",
+            ActionName: `${sc.ActionVerb} -> ${sc.RecipientName}`,
+            PayloadJSON: payload,
+            OriginalPayloadJSON: payload,
+            PreviousStateJSON: prevState,
+            VersionSnapshot: fmt(TPL.VersionSnapshotFmt, { stagedVer: stagedOpeningVersion, liveVer: entityVersion }),
+            Status: currentActionStatus,
+            PreviousHash: prevHashFull.substring(0, 16) + "...",
+            FullPreviousHash: prevHashFull,
+            EventHash: eventHash,
+            Tampered: false
+        };
+
+        if (actionLedger.length === 1) {
+            actionLedger.push(stagedRow);
+        } else {
+            actionLedger[actionLedger.length - 1] = stagedRow;
+        }
+
+        updateAcidButtonsAndBanner();
+        renderMerkleLedgerTable();
+    }
+
+    function executeAcidTransition(targetState) {
+        const banner = document.getElementById('acid-feedback-banner');
+
+        if (targetState === "COMMITTED") {
+            if (occConflictSimulated || stagedOpeningVersion !== entityVersion) {
+                currentActionStatus = "OCC_CONFLICT";
+                banner.className = "acid-feedback-msg feedback-error";
+                banner.innerHTML = fmt(TPL.FeedbackOccAbortHtml, {
+                    containerId: activeScenario.ContainerId,
+                    stagedVer: stagedOpeningVersion,
+                    liveVer: entityVersion
+                });
+                updateAcidButtonsAndBanner();
+                renderMerkleLedgerTable();
+                return;
+            }
+
+            entityVersion++;
+            currentActionStatus = "COMMITTED";
+            banner.className = "acid-feedback-msg feedback-success";
+            banner.innerHTML = fmt(TPL.FeedbackCommittedHtml, {
+                eventId: currentEventId,
+                liveVer: entityVersion
+            });
+        } else if (targetState === "REJECTED") {
+            currentActionStatus = "REJECTED";
+            occConflictSimulated = false;
+            banner.className = "acid-feedback-msg feedback-warn";
+            banner.innerHTML = fmt(TPL.FeedbackRejectedHtml, { eventId: currentEventId });
+        } else if (targetState === "ROLLED_BACK") {
+            entityVersion = stagedOpeningVersion;
+            currentActionStatus = "ROLLED_BACK";
+            banner.className = "acid-feedback-msg feedback-info";
+            banner.innerHTML = fmt(TPL.FeedbackRolledBackHtml, {
+                eventId: currentEventId,
+                container: activeScenario.ContainerName,
+                liveVer: entityVersion
+            });
+        }
+
+        document.getElementById('live-entity-version').textContent = `${TELEMETRY_STRINGS.EntityVersionPrefix}${entityVersion}`;
+        const logPill = document.getElementById('gov-actionlog-pill');
+        logPill.className = `actionlog-id-pill status-${currentActionStatus.toLowerCase()}`;
+        logPill.innerHTML = `<i class="fas fa-shield-halved"></i> Log #${currentEventId} [${currentActionStatus}] <i class="fas fa-arrow-right"></i>`;
+        const gateDot = document.getElementById('badge-gate-dot');
+        gateDot.className = `tab-status-dot status-${currentActionStatus.toLowerCase()}`;
+
+        syncStagedActionToLedger(activeScenario, lastComputedEval);
+        renderTopologicalHtmlGraph(activeScenario, lastComputedEval);
+    }
+
+    function simulateOccConflict() {
+        entityVersion++;
+        occConflictSimulated = true;
+        document.getElementById('live-entity-version').textContent = `${TELEMETRY_STRINGS.EntityVersionPrefix}${entityVersion}`;
+
+        const banner = document.getElementById('acid-feedback-banner');
+        banner.className = "acid-feedback-msg feedback-warn";
+        banner.innerHTML = fmt(TPL.FeedbackOccSimHtml, {
+            container: activeScenario.ContainerName,
+            liveVer: entityVersion,
+            eventId: currentEventId,
+            stagedVer: stagedOpeningVersion
+        });
+        syncStagedActionToLedger(activeScenario, lastComputedEval);
+    }
+
+    function toggleMerkleTamperSimulation() {
+        merkleTampered = !merkleTampered;
+        const row0 = actionLedger[0];
+        const btnText = document.getElementById('tamper-btn-text');
+        const pill = document.getElementById('merkle-status-pill');
+        const badgeText = document.getElementById('merkle-badge-text');
+        const banner = document.getElementById('acid-feedback-banner');
+
+        if (merkleTampered) {
+            row0.PayloadJSON = `{"container":"${activeScenario.ContainerId}","UNAUTHORIZED_SQL_EDIT":"BYPASS_MFN"}`;
+            row0.Tampered = true;
+            btnText.textContent = ACID_STRINGS.BtnRestoreTamper;
+            pill.classList.add('merkle-fractured');
+            badgeText.className = "telemetry-value merkle-invalid";
+            badgeText.innerHTML = `<i class="fas fa-skull-crossbones"></i> ${TELEMETRY_STRINGS.MerkleTamperedText} (#101)`;
+            banner.className = "acid-feedback-msg feedback-error";
+            banner.innerHTML = fmt(TPL.FeedbackTamperActiveHtml, { eventId: currentEventId });
+        } else {
+            row0.PayloadJSON = row0.OriginalPayloadJSON;
+            row0.Tampered = false;
+            btnText.textContent = ACID_STRINGS.BtnSimTamper;
+            pill.classList.remove('merkle-fractured');
+            badgeText.className = "telemetry-value merkle-valid";
+            badgeText.innerHTML = `<i class="fas fa-shield-halved"></i> ${TELEMETRY_STRINGS.MerkleValidText}`;
+            banner.className = "acid-feedback-msg";
+            banner.innerHTML = TPL.FeedbackTamperRestoredHtml;
+        }
+
+        renderMerkleLedgerTable();
+    }
+
+    function updateAcidButtonsAndBanner() {
+        const badge = document.getElementById('acid-state-badge');
+        const btnConfirm = document.getElementById('btn-acid-confirm');
+        const btnReject = document.getElementById('btn-acid-reject');
+        const btnRollback = document.getElementById('btn-acid-rollback');
+
+        badge.className = `acid-status-pill ${currentActionStatus.toLowerCase()}`;
+        if (currentActionStatus === "PENDING") {
+            badge.textContent = ACID_STRINGS.StatePending;
+            btnConfirm.disabled = false;
+            btnReject.disabled = false;
+            btnRollback.disabled = true;
+        } else if (currentActionStatus === "COMMITTED") {
+            badge.textContent = ACID_STRINGS.StateCommitted;
+            btnConfirm.disabled = true;
+            btnReject.disabled = true;
+            btnRollback.disabled = false;
+        } else if (currentActionStatus === "REJECTED") {
+            badge.textContent = ACID_STRINGS.StateRejected;
+            btnConfirm.disabled = true;
+            btnReject.disabled = true;
+            btnRollback.disabled = true;
+        } else if (currentActionStatus === "ROLLED_BACK") {
+            badge.textContent = ACID_STRINGS.StateRolledBack;
+            btnConfirm.disabled = true;
+            btnReject.disabled = true;
+            btnRollback.disabled = true;
+        } else if (currentActionStatus === "OCC_CONFLICT") {
+            badge.textContent = ACID_STRINGS.StateOccConflict;
+            btnConfirm.disabled = true;
+            btnReject.disabled = false;
+            btnRollback.disabled = true;
+        }
+    }
+
+    function renderMerkleLedgerTable() {
+        const tbody = document.getElementById('merkle-ledger-tbody');
+        tbody.innerHTML = actionLedger.map((row, idx) => {
+            const isCascadedInvalid = merkleTampered && idx > 0;
+            return `
+                <tr class="${row.Tampered ? 'merkle-row-tampered' : (isCascadedInvalid ? 'merkle-row-cascaded' : '')}">
+                    <td><strong>#${row.EventId}</strong></td>
+                    <td><code>${row.Timestamp}</code></td>
+                    <td><code>${row.ActorId}</code></td>
+                    <td>
+                        <div><strong>${row.ActionName}</strong></div>
+                        <div class="ledger-payload-sub"><code>${row.PayloadJSON}</code></div>
+                    </td>
+                    <td><code>${row.VersionSnapshot}</code></td>
+                    <td><span class="ledger-status-tag status-${row.Status.toLowerCase()}">${row.Status}</span></td>
+                    <td><code>${row.PreviousHash}</code></td>
+                    <td>
+                        <code class="${row.Tampered || isCascadedInvalid ? 'hash-fractured' : 'hash-sealed'}">
+                            ${row.EventHash.substring(0, 20)}...
+                        </code>
+                        ${row.Tampered ? `<span class="tamper-flag">${ACID_STRINGS.FlagHashMismatch}</span>` : (isCascadedInvalid ? `<span class="tamper-flag">${ACID_STRINGS.FlagChainBroken}</span>` : '<i class="fas fa-check-circle hash-ok-icon"></i>')}
+                    </td>
+                </tr>
+            `;
+        }).join('');
+    }
+
+    function highlightPipelineStage(stageId) {
+        activeSubagentStage = stageId;
+        document.querySelectorAll('.pipeline-stage-pill').forEach(pill => {
+            pill.classList.toggle('active', pill.getAttribute('data-stage') === stageId);
+        });
+        renderSubagentDiagnosticBar(stageId);
+    }
+
+    function renderSubagentDiagnosticBar(stageId) {
+        const bar = document.getElementById('subagent-diagnostic-bar');
+        const sc = activeScenario;
+        const ev = lastComputedEval;
+        if (!ev || !bar) return;
+
+        const diagnostics = {
+            "sa1": fmt(TPL.DiagSa1, {
+                action: sc.ActionVerb,
+                concession: ev.concessionVal,
+                unit: sc.Unit,
+                count: 2 + sc.Counterparties.length
+            }),
+            "sa2": fmt(TPL.DiagSa2, {
+                containerId: sc.ContainerId,
+                recipientId: sc.RecipientId,
+                triggered: ev.triggeredCount,
+                total: sc.Counterparties.length
+            }),
+            "opt": fmt(TPL.DiagOpt, {
+                cap: ev.breakevenCap,
+                unit: sc.Unit,
+                ceiling: formatCurrencyOrUnit(ev.effectiveCeiling, sc)
+            }),
+            "sa3": fmt(TPL.DiagSa3, {
+                specialists: 2 + sc.Specialists.length,
+                stagedVer: stagedOpeningVersion,
+                eventId: currentEventId
+            })
+        };
+        bar.innerHTML = `<i class="fas fa-wave-square"></i> ${diagnostics[stageId] || diagnostics["sa1"]}`;
+    }
+
+    function toggleLabFullscreen() {
+        const wb = document.getElementById('kinetic-workbench');
+        const icon = document.getElementById('lab-fs-icon');
+        const txt = document.getElementById('lab-fs-text');
+        wb.classList.toggle('kinetic-fullscreen');
+
+        if (wb.classList.contains('kinetic-fullscreen')) {
+            icon.className = "fas fa-compress";
+            txt.textContent = TELEMETRY_STRINGS.BtnExitFullscreen;
+            document.body.style.overflow = "hidden";
+        } else {
+            icon.className = "fas fa-expand";
+            txt.textContent = TELEMETRY_STRINGS.BtnFullscreen;
+            document.body.style.overflow = "auto";
+        }
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+        selectScenario(SCENARIOS[0].Id);
+    });
+</script>
+
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            if (window.innerWidth < 768) return;
+
+            const intro = document.querySelector("#right-intro");
+            if (!intro) return;
+
+            const tl = gsap.timeline();
+            let isClosing = false; // Flag to prevent double-triggering the exit
+
+            // --- 1. DEFINE THE EXIT FUNCTION ---
+            const closeIntro = () => {
+                if (isClosing) return;
+                isClosing = true;
+
+                // Kill the main timeline so it doesn't keep running in the background
+                tl.kill();
+
+                // Create a dedicated exit timeline for a fast, responsive feel
+                const exitTl = gsap.timeline();
+
+                /* ROBOT FAST REVEAL & RUN */
+                exitTl.to(".robot-runner", { opacity: 1, duration: 0.2 });
+                exitTl.to(".robot-runner", {
+                    x: 400,
+                    duration: 0.8,
+                    ease: "power2.in"
+                }, "-=0.1");
+
+                /* PANEL SLIDE-OUT */
+                exitTl.to("#right-intro", {
+                    duration: 0.8,
+                    transform: "translateX(100%)",
+                    ease: "power3.inOut",
+                    onComplete: () => {
+                        intro.style.display = "none";
+                        // Remove scroll listener once closed
+                        window.removeEventListener("scroll", handleScroll);
+                    }
+                }, "-=0.6");
+            };
+
+            // --- 2. THE SCROLL LISTENER ---
+            const handleScroll = () => {
+                if (window.scrollY > 20) { // Trigger after 20px of scrolling
+                    closeIntro();
+                }
+            };
+            window.addEventListener("scroll", handleScroll);
+
+            // --- 3. ORIGINAL ANIMATION SEQUENCE ---
+            /* PANEL SLIDE-IN */
+            tl.to("#right-intro", {
+                duration: 0.8,
+                transform: "translateX(0%)",
+                ease: "power3.out"
+            });
+
+            /* PARTICLES */
+            for (let i = 0; i < 20; i++) {
+                const p = document.createElement("div");
+                p.className = "particle";
+                p.style.position = "absolute";
+                p.style.width = "4px";
+                p.style.height = "4px";
+                p.style.background = "rgba(0,174,239,0.35)";
+                p.style.borderRadius = "50%";
+                p.style.left = Math.random() * 100 + "%";
+                p.style.top = "100%";
+                document.querySelector(".intro-particles").appendChild(p);
+
+                gsap.to(p, {
+                    y: -window.innerHeight - 100,
+                    duration: 4 + Math.random() * 4,
+                    delay: Math.random() * 2,
+                    repeat: -1,
+                    ease: "none"
+                });
+            }
+
+            /* SIGNAL LINE & PULSE */
+            tl.to(".signal-main", { height: "60%", duration: 0.8, ease: "power2.out" })
+                .to(".loading-dots", { opacity: 1, duration: 0.3 })
+                .to(".pulse", { opacity: 1, scale: 1.4, duration: 0.3, stagger: 0.15 })
+                .to(".pulse", { scale: 0.6, opacity: 0.4, duration: 0.3, stagger: 0.15 })
+                .to(".loading-dots", { opacity: 0, duration: 0.3 });
+
+            /* TEXT REVEAL */
+            tl.to(".t1", { opacity: 1, x: 0, duration: 0.6 })
+                .to(".t2", { opacity: 1, x: 0, duration: 0.6 })
+                .to(".t3", { opacity: 1, x: 0, duration: 0.6 })
+                .to(".t4", { opacity: 1, x: 0, duration: 0.6 });
+
+            /* ROBOT ARM/LEG LOOPS (Independent of timeline) */
+            const robotParts = [
+                { el: ".arm-left", r: 30 }, { el: ".arm-right", r: -30 },
+                { el: ".leg-left", r: -30 }, { el: ".leg-right", r: 30 }
+            ];
+            robotParts.forEach(part => {
+                gsap.to(part.el, { rotation: part.r, yoyo: true, repeat: -1, duration: 0.2, ease: "power1.inOut" });
+            });
+
+            // --- 4. AUTO-EXIT (If user doesn't scroll) ---
+            tl.to(".robot-runner", { opacity: 1, duration: 0.3, delay: 5 });
+            tl.to(".robot-runner", { x: 400, duration: 1.2, ease: "power2.inOut" }, "-=0.2");
+            tl.to("#right-intro", {
+                duration: 1,
+                transform: "translateX(100%)",
+                ease: "power3.inOut",
+                onComplete: () => {
+                    if (!isClosing) { // Only hide if scroll didn't already trigger it
+                        intro.style.display = "none";
+                        window.removeEventListener("scroll", handleScroll);
+                    }
+                }
+            }, "-=0.6");
+        });
+    </script>
+    <!-- Cloudflare Web Analytics --><script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "e290b7bc8f584d41990f177692bdcf23"}'></script><!-- End Cloudflare Web Analytics -->
+</body>
+</html>

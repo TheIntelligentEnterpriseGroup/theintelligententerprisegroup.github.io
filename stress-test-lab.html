@@ -1,0 +1,2086 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta name="robots" content="index, follow" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <meta name="description" content='Test the MindML Kinetic Engine live. See how deterministic contract checks, automated deal restructuring, and human-gated execution prevent costly ripple effects across your business.' />
+    <title>Operational AI Stress-Test Lab | The Intelligent Enterprise Group</title>
+
+    <style>
+        html { background-color: #3B3A47; }
+    </style>
+    <script>
+        (function () {
+            const key = 'preferredTheme';
+            const stored = localStorage.getItem(key);
+            //const systemDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+            const theme = stored || 'dark'/*(systemDark ? 'dark' : 'light')*/;
+            if (theme === 'dark') {
+                document.documentElement.classList.add('dark-mode');
+            } else {
+                document.documentElement.classList.remove('dark-mode');
+            }
+        })();
+    </script>
+
+
+        <link rel="alternate" hreflang="en" href="https://theintelligententerprisegroup.com/stress-test-lab.html" />
+        <link rel="alternate" hreflang="fr" href="https://theintelligententerprisegroup.com/fr/stress-test-lab.html" />
+        <link rel="alternate" hreflang="de" href="https://theintelligententerprisegroup.com/de/stress-test-lab.html" />
+        <link rel="alternate" hreflang="es" href="https://theintelligententerprisegroup.com/es/stress-test-lab.html" />
+        <link rel="alternate" hreflang="pt" href="https://theintelligententerprisegroup.com/pt/stress-test-lab.html" />
+        <link rel="alternate" hreflang="zh" href="https://theintelligententerprisegroup.com/zh/stress-test-lab.html" />
+        <link rel="alternate" hreflang="ja" href="https://theintelligententerprisegroup.com/ja/stress-test-lab.html" />
+        <link rel="alternate" hreflang="ar" href="https://theintelligententerprisegroup.com/ar/stress-test-lab.html" />
+
+
+    <link rel="alternate" hreflang="x-default" href="https://theintelligententerprisegroup.com/stress-test-lab.html" />
+
+    <link rel="canonical" href="https://theintelligententerprisegroup.com/stress-test-lab.html" />
+
+
+    <link rel="stylesheet" href="/css/styles.css" />
+    <link rel="stylesheet" href="/css/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="/css/all.min.css" />
+
+    <script src="/js/lang-switcher.js" defer></script>
+
+    <script>
+        (function () {
+            if (localStorage.getItem('currentLang')) return;
+            const supported = [
+                     { code: "en" } ,
+                     { code: "fr" } ,
+                     { code: "de" } ,
+                     { code: "es" } ,
+                     { code: "pt" } ,
+                     { code: "zh" } ,
+                     { code: "ja" } ,
+                     { code: "ar" } 
+            ];
+            const defaultLang = "en";
+            const navLangs = navigator.languages || [navigator.language || navigator.userLanguage];
+            let detected = null;
+            for (const nav of navLangs) {
+                const code = nav.toLowerCase().split('-')[0];
+                if (supported.find(s => s.code.toLowerCase() === code)) {
+                    detected = code;
+                    break;
+                }
+            }
+            const lang = detected || defaultLang;
+            localStorage.setItem('currentLang', lang);
+            document.documentElement.lang = lang;
+        })();
+    </script>
+
+    <!-- Organization structured data (JSON-LD) -->
+    <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "Organization",
+          "name": "The Intelligent Enterprise Group",
+          "url": "https://theintelligententerprisegroup.com/",
+          "logo": "https://theintelligententerprisegroup.com/images/tieg-logo.png",
+          "sameAs": []
+        }
+    </script>
+    <link rel="icon" href="/favicon.ico" />
+    <link rel="apple-touch-icon" href="/images/apple-touch-icon.png" />
+
+    
+
+</head>
+<body>
+    <header x-data="{ open: false }">
+        <div class="container header-top">
+            <div class="logo"></div>
+            <div class="theme-switch-wrapper">
+                <label class="theme-switch">
+                    <input type="checkbox" id="theme-checkbox" aria-label="Select theme"/>
+                    <span class="slider round"></span>
+                </label>
+                <span id="theme-label">Light Mode</span>
+                <span class="lang-switcher">
+                    <label for="lang-select" class="lang-label">🌐 Language:</label>
+
+                    <!-- Language switcher -->
+                    <select id="lang-select" class="lang-select">
+                        <option value="en" data-path="/">English</option>
+                        <option value="fr" data-path="/fr/">Fran&#xE7;ais</option>
+                        <option value="de" data-path="/de/">Deutsch</option>
+                        <option value="es" data-path="/es/">Espa&#xF1;ol</option>
+                        <option value="pt" data-path="/pt/">Portugu&#xEA;s</option>
+                        <option value="zh" data-path="/zh/">&#x4E2D;&#x6587;</option>
+                        <option value="ja" data-path="/ja/">&#x65E5;&#x672C;&#x8A9E;</option>
+                        <option value="ar" data-path="/ar/">&#x627;&#x644;&#x639;&#x631;&#x628;&#x64A;&#x629;</option>
+                    </select>
+
+                </span>
+            </div>
+        </div>
+        
+        <div class="container header-nav">
+            <button @click="open = !open" class="menu-toggle" aria-label="Toggle Menu">
+                <svg width="24" height="24" viewBox="0 0 24 24">
+                    <path fill="var(--nav-link-color)" d="M3 6h18v2H3V6zm0 5h18v2H3v-2zm0 5h18v2H3v-2z" />
+                </svg>
+            </button>
+
+            <nav class="main-nav" :class="{ 'open': open }">
+                <ul>
+                    <li><a href="index.html" class="">Home</a></li>
+                    <li><a href="about.html" class="">About Us</a></li>
+                    <li><a href="services.html" class="">Services &amp; Solutions</a></li>
+                    <li><a href="case-studies.html" class="">Case Studies</a></li>
+                    <li><a href="resources.html" class="">Resources &amp; Insights</a></li>
+                    <li><a href="partners.html" class="">Partners &amp; Alliances</a></li>                    
+                    <li><a href="contact.html" class="">Contact &amp; Consultation</a></li>
+                    <li class="has-submenu"
+                        x-data="{ openSub: false }"
+                        @mouseenter="openSub = true"
+                        @mouseleave="openSub = false">
+                      <button @click="openSub = !openSub"
+                              aria-haspopup="true"
+                              :aria-expanded="openSub.toString()">
+                        Info
+                        <svg width="12" height="12" viewBox="0 0 12 12" aria-hidden="true">
+                          <path d="M3 4l3 3 3-3" fill="currentColor"/>
+                        </svg>
+                      </button>
+                      <ul class="submenu" x-show="openSub" @click.outside="openSub = false">
+                        <li><a href="careers.html" class="">Careers</a></li>
+                        <li><a href="faqs.html" class="">FAQs</a></li>
+                        <li><a href="legal.html" class="">Legal &amp; Policies</a></li>
+                      </ul>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        
+<section class="kinetic-lab-hero">
+    <div class="container">
+        <span class="kinetic-eyebrow-badge">
+            <i class="fas fa-atom"></i> MINDML KINETIC ENGINE - INTERACTIVE DECISION SIMULATOR
+        </span>
+        <h1>Operational Governance &amp; Deal Stress-Test Lab</h1>
+        <p class="kinetic-hero-sub">Standard AI chatbots summarize documents. The MindML Kinetic Engine ingests your unique business ontology - contracts, physical grid limits, logistics, and safety zones - into a live mathematical graph. Use this simulator to see how it catches hidden operational triggers, optimizes decisions, and locks execution behind human sign-off.</p>
+    </div>
+</section>
+
+<section class="kinetic-lab-section">
+    <div class="kinetic-workbench-container" id="kinetic-workbench">
+
+        <!-- INTERACTIVE 3-STEP QUICK-START GUIDE BAR -->
+        <div class="kinetic-guide-banner" id="kinetic-guide-banner">
+            <div class="guide-banner-top">
+                <div class="guide-banner-title">
+                    <i class="fas fa-compass"></i>
+                    <span>How to Experience This Demo in 3 Steps:</span>
+                </div>
+                <div class="guide-banner-actions">
+                    <button type="button" class="guide-help-toggle-btn" onclick="toggleHelpExplainer()">
+                        <i class="fas fa-circle-question"></i>
+                        <span id="help-btn-label">What am I looking at?</span>
+                    </button>
+                    <button type="button" class="kinetic-util-btn" onclick="toggleLabFullscreen()">
+                        <i class="fas fa-expand" id="lab-fs-icon"></i>
+                        <span id="lab-fs-text">Full Screen</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Collapsible Plain-English Executive Explainer -->
+            <div class="guide-explainer-drawer" id="guide-explainer-drawer" style="display: none;">
+                <strong>Why this matters for your business:</strong> Standard AI tools just predict the next word. The Kinetic Engine maps your company's unique <strong>business ontology</strong>-transforming legal clauses, physical Megawatts, and geographical safety buffers into a deterministic mathematical graph. When you make an operational decision, it instantly computes the exact multi-hop ripple effects across your enterprise, solves for the optimal outcome, and stages the execution in a tamper-proof ledger.
+            </div>
+
+           <!-- 3 Interactive Spotlight Cards -->
+            <div class="guide-steps-grid">
+                <div class="guide-step-card active" id="tour-card-1" onclick="runGuidedStep(1)">
+                    <div class="gs-header">
+                        <span class="gs-title">1. Spot the Hidden Operational Ripple Effect</span>
+                        <span class="gs-action-pill"><i class="fas fa-eye"></i> Show the Ripple Effect</span>
+                    </div>
+                    <p class="gs-desc" id="step1-desc-text">Watch the ontology graph: making a change for {recipient} instantly triggers a chain reaction across {container}, affecting safety rules, logistics, or compliance.</p>
+                </div>
+
+                <div class="guide-step-card" id="tour-card-2" onclick="runGuidedStep(2)">
+                    <div class="gs-header">
+                        <span class="gs-title">2. Let AI Optimize the Outcome</span>
+                        <span class="gs-action-pill gold"><i class="fas fa-wand-magic-sparkles"></i> Auto-Optimize Decision</span>
+                    </div>
+                    <p class="gs-desc" id="step2-desc-text">Drag the sliders on the left - or click here - to see MindML calculate the exact operational cap that prevents bottlenecks, avoids penalties, and unlocks Fast-Track approval.</p>
+                </div>
+
+                <div class="guide-step-card" id="tour-card-3" onclick="runGuidedStep(3)">
+                    <div class="gs-header">
+                        <span class="gs-title">3. Test the Stateful Security Gate</span>
+                        <span class="gs-action-pill emerald"><i class="fas fa-shield-halved"></i> Open Safety Gate</span>
+                    </div>
+                    <p class="gs-desc">Open the Approval Gate to authorize the change, test 1-Click Undo, or simulate how MindML blocks concurrent edits and database tampering.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- MAIN 2-COLUMN COMMAND DECK (STICKY LEFT CONTROLS + TABBED RIGHT STAGE) -->
+        <div class="kinetic-main-grid">
+
+            <!-- LEFT CONTROL DECK: SCENARIOS + LIVE STRESS-TEST SLIDERS -->
+            <aside class="kinetic-left-deck">
+                <div class="deck-panel">
+                    <div class="deck-panel-header">
+                        <i class="fas fa-layer-group"></i> 1. Choose an Industry Scenario
+                    </div>
+                    <div class="scenario-selector-list" id="scenario-list">
+                            <button type="button" class="scenario-card-btn" data-scenario-id="sec1_energy" onclick="selectScenario('sec1_energy')">
+                                <div class="sc-card-top">
+                                    <span class="sc-sector-tag"><i class="fas fa-bolt"></i> Energy &amp; Industrial Hubs</span>
+                                </div>
+                                <div class="sc-card-title">AntwerpEnergyHub - Power Tariff Discounts &amp; Safety Zones</div>
+                            </button>
+                            <button type="button" class="scenario-card-btn" data-scenario-id="sec3_pharma" onclick="selectScenario('sec3_pharma')">
+                                <div class="sc-card-top">
+                                    <span class="sc-sector-tag"><i class="fas fa-snowflake"></i> Pharma Supply Chain &amp; Logistics</span>
+                                </div>
+                                <div class="sc-card-title">EuroLogisticsHub - Cross-Corridor Spillover &amp; Delivery Delays</div>
+                            </button>
+                            <button type="button" class="scenario-card-btn" data-scenario-id="sec6_aerospace" onclick="selectScenario('sec6_aerospace')">
+                                <div class="sc-card-top">
+                                    <span class="sc-sector-tag"><i class="fas fa-fighter-jet"></i> Aerospace &amp; Defense Manufacturing</span>
+                                </div>
+                                <div class="sc-card-title">EuroDroneConsortium - Supplier Royalty Caps &amp; Budget Ceilings</div>
+                            </button>
+                            <button type="button" class="scenario-card-btn" data-scenario-id="sec7_hvdc" onclick="selectScenario('sec7_hvdc')">
+                                <div class="sc-card-top">
+                                    <span class="sc-sector-tag"><i class="fas fa-plug"></i> Power Grid &amp; Utilities (Megawatts)</span>
+                                </div>
+                                <div class="sc-card-title">NorthSeaHVDCSubstation - Non-Financial Megawatt (MW) Load Balancing</div>
+                            </button>
+                            <button type="button" class="scenario-card-btn" data-scenario-id="sec8_pe_fund" onclick="selectScenario('sec8_pe_fund')">
+                                <div class="sc-card-top">
+                                    <span class="sc-sector-tag"><i class="fas fa-scale-balanced"></i> Private Equity, Legal &amp; M&amp;A</span>
+                                </div>
+                                <div class="sc-card-title">ApexGlobalBuyoutVIII - Amended Side Letters &amp; Investor Fee Parity</div>
+                            </button>
+                            <button type="button" class="scenario-card-btn" data-scenario-id="sec9_normative" onclick="selectScenario('sec9_normative')">
+                                <div class="sc-card-top">
+                                    <span class="sc-sector-tag"><i class="fas fa-gavel"></i> Regulatory Change &amp; Court Rulings</span>
+                                </div>
+                                <div class="sc-card-title">SovereignInfraFundIX - Court Ruling Impact &amp; Regulatory Blast Radius</div>
+                            </button>
+                    </div>
+                </div>
+
+                <!-- INTERACTIVE PARAMETER SLIDERS -->
+                <div class="deck-panel" id="left-controls-panel">
+                    <div class="deck-panel-header">
+                        <i class="fas fa-sliders"></i> 2. Adjust Deal Parameters Live
+                    </div>
+                    <div class="deck-controls-body">
+                        <!-- Slider 1: Concession Magnitude -->
+                        <div class="control-group">
+                            <div class="control-label-row">
+                                <label for="slider-concession">Proposed Discount / Allowance</label>
+                                <span class="control-live-val" id="val-concession">20 bps</span>
+                            </div>
+                            <input type="range" id="slider-concession" class="kinetic-slider" min="2" max="50" step="1" value="20" oninput="onParameterInput()" />
+                            <div class="slider-Endpoints">
+                                <span id="min-concession-lbl">2 bps</span>
+                                <span id="breakeven-marker-lbl" class="breakeven-hint">9.9 bps</span>
+                                <span id="max-concession-lbl">50 bps</span>
+                            </div>
+                        </div>
+
+                        <!-- Slider 2: Recipient Commitment Step-Up -->
+                        <div class="control-group">
+                            <div class="control-label-row">
+                                <label for="slider-stepup">Client Minimum Volume / Commitment</label>
+                                <span class="control-live-val" id="val-stepup">$20M</span>
+                            </div>
+                            <input type="range" id="slider-stepup" class="kinetic-slider" min="20" max="160" step="5" value="20" oninput="onParameterInput()" />
+                            <div class="slider-Endpoints">
+                                <span id="min-stepup-lbl">$20M</span>
+                                <span id="max-stepup-lbl">$160M</span>
+                            </div>
+                        </div>
+
+                        <!-- Toggle 3: Normative / Amendment / Safe-Harbor Switch -->
+                        <div class="control-group variant-toggle-box">
+                            <label class="variant-checkbox-label">
+                                <input type="checkbox" id="toggle-variant" onchange="onParameterInput()" />
+                                <span class="variant-custom-check"></span>
+                                <span id="lbl-variant-toggle">Policy / Contract Change</span>
+                            </label>
+                        </div>
+
+                        <!-- Quick Action Buttons -->
+                        <div class="control-quick-btns">
+                            <button type="button" class="kinetic-action-btn outline" onclick="resetScenarioBaseline()">
+                                <i class="fas fa-rotate-left"></i> Reset Original
+                            </button>
+                            <button type="button" class="kinetic-action-btn gold" id="btn-apply-pareto" onclick="applyParetoOptimal()">
+                                <i class="fas fa-wand-magic-sparkles"></i> Apply Best Safe Deal (CF-02)
+                            </button>
+                        </div>
+
+                        <!-- Live Synthesized Natural Language Prompt -->
+                        <div class="live-prompt-box">
+                            <div class="live-prompt-header">
+                                <span><i class="fas fa-terminal"></i> Your Instruction to the AI Team</span>
+                                <span class="gbnf-tag">Verified Intent</span>
+                            </div>
+                            <div class="live-prompt-text" id="live-prompt-display"></div>
+                        </div>
+
+                        <!-- Active Container Metamodel Summary -->
+                        <div class="metamodel-mini-stats" id="metamodel-summary-box"></div>
+                    </div>
+                </div>
+            </aside>
+
+            <!-- RIGHT STAGE: 4 KPI CARDS + 4 PROGRESSIVE DISCLOSURE TABS -->
+            <div class="kinetic-center-stage">
+
+                <!-- REAL-TIME EXECUTIVE KPI STRIP -->
+                <div class="kinetic-kpi-strip">
+                    <div class="kpi-card" id="kpi-card-drag">
+                        <span class="kpi-title">Annual Ripple-Effect Cost</span>
+                        <div class="kpi-main-val" id="kpi-val-drag"></div>
+                        <span class="kpi-sub-val" id="kpi-sub-drag"></span>
+                    </div>
+                    <div class="kpi-card" id="kpi-card-omni">
+                        <span class="kpi-title">5-Year Projected Risk Exposure</span>
+                        <div class="kpi-main-val" id="kpi-val-omni"></div>
+                        <span class="kpi-sub-val" id="kpi-sub-omni"></span>
+                    </div>
+                    <div class="kpi-card kpi-pareto-card" onclick="applyParetoOptimal()" style="cursor: pointer;" title="Click to apply optimal deal">
+                        <span class="kpi-title">Savings with Optimized Deal (CF-02)</span>
+                        <div class="kpi-main-val accent-emerald" id="kpi-val-savings"></div>
+                        <span class="kpi-sub-val" id="kpi-sub-savings"></span>
+                    </div>
+                    <div class="kpi-card" id="kpi-card-tier">
+                        <span class="kpi-title">Required Approval Level</span>
+                        <div class="kpi-tier-badge" id="kpi-val-tier"></div>
+                        <span class="kpi-sub-val" id="kpi-sub-tier"></span>
+                    </div>
+                </div>
+
+                <!-- 4-TAB STAGE CONTAINER (SHOWS ONE FOCUSED VIEW AT A TIME) -->
+                <div class="stage-panel">
+                    <div class="stage-tabs-header">
+                        <div class="stage-tab-buttons" role="tablist">
+                            <button type="button" class="stage-tab-btn active" data-tab="overview" onclick="switchMainTab('overview')">
+                                <i class="fas fa-project-diagram"></i> 1. Impact Map &amp; Deal Optimizer
+                            </button>
+                            <button type="button" class="stage-tab-btn" data-tab="proof" onclick="switchMainTab('proof')">
+                                <i class="fas fa-file-contract"></i> 2. Contract Proof &amp; Legal Notices
+                                <span class="tab-count-badge" id="badge-proof-count">2</span>
+                            </button>
+                            <button type="button" class="stage-tab-btn" data-tab="specialists" onclick="switchMainTab('specialists')">
+                                <i class="fas fa-user-shield"></i> 3. AI Specialist Checks
+                                <span class="tab-count-badge" id="badge-spec-count">4</span>
+                            </button>
+                            <button type="button" class="stage-tab-btn" data-tab="gate" onclick="switchMainTab('gate')">
+                                <i class="fas fa-lock"></i> 4. Approval Gate &amp; Audit Log
+                                <span class="tab-status-dot" id="badge-gate-dot"></span>
+                            </button>
+                        </div>
+
+                        <!-- Compact Audit Seal Status Pill -->
+                        <div class="merkle-telemetry-box" id="merkle-status-pill" onclick="switchMainTab('gate')" style="cursor:pointer;">
+                            <span class="telemetry-value merkle-valid" id="merkle-badge-text">
+                                <i class="fas fa-shield-halved"></i> SEALED &amp; VERIFIED
+                            </span>
+                            <span class="telemetry-value" id="live-entity-version">Record v1</span>
+                        </div>
+                    </div>
+
+                    <!-- =========================================================
+                         TAB 1 (DEFAULT): IMPACT MAP & DEAL OPTIMIZER
+                         ========================================================= -->
+                    <div id="tab-pane-overview" class="tab-pane-content">
+                        <!-- Visual Legend Bar -->
+                        <div class="graph-legend-bar">
+                            <span><span class="legend-dot triggered"></span> Triggered Clause (Costs Money)</span>
+                            <span><span class="legend-dot cleared"></span> Safe / No Clause Triggered</span>
+                            <span><span class="legend-dot contagion"></span> Spillover to Linked Facility</span>
+                        </div>
+
+                        <!-- 100% PURE HTML/CSS RESPONSIVE RIPPLE-EFFECT BOARD (Zero SVG Overlap) -->
+                        <div class="impact-flow-viewport" id="view-graph-container">
+                            <div id="impact-flow-board" class="impact-flow-board"></div>
+                        </div>
+
+                        <!-- Governance Alert Banner + Clickable Pareto Restructuring Table -->
+                        <div class="universal-governance-card">
+                            <div class="gov-card-banner" id="gov-banner">
+                                <div class="gov-banner-left">
+                                    <i class="fas fa-triangle-exclamation" id="gov-banner-icon"></i>
+                                    <div>
+                                        <h3 id="gov-banner-title"></h3>
+                                        <p id="gov-banner-sub"></p>
+                                    </div>
+                                </div>
+                                <button type="button" class="actionlog-id-pill" id="gov-actionlog-pill" onclick="switchMainTab('gate')" title="Click to open Approval Gate"></button>
+                            </div>
+
+                            <div class="gov-section">
+                                <div class="gov-section-header">
+                                    <h4><i class="fas fa-chess-knight"></i> Deal Restructuring Options (How to Avoid Ripple-Effect Costs)</h4>
+                                    <span class="pareto-hint"><i class="fas fa-hand-pointer"></i> Click any option row below to test those exact numbers live</span>
+                                </div>
+                                <div class="pareto-recommendation-callout" id="pareto-callout"></div>
+                                <div class="table-responsive">
+                                    <table class="kinetic-pareto-table">
+                                        <thead>
+                                            <tr>
+                                                <th>Option</th>
+                                                <th>How We Restructure the Deal</th>
+                                                <th>Discount / Allowance</th>
+                                                <th>Required Client Volume</th>
+                                                <th>Triggered Partners</th>
+                                                <th>Annual Ripple Cost</th>
+                                                <th>Annual Money Saved</th>
+                                                <th>Who Needs to Approve</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody id="pareto-table-body"></tbody>
+                                    </table>
+                                </div>
+                                <div class="keystone-waiver-bar" id="keystone-waiver-box"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- =========================================================
+                         TAB 2: CONTRACT PROOF & TRANSLATED LEGAL NOTICES
+                         ========================================================= -->
+                    <div id="tab-pane-proof" class="tab-pane-content" style="display: none;">
+                        <div class="universal-governance-card">
+                            <div class="gov-details-grid">
+                                <div class="gov-detail-col">
+                                    <h4><i class="fas fa-book-bookmark"></i> Exact Contract Proof (Pulled Directly from Your Signed Agreements)</h4>
+                                    <div id="verbatim-citation-box" class="citation-card"></div>
+
+                                    <h4 style="margin-top: 1.5rem;"><i class="fas fa-file-shield"></i> Prepared Documents Ready for Download / Review</h4>
+                                    <div id="staged-artifacts-box" class="artifacts-pill-list"></div>
+                                </div>
+                                <div class="gov-detail-col">
+                                    <h4><i class="fas fa-globe"></i> Ready-to-Send Partner Notices (Translated with Protected Legal Names)</h4>
+                                    <div id="localized-notices-box" class="notices-stack"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- =========================================================
+                         TAB 3: AI SPECIALIST TEAM & EXACT RULE VERIFICATION
+                         ========================================================= -->
+                    <div id="tab-pane-specialists" class="tab-pane-content" style="display: none;">
+                        <div class="universal-governance-card">
+                            <!-- 4-Step Pipeline Selector Inside Specialist Tab -->
+                            <div class="kinetic-pipeline-bar" role="tablist">
+                                    <button type="button" class="pipeline-stage-pill active" data-stage="sa1" onclick="highlightPipelineStage('sa1')">
+                                        <div class="stage-num">01</div>
+                                        <div class="stage-info">
+                                            <div class="stage-name">Request &amp; Party Match</div>
+                                            <div class="stage-sub">Links prompt to exact contracts</div>
+                                        </div>
+                                        <span class="stage-badge">Instant</span>
+                                    </button>
+                                    <button type="button" class="pipeline-stage-pill " data-stage="sa2" onclick="highlightPipelineStage('sa2')">
+                                        <div class="stage-num">02</div>
+                                        <div class="stage-info">
+                                            <div class="stage-name">100% Portfolio Check</div>
+                                            <div class="stage-sub">Finds hidden price-match triggers</div>
+                                        </div>
+                                        <span class="stage-badge">Zero Missed</span>
+                                    </button>
+                                    <button type="button" class="pipeline-stage-pill " data-stage="opt" onclick="highlightPipelineStage('opt')">
+                                        <div class="stage-num">03</div>
+                                        <div class="stage-info">
+                                            <div class="stage-name">Deal Optimizer</div>
+                                            <div class="stage-sub">Calculates safest discount cap</div>
+                                        </div>
+                                        <span class="stage-badge">Saves Cost</span>
+                                    </button>
+                                    <button type="button" class="pipeline-stage-pill " data-stage="sa3" onclick="highlightPipelineStage('sa3')">
+                                        <div class="stage-num">04</div>
+                                        <div class="stage-info">
+                                            <div class="stage-name">Human Approval Gate</div>
+                                            <div class="stage-sub">Stages docs &amp; awaits sign-off</div>
+                                        </div>
+                                        <span class="stage-badge">Safe Lock</span>
+                                    </button>
+                            </div>
+                            <div class="subagent-diagnostic-strip" id="subagent-diagnostic-bar"></div>
+
+                            <h4><i class="fas fa-network-wired"></i> AI Specialist Team Checks (Finance, Legal, Risk &amp; Operations)</h4>
+                            <div id="specialists-advisory-box" class="specialists-grid-2col"></div>
+
+                            <div class="ast-split-grid" style="margin-top: 1rem;">
+                                <div class="ast-box">
+                                    <h4><i class="fas fa-microchip"></i> Exact Contract Rule Check (Mathematical Verification, Not AI Guessing)</h4>
+                                    <pre id="jsonlogic-ast-code" class="ast-code-block"></pre>
+                                </div>
+                                <div class="ast-box">
+                                    <h4><i class="fas fa-magnifying-glass-chart"></i> Pinpointed Contract Clauses (Title-Only Mentions Filtered Out)</h4>
+                                    <div id="aho-corasick-table-wrap"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- =========================================================
+                         TAB 4: HUMAN APPROVAL GATE & TAMPER-PROOF AUDIT LOG
+                         ========================================================= -->
+                    <div id="tab-pane-gate" class="tab-pane-content" style="display: none;">
+                        <div class="acid-gate-panel" id="acid-gate-section" style="border: none; box-shadow: none;">
+                            <div class="acid-gate-header">
+                                <div>
+                                    <h4><i class="fas fa-lock"></i> Human Approval Gate &amp; Tamper-Proof Audit Log</h4>
+                                    <span class="acid-status-pill pending" id="acid-state-badge">WAITING FOR YOUR APPROVAL</span>
+                                </div>
+                                <div class="acid-chaos-controls">
+                                    <button type="button" class="chaos-btn occ-btn" onclick="simulateOccConflict()">
+                                        <i class="fas fa-users-slash"></i> Test: What if a colleague edits this at the same time?
+                                    </button>
+                                    <button type="button" class="chaos-btn tamper-btn" id="btn-tamper-toggle" onclick="toggleMerkleTamperSimulation()">
+                                        <i class="fas fa-bug"></i> <span id="tamper-btn-text">Test: What if someone tampers with the audit log?</span>
+                                    </button>
+                                </div>
+                            </div>
+
+                            <!-- HUMAN-IN-THE-LOOP TRANSACTIONAL GATE BUTTONS -->
+                            <div class="acid-commit-bar">
+                                <div class="acid-feedback-msg" id="acid-feedback-banner">
+                                    Waiting for authorized sign-off. The AI has prepared everything, but <strong>zero live company records are changed</strong> until you click Approve.
+                                </div>
+                                <div class="acid-action-buttons">
+                                    <button type="button" class="acid-btn reject" id="btn-acid-reject" onclick="executeAcidTransition('REJECTED')">
+                                        <i class="fas fa-xmark"></i> Cancel Request
+                                    </button>
+                                    <button type="button" class="acid-btn rollback" id="btn-acid-rollback" onclick="executeAcidTransition('ROLLED_BACK')" disabled>
+                                        <i class="fas fa-rotate-left"></i> 1-Click Undo (Restore Previous State)
+                                    </button>
+                                    <button type="button" class="acid-btn confirm" id="btn-acid-confirm" onclick="executeAcidTransition('COMMITTED')">
+                                        <i class="fas fa-check-double"></i> Approve &amp; Apply Change
+                                    </button>
+                                </div>
+                            </div>
+
+                            <!-- APPEND-ONLY ACTIONLOG MERKLE CHAIN TABLE -->
+                            <div class="merkle-ledger-wrap">
+                                <div class="merkle-ledger-title">
+                                    <span><i class="fas fa-link"></i> Permanent Compliance Audit Log (Cryptographically Sealed)</span>
+                                    <span class="merkle-formula-hint">Every entry is sealed with a digital fingerprint linked to the previous row. Any unauthorized database edit is caught immediately.</span>
+                                </div>
+                                <div class="table-responsive">
+                                    <table class="merkle-ledger-table">
+                                        <thead>
+                                            <tr>
+                                                <th>Log #</th>
+                                                <th>Timestamp (UTC)</th>
+                                                <th>User / System</th>
+                                                <th>Action &amp; Target Client</th>
+                                                <th>Record Version Check</th>
+                                                <th>Status</th>
+                                                <th>Previous Seal</th>
+                                                <th>Digital Seal (SHA-256)</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody id="merkle-ledger-tbody"></tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+    </main>
+
+        <nav class="footer-sitemap" aria-label="Footer Navigation">
+            <div class="container sitemap-grid">
+                    <div class="sitemap-column">
+                        <h4>Company</h4>
+                        <ul>
+                                <li>
+                                    <a href="index.html">
+                                        Home
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="about.html">
+                                        About Us
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="partners.html">
+                                        Partners &amp; Alliances
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="careers.html">
+                                        Careers
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="contact.html">
+                                        Contact &amp; Consultation
+                                    </a>
+                                </li>
+                        </ul>
+                    </div>
+                    <div class="sitemap-column">
+                        <h4>Platform &amp; Services</h4>
+                        <ul>
+                                <li>
+                                    <a href="offline-ai-desktop-app.html">
+                                        Air-Gapped Edge Appliance
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="secure-on-premise-ai-server.html">
+                                        Secure On-Premise Server
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="agentic-ai-workflows.html">
+                                        Agentic AI Workflows
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="services.html">
+                                        Services &amp; Solutions
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="custom-ai-agent-development.html">
+                                        Custom AI Agent Development
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="ai-strategy-consulting.html">
+                                        AI Strategy Consulting
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="security.html">
+                                        Security Overview
+                                    </a>
+                                </li>
+                        </ul>
+                    </div>
+                    <div class="sitemap-column">
+                        <h4>Tech &amp; Use Cases</h4>
+                        <ul>
+                                <li>
+                                    <a href="private-rag-enterprise-search.html">
+                                        Private RAG &amp; Search
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="gpu-accelerated-local-ai.html">
+                                        GPU Accelerated Local AI
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="run-ai-locally-without-internet.html">
+                                        Zero-Trust Sovereign Execution
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="ai-data-privacy-compliance.html">
+                                        Data Privacy Compliance
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="secure-local-ai-for-legal-finance.html">
+                                        AI for Legal &amp; Finance
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="ai-predictive-maintenance-manufacturing.html">
+                                        Predictive Maintenance
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="ai-customer-support-automation.html">
+                                        Customer Support Automation
+                                    </a>
+                                </li>
+                        </ul>
+                    </div>
+                    <div class="sitemap-column">
+                        <h4>Resources &amp; Support</h4>
+                        <ul>
+                                <li>
+                                    <a href="stress-test-lab.html">
+                                        Stress-Test Lab
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="demo.html">
+                                        Live Demo
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="case-studies.html">
+                                        Case Studies
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="resources.html">
+                                        Resources &amp; Insights
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="faqs.html">
+                                        FAQs
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="legal.html">
+                                        Legal &amp; Policies
+                                    </a>
+                                </li>
+                        </ul>
+                    </div>
+            </div>
+        </nav>
+
+    <footer>
+        <div class="container">
+            <p>&#xA9; 2025 The Intelligent Enterprise Group. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="/js/swiper-bundle.min.js"></script>
+    <script src="/js/cdn.min.js" defer></script>
+    <script src="/js/gsap.min.js"></script>
+    <script src="/js/DrawSVGPlugin.min.js"></script>
+
+    <script type="module" src="/js/themeToggle.js"></script>
+    <script type="module">
+        import { toggleTheme, getCurrentTheme } from '/js/themeToggle.js';
+        const checkbox = document.getElementById('theme-checkbox');
+        const themeLabel = document.getElementById('theme-label');
+
+        if (getCurrentTheme() === 'dark') {
+            checkbox.checked = true;
+            themeLabel.textContent = 'Dark Mode';
+        } else {
+            themeLabel.textContent = 'Light Mode';
+        }
+
+        checkbox.addEventListener('change', () => {
+            toggleTheme();
+            themeLabel.textContent = checkbox.checked ? 'Dark Mode' : 'Light Mode';
+        });
+    </script>
+
+    <button id="back-to-top" aria-label="Back to Top">Top</button>
+
+    
+<script>
+    // 1. Load Localized Dictionaries & Scenarios from JSON Model
+    const SCENARIOS = [{"Id":"sec1_energy","SectorBadge":"Energy \u0026 Industrial Hubs","Title":"AntwerpEnergyHub - Power Tariff Discounts \u0026 Safety Zones","Icon":"fa-bolt","ContainerId":"CON-3F82B110","ContainerName":"AntwerpEnergyHub","ContainerTarget":"$1,000,000,000","BaseRate":"2.00% Base Tariff","ActionVerb":"Grant Tariff Discount","PromptTemplate":"Grant a {concession} bps tariff discount to Port Terminal Operator in AntwerpEnergyHub{stepUpClause}.","RecipientId":"PAR-9A21C401","RecipientName":"Port Terminal Operator","RecipientJurisdiction":"US-TX","Unit":"bps","UnitType":"bps_currency","CurrencySymbol":"$","DefaultConcession":20,"MinConcession":2,"MaxConcession":40,"ConcessionStep":1,"DefaultRecipientCommitment":20,"MinRecipientCommitment":20,"MaxRecipientCommitment":150,"CommitmentStep":5,"CommitmentUnit":"$M","Tier1Ceiling":250000,"Tier3Threshold":250000,"Tier1Label":"TIER 1: OPERATIONS LEAD","Tier1SignOff":"Operations Lead (2-Day Fast Track)","Tier2Label":"TIER 2: LEGAL \u0026 COMPLIANCE","Tier2SignOff":"Compliance Officer \u0026 Legal Counsel (5-Day Review)","Tier3Label":"TIER 3: EXECUTIVE BOARD \u0026 GENERAL COUNSEL","Tier3SignOff":"General Counsel, CFO \u0026 Executive Chair (10-Day Notice)","VariantToggleLabel":"Apply Emergency Safety Zone Exemption (Waives Price-Matching)","VariantEffect":"safe_harbor","SourceDoc":"Energy_Grid_Charter.pdf","SectionRef":"ARTICLE 1 - POWER GRID ALLOCATION \u0026 RATE PARITY","ChunkId":"Clause-1.4","VerbatimQuote":"AntwerpEnergyHub manages $1,000,000,000 in grid capacity at a 2.00% base tariff... Under the Most Favored Nation (MFN) clause, if AntwerpEnergyHub grants a lower tariff rate to any operator with an equal or smaller commitment, anchor partners BASF Antwerp ($140M) and RWE Ruhr ($110M) are entitled to claim that same lower rate.","Counterparties":[{"Id":"PAR-1042B8","Name":"BASF Antwerp Chemical Plant","CommitmentM":140,"ThresholdM":50,"ParityRequired":true,"CovenantId":"COV-8192A1","RuleType":"Price-Match Clause","Jurisdiction":"BE","Locale":"nl-BE","SignalBadge":"Safety Zone: 5,000m Verified","NoticeTitle":"Formele Kennisgeving van Tariefpariteit en Keuzerecht","NoticeBody":"Formele kennisgeving voor BASF Antwerp Chemical Plant (BE): De voorgestelde tariefkorting ({concession} bps) in AntwerpEnergyHub activeert uw contractuele recht op hetzelfde tarief."},{"Id":"PAR-2091C4","Name":"RWE Ruhr Power Station","CommitmentM":110,"ThresholdM":50,"ParityRequired":true,"CovenantId":"COV-8192A2","RuleType":"Price-Match Clause","Jurisdiction":"DE","Locale":"de-DE","SignalBadge":"Safety Zone: 3,500m Verified","NoticeTitle":"Formelle Mitteilung \u00FCber Tarifparit\u00E4t und Wahlrecht","NoticeBody":"Formelle Mitteilung f\u00FCr RWE Ruhr Power Station (DE): Die vorgeschlagene Tarifsenkung ({concession} bps) in AntwerpEnergyHub l\u00F6st Ihr vertragliches Recht auf Tarifanpassung aus."}],"TransitiveHop":null,"Specialists":[{"Agent":"GeoAnalyst AI","Role":"Facility Safety Buffer Check","Status":"VERIFIED","Text":"Checked physical safety zones for both industrial plants: BASF Antwerp (5,000m buffer compliant) and RWE Ruhr (3,500m buffer compliant)."},{"Agent":"Translator AI","Role":"Multi-Language Legal Notices","Status":"VERIFIED","Text":"Drafted formal legal notices in Dutch (nl-BE) and German (de-DE) while keeping official company and contract names untranslated."}]},{"Id":"sec3_pharma","SectorBadge":"Pharma Supply Chain \u0026 Logistics","Title":"EuroLogisticsHub - Cross-Corridor Spillover \u0026 Delivery Delays","Icon":"fa-snowflake","ContainerId":"CON-5D19A200","ContainerName":"EuroLogisticsHub","ContainerTarget":"$900,000,000","BaseRate":"2.00% Handling Fee","ActionVerb":"Grant Handling Fee Discount","PromptTemplate":"Grant a {concession} bps handling fee discount to Regional Express Carrier in EuroLogisticsHub{stepUpClause}.","RecipientId":"PAR-7C11E309","RecipientName":"Regional Express Carrier","RecipientJurisdiction":"US-NY","Unit":"bps","UnitType":"bps_currency","CurrencySymbol":"$","DefaultConcession":30,"MinConcession":5,"MaxConcession":50,"ConcessionStep":1,"DefaultRecipientCommitment":15,"MinRecipientCommitment":15,"MaxRecipientCommitment":170,"CommitmentStep":5,"CommitmentUnit":"$M","Tier1Ceiling":250000,"Tier3Threshold":250000,"Tier1Label":"TIER 1: HUB DIRECTOR","Tier1SignOff":"Logistics Hub Director (2-Day Fast Track)","Tier2Label":"TIER 2: SUPPLY CHAIN LEGAL","Tier2SignOff":"Supply Chain Counsel (5-Day Review)","Tier3Label":"TIER 3: GLOBAL SUPPLY CHAIN VP \u0026 CFO","Tier3SignOff":"VP Global Supply Chain, General Counsel \u0026 CFO (10-Day Notice)","VariantToggleLabel":"Ring-Fence Primary Hub (Exclude Linked Frankfurt Corridor from Discount)","VariantEffect":"sever_hop","SourceDoc":"Pharma_ColdChain_Master_Agreement.pdf","SectionRef":"ARTICLES 1 \u0026 2 - LINKED COLD-CHAIN CORRIDOR PARITY","ChunkId":"Clause-2.1","VerbatimQuote":"If EuroLogisticsHub grants a handling fee discount to any carrier, anchor shippers Sanofi Biologics ($160M) and Bayer Pharma ($90M) are entitled to the same lower fee. Because EuroLogisticsHub is contractually linked to FrankfurtColdCorridor, discounts also trigger matching rights for Roche Diagnostics ($70M).","Counterparties":[{"Id":"PAR-3310F1","Name":"Sanofi Biologics Freight","CommitmentM":160,"ThresholdM":50,"ParityRequired":true,"CovenantId":"COV-9921B1","RuleType":"Fee-Match Clause","Jurisdiction":"FR","Locale":"fr-FR","SignalBadge":"Lead Time: 10d | Stockouts: 4","NoticeTitle":"Notification Formelle de Parit\u00E9 Tarifaire","NoticeBody":"Notification formelle pour Sanofi Biologics Freight (FR) : La remise tarifaire ({concession} bps) accord\u00E9e dans EuroLogisticsHub active votre droit au tarif pr\u00E9f\u00E9rentiel."},{"Id":"PAR-3310F2","Name":"Bayer Pharma Distribution","CommitmentM":90,"ThresholdM":50,"ParityRequired":true,"CovenantId":"COV-9921B2","RuleType":"Fee-Match Clause","Jurisdiction":"DE","Locale":"de-DE","SignalBadge":"Lead Time: 7d | Stockouts: 2","NoticeTitle":"Formelle Mitteilung \u00FCber Frachtraten-Parit\u00E4t","NoticeBody":"Formelle Mitteilung f\u00FCr Bayer Pharma Distribution (DE): Der vorgeschlagene Geb\u00FChrenrabatt ({concession} bps) in EuroLogisticsHub l\u00F6st Ihr Anpassungsrecht aus."}],"TransitiveHop":{"HopDepth":1,"RelationType":"Linked Corridor Agreement","ContainerId":"CON-8821F0","ContainerName":"FrankfurtColdCorridor","CounterpartyName":"Roche Diagnostics Logistics","CommitmentM":70,"ThresholdM":50},"Specialists":[{"Agent":"Root Cause Analysis AI","Role":"Supply Chain Bottleneck \u0026 Spillover Check","Status":"REVIEW_REQUIRED","Text":"Flagged that discounting EuroLogisticsHub spills over into FrankfurtColdCorridor (Roche $70M), while Sanofi route logs show 10-day lead times and 4 recent stockouts."},{"Agent":"OmniPredict AI","Role":"5-Year Revenue Impact Forecast","Status":"VERIFIED","Text":"Projected partner rate-matching claims across both connected logistics hubs over a 5-year contract window."}]},{"Id":"sec6_aerospace","SectorBadge":"Aerospace \u0026 Defense Manufacturing","Title":"EuroDroneConsortium - Supplier Royalty Caps \u0026 Budget Ceilings","Icon":"fa-fighter-jet","ContainerId":"CON-9012D400","ContainerName":"EuroDroneConsortium","ContainerTarget":"$1,500,000,000","BaseRate":"2.50% Royalty","ActionVerb":"Grant Royalty Concession","PromptTemplate":"Grant a {concession} bps royalty concession to Composite Rotor Supplier in EuroDroneConsortium{stepUpClause}.","RecipientId":"PAR-6612A0","RecipientName":"Composite Rotor Supplier","RecipientJurisdiction":"US-WA","Unit":"bps","UnitType":"bps_currency","CurrencySymbol":"$","DefaultConcession":40,"MinConcession":5,"MaxConcession":60,"ConcessionStep":1,"DefaultRecipientCommitment":30,"MinRecipientCommitment":30,"MaxRecipientCommitment":320,"CommitmentStep":10,"CommitmentUnit":"$M","Tier1Ceiling":1000000,"Tier3Threshold":1000000,"Tier1Label":"TIER 1: PROGRAM DIRECTOR (\u003C $1M)","Tier1SignOff":"Consortium Program Director (2-Day Fast Track)","Tier2Label":"TIER 2: DEFENSE PROCUREMENT LEGAL","Tier2SignOff":"Procurement Counsel \u0026 Export Control (5-Day Review)","Tier3Label":"TIER 3: EXECUTIVE DEFENSE BOARD","Tier3SignOff":"Defense Executive Committee, General Counsel \u0026 CFO (10-Day Notice)","VariantToggleLabel":"Secure One-Off Waiver from Airbus Defense ($300M Lead Partner)","VariantEffect":"waive_first","SourceDoc":"EuroDrone_Consortium_Charter.pdf","SectionRef":"SECTION 4.2 - PRIME CONTRACTOR ROYALTY PARITY","ChunkId":"Clause-4.2","VerbatimQuote":"The EuroDroneConsortium program ($1.5B total volume) enforces strict royalty parity. If any supplier receives a royalty reduction, prime contractors Airbus Defense ($300M) and Thales Avionics ($200M) are entitled to the same reduction. Any ripple cost exceeding $1,000,000/yr requires full Defense Executive Board approval.","Counterparties":[{"Id":"PAR-4011A1","Name":"Airbus Defense Systems","CommitmentM":300,"ThresholdM":100,"ParityRequired":true,"CovenantId":"COV-4011C1","RuleType":"Royalty Parity","Jurisdiction":"FR","Locale":"fr-FR","SignalBadge":"Toulouse Flight Zone: 4,000m","NoticeTitle":"Notification d\u0027Ajustement de Redevances - Consortium EuroDrone","NoticeBody":"Notification officielle pour Airbus Defense Systems (FR) : La concession de redevance ({concession} bps) accord\u00E9e dans EuroDroneConsortium active votre clause de parit\u00E9."},{"Id":"PAR-4011A2","Name":"Thales Avionics Division","CommitmentM":200,"ThresholdM":100,"ParityRequired":true,"CovenantId":"COV-4011C2","RuleType":"Royalty Parity","Jurisdiction":"FR","Locale":"fr-FR","SignalBadge":"Mandatory Security \u0026 Quality Audit","NoticeTitle":"Notification de Parit\u00E9 Consortium - Thales Avionics","NoticeBody":"Notification officielle pour Thales Avionics Division (FR) : Ajustement de redevance ({concession} bps) enregistr\u00E9 sous le plafond de gouvernance du programme."}],"TransitiveHop":null,"Specialists":[{"Agent":"GeoAnalyst AI","Role":"Airspace \u0026 Facility Perimeter Check","Status":"VERIFIED","Text":"Verified Toulouse flight test perimeter (43.6290\u00B0N, 1.3638\u00B0E; 4,000m restricted airspace buffer) required by consortium security rules."},{"Agent":"Root Cause Analysis AI","Role":"Supplier Production Yield Check","Status":"VERIFIED","Text":"Cross-checked rotor batch production yields to verify whether the supplier\u0027s royalty discount request is justified by material costs."}]},{"Id":"sec7_hvdc","SectorBadge":"Power Grid \u0026 Utilities (Megawatts)","Title":"NorthSeaHVDCSubstation - Non-Financial Megawatt (MW) Load Balancing","Icon":"fa-plug","ContainerId":"CON-8A91D004","ContainerName":"NorthSeaHVDCSubstation","ContainerTarget":"500 MW","BaseRate":"500 MW Grid Capacity","ActionVerb":"Grant Curtailment Exemption","PromptTemplate":"Grant a {concession} MW curtailment exemption to Backup Peaker Unit in NorthSeaHVDCSubstation{stepUpClause}.","RecipientId":"PAR-5E10C221","RecipientName":"Backup Peaker Unit","RecipientJurisdiction":"NL","Unit":"MW","UnitType":"physical_mw","CurrencySymbol":"","DefaultConcession":50,"MinConcession":5,"MaxConcession":100,"ConcessionStep":5,"DefaultRecipientCommitment":25,"MinRecipientCommitment":25,"MaxRecipientCommitment":220,"CommitmentStep":15,"CommitmentUnit":"MW","Tier1Ceiling":35,"Tier3Threshold":35,"Tier1Label":"TIER 1: SHIFT GRID CONTROLLER","Tier1SignOff":"Shift Grid Controller (Immediate Dispatch)","Tier2Label":"TIER 2: SENIOR SUBSTATION ENGINEER","Tier2SignOff":"Senior Substation Engineer (2-Day Review)","Tier3Label":"TIER 3: CHIEF GRID DISPATCH BOARD","Tier3SignOff":"Chief Grid Engineer \u0026 HVDC Safety Director (10-Day Review)","VariantToggleLabel":"Switch to Peak-Reserve Grid Mode (Raises Safe Dispatch Limit from 35 MW to 122.5 MW)","VariantEffect":"raise_mw_ceiling","SourceDoc":"HVDC_Substation_Operating_Charter.pdf","SectionRef":"ARTICLE 1 - PHYSICAL MEGAWATT LOAD ALLOCATION","ChunkId":"Clause-1.1","VerbatimQuote":"NorthSeaHVDCSubstation manages 500 MW of physical grid capacity. Under the Load Parity SLA, if any generator is granted a power curtailment exemption (in MW), anchor generators Offshore Wind Array Alpha (200 MW) and Hydrogen Electrolyzer Plant (150 MW) are entitled to an identical MW exemption.","Counterparties":[{"Id":"PAR-7011W1","Name":"Offshore Wind Array Alpha","CommitmentM":200,"ThresholdM":100,"ParityRequired":true,"CovenantId":"COV-7011L1","RuleType":"MW Load Parity","Jurisdiction":"NL","Locale":"nl-NL","SignalBadge":"200 MW Base Load | Bus A","NoticeTitle":"Kennisgeving van Fysieke Belastingspariteit (Megawatt)","NoticeBody":"Kennisgeving voor Offshore Wind Array Alpha (NL): Een afschakelingsvrijstelling van {concession} MW in NorthSeaHVDCSubstation activeert uw recht op gelijke netcapaciteit."},{"Id":"PAR-7011W2","Name":"Hydrogen Electrolyzer Plant","CommitmentM":150,"ThresholdM":100,"ParityRequired":true,"CovenantId":"COV-7011L2","RuleType":"MW Load Parity","Jurisdiction":"DE","Locale":"de-DE","SignalBadge":"150 MW Base Load | Bus B","NoticeTitle":"Mitteilung \u00FCber Lastparit\u00E4ts-Garantie (Megawatt)","NoticeBody":"Mitteilung f\u00FCr Hydrogen Electrolyzer Plant (DE): Die Freigabe von {concession} MW in NorthSeaHVDCSubstation l\u00F6st Ihren Anspruch auf gleiche Netzkapazit\u00E4t aus."}],"TransitiveHop":null,"Specialists":[{"Agent":"Decision Tree AI","Role":"Physical Grid Load Routing","Status":"REVIEW_REQUIRED","Text":"Recognized physical power units (Megawatts instead of dollars) and escalated to the Chief Grid Dispatch Board because total affected load exceeds 10% of substation capacity."}]},{"Id":"sec8_pe_fund","SectorBadge":"Private Equity, Legal \u0026 M\u0026A","Title":"ApexGlobalBuyoutVIII - Amended Side Letters \u0026 Investor Fee Parity","Icon":"fa-scale-balanced","ContainerId":"CON-1182F900","ContainerName":"ApexGlobalBuyoutVIII","ContainerTarget":"$2,000,000,000","BaseRate":"1.75% Management Fee","ActionVerb":"Grant Management Fee Discount","PromptTemplate":"Grant a {concession} bps management fee discount to Seed Co-Invest Vehicle in ApexGlobalBuyoutVIII{stepUpClause}.","RecipientId":"PAR-8812S0","RecipientName":"Seed Co-Invest Vehicle","RecipientJurisdiction":"US-DE","Unit":"bps","UnitType":"bps_currency","CurrencySymbol":"$","DefaultConcession":20,"MinConcession":5,"MaxConcession":45,"ConcessionStep":1,"DefaultRecipientCommitment":25,"MinRecipientCommitment":25,"MaxRecipientCommitment":200,"CommitmentStep":5,"CommitmentUnit":"$M","Tier1Ceiling":250000,"Tier3Threshold":250000,"Tier1Label":"TIER 1: FUND OPERATIONS PARTNER","Tier1SignOff":"Fund Operations Partner (2-Day Fast Track)","Tier2Label":"TIER 2: FUND FORMATION COUNSEL","Tier2SignOff":"Fund Counsel \u0026 Chief Compliance Officer (5-Day Review)","Tier3Label":"TIER 3: INVESTMENT COMMITTEE \u0026 MANAGING PARTNER","Tier3SignOff":"Managing Partner, General Counsel \u0026 LP Advisory Board (10-Day Notice)","VariantToggleLabel":"Apply Round-2 Amended Side Letters (Raises Qualifying Investor Threshold from $50M to $150M)","VariantEffect":"amendment_v2","SourceDoc":"Apex_Buyout_SideLetter_Compendium.pdf","SectionRef":"SECTION 3.1 - AMENDED INVESTOR MFN THRESHOLD","ChunkId":"Clause-3.1","VerbatimQuote":"Under the Round-2 Amended Side Letter Compendium, the original $50M fee-matching threshold is replaced. Only institutional investors committing $150M or more - specifically GPIF Tokyo Pension Trust ($180M) - retain automatic fee-matching rights, while sub-$150M investors are excluded.","Counterparties":[{"Id":"PAR-9001J1","Name":"GPIF Tokyo Pension Trust","CommitmentM":180,"ThresholdM":50,"AmendedThresholdM":150,"ParityRequired":true,"CovenantId":"COV-9001M1-V2","RuleType":"Investor MFN Right","Jurisdiction":"JP","Locale":"ja-JP","SignalBadge":"$180M Anchor LP (Qualifies in v1 \u0026 v2)","NoticeTitle":"\u6700\u6075\u56FD\u5F85\u9047\uFF08MFN\uFF09\u6761\u9805\u306B\u57FA\u3065\u304F\u7BA1\u7406\u5831\u916C\u5F15\u304D\u4E0B\u3052\u9078\u629E\u6A29\u306E\u6B63\u5F0F\u901A\u77E5","NoticeBody":"GPIF Tokyo Pension Trust (JP) \u5FA1\u4E2D\uFF1AApexGlobalBuyoutVIII \u306B\u304A\u3051\u308B\u7BA1\u7406\u5831\u916C\u306E\u5F15\u304D\u4E0B\u3052\uFF08{concession} bps\uFF09\u306B\u4F34\u3044\u3001\u8CB4\u57FA\u91D1\u306E\u5951\u7D04\u4E0A\u306E\u540C\u4E00\u6761\u4EF6\u9078\u629E\u6A29\u304C\u767A\u52D5\u3055\u308C\u307E\u3057\u305F\u3002"},{"Id":"PAR-9001S2","Name":"Nordic Sovereign Fund","CommitmentM":90,"ThresholdM":50,"AmendedThresholdM":150,"ParityRequired":true,"CovenantId":"COV-9001M2-V2","RuleType":"Investor MFN Right","Jurisdiction":"SE","Locale":"sv-SE","SignalBadge":"$90M LP (Excluded under $150M Amendment)","NoticeTitle":"Formellt Meddelande om MFN-Paritetsr\u00E4ttigheter","NoticeBody":"Formellt meddelande till Nordic Sovereign Fund (SE): Den f\u00F6reslagna avgiftsrabatten ({concession} bps) i ApexGlobalBuyoutVIII aktiverar er MFN-klausul under ursprungligt avtal ($50M gr\u00E4ns)."}],"TransitiveHop":null,"Specialists":[{"Agent":"Librarian AI","Role":"Contract Amendment Version Tracker","Status":"VERIFIED","Text":"Automatically replaced Round-1 side letter rules ($50M limit) with Round-2 amended rules ($150M limit) while keeping full historical audit records."},{"Agent":"Translator AI","Role":"Japanese \u0026 Swedish Investor Notices","Status":"VERIFIED","Text":"Generated formal investor election notices in Japanese (ja-JP) and Swedish (sv-SE) with protected fund names."}]},{"Id":"sec9_normative","SectorBadge":"Regulatory Change \u0026 Court Rulings","Title":"SovereignInfraFundIX - Court Ruling Impact \u0026 Regulatory Blast Radius","Icon":"fa-gavel","ContainerId":"CON-7712A100","ContainerName":"SovereignInfraFundIX","ContainerTarget":"$1,200,000,000","BaseRate":"2.00% Base Fee","ActionVerb":"Grant Preferential Fee Waiver","PromptTemplate":"Grant a {concession} bps preferential fee waiver to Municipal Co-Investor in SovereignInfraFundIX{stepUpClause}.","RecipientId":"PAR-5510M0","RecipientName":"Municipal Co-Investor","RecipientJurisdiction":"US-CA","Unit":"bps","UnitType":"bps_currency","CurrencySymbol":"$","DefaultConcession":25,"MinConcession":5,"MaxConcession":50,"ConcessionStep":1,"DefaultRecipientCommitment":20,"MinRecipientCommitment":20,"MaxRecipientCommitment":160,"CommitmentStep":5,"CommitmentUnit":"$M","Tier1Ceiling":250000,"Tier3Threshold":250000,"Tier1Label":"TIER 1: FUND COUNSEL (POST-RULING FAST PATH)","Tier1SignOff":"Fund Counsel (2-Day Fast Track - Mandate Overturned)","Tier2Label":"TIER 2: REGULATORY COMPLIANCE","Tier2SignOff":"Regulatory Compliance Counsel (5-Day Review)","Tier3Label":"TIER 3: RISK \u0026 GOVERNANCE COMMITTEE","Tier3SignOff":"General Counsel \u0026 Chief Risk Officer (10-Day Notice)","VariantToggleLabel":"Apply Supreme Court Ruling 598 U.S. 44 (Strikes Down SEC Parity Mandate)","VariantEffect":"court_vacatur","SourceDoc":"Regulatory_Compliance_Charter.pdf","SectionRef":"SECTION 6.1 - CLAUSES TIED TO EXTERNAL REGULATORY MANDATES","ChunkId":"Clause-6.1","VerbatimQuote":"The fee-matching clauses held by Allianz Global Infrastructure ($150M) and CDPQ Quebec Pension ($110M) depend directly on SEC Mandate \u00A7 1332. Following Supreme Court Ruling 598 U.S. 44 overturning that mandate, all downstream clauses tied to that regulation are automatically deactivated.","Counterparties":[{"Id":"PAR-1102A9","Name":"Allianz Global Infrastructure","CommitmentM":150,"ThresholdM":50,"ParityRequired":true,"CovenantId":"COV-1092B3","RuleType":"Reg-Linked Parity","Jurisdiction":"DE","Locale":"de-DE","SignalBadge":"Tied to SEC Mandate \u00A7 1332","NoticeTitle":"Mitteilung \u00FCber Regulatorische Pr\u00E4zedenzwirkung \u0026 Parit\u00E4t","NoticeBody":"Formelle Mitteilung f\u00FCr Allianz Global Infrastructure (DE): Status Ihrer abgeleiteten Parit\u00E4tsklausel (COV-1092B3) unter Ber\u00FCcksichtigung des Urteils 598 U.S. 44."},{"Id":"PAR-4491B2","Name":"CDPQ Quebec Pension","CommitmentM":110,"ThresholdM":50,"ParityRequired":true,"CovenantId":"COV-8831C4","RuleType":"Reg-Linked Parity","Jurisdiction":"CA-QC","Locale":"fr-CA","SignalBadge":"Tied to SEC Mandate \u00A7 1332","NoticeTitle":"Avis d\u0027Impact R\u00E9glementaire et de Pr\u00E9s\u00E9ance Juridique","NoticeBody":"Avis formel pour CDPQ Quebec Pension (CA-QC) : \u00C9valuation de la clause COV-8831C4 suite \u00E0 la d\u00E9cision 598 U.S. 44."}],"TransitiveHop":null,"Specialists":[{"Agent":"Compliance AI","Role":"Regulatory Blast-Radius Scanner","Status":"VERIFIED","Text":"Traced the Supreme Court ruling across your entire contract portfolio and identified $260,000,000 in partner commitments where regulatory clauses no longer apply."}]}];
+    const QUICK_GUIDE = {"BannerTitle":"How to Experience This Demo in 3 Steps:","BtnShowHelp":"What am I looking at?","BtnHideHelp":"Hide Guide","Step1Title":"1. Spot the Hidden Operational Ripple Effect","Step1Desc":"Watch the ontology graph: making a change for {recipient} instantly triggers a chain reaction across {container}, affecting safety rules, logistics, or compliance.","Step1Action":"Show the Ripple Effect","Step2Title":"2. Let AI Optimize the Outcome","Step2Desc":"Drag the sliders on the left - or click here - to see MindML calculate the exact operational cap that prevents bottlenecks, avoids penalties, and unlocks Fast-Track approval.","Step2Action":"Auto-Optimize Decision","Step3Title":"3. Test the Stateful Security Gate","Step3Desc":"Open the Approval Gate to authorize the change, test 1-Click Undo, or simulate how MindML blocks concurrent edits and database tampering.","Step3Action":"Open Safety Gate","HelpExplainerHtml":"\u003Cstrong\u003EWhy this matters for your business:\u003C/strong\u003E Standard AI tools just predict the next word. The Kinetic Engine maps your company\u0027s unique \u003Cstrong\u003Ebusiness ontology\u003C/strong\u003E-transforming legal clauses, physical Megawatts, and geographical safety buffers into a deterministic mathematical graph. When you make an operational decision, it instantly computes the exact multi-hop ripple effects across your enterprise, solves for the optimal outcome, and stages the execution in a tamper-proof ledger."};
+    const TELEMETRY_STRINGS = {"EngineModeLabel":"Decision Engine","EngineModeVal":"100% Rule-Verified (Zero AI Guessing)","GroundingLatencyLabel":"Portfolio Cross-Check","GroundingLatencyVal":"\u003C 1 ms (100% of Contracts Checked)","StorageEngineLabel":"Data Security","StorageEngineVal":"100% On-Premise Encrypted Vault","EntityVersionPrefix":"Record v","MerkleStatusLabel":"Audit Trail","MerkleValidText":"SEALED \u0026 VERIFIED","MerkleTamperedText":"TAMPER ALERT","BtnFullscreen":"Full Screen","BtnExitFullscreen":"Exit Full Screen"};
+    const LEFT_STRINGS = {"SectorSelectTitle":"1. Choose an Industry Scenario","ControlsTitle":"2. Adjust Deal Parameters Live","SliderConcessionLabel":"Proposed Discount / Allowance","SliderStepUpLabel":"Client Minimum Volume / Commitment","BaselinePrefix":"Current","StepUpPrefix":"Increased","BreakevenCapPrefix":"Safe Limit:","ToggleVariantLabel":"Policy / Contract Change","BtnResetBaseline":"Reset Original","BtnApplyPareto":"Apply Best Safe Deal (CF-02)","LivePromptTitle":"Your Instruction to the AI Team","GbnfTagText":"Verified Intent","StepUpPromptClause":" if they increase their commitment to {stepUp}","MetaContainerLabel":"Business Hub / Program:","MetaRecipientLabel":"Target Client / Partner:","MetaCapacityLabel":"Total Volume / Base Rate:"};
+    const CENTER_STRINGS = {"TabOverview":"1. Impact Map \u0026 Deal Optimizer","TabProof":"2. Contract Proof \u0026 Legal Notices","TabSpecialists":"3. AI Specialist Checks","TabGate":"4. Approval Gate \u0026 Audit Log","AstBoxTitle":"Exact Contract Rule Check (Mathematical Verification, Not AI Guessing)","GroundingBoxTitle":"Pinpointed Contract Clauses (Title-Only Mentions Filtered Out)","AhoColEntity":"Contract Party / Hub","AhoColId":"System ID","AhoColRole":"Business Role","AhoColChunk":"Clause Ref","AhoColConfidence":"Verification Status","AhoConfPrimary":"Verified Core Party","AhoConfConstraint":"Binding Clause Match","AhoHeaderMention":"Page Header / Title Mention Only","AhoConfHeader":"Ignored (Not a Binding Clause)","GraphLegendTriggered":"Triggered Clause (Costs Money)","GraphLegendCleared":"Safe / No Clause Triggered","GraphLegendBreakeven":"Within Safe Approval Limit","GraphLegendContagion":"Spillover to Linked Facility","KpiCascadeLabel":"Annual Ripple-Effect Cost","KpiOmniLabel":"5-Year Projected Risk Exposure","KpiBreakevenLabel":"Savings with Optimized Deal (CF-02)","KpiTierLabel":"Required Approval Level","PerYearSuffix":"/ yr","KpiTriggeredSub":"{triggered} of {total} Other Partners Entitled to Same Deal ({exposure}{unit})","KpiZeroTriggeredSub":"0 Other Partners Triggered (Applies Only to Target Client)","KpiOmniSub":"{rate}% Likelihood Partners Claim Rate | Risk: {severity}","KpiSavingsSub":"Cap at {cap} {unit} -\u003E Unlocks Fast-Track Approval","SeverityCleared":"LOW (CLEAR)","SeverityModerate":"MODERATE","SeverityHigh":"HIGH","SeverityCritical":"CRITICAL","ParetoSectionTitle":"Deal Restructuring Options (How to Avoid Ripple-Effect Costs)","ParetoClickHint":"Click any option row below to test those exact numbers live","ColScenario":"Option","ColStrategy":"How We Restructure the Deal","ColConcession":"Discount / Allowance","ColMinCommitment":"Required Client Volume","ColTriggers":"Triggered Partners","ColAnnualDrag":"Annual Ripple Cost","ColSavings":"Annual Money Saved","ColGovernanceTier":"Who Needs to Approve","BestBadge":"\u2605\u0026nbsp;RECOMMENDED","CitationsTitle":"Exact Contract Proof (Pulled Directly from Your Signed Agreements)","ConfidenceLabel":"100% Verified Quote","NoticesTitle":"Ready-to-Send Partner Notices (Translated with Protected Legal Names)","GlossaryLockSuffix":"Names Protected","NoNoticesRequired":"No other partners are affected - no external legal notices needed.","SpecialistsTitle":"AI Specialist Team Checks (Finance, Legal, Risk \u0026 Operations)","ArtifactsTitle":"Prepared Documents Ready for Download / Review"};
+    const ACID_STRINGS = {"GateTitle":"Human Approval Gate \u0026 Tamper-Proof Audit Log","StatePending":"WAITING FOR YOUR APPROVAL","StateCommitted":"APPROVED \u0026 SAVED TO LIVE RECORDS","StateRejected":"CANCELLED (NO CHANGES MADE)","StateRolledBack":"UNDONE (RESTORED TO PREVIOUS STATE)","StateOccConflict":"BLOCKED: ANOTHER USER EDITED THIS RECORD","InitialFeedbackHtml":"Waiting for authorized sign-off. The AI has prepared everything, but \u003Cstrong\u003Ezero live company records are changed\u003C/strong\u003E until you click Approve.","BtnConfirm":"Approve \u0026 Apply Change","BtnReject":"Cancel Request","BtnRollback":"1-Click Undo (Restore Previous State)","BtnSimOcc":"Test: What if a colleague edits this at the same time?","BtnSimTamper":"Test: What if someone tampers with the audit log?","BtnRestoreTamper":"Repair Audit Log \u0026 Re-Verify","LedgerTableTitle":"Permanent Compliance Audit Log (Cryptographically Sealed)","MerkleFormulaHint":"Every entry is sealed with a digital fingerprint linked to the previous row. Any unauthorized database edit is caught immediately.","ColEventId":"Log #","ColTimestamp":"Timestamp (UTC)","ColActorId":"User / System","ColActionName":"Action \u0026 Target Client","ColOccSnapshot":"Record Version Check","ColStatus":"Status","ColPrevHash":"Previous Seal","ColEventHash":"Digital Seal (SHA-256)","FlagHashMismatch":"TAMPERED RECORD","FlagChainBroken":"SEAL BROKEN"};
+    const TPL = {"DiagSa1":"\u003Cstrong\u003E[Step 01 - Request \u0026 Party Match]\u003C/strong\u003E Understood instruction \u003Ccode\u003E{action} ({concession} {unit})\u003C/code\u003E and matched \u003Cstrong\u003E{count} contract parties\u003C/strong\u003E in under 1 millisecond without AI guesswork.","DiagSa2":"\u003Cstrong\u003E[Step 02 - 100% Portfolio Check]\u003C/strong\u003E Checked every contract linked to \u003Ccode\u003E{containerId}\u003C/code\u003E and \u003Ccode\u003E{recipientId}\u003C/code\u003E -\u003E \u003Cstrong\u003E{triggered} of {total} price-matching clauses triggered\u003C/strong\u003E.","DiagOpt":"\u003Cstrong\u003E[Step 03 - Deal Optimizer]\u003C/strong\u003E Calculated the exact safe discount cap (\u003Ccode\u003ECF-02 = {cap} {unit}\u003C/code\u003E) to stay under your {ceiling} fast-track limit.","DiagSa3":"\u003Cstrong\u003E[Step 04 - Human Approval Gate]\u003C/strong\u003E Coordinated \u003Cstrong\u003E{specialists} AI specialists\u003C/strong\u003E, saved backup snapshot (v{stagedVer}) for 1-click undo, and staged \u003Ccode\u003ELog #{eventId}\u003C/code\u003E for sign-off.","BypassThreshold":"Partner volume ({holderM}{unit}) is below the updated {threshM}{unit} qualifying threshold","BypassStepUp":"Target client\u0027s new volume ({stepUpM}{unit}) exceeds this partner\u0027s volume ({holderM}{unit})","BypassSafeHarbor":"Exempted under emergency safety carve-out policy","BypassVacatur":"Underlying regulatory mandate was struck down by court ruling","BypassWaiver":"Partner agreed to a bilateral waiver for this deal","SvgTriggered":"TRIGGERED ({drag})","SvgBypassed":"NOT TRIGGERED (0 Cost)","SvgCommitment":"Volume:","SvgTarget":"Capacity:","SvgHopActive":"SPILLOVER ACTIVE (${commitment}M Affected)","SvgHopIsolated":"HUB ISOLATED (0 Spillover)","SvgSupremeCourtTitle":"Supreme Court Ruling 598 U.S. 44 (Struck Down Mandate)","SvgVacaturActive":"Mandate Overturned -\u003E Clauses No Longer Apply","SvgVacaturInactive":"Check the box on the left to apply Court Ruling","BannerAlertTitle":"GOVERNANCE ALERT: PRICE-MATCHING CLAUSES TRIGGERED","BannerAlertSub":"Granting \u003Cstrong\u003E{action}\u003C/strong\u003E (\u003Ccode\u003E{concession} {unit}\u003C/code\u003E) to \u003Cstrong\u003E{recipient}\u003C/strong\u003E (\u003Ccode\u003E{recipientId}\u003C/code\u003E) automatically entitles \u003Cstrong\u003E{triggered} other major partner(s)\u003C/strong\u003E in \u003Cstrong\u003E{container}\u003C/strong\u003E to demand the exact same deal.","BannerClearedTitle":"DEAL CLEARED FOR FAST-TRACK APPROVAL (ZERO CONFLICTS)","BannerClearedSub":"Granting \u003Cstrong\u003E{action}\u003C/strong\u003E (\u003Ccode\u003E{concession} {unit}\u003C/code\u003E) to \u003Cstrong\u003E{recipient}\u003C/strong\u003E (\u003Ccode\u003E{recipientId}\u003C/code\u003E) triggers \u003Cstrong\u003E0 price-matching clauses\u003C/strong\u003E with other partners in \u003Cstrong\u003E{container}\u003C/strong\u003E.","ParetoCalloutHtml":"\u003Cstrong\u003E\u003Ci class=\u0027fas fa-award\u0027\u003E\u003C/i\u003E Recommended Deal Structure (\u003Ccode\u003ECF-02\u003C/code\u003E):\u003C/strong\u003E Cap the discount at \u003Ccode\u003E{cap} {unit}\u003C/code\u003E to keep ripple-effect costs at \u003Cstrong\u003E{drag}\u003C/strong\u003E - saving \u003Cstrong class=\u0027accent-emerald\u0027\u003E{savings}\u003C/strong\u003E and qualifying for \u003Ccode\u003E{tier}\u003C/code\u003E.","StrategyCf02":"Cap Discount at Safe Limit (Stays under {ceiling} budget ceiling)","StrategyCf03":"Require Higher Client Volume (Bypasses partners at or below {lowestM}{unit})","StrategyCf04":"Split the Difference (50% smaller discount at {half} {unit})","StrategyCf01":"Your Current Slider Settings ({concession} {unit} at {stepUp}{commitUnit} volume)","KeystoneWaiverHtml":"\u003Ci class=\u0027fas fa-key\u0027\u003E\u003C/i\u003E \u003Cstrong\u003EWho Drives the Cost:\u003C/strong\u003E Obtaining a one-off waiver from \u003Cstrong\u003E{cp0Name}\u003C/strong\u003E ({cp0M}{unit}) and \u003Cstrong\u003E{cp1Name}\u003C/strong\u003E ({cp1M}{unit}) eliminates \u003Cstrong\u003E100%\u003C/strong\u003E of the ripple-effect cost.","MultiHopAlertHtml":"\u003Cspan class=\u0027hop-alert-inline\u0027\u003E\u003Ci class=\u0027fas fa-diagram-next\u0027\u003E\u003C/i\u003E \u003Cstrong\u003ECross-Hub Spillover Alert:\u003C/strong\u003E This discount also triggers a linked contract in \u003Cstrong\u003E{hopContainer}\u003C/strong\u003E ({hopCp}).\u003C/span\u003E","CompRole":"Automated Policy \u0026 Contract Check","CompTextTriggered":"Confirmed {triggered} existing partner contract(s) in \u0027{container}\u0027 have matching rights. Formal notice period required before signing.","CompTextCleared":"Confirmed zero conflicting partner clauses for \u0027{recipient}\u0027 in \u0027{container}\u0027. Ready for standard sign-off.","MathRole":"Financial \u0026 Volume Impact Audit","MathTextTriggered":"Verified total ripple-effect cost of {drag}/yr across {exposure}{unit} of qualifying partner volume.","MathTextCleared":"Verified direct discount cost of {direct}/yr on target client\u0027s {stepUp}{unit} volume (zero spillover).","VersionSnapshotFmt":"Staged on v{stagedVer} (Live: v{liveVer})","FeedbackOccAbortHtml":"\u003Cstrong\u003E\u003Ci class=\u0027fas fa-ban\u0027\u003E\u003C/i\u003E CONFLICT PREVENTED (SIMULTANEOUS EDIT BLOCKED):\u003C/strong\u003E Your change was prepared on \u003Ccode\u003ERecord v{stagedVer}\u003C/code\u003E of \u003Ccode\u003E{containerId}\u003C/code\u003E, but a colleague just updated the live record to \u003Ccode\u003Ev{liveVer}\u003C/code\u003E. MindML blocked the overwrite so you never act on outdated numbers. Click \u003Cstrong\u003EReset Original\u003C/strong\u003E on the left to refresh.","FeedbackCommittedHtml":"\u003Cstrong\u003E\u003Ci class=\u0027fas fa-circle-check\u0027\u003E\u003C/i\u003E CHANGE APPROVED \u0026 SAVED (Log #{eventId}):\u003C/strong\u003E Conflict check passed. Live records updated to \u003Ccode\u003Ev{liveVer}\u003C/code\u003E and sealed in the audit log. You can now test \u003Cstrong\u003E1-Click Undo\u003C/strong\u003E!","FeedbackRejectedHtml":"\u003Cstrong\u003E\u003Ci class=\u0027fas fa-circle-xmark\u0027\u003E\u003C/i\u003E REQUEST CANCELLED (Log #{eventId}):\u003C/strong\u003E Proposal discarded. Zero live records were changed, and the cancellation was logged for compliance.","FeedbackRolledBackHtml":"\u003Cstrong\u003E\u003Ci class=\u0027fas fa-rotate-left\u0027\u003E\u003C/i\u003E 1-CLICK UNDO COMPLETE (Log #{eventId}):\u003C/strong\u003E Instantly restored \u003Ccode\u003E{container}\u003C/code\u003E and all contract terms from the backup snapshot to \u003Ccode\u003Ev{liveVer}\u003C/code\u003E.","FeedbackOccSimHtml":"\u003Cstrong\u003E\u003Ci class=\u0027fas fa-bolt\u0027\u003E\u003C/i\u003E COLLEAGUE EDIT SIMULATED:\u003C/strong\u003E Imagine another executive just modified \u003Ccode\u003E{container}\u003C/code\u003E, moving the live record to \u003Ccode\u003Ev{liveVer}\u003C/code\u003E while your screen still holds \u003Ccode\u003Ev{stagedVer}\u003C/code\u003E. Now click \u003Cstrong\u003EApprove \u0026 Apply Change\u003C/strong\u003E to see how MindML prevents accidental overwrites!","FeedbackTamperActiveHtml":"\u003Cstrong\u003E\u003Ci class=\u0027fas fa-radiation\u0027\u003E\u003C/i\u003E UNAUTHORIZED DATABASE EDIT CAUGHT:\u003C/strong\u003E Someone tried to silently alter \u003Ccode\u003ELog #101\u003C/code\u003E directly in the database. MindML\u0027s digital seal check immediately flagged the exact altered row and locked downstream records (\u003Ccode\u003ELog #{eventId}\u003C/code\u003E)!","FeedbackTamperRestoredHtml":"\u003Cstrong\u003E\u003Ci class=\u0027fas fa-shield-check\u0027\u003E\u003C/i\u003E AUDIT LOG REPAIRED:\u003C/strong\u003E Original record restored. All digital seals across the audit log are verified and intact."};
+
+    function fmt(template, vars) {
+        if (!template) return "";
+        return template.replace(/\{(\w+)\}/g, (match, key) => (vars[key] !== undefined ? vars[key] : match));
+    }
+
+    // 2. Live Workbench State
+    let activeScenario = SCENARIOS[0];
+    let currentConcession = activeScenario.DefaultConcession;
+    let currentStepUp = activeScenario.DefaultRecipientCommitment;
+    let variantEnabled = false;
+    let activeSubagentStage = "sa1";
+    let activeTab = "overview";
+
+    let entityVersion = 1;
+    let stagedOpeningVersion = 1;
+    let occConflictSimulated = false;
+    let merkleTampered = false;
+    let currentEventId = 102;
+    let currentActionStatus = "PENDING";
+    let actionLedger = [];
+    let lastComputedEval = null;
+
+    const GENESIS_HASH = "0000000000000000000000000000000000000000000000000000000000000000";
+
+    // Interactive Quick-Start Guide Controller
+    function toggleHelpExplainer() {
+        const drawer = document.getElementById('guide-explainer-drawer');
+        const lbl = document.getElementById('help-btn-label');
+        const isHidden = drawer.style.display === "none";
+        drawer.style.display = isHidden ? "block" : "none";
+        lbl.textContent = isHidden ? QUICK_GUIDE.BtnHideHelp : QUICK_GUIDE.BtnShowHelp;
+    }
+
+    function runGuidedStep(stepNumber) {
+        document.querySelectorAll('.guide-step-card').forEach((c, idx) => {
+            c.classList.toggle('active', (idx + 1) === stepNumber);
+        });
+
+        if (stepNumber === 1) {
+            switchMainTab('overview');
+            resetScenarioBaseline();
+            pulseElement('view-graph-container');
+        } else if (stepNumber === 2) {
+            switchMainTab('overview');
+            applyParetoOptimal();
+            pulseElement('left-controls-panel');
+        } else if (stepNumber === 3) {
+            switchMainTab('gate');
+            pulseElement('acid-gate-section');
+        }
+    }
+
+    function pulseElement(elId) {
+        const el = document.getElementById(elId);
+        if (!el) return;
+        el.classList.remove('guide-spotlight-pulse');
+        void el.offsetWidth;
+        el.classList.add('guide-spotlight-pulse');
+    }
+
+    // 4-Tab Progressive Disclosure Controller
+    function switchMainTab(tabId) {
+        activeTab = tabId;
+        document.querySelectorAll('.stage-tab-btn').forEach(btn => {
+            btn.classList.toggle('active', btn.getAttribute('data-tab') === tabId);
+        });
+
+        const tabs = ['overview', 'proof', 'specialists', 'gate'];
+        tabs.forEach(t => {
+            const pane = document.getElementById('tab-pane-' + t);
+            if (pane) pane.style.display = (t === tabId) ? 'block' : 'none';
+        });
+    }
+
+    // 3. Deterministic 64-char SHA-256 Hex Simulator
+    function computeDeterministicSha256(inputStr) {
+        let h1 = 0xdeadbeef ^ inputStr.length;
+        let h2 = 0x41c6ce57 ^ inputStr.length;
+        let h3 = 0x9e3779b9 ^ inputStr.length;
+        let h4 = 0x85ebca6b ^ inputStr.length;
+        let h5 = 0xc2b2ae35 ^ inputStr.length;
+        let h6 = 0x27d4eb2f ^ inputStr.length;
+        let h7 = 0x165667b1 ^ inputStr.length;
+        let h8 = 0xd3a2646c ^ inputStr.length;
+
+        for (let i = 0, ch; i < inputStr.length; i++) {
+            ch = inputStr.charCodeAt(i);
+            h1 = Math.imul(h1 ^ ch, 2654435761);
+            h2 = Math.imul(h2 ^ ch, 1597334677);
+            h3 = Math.imul(h3 ^ (ch << 3), 2246822507);
+            h4 = Math.imul(h4 ^ (ch << 7), 3266489909);
+            h5 = Math.imul(h5 ^ (ch << 2), 2654435761);
+            h6 = Math.imul(h6 ^ (ch << 5), 1597334677);
+            h7 = Math.imul(h7 ^ (ch << 11), 2246822507);
+            h8 = Math.imul(h8 ^ (ch << 13), 3266489909);
+        }
+
+        const mix = (a, b) => {
+            let x = Math.imul(a ^ (a >>> 16), 2246822507) ^ Math.imul(b ^ (b >>> 13), 3266489909);
+            return (x ^ (x >>> 16)) >>> 0;
+        };
+
+        return [
+            mix(h1, h2), mix(h2, h3), mix(h3, h4), mix(h4, h5),
+            mix(h5, h6), mix(h6, h7), mix(h7, h8), mix(h8, h1)
+        ].map(n => n.toString(16).padStart(8, '0')).join('');
+    }
+
+    function formatCurrencyOrUnit(amount, sc, showSign = false) {
+        const absVal = Math.abs(Math.round(amount));
+        const sign = amount < 0 ? "-" : (showSign && amount > 0 ? "+" : "");
+        if (sc.UnitType === "physical_mw") {
+            return `${sign}${absVal.toLocaleString('en-US')} MW`;
+        }
+        return `${sign}${sc.CurrencySymbol}${absVal.toLocaleString('en-US')}`;
+    }
+
+    // 4. Scenario Selection & Initialization
+    function selectScenario(scId) {
+        const found = SCENARIOS.find(s => s.Id === scId);
+        if (!found) return;
+        activeScenario = found;
+
+        document.querySelectorAll('.scenario-card-btn').forEach(btn => {
+            btn.classList.toggle('active', btn.getAttribute('data-scenario-id') === scId);
+        });
+
+        const sConc = document.getElementById('slider-concession');
+        sConc.min = activeScenario.MinConcession;
+        sConc.max = activeScenario.MaxConcession;
+        sConc.step = activeScenario.ConcessionStep;
+        sConc.value = activeScenario.DefaultConcession;
+
+        const sStep = document.getElementById('slider-stepup');
+        sStep.min = activeScenario.MinRecipientCommitment;
+        sStep.max = activeScenario.MaxRecipientCommitment;
+        sStep.step = activeScenario.CommitmentStep;
+        sStep.value = activeScenario.DefaultRecipientCommitment;
+
+        const chkVar = document.getElementById('toggle-variant');
+        chkVar.checked = false;
+        document.getElementById('lbl-variant-toggle').textContent = activeScenario.VariantToggleLabel;
+
+        document.getElementById('min-concession-lbl').textContent = `${activeScenario.MinConcession} ${activeScenario.Unit}`;
+        document.getElementById('max-concession-lbl').textContent = `${activeScenario.MaxConcession} ${activeScenario.Unit}`;
+        document.getElementById('min-stepup-lbl').textContent = `${LEFT_STRINGS.BaselinePrefix} (${activeScenario.DefaultRecipientCommitment} ${activeScenario.CommitmentUnit})`;
+        document.getElementById('max-stepup-lbl').textContent = `${LEFT_STRINGS.StepUpPrefix} (${activeScenario.MaxRecipientCommitment} ${activeScenario.CommitmentUnit})`;
+
+        entityVersion = 1;
+        stagedOpeningVersion = 1;
+        occConflictSimulated = false;
+        merkleTampered = false;
+        currentEventId = 102;
+        currentActionStatus = "PENDING";
+
+        document.getElementById('acid-feedback-banner').className = "acid-feedback-msg";
+        document.getElementById('acid-feedback-banner').innerHTML = ACID_STRINGS.InitialFeedbackHtml;
+
+        seedInitialLedger();
+        onParameterInput();
+    }
+
+    function seedInitialLedger() {
+        const ts1 = "2026-11-05T08:15:00Z";
+        const payload1 = `{"container":"${activeScenario.ContainerId}","schema_bootstrapped":true}`;
+        const prevState1 = `{"Version":1,"Status":"ACTIVE"}`;
+        const raw1 = `${GENESIS_HASH}|101|${ts1}|sys_ingestion_pipeline|bootstrap_container_ontology|${payload1}|${prevState1}|COMMITTED`;
+        const hash1 = computeDeterministicSha256(raw1);
+
+        actionLedger = [
+            {
+                EventId: 101,
+                Timestamp: ts1,
+                ActorId: "sys_ingestion_pipeline",
+                ActionName: `ingest_charter (${activeScenario.ContainerName})`,
+                PayloadJSON: payload1,
+                OriginalPayloadJSON: payload1,
+                PreviousStateJSON: prevState1,
+                VersionSnapshot: "v1 -> v1",
+                Status: "COMMITTED",
+                PreviousHash: GENESIS_HASH.substring(0, 16) + "...",
+                FullPreviousHash: GENESIS_HASH,
+                EventHash: hash1,
+                Tampered: false
+            }
+        ];
+    }
+
+    function resetScenarioBaseline() {
+        document.getElementById('slider-concession').value = activeScenario.DefaultConcession;
+        document.getElementById('slider-stepup').value = activeScenario.DefaultRecipientCommitment;
+        document.getElementById('toggle-variant').checked = false;
+        occConflictSimulated = false;
+        stagedOpeningVersion = entityVersion;
+        currentActionStatus = "PENDING";
+        document.getElementById('acid-feedback-banner').className = "acid-feedback-msg";
+        document.getElementById('acid-feedback-banner').innerHTML = ACID_STRINGS.InitialFeedbackHtml;
+        onParameterInput();
+    }
+
+    // 5. Core Deterministic Simulation & Evaluation Engine
+    function evaluateScenarioModel(sc, concessionVal, stepUpVal, isVariantOn) {
+        const evaluatedCounterparties = sc.Counterparties.map((cp, idx) => {
+            const activeThreshold = (isVariantOn && sc.VariantEffect === "amendment_v2" && cp.AmendedThresholdM)
+                ? cp.AmendedThresholdM
+                : cp.ThresholdM;
+
+            const holderQualifies = cp.CommitmentM >= activeThreshold;
+            const paritySatisfied = !cp.ParityRequired || (stepUpVal <= cp.CommitmentM);
+
+            let bypassedReason = null;
+            if (!holderQualifies) {
+                bypassedReason = fmt(TPL.BypassThreshold, { holderM: cp.CommitmentM, unit: sc.CommitmentUnit, threshM: activeThreshold });
+            } else if (!paritySatisfied) {
+                bypassedReason = fmt(TPL.BypassStepUp, { stepUpM: stepUpVal, unit: sc.CommitmentUnit, holderM: cp.CommitmentM });
+            } else if (isVariantOn && sc.VariantEffect === "safe_harbor") {
+                bypassedReason = TPL.BypassSafeHarbor;
+            } else if (isVariantOn && sc.VariantEffect === "court_vacatur") {
+                bypassedReason = TPL.BypassVacatur;
+            } else if (isVariantOn && sc.VariantEffect === "waive_first" && idx === 0) {
+                bypassedReason = TPL.BypassWaiver;
+            }
+
+            const isTriggered = (bypassedReason === null);
+            let dragAmount = 0;
+            if (isTriggered) {
+                if (sc.UnitType === "physical_mw") {
+                    dragAmount = concessionVal;
+                } else {
+                    dragAmount = (cp.CommitmentM * 1000000) * (concessionVal / 10000);
+                }
+            }
+
+            return {
+                ...cp,
+                activeThreshold,
+                holderQualifies,
+                paritySatisfied,
+                isTriggered,
+                bypassedReason,
+                dragAmount
+            };
+        });
+
+        const triggeredList = evaluatedCounterparties.filter(c => c.isTriggered);
+        const triggeredCount = triggeredList.length;
+        const aggregateExposureM = triggeredList.reduce((acc, c) => acc + c.CommitmentM, 0);
+        const totalCascadeDrag = triggeredList.reduce((acc, c) => acc + c.dragAmount, 0);
+
+        const directRecipientImpact = sc.UnitType === "physical_mw"
+            ? concessionVal
+            : (stepUpVal * 1000000) * (concessionVal / 10000);
+
+        const effectiveCeiling = (isVariantOn && sc.VariantEffect === "raise_mw_ceiling")
+            ? 122.5
+            : sc.Tier1Ceiling;
+
+        let breakevenCap = sc.DefaultConcession;
+        const baselineAllExposureM = sc.Counterparties.reduce((acc, c) => acc + c.CommitmentM, 0);
+
+        if (sc.UnitType === "physical_mw") {
+            const countForBreakeven = Math.max(1, sc.Counterparties.length);
+            breakevenCap = Math.floor(((effectiveCeiling * 0.99) / countForBreakeven) * 10) / 10;
+        } else {
+            const aggDollars = (aggregateExposureM > 0 ? aggregateExposureM : baselineAllExposureM) * 1000000;
+            const factorMax = (effectiveCeiling * 0.99) / aggDollars;
+            breakevenCap = Math.floor((factorMax * 10000) * 100) / 100;
+        }
+
+        // FIX #1: If current request is already safe, don't recommend a higher cap!
+        if (totalCascadeDrag <= effectiveCeiling) {
+            breakevenCap = Math.min(breakevenCap, concessionVal);
+        }
+
+        let governanceTier = sc.Tier1Label;
+        let governanceSignOff = sc.Tier1SignOff;
+        let tierLevel = 1;
+
+        if (triggeredCount === 0 || totalCascadeDrag <= effectiveCeiling) {
+            governanceTier = sc.Tier1Label;
+            governanceSignOff = sc.Tier1SignOff;
+            tierLevel = 1;
+        } else if (totalCascadeDrag < sc.Tier3Threshold * 1.6 && triggeredCount === 1) {
+            governanceTier = sc.Tier2Label;
+            governanceSignOff = sc.Tier2SignOff;
+            tierLevel = 2;
+        } else {
+            governanceTier = sc.Tier3Label;
+            governanceSignOff = sc.Tier3SignOff;
+            tierLevel = 3;
+        }
+
+        let hopActive = false;
+        if (sc.TransitiveHop && !(isVariantOn && sc.VariantEffect === "sever_hop") && triggeredCount > 0) {
+            hopActive = true;
+        }
+
+        const electionProb = triggeredCount === 0 ? 0 : (triggeredCount === 1 ? 0.75 : 0.85);
+        const riskWeightedAnnual = totalCascadeDrag * electionProb;
+        const fiveYearHorizon = riskWeightedAnnual * 5;
+        const severityLabel = triggeredCount === 0
+            ? CENTER_STRINGS.SeverityCleared
+            : (tierLevel === 3 ? (totalCascadeDrag >= effectiveCeiling * 2 ? CENTER_STRINGS.SeverityCritical : CENTER_STRINGS.SeverityHigh) : CENTER_STRINGS.SeverityModerate);
+
+        return {
+            concessionVal,
+            stepUpVal,
+            isVariantOn,
+            evaluatedCounterparties,
+            triggeredList,
+            triggeredCount,
+            aggregateExposureM,
+            totalCascadeDrag,
+            directRecipientImpact,
+            effectiveCeiling,
+            breakevenCap,
+            governanceTier,
+            governanceSignOff,
+            tierLevel,
+            hopActive,
+            electionProb,
+            riskWeightedAnnual,
+            fiveYearHorizon,
+            severityLabel
+        };
+    }
+
+    // 6. Handle Live Slider & Toggle Input
+    function onParameterInput() {
+        currentConcession = parseFloat(document.getElementById('slider-concession').value);
+        currentStepUp = parseFloat(document.getElementById('slider-stepup').value);
+        variantEnabled = document.getElementById('toggle-variant').checked;
+
+        document.getElementById('val-concession').textContent = `${currentConcession} ${activeScenario.Unit}`;
+        document.getElementById('val-stepup').textContent = activeScenario.UnitType === "physical_mw"
+            ? `${currentStepUp} MW`
+            : `$${currentStepUp}M`;
+
+        if (currentActionStatus !== "PENDING") {
+            currentEventId++;
+            currentActionStatus = "PENDING";
+            stagedOpeningVersion = entityVersion;
+        }
+
+        recalculateEngine();
+    }
+
+    function applyParetoOptimal() {
+        const evalResult = evaluateScenarioModel(activeScenario, currentConcession, currentStepUp, variantEnabled);
+        document.getElementById('slider-concession').value = evalResult.breakevenCap;
+        onParameterInput();
+    }
+
+    function applyParetoRow(concessionTarget, stepUpTarget) {
+        document.getElementById('slider-concession').value = concessionTarget;
+        document.getElementById('slider-stepup').value = stepUpTarget;
+        onParameterInput();
+    }
+
+    // 7. Master UI Synchronization
+    function recalculateEngine() {
+        const ev = evaluateScenarioModel(activeScenario, currentConcession, currentStepUp, variantEnabled);
+        lastComputedEval = ev;
+
+        const baselineEv = evaluateScenarioModel(activeScenario, activeScenario.DefaultConcession, activeScenario.DefaultRecipientCommitment, false);
+        const cf02Ev = evaluateScenarioModel(activeScenario, ev.breakevenCap, currentStepUp, variantEnabled);
+        const savingsVsBaseline = Math.max(0, baselineEv.totalCascadeDrag - cf02Ev.totalCascadeDrag);
+
+        const step1El = document.getElementById('step1-desc-text');
+        const step2El = document.getElementById('step2-desc-text');
+        if (step1El) {
+            step1El.textContent = fmt(QUICK_GUIDE.Step1Desc, {
+                recipient: activeScenario.RecipientName,
+                baselineDrag: formatCurrencyOrUnit(-baselineEv.totalCascadeDrag, activeScenario),
+                container: activeScenario.ContainerName
+            });
+        }
+        if (step2El) {
+            step2El.textContent = fmt(QUICK_GUIDE.Step2Desc, {
+                cap: ev.breakevenCap,
+                unit: activeScenario.Unit,
+                savings: formatCurrencyOrUnit(savingsVsBaseline, activeScenario, true)
+            });
+        }
+
+        document.getElementById('breakeven-marker-lbl').textContent = `${LEFT_STRINGS.BreakevenCapPrefix} ${ev.breakevenCap} ${activeScenario.Unit}`;
+        document.getElementById('live-entity-version').textContent = `${TELEMETRY_STRINGS.EntityVersionPrefix}${entityVersion}`;
+
+        document.getElementById('badge-proof-count').textContent = ev.triggeredCount > 0 ? `${ev.triggeredCount} Notices` : `Cleared`;
+        document.getElementById('badge-spec-count').textContent = `${2 + activeScenario.Specialists.length}`;
+        const gateDot = document.getElementById('badge-gate-dot');
+        gateDot.className = `tab-status-dot status-${currentActionStatus.toLowerCase()}`;
+
+        const stepFormatted = activeScenario.UnitType === "physical_mw" ? `${currentStepUp} MW` : `$${currentStepUp}M`;
+        const stepClause = currentStepUp > activeScenario.DefaultRecipientCommitment
+            ? fmt(LEFT_STRINGS.StepUpPromptClause, { stepUp: stepFormatted })
+            : "";
+        const promptText = activeScenario.PromptTemplate
+            .replace("{concession}", currentConcession)
+            .replace("{stepUpClause}", stepClause);
+        document.getElementById('live-prompt-display').textContent = `"${promptText}"`;
+
+        document.getElementById('metamodel-summary-box').innerHTML = `
+            <div class="mm-stat-row"><span>${LEFT_STRINGS.MetaContainerLabel}</span> <code>${activeScenario.ContainerName}</code></div>
+            <div class="mm-stat-row"><span>${LEFT_STRINGS.MetaRecipientLabel}</span> <code>${activeScenario.RecipientName}</code></div>
+            <div class="mm-stat-row"><span>${LEFT_STRINGS.MetaCapacityLabel}</span> <strong>${activeScenario.ContainerTarget} (${activeScenario.BaseRate})</strong></div>
+        `;
+
+        const isPhysical = (activeScenario.UnitType === "physical_mw");
+
+        // Dynamically update KPI Titles for Physics vs Finance
+        document.querySelector('#kpi-card-drag .kpi-title').textContent = isPhysical ? "Peak Ripple-Effect Load" : CENTER_STRINGS.KpiCascadeLabel;
+        document.querySelector('#kpi-card-tier .kpi-title').textContent = CENTER_STRINGS.KpiTierLabel;
+
+        const dragEl = document.getElementById('kpi-val-drag');
+        const subDragEl = document.getElementById('kpi-sub-drag');
+        if (ev.triggeredCount > 0) {
+            dragEl.textContent = `${formatCurrencyOrUnit(-ev.totalCascadeDrag, activeScenario)} ${isPhysical ? "" : CENTER_STRINGS.PerYearSuffix}`;
+            dragEl.className = "kpi-main-val accent-crimson";
+
+            let subText = fmt(CENTER_STRINGS.KpiTriggeredSub, {
+                triggered: ev.triggeredCount,
+                total: activeScenario.Counterparties.length,
+                exposure: ev.aggregateExposureM,
+                unit: activeScenario.CommitmentUnit
+            });
+            // Clarify Hop-1 Contagion
+            if (ev.hopActive) subText += " (Excludes Hop-1 Contagion)";
+            subDragEl.textContent = subText;
+        } else {
+            dragEl.textContent = `${formatCurrencyOrUnit(-ev.directRecipientImpact, activeScenario)} ${isPhysical ? "" : CENTER_STRINGS.PerYearSuffix}`;
+            dragEl.className = "kpi-main-val accent-emerald";
+            subDragEl.textContent = CENTER_STRINGS.KpiZeroTriggeredSub;
+        }
+
+        const omniEl = document.getElementById('kpi-val-omni');
+        const subOmniEl = document.getElementById('kpi-sub-omni');
+        const titleOmni = document.querySelector('#kpi-card-omni .kpi-title');
+
+        // FIX #2: Megawatt Physics vs Financial Horizons
+        if (isPhysical) {
+            titleOmni.textContent = "Risk-Weighted Peak Load";
+            omniEl.textContent = ev.triggeredCount > 0
+                ? formatCurrencyOrUnit(-ev.riskWeightedAnnual, activeScenario)
+                : formatCurrencyOrUnit(0, activeScenario);
+        } else {
+            titleOmni.textContent = CENTER_STRINGS.KpiOmniLabel;
+            omniEl.textContent = ev.triggeredCount > 0
+                ? formatCurrencyOrUnit(-ev.fiveYearHorizon, activeScenario)
+                : formatCurrencyOrUnit(0, activeScenario);
+        }
+
+        subOmniEl.textContent = fmt(CENTER_STRINGS.KpiOmniSub, {
+            rate: Math.round(ev.electionProb * 100),
+            severity: ev.severityLabel
+        });
+
+        document.getElementById('kpi-val-savings').textContent = `${formatCurrencyOrUnit(savingsVsBaseline, activeScenario, true)} ${isPhysical ? "" : CENTER_STRINGS.PerYearSuffix}`;
+
+        let savingsSub = fmt(CENTER_STRINGS.KpiSavingsSub, {
+            cap: ev.breakevenCap,
+            unit: activeScenario.Unit
+        });
+        if (ev.totalCascadeDrag <= ev.effectiveCeiling) {
+            savingsSub = `Already compliant (< ${ev.effectiveCeiling} ${activeScenario.Unit})`;
+        }
+        document.getElementById('kpi-sub-savings').textContent = savingsSub;
+
+        const tierBadgeEl = document.getElementById('kpi-val-tier');
+        tierBadgeEl.textContent = ev.governanceTier;
+        tierBadgeEl.className = `kpi-tier-badge tier-lvl-${ev.tierLevel}`;
+        document.getElementById('kpi-sub-tier').textContent = ev.governanceSignOff;
+
+        renderTopologicalHtmlGraph(activeScenario, ev);
+        renderJsonLogicAndGrounding(activeScenario, ev);
+        renderGovernanceCard(activeScenario, ev, baselineEv);
+        syncStagedActionToLedger(activeScenario, ev);
+        renderSubagentDiagnosticBar(activeSubagentStage);
+    }
+
+    // 8. 100% PURE HTML/CSS RESPONSIVE RIPPLE-EFFECT BOARD (Zero SVG Overlap)
+    function renderTopologicalHtmlGraph(sc, ev) {
+        const board = document.getElementById('impact-flow-board');
+        if (!board) return;
+
+        const hasHop = sc.TransitiveHop !== null;
+        const hasVacatur = sc.VariantEffect === "court_vacatur";
+
+        let hubAddonHtml = "";
+        if (hasVacatur) {
+            const normActive = ev.isVariantOn;
+            hubAddonHtml = `
+                <div class="ifb-subcard ${normActive ? 'ifb-sub-cleared' : 'ifb-sub-warn'}">
+                    <div class="ifb-sub-header">
+                        <i class="fas fa-gavel"></i> <span>${TPL.SvgSupremeCourtTitle}</span>
+                    </div>
+                    <div class="ifb-sub-status">
+                        ${normActive ? TPL.SvgVacaturActive : TPL.SvgVacaturInactive}
+                    </div>
+                </div>
+            `;
+        } else if (hasHop) {
+            const hop = sc.TransitiveHop;
+            hubAddonHtml = `
+                <div class="ifb-subcard ${ev.hopActive ? 'ifb-sub-contagion' : 'ifb-sub-cleared'}">
+                    <div class="ifb-sub-header">
+                        <i class="fas fa-diagram-next"></i> <span>${hop.RelationType}: ${hop.ContainerName}</span>
+                    </div>
+                    <div class="ifb-sub-party">${hop.CounterpartyName}</div>
+                    <div class="ifb-sub-status">
+                        ${ev.hopActive ? fmt(TPL.SvgHopActive, { commitment: hop.CommitmentM }) : TPL.SvgHopIsolated}
+                    </div>
+                </div>
+            `;
+        }
+
+        const partnerCardsHtml = ev.evaluatedCounterparties.map(cp => {
+            const statusLabel = cp.isTriggered
+                ? fmt(TPL.SvgTriggered, { drag: formatCurrencyOrUnit(-cp.dragAmount, sc) + (sc.UnitType === "physical_mw" ? "" : "/yr") })
+                : TPL.SvgBypassed;
+            const stateClass = cp.isTriggered ? "ifb-card-triggered" : "ifb-card-cleared";
+            const iconClass = cp.isTriggered ? "fa-triangle-exclamation" : "fa-circle-check";
+
+            return `
+                <div class="ifb-card ${stateClass}">
+                    <div class="ifb-clause-ribbon">
+                        <span class="ifb-clause-name"><i class="fas ${iconClass}"></i> ${cp.RuleType}</span>
+                        <span class="ifb-clause-verdict">${statusLabel}</span>
+                    </div>
+                    <div class="ifb-card-body">
+                        <div class="ifb-card-title">${cp.Name}</div>
+                        <div class="ifb-card-meta">
+                            <span><code>${cp.Id}</code> (${cp.Jurisdiction})</span>
+                            <span><strong>${TPL.SvgCommitment} ${cp.CommitmentM}${sc.CommitmentUnit}</strong></span>
+                        </div>
+                        <div class="ifb-card-signal">${cp.SignalBadge}</div>
+                    </div>
+                </div>
+            `;
+        }).join('');
+
+        const overallFlowAlert = ev.triggeredCount > 0 ? "flow-alert" : "flow-safe";
+
+        board.innerHTML = `
+            <div class="ifb-stage">
+                <div class="ifb-stage-label">1. Target Client & Proposed Deal</div>
+                <div class="ifb-card ifb-card-recipient">
+                    <div class="ifb-clause-ribbon ribbon-cyan">
+                        <span><i class="fas fa-handshake"></i> ${sc.ActionVerb}</span>
+                        <span class="ifb-clause-verdict">${ev.concessionVal} ${sc.Unit}</span>
+                    </div>
+                    <div class="ifb-card-body">
+                        <div class="ifb-card-title">${sc.RecipientName}</div>
+                        <div class="ifb-card-meta">
+                            <span><code>${sc.RecipientId}</code> (${sc.RecipientJurisdiction})</span>
+                        </div>
+                        <div class="ifb-card-signal">${TPL.SvgCommitment} <strong>${ev.stepUpVal}${sc.CommitmentUnit}</strong></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="ifb-connector flow-cyan" aria-hidden="true">
+                <div class="ifb-conn-badge">${ev.concessionVal} ${sc.Unit}</div>
+                <div class="ifb-conn-line">
+                    <i class="fas fa-arrow-right desktop-arrow"></i>
+                    <i class="fas fa-arrow-down mobile-arrow"></i>
+                </div>
+            </div>
+
+            <div class="ifb-stage">
+                <div class="ifb-stage-label">2. Business Hub & Active Rules</div>
+                <div class="ifb-card ifb-card-container">
+                    <div class="ifb-clause-ribbon ribbon-purple">
+                        <span><i class="fas fa-building-shield"></i> ${TELEMETRY_STRINGS.EntityVersionPrefix}${entityVersion}</span>
+                        <span>${sc.BaseRate}</span>
+                    </div>
+                    <div class="ifb-card-body">
+                        <div class="ifb-card-title">${sc.ContainerName}</div>
+                        <div class="ifb-card-meta">
+                            <span><code>${sc.ContainerId}</code></span>
+                            <span><strong>${TPL.SvgTarget} ${sc.ContainerTarget}</strong></span>
+                        </div>
+                        ${hubAddonHtml}
+                    </div>
+                </div>
+            </div>
+
+            <div class="ifb-connector ${overallFlowAlert}" aria-hidden="true">
+                <div class="ifb-conn-badge">
+                    ${ev.triggeredCount > 0 ? `${ev.triggeredCount} Triggered` : `0 Triggered`}
+                </div>
+                <div class="ifb-conn-line">
+                    <i class="fas fa-arrow-right desktop-arrow"></i>
+                    <i class="fas fa-arrow-down mobile-arrow"></i>
+                </div>
+            </div>
+
+            <div class="ifb-stage ifb-stage-partners">
+                <div class="ifb-stage-label">3. Partner Contract Ripple Effects (100% Checked)</div>
+                <div class="ifb-partners-stack">
+                    ${partnerCardsHtml}
+                </div>
+            </div>
+        `;
+    }
+
+    // 9. Exact Contract Rule Verification Inspector
+    function renderJsonLogicAndGrounding(sc, ev) {
+        const firstCp = ev.evaluatedCounterparties[0];
+        const ruleSummaryObj = {
+            "Contract_Clause_ID": firstCp.CovenantId,
+            "Clause_Type": firstCp.RuleType,
+            "Checked_Partner": firstCp.Name,
+            "Partner_Qualifying_Check": {
+                "Partner_Current_Volume": `${firstCp.CommitmentM}${sc.CommitmentUnit}`,
+                "Required_Minimum_Threshold": `${firstCp.activeThreshold}${sc.CommitmentUnit}`,
+                "Meets_Minimum_Volume": firstCp.holderQualifies
+            },
+            "Target_Deal_Comparison": {
+                "Target_Client": sc.RecipientName,
+                "Target_Client_Volume": `${ev.stepUpVal}${sc.CommitmentUnit}`,
+                "Proposed_Adjustment": `${ev.concessionVal} ${sc.Unit}`,
+                "Partner_Has_Equal_Or_Larger_Volume": firstCp.paritySatisfied,
+                "Policy_Or_Court_Exemption_Active": ev.isVariantOn
+            },
+            "Final_Rule_Verdict": firstCp.isTriggered
+                ? "CLAUSE TRIGGERED — Partner is entitled to matching terms"
+                : `NOT TRIGGERED — ${firstCp.bypassedReason}`
+        };
+        document.getElementById('jsonlogic-ast-code').textContent = JSON.stringify(ruleSummaryObj, null, 2);
+
+        const groundingHtml = `
+            <table class="aho-grounding-table">
+                <thead>
+                    <tr>
+                        <th>${CENTER_STRINGS.AhoColEntity}</th>
+                        <th>${CENTER_STRINGS.AhoColId}</th>
+                        <th>${CENTER_STRINGS.AhoColRole}</th>
+                        <th>${CENTER_STRINGS.AhoColChunk}</th>
+                        <th>${CENTER_STRINGS.AhoColConfidence}</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>${sc.ContainerName}</strong></td>
+                        <td><code>${sc.ContainerId}</code></td>
+                        <td><code>Business Hub</code></td>
+                        <td><code>${sc.ChunkId}</code></td>
+                        <td><span class="conf-pill conf-100">${CENTER_STRINGS.AhoConfPrimary}</span></td>
+                    </tr>
+                    <tr>
+                        <td><strong>${sc.RecipientName}</strong></td>
+                        <td><code>${sc.RecipientId}</code></td>
+                        <td><code>Target Client</code></td>
+                        <td><code>${sc.ChunkId}</code></td>
+                        <td><span class="conf-pill conf-100">${CENTER_STRINGS.AhoConfPrimary}</span></td>
+                    </tr>
+                    ${ev.evaluatedCounterparties.map(cp => `
+                        <tr>
+                            <td><strong>${cp.Name}</strong></td>
+                            <td><code>${cp.Id}</code></td>
+                            <td><code>Existing Partner</code></td>
+                            <td><code>${sc.ChunkId}</code></td>
+                            <td><span class="conf-pill conf-100">${CENTER_STRINGS.AhoConfConstraint}</span></td>
+                        </tr>
+                    `).join('')}
+                    <tr>
+                        <td><em>${CENTER_STRINGS.AhoHeaderMention}</em></td>
+                        <td><code>${sc.ContainerId}</code></td>
+                        <td><code>Document Title</code></td>
+                        <td><code>Title-Page</code></td>
+                        <td><span class="conf-pill conf-065">${CENTER_STRINGS.AhoConfHeader}</span></td>
+                    </tr>
+                </tbody>
+            </table>
+        `;
+        document.getElementById('aho-corasick-table-wrap').innerHTML = groundingHtml;
+    }
+
+    // 10. Universal UI Governance Card & Pareto Frontier Table
+    function renderGovernanceCard(sc, ev, baselineEv) {
+        const banner = document.getElementById('gov-banner');
+        const bannerIcon = document.getElementById('gov-banner-icon');
+        const bannerTitle = document.getElementById('gov-banner-title');
+        const bannerSub = document.getElementById('gov-banner-sub');
+        const isPhysical = (sc.UnitType === "physical_mw");
+        const thDrag = document.querySelector('.kinetic-pareto-table thead tr th:nth-child(6)');
+        const thSave = document.querySelector('.kinetic-pareto-table thead tr th:nth-child(7)');
+        if (thDrag && thSave) {
+            thDrag.textContent = isPhysical ? "Peak Ripple Load" : CENTER_STRINGS.ColAnnualDrag;
+            thSave.textContent = isPhysical ? "Peak Load Saved" : CENTER_STRINGS.ColSavings;
+        }
+
+        if (ev.triggeredCount > 0) {
+            banner.className = "gov-card-banner alert-mode";
+            bannerIcon.className = "fas fa-triangle-exclamation";
+            bannerTitle.textContent = TPL.BannerAlertTitle;
+            bannerSub.innerHTML = fmt(TPL.BannerAlertSub, {
+                action: sc.ActionVerb,
+                concession: ev.concessionVal,
+                unit: sc.Unit,
+                recipient: sc.RecipientName,
+                recipientId: sc.RecipientId,
+                triggered: ev.triggeredCount,
+                container: sc.ContainerName,
+                containerId: sc.ContainerId
+            });
+        } else {
+            banner.className = "gov-card-banner cleared-mode";
+            bannerIcon.className = "fas fa-circle-check";
+            bannerTitle.textContent = TPL.BannerClearedTitle;
+            bannerSub.innerHTML = fmt(TPL.BannerClearedSub, {
+                action: sc.ActionVerb,
+                concession: ev.concessionVal,
+                unit: sc.Unit,
+                recipient: sc.RecipientName,
+                recipientId: sc.RecipientId,
+                container: sc.ContainerName
+            });
+        }
+
+        const logPill = document.getElementById('gov-actionlog-pill');
+        logPill.className = `actionlog-id-pill status-${currentActionStatus.toLowerCase()}`;
+        logPill.innerHTML = `<i class="fas fa-shield-halved"></i> Log #${currentEventId} [${currentActionStatus}] <i class="fas fa-arrow-right"></i>`;
+
+        const lowestCpCommitment = Math.min(...sc.Counterparties.map(c => c.CommitmentM));
+        const stepUpTarget = Math.min(sc.MaxRecipientCommitment, lowestCpCommitment + sc.CommitmentStep);
+
+        const cf01 = evaluateScenarioModel(sc, ev.concessionVal, ev.stepUpVal, ev.isVariantOn);
+        const cf02 = evaluateScenarioModel(sc, ev.breakevenCap, ev.stepUpVal, ev.isVariantOn);
+        const cf03 = evaluateScenarioModel(sc, ev.concessionVal, stepUpTarget, ev.isVariantOn);
+        const halfConcession = Math.max(sc.MinConcession, Math.round((ev.concessionVal * 0.5) * 10) / 10);
+        const cf04 = evaluateScenarioModel(sc, halfConcession, ev.stepUpVal, ev.isVariantOn);
+
+        const paretoRows = [
+            {
+                code: "CF-02",
+                recommended: true,
+                strategy: fmt(TPL.StrategyCf02, { ceiling: formatCurrencyOrUnit(ev.effectiveCeiling, sc) }),
+                concession: ev.breakevenCap,
+                stepUp: ev.stepUpVal,
+                evalObj: cf02
+            },
+            {
+                code: "CF-03",
+                recommended: false,
+                strategy: fmt(TPL.StrategyCf03, { lowestM: lowestCpCommitment, unit: sc.CommitmentUnit }),
+                concession: ev.concessionVal,
+                stepUp: stepUpTarget,
+                evalObj: cf03
+            },
+            {
+                code: "CF-04",
+                recommended: false,
+                strategy: fmt(TPL.StrategyCf04, { half: halfConcession, unit: sc.Unit }),
+                concession: halfConcession,
+                stepUp: ev.stepUpVal,
+                evalObj: cf04
+            },
+            {
+                code: "CF-01",
+                recommended: false,
+                strategy: fmt(TPL.StrategyCf01, { concession: ev.concessionVal, unit: sc.Unit, stepUp: ev.stepUpVal, commitUnit: sc.CommitmentUnit }),
+                concession: ev.concessionVal,
+                stepUp: ev.stepUpVal,
+                evalObj: cf01
+            }
+        ];
+
+        const savingsCf02 = Math.max(0, cf01.totalCascadeDrag - cf02.totalCascadeDrag);
+
+        // Dynamic Pareto Callout for Already Compliant Deals
+        let calloutHtml = "";
+        if (ev.totalCascadeDrag <= ev.effectiveCeiling) {
+            calloutHtml = `
+                <div>
+                    <strong><i class='fas fa-check-circle'></i> Deal is Compliant (<code>CF-01</code>):</strong>
+                    Current parameters generate <strong>${formatCurrencyOrUnit(-ev.totalCascadeDrag, sc)}</strong> in cascade drag, which is safely below the ${formatCurrencyOrUnit(ev.effectiveCeiling, sc)} limit. You are cleared for <code>${ev.governanceTier}</code>.
+                </div>
+            `;
+        } else {
+            calloutHtml = fmt(TPL.ParetoCalloutHtml, {
+                cap: ev.breakevenCap,
+                unit: sc.Unit,
+                drag: formatCurrencyOrUnit(-cf02.totalCascadeDrag, sc) + (isPhysical ? "" : "/yr"),
+                savings: formatCurrencyOrUnit(savingsCf02, sc, true) + (isPhysical ? "" : "/yr"),
+                tier: cf02.governanceTier
+            });
+        }
+        document.getElementById('pareto-callout').innerHTML = calloutHtml;
+
+        const tbody = document.getElementById('pareto-table-body');
+        tbody.innerHTML = paretoRows.map(r => {
+            const rowSavings = Math.max(0, baselineEv.totalCascadeDrag - r.evalObj.totalCascadeDrag);
+            const isCurrentActive = (Math.abs(r.concession - ev.concessionVal) < 0.05 && Math.abs(r.stepUp - ev.stepUpVal) < 0.05);
+            return `
+                <tr class="pareto-row ${r.recommended ? 'pareto-recommended' : ''} ${isCurrentActive ? 'pareto-active-row' : ''}"
+                    onclick="applyParetoRow(${r.concession}, ${r.stepUp})">
+                    <td><code>${r.code}</code> ${r.recommended ? `<span class="opt-star">${CENTER_STRINGS.BestBadge}</span>` : ''}</td>
+                    <td>${r.strategy}</td>
+                    <td><code>${r.concession} ${sc.Unit}</code></td>
+                    <td>${isPhysical ? r.stepUp + " MW" : "$" + r.stepUp + "M"}</td>
+                    <td>${r.evalObj.triggeredCount}</td>
+                    <td class="${r.evalObj.totalCascadeDrag > 0 ? 'accent-crimson' : 'accent-emerald'}">
+                        ${formatCurrencyOrUnit(-r.evalObj.totalCascadeDrag, sc)}${isPhysical ? "" : CENTER_STRINGS.PerYearSuffix}
+                    </td>
+                    <td class="accent-emerald"><strong>${formatCurrencyOrUnit(rowSavings, sc, true)}${isPhysical ? "" : CENTER_STRINGS.PerYearSuffix}</strong></td>
+                    <td><span class="mini-tier-pill tier-lvl-${r.evalObj.tierLevel}">${r.evalObj.governanceTier}</span></td>
+                </tr>
+            `;
+        }).join('');
+
+        const cp0 = ev.evaluatedCounterparties[0];
+        const cp1 = ev.evaluatedCounterparties[1];
+        const hopHtml = ev.hopActive
+            ? fmt(TPL.MultiHopAlertHtml, { relType: sc.TransitiveHop.RelationType, hopContainer: sc.TransitiveHop.ContainerName, hopCp: sc.TransitiveHop.CounterpartyName })
+            : "";
+        document.getElementById('keystone-waiver-box').innerHTML = fmt(TPL.KeystoneWaiverHtml, {
+            cp0Name: cp0.Name,
+            cp0M: cp0.CommitmentM,
+            cp1Name: cp1 ? cp1.Name : "",
+            cp1M: cp1 ? cp1.CommitmentM : "",
+            unit: sc.CommitmentUnit
+        }) + " " + hopHtml;
+
+        document.getElementById('verbatim-citation-box').innerHTML = `
+            <div class="citation-meta">
+                <span><i class="fas fa-file-contract"></i> <strong>${sc.SourceDoc}</strong> (${sc.SectionRef})</span>
+                <span class="chunk-guid-tag">Chunk #${sc.ChunkId} | ${CENTER_STRINGS.ConfidenceLabel}</span>
+            </div>
+            <blockquote class="verbatim-quote">"${sc.VerbatimQuote}"</blockquote>
+        `;
+
+        document.getElementById('staged-artifacts-box').innerHTML = `
+            <span class="artifact-pill"><i class="fas fa-file-word"></i> Staged_Amendment_${sc.ContainerId}_${sc.RecipientId}.docx</span>
+            <span class="artifact-pill"><i class="fas fa-file-pdf"></i> ActionLog_Audit_Packet_${sc.ContainerId}_#${currentEventId}.pdf</span>
+            <span class="artifact-pill"><i class="fas fa-file-zipper"></i> Counterparty_Election_Notices_${sc.ContainerId}.zip</span>
+        `;
+
+        const noticesBox = document.getElementById('localized-notices-box');
+        if (ev.triggeredCount === 0) {
+            noticesBox.innerHTML = `<div class="notice-empty"><i class="fas fa-check-circle"></i> ${CENTER_STRINGS.NoNoticesRequired}</div>`;
+        } else {
+            noticesBox.innerHTML = ev.triggeredList.map(cp => `
+                <div class="localized-notice-item">
+                    <div class="notice-top">
+                        <strong>${cp.Name}</strong>
+                        <span class="locale-tag">${cp.Jurisdiction} / ${cp.Locale} (${CENTER_STRINGS.GlossaryLockSuffix})</span>
+                    </div>
+                    <div class="notice-title-line">${cp.NoticeTitle}</div>
+                    <div class="notice-body-line">${cp.NoticeBody.replace("{concession}", ev.concessionVal)}</div>
+                </div>
+            `).join('');
+        }
+
+        const baseSpecialists = [
+            {
+                Agent: "Compliance AI",
+                Role: TPL.CompRole,
+                Status: ev.triggeredCount > 0 ? "REVIEW_REQUIRED" : "CLEARED",
+                Text: ev.triggeredCount > 0
+                    ? fmt(TPL.CompTextTriggered, { triggered: ev.triggeredCount, container: sc.ContainerName })
+                    : fmt(TPL.CompTextCleared, { recipient: sc.RecipientName, container: sc.ContainerName })
+            },
+            {
+                Agent: "Math Expert AI",
+                Role: TPL.MathRole,
+                Status: "VERIFIED",
+                Text: ev.triggeredCount > 0
+                    ? fmt(TPL.MathTextTriggered, { drag: formatCurrencyOrUnit(-ev.totalCascadeDrag, sc), exposure: ev.aggregateExposureM, unit: sc.CommitmentUnit })
+                    : fmt(TPL.MathTextCleared, { direct: formatCurrencyOrUnit(-ev.directRecipientImpact, sc), stepUp: ev.stepUpVal, unit: sc.CommitmentUnit })
+            },
+            ...sc.Specialists
+        ];
+
+        document.getElementById('specialists-advisory-box').innerHTML = baseSpecialists.map(sp => `
+            <div class="specialist-item">
+                <div class="sp-top">
+                    <strong><i class="fas fa-robot"></i> ${sp.Agent}</strong>
+                    <span class="sp-status-badge status-${sp.Status.toLowerCase()}">${sp.Status}</span>
+                </div>
+                <div class="sp-role">${sp.Role}</div>
+                <div class="sp-text">${sp.Text}</div>
+            </div>
+        `).join('');
+    }
+
+    // 11. Two-Phase ACID Gate, OCC Conflict & SHA-256 Merkle Chain Engine
+    function syncStagedActionToLedger(sc, ev) {
+        const tsNow = new Date().toISOString().split('.')[0] + "Z";
+        const payload = JSON.stringify({
+            action: sc.ActionVerb,
+            recipient: sc.RecipientId,
+            value: ev.concessionVal,
+            unit: sc.Unit,
+            step_up: ev.stepUpVal,
+            triggers: ev.triggeredCount
+        });
+        const prevState = JSON.stringify({
+            ContainerId: sc.ContainerId,
+            Version: stagedOpeningVersion,
+            BaseRate: sc.BaseRate
+        });
+
+        const prevRow = actionLedger[0];
+        const prevHashFull = prevRow.EventHash;
+        const rawCanonical = `${prevHashFull}|${currentEventId}|${tsNow}|usr_exec_operator_01|${sc.ActionVerb}|${payload}|${prevState}|${currentActionStatus}`;
+        const eventHash = computeDeterministicSha256(rawCanonical);
+
+        const stagedRow = {
+            EventId: currentEventId,
+            Timestamp: tsNow,
+            ActorId: "usr_exec_operator_01",
+            ActionName: `${sc.ActionVerb} -> ${sc.RecipientName}`,
+            PayloadJSON: payload,
+            OriginalPayloadJSON: payload,
+            PreviousStateJSON: prevState,
+            VersionSnapshot: fmt(TPL.VersionSnapshotFmt, { stagedVer: stagedOpeningVersion, liveVer: entityVersion }),
+            Status: currentActionStatus,
+            PreviousHash: prevHashFull.substring(0, 16) + "...",
+            FullPreviousHash: prevHashFull,
+            EventHash: eventHash,
+            Tampered: false
+        };
+
+        if (actionLedger.length === 1) {
+            actionLedger.push(stagedRow);
+        } else {
+            actionLedger[actionLedger.length - 1] = stagedRow;
+        }
+
+        updateAcidButtonsAndBanner();
+        renderMerkleLedgerTable();
+    }
+
+    function executeAcidTransition(targetState) {
+        const banner = document.getElementById('acid-feedback-banner');
+
+        if (targetState === "COMMITTED") {
+            if (occConflictSimulated || stagedOpeningVersion !== entityVersion) {
+                currentActionStatus = "OCC_CONFLICT";
+                banner.className = "acid-feedback-msg feedback-error";
+                banner.innerHTML = fmt(TPL.FeedbackOccAbortHtml, {
+                    containerId: activeScenario.ContainerId,
+                    stagedVer: stagedOpeningVersion,
+                    liveVer: entityVersion
+                });
+                updateAcidButtonsAndBanner();
+                renderMerkleLedgerTable();
+                return;
+            }
+
+            entityVersion++;
+            currentActionStatus = "COMMITTED";
+            banner.className = "acid-feedback-msg feedback-success";
+            banner.innerHTML = fmt(TPL.FeedbackCommittedHtml, {
+                eventId: currentEventId,
+                liveVer: entityVersion
+            });
+        } else if (targetState === "REJECTED") {
+            currentActionStatus = "REJECTED";
+            occConflictSimulated = false;
+            banner.className = "acid-feedback-msg feedback-warn";
+            banner.innerHTML = fmt(TPL.FeedbackRejectedHtml, { eventId: currentEventId });
+        } else if (targetState === "ROLLED_BACK") {
+            entityVersion = stagedOpeningVersion;
+            currentActionStatus = "ROLLED_BACK";
+            banner.className = "acid-feedback-msg feedback-info";
+            banner.innerHTML = fmt(TPL.FeedbackRolledBackHtml, {
+                eventId: currentEventId,
+                container: activeScenario.ContainerName,
+                liveVer: entityVersion
+            });
+        }
+
+        document.getElementById('live-entity-version').textContent = `${TELEMETRY_STRINGS.EntityVersionPrefix}${entityVersion}`;
+        const logPill = document.getElementById('gov-actionlog-pill');
+        logPill.className = `actionlog-id-pill status-${currentActionStatus.toLowerCase()}`;
+        logPill.innerHTML = `<i class="fas fa-shield-halved"></i> Log #${currentEventId} [${currentActionStatus}] <i class="fas fa-arrow-right"></i>`;
+        const gateDot = document.getElementById('badge-gate-dot');
+        gateDot.className = `tab-status-dot status-${currentActionStatus.toLowerCase()}`;
+
+        syncStagedActionToLedger(activeScenario, lastComputedEval);
+        renderTopologicalHtmlGraph(activeScenario, lastComputedEval);
+    }
+
+    function simulateOccConflict() {
+        entityVersion++;
+        occConflictSimulated = true;
+        document.getElementById('live-entity-version').textContent = `${TELEMETRY_STRINGS.EntityVersionPrefix}${entityVersion}`;
+
+        const banner = document.getElementById('acid-feedback-banner');
+        banner.className = "acid-feedback-msg feedback-warn";
+        banner.innerHTML = fmt(TPL.FeedbackOccSimHtml, {
+            container: activeScenario.ContainerName,
+            liveVer: entityVersion,
+            eventId: currentEventId,
+            stagedVer: stagedOpeningVersion
+        });
+        syncStagedActionToLedger(activeScenario, lastComputedEval);
+    }
+
+    function toggleMerkleTamperSimulation() {
+        merkleTampered = !merkleTampered;
+        const row0 = actionLedger[0];
+        const btnText = document.getElementById('tamper-btn-text');
+        const pill = document.getElementById('merkle-status-pill');
+        const badgeText = document.getElementById('merkle-badge-text');
+        const banner = document.getElementById('acid-feedback-banner');
+
+        if (merkleTampered) {
+            row0.PayloadJSON = `{"container":"${activeScenario.ContainerId}","UNAUTHORIZED_SQL_EDIT":"BYPASS_MFN"}`;
+            row0.Tampered = true;
+            btnText.textContent = ACID_STRINGS.BtnRestoreTamper;
+            pill.classList.add('merkle-fractured');
+            badgeText.className = "telemetry-value merkle-invalid";
+            badgeText.innerHTML = `<i class="fas fa-skull-crossbones"></i> ${TELEMETRY_STRINGS.MerkleTamperedText} (#101)`;
+            banner.className = "acid-feedback-msg feedback-error";
+            banner.innerHTML = fmt(TPL.FeedbackTamperActiveHtml, { eventId: currentEventId });
+        } else {
+            row0.PayloadJSON = row0.OriginalPayloadJSON;
+            row0.Tampered = false;
+            btnText.textContent = ACID_STRINGS.BtnSimTamper;
+            pill.classList.remove('merkle-fractured');
+            badgeText.className = "telemetry-value merkle-valid";
+            badgeText.innerHTML = `<i class="fas fa-shield-halved"></i> ${TELEMETRY_STRINGS.MerkleValidText}`;
+            banner.className = "acid-feedback-msg";
+            banner.innerHTML = TPL.FeedbackTamperRestoredHtml;
+        }
+
+        renderMerkleLedgerTable();
+    }
+
+    function updateAcidButtonsAndBanner() {
+        const badge = document.getElementById('acid-state-badge');
+        const btnConfirm = document.getElementById('btn-acid-confirm');
+        const btnReject = document.getElementById('btn-acid-reject');
+        const btnRollback = document.getElementById('btn-acid-rollback');
+
+        badge.className = `acid-status-pill ${currentActionStatus.toLowerCase()}`;
+        if (currentActionStatus === "PENDING") {
+            badge.textContent = ACID_STRINGS.StatePending;
+            btnConfirm.disabled = false;
+            btnReject.disabled = false;
+            btnRollback.disabled = true;
+        } else if (currentActionStatus === "COMMITTED") {
+            badge.textContent = ACID_STRINGS.StateCommitted;
+            btnConfirm.disabled = true;
+            btnReject.disabled = true;
+            btnRollback.disabled = false;
+        } else if (currentActionStatus === "REJECTED") {
+            badge.textContent = ACID_STRINGS.StateRejected;
+            btnConfirm.disabled = true;
+            btnReject.disabled = true;
+            btnRollback.disabled = true;
+        } else if (currentActionStatus === "ROLLED_BACK") {
+            badge.textContent = ACID_STRINGS.StateRolledBack;
+            btnConfirm.disabled = true;
+            btnReject.disabled = true;
+            btnRollback.disabled = true;
+        } else if (currentActionStatus === "OCC_CONFLICT") {
+            badge.textContent = ACID_STRINGS.StateOccConflict;
+            btnConfirm.disabled = true;
+            btnReject.disabled = false;
+            btnRollback.disabled = true;
+        }
+    }
+
+    function renderMerkleLedgerTable() {
+        const tbody = document.getElementById('merkle-ledger-tbody');
+        tbody.innerHTML = actionLedger.map((row, idx) => {
+            const isCascadedInvalid = merkleTampered && idx > 0;
+            return `
+                <tr class="${row.Tampered ? 'merkle-row-tampered' : (isCascadedInvalid ? 'merkle-row-cascaded' : '')}">
+                    <td><strong>#${row.EventId}</strong></td>
+                    <td><code>${row.Timestamp}</code></td>
+                    <td><code>${row.ActorId}</code></td>
+                    <td>
+                        <div><strong>${row.ActionName}</strong></div>
+                        <div class="ledger-payload-sub"><code>${row.PayloadJSON}</code></div>
+                    </td>
+                    <td><code>${row.VersionSnapshot}</code></td>
+                    <td><span class="ledger-status-tag status-${row.Status.toLowerCase()}">${row.Status}</span></td>
+                    <td><code>${row.PreviousHash}</code></td>
+                    <td>
+                        <code class="${row.Tampered || isCascadedInvalid ? 'hash-fractured' : 'hash-sealed'}">
+                            ${row.EventHash.substring(0, 20)}...
+                        </code>
+                        ${row.Tampered ? `<span class="tamper-flag">${ACID_STRINGS.FlagHashMismatch}</span>` : (isCascadedInvalid ? `<span class="tamper-flag">${ACID_STRINGS.FlagChainBroken}</span>` : '<i class="fas fa-check-circle hash-ok-icon"></i>')}
+                    </td>
+                </tr>
+            `;
+        }).join('');
+    }
+
+    function highlightPipelineStage(stageId) {
+        activeSubagentStage = stageId;
+        document.querySelectorAll('.pipeline-stage-pill').forEach(pill => {
+            pill.classList.toggle('active', pill.getAttribute('data-stage') === stageId);
+        });
+        renderSubagentDiagnosticBar(stageId);
+    }
+
+    function renderSubagentDiagnosticBar(stageId) {
+        const bar = document.getElementById('subagent-diagnostic-bar');
+        const sc = activeScenario;
+        const ev = lastComputedEval;
+        if (!ev || !bar) return;
+
+        const diagnostics = {
+            "sa1": fmt(TPL.DiagSa1, {
+                action: sc.ActionVerb,
+                concession: ev.concessionVal,
+                unit: sc.Unit,
+                count: 2 + sc.Counterparties.length
+            }),
+            "sa2": fmt(TPL.DiagSa2, {
+                containerId: sc.ContainerId,
+                recipientId: sc.RecipientId,
+                triggered: ev.triggeredCount,
+                total: sc.Counterparties.length
+            }),
+            "opt": fmt(TPL.DiagOpt, {
+                cap: ev.breakevenCap,
+                unit: sc.Unit,
+                ceiling: formatCurrencyOrUnit(ev.effectiveCeiling, sc)
+            }),
+            "sa3": fmt(TPL.DiagSa3, {
+                specialists: 2 + sc.Specialists.length,
+                stagedVer: stagedOpeningVersion,
+                eventId: currentEventId
+            })
+        };
+        bar.innerHTML = `<i class="fas fa-wave-square"></i> ${diagnostics[stageId] || diagnostics["sa1"]}`;
+    }
+
+    function toggleLabFullscreen() {
+        const wb = document.getElementById('kinetic-workbench');
+        const icon = document.getElementById('lab-fs-icon');
+        const txt = document.getElementById('lab-fs-text');
+        wb.classList.toggle('kinetic-fullscreen');
+
+        if (wb.classList.contains('kinetic-fullscreen')) {
+            icon.className = "fas fa-compress";
+            txt.textContent = TELEMETRY_STRINGS.BtnExitFullscreen;
+            document.body.style.overflow = "hidden";
+        } else {
+            icon.className = "fas fa-expand";
+            txt.textContent = TELEMETRY_STRINGS.BtnFullscreen;
+            document.body.style.overflow = "auto";
+        }
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+        selectScenario(SCENARIOS[0].Id);
+    });
+</script>
+
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            if (window.innerWidth < 768) return;
+
+            const intro = document.querySelector("#right-intro");
+            if (!intro) return;
+
+            const tl = gsap.timeline();
+            let isClosing = false; // Flag to prevent double-triggering the exit
+
+            // --- 1. DEFINE THE EXIT FUNCTION ---
+            const closeIntro = () => {
+                if (isClosing) return;
+                isClosing = true;
+
+                // Kill the main timeline so it doesn't keep running in the background
+                tl.kill();
+
+                // Create a dedicated exit timeline for a fast, responsive feel
+                const exitTl = gsap.timeline();
+
+                /* ROBOT FAST REVEAL & RUN */
+                exitTl.to(".robot-runner", { opacity: 1, duration: 0.2 });
+                exitTl.to(".robot-runner", {
+                    x: 400,
+                    duration: 0.8,
+                    ease: "power2.in"
+                }, "-=0.1");
+
+                /* PANEL SLIDE-OUT */
+                exitTl.to("#right-intro", {
+                    duration: 0.8,
+                    transform: "translateX(100%)",
+                    ease: "power3.inOut",
+                    onComplete: () => {
+                        intro.style.display = "none";
+                        // Remove scroll listener once closed
+                        window.removeEventListener("scroll", handleScroll);
+                    }
+                }, "-=0.6");
+            };
+
+            // --- 2. THE SCROLL LISTENER ---
+            const handleScroll = () => {
+                if (window.scrollY > 20) { // Trigger after 20px of scrolling
+                    closeIntro();
+                }
+            };
+            window.addEventListener("scroll", handleScroll);
+
+            // --- 3. ORIGINAL ANIMATION SEQUENCE ---
+            /* PANEL SLIDE-IN */
+            tl.to("#right-intro", {
+                duration: 0.8,
+                transform: "translateX(0%)",
+                ease: "power3.out"
+            });
+
+            /* PARTICLES */
+            for (let i = 0; i < 20; i++) {
+                const p = document.createElement("div");
+                p.className = "particle";
+                p.style.position = "absolute";
+                p.style.width = "4px";
+                p.style.height = "4px";
+                p.style.background = "rgba(0,174,239,0.35)";
+                p.style.borderRadius = "50%";
+                p.style.left = Math.random() * 100 + "%";
+                p.style.top = "100%";
+                document.querySelector(".intro-particles").appendChild(p);
+
+                gsap.to(p, {
+                    y: -window.innerHeight - 100,
+                    duration: 4 + Math.random() * 4,
+                    delay: Math.random() * 2,
+                    repeat: -1,
+                    ease: "none"
+                });
+            }
+
+            /* SIGNAL LINE & PULSE */
+            tl.to(".signal-main", { height: "60%", duration: 0.8, ease: "power2.out" })
+                .to(".loading-dots", { opacity: 1, duration: 0.3 })
+                .to(".pulse", { opacity: 1, scale: 1.4, duration: 0.3, stagger: 0.15 })
+                .to(".pulse", { scale: 0.6, opacity: 0.4, duration: 0.3, stagger: 0.15 })
+                .to(".loading-dots", { opacity: 0, duration: 0.3 });
+
+            /* TEXT REVEAL */
+            tl.to(".t1", { opacity: 1, x: 0, duration: 0.6 })
+                .to(".t2", { opacity: 1, x: 0, duration: 0.6 })
+                .to(".t3", { opacity: 1, x: 0, duration: 0.6 })
+                .to(".t4", { opacity: 1, x: 0, duration: 0.6 });
+
+            /* ROBOT ARM/LEG LOOPS (Independent of timeline) */
+            const robotParts = [
+                { el: ".arm-left", r: 30 }, { el: ".arm-right", r: -30 },
+                { el: ".leg-left", r: -30 }, { el: ".leg-right", r: 30 }
+            ];
+            robotParts.forEach(part => {
+                gsap.to(part.el, { rotation: part.r, yoyo: true, repeat: -1, duration: 0.2, ease: "power1.inOut" });
+            });
+
+            // --- 4. AUTO-EXIT (If user doesn't scroll) ---
+            tl.to(".robot-runner", { opacity: 1, duration: 0.3, delay: 5 });
+            tl.to(".robot-runner", { x: 400, duration: 1.2, ease: "power2.inOut" }, "-=0.2");
+            tl.to("#right-intro", {
+                duration: 1,
+                transform: "translateX(100%)",
+                ease: "power3.inOut",
+                onComplete: () => {
+                    if (!isClosing) { // Only hide if scroll didn't already trigger it
+                        intro.style.display = "none";
+                        window.removeEventListener("scroll", handleScroll);
+                    }
+                }
+            }, "-=0.6");
+        });
+    </script>
+    <!-- Cloudflare Web Analytics --><script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "e290b7bc8f584d41990f177692bdcf23"}'></script><!-- End Cloudflare Web Analytics -->
+</body>
+</html>

@@ -1,0 +1,2086 @@
+<!DOCTYPE html>
+<html lang="zh" dir="ltr">
+<head>
+    <meta name="robots" content="index, follow" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <meta name="description" content='&#x5B9E;&#x65F6;&#x6D4B;&#x8BD5;MindML&#x52A8;&#x529B;&#x5B66;&#x5F15;&#x64CE;&#x3002;&#x4E86;&#x89E3;&#x786E;&#x5B9A;&#x6027;&#x5408;&#x540C;&#x5BA1;&#x67E5;&#x3001;&#x81EA;&#x52A8;&#x5316;&#x4EA4;&#x6613;&#x91CD;&#x7EC4;&#x548C;&#x4EBA;&#x5DE5;&#x628A;&#x5173;&#x6267;&#x884C;&#x5982;&#x4F55;&#x9632;&#x6B62;&#x5728;&#x6574;&#x4E2A;&#x4E1A;&#x52A1;&#x4E2D;&#x4EA7;&#x751F;&#x4EE3;&#x4EF7;&#x9AD8;&#x6602;&#x7684;&#x8FDE;&#x9501;&#x53CD;&#x5E94;&#x3002;' />
+    <title>&#x8FD0;&#x8425;AI&#x538B;&#x529B;&#x6D4B;&#x8BD5;&#x5B9E;&#x9A8C;&#x5BA4; | The Intelligent Enterprise Group</title>
+
+    <style>
+        html { background-color: #3B3A47; }
+    </style>
+    <script>
+        (function () {
+            const key = 'preferredTheme';
+            const stored = localStorage.getItem(key);
+            //const systemDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+            const theme = stored || 'dark'/*(systemDark ? 'dark' : 'light')*/;
+            if (theme === 'dark') {
+                document.documentElement.classList.add('dark-mode');
+            } else {
+                document.documentElement.classList.remove('dark-mode');
+            }
+        })();
+    </script>
+
+
+        <link rel="alternate" hreflang="en" href="https://theintelligententerprisegroup.com/stress-test-lab.html" />
+        <link rel="alternate" hreflang="fr" href="https://theintelligententerprisegroup.com/fr/stress-test-lab.html" />
+        <link rel="alternate" hreflang="de" href="https://theintelligententerprisegroup.com/de/stress-test-lab.html" />
+        <link rel="alternate" hreflang="es" href="https://theintelligententerprisegroup.com/es/stress-test-lab.html" />
+        <link rel="alternate" hreflang="pt" href="https://theintelligententerprisegroup.com/pt/stress-test-lab.html" />
+        <link rel="alternate" hreflang="zh" href="https://theintelligententerprisegroup.com/zh/stress-test-lab.html" />
+        <link rel="alternate" hreflang="ja" href="https://theintelligententerprisegroup.com/ja/stress-test-lab.html" />
+        <link rel="alternate" hreflang="ar" href="https://theintelligententerprisegroup.com/ar/stress-test-lab.html" />
+
+
+    <link rel="alternate" hreflang="x-default" href="https://theintelligententerprisegroup.com/stress-test-lab.html" />
+
+    <link rel="canonical" href="https://theintelligententerprisegroup.com/zh/stress-test-lab.html" />
+
+
+    <link rel="stylesheet" href="/css/styles.css" />
+    <link rel="stylesheet" href="/css/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="/css/all.min.css" />
+
+    <script src="/js/lang-switcher.js" defer></script>
+
+    <script>
+        (function () {
+            if (localStorage.getItem('currentLang')) return;
+            const supported = [
+                     { code: "en" } ,
+                     { code: "fr" } ,
+                     { code: "de" } ,
+                     { code: "es" } ,
+                     { code: "pt" } ,
+                     { code: "zh" } ,
+                     { code: "ja" } ,
+                     { code: "ar" } 
+            ];
+            const defaultLang = "zh";
+            const navLangs = navigator.languages || [navigator.language || navigator.userLanguage];
+            let detected = null;
+            for (const nav of navLangs) {
+                const code = nav.toLowerCase().split('-')[0];
+                if (supported.find(s => s.code.toLowerCase() === code)) {
+                    detected = code;
+                    break;
+                }
+            }
+            const lang = detected || defaultLang;
+            localStorage.setItem('currentLang', lang);
+            document.documentElement.lang = lang;
+        })();
+    </script>
+
+    <!-- Organization structured data (JSON-LD) -->
+    <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "Organization",
+          "name": "The Intelligent Enterprise Group",
+          "url": "https://theintelligententerprisegroup.com/",
+          "logo": "https://theintelligententerprisegroup.com/images/tieg-logo.png",
+          "sameAs": []
+        }
+    </script>
+    <link rel="icon" href="/favicon.ico" />
+    <link rel="apple-touch-icon" href="/images/apple-touch-icon.png" />
+
+    
+
+</head>
+<body>
+    <header x-data="{ open: false }">
+        <div class="container header-top">
+            <div class="logo"></div>
+            <div class="theme-switch-wrapper">
+                <label class="theme-switch">
+                    <input type="checkbox" id="theme-checkbox" aria-label="Select theme"/>
+                    <span class="slider round"></span>
+                </label>
+                <span id="theme-label">浅色模式</span>
+                <span class="lang-switcher">
+                    <label for="lang-select" class="lang-label">🌐 语言：</label>
+
+                    <!-- Language switcher -->
+                    <select id="lang-select" class="lang-select">
+                        <option value="en" data-path="/">English</option>
+                        <option value="fr" data-path="/fr/">Fran&#xE7;ais</option>
+                        <option value="de" data-path="/de/">Deutsch</option>
+                        <option value="es" data-path="/es/">Espa&#xF1;ol</option>
+                        <option value="pt" data-path="/pt/">Portugu&#xEA;s</option>
+                        <option value="zh" data-path="/zh/">&#x4E2D;&#x6587;</option>
+                        <option value="ja" data-path="/ja/">&#x65E5;&#x672C;&#x8A9E;</option>
+                        <option value="ar" data-path="/ar/">&#x627;&#x644;&#x639;&#x631;&#x628;&#x64A;&#x629;</option>
+                    </select>
+
+                </span>
+            </div>
+        </div>
+        
+        <div class="container header-nav">
+            <button @click="open = !open" class="menu-toggle" aria-label="Toggle Menu">
+                <svg width="24" height="24" viewBox="0 0 24 24">
+                    <path fill="var(--nav-link-color)" d="M3 6h18v2H3V6zm0 5h18v2H3v-2zm0 5h18v2H3v-2z" />
+                </svg>
+            </button>
+
+            <nav class="main-nav" :class="{ 'open': open }">
+                <ul>
+                    <li><a href="index.html" class="">&#x9996;&#x9875;</a></li>
+                    <li><a href="about.html" class="">&#x5173;&#x4E8E;&#x6211;&#x4EEC;</a></li>
+                    <li><a href="services.html" class="">&#x670D;&#x52A1;&#x4E0E;&#x89E3;&#x51B3;&#x65B9;&#x6848;</a></li>
+                    <li><a href="case-studies.html" class="">&#x6848;&#x4F8B;&#x7814;&#x7A76;</a></li>
+                    <li><a href="resources.html" class="">&#x8D44;&#x6E90;&#x4E0E;&#x6D1E;&#x5BDF;</a></li>
+                    <li><a href="partners.html" class="">&#x5408;&#x4F5C;&#x4F19;&#x4F34;&#x4E0E;&#x8054;&#x76DF;</a></li>                    
+                    <li><a href="contact.html" class="">&#x8054;&#x7CFB;&#x4E0E;&#x54A8;&#x8BE2;</a></li>
+                    <li class="has-submenu"
+                        x-data="{ openSub: false }"
+                        @mouseenter="openSub = true"
+                        @mouseleave="openSub = false">
+                      <button @click="openSub = !openSub"
+                              aria-haspopup="true"
+                              :aria-expanded="openSub.toString()">
+                        &#x4FE1;&#x606F;
+                        <svg width="12" height="12" viewBox="0 0 12 12" aria-hidden="true">
+                          <path d="M3 4l3 3 3-3" fill="currentColor"/>
+                        </svg>
+                      </button>
+                      <ul class="submenu" x-show="openSub" @click.outside="openSub = false">
+                        <li><a href="careers.html" class="">&#x804C;&#x4E1A;&#x673A;&#x4F1A;</a></li>
+                        <li><a href="faqs.html" class="">&#x5E38;&#x89C1;&#x95EE;&#x9898;</a></li>
+                        <li><a href="legal.html" class="">&#x6CD5;&#x5F8B;&#x4E0E;&#x653F;&#x7B56;</a></li>
+                      </ul>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        
+<section class="kinetic-lab-hero">
+    <div class="container">
+        <span class="kinetic-eyebrow-badge">
+            <i class="fas fa-atom"></i> MINDML&#x52A8;&#x529B;&#x5B66;&#x5F15;&#x64CE; - &#x4EA4;&#x4E92;&#x5F0F;&#x51B3;&#x7B56;&#x6A21;&#x62DF;&#x5668;
+        </span>
+        <h1>&#x8FD0;&#x8425;&#x6CBB;&#x7406;&#x4E0E;&#x4EA4;&#x6613;&#x538B;&#x529B;&#x6D4B;&#x8BD5;&#x5B9E;&#x9A8C;&#x5BA4;</h1>
+        <p class="kinetic-hero-sub">&#x6807;&#x51C6;AI&#x804A;&#x5929;&#x673A;&#x5668;&#x4EBA;&#x4EC5;&#x80FD;&#x6458;&#x8981;&#x6587;&#x6863;&#x3002;MindML&#x52A8;&#x529B;&#x5B66;&#x5F15;&#x64CE;&#x5C06;&#x60A8;&#x72EC;&#x7279;&#x7684;&#x4E1A;&#x52A1;&#x672C;&#x4F53;&#x2014;&#x2014;&#x5408;&#x540C;&#x3001;&#x7269;&#x7406;&#x7535;&#x7F51;&#x9650;&#x5236;&#x3001;&#x7269;&#x6D41;&#x548C;&#x5B89;&#x5168;&#x533A;&#x57DF;&#x2014;&#x2014;&#x6574;&#x5408;&#x5230;&#x4E00;&#x4E2A;&#x5B9E;&#x65F6;&#x7684;&#x6570;&#x5B66;&#x56FE;&#x4E2D;&#x3002;&#x4F7F;&#x7528;&#x6B64;&#x6A21;&#x62DF;&#x5668;&#x89C2;&#x5BDF;&#x5B83;&#x5982;&#x4F55;&#x6355;&#x83B7;&#x9690;&#x85CF;&#x7684;&#x8FD0;&#x8425;&#x89E6;&#x53D1;&#x6761;&#x4EF6;&#x3001;&#x4F18;&#x5316;&#x51B3;&#x7B56;&#xFF0C;&#x5E76;&#x5728;&#x83B7;&#x5F97;&#x4EBA;&#x5DE5;&#x7B7E;&#x7F72;&#x786E;&#x8BA4;&#x524D;&#x9501;&#x5B9A;&#x6267;&#x884C;&#x3002;</p>
+    </div>
+</section>
+
+<section class="kinetic-lab-section">
+    <div class="kinetic-workbench-container" id="kinetic-workbench">
+
+        <!-- INTERACTIVE 3-STEP QUICK-START GUIDE BAR -->
+        <div class="kinetic-guide-banner" id="kinetic-guide-banner">
+            <div class="guide-banner-top">
+                <div class="guide-banner-title">
+                    <i class="fas fa-compass"></i>
+                    <span>&#x4E09;&#x6B65;&#x4F53;&#x9A8C;&#x672C;&#x6F14;&#x793A;&#xFF1A;</span>
+                </div>
+                <div class="guide-banner-actions">
+                    <button type="button" class="guide-help-toggle-btn" onclick="toggleHelpExplainer()">
+                        <i class="fas fa-circle-question"></i>
+                        <span id="help-btn-label">&#x8FD9;&#x662F;&#x4EC0;&#x4E48;&#x5185;&#x5BB9;&#xFF1F;</span>
+                    </button>
+                    <button type="button" class="kinetic-util-btn" onclick="toggleLabFullscreen()">
+                        <i class="fas fa-expand" id="lab-fs-icon"></i>
+                        <span id="lab-fs-text">&#x5168;&#x5C4F;&#x6A21;&#x5F0F;</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Collapsible Plain-English Executive Explainer -->
+            <div class="guide-explainer-drawer" id="guide-explainer-drawer" style="display: none;">
+                <strong>为什么这对您的企业至关重要：</strong> 常规AI工具仅仅是在预测下一个词。动力学引擎映射您企业独特的<strong>业务本体</strong>——将法律条款、物理兆瓦负荷与地理安全缓冲区转换为确定性的数学图。当您做出运营决策时，它能在极短时间内精确计算全企业的跨跳连锁反应，求解最优方案，并在防篡改账本中暂存待执行事务。
+            </div>
+
+           <!-- 3 Interactive Spotlight Cards -->
+            <div class="guide-steps-grid">
+                <div class="guide-step-card active" id="tour-card-1" onclick="runGuidedStep(1)">
+                    <div class="gs-header">
+                        <span class="gs-title">1. &#x53D1;&#x73B0;&#x6F5C;&#x5728;&#x7684;&#x8FD0;&#x8425;&#x8FDE;&#x9501;&#x53CD;&#x5E94;</span>
+                        <span class="gs-action-pill"><i class="fas fa-eye"></i> &#x663E;&#x793A;&#x8FDE;&#x9501;&#x53CD;&#x5E94;</span>
+                    </div>
+                    <p class="gs-desc" id="step1-desc-text">&#x89C2;&#x5BDF;&#x672C;&#x4F53;&#x56FE;&#xFF1A;&#x9488;&#x5BF9;{recipient}&#x8FDB;&#x884C;&#x8C03;&#x6574;&#x4F1A;&#x7ACB;&#x5373;&#x5728;&#x6574;&#x4E2A;{container}&#x4E2D;&#x89E6;&#x53D1;&#x8FDE;&#x9501;&#x53CD;&#x5E94;&#xFF0C;&#x6CE2;&#x53CA;&#x5B89;&#x5168;&#x89C4;&#x5219;&#x3001;&#x7269;&#x6D41;&#x914D;&#x9001;&#x6216;&#x5408;&#x89C4;&#x8981;&#x6C42;&#x3002;</p>
+                </div>
+
+                <div class="guide-step-card" id="tour-card-2" onclick="runGuidedStep(2)">
+                    <div class="gs-header">
+                        <span class="gs-title">2. &#x8BA9;AI&#x4F18;&#x5316;&#x5904;&#x7406;&#x65B9;&#x6848;</span>
+                        <span class="gs-action-pill gold"><i class="fas fa-wand-magic-sparkles"></i> &#x81EA;&#x52A8;&#x4F18;&#x5316;&#x51B3;&#x7B56;</span>
+                    </div>
+                    <p class="gs-desc" id="step2-desc-text">&#x62D6;&#x52A8;&#x5DE6;&#x4FA7;&#x6ED1;&#x5757;&#xFF08;&#x6216;&#x70B9;&#x51FB;&#x6B64;&#x5904;&#xFF09;&#xFF0C;&#x67E5;&#x770B;MindML&#x5982;&#x4F55;&#x7CBE;&#x786E;&#x8BA1;&#x7B97;&#x8FD0;&#x8425;&#x4E0A;&#x9650;&#xFF0C;&#x4EE5;&#x6D88;&#x9664;&#x74F6;&#x9888;&#x3001;&#x89C4;&#x907F;&#x8FDD;&#x7EA6;&#x91D1;&#x5E76;&#x89E3;&#x9501;&#x5FEB;&#x901F;&#x5BA1;&#x6279;&#x901A;&#x9053;&#x3002;</p>
+                </div>
+
+                <div class="guide-step-card" id="tour-card-3" onclick="runGuidedStep(3)">
+                    <div class="gs-header">
+                        <span class="gs-title">3. &#x9A8C;&#x8BC1;&#x6709;&#x72B6;&#x6001;&#x5B89;&#x5168;&#x628A;&#x5173;</span>
+                        <span class="gs-action-pill emerald"><i class="fas fa-shield-halved"></i> &#x6253;&#x5F00;&#x5B89;&#x5168;&#x7F51;&#x5173;</span>
+                    </div>
+                    <p class="gs-desc">&#x6253;&#x5F00;&#x201C;&#x5BA1;&#x6279;&#x7F51;&#x5173;&#x201D;&#x6807;&#x7B7E;&#x9875;&#x4EE5;&#x6279;&#x51C6;&#x53D8;&#x66F4;&#x3001;&#x6D4B;&#x8BD5;&#x4E00;&#x952E;&#x64A4;&#x9500;&#xFF0C;&#x6216;&#x6A21;&#x62DF;MindML&#x5982;&#x4F55;&#x6709;&#x6548;&#x9632;&#x5FA1;&#x5E76;&#x53D1;&#x51B2;&#x7A81;&#x4E0E;&#x6570;&#x636E;&#x5E93;&#x7BE1;&#x6539;&#x3002;</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- MAIN 2-COLUMN COMMAND DECK (STICKY LEFT CONTROLS + TABBED RIGHT STAGE) -->
+        <div class="kinetic-main-grid">
+
+            <!-- LEFT CONTROL DECK: SCENARIOS + LIVE STRESS-TEST SLIDERS -->
+            <aside class="kinetic-left-deck">
+                <div class="deck-panel">
+                    <div class="deck-panel-header">
+                        <i class="fas fa-layer-group"></i> 1. &#x9009;&#x62E9;&#x884C;&#x4E1A;&#x573A;&#x666F;
+                    </div>
+                    <div class="scenario-selector-list" id="scenario-list">
+                            <button type="button" class="scenario-card-btn" data-scenario-id="sec1_energy" onclick="selectScenario('sec1_energy')">
+                                <div class="sc-card-top">
+                                    <span class="sc-sector-tag"><i class="fas fa-bolt"></i> &#x80FD;&#x6E90;&#x4E0E;&#x5DE5;&#x4E1A;&#x67A2;&#x7EBD;</span>
+                                </div>
+                                <div class="sc-card-title">AntwerpEnergyHub - &#x7535;&#x4EF7;&#x6298;&#x6263;&#x4E0E;&#x5B89;&#x5168;&#x9632;&#x533A;&#x89C4;&#x8303;</div>
+                            </button>
+                            <button type="button" class="scenario-card-btn" data-scenario-id="sec3_pharma" onclick="selectScenario('sec3_pharma')">
+                                <div class="sc-card-top">
+                                    <span class="sc-sector-tag"><i class="fas fa-snowflake"></i> &#x533B;&#x836F;&#x51B7;&#x94FE;&#x7269;&#x6D41;&#x4E0E;&#x4F9B;&#x5E94;&#x94FE;</span>
+                                </div>
+                                <div class="sc-card-title">EuroLogisticsHub - &#x8DE8;&#x8D70;&#x5ECA;&#x4F20;&#x5BFC;&#x5916;&#x6EA2;&#x4E0E;&#x5C65;&#x7EA6;&#x65F6;&#x6548;</div>
+                            </button>
+                            <button type="button" class="scenario-card-btn" data-scenario-id="sec6_aerospace" onclick="selectScenario('sec6_aerospace')">
+                                <div class="sc-card-top">
+                                    <span class="sc-sector-tag"><i class="fas fa-fighter-jet"></i> &#x822A;&#x7A7A;&#x822A;&#x5929;&#x4E0E;&#x56FD;&#x9632;&#x5DE5;&#x4E1A;&#x5236;&#x9020;</span>
+                                </div>
+                                <div class="sc-card-title">EuroDroneConsortium - &#x5173;&#x952E;&#x5206;&#x5305;&#x5546;&#x7279;&#x8BB8;&#x6743;&#x8D39;&#x4E0A;&#x9650;&#x4E0E;&#x9884;&#x7B97;&#x7BA1;&#x63A7;</div>
+                            </button>
+                            <button type="button" class="scenario-card-btn" data-scenario-id="sec7_hvdc" onclick="selectScenario('sec7_hvdc')">
+                                <div class="sc-card-top">
+                                    <span class="sc-sector-tag"><i class="fas fa-plug"></i> &#x7535;&#x529B;&#x7535;&#x7F51;&#x4E0E;&#x516C;&#x7528;&#x4E8B;&#x4E1A;&#xFF08;&#x7269;&#x7406;&#x8D1F;&#x8377;&#xFF09;</span>
+                                </div>
+                                <div class="sc-card-title">NorthSeaHVDCSubstation - &#x975E;&#x8D27;&#x5E01;&#x5316;&#x7269;&#x7406;&#x5146;&#x74E6;&#xFF08;MW&#xFF09;&#x8D1F;&#x8377;&#x8C03;&#x5EA6;&#x5E73;&#x8861;</div>
+                            </button>
+                            <button type="button" class="scenario-card-btn" data-scenario-id="sec8_pe_fund" onclick="selectScenario('sec8_pe_fund')">
+                                <div class="sc-card-top">
+                                    <span class="sc-sector-tag"><i class="fas fa-scale-balanced"></i> &#x79C1;&#x52DF;&#x80A1;&#x6743;&#x6295;&#x8D44;&#x3001;&#x5E76;&#x8D2D;&#x4E0E;&#x6CD5;&#x52A1;</span>
+                                </div>
+                                <div class="sc-card-title">ApexGlobalBuyoutVIII - &#x4FA7;&#x51FD;&#x9644;&#x7EA6;&#x4FEE;&#x8BA2;&#x4E0E;LP&#x7BA1;&#x7406;&#x8D39;&#x5BF9;&#x9F50;</div>
+                            </button>
+                            <button type="button" class="scenario-card-btn" data-scenario-id="sec9_normative" onclick="selectScenario('sec9_normative')">
+                                <div class="sc-card-top">
+                                    <span class="sc-sector-tag"><i class="fas fa-gavel"></i> &#x53F8;&#x6CD5;&#x5224;&#x4F8B;&#x6F14;&#x8FDB;&#x4E0E;&#x5408;&#x89C4;&#x6EAF;&#x53CA;&#x529B;</span>
+                                </div>
+                                <div class="sc-card-title">SovereignInfraFundIX - &#x7EC8;&#x5BA1;&#x5224;&#x4F8B;&#x5BF9;&#x884C;&#x653F;&#x5F3A;&#x5236;&#x4EE4;&#x7684;&#x6EAF;&#x53CA;&#x529B;&#x7A7F;&#x900F;</div>
+                            </button>
+                    </div>
+                </div>
+
+                <!-- INTERACTIVE PARAMETER SLIDERS -->
+                <div class="deck-panel" id="left-controls-panel">
+                    <div class="deck-panel-header">
+                        <i class="fas fa-sliders"></i> 2. &#x5B9E;&#x65F6;&#x8C03;&#x6574;&#x4EA4;&#x6613;&#x53C2;&#x6570;
+                    </div>
+                    <div class="deck-controls-body">
+                        <!-- Slider 1: Concession Magnitude -->
+                        <div class="control-group">
+                            <div class="control-label-row">
+                                <label for="slider-concession">&#x62DF;&#x8BAE;&#x6298;&#x6263; / &#x6298;&#x8BA9;&#x5E45;&#x5EA6;</label>
+                                <span class="control-live-val" id="val-concession">20 bps</span>
+                            </div>
+                            <input type="range" id="slider-concession" class="kinetic-slider" min="2" max="50" step="1" value="20" oninput="onParameterInput()" />
+                            <div class="slider-Endpoints">
+                                <span id="min-concession-lbl">2 bps</span>
+                                <span id="breakeven-marker-lbl" class="breakeven-hint">9.9 bps</span>
+                                <span id="max-concession-lbl">50 bps</span>
+                            </div>
+                        </div>
+
+                        <!-- Slider 2: Recipient Commitment Step-Up -->
+                        <div class="control-group">
+                            <div class="control-label-row">
+                                <label for="slider-stepup">&#x5BA2;&#x6237;&#x6700;&#x4F4E;&#x91C7;&#x8D2D;&#x91CF; / &#x5C65;&#x7EA6;&#x627F;&#x8BFA;</label>
+                                <span class="control-live-val" id="val-stepup">$20M</span>
+                            </div>
+                            <input type="range" id="slider-stepup" class="kinetic-slider" min="20" max="160" step="5" value="20" oninput="onParameterInput()" />
+                            <div class="slider-Endpoints">
+                                <span id="min-stepup-lbl">$20M</span>
+                                <span id="max-stepup-lbl">$160M</span>
+                            </div>
+                        </div>
+
+                        <!-- Toggle 3: Normative / Amendment / Safe-Harbor Switch -->
+                        <div class="control-group variant-toggle-box">
+                            <label class="variant-checkbox-label">
+                                <input type="checkbox" id="toggle-variant" onchange="onParameterInput()" />
+                                <span class="variant-custom-check"></span>
+                                <span id="lbl-variant-toggle">&#x653F;&#x7B56; / &#x5408;&#x540C;&#x6761;&#x6B3E;&#x53D8;&#x66F4;</span>
+                            </label>
+                        </div>
+
+                        <!-- Quick Action Buttons -->
+                        <div class="control-quick-btns">
+                            <button type="button" class="kinetic-action-btn outline" onclick="resetScenarioBaseline()">
+                                <i class="fas fa-rotate-left"></i> &#x91CD;&#x7F6E;&#x4E3A;&#x57FA;&#x51C6;&#x503C;
+                            </button>
+                            <button type="button" class="kinetic-action-btn gold" id="btn-apply-pareto" onclick="applyParetoOptimal()">
+                                <i class="fas fa-wand-magic-sparkles"></i> &#x91C7;&#x7528;&#x6700;&#x4F18;&#x5B89;&#x5168;&#x65B9;&#x6848; (CF-02)
+                            </button>
+                        </div>
+
+                        <!-- Live Synthesized Natural Language Prompt -->
+                        <div class="live-prompt-box">
+                            <div class="live-prompt-header">
+                                <span><i class="fas fa-terminal"></i> &#x53D1;&#x9001;&#x7ED9;AI&#x56E2;&#x961F;&#x7684;&#x4E1A;&#x52A1;&#x6307;&#x4EE4;</span>
+                                <span class="gbnf-tag">&#x610F;&#x56FE;&#x5DF2;&#x9A8C;&#x8BC1;</span>
+                            </div>
+                            <div class="live-prompt-text" id="live-prompt-display"></div>
+                        </div>
+
+                        <!-- Active Container Metamodel Summary -->
+                        <div class="metamodel-mini-stats" id="metamodel-summary-box"></div>
+                    </div>
+                </div>
+            </aside>
+
+            <!-- RIGHT STAGE: 4 KPI CARDS + 4 PROGRESSIVE DISCLOSURE TABS -->
+            <div class="kinetic-center-stage">
+
+                <!-- REAL-TIME EXECUTIVE KPI STRIP -->
+                <div class="kinetic-kpi-strip">
+                    <div class="kpi-card" id="kpi-card-drag">
+                        <span class="kpi-title">&#x5E74;&#x5EA6;&#x8FDE;&#x9501;&#x53CD;&#x5E94;&#x6210;&#x672C;</span>
+                        <div class="kpi-main-val" id="kpi-val-drag"></div>
+                        <span class="kpi-sub-val" id="kpi-sub-drag"></span>
+                    </div>
+                    <div class="kpi-card" id="kpi-card-omni">
+                        <span class="kpi-title">5&#x5E74;&#x671F;&#x98CE;&#x9669;&#x655E;&#x53E3;&#x9884;&#x4F30;</span>
+                        <div class="kpi-main-val" id="kpi-val-omni"></div>
+                        <span class="kpi-sub-val" id="kpi-sub-omni"></span>
+                    </div>
+                    <div class="kpi-card kpi-pareto-card" onclick="applyParetoOptimal()" style="cursor: pointer;" title="Click to apply optimal deal">
+                        <span class="kpi-title">&#x91C7;&#x7528;&#x4F18;&#x5316;&#x65B9;&#x6848;&#x8282;&#x7EA6;&#x91D1;&#x989D; (CF-02)</span>
+                        <div class="kpi-main-val accent-emerald" id="kpi-val-savings"></div>
+                        <span class="kpi-sub-val" id="kpi-sub-savings"></span>
+                    </div>
+                    <div class="kpi-card" id="kpi-card-tier">
+                        <span class="kpi-title">&#x6838;&#x51C6;&#x6743;&#x9650;&#x5C42;&#x7EA7;</span>
+                        <div class="kpi-tier-badge" id="kpi-val-tier"></div>
+                        <span class="kpi-sub-val" id="kpi-sub-tier"></span>
+                    </div>
+                </div>
+
+                <!-- 4-TAB STAGE CONTAINER (SHOWS ONE FOCUSED VIEW AT A TIME) -->
+                <div class="stage-panel">
+                    <div class="stage-tabs-header">
+                        <div class="stage-tab-buttons" role="tablist">
+                            <button type="button" class="stage-tab-btn active" data-tab="overview" onclick="switchMainTab('overview')">
+                                <i class="fas fa-project-diagram"></i> 1. &#x5F71;&#x54CD;&#x62D3;&#x6251;&#x56FE;&#x4E0E;&#x4EA4;&#x6613;&#x4F18;&#x5316;&#x5668;
+                            </button>
+                            <button type="button" class="stage-tab-btn" data-tab="proof" onclick="switchMainTab('proof')">
+                                <i class="fas fa-file-contract"></i> 2. &#x5408;&#x540C;&#x51ED;&#x8BC1;&#x4E0E;&#x6CD5;&#x5B9A;&#x901A;&#x77E5;&#x51FD;
+                                <span class="tab-count-badge" id="badge-proof-count">2</span>
+                            </button>
+                            <button type="button" class="stage-tab-btn" data-tab="specialists" onclick="switchMainTab('specialists')">
+                                <i class="fas fa-user-shield"></i> 3. AI&#x4E13;&#x4E1A;&#x4E13;&#x5BB6;&#x5BA1;&#x67E5;
+                                <span class="tab-count-badge" id="badge-spec-count">4</span>
+                            </button>
+                            <button type="button" class="stage-tab-btn" data-tab="gate" onclick="switchMainTab('gate')">
+                                <i class="fas fa-lock"></i> 4. &#x5BA1;&#x6279;&#x7F51;&#x5173;&#x4E0E;&#x5BA1;&#x8BA1;&#x65E5;&#x5FD7;
+                                <span class="tab-status-dot" id="badge-gate-dot"></span>
+                            </button>
+                        </div>
+
+                        <!-- Compact Audit Seal Status Pill -->
+                        <div class="merkle-telemetry-box" id="merkle-status-pill" onclick="switchMainTab('gate')" style="cursor:pointer;">
+                            <span class="telemetry-value merkle-valid" id="merkle-badge-text">
+                                <i class="fas fa-shield-halved"></i> &#x5DF2;&#x5BC6;&#x5C01;&#x4E14;&#x9A8C;&#x8BC1;&#x901A;&#x8FC7;
+                            </span>
+                            <span class="telemetry-value" id="live-entity-version">&#x8BB0;&#x5F55; v1</span>
+                        </div>
+                    </div>
+
+                    <!-- =========================================================
+                         TAB 1 (DEFAULT): IMPACT MAP & DEAL OPTIMIZER
+                         ========================================================= -->
+                    <div id="tab-pane-overview" class="tab-pane-content">
+                        <!-- Visual Legend Bar -->
+                        <div class="graph-legend-bar">
+                            <span><span class="legend-dot triggered"></span> &#x88AB;&#x89E6;&#x53D1;&#x6761;&#x6B3E;&#xFF08;&#x4EA7;&#x751F;&#x989D;&#x5916;&#x6210;&#x672C;&#xFF09;</span>
+                            <span><span class="legend-dot cleared"></span> &#x5B89;&#x5168; / &#x672A;&#x89E6;&#x53D1;&#x6761;&#x6B3E;</span>
+                            <span><span class="legend-dot contagion"></span> &#x8FDE;&#x9501;&#x6CE2;&#x53CA;&#x5173;&#x8054;&#x8BBE;&#x65BD;</span>
+                        </div>
+
+                        <!-- 100% PURE HTML/CSS RESPONSIVE RIPPLE-EFFECT BOARD (Zero SVG Overlap) -->
+                        <div class="impact-flow-viewport" id="view-graph-container">
+                            <div id="impact-flow-board" class="impact-flow-board"></div>
+                        </div>
+
+                        <!-- Governance Alert Banner + Clickable Pareto Restructuring Table -->
+                        <div class="universal-governance-card">
+                            <div class="gov-card-banner" id="gov-banner">
+                                <div class="gov-banner-left">
+                                    <i class="fas fa-triangle-exclamation" id="gov-banner-icon"></i>
+                                    <div>
+                                        <h3 id="gov-banner-title"></h3>
+                                        <p id="gov-banner-sub"></p>
+                                    </div>
+                                </div>
+                                <button type="button" class="actionlog-id-pill" id="gov-actionlog-pill" onclick="switchMainTab('gate')" title="Click to open Approval Gate"></button>
+                            </div>
+
+                            <div class="gov-section">
+                                <div class="gov-section-header">
+                                    <h4><i class="fas fa-chess-knight"></i> &#x4EA4;&#x6613;&#x91CD;&#x7EC4;&#x66FF;&#x4EE3;&#x65B9;&#x6848;&#xFF08;&#x5982;&#x4F55;&#x89C4;&#x907F;&#x8FDE;&#x9501;&#x6210;&#x672C;&#xFF09;</h4>
+                                    <span class="pareto-hint"><i class="fas fa-hand-pointer"></i> &#x70B9;&#x51FB;&#x4E0B;&#x65B9;&#x4EFB;&#x610F;&#x65B9;&#x6848;&#x884C;&#xFF0C;&#x5373;&#x53EF;&#x5B9E;&#x65F6;&#x6D4B;&#x8BD5;&#x5BF9;&#x5E94;&#x6570;&#x503C;</span>
+                                </div>
+                                <div class="pareto-recommendation-callout" id="pareto-callout"></div>
+                                <div class="table-responsive">
+                                    <table class="kinetic-pareto-table">
+                                        <thead>
+                                            <tr>
+                                                <th>&#x65B9;&#x6848;&#x7F16;&#x53F7;</th>
+                                                <th>&#x4EA4;&#x6613;&#x91CD;&#x7EC4;&#x7B56;&#x7565;</th>
+                                                <th>&#x6298;&#x8BA9;&#x989D;&#x5EA6;</th>
+                                                <th>&#x8981;&#x6C42;&#x5BA2;&#x6237;&#x627F;&#x8BFA;&#x91CF;</th>
+                                                <th>&#x89E6;&#x53D1;&#x4F19;&#x4F34;&#x6570;</th>
+                                                <th>&#x5E74;&#x5EA6;&#x8FDE;&#x5E26;&#x6210;&#x672C;</th>
+                                                <th>&#x5E74;&#x5EA6;&#x8282;&#x7EA6;&#x91D1;&#x989D;</th>
+                                                <th>&#x6240;&#x9700;&#x5BA1;&#x6279;&#x89D2;&#x8272;</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody id="pareto-table-body"></tbody>
+                                    </table>
+                                </div>
+                                <div class="keystone-waiver-bar" id="keystone-waiver-box"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- =========================================================
+                         TAB 2: CONTRACT PROOF & TRANSLATED LEGAL NOTICES
+                         ========================================================= -->
+                    <div id="tab-pane-proof" class="tab-pane-content" style="display: none;">
+                        <div class="universal-governance-card">
+                            <div class="gov-details-grid">
+                                <div class="gov-detail-col">
+                                    <h4><i class="fas fa-book-bookmark"></i> &#x5408;&#x540C;&#x6761;&#x6B3E;&#x786E;&#x51FF;&#x51ED;&#x636E;&#xFF08;&#x76F4;&#x63A5;&#x622A;&#x53D6;&#x81EA;&#x5DF2;&#x7B7E;&#x7F72;&#x7684;&#x534F;&#x8BAE;&#x539F;&#x6587;&#xFF09;</h4>
+                                    <div id="verbatim-citation-box" class="citation-card"></div>
+
+                                    <h4 style="margin-top: 1.5rem;"><i class="fas fa-file-shield"></i> &#x5DF2;&#x751F;&#x6210;&#x5B8C;&#x6BD5;&#x4F9B;&#x4E0B;&#x8F7D;/&#x5BA1;&#x6838;&#x7684;&#x6CD5;&#x52A1;&#x6750;&#x6599;</h4>
+                                    <div id="staged-artifacts-box" class="artifacts-pill-list"></div>
+                                </div>
+                                <div class="gov-detail-col">
+                                    <h4><i class="fas fa-globe"></i> &#x5C31;&#x7EEA;&#x7684;&#x4F19;&#x4F34;&#x6CD5;&#x5B9A;&#x544A;&#x77E5;&#x51FD;&#xFF08;&#x5DF2;&#x672C;&#x5730;&#x5316;&#x7FFB;&#x8BD1;&#x5E76;&#x9501;&#x5B9A;&#x4E13;&#x6709;&#x540D;&#x8BCD;&#xFF09;</h4>
+                                    <div id="localized-notices-box" class="notices-stack"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- =========================================================
+                         TAB 3: AI SPECIALIST TEAM & EXACT RULE VERIFICATION
+                         ========================================================= -->
+                    <div id="tab-pane-specialists" class="tab-pane-content" style="display: none;">
+                        <div class="universal-governance-card">
+                            <!-- 4-Step Pipeline Selector Inside Specialist Tab -->
+                            <div class="kinetic-pipeline-bar" role="tablist">
+                                    <button type="button" class="pipeline-stage-pill active" data-stage="sa1" onclick="highlightPipelineStage('sa1')">
+                                        <div class="stage-num">01</div>
+                                        <div class="stage-info">
+                                            <div class="stage-name">&#x8BC9;&#x6C42;&#x4E0E;&#x5F53;&#x4E8B;&#x65B9;&#x5339;&#x914D;</div>
+                                            <div class="stage-sub">&#x5C06;&#x6307;&#x4EE4;&#x7CBE;&#x786E;&#x6620;&#x5C04;&#x81F3;&#x76F8;&#x5173;&#x5408;&#x540C;</div>
+                                        </div>
+                                        <span class="stage-badge">&#x6BEB;&#x79D2;&#x7EA7;</span>
+                                    </button>
+                                    <button type="button" class="pipeline-stage-pill " data-stage="sa2" onclick="highlightPipelineStage('sa2')">
+                                        <div class="stage-num">02</div>
+                                        <div class="stage-info">
+                                            <div class="stage-name">100%&#x5168;&#x7EC4;&#x5408;&#x6392;&#x67E5;</div>
+                                            <div class="stage-sub">&#x5B9A;&#x4F4D;&#x6F5C;&#x5728;&#x7684;&#x4EF7;&#x683C;&#x5BF9;&#x9F50;&#x6761;&#x6B3E;</div>
+                                        </div>
+                                        <span class="stage-badge">&#x96F6;&#x758F;&#x6F0F;</span>
+                                    </button>
+                                    <button type="button" class="pipeline-stage-pill " data-stage="opt" onclick="highlightPipelineStage('opt')">
+                                        <div class="stage-num">03</div>
+                                        <div class="stage-info">
+                                            <div class="stage-name">&#x4EA4;&#x6613;&#x4F18;&#x5316;&#x5206;&#x6790;&#x5668;</div>
+                                            <div class="stage-sub">&#x8BA1;&#x7B97;&#x6700;&#x4E25;&#x8C28;&#x7684;&#x5B89;&#x5168;&#x6298;&#x8BA9;&#x4E0A;&#x9650;</div>
+                                        </div>
+                                        <span class="stage-badge">&#x8282;&#x7EA6;&#x6210;&#x672C;</span>
+                                    </button>
+                                    <button type="button" class="pipeline-stage-pill " data-stage="sa3" onclick="highlightPipelineStage('sa3')">
+                                        <div class="stage-num">04</div>
+                                        <div class="stage-info">
+                                            <div class="stage-name">&#x4EBA;&#x5DE5;&#x5BA1;&#x6279;&#x7F51;&#x5173;</div>
+                                            <div class="stage-sub">&#x6682;&#x5B58;&#x6CD5;&#x5F8B;&#x6587;&#x4E66;&#x5E76;&#x7B49;&#x5F85;&#x7B7E;&#x6838;</div>
+                                        </div>
+                                        <span class="stage-badge">&#x5B89;&#x5168;&#x95ED;&#x9501;</span>
+                                    </button>
+                            </div>
+                            <div class="subagent-diagnostic-strip" id="subagent-diagnostic-bar"></div>
+
+                            <h4><i class="fas fa-network-wired"></i> AI&#x4E13;&#x4E1A;&#x4E13;&#x5BB6;&#x56E2;&#x8054;&#x5408;&#x4F1A;&#x5BA1;&#xFF08;&#x8D22;&#x52A1;&#x3001;&#x6CD5;&#x52A1;&#x3001;&#x98CE;&#x9669;&#x3001;&#x8FD0;&#x8425;&#xFF09;</h4>
+                            <div id="specialists-advisory-box" class="specialists-grid-2col"></div>
+
+                            <div class="ast-split-grid" style="margin-top: 1rem;">
+                                <div class="ast-box">
+                                    <h4><i class="fas fa-microchip"></i> &#x4E25;&#x5BC6;&#x5408;&#x540C;&#x89C4;&#x5219;&#x6838;&#x9A8C;&#xFF08;&#x6570;&#x5B66;&#x7EA7;&#x7CBE;&#x51C6;&#x8BC1;&#x660E;&#xFF0C;&#x7EDD;&#x65E0;AI&#x5E7B;&#x89C9;&#xFF09;</h4>
+                                    <pre id="jsonlogic-ast-code" class="ast-code-block"></pre>
+                                </div>
+                                <div class="ast-box">
+                                    <h4><i class="fas fa-magnifying-glass-chart"></i> &#x5B9A;&#x4F4D;&#x5408;&#x540C;&#x7EA6;&#x675F;&#x6761;&#x6B3E;&#xFF08;&#x5DF2;&#x81EA;&#x52A8;&#x5254;&#x9664;&#x4EC5;&#x5728;&#x6807;&#x9898;&#x51FA;&#x73B0;&#x7684;&#x65E0;&#x5173;&#x5F15;&#x7528;&#xFF09;</h4>
+                                    <div id="aho-corasick-table-wrap"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- =========================================================
+                         TAB 4: HUMAN APPROVAL GATE & TAMPER-PROOF AUDIT LOG
+                         ========================================================= -->
+                    <div id="tab-pane-gate" class="tab-pane-content" style="display: none;">
+                        <div class="acid-gate-panel" id="acid-gate-section" style="border: none; box-shadow: none;">
+                            <div class="acid-gate-header">
+                                <div>
+                                    <h4><i class="fas fa-lock"></i> &#x4EBA;&#x5DE5;&#x5BA1;&#x6279;&#x5B89;&#x5168;&#x7F51;&#x5173;&#x4E0E;&#x9632;&#x7BE1;&#x6539;&#x5BA1;&#x8BA1;&#x65E5;&#x5FD7;</h4>
+                                    <span class="acid-status-pill pending" id="acid-state-badge">&#x7B49;&#x5F85;&#x60A8;&#x7684;&#x6838;&#x51C6;&#x7B7E;&#x7F72;</span>
+                                </div>
+                                <div class="acid-chaos-controls">
+                                    <button type="button" class="chaos-btn occ-btn" onclick="simulateOccConflict()">
+                                        <i class="fas fa-users-slash"></i> &#x6D4B;&#x8BD5;&#xFF1A;&#x6A21;&#x62DF;&#x540C;&#x4E8B;&#x5E76;&#x53D1;&#x4FEE;&#x6539;&#x8BE5;&#x8BB0;&#x5F55;
+                                    </button>
+                                    <button type="button" class="chaos-btn tamper-btn" id="btn-tamper-toggle" onclick="toggleMerkleTamperSimulation()">
+                                        <i class="fas fa-bug"></i> <span id="tamper-btn-text">&#x6D4B;&#x8BD5;&#xFF1A;&#x6A21;&#x62DF;&#x5E95;&#x5C42;&#x65E5;&#x5FD7;&#x88AB;&#x6076;&#x610F;&#x7BE1;&#x6539;</span>
+                                    </button>
+                                </div>
+                            </div>
+
+                            <!-- HUMAN-IN-THE-LOOP TRANSACTIONAL GATE BUTTONS -->
+                            <div class="acid-commit-bar">
+                                <div class="acid-feedback-msg" id="acid-feedback-banner">
+                                    正在等待授权签署。AI已备齐所有审查要件与配套文件，但在您点击“批准”前，<strong>生产数据绝不会发生任何更改</strong>。
+                                </div>
+                                <div class="acid-action-buttons">
+                                    <button type="button" class="acid-btn reject" id="btn-acid-reject" onclick="executeAcidTransition('REJECTED')">
+                                        <i class="fas fa-xmark"></i> &#x53D6;&#x6D88;&#x672C;&#x6B21;&#x8BF7;&#x6C42;
+                                    </button>
+                                    <button type="button" class="acid-btn rollback" id="btn-acid-rollback" onclick="executeAcidTransition('ROLLED_BACK')" disabled>
+                                        <i class="fas fa-rotate-left"></i> &#x4E00;&#x952E;&#x64A4;&#x9500;&#xFF08;&#x56DE;&#x6EDA;&#x81F3;&#x4E0A;&#x4E00;&#x72B6;&#x6001;&#xFF09;
+                                    </button>
+                                    <button type="button" class="acid-btn confirm" id="btn-acid-confirm" onclick="executeAcidTransition('COMMITTED')">
+                                        <i class="fas fa-check-double"></i> &#x6279;&#x51C6;&#x5E76;&#x5E94;&#x7528;&#x53D8;&#x66F4;
+                                    </button>
+                                </div>
+                            </div>
+
+                            <!-- APPEND-ONLY ACTIONLOG MERKLE CHAIN TABLE -->
+                            <div class="merkle-ledger-wrap">
+                                <div class="merkle-ledger-title">
+                                    <span><i class="fas fa-link"></i> &#x5408;&#x89C4;&#x5BA1;&#x8BA1;&#x6C38;&#x4E45;&#x8D26;&#x672C;&#xFF08;&#x5177;&#x5907;&#x4E0D;&#x53EF;&#x9006;&#x5BC6;&#x7801;&#x5B66;&#x7B7E;&#x540D;&#xFF09;</span>
+                                    <span class="merkle-formula-hint">&#x6BCF;&#x6761;&#x64CD;&#x4F5C;&#x8BB0;&#x5F55;&#x5747;&#x4E0E;&#x524D;&#x5E8F;&#x54C8;&#x5E0C;&#x94FE;&#x6761;&#x7D27;&#x5BC6;&#x76F8;&#x6263;&#x3002;&#x4EFB;&#x4F55;&#x672A;&#x6388;&#x6743;&#x7684;&#x6570;&#x636E;&#x5E93;&#x76F4;&#x63A5;&#x6539;&#x52A8;&#x90FD;&#x4F1A;&#x88AB;&#x5B9E;&#x65F6;&#x62E6;&#x622A;&#x62A5;&#x6848;&#x3002;</span>
+                                </div>
+                                <div class="table-responsive">
+                                    <table class="merkle-ledger-table">
+                                        <thead>
+                                            <tr>
+                                                <th>&#x65E5;&#x5FD7;&#x7F16;&#x53F7;</th>
+                                                <th>&#x65F6;&#x95F4;&#x6233; (UTC)</th>
+                                                <th>&#x64CD;&#x4F5C;&#x4E3B;&#x4F53;</th>
+                                                <th>&#x64CD;&#x4F5C;&#x5185;&#x5BB9;&#x4E0E;&#x76EE;&#x6807;&#x65B9;</th>
+                                                <th>&#x8BB0;&#x5F55;&#x7248;&#x672C;&#x5FEB;&#x7167;&#x6838;&#x9A8C;</th>
+                                                <th>&#x72B6;&#x6001;</th>
+                                                <th>&#x524D;&#x5E8F;&#x5370;&#x7AE0;</th>
+                                                <th>&#x6570;&#x5B57;&#x7B7E;&#x540D; (SHA-256)</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody id="merkle-ledger-tbody"></tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+    </main>
+
+        <nav class="footer-sitemap" aria-label="Footer Navigation">
+            <div class="container sitemap-grid">
+                    <div class="sitemap-column">
+                        <h4>&#x516C;&#x53F8;</h4>
+                        <ul>
+                                <li>
+                                    <a href="index.html">
+                                        &#x9996;&#x9875;
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="about.html">
+                                        &#x5173;&#x4E8E;&#x6211;&#x4EEC;
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="partners.html">
+                                        &#x5408;&#x4F5C;&#x4F19;&#x4F34;&#x4E0E;&#x8054;&#x76DF;
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="careers.html">
+                                        &#x62DB;&#x8D24;&#x7EB3;&#x58EB;
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="contact.html">
+                                        &#x8054;&#x7CFB;&#x4E0E;&#x54A8;&#x8BE2;
+                                    </a>
+                                </li>
+                        </ul>
+                    </div>
+                    <div class="sitemap-column">
+                        <h4>&#x5E73;&#x53F0;&#x4E0E;&#x670D;&#x52A1;</h4>
+                        <ul>
+                                <li>
+                                    <a href="offline-ai-desktop-app.html">
+                                        &#x7269;&#x7406;&#x9694;&#x79BB; (Air-Gapped) &#x8FB9;&#x7F18;&#x4E00;&#x4F53;&#x673A;
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="secure-on-premise-ai-server.html">
+                                        &#x5B89;&#x5168;&#x672C;&#x5730;&#x90E8;&#x7F72;&#x670D;&#x52A1;&#x5668;
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="agentic-ai-workflows.html">
+                                        &#x4EE3;&#x7406;&#x578B;AI&#x5DE5;&#x4F5C;&#x6D41;
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="services.html">
+                                        &#x670D;&#x52A1;&#x4E0E;&#x89E3;&#x51B3;&#x65B9;&#x6848;
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="custom-ai-agent-development.html">
+                                        &#x5B9A;&#x5236;AI&#x4EE3;&#x7406;&#x5F00;&#x53D1;
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="ai-strategy-consulting.html">
+                                        AI&#x6218;&#x7565;&#x54A8;&#x8BE2;
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="security.html">
+                                        &#x5B89;&#x5168;&#x6982;&#x89C8;
+                                    </a>
+                                </li>
+                        </ul>
+                    </div>
+                    <div class="sitemap-column">
+                        <h4>&#x6280;&#x672F;&#x4E0E;&#x5E94;&#x7528;&#x6848;&#x4F8B;</h4>
+                        <ul>
+                                <li>
+                                    <a href="private-rag-enterprise-search.html">
+                                        &#x79C1;&#x6709;RAG&#x4E0E;&#x4F01;&#x4E1A;&#x641C;&#x7D22;
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="gpu-accelerated-local-ai.html">
+                                        GPU&#x52A0;&#x901F;&#x672C;&#x5730;AI
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="run-ai-locally-without-internet.html">
+                                        &#x96F6;&#x4FE1;&#x4EFB;&#x4E3B;&#x6743;&#x6267;&#x884C;
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="ai-data-privacy-compliance.html">
+                                        &#x6570;&#x636E;&#x9690;&#x79C1;&#x5408;&#x89C4;
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="secure-local-ai-for-legal-finance.html">
+                                        &#x6CD5;&#x5F8B;&#x4E0E;&#x91D1;&#x878D;AI
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="ai-predictive-maintenance-manufacturing.html">
+                                        &#x9884;&#x6D4B;&#x6027;&#x7EF4;&#x62A4;
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="ai-customer-support-automation.html">
+                                        &#x5BA2;&#x6237;&#x652F;&#x6301;&#x81EA;&#x52A8;&#x5316;
+                                    </a>
+                                </li>
+                        </ul>
+                    </div>
+                    <div class="sitemap-column">
+                        <h4>&#x8D44;&#x6E90;&#x4E0E;&#x652F;&#x6301;</h4>
+                        <ul>
+                                <li>
+                                    <a href="stress-test-lab.html">
+                                        &#x538B;&#x529B;&#x6D4B;&#x8BD5;&#x5B9E;&#x9A8C;&#x5BA4;
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="demo.html">
+                                        &#x5B9E;&#x65F6;&#x6F14;&#x793A;
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="case-studies.html">
+                                        &#x6848;&#x4F8B;&#x7814;&#x7A76;
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="resources.html">
+                                        &#x8D44;&#x6E90;&#x4E0E;&#x89C1;&#x89E3;
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="faqs.html">
+                                        &#x5E38;&#x89C1;&#x95EE;&#x9898;
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="legal.html">
+                                        &#x6CD5;&#x5F8B;&#x4E0E;&#x653F;&#x7B56;
+                                    </a>
+                                </li>
+                        </ul>
+                    </div>
+            </div>
+        </nav>
+
+    <footer>
+        <div class="container">
+            <p>&#xA9; 2025 &#x667A;&#x80FD;&#x4F01;&#x4E1A;&#x96C6;&#x56E2;&#x3002;&#x4FDD;&#x7559;&#x6240;&#x6709;&#x6743;&#x5229;&#x3002;</p>
+        </div>
+    </footer>
+
+    <script src="/js/swiper-bundle.min.js"></script>
+    <script src="/js/cdn.min.js" defer></script>
+    <script src="/js/gsap.min.js"></script>
+    <script src="/js/DrawSVGPlugin.min.js"></script>
+
+    <script type="module" src="/js/themeToggle.js"></script>
+    <script type="module">
+        import { toggleTheme, getCurrentTheme } from '/js/themeToggle.js';
+        const checkbox = document.getElementById('theme-checkbox');
+        const themeLabel = document.getElementById('theme-label');
+
+        if (getCurrentTheme() === 'dark') {
+            checkbox.checked = true;
+            themeLabel.textContent = '深色模式';
+        } else {
+            themeLabel.textContent = '浅色模式';
+        }
+
+        checkbox.addEventListener('change', () => {
+            toggleTheme();
+            themeLabel.textContent = checkbox.checked ? '深色模式' : '浅色模式';
+        });
+    </script>
+
+    <button id="back-to-top" aria-label="Back to Top">&#x9876;&#x90E8;</button>
+
+    
+<script>
+    // 1. Load Localized Dictionaries & Scenarios from JSON Model
+    const SCENARIOS = [{"Id":"sec1_energy","SectorBadge":"\u80FD\u6E90\u4E0E\u5DE5\u4E1A\u67A2\u7EBD","Title":"AntwerpEnergyHub - \u7535\u4EF7\u6298\u6263\u4E0E\u5B89\u5168\u9632\u533A\u89C4\u8303","Icon":"fa-bolt","ContainerId":"CON-3F82B110","ContainerName":"AntwerpEnergyHub","ContainerTarget":"$1,000,000,000","BaseRate":"\u57FA\u51C6\u4F9B\u7535\u8D39\u7387 2.00%","ActionVerb":"\u6388\u4E88\u7535\u4EF7\u8D39\u7387\u6298\u6263","PromptTemplate":"\u5411AntwerpEnergyHub\u7684Port Terminal Operator\u63D0\u4F9B{concession} bps\u7684\u4F9B\u7535\u8D39\u7387\u6298\u6263{stepUpClause}\u3002","RecipientId":"PAR-9A21C401","RecipientName":"Port Terminal Operator","RecipientJurisdiction":"US-TX","Unit":"bps","UnitType":"bps_currency","CurrencySymbol":"$","DefaultConcession":20,"MinConcession":2,"MaxConcession":40,"ConcessionStep":1,"DefaultRecipientCommitment":20,"MinRecipientCommitment":20,"MaxRecipientCommitment":150,"CommitmentStep":5,"CommitmentUnit":"$M","Tier1Ceiling":250000,"Tier3Threshold":250000,"Tier1Label":"\u7B2C1\u5C42\uFF1A\u73B0\u573A\u8FD0\u8425\u4E3B\u7BA1","Tier1SignOff":"\u73B0\u573A\u8FD0\u8425\u4E3B\u7BA1\uFF082\u65E5\u5FEB\u901F\u901A\u9053\u6279\u590D\uFF09","Tier2Label":"\u7B2C2\u5C42\uFF1A\u6CD5\u52A1\u4E0E\u5408\u89C4\u603B\u76D1","Tier2SignOff":"\u5408\u89C4\u5B98\u53CA\u6CD5\u52A1\u987E\u95EE\uFF085\u65E5\u89C4\u8303\u5BA1\u67E5\uFF09","Tier3Label":"\u7B2C3\u5C42\uFF1A\u6267\u884C\u8463\u4E8B\u4F1A\u4E0E\u603B\u6CD5\u5F8B\u987E\u95EE","Tier3SignOff":"\u603B\u6CD5\u5F8B\u987E\u95EE\u3001CFO\u53CA\u6267\u884C\u8463\u4E8B\uFF0810\u65E5\u4E66\u9762\u901A\u62A5\u5907\u6848\uFF09","VariantToggleLabel":"\u542F\u52A8\u7D27\u6025\u5B89\u5168\u9632\u533A\u7279\u522B\u8C41\u514D\uFF08\u514D\u9664\u4EF7\u683C\u5BF9\u9F50\u8FDE\u5E26\uFF09","VariantEffect":"safe_harbor","SourceDoc":"Energy_Grid_Charter.pdf","SectionRef":"\u7B2C1\u6761 - \u533A\u57DF\u7535\u7F51\u5BB9\u91CF\u5206\u914D\u4E0E\u540C\u7B49\u8D39\u7387\u4FDD\u62A4\u6761\u9879","ChunkId":"Clause-1.4","VerbatimQuote":"AntwerpEnergyHub manages $1,000,000,000 in grid capacity at a 2.00% base tariff... Under the Most Favored Nation (MFN) clause, if AntwerpEnergyHub grants a lower tariff rate to any operator with an equal or smaller commitment, anchor partners BASF Antwerp ($140M) and RWE Ruhr ($110M) are entitled to claim that same lower rate.","Counterparties":[{"Id":"PAR-1042B8","Name":"BASF Antwerp Chemical Plant","CommitmentM":140,"ThresholdM":50,"ParityRequired":true,"CovenantId":"COV-8192A1","RuleType":"\u4EF7\u683C\u5BF9\u9F50\u6761\u6B3E","Jurisdiction":"BE","Locale":"nl-BE","SignalBadge":"\u5316\u5DE5\u5382\u5B89\u5168\u9694\u79BB\u9632\u533A\uFF1A5,000\u7C73\uFF08\u8FBE\u6807\uFF09","NoticeTitle":"Formele Kennisgeving van Tariefpariteit en Keuzerecht","NoticeBody":"Formele kennisgeving voor BASF Antwerp Chemical Plant (BE): De voorgestelde tariefkorting ({concession} bps) in AntwerpEnergyHub activeert uw contractuele recht op hetzelfde tarief."},{"Id":"PAR-2091C4","Name":"RWE Ruhr Power Station","CommitmentM":110,"ThresholdM":50,"ParityRequired":true,"CovenantId":"COV-8192A2","RuleType":"\u4EF7\u683C\u5BF9\u9F50\u6761\u6B3E","Jurisdiction":"DE","Locale":"de-DE","SignalBadge":"\u7535\u5382\u5B89\u5168\u9694\u79BB\u9632\u533A\uFF1A3,500\u7C73\uFF08\u8FBE\u6807\uFF09","NoticeTitle":"Formelle Mitteilung \u00FCber Tarifparit\u00E4t und Wahlrecht","NoticeBody":"Formelle Mitteilung f\u00FCr RWE Ruhr Power Station (DE): Die vorgeschlagene Tarifsenkung ({concession} bps) in AntwerpEnergyHub l\u00F6st Ihr vertragliches Recht auf Tarifanpassung aus."}],"TransitiveHop":null,"Specialists":[{"Agent":"GeoAnalyst AI","Role":"\u5DE5\u4E1A\u8BBE\u65BD\u7269\u7406\u7F13\u51B2\u533A\u5408\u89C4\u6838\u9A8C","Status":"VERIFIED","Text":"\u5B9E\u5730\u6392\u67E5\u4E86\u4E24\u4E2A\u91CD\u70B9\u5382\u533A\u7684\u7269\u7406\u5B89\u5168\u95F4\u8DDD\uFF1A\u5DF4\u65AF\u592B\u5B89\u7279\u536B\u666E\u5382\u533A\uFF085,000\u7C73\u5B89\u5168\u7EA2\u7EBF\u8FBE\u6807\uFF09\u4E0E\u83B1\u8335\u96C6\u56E2\u9C81\u5C14\u7535\u5382\uFF083,500\u7C73\u7F13\u51B2\u8DDD\u79BB\u8FBE\u6807\uFF09\u3002"},{"Agent":"Translator AI","Role":"\u6D89\u5916\u6CD5\u5F8B\u544A\u77E5\u6587\u4E66\u591A\u8BED\u79CD\u4E25\u5BC6\u62DF\u5B9A","Status":"VERIFIED","Text":"\u81EA\u52A8\u751F\u6210\u7B26\u5408\u5F53\u5730\u6CD5\u5F8B\u89C4\u8303\u7684\u8377\u5170\u8BED\uFF08nl-BE\uFF09\u548C\u5FB7\u8BED\uFF08de-DE\uFF09\u6B63\u5F0F\u544A\u77E5\u51FD\uFF0C\u5404\u7B7E\u7EA6\u6CD5\u4EBA\u5B9E\u4F53\u540D\u79F0\u53CA\u4EE3\u7801\u5168\u6D41\u7A0B\u9501\u5B9A\u4E0D\u88AB\u8BEF\u8BD1\u3002"}]},{"Id":"sec3_pharma","SectorBadge":"\u533B\u836F\u51B7\u94FE\u7269\u6D41\u4E0E\u4F9B\u5E94\u94FE","Title":"EuroLogisticsHub - \u8DE8\u8D70\u5ECA\u4F20\u5BFC\u5916\u6EA2\u4E0E\u5C65\u7EA6\u65F6\u6548","Icon":"fa-snowflake","ContainerId":"CON-5D19A200","ContainerName":"EuroLogisticsHub","ContainerTarget":"$900,000,000","BaseRate":"\u57FA\u51C6\u7269\u6D41\u64CD\u4F5C\u8D39\u7387 2.00%","ActionVerb":"\u6388\u4E88\u51B7\u94FE\u64CD\u4F5C\u8D39\u7387\u6298\u6263","PromptTemplate":"\u5411EuroLogisticsHub\u7684Regional Express Carrier\u63D0\u4F9B{concession} bps\u7684\u64CD\u4F5C\u8D39\u7387\u6298\u6263{stepUpClause}\u3002","RecipientId":"PAR-7C11E309","RecipientName":"Regional Express Carrier","RecipientJurisdiction":"US-NY","Unit":"bps","UnitType":"bps_currency","CurrencySymbol":"$","DefaultConcession":30,"MinConcession":5,"MaxConcession":50,"ConcessionStep":1,"DefaultRecipientCommitment":15,"MinRecipientCommitment":15,"MaxRecipientCommitment":170,"CommitmentStep":5,"CommitmentUnit":"$M","Tier1Ceiling":250000,"Tier3Threshold":250000,"Tier1Label":"\u7B2C1\u5C42\uFF1A\u7269\u6D41\u57FA\u5730\u603B\u76D1","Tier1SignOff":"\u7269\u6D41\u57FA\u5730\u603B\u76D1\uFF082\u65E5\u5FEB\u901F\u901A\u9053\u6279\u590D\uFF09","Tier2Label":"\u7B2C2\u5C42\uFF1A\u5168\u7403\u4F9B\u5E94\u94FE\u6CD5\u5F8B\u987E\u95EE","Tier2SignOff":"\u4F9B\u5E94\u94FE\u4E13\u5C5E\u6CD5\u52A1\u56E2\u961F\uFF085\u65E5\u6DF1\u5EA6\u5BA1\u67E5\uFF09","Tier3Label":"\u7B2C3\u5C42\uFF1A\u5168\u7403\u4F9B\u5E94\u94FE\u526F\u603B\u88C1\u4E0E\u9996\u5E2D\u8D22\u52A1\u5B98","Tier3SignOff":"\u4F9B\u5E94\u94FE\u5168\u7403\u526F\u603B\u88C1\u3001\u603B\u6CD5\u5F8B\u987E\u95EE\u53CACFO\uFF0810\u65E5\u8054\u7B7E\u901A\u544A\uFF09","VariantToggleLabel":"\u8BBE\u7F6E\u6838\u5FC3\u67A2\u7EBD\u98CE\u9669\u9694\u79BB\u5899\uFF08\u660E\u786E\u5C06\u6CD5\u5170\u514B\u798F\u8054\u7A0B\u8D70\u5ECA\u6392\u9664\u5728\u5916\uFF09","VariantEffect":"sever_hop","SourceDoc":"Pharma_ColdChain_Master_Agreement.pdf","SectionRef":"\u7B2C1\u6761\u53CA\u7B2C2\u6761 - \u8054\u7A0B\u8DE8\u533A\u57DF\u51B7\u94FE\u8D70\u5ECA\u8D39\u7387\u5BF9\u9F50\u534F\u8BAE","ChunkId":"Clause-2.1","VerbatimQuote":"If EuroLogisticsHub grants a handling fee discount to any carrier, anchor shippers Sanofi Biologics ($160M) and Bayer Pharma ($90M) are entitled to the same lower fee. Because EuroLogisticsHub is contractually linked to FrankfurtColdCorridor, discounts also trigger matching rights for Roche Diagnostics ($70M).","Counterparties":[{"Id":"PAR-3310F1","Name":"Sanofi Biologics Freight","CommitmentM":160,"ThresholdM":50,"ParityRequired":true,"CovenantId":"COV-9921B1","RuleType":"\u8D39\u7387\u5BF9\u9F50\u6761\u6B3E","Jurisdiction":"FR","Locale":"fr-FR","SignalBadge":"\u5230\u8D27\u4EA4\u671F\uFF1A10\u5929 | \u7F3A\u8D27\u8BB0\u5F55\uFF1A4\u6B21","NoticeTitle":"Notification Formelle de Parit\u00E9 Tarifaire","NoticeBody":"Notification formelle pour Sanofi Biologics Freight (FR) : La remise tarifaire ({concession} bps) accord\u00E9e dans EuroLogisticsHub active votre droit au tarif pr\u00E9f\u00E9rentiel."},{"Id":"PAR-3310F2","Name":"Bayer Pharma Distribution","CommitmentM":90,"ThresholdM":50,"ParityRequired":true,"CovenantId":"COV-9921B2","RuleType":"\u8D39\u7387\u5BF9\u9F50\u6761\u6B3E","Jurisdiction":"DE","Locale":"de-DE","SignalBadge":"\u5230\u8D27\u4EA4\u671F\uFF1A7\u5929 | \u7F3A\u8D27\u8BB0\u5F55\uFF1A2\u6B21","NoticeTitle":"Formelle Mitteilung \u00FCber Frachtraten-Parit\u00E4t","NoticeBody":"Formelle Mitteilung f\u00FCr Bayer Pharma Distribution (DE): Der vorgeschlagene Geb\u00FChrenrabatt ({concession} bps) in EuroLogisticsHub l\u00F6st Ihr Anpassungsrecht aus."}],"TransitiveHop":{"HopDepth":1,"RelationType":"\u8D70\u5ECA\u7ED1\u5B9A\u5173\u8054\u534F\u8BAE","ContainerId":"CON-8821F0","ContainerName":"FrankfurtColdCorridor","CounterpartyName":"Roche Diagnostics Logistics","CommitmentM":70,"ThresholdM":50},"Specialists":[{"Agent":"Root Cause Analysis AI","Role":"\u4F9B\u5E94\u94FE\u7269\u6D41\u74F6\u9888\u4E0E\u8DE8\u533A\u4F20\u5BFC\u6392\u67E5","Status":"REVIEW_REQUIRED","Text":"\u7CFB\u7EDF\u8B66\u544A\uFF1A\u5BF9\u6B27\u6D32\u7269\u6D41\u4E2D\u5FC3\u7684\u6298\u6263\u5C06\u7A7F\u900F\u81F3\u6CD5\u5170\u514B\u798F\u51B7\u94FE\u8D70\u5ECA\uFF08\u6D89\u53CA\u7F57\u6C0F\u8BCA\u65AD7,000\u4E07\u7F8E\u5143\u4E1A\u52A1\uFF09\uFF1B\u4E14\u8D5B\u8BFA\u83F2\u5F53\u524D\u8D27\u8FD0\u7EBF\u5B9E\u6D4B\u4EA4\u671F\u5DF2\u62C9\u957F\u81F310\u5929\u5E76\u51FA\u73B04\u6B21\u65AD\u8D27\u3002"},{"Agent":"OmniPredict AI","Role":"5\u5E74\u5468\u671F\u7EFC\u5408\u8425\u6536\u5F71\u54CD\u6D4B\u7B97","Status":"VERIFIED","Text":"\u5168\u9762\u6D4B\u7B97\u4E86\u672A\u67655\u5E74\u5408\u540C\u5468\u671F\u5185\uFF0C\u4E24\u4E2A\u4E92\u8054\u51B7\u94FE\u67A2\u7EBD\u56E0\u4EF7\u683C\u5BF9\u9F50\u53EF\u80FD\u9762\u4E34\u7684\u7D2F\u8BA1\u7D22\u8D54\u8FFD\u7D22\u655E\u53E3\u3002"}]},{"Id":"sec6_aerospace","SectorBadge":"\u822A\u7A7A\u822A\u5929\u4E0E\u56FD\u9632\u5DE5\u4E1A\u5236\u9020","Title":"EuroDroneConsortium - \u5173\u952E\u5206\u5305\u5546\u7279\u8BB8\u6743\u8D39\u4E0A\u9650\u4E0E\u9884\u7B97\u7BA1\u63A7","Icon":"fa-fighter-jet","ContainerId":"CON-9012D400","ContainerName":"EuroDroneConsortium","ContainerTarget":"$1,500,000,000","BaseRate":"\u7279\u8BB8\u6743\u57FA\u51C6\u63D0\u6210 2.50%","ActionVerb":"\u6388\u4E88\u7279\u8BB8\u6743\u63D0\u6210\u51CF\u514D","PromptTemplate":"\u5411EuroDroneConsortium\u7684Composite Rotor Supplier\u63D0\u4F9B{concession} bps\u7684\u7279\u8BB8\u6743\u63D0\u6210\u51CF\u514D{stepUpClause}\u3002","RecipientId":"PAR-6612A0","RecipientName":"Composite Rotor Supplier","RecipientJurisdiction":"US-WA","Unit":"bps","UnitType":"bps_currency","CurrencySymbol":"$","DefaultConcession":40,"MinConcession":5,"MaxConcession":60,"ConcessionStep":1,"DefaultRecipientCommitment":30,"MinRecipientCommitment":30,"MaxRecipientCommitment":320,"CommitmentStep":10,"CommitmentUnit":"$M","Tier1Ceiling":1000000,"Tier3Threshold":1000000,"Tier1Label":"\u7B2C1\u5C42\uFF1A\u8054\u5408\u9879\u76EE\u603B\u76D1\uFF08\u003C 100\u4E07\u7F8E\u5143\uFF09","Tier1SignOff":"\u8054\u5408\u4F53\u9879\u76EE\u603B\u76D1\uFF082\u65E5\u5FEB\u6377\u5BA1\u6279\uFF09","Tier2Label":"\u7B2C2\u5C42\uFF1A\u9632\u52A1\u91C7\u8D2D\u4E0E\u6CD5\u52A1\u5408\u89C4\u5904","Tier2SignOff":"\u56FD\u9632\u91C7\u8D2D\u6CD5\u52A1\u53CA\u519B\u54C1\u51FA\u53E3\u7BA1\u5236\u529E\u516C\u5BA4\uFF085\u65E5\u89C4\u8303\u5BA1\u67E5\uFF09","Tier3Label":"\u7B2C3\u5C42\uFF1A\u56FD\u9632\u8054\u5408\u4F53\u6700\u9AD8\u6267\u884C\u7406\u4E8B\u4F1A","Tier3SignOff":"\u56FD\u9632\u6267\u884C\u59D4\u5458\u4F1A\u3001\u603B\u6CD5\u5F8B\u987E\u95EE\u53CACFO\uFF0810\u65E5\u6CD5\u5B9A\u901A\u62A5\uFF09","VariantToggleLabel":"\u83B7\u53D6\u7A7A\u5BA2\u9632\u52A1\uFF083\u4EBF\u7F8E\u5143\u4E3B\u627F\u5305\u65B9\uFF09\u51FA\u5177\u7684\u5355\u9879\u514D\u8FFD\u7D22\u8C41\u514D\u51FD","VariantEffect":"waive_first","SourceDoc":"EuroDrone_Consortium_Charter.pdf","SectionRef":"\u7B2C4.2\u8282 - \u4E3B\u603B\u88C5\u96C6\u6210\u5546\u7279\u8BB8\u6743\u8D39\u7387\u4E25\u5BC6\u5E73\u8861\u6761\u6B3E","ChunkId":"Clause-4.2","VerbatimQuote":"The EuroDroneConsortium program ($1.5B total volume) enforces strict royalty parity. If any supplier receives a royalty reduction, prime contractors Airbus Defense ($300M) and Thales Avionics ($200M) are entitled to the same reduction. Any ripple cost exceeding $1,000,000/yr requires full Defense Executive Board approval.","Counterparties":[{"Id":"PAR-4011A1","Name":"Airbus Defense Systems","CommitmentM":300,"ThresholdM":100,"ParityRequired":true,"CovenantId":"COV-4011C1","RuleType":"\u7279\u8BB8\u6743\u8D39\u7387\u5BF9\u9F50","Jurisdiction":"FR","Locale":"fr-FR","SignalBadge":"\u56FE\u5362\u5179\u98DE\u884C\u6D4B\u8BD5\u4E13\u5C5E\u7A7A\u57DF\uFF1A4,000\u7C73","NoticeTitle":"Notification d\u0027Ajustement de Redevances - Consortium EuroDrone","NoticeBody":"Notification officielle pour Airbus Defense Systems (FR) : La concession de redevance ({concession} bps) accord\u00E9e dans EuroDroneConsortium active votre clause de parit\u00E9."},{"Id":"PAR-4011A2","Name":"Thales Avionics Division","CommitmentM":200,"ThresholdM":100,"ParityRequired":true,"CovenantId":"COV-4011C2","RuleType":"\u7279\u8BB8\u6743\u8D39\u7387\u5BF9\u9F50","Jurisdiction":"FR","Locale":"fr-FR","SignalBadge":"\u56FD\u9632\u4FDD\u5BC6\u4E0E\u9002\u822A\u8D28\u91CF\u4E13\u9879\u5BA1\u8BA1\u8FFD\u8E2A\u4E2D","NoticeTitle":"Notification de Parit\u00E9 Consortium - Thales Avionics","NoticeBody":"Notification officielle pour Thales Avionics Division (FR) : Ajustement de redevance ({concession} bps) enregistr\u00E9 sous le plafond de gouvernance du programme."}],"TransitiveHop":null,"Specialists":[{"Agent":"GeoAnalyst AI","Role":"\u9650\u5236\u6027\u7A7A\u57DF\u53CA\u5382\u533A\u9632\u52A1\u5B89\u5168\u5468\u754C\u6838\u9A8C","Status":"VERIFIED","Text":"\u6838\u51C6\u4E86\u56FE\u5362\u5179\u98DE\u884C\u8BD5\u98DE\u533A\uFF08\u5317\u7EAC43.6290\u5EA6\uFF0C\u4E1C\u7ECF1.3638\u5EA6\uFF0C4,000\u7C73\u53D7\u9650\u7F13\u51B2\u533A\uFF09\u5B8C\u5168\u5951\u5408\u9879\u76EE\u8054\u5408\u4FDD\u5BC6\u6761\u4F8B\u3002"},{"Agent":"Root Cause Analysis AI","Role":"\u5173\u952E\u90E8\u4EF6\u4F9B\u5E94\u5546\u5B9E\u9645\u826F\u54C1\u7387\u4E0E\u6210\u672C\u5012\u6302\u5BA1\u67E5","Status":"VERIFIED","Text":"\u6BD4\u5BF9\u6838\u5B9E\u4E86\u78B3\u7EA4\u7EF4\u65CB\u7FFC\u6279\u6B21\u5236\u9020\u826F\u7387\u4E0E\u539F\u6750\u6599\u635F\u8017\u5355\u636E\uFF0C\u8BC1\u5B9E\u8BE5\u4F9B\u5E94\u5546\u7533\u8BF7\u63D0\u6210\u8BA9\u5229\u7684\u4E3B\u5F20\u5177\u6709\u5B9E\u8D28\u6210\u672C\u4F9D\u636E\u3002"}]},{"Id":"sec7_hvdc","SectorBadge":"\u7535\u529B\u7535\u7F51\u4E0E\u516C\u7528\u4E8B\u4E1A\uFF08\u7269\u7406\u8D1F\u8377\uFF09","Title":"NorthSeaHVDCSubstation - \u975E\u8D27\u5E01\u5316\u7269\u7406\u5146\u74E6\uFF08MW\uFF09\u8D1F\u8377\u8C03\u5EA6\u5E73\u8861","Icon":"fa-plug","ContainerId":"CON-8A91D004","ContainerName":"NorthSeaHVDCSubstation","ContainerTarget":"500 MW","BaseRate":"\u5168\u7AD9\u63A5\u5165\u5BB9\u91CF 500 MW","ActionVerb":"\u6388\u4E88\u5F03\u7535\u524A\u51CF\u8C41\u514D\u6743","PromptTemplate":"\u5411NorthSeaHVDCSubstation\u7684Backup Peaker Unit\u63D0\u4F9B{concession} MW\u7684\u8D1F\u8377\u524A\u51CF\u8C41\u514D\u989D\u5EA6{stepUpClause}\u3002","RecipientId":"PAR-5E10C221","RecipientName":"Backup Peaker Unit","RecipientJurisdiction":"NL","Unit":"MW","UnitType":"physical_mw","CurrencySymbol":"","DefaultConcession":50,"MinConcession":5,"MaxConcession":100,"ConcessionStep":5,"DefaultRecipientCommitment":25,"MinRecipientCommitment":25,"MaxRecipientCommitment":220,"CommitmentStep":15,"CommitmentUnit":"MW","Tier1Ceiling":35,"Tier3Threshold":35,"Tier1Label":"\u7B2C1\u5C42\uFF1A\u5F53\u73ED\u7535\u7F51\u8C03\u5EA6\u957F","Tier1SignOff":"\u5F53\u73ED\u7535\u7F51\u8C03\u5EA6\u4E3B\u4EFB\uFF08\u6307\u4EE4\u5373\u523B\u4E0B\u8FBE\u751F\u6548\uFF09","Tier2Label":"\u7B2C2\u5C42\uFF1A\u7279\u9AD8\u538B\u6362\u6D41\u7AD9\u4E3B\u4EFB\u5DE5\u7A0B\u5E08","Tier2SignOff":"\u6362\u6D41\u7AD9\u603B\u5DE5\u56E2\u961F\uFF082\u65E5\u6280\u672F\u5B89\u5168\u6027\u4F1A\u5546\uFF09","Tier3Label":"\u7B2C3\u5C42\uFF1A\u533A\u57DF\u7535\u7F51\u6700\u9AD8\u8C03\u5EA6\u7BA1\u7406\u59D4\u5458\u4F1A","Tier3SignOff":"\u603B\u8C03\u5EA6\u957F\u53CA\u9AD8\u538B\u76F4\u6D41\u5B89\u5168\u7763\u5BDF\u5C40\uFF0810\u65E5\u4E25\u5BC6\u8BBA\u8BC1\u4F1A\u7B7E\uFF09","VariantToggleLabel":"\u5207\u6362\u4E3A\u5C16\u5CF0\u5907\u7528\u7535\u7F51\u4FDD\u4F9B\u6A21\u5F0F\uFF08\u5C06\u5B89\u5168\u8C03\u5EA6\u4E0A\u9650\u4ECE35 MW\u6269\u5145\u81F3122.5 MW\uFF09","VariantEffect":"raise_mw_ceiling","SourceDoc":"HVDC_Substation_Operating_Charter.pdf","SectionRef":"\u7B2C1\u6761 - \u7269\u7406\u5146\u74E6\u8D1F\u8377\u5E76\u7F51\u914D\u989D\u4E0E\u516C\u5E73\u8C03\u5EA6\u6761\u6B3E","ChunkId":"Clause-1.1","VerbatimQuote":"NorthSeaHVDCSubstation manages 500 MW of physical grid capacity. Under the Load Parity SLA, if any generator is granted a power curtailment exemption (in MW), anchor generators Offshore Wind Array Alpha (200 MW) and Hydrogen Electrolyzer Plant (150 MW) are entitled to an identical MW exemption.","Counterparties":[{"Id":"PAR-7011W1","Name":"Offshore Wind Array Alpha","CommitmentM":200,"ThresholdM":100,"ParityRequired":true,"CovenantId":"COV-7011L1","RuleType":"\u5146\u74E6\u8D1F\u8377\u5BF9\u9F50\u6761\u6B3E","Jurisdiction":"NL","Locale":"nl-NL","SignalBadge":"\u6838\u51C6\u57FA\u51C6\u8D1F\u8377\uFF1A200 MW | \u4EA4\u6D41A\u6BB5\u6BCD\u7EBF","NoticeTitle":"Kennisgeving van Fysieke Belastingspariteit (Megawatt)","NoticeBody":"Kennisgeving voor Offshore Wind Array Alpha (NL): Een afschakelingsvrijstelling van {concession} MW in NorthSeaHVDCSubstation activeert uw recht op gelijke netcapaciteit."},{"Id":"PAR-7011W2","Name":"Hydrogen Electrolyzer Plant","CommitmentM":150,"ThresholdM":100,"ParityRequired":true,"CovenantId":"COV-7011L2","RuleType":"\u5146\u74E6\u8D1F\u8377\u5BF9\u9F50\u6761\u6B3E","Jurisdiction":"DE","Locale":"de-DE","SignalBadge":"\u6838\u51C6\u57FA\u51C6\u8D1F\u8377\uFF1A150 MW | \u4EA4\u6D41B\u6BB5\u6BCD\u7EBF","NoticeTitle":"Mitteilung \u00FCber Lastparit\u00E4ts-Garantie (Megawatt)","NoticeBody":"Mitteilung f\u00FCr Hydrogen Electrolyzer Plant (DE): Die Freigabe von {concession} MW in NorthSeaHVDCSubstation l\u00F6st Ihren Anspruch auf gleiche Netzkapazit\u00E4t aus."}],"TransitiveHop":null,"Specialists":[{"Agent":"Decision Tree AI","Role":"\u7535\u7F51\u7269\u7406\u8D1F\u8377\u62D3\u6251\u6D41\u5411\u5B9E\u65F6\u8FD0\u7B97","Status":"REVIEW_REQUIRED","Text":"\u7CBE\u51C6\u8BC6\u522B\u5230\u672C\u6B21\u8FD0\u7B97\u4E3A\u7269\u7406\u5DE5\u5B66\u5355\u4F4D\uFF08\u5146\u74E6\u800C\u975E\u8D27\u5E01\uFF09\u3002\u56E0\u6D89\u53CA\u5916\u6EA2\u603B\u8D1F\u8377\u5DF2\u7A81\u7834\u5168\u7AD9\u88C5\u673A\u5BB9\u91CF\u768410%\uFF0C\u6309\u5B89\u5168\u7EA2\u7EBF\u5347\u7EA7\u81F3\u6700\u9AD8\u8C03\u5EA6\u59D4\u5458\u4F1A\u6279\u51C6\u3002"}]},{"Id":"sec8_pe_fund","SectorBadge":"\u79C1\u52DF\u80A1\u6743\u6295\u8D44\u3001\u5E76\u8D2D\u4E0E\u6CD5\u52A1","Title":"ApexGlobalBuyoutVIII - \u4FA7\u51FD\u9644\u7EA6\u4FEE\u8BA2\u4E0ELP\u7BA1\u7406\u8D39\u5BF9\u9F50","Icon":"fa-scale-balanced","ContainerId":"CON-1182F900","ContainerName":"ApexGlobalBuyoutVIII","ContainerTarget":"$2,000,000,000","BaseRate":"\u57FA\u51C6\u7BA1\u7406\u8D39\u7387 1.75%","ActionVerb":"\u6388\u4E88\u57FA\u91D1\u7BA1\u7406\u8D39\u4F18\u60E0\u51CF\u514D","PromptTemplate":"\u5411ApexGlobalBuyoutVIII\u7684Seed Co-Invest Vehicle\u63D0\u4F9B{concession} bps\u7684\u7BA1\u7406\u8D39\u4F18\u60E0\u51CF\u514D{stepUpClause}\u3002","RecipientId":"PAR-8812S0","RecipientName":"Seed Co-Invest Vehicle","RecipientJurisdiction":"US-DE","Unit":"bps","UnitType":"bps_currency","CurrencySymbol":"$","DefaultConcession":20,"MinConcession":5,"MaxConcession":45,"ConcessionStep":1,"DefaultRecipientCommitment":25,"MinRecipientCommitment":25,"MaxRecipientCommitment":200,"CommitmentStep":5,"CommitmentUnit":"$M","Tier1Ceiling":250000,"Tier3Threshold":250000,"Tier1Label":"\u7B2C1\u5C42\uFF1A\u57FA\u91D1\u8FD0\u8425\u5408\u4F19\u4EBA","Tier1SignOff":"\u57FA\u91D1\u8FD0\u8425\u5408\u4F19\u4EBA\uFF082\u65E5\u5FEB\u901F\u901A\u9053\u6279\u590D\uFF09","Tier2Label":"\u7B2C2\u5C42\uFF1A\u57FA\u91D1\u67B6\u6784\u5408\u89C4\u6CD5\u52A1\u5904","Tier2SignOff":"\u57FA\u91D1\u603B\u6CD5\u5F8B\u987E\u95EE\u53CA\u9996\u5E2D\u5408\u89C4\u5B98\uFF085\u65E5\u5408\u89C4\u5BA1\u67E5\uFF09","Tier3Label":"\u7B2C3\u5C42\uFF1A\u6295\u8D44\u51B3\u7B56\u59D4\u5458\u4F1A\u4E0E\u7BA1\u7406\u5408\u4F19\u4EBA","Tier3SignOff":"\u7BA1\u7406\u5408\u4F19\u4EBA\u3001\u6CD5\u52A1\u603B\u88C1\u53CA\u673A\u6784\u6295\u8D44\u4EBA\u54A8\u8BE2\u59D4\u5458\u4F1A\uFF0810\u65E5\u7279\u522B\u7A0B\u5E8F\uFF09","VariantToggleLabel":"\u6267\u884C\u7B2C\u4E8C\u8F6E\u8865\u5145\u4FA7\u51FD\u4FEE\u8BA2\u534F\u8BAE\uFF08\u5C06\u6700\u60E0\u56FD\u95E8\u69DB\u75315,000\u4E07\u63D0\u81F31.5\u4EBF\u7F8E\u5143\uFF09","VariantEffect":"amendment_v2","SourceDoc":"Apex_Buyout_SideLetter_Compendium.pdf","SectionRef":"\u7B2C3.1\u6761 - \u4FEE\u8BA2\u7248\u673A\u6784\u6295\u8D44\u4EBA\u6700\u60E0\u56FD\u5F85\u9047\u95E8\u69DB","ChunkId":"Clause-3.1","VerbatimQuote":"Under the Round-2 Amended Side Letter Compendium, the original $50M fee-matching threshold is replaced. Only institutional investors committing $150M or more - specifically GPIF Tokyo Pension Trust ($180M) - retain automatic fee-matching rights, while sub-$150M investors are excluded.","Counterparties":[{"Id":"PAR-9001J1","Name":"GPIF Tokyo Pension Trust","CommitmentM":180,"ThresholdM":50,"AmendedThresholdM":150,"ParityRequired":true,"CovenantId":"COV-9001M1-V2","RuleType":"\u6295\u8D44\u4EBA\u6700\u60E0\u56FD\u5F85\u9047\u6743\u5229","Jurisdiction":"JP","Locale":"ja-JP","SignalBadge":"\u51FA\u8D441.8\u4EBF\u7F8E\u5143\u57FA\u77F3LP\uFF08\u4FEE\u8BA2\u524D\u540E\u5747\u7B26\u5408\u6700\u60E0\u56FD\u6807\u51C6\uFF09","NoticeTitle":"\u6700\u6075\u56FD\u5F85\u9047\uFF08MFN\uFF09\u6761\u9805\u306B\u57FA\u3065\u304F\u7BA1\u7406\u5831\u916C\u5F15\u304D\u4E0B\u3052\u9078\u629E\u6A29\u306E\u6B63\u5F0F\u901A\u77E5","NoticeBody":"GPIF Tokyo Pension Trust (JP) \u5FA1\u4E2D\uFF1AApexGlobalBuyoutVIII \u306B\u304A\u3051\u308B\u7BA1\u7406\u5831\u916C\u306E\u5F15\u304D\u4E0B\u3052\uFF08{concession} bps\uFF09\u306B\u4F34\u3044\u3001\u8CB4\u57FA\u91D1\u306E\u5951\u7D04\u4E0A\u306E\u540C\u4E00\u6761\u4EF6\u9078\u629E\u6A29\u304C\u767A\u52D5\u3055\u308C\u307E\u3057\u305F\u3002"},{"Id":"PAR-9001S2","Name":"Nordic Sovereign Fund","CommitmentM":90,"ThresholdM":50,"AmendedThresholdM":150,"ParityRequired":true,"CovenantId":"COV-9001M2-V2","RuleType":"\u6295\u8D44\u4EBA\u6700\u60E0\u56FD\u5F85\u9047\u6743\u5229","Jurisdiction":"SE","Locale":"sv-SE","SignalBadge":"\u51FA\u8D449,000\u4E07\u7F8E\u5143LP\uFF08\u5DF2\u88AB1.5\u4EBF\u7F8E\u5143\u65B0\u95E8\u69DB\u6392\u9664\u5728\u5916\uFF09","NoticeTitle":"Formellt Meddelande om MFN-Paritetsr\u00E4ttigheter","NoticeBody":"Formellt meddelande till Nordic Sovereign Fund (SE): Den f\u00F6reslagna avgiftsrabatten ({concession} bps) i ApexGlobalBuyoutVIII aktiverar er MFN-klausul under ursprungligt avtal ($50M gr\u00E4ns)."}],"TransitiveHop":null,"Specialists":[{"Agent":"Librarian AI","Role":"\u8DE8\u7248\u672C\u4FA7\u51FD\u751F\u6548\u72B6\u6001\u6392\u4ED6\u6027\u8FFD\u8E2A","Status":"VERIFIED","Text":"\u65E0\u7F1D\u5BF9\u63A5\u65B0\u65E7\u89C4\u5219\u6620\u5C04\uFF1A\u81EA\u52A8\u4EE5\u7B2C\u4E8C\u8F6E\u9644\u7EA6\u89C4\u5219\uFF081.5\u4EBF\u7F8E\u5143\u7EA2\u7EBF\uFF09\u8986\u76D6\u9996\u671F5,000\u4E07\u65E7\u6807\u51C6\uFF0C\u5386\u53F2\u7248\u672C\u4E0E\u6F14\u8FDB\u65F6\u95F4\u94FE\u6761\u5168\u7A0B\u4FDD\u771F\u53EF\u6EAF\u3002"},{"Agent":"Translator AI","Role":"\u8DE8\u5883\u4E3B\u6743\u57FA\u91D1\u6CD5\u52A1\u4FE1\u51FD\u65E5\u6587\u4E0E\u745E\u5178\u6587\u62DF\u5B9A","Status":"VERIFIED","Text":"\u7CBE\u51C6\u8F93\u51FA\u5177\u5907\u6CD5\u5F8B\u6548\u529B\u7684\u65E5\u6587\uFF08ja-JP\uFF09\u4E0E\u745E\u5178\u6587\uFF08sv-SE\uFF09\u6743\u5229\u4E3B\u5F20\u884C\u4F7F\u901A\u544A\u51FD\uFF0C\u6240\u6709\u6D89\u53CA\u57FA\u91D1\u4E13\u6709\u4EE3\u53F7\u4E25\u683C\u4FDD\u6301\u6CD5\u5F8B\u539F\u8C8C\u3002"}]},{"Id":"sec9_normative","SectorBadge":"\u53F8\u6CD5\u5224\u4F8B\u6F14\u8FDB\u4E0E\u5408\u89C4\u6EAF\u53CA\u529B","Title":"SovereignInfraFundIX - \u7EC8\u5BA1\u5224\u4F8B\u5BF9\u884C\u653F\u5F3A\u5236\u4EE4\u7684\u6EAF\u53CA\u529B\u7A7F\u900F","Icon":"fa-gavel","ContainerId":"CON-7712A100","ContainerName":"SovereignInfraFundIX","ContainerTarget":"$1,200,000,000","BaseRate":"\u57FA\u51C6\u7BA1\u7406\u8D39 2.00%","ActionVerb":"\u6388\u4E88\u7279\u522B\u7BA1\u7406\u8D39\u51CF\u514D","PromptTemplate":"\u5411SovereignInfraFundIX\u7684Municipal Co-Investor\u63D0\u4F9B{concession} bps\u7684\u7279\u522B\u7BA1\u7406\u8D39\u51CF\u514D{stepUpClause}\u3002","RecipientId":"PAR-5510M0","RecipientName":"Municipal Co-Investor","RecipientJurisdiction":"US-CA","Unit":"bps","UnitType":"bps_currency","CurrencySymbol":"$","DefaultConcession":25,"MinConcession":5,"MaxConcession":50,"ConcessionStep":1,"DefaultRecipientCommitment":20,"MinRecipientCommitment":20,"MaxRecipientCommitment":160,"CommitmentStep":5,"CommitmentUnit":"$M","Tier1Ceiling":250000,"Tier3Threshold":250000,"Tier1Label":"\u7B2C1\u5C42\uFF1A\u57FA\u91D1\u6CD5\u52A1\u603B\u76D1\uFF08\u5224\u4F8B\u5E9F\u9664\u540E\u5FEB\u901F\u901A\u9053\uFF09","Tier1SignOff":"\u57FA\u91D1\u6CD5\u52A1\u603B\u76D1\uFF08\u56E0\u76D1\u7BA1\u4EE4\u4F5C\u5E9F\u9002\u75282\u65E5\u5FEB\u901F\u5BA1\u6279\uFF09","Tier2Label":"\u7B2C2\u5C42\uFF1A\u91D1\u878D\u884C\u653F\u6CD5\u89C4\u5408\u89C4\u5BA1\u67E5\u5904","Tier2SignOff":"\u6CD5\u89C4\u5408\u89C4\u987E\u95EE\u56E2\u961F\uFF085\u65E5\u6DF1\u5EA6\u6CD5\u5F8B\u5BA1\u67E5\uFF09","Tier3Label":"\u7B2C3\u5C42\uFF1A\u5168\u9762\u98CE\u9669\u7BA1\u7406\u59D4\u5458\u4F1A","Tier3SignOff":"\u603B\u6CD5\u5F8B\u987E\u95EE\u53CA\u9996\u5E2D\u98CE\u63A7\u5B98\uFF0810\u65E5\u4E66\u9762\u901A\u544A\uFF09","VariantToggleLabel":"\u5E94\u7528\u6700\u9AD8\u6CD5\u9662598 U.S. 44\u53F7\u5224\u4F8B\uFF08\u76F4\u63A5\u5E9F\u6B62SEC\u5F3A\u5236\u5E73\u6743\u4EE4\uFF09","VariantEffect":"court_vacatur","SourceDoc":"Regulatory_Compliance_Charter.pdf","SectionRef":"\u7B2C6.1\u8282 - \u4E0E\u5916\u90E8\u884C\u653F\u89C4\u7AE0\u76F4\u63A5\u7ED1\u5B9A\u7684\u987A\u4ECE\u6027\u6761\u6B3E","ChunkId":"Clause-6.1","VerbatimQuote":"The fee-matching clauses held by Allianz Global Infrastructure ($150M) and CDPQ Quebec Pension ($110M) depend directly on SEC Mandate \u00A7 1332. Following Supreme Court Ruling 598 U.S. 44 overturning that mandate, all downstream clauses tied to that regulation are automatically deactivated.","Counterparties":[{"Id":"PAR-1102A9","Name":"Allianz Global Infrastructure","CommitmentM":150,"ThresholdM":50,"ParityRequired":true,"CovenantId":"COV-1092B3","RuleType":"\u76D1\u7BA1\u4ECE\u5C5E\u6027\u5BF9\u9F50\u6761\u6B3E","Jurisdiction":"DE","Locale":"de-DE","SignalBadge":"\u53D7\u5236\u4E8ESEC \u00A7 1332\u53F7\u884C\u653F\u5F3A\u5236\u547D\u4EE4","NoticeTitle":"Mitteilung \u00FCber Regulatorische Pr\u00E4zedenzwirkung \u0026 Parit\u00E4t","NoticeBody":"Formelle Mitteilung f\u00FCr Allianz Global Infrastructure (DE): Status Ihrer abgeleiteten Parit\u00E4tsklausel (COV-1092B3) unter Ber\u00FCcksichtigung des Urteils 598 U.S. 44."},{"Id":"PAR-4491B2","Name":"CDPQ Quebec Pension","CommitmentM":110,"ThresholdM":50,"ParityRequired":true,"CovenantId":"COV-8831C4","RuleType":"\u76D1\u7BA1\u4ECE\u5C5E\u6027\u5BF9\u9F50\u6761\u6B3E","Jurisdiction":"CA-QC","Locale":"fr-CA","SignalBadge":"\u53D7\u5236\u4E8ESEC \u00A7 1332\u53F7\u884C\u653F\u5F3A\u5236\u547D\u4EE4","NoticeTitle":"Avis d\u0027Impact R\u00E9glementaire et de Pr\u00E9s\u00E9ance Juridique","NoticeBody":"Avis formel pour CDPQ Quebec Pension (CA-QC) : \u00C9valuation de la clause COV-8831C4 suite \u00E0 la d\u00E9cision 598 U.S. 44."}],"TransitiveHop":null,"Specialists":[{"Agent":"Compliance AI","Role":"\u53F8\u6CD5\u7EC8\u5BA1\u5224\u51B3\u5408\u89C4\u4F20\u5BFC\u534A\u5F84\u6392\u67E5","Status":"VERIFIED","Text":"\u5168\u5E93\u6EAF\u6E90\u8FFD\u8E2A\u4E86\u6700\u9AD8\u6CD5\u9662\u5224\u51B3\u6548\u529B\uFF1A\u7CBE\u51C6\u9501\u5B9A2.6\u4EBF\u7F8E\u5143\u7684\u6295\u8D44\u4EBA\u627F\u8BFA\uFF0C\u56E0\u524D\u7F6E\u884C\u653F\u5F3A\u5236\u4EE4\u88AB\u5E9F\u6B62\uFF0C\u5176\u4E0B\u6E38\u884D\u751F\u5BF9\u9F50\u6761\u6B3E\u5DF2\u5408\u6CD5\u5168\u9762\u89E3\u9664\u3002"}]}];
+    const QUICK_GUIDE = {"BannerTitle":"\u4E09\u6B65\u4F53\u9A8C\u672C\u6F14\u793A\uFF1A","BtnShowHelp":"\u8FD9\u662F\u4EC0\u4E48\u5185\u5BB9\uFF1F","BtnHideHelp":"\u9690\u85CF\u6307\u5357","Step1Title":"1. \u53D1\u73B0\u6F5C\u5728\u7684\u8FD0\u8425\u8FDE\u9501\u53CD\u5E94","Step1Desc":"\u89C2\u5BDF\u672C\u4F53\u56FE\uFF1A\u9488\u5BF9{recipient}\u8FDB\u884C\u8C03\u6574\u4F1A\u7ACB\u5373\u5728\u6574\u4E2A{container}\u4E2D\u89E6\u53D1\u8FDE\u9501\u53CD\u5E94\uFF0C\u6CE2\u53CA\u5B89\u5168\u89C4\u5219\u3001\u7269\u6D41\u914D\u9001\u6216\u5408\u89C4\u8981\u6C42\u3002","Step1Action":"\u663E\u793A\u8FDE\u9501\u53CD\u5E94","Step2Title":"2. \u8BA9AI\u4F18\u5316\u5904\u7406\u65B9\u6848","Step2Desc":"\u62D6\u52A8\u5DE6\u4FA7\u6ED1\u5757\uFF08\u6216\u70B9\u51FB\u6B64\u5904\uFF09\uFF0C\u67E5\u770BMindML\u5982\u4F55\u7CBE\u786E\u8BA1\u7B97\u8FD0\u8425\u4E0A\u9650\uFF0C\u4EE5\u6D88\u9664\u74F6\u9888\u3001\u89C4\u907F\u8FDD\u7EA6\u91D1\u5E76\u89E3\u9501\u5FEB\u901F\u5BA1\u6279\u901A\u9053\u3002","Step2Action":"\u81EA\u52A8\u4F18\u5316\u51B3\u7B56","Step3Title":"3. \u9A8C\u8BC1\u6709\u72B6\u6001\u5B89\u5168\u628A\u5173","Step3Desc":"\u6253\u5F00\u201C\u5BA1\u6279\u7F51\u5173\u201D\u6807\u7B7E\u9875\u4EE5\u6279\u51C6\u53D8\u66F4\u3001\u6D4B\u8BD5\u4E00\u952E\u64A4\u9500\uFF0C\u6216\u6A21\u62DFMindML\u5982\u4F55\u6709\u6548\u9632\u5FA1\u5E76\u53D1\u51B2\u7A81\u4E0E\u6570\u636E\u5E93\u7BE1\u6539\u3002","Step3Action":"\u6253\u5F00\u5B89\u5168\u7F51\u5173","HelpExplainerHtml":"\u003Cstrong\u003E\u4E3A\u4EC0\u4E48\u8FD9\u5BF9\u60A8\u7684\u4F01\u4E1A\u81F3\u5173\u91CD\u8981\uFF1A\u003C/strong\u003E \u5E38\u89C4AI\u5DE5\u5177\u4EC5\u4EC5\u662F\u5728\u9884\u6D4B\u4E0B\u4E00\u4E2A\u8BCD\u3002\u52A8\u529B\u5B66\u5F15\u64CE\u6620\u5C04\u60A8\u4F01\u4E1A\u72EC\u7279\u7684\u003Cstrong\u003E\u4E1A\u52A1\u672C\u4F53\u003C/strong\u003E\u2014\u2014\u5C06\u6CD5\u5F8B\u6761\u6B3E\u3001\u7269\u7406\u5146\u74E6\u8D1F\u8377\u4E0E\u5730\u7406\u5B89\u5168\u7F13\u51B2\u533A\u8F6C\u6362\u4E3A\u786E\u5B9A\u6027\u7684\u6570\u5B66\u56FE\u3002\u5F53\u60A8\u505A\u51FA\u8FD0\u8425\u51B3\u7B56\u65F6\uFF0C\u5B83\u80FD\u5728\u6781\u77ED\u65F6\u95F4\u5185\u7CBE\u786E\u8BA1\u7B97\u5168\u4F01\u4E1A\u7684\u8DE8\u8DF3\u8FDE\u9501\u53CD\u5E94\uFF0C\u6C42\u89E3\u6700\u4F18\u65B9\u6848\uFF0C\u5E76\u5728\u9632\u7BE1\u6539\u8D26\u672C\u4E2D\u6682\u5B58\u5F85\u6267\u884C\u4E8B\u52A1\u3002"};
+    const TELEMETRY_STRINGS = {"EngineModeLabel":"\u51B3\u7B56\u5F15\u64CE","EngineModeVal":"100%\u89C4\u5219\u9A8C\u8BC1\uFF08\u675C\u7EDDAI\u81C6\u6D4B\uFF09","GroundingLatencyLabel":"\u8D44\u4EA7\u7EC4\u5408\u4EA4\u53C9\u9A8C\u8BC1","GroundingLatencyVal":"\u003C 1\u6BEB\u79D2\uFF08100%\u5408\u540C\u5168\u9762\u5BA1\u67E5\uFF09","StorageEngineLabel":"\u6570\u636E\u5B89\u5168","StorageEngineVal":"100%\u672C\u5730\u79C1\u6709\u52A0\u5BC6\u4FDD\u9669\u5E93","EntityVersionPrefix":"\u8BB0\u5F55 v","MerkleStatusLabel":"\u5BA1\u8BA1\u8FFD\u8E2A","MerkleValidText":"\u5DF2\u5BC6\u5C01\u4E14\u9A8C\u8BC1\u901A\u8FC7","MerkleTamperedText":"\u7BE1\u6539\u8B66\u62A5","BtnFullscreen":"\u5168\u5C4F\u6A21\u5F0F","BtnExitFullscreen":"\u9000\u51FA\u5168\u5C4F"};
+    const LEFT_STRINGS = {"SectorSelectTitle":"1. \u9009\u62E9\u884C\u4E1A\u573A\u666F","ControlsTitle":"2. \u5B9E\u65F6\u8C03\u6574\u4EA4\u6613\u53C2\u6570","SliderConcessionLabel":"\u62DF\u8BAE\u6298\u6263 / \u6298\u8BA9\u5E45\u5EA6","SliderStepUpLabel":"\u5BA2\u6237\u6700\u4F4E\u91C7\u8D2D\u91CF / \u5C65\u7EA6\u627F\u8BFA","BaselinePrefix":"\u5F53\u524D\u57FA\u51C6","StepUpPrefix":"\u63D0\u5347\u540E","BreakevenCapPrefix":"\u5B89\u5168\u4E0A\u9650\uFF1A","ToggleVariantLabel":"\u653F\u7B56 / \u5408\u540C\u6761\u6B3E\u53D8\u66F4","BtnResetBaseline":"\u91CD\u7F6E\u4E3A\u57FA\u51C6\u503C","BtnApplyPareto":"\u91C7\u7528\u6700\u4F18\u5B89\u5168\u65B9\u6848 (CF-02)","LivePromptTitle":"\u53D1\u9001\u7ED9AI\u56E2\u961F\u7684\u4E1A\u52A1\u6307\u4EE4","GbnfTagText":"\u610F\u56FE\u5DF2\u9A8C\u8BC1","StepUpPromptClause":"\uFF08\u82E5\u5176\u627F\u8BFA\u63D0\u5347\u81F3{stepUp}\uFF09","MetaContainerLabel":"\u4E1A\u52A1\u4E2D\u5FC3 / \u8FD0\u8425\u9879\u76EE\uFF1A","MetaRecipientLabel":"\u76EE\u6807\u5BA2\u6237 / \u5408\u4F5C\u4F19\u4F34\uFF1A","MetaCapacityLabel":"\u603B\u5BB9\u91CF / \u57FA\u51C6\u8D39\u7387\uFF1A"};
+    const CENTER_STRINGS = {"TabOverview":"1. \u5F71\u54CD\u62D3\u6251\u56FE\u4E0E\u4EA4\u6613\u4F18\u5316\u5668","TabProof":"2. \u5408\u540C\u51ED\u8BC1\u4E0E\u6CD5\u5B9A\u901A\u77E5\u51FD","TabSpecialists":"3. AI\u4E13\u4E1A\u4E13\u5BB6\u5BA1\u67E5","TabGate":"4. \u5BA1\u6279\u7F51\u5173\u4E0E\u5BA1\u8BA1\u65E5\u5FD7","AstBoxTitle":"\u4E25\u5BC6\u5408\u540C\u89C4\u5219\u6838\u9A8C\uFF08\u6570\u5B66\u7EA7\u7CBE\u51C6\u8BC1\u660E\uFF0C\u7EDD\u65E0AI\u5E7B\u89C9\uFF09","GroundingBoxTitle":"\u5B9A\u4F4D\u5408\u540C\u7EA6\u675F\u6761\u6B3E\uFF08\u5DF2\u81EA\u52A8\u5254\u9664\u4EC5\u5728\u6807\u9898\u51FA\u73B0\u7684\u65E0\u5173\u5F15\u7528\uFF09","AhoColEntity":"\u7B7E\u7EA6\u4E3B\u4F53 / \u4E1A\u52A1\u67A2\u7EBD","AhoColId":"\u7CFB\u7EDFID","AhoColRole":"\u4E1A\u52A1\u89D2\u8272","AhoColChunk":"\u6761\u6B3E\u7D22\u5F15","AhoColConfidence":"\u9A8C\u8BC1\u72B6\u6001","AhoConfPrimary":"\u5DF2\u6838\u9A8C\u6838\u5FC3\u5F53\u4E8B\u65B9","AhoConfConstraint":"\u5177\u7EA6\u675F\u529B\u6761\u6B3E\u5339\u914D","AhoHeaderMention":"\u4EC5\u5728\u9875\u7709/\u6807\u9898\u4E2D\u63D0\u53CA","AhoConfHeader":"\u5DF2\u5FFD\u7565\uFF08\u975E\u7EA6\u675F\u6027\u6761\u6B3E\uFF09","GraphLegendTriggered":"\u88AB\u89E6\u53D1\u6761\u6B3E\uFF08\u4EA7\u751F\u989D\u5916\u6210\u672C\uFF09","GraphLegendCleared":"\u5B89\u5168 / \u672A\u89E6\u53D1\u6761\u6B3E","GraphLegendBreakeven":"\u5728\u5B89\u5168\u5BA1\u6279\u9608\u503C\u5185","GraphLegendContagion":"\u8FDE\u9501\u6CE2\u53CA\u5173\u8054\u8BBE\u65BD","KpiCascadeLabel":"\u5E74\u5EA6\u8FDE\u9501\u53CD\u5E94\u6210\u672C","KpiOmniLabel":"5\u5E74\u671F\u98CE\u9669\u655E\u53E3\u9884\u4F30","KpiBreakevenLabel":"\u91C7\u7528\u4F18\u5316\u65B9\u6848\u8282\u7EA6\u91D1\u989D (CF-02)","KpiTierLabel":"\u6838\u51C6\u6743\u9650\u5C42\u7EA7","PerYearSuffix":"/ \u5E74","KpiTriggeredSub":"{total}\u5BB6\u4E2D\u6709{triggered}\u5BB6\u5916\u90E8\u4F19\u4F34\u53EF\u4E3B\u5F20\u540C\u7B49\u6743\u5229\uFF08\u6D89{exposure}{unit}\uFF09","KpiZeroTriggeredSub":"\u672A\u89E6\u53D1\u5176\u4ED6\u4F19\u4F34\u6761\u6B3E\uFF08\u4F18\u60E0\u4EC5\u5BF9\u8BE5\u76EE\u6807\u5BA2\u6237\u751F\u6548\uFF09","KpiOmniSub":"\u4F19\u4F34\u4E3B\u5F20\u6743\u5229\u6982\u7387\uFF1A{rate}% | \u98CE\u9669\u7B49\u7EA7\uFF1A{severity}","KpiSavingsSub":"\u9650\u5236\u5728{cap} {unit}\u5185 -\u003E \u89E3\u9501\u5FEB\u901F\u901A\u9053\u5BA1\u6279","SeverityCleared":"\u4F4E\uFF08\u6B63\u5E38\uFF09","SeverityModerate":"\u4E2D\u7B49","SeverityHigh":"\u8F83\u9AD8","SeverityCritical":"\u6781\u9AD8\u5371","ParetoSectionTitle":"\u4EA4\u6613\u91CD\u7EC4\u66FF\u4EE3\u65B9\u6848\uFF08\u5982\u4F55\u89C4\u907F\u8FDE\u9501\u6210\u672C\uFF09","ParetoClickHint":"\u70B9\u51FB\u4E0B\u65B9\u4EFB\u610F\u65B9\u6848\u884C\uFF0C\u5373\u53EF\u5B9E\u65F6\u6D4B\u8BD5\u5BF9\u5E94\u6570\u503C","ColScenario":"\u65B9\u6848\u7F16\u53F7","ColStrategy":"\u4EA4\u6613\u91CD\u7EC4\u7B56\u7565","ColConcession":"\u6298\u8BA9\u989D\u5EA6","ColMinCommitment":"\u8981\u6C42\u5BA2\u6237\u627F\u8BFA\u91CF","ColTriggers":"\u89E6\u53D1\u4F19\u4F34\u6570","ColAnnualDrag":"\u5E74\u5EA6\u8FDE\u5E26\u6210\u672C","ColSavings":"\u5E74\u5EA6\u8282\u7EA6\u91D1\u989D","ColGovernanceTier":"\u6240\u9700\u5BA1\u6279\u89D2\u8272","BestBadge":"\u2605\u0026nbsp;\u63A8\u8350\u65B9\u6848","CitationsTitle":"\u5408\u540C\u6761\u6B3E\u786E\u51FF\u51ED\u636E\uFF08\u76F4\u63A5\u622A\u53D6\u81EA\u5DF2\u7B7E\u7F72\u7684\u534F\u8BAE\u539F\u6587\uFF09","ConfidenceLabel":"100%\u6838\u9A8C\u539F\u6587","NoticesTitle":"\u5C31\u7EEA\u7684\u4F19\u4F34\u6CD5\u5B9A\u544A\u77E5\u51FD\uFF08\u5DF2\u672C\u5730\u5316\u7FFB\u8BD1\u5E76\u9501\u5B9A\u4E13\u6709\u540D\u8BCD\uFF09","GlossaryLockSuffix":"\u4E13\u540D\u5DF2\u4FDD\u62A4","NoNoticesRequired":"\u672A\u6CE2\u53CA\u5176\u4ED6\u5408\u4F5C\u65B9 \u2014 \u65E0\u9700\u5411\u5916\u90E8\u51FA\u5177\u6CD5\u5B9A\u901A\u77E5\u51FD\u3002","SpecialistsTitle":"AI\u4E13\u4E1A\u4E13\u5BB6\u56E2\u8054\u5408\u4F1A\u5BA1\uFF08\u8D22\u52A1\u3001\u6CD5\u52A1\u3001\u98CE\u9669\u3001\u8FD0\u8425\uFF09","ArtifactsTitle":"\u5DF2\u751F\u6210\u5B8C\u6BD5\u4F9B\u4E0B\u8F7D/\u5BA1\u6838\u7684\u6CD5\u52A1\u6750\u6599"};
+    const ACID_STRINGS = {"GateTitle":"\u4EBA\u5DE5\u5BA1\u6279\u5B89\u5168\u7F51\u5173\u4E0E\u9632\u7BE1\u6539\u5BA1\u8BA1\u65E5\u5FD7","StatePending":"\u7B49\u5F85\u60A8\u7684\u6838\u51C6\u7B7E\u7F72","StateCommitted":"\u5DF2\u6279\u51C6\u5E76\u6B63\u5F0F\u63D0\u4EA4\u81F3\u751F\u4EA7\u7CFB\u7EDF","StateRejected":"\u5DF2\u53D6\u6D88\uFF08\u672A\u5BF9\u4E1A\u52A1\u6570\u636E\u9020\u6210\u4EFB\u4F55\u53D8\u66F4\uFF09","StateRolledBack":"\u5DF2\u64A4\u56DE\uFF08\u7CFB\u7EDF\u5DF2\u5B8C\u6574\u56DE\u6EDA\u81F3\u53D8\u66F4\u524D\u72B6\u6001\uFF09","StateOccConflict":"\u53D8\u66F4\u53D7\u963B\uFF1A\u68C0\u6D4B\u5230\u5176\u4ED6\u534F\u4F5C\u8005\u5DF2\u5E76\u53D1\u4FEE\u6539\u8BE5\u8BB0\u5F55","InitialFeedbackHtml":"\u6B63\u5728\u7B49\u5F85\u6388\u6743\u7B7E\u7F72\u3002AI\u5DF2\u5907\u9F50\u6240\u6709\u5BA1\u67E5\u8981\u4EF6\u4E0E\u914D\u5957\u6587\u4EF6\uFF0C\u4F46\u5728\u60A8\u70B9\u51FB\u201C\u6279\u51C6\u201D\u524D\uFF0C\u003Cstrong\u003E\u751F\u4EA7\u6570\u636E\u7EDD\u4E0D\u4F1A\u53D1\u751F\u4EFB\u4F55\u66F4\u6539\u003C/strong\u003E\u3002","BtnConfirm":"\u6279\u51C6\u5E76\u5E94\u7528\u53D8\u66F4","BtnReject":"\u53D6\u6D88\u672C\u6B21\u8BF7\u6C42","BtnRollback":"\u4E00\u952E\u64A4\u9500\uFF08\u56DE\u6EDA\u81F3\u4E0A\u4E00\u72B6\u6001\uFF09","BtnSimOcc":"\u6D4B\u8BD5\uFF1A\u6A21\u62DF\u540C\u4E8B\u5E76\u53D1\u4FEE\u6539\u8BE5\u8BB0\u5F55","BtnSimTamper":"\u6D4B\u8BD5\uFF1A\u6A21\u62DF\u5E95\u5C42\u65E5\u5FD7\u88AB\u6076\u610F\u7BE1\u6539","BtnRestoreTamper":"\u4FEE\u590D\u5BA1\u8BA1\u65E5\u5FD7\u5E76\u91CD\u65B0\u9A8C\u7B7E","LedgerTableTitle":"\u5408\u89C4\u5BA1\u8BA1\u6C38\u4E45\u8D26\u672C\uFF08\u5177\u5907\u4E0D\u53EF\u9006\u5BC6\u7801\u5B66\u7B7E\u540D\uFF09","MerkleFormulaHint":"\u6BCF\u6761\u64CD\u4F5C\u8BB0\u5F55\u5747\u4E0E\u524D\u5E8F\u54C8\u5E0C\u94FE\u6761\u7D27\u5BC6\u76F8\u6263\u3002\u4EFB\u4F55\u672A\u6388\u6743\u7684\u6570\u636E\u5E93\u76F4\u63A5\u6539\u52A8\u90FD\u4F1A\u88AB\u5B9E\u65F6\u62E6\u622A\u62A5\u6848\u3002","ColEventId":"\u65E5\u5FD7\u7F16\u53F7","ColTimestamp":"\u65F6\u95F4\u6233 (UTC)","ColActorId":"\u64CD\u4F5C\u4E3B\u4F53","ColActionName":"\u64CD\u4F5C\u5185\u5BB9\u4E0E\u76EE\u6807\u65B9","ColOccSnapshot":"\u8BB0\u5F55\u7248\u672C\u5FEB\u7167\u6838\u9A8C","ColStatus":"\u72B6\u6001","ColPrevHash":"\u524D\u5E8F\u5370\u7AE0","ColEventHash":"\u6570\u5B57\u7B7E\u540D (SHA-256)","FlagHashMismatch":"\u8BB0\u5F55\u88AB\u7BE1\u6539","FlagChainBroken":"\u94FE\u6761\u65AD\u88C2"};
+    const TPL = {"DiagSa1":"\u003Cstrong\u003E[\u6B65\u9AA4 01 - \u8BC9\u6C42\u4E0E\u5F53\u4E8B\u65B9\u5339\u914D]\u003C/strong\u003E \u6210\u529F\u89E3\u6790\u6307\u4EE4 \u003Ccode\u003E{action} ({concession} {unit})\u003C/code\u003E\uFF0C\u5E76\u57281\u6BEB\u79D2\u5185\u7CBE\u51C6\u5339\u914D \u003Cstrong\u003E{count}\u65B9\u7B7E\u7EA6\u5B9E\u4F53\u003C/strong\u003E\uFF0C\u7EDD\u65E0\u51ED\u7A7A\u81C6\u6D4B\u3002","DiagSa2":"\u003Cstrong\u003E[\u6B65\u9AA4 02 - 100%\u5168\u7EC4\u5408\u6392\u67E5]\u003C/strong\u003E \u5168\u9762\u7B5B\u67E5\u4E86\u4E0E \u003Ccode\u003E{containerId}\u003C/code\u003E \u548C \u003Ccode\u003E{recipientId}\u003C/code\u003E \u6302\u94A9\u7684\u6240\u6709\u534F\u8BAE -\u003E \u003Cstrong\u003E\u5171\u89E6\u53D1\u4E86 {total} \u9879\u4EF7\u683C\u5BF9\u9F50\u6761\u6B3E\u4E2D\u7684 {triggered} \u9879\u003C/strong\u003E\u3002","DiagOpt":"\u003Cstrong\u003E[\u6B65\u9AA4 03 - \u4EA4\u6613\u4F18\u5316\u5206\u6790\u5668]\u003C/strong\u003E \u7CBE\u786E\u6C42\u89E3\u51FA\u7B26\u5408\u60A8 {ceiling} \u9884\u7B97\u4E0A\u9650\u7684\u6700\u4F73\u5B89\u5168\u6298\u6263\u4E34\u754C\u503C\uFF08\u003Ccode\u003ECF-02 = {cap} {unit}\u003C/code\u003E\uFF09\u3002","DiagSa3":"\u003Cstrong\u003E[\u6B65\u9AA4 04 - \u4EBA\u5DE5\u5BA1\u6279\u7F51\u5173]\u003C/strong\u003E \u534F\u540C \u003Cstrong\u003E{specialists}\u4F4DAI\u4E13\u4E1A\u4E13\u5BB6\u003C/strong\u003E\u5B8C\u6210\u5408\u89C4\u5BA1\u67E5\uFF0C\u751F\u6210\u7528\u4E8E\u5FEB\u901F\u6062\u590D\u7684\u7CFB\u7EDF\u5FEB\u7167\uFF08v{stagedVer}\uFF09\uFF0C\u5E76\u5DF2\u5C06 \u003Ccode\u003ELog #{eventId}\u003C/code\u003E \u5448\u62A5\u5F85\u6279\u3002","BypassThreshold":"\u4F19\u4F34\u5F53\u524D\u4EFD\u989D\uFF08{holderM}{unit}\uFF09\u4F4E\u4E8E\u91CD\u7EC4\u540E\u7684\u751F\u6548\u95E8\u69DB\uFF08{threshM}{unit}\uFF09","BypassStepUp":"\u76EE\u6807\u5BA2\u6237\u627F\u8BFA\u91CF\uFF08{stepUpM}{unit}\uFF09\u5DF2\u8D85\u8FC7\u8BE5\u4F19\u4F34\u89C4\u6A21\uFF08{holderM}{unit}\uFF09","BypassSafeHarbor":"\u5DF2\u6EE1\u8DB3\u5E94\u6025\u8FD0\u8425\u907F\u98CE\u6E2F\u514D\u8D23\u4FDD\u62A4\u673A\u5236","BypassVacatur":"\u8BE5\u6761\u6B3E\u6240\u4F9D\u6258\u7684\u76D1\u7BA1\u884C\u653F\u547D\u4EE4\u5DF2\u88AB\u53F8\u6CD5\u5224\u51B3\u5E9F\u6B62","BypassWaiver":"\u8BE5\u4F19\u4F34\u5DF2\u9488\u5BF9\u6B64\u7279\u5B9A\u4EA4\u6613\u51FA\u5177\u653E\u5F03\u4E3B\u5F20\u6743\u5229\u7684\u53CC\u8FB9\u8C41\u514D\u4E66","SvgTriggered":"\u5DF2\u89E6\u53D1\u8FDE\u5E26\u6761\u6B3E\uFF08{drag}\uFF09","SvgBypassed":"\u672A\u89E6\u53D1\uFF08\u6210\u672C\u4E3A0\uFF09","SvgCommitment":"\u7B7E\u7EA6\u57FA\u51C6\uFF1A","SvgTarget":"\u8BBE\u8BA1\u5BB9\u91CF\uFF1A","SvgHopActive":"\u8FDE\u5E26\u6CE2\u53CA\u751F\u6548\uFF08\u6CE2\u53CA${commitment}M\u8D44\u4EA7\uFF09","SvgHopIsolated":"\u67A2\u7EBD\u4FDD\u6301\u9694\u79BB\uFF08\u672A\u6CE2\u53CA\u5916\u90E8\uFF09","SvgSupremeCourtTitle":"\u6700\u9AD8\u6CD5\u9662 598 U.S. 44 \u7EC8\u5BA1\u5224\u4F8B\uFF08\u64A4\u9500\u76D1\u7BA1\u5F3A\u5236\u4EE4\uFF09","SvgVacaturActive":"\u76D1\u7BA1\u547D\u4EE4\u88AB\u64A4\u9500 -\u003E \u4E0B\u6E38\u6D3E\u751F\u6761\u6B3E\u5DF2\u544A\u5931\u6548","SvgVacaturInactive":"\u52FE\u9009\u5DE6\u4FA7\u5F00\u5173\u4EE5\u5E94\u7528\u6700\u9AD8\u6CD5\u9662\u5224\u4F8B\u8C41\u514D","BannerAlertTitle":"\u6CBB\u7406\u9884\u8B66\uFF1A\u68C0\u6D4B\u5230\u4EF7\u683C\u5BF9\u9F50\u6761\u6B3E\uFF08\u6700\u60E0\u56FD\u5F85\u9047\uFF09\u88AB\u89E6\u53D1","BannerAlertSub":"\u82E5\u5411 \u003Cstrong\u003E{recipient}\u003C/strong\u003E (\u003Ccode\u003E{recipientId}\u003C/code\u003E) \u6279\u51C6 \u003Cstrong\u003E{action}\u003C/strong\u003E (\u003Ccode\u003E{concession} {unit}\u003C/code\u003E)\uFF0C\u5C06\u81EA\u52A8\u8D4B\u4E88 \u003Cstrong\u003E{container}\u003C/strong\u003E \u5185\u90E8\u7684 \u003Cstrong\u003E{triggered}\u5BB6\u6838\u5FC3\u5408\u4F5C\u4F19\u4F34\u003C/strong\u003E\u4E3B\u5F20\u5B8C\u5168\u540C\u7B49\u6298\u6263\u7684\u6CD5\u5B9A\u4E49\u52A1\u3002","BannerClearedTitle":"\u65B9\u6848\u5DF2\u901A\u8FC7\u5B89\u5168\u6838\u9A8C\uFF0C\u7B26\u5408\u5FEB\u901F\u5BA1\u6279\u901A\u9053\u8981\u6C42\uFF08\u65E0\u5408\u89C4\u51B2\u7A81\uFF09","BannerClearedSub":"\u5411 \u003Cstrong\u003E{recipient}\u003C/strong\u003E (\u003Ccode\u003E{recipientId}\u003C/code\u003E) \u6279\u51C6 \u003Cstrong\u003E{action}\u003C/strong\u003E (\u003Ccode\u003E{concession} {unit}\u003C/code\u003E) \u003Cstrong\u003E\u4E0D\u4F1A\u89E6\u53D1\u003C/strong\u003E\u4E0E \u003Cstrong\u003E{container}\u003C/strong\u003E \u4E2D\u4EFB\u4F55\u4F19\u4F34\u7684\u8FDE\u5E26\u964D\u4EF7\u6761\u6B3E\u3002","ParetoCalloutHtml":"\u003Cstrong\u003E\u003Ci class=\u0027fas fa-award\u0027\u003E\u003C/i\u003E \u63A8\u8350\u4EA4\u6613\u91CD\u7EC4\u65B9\u6848 (\u003Ccode\u003ECF-02\u003C/code\u003E)\uFF1A\u003C/strong\u003E \u5C06\u6298\u8BA9\u4E0A\u9650\u8BBE\u7F6E\u4E3A \u003Ccode\u003E{cap} {unit}\u003C/code\u003E\uFF0C\u5373\u53EF\u5C06\u8FDE\u5E26\u5916\u6EA2\u6210\u672C\u9501\u6B7B\u5728 \u003Cstrong\u003E{drag}\u003C/strong\u003E \u5185 \u2014 \u76F4\u63A5\u8282\u7EA6 \u003Cstrong class=\u0027accent-emerald\u0027\u003E{savings}\u003C/strong\u003E \u4E14\u7B26\u5408 \u003Ccode\u003E{tier}\u003C/code\u003E \u7B80\u6613\u6279\u529E\u6807\u51C6\u3002","StrategyCf02":"\u9650\u5B9A\u5728\u5B89\u5168\u6298\u8BA9\u4E0A\u9650\u5185\uFF08\u4E25\u683C\u7B26\u5408 {ceiling} \u6388\u6743\u7EA2\u7EBF\uFF09","StrategyCf03":"\u63D0\u9AD8\u5BA2\u6237\u5C65\u7EA6\u95E8\u69DB\uFF08\u5408\u6CD5\u89C4\u907F\u89C4\u6A21\u4F4E\u4E8E\u6216\u7B49\u4E8E {lowestM}{unit} \u7684\u4F19\u4F34\uFF09","StrategyCf04":"\u6298\u8877\u5BF9\u534A\u65B9\u6848\uFF08\u5C06\u6298\u8BA9\u5E45\u5EA6\u524A\u51CF50%\u81F3 {half} {unit}\uFF09","StrategyCf01":"\u60A8\u5F53\u524D\u6ED1\u5757\u6240\u9009\u8BBE\u7F6E\uFF08\u89C4\u6A21{stepUp}{commitUnit}\uFF0C\u6298\u8BA9{concession} {unit}\uFF09","KeystoneWaiverHtml":"\u003Ci class=\u0027fas fa-key\u0027\u003E\u003C/i\u003E \u003Cstrong\u003E\u6210\u672C\u6838\u5FC3\u9A71\u52A8\u65B9\uFF1A\u003C/strong\u003E \u53EA\u8981\u53D6\u5F97 \u003Cstrong\u003E{cp0Name}\u003C/strong\u003E ({cp0M}{unit}) \u4E0E \u003Cstrong\u003E{cp1Name}\u003C/strong\u003E ({cp1M}{unit}) \u7684\u5355\u9879\u8C41\u514D\u58F0\u660E\uFF0C\u5373\u53EF\u6D88\u9664 \u003Cstrong\u003E100%\u003C/strong\u003E \u7684\u989D\u5916\u8FDE\u9501\u6210\u672C\u3002","MultiHopAlertHtml":"\u003Cspan class=\u0027hop-alert-inline\u0027\u003E\u003Ci class=\u0027fas fa-diagram-next\u0027\u003E\u003C/i\u003E \u003Cstrong\u003E\u8DE8\u67A2\u7EBD\u4F20\u67D3\u9884\u8B66\uFF1A\u003C/strong\u003E \u8BE5\u964D\u4EF7\u4E3E\u63AA\u5C06\u8DE8\u534F\u8BAE\u8FDE\u5E26\u6CE2\u53CA \u003Cstrong\u003E{hopContainer}\u003C/strong\u003E \u4E2D\u7684\u5173\u8054\u4E1A\u52A1 ({hopCp})\u3002\u003C/span\u003E","CompRole":"\u6CD5\u52A1\u5408\u89C4\u53CA\u5236\u5EA6\u5168\u91CF\u6392\u67E5","CompTextTriggered":"\u6838\u5B9E\u201C{container}\u201D\u5185\u5B58\u5728 {triggered} \u4EFD\u6709\u6548\u5408\u540C\u4EAB\u6709\u6700\u60E0\u5BF9\u9F50\u6743\u5229\u3002\u5408\u540C\u76D6\u7AE0\u751F\u6548\u524D\u5FC5\u987B\u5C65\u884C\u6CD5\u5B9A\u544A\u77E5\u671F\u3002","CompTextCleared":"\u5DF2\u786E\u8BC1\u201C{container}\u201D\u5185\u4E0D\u5B58\u5728\u9488\u5BF9\u201C{recipient}\u201D\u7684\u5236\u7EA6\u6761\u6B3E\u3002\u53EF\u76F4\u63A5\u62A5\u6279\u3002","MathRole":"\u8D22\u52A1\u5F00\u652F\u4E0E\u4E1A\u52A1\u89C4\u6A21\u5F71\u54CD\u6D4B\u7B97","MathTextTriggered":"\u7ECF\u6D4B\u7B97\uFF0C\u7B26\u5408\u4E3B\u5F20\u6761\u4EF6\u7684\u5404\u4F19\u4F34\u6D89\u53CA {exposure}{unit} \u4E1A\u52A1\u76D8\uFF0C\u5408\u8BA1\u5F15\u53D1 {drag}/\u5E74 \u7684\u8FDE\u9501\u6210\u672C\u652F\u51FA\u3002","MathTextCleared":"\u6838\u5B9E\u4EC5\u9488\u5BF9\u76EE\u6807\u5BA2\u6237\u7684 {stepUp}{unit} \u989D\u5EA6\u4EA7\u751F {direct}/\u5E74 \u7684\u76F4\u63A5\u4F18\u60E0\u6210\u672C\uFF08\u5BF9\u5916\u65E0\u4EFB\u4F55\u5916\u6EA2\u5F71\u54CD\uFF09\u3002","VersionSnapshotFmt":"\u57FA\u4E8E\u5FEB\u7167 v{stagedVer} \u751F\u6210\uFF08\u5F53\u524D\u6700\u65B0\u7248\u672C\uFF1Av{liveVer}\uFF09","FeedbackOccAbortHtml":"\u003Cstrong\u003E\u003Ci class=\u0027fas fa-ban\u0027\u003E\u003C/i\u003E \u5E76\u53D1\u6570\u636E\u51B2\u7A81\u5DF2\u88AB\u62E6\u622A\uFF1A\u003C/strong\u003E \u60A8\u7684\u63D0\u4EA4\u662F\u4EE5 \u003Ccode\u003E{containerId}\u003C/code\u003E \u7684 \u003Ccode\u003E\u8BB0\u5F55 v{stagedVer}\u003C/code\u003E \u4E3A\u57FA\u51C6\u8BA1\u7B97\u7684\uFF0C\u4F46\u540C\u4E8B\u521A\u521A\u5C06\u6700\u65B0\u6570\u636E\u63A8\u81F3 \u003Ccode\u003Ev{liveVer}\u003C/code\u003E\u3002MindML\u5DF2\u5F3A\u5236\u4E2D\u6B62\u8986\u76D6\u64CD\u4F5C\uFF0C\u907F\u514D\u57FA\u4E8E\u9648\u65E7\u6570\u636E\u51B3\u7B56\u3002\u8BF7\u70B9\u51FB\u5DE6\u4FA7\u003Cstrong\u003E\u91CD\u7F6E\u4E3A\u57FA\u51C6\u503C\u003C/strong\u003E\u91CD\u65B0\u8F7D\u5165\u6700\u65B0\u6570\u636E\u3002","FeedbackCommittedHtml":"\u003Cstrong\u003E\u003Ci class=\u0027fas fa-circle-check\u0027\u003E\u003C/i\u003E \u53D8\u66F4\u5DF2\u6279\u51C6\u5E76\u6B63\u5F0F\u751F\u6548\uFF08\u65E5\u5FD7\u7F16\u53F7 #{eventId}\uFF09\uFF1A\u003C/strong\u003E \u5E76\u53D1\u4E00\u81F4\u6027\u6821\u9A8C\u901A\u8FC7\u3002\u751F\u4EA7\u6570\u636E\u5DF2\u8DC3\u8FC1\u81F3\u7248\u672C \u003Ccode\u003Ev{liveVer}\u003C/code\u003E \u5E76\u5DF2\u56FA\u5316\u5728\u9632\u7BE1\u6539\u8D26\u672C\u4E2D\u3002\u60A8\u73B0\u5728\u53EF\u4EE5\u6D4B\u8BD5\u003Cstrong\u003E\u4E00\u952E\u64A4\u9500\u003C/strong\u003E\u529F\u80FD\uFF01","FeedbackRejectedHtml":"\u003Cstrong\u003E\u003Ci class=\u0027fas fa-circle-xmark\u0027\u003E\u003C/i\u003E \u63D0\u6848\u5DF2\u88AB\u9A73\u56DE\uFF08\u65E5\u5FD7\u7F16\u53F7 #{eventId}\uFF09\uFF1A\u003C/strong\u003E \u53D8\u66F4\u5DF2\u88AB\u5B89\u5168\u5E9F\u5F03\u3002\u751F\u4EA7\u73AF\u5883\u6570\u636E\u4E1D\u6BEB\u672A\u52A8\uFF0C\u9A73\u56DE\u8BB0\u5F55\u5DF2\u540C\u6B65\u5907\u6848\u5408\u89C4\u7559\u75D5\u3002","FeedbackRolledBackHtml":"\u003Cstrong\u003E\u003Ci class=\u0027fas fa-rotate-left\u0027\u003E\u003C/i\u003E \u4E00\u952E\u64A4\u9500\u6210\u529F\uFF08\u65E5\u5FD7\u7F16\u53F7 #{eventId}\uFF09\uFF1A\u003C/strong\u003E \u5DF2\u6839\u636E\u7CFB\u7EDF\u5FEB\u7167\uFF0C\u5C06 \u003Ccode\u003E{container}\u003C/code\u003E \u53CA\u5176\u5168\u90E8\u5C65\u7EA6\u53C2\u6570\u5B8C\u6574\u8FD8\u539F\u81F3\u72B6\u6001 \u003Ccode\u003Ev{liveVer}\u003C/code\u003E\u3002","FeedbackOccSimHtml":"\u003Cstrong\u003E\u003Ci class=\u0027fas fa-bolt\u0027\u003E\u003C/i\u003E \u5DF2\u6A21\u62DF\u540C\u4E8B\u5E76\u53D1\u5199\u5165\u51B2\u7A81\uFF1A\u003C/strong\u003E \u6A21\u62DF\u4E86\u53E6\u4E00\u540D\u4E3B\u7BA1\u4FEE\u6539\u4E86 \u003Ccode\u003E{container}\u003C/code\u003E \u5E76\u5C06\u7248\u672C\u62AC\u5347\u81F3 \u003Ccode\u003Ev{liveVer}\u003C/code\u003E\uFF0C\u800C\u60A8\u7684\u63A7\u5236\u53F0\u4ECD\u505C\u7559\u5728 \u003Ccode\u003Ev{stagedVer}\u003C/code\u003E \u7684\u72B6\u6001\u3002\u8BF7\u70B9\u51FB\u003Cstrong\u003E\u6279\u51C6\u5E76\u5E94\u7528\u53D8\u66F4\u003C/strong\u003E\u89C2\u5BDFMindML\u7684\u9632\u5199\u8986\u76D6\u4FDD\u62A4\u673A\u5236\uFF01","FeedbackTamperActiveHtml":"\u003Cstrong\u003E\u003Ci class=\u0027fas fa-radiation\u0027\u003E\u003C/i\u003E \u6355\u83B7\u5230\u5E95\u5C42\u6570\u636E\u5E93\u672A\u6388\u6743\u7BE1\u6539\uFF1A\u003C/strong\u003E \u68C0\u6D4B\u5230\u6709\u4EBA\u7ED5\u8FC7\u6743\u9650\u76F4\u63A5\u5728\u540E\u53F0\u4FEE\u6539\u4E86 \u003Ccode\u003E\u65E5\u5FD7 #101\u003C/code\u003E\u3002MindML\u52A0\u5BC6\u9A8C\u7B7E\u94FE\u6761\u7ACB\u5373\u7CBE\u51C6\u6807\u8BB0\u51FA\u8BE5\u88AB\u7834\u574F\u8282\u70B9\uFF0C\u5E76\u5DF2\u5BF9\u53D7\u5F71\u54CD\u7684\u5173\u8054\u8BB0\u5F55\uFF08\u003Ccode\u003E\u65E5\u5FD7 #{eventId}\u003C/code\u003E\uFF09\u5B9E\u65BD\u5E94\u6025\u9501\u5B9A\uFF01","FeedbackTamperRestoredHtml":"\u003Cstrong\u003E\u003Ci class=\u0027fas fa-shield-check\u0027\u003E\u003C/i\u003E \u5BA1\u8BA1\u65E5\u5FD7\u5DF2\u6210\u529F\u4FEE\u590D\uFF1A\u003C/strong\u003E \u5DF2\u7EA0\u6B63\u975E\u6CD5\u7BE1\u6539\u5E76\u56DE\u586B\u771F\u5B9E\u54C8\u5E0C\u3002\u6574\u4E2A\u94FE\u6761\u4E0A\u7684\u6240\u6709\u5BC6\u7801\u5B66\u5370\u7AE0\u5747\u5DF2\u6838\u9A8C\u6062\u590D\u7EFF\u8272\u6B63\u5E38\u72B6\u6001\u3002"};
+
+    function fmt(template, vars) {
+        if (!template) return "";
+        return template.replace(/\{(\w+)\}/g, (match, key) => (vars[key] !== undefined ? vars[key] : match));
+    }
+
+    // 2. Live Workbench State
+    let activeScenario = SCENARIOS[0];
+    let currentConcession = activeScenario.DefaultConcession;
+    let currentStepUp = activeScenario.DefaultRecipientCommitment;
+    let variantEnabled = false;
+    let activeSubagentStage = "sa1";
+    let activeTab = "overview";
+
+    let entityVersion = 1;
+    let stagedOpeningVersion = 1;
+    let occConflictSimulated = false;
+    let merkleTampered = false;
+    let currentEventId = 102;
+    let currentActionStatus = "PENDING";
+    let actionLedger = [];
+    let lastComputedEval = null;
+
+    const GENESIS_HASH = "0000000000000000000000000000000000000000000000000000000000000000";
+
+    // Interactive Quick-Start Guide Controller
+    function toggleHelpExplainer() {
+        const drawer = document.getElementById('guide-explainer-drawer');
+        const lbl = document.getElementById('help-btn-label');
+        const isHidden = drawer.style.display === "none";
+        drawer.style.display = isHidden ? "block" : "none";
+        lbl.textContent = isHidden ? QUICK_GUIDE.BtnHideHelp : QUICK_GUIDE.BtnShowHelp;
+    }
+
+    function runGuidedStep(stepNumber) {
+        document.querySelectorAll('.guide-step-card').forEach((c, idx) => {
+            c.classList.toggle('active', (idx + 1) === stepNumber);
+        });
+
+        if (stepNumber === 1) {
+            switchMainTab('overview');
+            resetScenarioBaseline();
+            pulseElement('view-graph-container');
+        } else if (stepNumber === 2) {
+            switchMainTab('overview');
+            applyParetoOptimal();
+            pulseElement('left-controls-panel');
+        } else if (stepNumber === 3) {
+            switchMainTab('gate');
+            pulseElement('acid-gate-section');
+        }
+    }
+
+    function pulseElement(elId) {
+        const el = document.getElementById(elId);
+        if (!el) return;
+        el.classList.remove('guide-spotlight-pulse');
+        void el.offsetWidth;
+        el.classList.add('guide-spotlight-pulse');
+    }
+
+    // 4-Tab Progressive Disclosure Controller
+    function switchMainTab(tabId) {
+        activeTab = tabId;
+        document.querySelectorAll('.stage-tab-btn').forEach(btn => {
+            btn.classList.toggle('active', btn.getAttribute('data-tab') === tabId);
+        });
+
+        const tabs = ['overview', 'proof', 'specialists', 'gate'];
+        tabs.forEach(t => {
+            const pane = document.getElementById('tab-pane-' + t);
+            if (pane) pane.style.display = (t === tabId) ? 'block' : 'none';
+        });
+    }
+
+    // 3. Deterministic 64-char SHA-256 Hex Simulator
+    function computeDeterministicSha256(inputStr) {
+        let h1 = 0xdeadbeef ^ inputStr.length;
+        let h2 = 0x41c6ce57 ^ inputStr.length;
+        let h3 = 0x9e3779b9 ^ inputStr.length;
+        let h4 = 0x85ebca6b ^ inputStr.length;
+        let h5 = 0xc2b2ae35 ^ inputStr.length;
+        let h6 = 0x27d4eb2f ^ inputStr.length;
+        let h7 = 0x165667b1 ^ inputStr.length;
+        let h8 = 0xd3a2646c ^ inputStr.length;
+
+        for (let i = 0, ch; i < inputStr.length; i++) {
+            ch = inputStr.charCodeAt(i);
+            h1 = Math.imul(h1 ^ ch, 2654435761);
+            h2 = Math.imul(h2 ^ ch, 1597334677);
+            h3 = Math.imul(h3 ^ (ch << 3), 2246822507);
+            h4 = Math.imul(h4 ^ (ch << 7), 3266489909);
+            h5 = Math.imul(h5 ^ (ch << 2), 2654435761);
+            h6 = Math.imul(h6 ^ (ch << 5), 1597334677);
+            h7 = Math.imul(h7 ^ (ch << 11), 2246822507);
+            h8 = Math.imul(h8 ^ (ch << 13), 3266489909);
+        }
+
+        const mix = (a, b) => {
+            let x = Math.imul(a ^ (a >>> 16), 2246822507) ^ Math.imul(b ^ (b >>> 13), 3266489909);
+            return (x ^ (x >>> 16)) >>> 0;
+        };
+
+        return [
+            mix(h1, h2), mix(h2, h3), mix(h3, h4), mix(h4, h5),
+            mix(h5, h6), mix(h6, h7), mix(h7, h8), mix(h8, h1)
+        ].map(n => n.toString(16).padStart(8, '0')).join('');
+    }
+
+    function formatCurrencyOrUnit(amount, sc, showSign = false) {
+        const absVal = Math.abs(Math.round(amount));
+        const sign = amount < 0 ? "-" : (showSign && amount > 0 ? "+" : "");
+        if (sc.UnitType === "physical_mw") {
+            return `${sign}${absVal.toLocaleString('en-US')} MW`;
+        }
+        return `${sign}${sc.CurrencySymbol}${absVal.toLocaleString('en-US')}`;
+    }
+
+    // 4. Scenario Selection & Initialization
+    function selectScenario(scId) {
+        const found = SCENARIOS.find(s => s.Id === scId);
+        if (!found) return;
+        activeScenario = found;
+
+        document.querySelectorAll('.scenario-card-btn').forEach(btn => {
+            btn.classList.toggle('active', btn.getAttribute('data-scenario-id') === scId);
+        });
+
+        const sConc = document.getElementById('slider-concession');
+        sConc.min = activeScenario.MinConcession;
+        sConc.max = activeScenario.MaxConcession;
+        sConc.step = activeScenario.ConcessionStep;
+        sConc.value = activeScenario.DefaultConcession;
+
+        const sStep = document.getElementById('slider-stepup');
+        sStep.min = activeScenario.MinRecipientCommitment;
+        sStep.max = activeScenario.MaxRecipientCommitment;
+        sStep.step = activeScenario.CommitmentStep;
+        sStep.value = activeScenario.DefaultRecipientCommitment;
+
+        const chkVar = document.getElementById('toggle-variant');
+        chkVar.checked = false;
+        document.getElementById('lbl-variant-toggle').textContent = activeScenario.VariantToggleLabel;
+
+        document.getElementById('min-concession-lbl').textContent = `${activeScenario.MinConcession} ${activeScenario.Unit}`;
+        document.getElementById('max-concession-lbl').textContent = `${activeScenario.MaxConcession} ${activeScenario.Unit}`;
+        document.getElementById('min-stepup-lbl').textContent = `${LEFT_STRINGS.BaselinePrefix} (${activeScenario.DefaultRecipientCommitment} ${activeScenario.CommitmentUnit})`;
+        document.getElementById('max-stepup-lbl').textContent = `${LEFT_STRINGS.StepUpPrefix} (${activeScenario.MaxRecipientCommitment} ${activeScenario.CommitmentUnit})`;
+
+        entityVersion = 1;
+        stagedOpeningVersion = 1;
+        occConflictSimulated = false;
+        merkleTampered = false;
+        currentEventId = 102;
+        currentActionStatus = "PENDING";
+
+        document.getElementById('acid-feedback-banner').className = "acid-feedback-msg";
+        document.getElementById('acid-feedback-banner').innerHTML = ACID_STRINGS.InitialFeedbackHtml;
+
+        seedInitialLedger();
+        onParameterInput();
+    }
+
+    function seedInitialLedger() {
+        const ts1 = "2026-11-05T08:15:00Z";
+        const payload1 = `{"container":"${activeScenario.ContainerId}","schema_bootstrapped":true}`;
+        const prevState1 = `{"Version":1,"Status":"ACTIVE"}`;
+        const raw1 = `${GENESIS_HASH}|101|${ts1}|sys_ingestion_pipeline|bootstrap_container_ontology|${payload1}|${prevState1}|COMMITTED`;
+        const hash1 = computeDeterministicSha256(raw1);
+
+        actionLedger = [
+            {
+                EventId: 101,
+                Timestamp: ts1,
+                ActorId: "sys_ingestion_pipeline",
+                ActionName: `ingest_charter (${activeScenario.ContainerName})`,
+                PayloadJSON: payload1,
+                OriginalPayloadJSON: payload1,
+                PreviousStateJSON: prevState1,
+                VersionSnapshot: "v1 -> v1",
+                Status: "COMMITTED",
+                PreviousHash: GENESIS_HASH.substring(0, 16) + "...",
+                FullPreviousHash: GENESIS_HASH,
+                EventHash: hash1,
+                Tampered: false
+            }
+        ];
+    }
+
+    function resetScenarioBaseline() {
+        document.getElementById('slider-concession').value = activeScenario.DefaultConcession;
+        document.getElementById('slider-stepup').value = activeScenario.DefaultRecipientCommitment;
+        document.getElementById('toggle-variant').checked = false;
+        occConflictSimulated = false;
+        stagedOpeningVersion = entityVersion;
+        currentActionStatus = "PENDING";
+        document.getElementById('acid-feedback-banner').className = "acid-feedback-msg";
+        document.getElementById('acid-feedback-banner').innerHTML = ACID_STRINGS.InitialFeedbackHtml;
+        onParameterInput();
+    }
+
+    // 5. Core Deterministic Simulation & Evaluation Engine
+    function evaluateScenarioModel(sc, concessionVal, stepUpVal, isVariantOn) {
+        const evaluatedCounterparties = sc.Counterparties.map((cp, idx) => {
+            const activeThreshold = (isVariantOn && sc.VariantEffect === "amendment_v2" && cp.AmendedThresholdM)
+                ? cp.AmendedThresholdM
+                : cp.ThresholdM;
+
+            const holderQualifies = cp.CommitmentM >= activeThreshold;
+            const paritySatisfied = !cp.ParityRequired || (stepUpVal <= cp.CommitmentM);
+
+            let bypassedReason = null;
+            if (!holderQualifies) {
+                bypassedReason = fmt(TPL.BypassThreshold, { holderM: cp.CommitmentM, unit: sc.CommitmentUnit, threshM: activeThreshold });
+            } else if (!paritySatisfied) {
+                bypassedReason = fmt(TPL.BypassStepUp, { stepUpM: stepUpVal, unit: sc.CommitmentUnit, holderM: cp.CommitmentM });
+            } else if (isVariantOn && sc.VariantEffect === "safe_harbor") {
+                bypassedReason = TPL.BypassSafeHarbor;
+            } else if (isVariantOn && sc.VariantEffect === "court_vacatur") {
+                bypassedReason = TPL.BypassVacatur;
+            } else if (isVariantOn && sc.VariantEffect === "waive_first" && idx === 0) {
+                bypassedReason = TPL.BypassWaiver;
+            }
+
+            const isTriggered = (bypassedReason === null);
+            let dragAmount = 0;
+            if (isTriggered) {
+                if (sc.UnitType === "physical_mw") {
+                    dragAmount = concessionVal;
+                } else {
+                    dragAmount = (cp.CommitmentM * 1000000) * (concessionVal / 10000);
+                }
+            }
+
+            return {
+                ...cp,
+                activeThreshold,
+                holderQualifies,
+                paritySatisfied,
+                isTriggered,
+                bypassedReason,
+                dragAmount
+            };
+        });
+
+        const triggeredList = evaluatedCounterparties.filter(c => c.isTriggered);
+        const triggeredCount = triggeredList.length;
+        const aggregateExposureM = triggeredList.reduce((acc, c) => acc + c.CommitmentM, 0);
+        const totalCascadeDrag = triggeredList.reduce((acc, c) => acc + c.dragAmount, 0);
+
+        const directRecipientImpact = sc.UnitType === "physical_mw"
+            ? concessionVal
+            : (stepUpVal * 1000000) * (concessionVal / 10000);
+
+        const effectiveCeiling = (isVariantOn && sc.VariantEffect === "raise_mw_ceiling")
+            ? 122.5
+            : sc.Tier1Ceiling;
+
+        let breakevenCap = sc.DefaultConcession;
+        const baselineAllExposureM = sc.Counterparties.reduce((acc, c) => acc + c.CommitmentM, 0);
+
+        if (sc.UnitType === "physical_mw") {
+            const countForBreakeven = Math.max(1, sc.Counterparties.length);
+            breakevenCap = Math.floor(((effectiveCeiling * 0.99) / countForBreakeven) * 10) / 10;
+        } else {
+            const aggDollars = (aggregateExposureM > 0 ? aggregateExposureM : baselineAllExposureM) * 1000000;
+            const factorMax = (effectiveCeiling * 0.99) / aggDollars;
+            breakevenCap = Math.floor((factorMax * 10000) * 100) / 100;
+        }
+
+        // FIX #1: If current request is already safe, don't recommend a higher cap!
+        if (totalCascadeDrag <= effectiveCeiling) {
+            breakevenCap = Math.min(breakevenCap, concessionVal);
+        }
+
+        let governanceTier = sc.Tier1Label;
+        let governanceSignOff = sc.Tier1SignOff;
+        let tierLevel = 1;
+
+        if (triggeredCount === 0 || totalCascadeDrag <= effectiveCeiling) {
+            governanceTier = sc.Tier1Label;
+            governanceSignOff = sc.Tier1SignOff;
+            tierLevel = 1;
+        } else if (totalCascadeDrag < sc.Tier3Threshold * 1.6 && triggeredCount === 1) {
+            governanceTier = sc.Tier2Label;
+            governanceSignOff = sc.Tier2SignOff;
+            tierLevel = 2;
+        } else {
+            governanceTier = sc.Tier3Label;
+            governanceSignOff = sc.Tier3SignOff;
+            tierLevel = 3;
+        }
+
+        let hopActive = false;
+        if (sc.TransitiveHop && !(isVariantOn && sc.VariantEffect === "sever_hop") && triggeredCount > 0) {
+            hopActive = true;
+        }
+
+        const electionProb = triggeredCount === 0 ? 0 : (triggeredCount === 1 ? 0.75 : 0.85);
+        const riskWeightedAnnual = totalCascadeDrag * electionProb;
+        const fiveYearHorizon = riskWeightedAnnual * 5;
+        const severityLabel = triggeredCount === 0
+            ? CENTER_STRINGS.SeverityCleared
+            : (tierLevel === 3 ? (totalCascadeDrag >= effectiveCeiling * 2 ? CENTER_STRINGS.SeverityCritical : CENTER_STRINGS.SeverityHigh) : CENTER_STRINGS.SeverityModerate);
+
+        return {
+            concessionVal,
+            stepUpVal,
+            isVariantOn,
+            evaluatedCounterparties,
+            triggeredList,
+            triggeredCount,
+            aggregateExposureM,
+            totalCascadeDrag,
+            directRecipientImpact,
+            effectiveCeiling,
+            breakevenCap,
+            governanceTier,
+            governanceSignOff,
+            tierLevel,
+            hopActive,
+            electionProb,
+            riskWeightedAnnual,
+            fiveYearHorizon,
+            severityLabel
+        };
+    }
+
+    // 6. Handle Live Slider & Toggle Input
+    function onParameterInput() {
+        currentConcession = parseFloat(document.getElementById('slider-concession').value);
+        currentStepUp = parseFloat(document.getElementById('slider-stepup').value);
+        variantEnabled = document.getElementById('toggle-variant').checked;
+
+        document.getElementById('val-concession').textContent = `${currentConcession} ${activeScenario.Unit}`;
+        document.getElementById('val-stepup').textContent = activeScenario.UnitType === "physical_mw"
+            ? `${currentStepUp} MW`
+            : `$${currentStepUp}M`;
+
+        if (currentActionStatus !== "PENDING") {
+            currentEventId++;
+            currentActionStatus = "PENDING";
+            stagedOpeningVersion = entityVersion;
+        }
+
+        recalculateEngine();
+    }
+
+    function applyParetoOptimal() {
+        const evalResult = evaluateScenarioModel(activeScenario, currentConcession, currentStepUp, variantEnabled);
+        document.getElementById('slider-concession').value = evalResult.breakevenCap;
+        onParameterInput();
+    }
+
+    function applyParetoRow(concessionTarget, stepUpTarget) {
+        document.getElementById('slider-concession').value = concessionTarget;
+        document.getElementById('slider-stepup').value = stepUpTarget;
+        onParameterInput();
+    }
+
+    // 7. Master UI Synchronization
+    function recalculateEngine() {
+        const ev = evaluateScenarioModel(activeScenario, currentConcession, currentStepUp, variantEnabled);
+        lastComputedEval = ev;
+
+        const baselineEv = evaluateScenarioModel(activeScenario, activeScenario.DefaultConcession, activeScenario.DefaultRecipientCommitment, false);
+        const cf02Ev = evaluateScenarioModel(activeScenario, ev.breakevenCap, currentStepUp, variantEnabled);
+        const savingsVsBaseline = Math.max(0, baselineEv.totalCascadeDrag - cf02Ev.totalCascadeDrag);
+
+        const step1El = document.getElementById('step1-desc-text');
+        const step2El = document.getElementById('step2-desc-text');
+        if (step1El) {
+            step1El.textContent = fmt(QUICK_GUIDE.Step1Desc, {
+                recipient: activeScenario.RecipientName,
+                baselineDrag: formatCurrencyOrUnit(-baselineEv.totalCascadeDrag, activeScenario),
+                container: activeScenario.ContainerName
+            });
+        }
+        if (step2El) {
+            step2El.textContent = fmt(QUICK_GUIDE.Step2Desc, {
+                cap: ev.breakevenCap,
+                unit: activeScenario.Unit,
+                savings: formatCurrencyOrUnit(savingsVsBaseline, activeScenario, true)
+            });
+        }
+
+        document.getElementById('breakeven-marker-lbl').textContent = `${LEFT_STRINGS.BreakevenCapPrefix} ${ev.breakevenCap} ${activeScenario.Unit}`;
+        document.getElementById('live-entity-version').textContent = `${TELEMETRY_STRINGS.EntityVersionPrefix}${entityVersion}`;
+
+        document.getElementById('badge-proof-count').textContent = ev.triggeredCount > 0 ? `${ev.triggeredCount} Notices` : `Cleared`;
+        document.getElementById('badge-spec-count').textContent = `${2 + activeScenario.Specialists.length}`;
+        const gateDot = document.getElementById('badge-gate-dot');
+        gateDot.className = `tab-status-dot status-${currentActionStatus.toLowerCase()}`;
+
+        const stepFormatted = activeScenario.UnitType === "physical_mw" ? `${currentStepUp} MW` : `$${currentStepUp}M`;
+        const stepClause = currentStepUp > activeScenario.DefaultRecipientCommitment
+            ? fmt(LEFT_STRINGS.StepUpPromptClause, { stepUp: stepFormatted })
+            : "";
+        const promptText = activeScenario.PromptTemplate
+            .replace("{concession}", currentConcession)
+            .replace("{stepUpClause}", stepClause);
+        document.getElementById('live-prompt-display').textContent = `"${promptText}"`;
+
+        document.getElementById('metamodel-summary-box').innerHTML = `
+            <div class="mm-stat-row"><span>${LEFT_STRINGS.MetaContainerLabel}</span> <code>${activeScenario.ContainerName}</code></div>
+            <div class="mm-stat-row"><span>${LEFT_STRINGS.MetaRecipientLabel}</span> <code>${activeScenario.RecipientName}</code></div>
+            <div class="mm-stat-row"><span>${LEFT_STRINGS.MetaCapacityLabel}</span> <strong>${activeScenario.ContainerTarget} (${activeScenario.BaseRate})</strong></div>
+        `;
+
+        const isPhysical = (activeScenario.UnitType === "physical_mw");
+
+        // Dynamically update KPI Titles for Physics vs Finance
+        document.querySelector('#kpi-card-drag .kpi-title').textContent = isPhysical ? "Peak Ripple-Effect Load" : CENTER_STRINGS.KpiCascadeLabel;
+        document.querySelector('#kpi-card-tier .kpi-title').textContent = CENTER_STRINGS.KpiTierLabel;
+
+        const dragEl = document.getElementById('kpi-val-drag');
+        const subDragEl = document.getElementById('kpi-sub-drag');
+        if (ev.triggeredCount > 0) {
+            dragEl.textContent = `${formatCurrencyOrUnit(-ev.totalCascadeDrag, activeScenario)} ${isPhysical ? "" : CENTER_STRINGS.PerYearSuffix}`;
+            dragEl.className = "kpi-main-val accent-crimson";
+
+            let subText = fmt(CENTER_STRINGS.KpiTriggeredSub, {
+                triggered: ev.triggeredCount,
+                total: activeScenario.Counterparties.length,
+                exposure: ev.aggregateExposureM,
+                unit: activeScenario.CommitmentUnit
+            });
+            // Clarify Hop-1 Contagion
+            if (ev.hopActive) subText += " (Excludes Hop-1 Contagion)";
+            subDragEl.textContent = subText;
+        } else {
+            dragEl.textContent = `${formatCurrencyOrUnit(-ev.directRecipientImpact, activeScenario)} ${isPhysical ? "" : CENTER_STRINGS.PerYearSuffix}`;
+            dragEl.className = "kpi-main-val accent-emerald";
+            subDragEl.textContent = CENTER_STRINGS.KpiZeroTriggeredSub;
+        }
+
+        const omniEl = document.getElementById('kpi-val-omni');
+        const subOmniEl = document.getElementById('kpi-sub-omni');
+        const titleOmni = document.querySelector('#kpi-card-omni .kpi-title');
+
+        // FIX #2: Megawatt Physics vs Financial Horizons
+        if (isPhysical) {
+            titleOmni.textContent = "Risk-Weighted Peak Load";
+            omniEl.textContent = ev.triggeredCount > 0
+                ? formatCurrencyOrUnit(-ev.riskWeightedAnnual, activeScenario)
+                : formatCurrencyOrUnit(0, activeScenario);
+        } else {
+            titleOmni.textContent = CENTER_STRINGS.KpiOmniLabel;
+            omniEl.textContent = ev.triggeredCount > 0
+                ? formatCurrencyOrUnit(-ev.fiveYearHorizon, activeScenario)
+                : formatCurrencyOrUnit(0, activeScenario);
+        }
+
+        subOmniEl.textContent = fmt(CENTER_STRINGS.KpiOmniSub, {
+            rate: Math.round(ev.electionProb * 100),
+            severity: ev.severityLabel
+        });
+
+        document.getElementById('kpi-val-savings').textContent = `${formatCurrencyOrUnit(savingsVsBaseline, activeScenario, true)} ${isPhysical ? "" : CENTER_STRINGS.PerYearSuffix}`;
+
+        let savingsSub = fmt(CENTER_STRINGS.KpiSavingsSub, {
+            cap: ev.breakevenCap,
+            unit: activeScenario.Unit
+        });
+        if (ev.totalCascadeDrag <= ev.effectiveCeiling) {
+            savingsSub = `Already compliant (< ${ev.effectiveCeiling} ${activeScenario.Unit})`;
+        }
+        document.getElementById('kpi-sub-savings').textContent = savingsSub;
+
+        const tierBadgeEl = document.getElementById('kpi-val-tier');
+        tierBadgeEl.textContent = ev.governanceTier;
+        tierBadgeEl.className = `kpi-tier-badge tier-lvl-${ev.tierLevel}`;
+        document.getElementById('kpi-sub-tier').textContent = ev.governanceSignOff;
+
+        renderTopologicalHtmlGraph(activeScenario, ev);
+        renderJsonLogicAndGrounding(activeScenario, ev);
+        renderGovernanceCard(activeScenario, ev, baselineEv);
+        syncStagedActionToLedger(activeScenario, ev);
+        renderSubagentDiagnosticBar(activeSubagentStage);
+    }
+
+    // 8. 100% PURE HTML/CSS RESPONSIVE RIPPLE-EFFECT BOARD (Zero SVG Overlap)
+    function renderTopologicalHtmlGraph(sc, ev) {
+        const board = document.getElementById('impact-flow-board');
+        if (!board) return;
+
+        const hasHop = sc.TransitiveHop !== null;
+        const hasVacatur = sc.VariantEffect === "court_vacatur";
+
+        let hubAddonHtml = "";
+        if (hasVacatur) {
+            const normActive = ev.isVariantOn;
+            hubAddonHtml = `
+                <div class="ifb-subcard ${normActive ? 'ifb-sub-cleared' : 'ifb-sub-warn'}">
+                    <div class="ifb-sub-header">
+                        <i class="fas fa-gavel"></i> <span>${TPL.SvgSupremeCourtTitle}</span>
+                    </div>
+                    <div class="ifb-sub-status">
+                        ${normActive ? TPL.SvgVacaturActive : TPL.SvgVacaturInactive}
+                    </div>
+                </div>
+            `;
+        } else if (hasHop) {
+            const hop = sc.TransitiveHop;
+            hubAddonHtml = `
+                <div class="ifb-subcard ${ev.hopActive ? 'ifb-sub-contagion' : 'ifb-sub-cleared'}">
+                    <div class="ifb-sub-header">
+                        <i class="fas fa-diagram-next"></i> <span>${hop.RelationType}: ${hop.ContainerName}</span>
+                    </div>
+                    <div class="ifb-sub-party">${hop.CounterpartyName}</div>
+                    <div class="ifb-sub-status">
+                        ${ev.hopActive ? fmt(TPL.SvgHopActive, { commitment: hop.CommitmentM }) : TPL.SvgHopIsolated}
+                    </div>
+                </div>
+            `;
+        }
+
+        const partnerCardsHtml = ev.evaluatedCounterparties.map(cp => {
+            const statusLabel = cp.isTriggered
+                ? fmt(TPL.SvgTriggered, { drag: formatCurrencyOrUnit(-cp.dragAmount, sc) + (sc.UnitType === "physical_mw" ? "" : "/yr") })
+                : TPL.SvgBypassed;
+            const stateClass = cp.isTriggered ? "ifb-card-triggered" : "ifb-card-cleared";
+            const iconClass = cp.isTriggered ? "fa-triangle-exclamation" : "fa-circle-check";
+
+            return `
+                <div class="ifb-card ${stateClass}">
+                    <div class="ifb-clause-ribbon">
+                        <span class="ifb-clause-name"><i class="fas ${iconClass}"></i> ${cp.RuleType}</span>
+                        <span class="ifb-clause-verdict">${statusLabel}</span>
+                    </div>
+                    <div class="ifb-card-body">
+                        <div class="ifb-card-title">${cp.Name}</div>
+                        <div class="ifb-card-meta">
+                            <span><code>${cp.Id}</code> (${cp.Jurisdiction})</span>
+                            <span><strong>${TPL.SvgCommitment} ${cp.CommitmentM}${sc.CommitmentUnit}</strong></span>
+                        </div>
+                        <div class="ifb-card-signal">${cp.SignalBadge}</div>
+                    </div>
+                </div>
+            `;
+        }).join('');
+
+        const overallFlowAlert = ev.triggeredCount > 0 ? "flow-alert" : "flow-safe";
+
+        board.innerHTML = `
+            <div class="ifb-stage">
+                <div class="ifb-stage-label">1. Target Client & Proposed Deal</div>
+                <div class="ifb-card ifb-card-recipient">
+                    <div class="ifb-clause-ribbon ribbon-cyan">
+                        <span><i class="fas fa-handshake"></i> ${sc.ActionVerb}</span>
+                        <span class="ifb-clause-verdict">${ev.concessionVal} ${sc.Unit}</span>
+                    </div>
+                    <div class="ifb-card-body">
+                        <div class="ifb-card-title">${sc.RecipientName}</div>
+                        <div class="ifb-card-meta">
+                            <span><code>${sc.RecipientId}</code> (${sc.RecipientJurisdiction})</span>
+                        </div>
+                        <div class="ifb-card-signal">${TPL.SvgCommitment} <strong>${ev.stepUpVal}${sc.CommitmentUnit}</strong></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="ifb-connector flow-cyan" aria-hidden="true">
+                <div class="ifb-conn-badge">${ev.concessionVal} ${sc.Unit}</div>
+                <div class="ifb-conn-line">
+                    <i class="fas fa-arrow-right desktop-arrow"></i>
+                    <i class="fas fa-arrow-down mobile-arrow"></i>
+                </div>
+            </div>
+
+            <div class="ifb-stage">
+                <div class="ifb-stage-label">2. Business Hub & Active Rules</div>
+                <div class="ifb-card ifb-card-container">
+                    <div class="ifb-clause-ribbon ribbon-purple">
+                        <span><i class="fas fa-building-shield"></i> ${TELEMETRY_STRINGS.EntityVersionPrefix}${entityVersion}</span>
+                        <span>${sc.BaseRate}</span>
+                    </div>
+                    <div class="ifb-card-body">
+                        <div class="ifb-card-title">${sc.ContainerName}</div>
+                        <div class="ifb-card-meta">
+                            <span><code>${sc.ContainerId}</code></span>
+                            <span><strong>${TPL.SvgTarget} ${sc.ContainerTarget}</strong></span>
+                        </div>
+                        ${hubAddonHtml}
+                    </div>
+                </div>
+            </div>
+
+            <div class="ifb-connector ${overallFlowAlert}" aria-hidden="true">
+                <div class="ifb-conn-badge">
+                    ${ev.triggeredCount > 0 ? `${ev.triggeredCount} Triggered` : `0 Triggered`}
+                </div>
+                <div class="ifb-conn-line">
+                    <i class="fas fa-arrow-right desktop-arrow"></i>
+                    <i class="fas fa-arrow-down mobile-arrow"></i>
+                </div>
+            </div>
+
+            <div class="ifb-stage ifb-stage-partners">
+                <div class="ifb-stage-label">3. Partner Contract Ripple Effects (100% Checked)</div>
+                <div class="ifb-partners-stack">
+                    ${partnerCardsHtml}
+                </div>
+            </div>
+        `;
+    }
+
+    // 9. Exact Contract Rule Verification Inspector
+    function renderJsonLogicAndGrounding(sc, ev) {
+        const firstCp = ev.evaluatedCounterparties[0];
+        const ruleSummaryObj = {
+            "Contract_Clause_ID": firstCp.CovenantId,
+            "Clause_Type": firstCp.RuleType,
+            "Checked_Partner": firstCp.Name,
+            "Partner_Qualifying_Check": {
+                "Partner_Current_Volume": `${firstCp.CommitmentM}${sc.CommitmentUnit}`,
+                "Required_Minimum_Threshold": `${firstCp.activeThreshold}${sc.CommitmentUnit}`,
+                "Meets_Minimum_Volume": firstCp.holderQualifies
+            },
+            "Target_Deal_Comparison": {
+                "Target_Client": sc.RecipientName,
+                "Target_Client_Volume": `${ev.stepUpVal}${sc.CommitmentUnit}`,
+                "Proposed_Adjustment": `${ev.concessionVal} ${sc.Unit}`,
+                "Partner_Has_Equal_Or_Larger_Volume": firstCp.paritySatisfied,
+                "Policy_Or_Court_Exemption_Active": ev.isVariantOn
+            },
+            "Final_Rule_Verdict": firstCp.isTriggered
+                ? "CLAUSE TRIGGERED — Partner is entitled to matching terms"
+                : `NOT TRIGGERED — ${firstCp.bypassedReason}`
+        };
+        document.getElementById('jsonlogic-ast-code').textContent = JSON.stringify(ruleSummaryObj, null, 2);
+
+        const groundingHtml = `
+            <table class="aho-grounding-table">
+                <thead>
+                    <tr>
+                        <th>${CENTER_STRINGS.AhoColEntity}</th>
+                        <th>${CENTER_STRINGS.AhoColId}</th>
+                        <th>${CENTER_STRINGS.AhoColRole}</th>
+                        <th>${CENTER_STRINGS.AhoColChunk}</th>
+                        <th>${CENTER_STRINGS.AhoColConfidence}</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>${sc.ContainerName}</strong></td>
+                        <td><code>${sc.ContainerId}</code></td>
+                        <td><code>Business Hub</code></td>
+                        <td><code>${sc.ChunkId}</code></td>
+                        <td><span class="conf-pill conf-100">${CENTER_STRINGS.AhoConfPrimary}</span></td>
+                    </tr>
+                    <tr>
+                        <td><strong>${sc.RecipientName}</strong></td>
+                        <td><code>${sc.RecipientId}</code></td>
+                        <td><code>Target Client</code></td>
+                        <td><code>${sc.ChunkId}</code></td>
+                        <td><span class="conf-pill conf-100">${CENTER_STRINGS.AhoConfPrimary}</span></td>
+                    </tr>
+                    ${ev.evaluatedCounterparties.map(cp => `
+                        <tr>
+                            <td><strong>${cp.Name}</strong></td>
+                            <td><code>${cp.Id}</code></td>
+                            <td><code>Existing Partner</code></td>
+                            <td><code>${sc.ChunkId}</code></td>
+                            <td><span class="conf-pill conf-100">${CENTER_STRINGS.AhoConfConstraint}</span></td>
+                        </tr>
+                    `).join('')}
+                    <tr>
+                        <td><em>${CENTER_STRINGS.AhoHeaderMention}</em></td>
+                        <td><code>${sc.ContainerId}</code></td>
+                        <td><code>Document Title</code></td>
+                        <td><code>Title-Page</code></td>
+                        <td><span class="conf-pill conf-065">${CENTER_STRINGS.AhoConfHeader}</span></td>
+                    </tr>
+                </tbody>
+            </table>
+        `;
+        document.getElementById('aho-corasick-table-wrap').innerHTML = groundingHtml;
+    }
+
+    // 10. Universal UI Governance Card & Pareto Frontier Table
+    function renderGovernanceCard(sc, ev, baselineEv) {
+        const banner = document.getElementById('gov-banner');
+        const bannerIcon = document.getElementById('gov-banner-icon');
+        const bannerTitle = document.getElementById('gov-banner-title');
+        const bannerSub = document.getElementById('gov-banner-sub');
+        const isPhysical = (sc.UnitType === "physical_mw");
+        const thDrag = document.querySelector('.kinetic-pareto-table thead tr th:nth-child(6)');
+        const thSave = document.querySelector('.kinetic-pareto-table thead tr th:nth-child(7)');
+        if (thDrag && thSave) {
+            thDrag.textContent = isPhysical ? "Peak Ripple Load" : CENTER_STRINGS.ColAnnualDrag;
+            thSave.textContent = isPhysical ? "Peak Load Saved" : CENTER_STRINGS.ColSavings;
+        }
+
+        if (ev.triggeredCount > 0) {
+            banner.className = "gov-card-banner alert-mode";
+            bannerIcon.className = "fas fa-triangle-exclamation";
+            bannerTitle.textContent = TPL.BannerAlertTitle;
+            bannerSub.innerHTML = fmt(TPL.BannerAlertSub, {
+                action: sc.ActionVerb,
+                concession: ev.concessionVal,
+                unit: sc.Unit,
+                recipient: sc.RecipientName,
+                recipientId: sc.RecipientId,
+                triggered: ev.triggeredCount,
+                container: sc.ContainerName,
+                containerId: sc.ContainerId
+            });
+        } else {
+            banner.className = "gov-card-banner cleared-mode";
+            bannerIcon.className = "fas fa-circle-check";
+            bannerTitle.textContent = TPL.BannerClearedTitle;
+            bannerSub.innerHTML = fmt(TPL.BannerClearedSub, {
+                action: sc.ActionVerb,
+                concession: ev.concessionVal,
+                unit: sc.Unit,
+                recipient: sc.RecipientName,
+                recipientId: sc.RecipientId,
+                container: sc.ContainerName
+            });
+        }
+
+        const logPill = document.getElementById('gov-actionlog-pill');
+        logPill.className = `actionlog-id-pill status-${currentActionStatus.toLowerCase()}`;
+        logPill.innerHTML = `<i class="fas fa-shield-halved"></i> Log #${currentEventId} [${currentActionStatus}] <i class="fas fa-arrow-right"></i>`;
+
+        const lowestCpCommitment = Math.min(...sc.Counterparties.map(c => c.CommitmentM));
+        const stepUpTarget = Math.min(sc.MaxRecipientCommitment, lowestCpCommitment + sc.CommitmentStep);
+
+        const cf01 = evaluateScenarioModel(sc, ev.concessionVal, ev.stepUpVal, ev.isVariantOn);
+        const cf02 = evaluateScenarioModel(sc, ev.breakevenCap, ev.stepUpVal, ev.isVariantOn);
+        const cf03 = evaluateScenarioModel(sc, ev.concessionVal, stepUpTarget, ev.isVariantOn);
+        const halfConcession = Math.max(sc.MinConcession, Math.round((ev.concessionVal * 0.5) * 10) / 10);
+        const cf04 = evaluateScenarioModel(sc, halfConcession, ev.stepUpVal, ev.isVariantOn);
+
+        const paretoRows = [
+            {
+                code: "CF-02",
+                recommended: true,
+                strategy: fmt(TPL.StrategyCf02, { ceiling: formatCurrencyOrUnit(ev.effectiveCeiling, sc) }),
+                concession: ev.breakevenCap,
+                stepUp: ev.stepUpVal,
+                evalObj: cf02
+            },
+            {
+                code: "CF-03",
+                recommended: false,
+                strategy: fmt(TPL.StrategyCf03, { lowestM: lowestCpCommitment, unit: sc.CommitmentUnit }),
+                concession: ev.concessionVal,
+                stepUp: stepUpTarget,
+                evalObj: cf03
+            },
+            {
+                code: "CF-04",
+                recommended: false,
+                strategy: fmt(TPL.StrategyCf04, { half: halfConcession, unit: sc.Unit }),
+                concession: halfConcession,
+                stepUp: ev.stepUpVal,
+                evalObj: cf04
+            },
+            {
+                code: "CF-01",
+                recommended: false,
+                strategy: fmt(TPL.StrategyCf01, { concession: ev.concessionVal, unit: sc.Unit, stepUp: ev.stepUpVal, commitUnit: sc.CommitmentUnit }),
+                concession: ev.concessionVal,
+                stepUp: ev.stepUpVal,
+                evalObj: cf01
+            }
+        ];
+
+        const savingsCf02 = Math.max(0, cf01.totalCascadeDrag - cf02.totalCascadeDrag);
+
+        // Dynamic Pareto Callout for Already Compliant Deals
+        let calloutHtml = "";
+        if (ev.totalCascadeDrag <= ev.effectiveCeiling) {
+            calloutHtml = `
+                <div>
+                    <strong><i class='fas fa-check-circle'></i> Deal is Compliant (<code>CF-01</code>):</strong>
+                    Current parameters generate <strong>${formatCurrencyOrUnit(-ev.totalCascadeDrag, sc)}</strong> in cascade drag, which is safely below the ${formatCurrencyOrUnit(ev.effectiveCeiling, sc)} limit. You are cleared for <code>${ev.governanceTier}</code>.
+                </div>
+            `;
+        } else {
+            calloutHtml = fmt(TPL.ParetoCalloutHtml, {
+                cap: ev.breakevenCap,
+                unit: sc.Unit,
+                drag: formatCurrencyOrUnit(-cf02.totalCascadeDrag, sc) + (isPhysical ? "" : "/yr"),
+                savings: formatCurrencyOrUnit(savingsCf02, sc, true) + (isPhysical ? "" : "/yr"),
+                tier: cf02.governanceTier
+            });
+        }
+        document.getElementById('pareto-callout').innerHTML = calloutHtml;
+
+        const tbody = document.getElementById('pareto-table-body');
+        tbody.innerHTML = paretoRows.map(r => {
+            const rowSavings = Math.max(0, baselineEv.totalCascadeDrag - r.evalObj.totalCascadeDrag);
+            const isCurrentActive = (Math.abs(r.concession - ev.concessionVal) < 0.05 && Math.abs(r.stepUp - ev.stepUpVal) < 0.05);
+            return `
+                <tr class="pareto-row ${r.recommended ? 'pareto-recommended' : ''} ${isCurrentActive ? 'pareto-active-row' : ''}"
+                    onclick="applyParetoRow(${r.concession}, ${r.stepUp})">
+                    <td><code>${r.code}</code> ${r.recommended ? `<span class="opt-star">${CENTER_STRINGS.BestBadge}</span>` : ''}</td>
+                    <td>${r.strategy}</td>
+                    <td><code>${r.concession} ${sc.Unit}</code></td>
+                    <td>${isPhysical ? r.stepUp + " MW" : "$" + r.stepUp + "M"}</td>
+                    <td>${r.evalObj.triggeredCount}</td>
+                    <td class="${r.evalObj.totalCascadeDrag > 0 ? 'accent-crimson' : 'accent-emerald'}">
+                        ${formatCurrencyOrUnit(-r.evalObj.totalCascadeDrag, sc)}${isPhysical ? "" : CENTER_STRINGS.PerYearSuffix}
+                    </td>
+                    <td class="accent-emerald"><strong>${formatCurrencyOrUnit(rowSavings, sc, true)}${isPhysical ? "" : CENTER_STRINGS.PerYearSuffix}</strong></td>
+                    <td><span class="mini-tier-pill tier-lvl-${r.evalObj.tierLevel}">${r.evalObj.governanceTier}</span></td>
+                </tr>
+            `;
+        }).join('');
+
+        const cp0 = ev.evaluatedCounterparties[0];
+        const cp1 = ev.evaluatedCounterparties[1];
+        const hopHtml = ev.hopActive
+            ? fmt(TPL.MultiHopAlertHtml, { relType: sc.TransitiveHop.RelationType, hopContainer: sc.TransitiveHop.ContainerName, hopCp: sc.TransitiveHop.CounterpartyName })
+            : "";
+        document.getElementById('keystone-waiver-box').innerHTML = fmt(TPL.KeystoneWaiverHtml, {
+            cp0Name: cp0.Name,
+            cp0M: cp0.CommitmentM,
+            cp1Name: cp1 ? cp1.Name : "",
+            cp1M: cp1 ? cp1.CommitmentM : "",
+            unit: sc.CommitmentUnit
+        }) + " " + hopHtml;
+
+        document.getElementById('verbatim-citation-box').innerHTML = `
+            <div class="citation-meta">
+                <span><i class="fas fa-file-contract"></i> <strong>${sc.SourceDoc}</strong> (${sc.SectionRef})</span>
+                <span class="chunk-guid-tag">Chunk #${sc.ChunkId} | ${CENTER_STRINGS.ConfidenceLabel}</span>
+            </div>
+            <blockquote class="verbatim-quote">"${sc.VerbatimQuote}"</blockquote>
+        `;
+
+        document.getElementById('staged-artifacts-box').innerHTML = `
+            <span class="artifact-pill"><i class="fas fa-file-word"></i> Staged_Amendment_${sc.ContainerId}_${sc.RecipientId}.docx</span>
+            <span class="artifact-pill"><i class="fas fa-file-pdf"></i> ActionLog_Audit_Packet_${sc.ContainerId}_#${currentEventId}.pdf</span>
+            <span class="artifact-pill"><i class="fas fa-file-zipper"></i> Counterparty_Election_Notices_${sc.ContainerId}.zip</span>
+        `;
+
+        const noticesBox = document.getElementById('localized-notices-box');
+        if (ev.triggeredCount === 0) {
+            noticesBox.innerHTML = `<div class="notice-empty"><i class="fas fa-check-circle"></i> ${CENTER_STRINGS.NoNoticesRequired}</div>`;
+        } else {
+            noticesBox.innerHTML = ev.triggeredList.map(cp => `
+                <div class="localized-notice-item">
+                    <div class="notice-top">
+                        <strong>${cp.Name}</strong>
+                        <span class="locale-tag">${cp.Jurisdiction} / ${cp.Locale} (${CENTER_STRINGS.GlossaryLockSuffix})</span>
+                    </div>
+                    <div class="notice-title-line">${cp.NoticeTitle}</div>
+                    <div class="notice-body-line">${cp.NoticeBody.replace("{concession}", ev.concessionVal)}</div>
+                </div>
+            `).join('');
+        }
+
+        const baseSpecialists = [
+            {
+                Agent: "Compliance AI",
+                Role: TPL.CompRole,
+                Status: ev.triggeredCount > 0 ? "REVIEW_REQUIRED" : "CLEARED",
+                Text: ev.triggeredCount > 0
+                    ? fmt(TPL.CompTextTriggered, { triggered: ev.triggeredCount, container: sc.ContainerName })
+                    : fmt(TPL.CompTextCleared, { recipient: sc.RecipientName, container: sc.ContainerName })
+            },
+            {
+                Agent: "Math Expert AI",
+                Role: TPL.MathRole,
+                Status: "VERIFIED",
+                Text: ev.triggeredCount > 0
+                    ? fmt(TPL.MathTextTriggered, { drag: formatCurrencyOrUnit(-ev.totalCascadeDrag, sc), exposure: ev.aggregateExposureM, unit: sc.CommitmentUnit })
+                    : fmt(TPL.MathTextCleared, { direct: formatCurrencyOrUnit(-ev.directRecipientImpact, sc), stepUp: ev.stepUpVal, unit: sc.CommitmentUnit })
+            },
+            ...sc.Specialists
+        ];
+
+        document.getElementById('specialists-advisory-box').innerHTML = baseSpecialists.map(sp => `
+            <div class="specialist-item">
+                <div class="sp-top">
+                    <strong><i class="fas fa-robot"></i> ${sp.Agent}</strong>
+                    <span class="sp-status-badge status-${sp.Status.toLowerCase()}">${sp.Status}</span>
+                </div>
+                <div class="sp-role">${sp.Role}</div>
+                <div class="sp-text">${sp.Text}</div>
+            </div>
+        `).join('');
+    }
+
+    // 11. Two-Phase ACID Gate, OCC Conflict & SHA-256 Merkle Chain Engine
+    function syncStagedActionToLedger(sc, ev) {
+        const tsNow = new Date().toISOString().split('.')[0] + "Z";
+        const payload = JSON.stringify({
+            action: sc.ActionVerb,
+            recipient: sc.RecipientId,
+            value: ev.concessionVal,
+            unit: sc.Unit,
+            step_up: ev.stepUpVal,
+            triggers: ev.triggeredCount
+        });
+        const prevState = JSON.stringify({
+            ContainerId: sc.ContainerId,
+            Version: stagedOpeningVersion,
+            BaseRate: sc.BaseRate
+        });
+
+        const prevRow = actionLedger[0];
+        const prevHashFull = prevRow.EventHash;
+        const rawCanonical = `${prevHashFull}|${currentEventId}|${tsNow}|usr_exec_operator_01|${sc.ActionVerb}|${payload}|${prevState}|${currentActionStatus}`;
+        const eventHash = computeDeterministicSha256(rawCanonical);
+
+        const stagedRow = {
+            EventId: currentEventId,
+            Timestamp: tsNow,
+            ActorId: "usr_exec_operator_01",
+            ActionName: `${sc.ActionVerb} -> ${sc.RecipientName}`,
+            PayloadJSON: payload,
+            OriginalPayloadJSON: payload,
+            PreviousStateJSON: prevState,
+            VersionSnapshot: fmt(TPL.VersionSnapshotFmt, { stagedVer: stagedOpeningVersion, liveVer: entityVersion }),
+            Status: currentActionStatus,
+            PreviousHash: prevHashFull.substring(0, 16) + "...",
+            FullPreviousHash: prevHashFull,
+            EventHash: eventHash,
+            Tampered: false
+        };
+
+        if (actionLedger.length === 1) {
+            actionLedger.push(stagedRow);
+        } else {
+            actionLedger[actionLedger.length - 1] = stagedRow;
+        }
+
+        updateAcidButtonsAndBanner();
+        renderMerkleLedgerTable();
+    }
+
+    function executeAcidTransition(targetState) {
+        const banner = document.getElementById('acid-feedback-banner');
+
+        if (targetState === "COMMITTED") {
+            if (occConflictSimulated || stagedOpeningVersion !== entityVersion) {
+                currentActionStatus = "OCC_CONFLICT";
+                banner.className = "acid-feedback-msg feedback-error";
+                banner.innerHTML = fmt(TPL.FeedbackOccAbortHtml, {
+                    containerId: activeScenario.ContainerId,
+                    stagedVer: stagedOpeningVersion,
+                    liveVer: entityVersion
+                });
+                updateAcidButtonsAndBanner();
+                renderMerkleLedgerTable();
+                return;
+            }
+
+            entityVersion++;
+            currentActionStatus = "COMMITTED";
+            banner.className = "acid-feedback-msg feedback-success";
+            banner.innerHTML = fmt(TPL.FeedbackCommittedHtml, {
+                eventId: currentEventId,
+                liveVer: entityVersion
+            });
+        } else if (targetState === "REJECTED") {
+            currentActionStatus = "REJECTED";
+            occConflictSimulated = false;
+            banner.className = "acid-feedback-msg feedback-warn";
+            banner.innerHTML = fmt(TPL.FeedbackRejectedHtml, { eventId: currentEventId });
+        } else if (targetState === "ROLLED_BACK") {
+            entityVersion = stagedOpeningVersion;
+            currentActionStatus = "ROLLED_BACK";
+            banner.className = "acid-feedback-msg feedback-info";
+            banner.innerHTML = fmt(TPL.FeedbackRolledBackHtml, {
+                eventId: currentEventId,
+                container: activeScenario.ContainerName,
+                liveVer: entityVersion
+            });
+        }
+
+        document.getElementById('live-entity-version').textContent = `${TELEMETRY_STRINGS.EntityVersionPrefix}${entityVersion}`;
+        const logPill = document.getElementById('gov-actionlog-pill');
+        logPill.className = `actionlog-id-pill status-${currentActionStatus.toLowerCase()}`;
+        logPill.innerHTML = `<i class="fas fa-shield-halved"></i> Log #${currentEventId} [${currentActionStatus}] <i class="fas fa-arrow-right"></i>`;
+        const gateDot = document.getElementById('badge-gate-dot');
+        gateDot.className = `tab-status-dot status-${currentActionStatus.toLowerCase()}`;
+
+        syncStagedActionToLedger(activeScenario, lastComputedEval);
+        renderTopologicalHtmlGraph(activeScenario, lastComputedEval);
+    }
+
+    function simulateOccConflict() {
+        entityVersion++;
+        occConflictSimulated = true;
+        document.getElementById('live-entity-version').textContent = `${TELEMETRY_STRINGS.EntityVersionPrefix}${entityVersion}`;
+
+        const banner = document.getElementById('acid-feedback-banner');
+        banner.className = "acid-feedback-msg feedback-warn";
+        banner.innerHTML = fmt(TPL.FeedbackOccSimHtml, {
+            container: activeScenario.ContainerName,
+            liveVer: entityVersion,
+            eventId: currentEventId,
+            stagedVer: stagedOpeningVersion
+        });
+        syncStagedActionToLedger(activeScenario, lastComputedEval);
+    }
+
+    function toggleMerkleTamperSimulation() {
+        merkleTampered = !merkleTampered;
+        const row0 = actionLedger[0];
+        const btnText = document.getElementById('tamper-btn-text');
+        const pill = document.getElementById('merkle-status-pill');
+        const badgeText = document.getElementById('merkle-badge-text');
+        const banner = document.getElementById('acid-feedback-banner');
+
+        if (merkleTampered) {
+            row0.PayloadJSON = `{"container":"${activeScenario.ContainerId}","UNAUTHORIZED_SQL_EDIT":"BYPASS_MFN"}`;
+            row0.Tampered = true;
+            btnText.textContent = ACID_STRINGS.BtnRestoreTamper;
+            pill.classList.add('merkle-fractured');
+            badgeText.className = "telemetry-value merkle-invalid";
+            badgeText.innerHTML = `<i class="fas fa-skull-crossbones"></i> ${TELEMETRY_STRINGS.MerkleTamperedText} (#101)`;
+            banner.className = "acid-feedback-msg feedback-error";
+            banner.innerHTML = fmt(TPL.FeedbackTamperActiveHtml, { eventId: currentEventId });
+        } else {
+            row0.PayloadJSON = row0.OriginalPayloadJSON;
+            row0.Tampered = false;
+            btnText.textContent = ACID_STRINGS.BtnSimTamper;
+            pill.classList.remove('merkle-fractured');
+            badgeText.className = "telemetry-value merkle-valid";
+            badgeText.innerHTML = `<i class="fas fa-shield-halved"></i> ${TELEMETRY_STRINGS.MerkleValidText}`;
+            banner.className = "acid-feedback-msg";
+            banner.innerHTML = TPL.FeedbackTamperRestoredHtml;
+        }
+
+        renderMerkleLedgerTable();
+    }
+
+    function updateAcidButtonsAndBanner() {
+        const badge = document.getElementById('acid-state-badge');
+        const btnConfirm = document.getElementById('btn-acid-confirm');
+        const btnReject = document.getElementById('btn-acid-reject');
+        const btnRollback = document.getElementById('btn-acid-rollback');
+
+        badge.className = `acid-status-pill ${currentActionStatus.toLowerCase()}`;
+        if (currentActionStatus === "PENDING") {
+            badge.textContent = ACID_STRINGS.StatePending;
+            btnConfirm.disabled = false;
+            btnReject.disabled = false;
+            btnRollback.disabled = true;
+        } else if (currentActionStatus === "COMMITTED") {
+            badge.textContent = ACID_STRINGS.StateCommitted;
+            btnConfirm.disabled = true;
+            btnReject.disabled = true;
+            btnRollback.disabled = false;
+        } else if (currentActionStatus === "REJECTED") {
+            badge.textContent = ACID_STRINGS.StateRejected;
+            btnConfirm.disabled = true;
+            btnReject.disabled = true;
+            btnRollback.disabled = true;
+        } else if (currentActionStatus === "ROLLED_BACK") {
+            badge.textContent = ACID_STRINGS.StateRolledBack;
+            btnConfirm.disabled = true;
+            btnReject.disabled = true;
+            btnRollback.disabled = true;
+        } else if (currentActionStatus === "OCC_CONFLICT") {
+            badge.textContent = ACID_STRINGS.StateOccConflict;
+            btnConfirm.disabled = true;
+            btnReject.disabled = false;
+            btnRollback.disabled = true;
+        }
+    }
+
+    function renderMerkleLedgerTable() {
+        const tbody = document.getElementById('merkle-ledger-tbody');
+        tbody.innerHTML = actionLedger.map((row, idx) => {
+            const isCascadedInvalid = merkleTampered && idx > 0;
+            return `
+                <tr class="${row.Tampered ? 'merkle-row-tampered' : (isCascadedInvalid ? 'merkle-row-cascaded' : '')}">
+                    <td><strong>#${row.EventId}</strong></td>
+                    <td><code>${row.Timestamp}</code></td>
+                    <td><code>${row.ActorId}</code></td>
+                    <td>
+                        <div><strong>${row.ActionName}</strong></div>
+                        <div class="ledger-payload-sub"><code>${row.PayloadJSON}</code></div>
+                    </td>
+                    <td><code>${row.VersionSnapshot}</code></td>
+                    <td><span class="ledger-status-tag status-${row.Status.toLowerCase()}">${row.Status}</span></td>
+                    <td><code>${row.PreviousHash}</code></td>
+                    <td>
+                        <code class="${row.Tampered || isCascadedInvalid ? 'hash-fractured' : 'hash-sealed'}">
+                            ${row.EventHash.substring(0, 20)}...
+                        </code>
+                        ${row.Tampered ? `<span class="tamper-flag">${ACID_STRINGS.FlagHashMismatch}</span>` : (isCascadedInvalid ? `<span class="tamper-flag">${ACID_STRINGS.FlagChainBroken}</span>` : '<i class="fas fa-check-circle hash-ok-icon"></i>')}
+                    </td>
+                </tr>
+            `;
+        }).join('');
+    }
+
+    function highlightPipelineStage(stageId) {
+        activeSubagentStage = stageId;
+        document.querySelectorAll('.pipeline-stage-pill').forEach(pill => {
+            pill.classList.toggle('active', pill.getAttribute('data-stage') === stageId);
+        });
+        renderSubagentDiagnosticBar(stageId);
+    }
+
+    function renderSubagentDiagnosticBar(stageId) {
+        const bar = document.getElementById('subagent-diagnostic-bar');
+        const sc = activeScenario;
+        const ev = lastComputedEval;
+        if (!ev || !bar) return;
+
+        const diagnostics = {
+            "sa1": fmt(TPL.DiagSa1, {
+                action: sc.ActionVerb,
+                concession: ev.concessionVal,
+                unit: sc.Unit,
+                count: 2 + sc.Counterparties.length
+            }),
+            "sa2": fmt(TPL.DiagSa2, {
+                containerId: sc.ContainerId,
+                recipientId: sc.RecipientId,
+                triggered: ev.triggeredCount,
+                total: sc.Counterparties.length
+            }),
+            "opt": fmt(TPL.DiagOpt, {
+                cap: ev.breakevenCap,
+                unit: sc.Unit,
+                ceiling: formatCurrencyOrUnit(ev.effectiveCeiling, sc)
+            }),
+            "sa3": fmt(TPL.DiagSa3, {
+                specialists: 2 + sc.Specialists.length,
+                stagedVer: stagedOpeningVersion,
+                eventId: currentEventId
+            })
+        };
+        bar.innerHTML = `<i class="fas fa-wave-square"></i> ${diagnostics[stageId] || diagnostics["sa1"]}`;
+    }
+
+    function toggleLabFullscreen() {
+        const wb = document.getElementById('kinetic-workbench');
+        const icon = document.getElementById('lab-fs-icon');
+        const txt = document.getElementById('lab-fs-text');
+        wb.classList.toggle('kinetic-fullscreen');
+
+        if (wb.classList.contains('kinetic-fullscreen')) {
+            icon.className = "fas fa-compress";
+            txt.textContent = TELEMETRY_STRINGS.BtnExitFullscreen;
+            document.body.style.overflow = "hidden";
+        } else {
+            icon.className = "fas fa-expand";
+            txt.textContent = TELEMETRY_STRINGS.BtnFullscreen;
+            document.body.style.overflow = "auto";
+        }
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+        selectScenario(SCENARIOS[0].Id);
+    });
+</script>
+
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            if (window.innerWidth < 768) return;
+
+            const intro = document.querySelector("#right-intro");
+            if (!intro) return;
+
+            const tl = gsap.timeline();
+            let isClosing = false; // Flag to prevent double-triggering the exit
+
+            // --- 1. DEFINE THE EXIT FUNCTION ---
+            const closeIntro = () => {
+                if (isClosing) return;
+                isClosing = true;
+
+                // Kill the main timeline so it doesn't keep running in the background
+                tl.kill();
+
+                // Create a dedicated exit timeline for a fast, responsive feel
+                const exitTl = gsap.timeline();
+
+                /* ROBOT FAST REVEAL & RUN */
+                exitTl.to(".robot-runner", { opacity: 1, duration: 0.2 });
+                exitTl.to(".robot-runner", {
+                    x: 400,
+                    duration: 0.8,
+                    ease: "power2.in"
+                }, "-=0.1");
+
+                /* PANEL SLIDE-OUT */
+                exitTl.to("#right-intro", {
+                    duration: 0.8,
+                    transform: "translateX(100%)",
+                    ease: "power3.inOut",
+                    onComplete: () => {
+                        intro.style.display = "none";
+                        // Remove scroll listener once closed
+                        window.removeEventListener("scroll", handleScroll);
+                    }
+                }, "-=0.6");
+            };
+
+            // --- 2. THE SCROLL LISTENER ---
+            const handleScroll = () => {
+                if (window.scrollY > 20) { // Trigger after 20px of scrolling
+                    closeIntro();
+                }
+            };
+            window.addEventListener("scroll", handleScroll);
+
+            // --- 3. ORIGINAL ANIMATION SEQUENCE ---
+            /* PANEL SLIDE-IN */
+            tl.to("#right-intro", {
+                duration: 0.8,
+                transform: "translateX(0%)",
+                ease: "power3.out"
+            });
+
+            /* PARTICLES */
+            for (let i = 0; i < 20; i++) {
+                const p = document.createElement("div");
+                p.className = "particle";
+                p.style.position = "absolute";
+                p.style.width = "4px";
+                p.style.height = "4px";
+                p.style.background = "rgba(0,174,239,0.35)";
+                p.style.borderRadius = "50%";
+                p.style.left = Math.random() * 100 + "%";
+                p.style.top = "100%";
+                document.querySelector(".intro-particles").appendChild(p);
+
+                gsap.to(p, {
+                    y: -window.innerHeight - 100,
+                    duration: 4 + Math.random() * 4,
+                    delay: Math.random() * 2,
+                    repeat: -1,
+                    ease: "none"
+                });
+            }
+
+            /* SIGNAL LINE & PULSE */
+            tl.to(".signal-main", { height: "60%", duration: 0.8, ease: "power2.out" })
+                .to(".loading-dots", { opacity: 1, duration: 0.3 })
+                .to(".pulse", { opacity: 1, scale: 1.4, duration: 0.3, stagger: 0.15 })
+                .to(".pulse", { scale: 0.6, opacity: 0.4, duration: 0.3, stagger: 0.15 })
+                .to(".loading-dots", { opacity: 0, duration: 0.3 });
+
+            /* TEXT REVEAL */
+            tl.to(".t1", { opacity: 1, x: 0, duration: 0.6 })
+                .to(".t2", { opacity: 1, x: 0, duration: 0.6 })
+                .to(".t3", { opacity: 1, x: 0, duration: 0.6 })
+                .to(".t4", { opacity: 1, x: 0, duration: 0.6 });
+
+            /* ROBOT ARM/LEG LOOPS (Independent of timeline) */
+            const robotParts = [
+                { el: ".arm-left", r: 30 }, { el: ".arm-right", r: -30 },
+                { el: ".leg-left", r: -30 }, { el: ".leg-right", r: 30 }
+            ];
+            robotParts.forEach(part => {
+                gsap.to(part.el, { rotation: part.r, yoyo: true, repeat: -1, duration: 0.2, ease: "power1.inOut" });
+            });
+
+            // --- 4. AUTO-EXIT (If user doesn't scroll) ---
+            tl.to(".robot-runner", { opacity: 1, duration: 0.3, delay: 5 });
+            tl.to(".robot-runner", { x: 400, duration: 1.2, ease: "power2.inOut" }, "-=0.2");
+            tl.to("#right-intro", {
+                duration: 1,
+                transform: "translateX(100%)",
+                ease: "power3.inOut",
+                onComplete: () => {
+                    if (!isClosing) { // Only hide if scroll didn't already trigger it
+                        intro.style.display = "none";
+                        window.removeEventListener("scroll", handleScroll);
+                    }
+                }
+            }, "-=0.6");
+        });
+    </script>
+    <!-- Cloudflare Web Analytics --><script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "e290b7bc8f584d41990f177692bdcf23"}'></script><!-- End Cloudflare Web Analytics -->
+</body>
+</html>
