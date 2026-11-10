@@ -800,9 +800,9 @@
     const QUICK_GUIDE = {"BannerTitle":"So testen Sie diese Demo in 3 Schritten:","BtnShowHelp":"Was sehe ich hier?","BtnHideHelp":"Leitfaden ausblenden","Step1Title":"1. Versteckte Vertragsfallen aufdecken","Step1Desc":"Beobachten Sie den Ontologie-Graphen: Eine Anpassung f\u00FCr {recipient} l\u00F6st in {container} sofort eine Kettenreaktion aus, die Sicherheitsregeln, Logistik oder Compliance betrifft.","Step1Action":"Dominoeffekt anzeigen","Step2Title":"2. Konditionen durch KI optimieren lassen","Step2Desc":"Verschieben Sie die Regler links \u2013 oder klicken Sie hier \u2013, um zu sehen, wie MindML die exakte Obergrenze berechnet, die Engp\u00E4sse verhindert, Strafen abwendet und den Fast-Track-Freigabepfad freischaltet.","Step2Action":"Entscheidung auto-optimieren","Step3Title":"3. Zustandsbehaftetes Sicherheitsgate testen","Step3Desc":"\u00D6ffnen Sie das Freigabegate, um die \u00C4nderung zu autorisieren, testen Sie den 1-Klick-Rollback oder simulieren Sie, wie MindML parallele Bearbeitungskonflikte und Datenbankmanipulationen abwehrt.","Step3Action":"Sicherheitsgate \u00F6ffnen","HelpExplainerHtml":"\u003Cstrong\u003EWarum dies f\u00FCr Ihr Unternehmen entscheidend ist:\u003C/strong\u003E Standard-KI-Tools prognostizieren lediglich das n\u00E4chste Wort. Die Kinetic Engine bildet die spezifische \u003Cstrong\u003EUnternehmensontologie\u003C/strong\u003E Ihrer Organisation ab \u2013 sie \u00FCbersetzt Klauseln, Megawatt-Kapazit\u00E4ten und Sicherheitsradien in einen deterministischen Graphen. Bei operativen Entscheidungen berechnet sie sofort mehrstufige Ripple-Effekte \u00FCber das gesamte Portfolio, ermittelt das optimale Ergebnis und verbucht Transaktionen manipulationssicher."};
     const TELEMETRY_STRINGS = {"EngineModeLabel":"Entscheidungs-Engine","EngineModeVal":"100% regelbasiert verifiziert (Kein KI-Raten)","GroundingLatencyLabel":"Portfolio-Gegenpr\u00FCfung","GroundingLatencyVal":"\u003C 1 ms (100% der Vertr\u00E4ge gepr\u00FCft)","StorageEngineLabel":"Datensicherheit","StorageEngineVal":"100% lokaler, verschl\u00FCsselter Tresor","EntityVersionPrefix":"Datensatz v","MerkleStatusLabel":"Audit-Trail","MerkleValidText":"VERSIEGELT \u0026 VERIFIZIERT","MerkleTamperedText":"MANIPULATION ERKANNT","BtnFullscreen":"Vollbild","BtnExitFullscreen":"Vollbild beenden"};
     const LEFT_STRINGS = {"SectorSelectTitle":"1. Branchenszenario w\u00E4hlen","ControlsTitle":"2. Deal-Parameter live anpassen","SliderConcessionLabel":"Vorgeschlagener Nachlass / Rabatt","SliderStepUpLabel":"Mindestvolumen / -engagement des Kunden","BaselinePrefix":"Aktuell","StepUpPrefix":"Erh\u00F6ht","BreakevenCapPrefix":"Sicherheitsgrenze:","ToggleVariantLabel":"Richtlinien- / Vertrags\u00E4nderung","BtnResetBaseline":"Auf Ausgangswerte zur\u00FCcksetzen","BtnApplyPareto":"Beste risikofreie Option anwenden (CF-02)","LivePromptTitle":"Ihre Anweisung an das KI-Team","GbnfTagText":"Verifizierte Handlungsabsicht","StepUpPromptClause":", sofern das Mindestvolumen auf {stepUp} angehoben wird","MetaContainerLabel":"Betriebs-Hub / Programm:","MetaRecipientLabel":"Zielkunde / Partner:","MetaCapacityLabel":"Gesamtvolumen / Basistarif:"};
-    const CENTER_STRINGS = {"TabOverview":"1. Wirkungsmatrix \u0026 Deal-Optimierer","TabProof":"2. Vertragsnachweis \u0026 Rechtsmitteilungen","TabSpecialists":"3. Pr\u00FCfberichte der KI-Spezialisten","TabGate":"4. Freigabegate \u0026 Audit-Log","AstBoxTitle":"Mathematische Vertragspr\u00FCfung (Exakte Logik statt KI-Sch\u00E4tzung)","GroundingBoxTitle":"Eindeutige Vertragsklauseln (Titelreferenzen herausgefiltert)","AhoColEntity":"Vertragspartei / Hub","AhoColId":"System-ID","AhoColRole":"Gesch\u00E4ftsrolle","AhoColChunk":"Klauselref.","AhoColConfidence":"Pr\u00FCfstatus","AhoConfPrimary":"Verifizierte Kernpartei","AhoConfConstraint":"Bindende Klausel\u00FCbereinstimmung","AhoHeaderMention":"Lediglich in Dokumententitel genannt","AhoConfHeader":"Ignoriert (Nicht rechtsverbindlich)","GraphLegendTriggered":"Ausgel\u00F6ste Vertragsklausel (Verursacht Kosten)","GraphLegendCleared":"Konform / Keine Klausel ausgel\u00F6st","GraphLegendBreakeven":"Innerhalb der genehmigungsfreien Schwelle","GraphLegendContagion":"Kaskadeneffekt auf verbundene Standorte","KpiCascadeLabel":"J\u00E4hrliche Folgekosten (Kaskade)","KpiOmniLabel":"5-Jahres-Risikoexposition","KpiBreakevenLabel":"Ersparnis durch Deal-Optimierung (CF-02)","KpiTierLabel":"Erforderliche Freigabestufe","PerYearSuffix":" / Jahr","KpiTriggeredSub":"{triggered} von {total} weiteren Partnern erhalten Anspruch auf gleiche Konditionen ({exposure}{unit})","KpiZeroTriggeredSub":"Keine Partnerklauseln ausgel\u00F6st (Gilt ausschlie\u00DFlich f\u00FCr Zielkunden)","KpiOmniSub":"{rate}% Inanspruchnahme-Wahrscheinlichkeit | Risiko: {severity}","KpiSavingsSub":"Kappung bei {cap} {unit} -\u003E Erm\u00F6glicht Fast-Track-Freigabe","SeverityCleared":"NIEDRIG (UNBEDENKLICH)","SeverityModerate":"MODERAT","SeverityHigh":"HOCH","SeverityCritical":"KRITISCH","ParetoSectionTitle":"Optionen zur Deal-Restrukturierung (Folgekosten vermeiden)","ParetoClickHint":"Klicken Sie auf eine Option, um die Parameter direkt im Simulator zu testen","ColScenario":"Option","ColStrategy":"Restrukturierungsansatz","ColConcession":"Nachlass / Rabatt","ColMinCommitment":"Erforderliches Mindestvolumen","ColTriggers":"Betroffene Partner","ColAnnualDrag":"J\u00E4hrliche Folgekosten","ColSavings":"J\u00E4hrliche Ersparnis","ColGovernanceTier":"Zust\u00E4ndige Freigabeinstanz","BestBadge":"\u2605\u0026nbsp;EMPFOHLEN","CitationsTitle":"Authentische Vertragsbelege (Direkt aus unterzeichneten Vertr\u00E4gen)","ConfidenceLabel":"100% verifiziertes Zitat","NoticesTitle":"Versandbereite Partner-Mitteilungen (Mit gesch\u00FCtzten Firmennamen)","GlossaryLockSuffix":"Terminologie gesperrt","NoNoticesRequired":"Keine weiteren Vertragspartner betroffen \u2013 keine externen Mitteilungen erforderlich.","SpecialistsTitle":"Analysen des KI-Spezialistenteams (Finanzen, Recht, Risiko \u0026 Betrieb)","ArtifactsTitle":"Generierte Dokumente (Pr\u00FCf- und downloadbereit)"};
+    const CENTER_STRINGS = {"TabOverview":"1. Wirkungsmatrix \u0026 Deal-Optimierer","TabProof":"2. Vertragsnachweis \u0026 Rechtsmitteilungen","TabSpecialists":"3. Pr\u00FCfberichte der KI-Spezialisten","TabGate":"4. Freigabegate \u0026 Audit-Log","AstBoxTitle":"Mathematische Vertragspr\u00FCfung (Exakte Logik statt KI-Sch\u00E4tzung)","GroundingBoxTitle":"Eindeutige Vertragsklauseln (Titelreferenzen herausgefiltert)","AhoColEntity":"Vertragspartei / Hub","AhoColId":"System-ID","AhoColRole":"Gesch\u00E4ftsrolle","AhoColChunk":"Klauselref.","AhoColConfidence":"Pr\u00FCfstatus","AhoConfPrimary":"Verifizierte Kernpartei","AhoConfConstraint":"Bindende Klausel\u00FCbereinstimmung","AhoHeaderMention":"Lediglich in Dokumententitel genannt","AhoConfHeader":"Ignoriert (Nicht rechtsverbindlich)","GraphLegendTriggered":"Ausgel\u00F6ste Vertragsklausel (Verursacht Kosten)","GraphLegendCleared":"Konform / Keine Klausel ausgel\u00F6st","GraphLegendBreakeven":"Innerhalb der genehmigungsfreien Schwelle","GraphLegendContagion":"Kaskadeneffekt auf verbundene Standorte","KpiCascadeLabel":"J\u00E4hrliche Folgekosten (Kaskade)","KpiOmniLabel":"5-Jahres-Risikoexposition","KpiBreakevenLabel":"Ersparnis durch Deal-Optimierung (CF-02)","KpiTierLabel":"Erforderliche Freigabestufe","PerYearSuffix":" / Jahr","KpiTriggeredSub":"{triggered} von {total} weiteren Partnern erhalten Anspruch auf gleiche Konditionen ({exposure}{unit})","KpiZeroTriggeredSub":"Keine Partnerklauseln ausgel\u00F6st (Gilt ausschlie\u00DFlich f\u00FCr Zielkunden)","KpiOmniSub":"{rate}% Inanspruchnahme-Wahrscheinlichkeit | Risiko: {severity}","KpiSavingsSub":"Kappung bei {cap} {unit} -\u003E Erm\u00F6glicht Fast-Track-Freigabe","SeverityCleared":"NIEDRIG (UNBEDENKLICH)","SeverityModerate":"MODERAT","SeverityHigh":"HOCH","SeverityCritical":"KRITISCH","ParetoSectionTitle":"Optionen zur Deal-Restrukturierung (Folgekosten vermeiden)","ParetoClickHint":"Klicken Sie auf eine Option, um die Parameter direkt im Simulator zu testen","ColScenario":"Option","ColStrategy":"Restrukturierungsansatz","ColConcession":"Nachlass / Rabatt","ColMinCommitment":"Erforderliches Mindestvolumen","ColTriggers":"Betroffene Partner","ColAnnualDrag":"J\u00E4hrliche Folgekosten","ColSavings":"J\u00E4hrliche Ersparnis","ColGovernanceTier":"Zust\u00E4ndige Freigabeinstanz","BestBadge":"\u2605\u0026nbsp;EMPFOHLEN","CitationsTitle":"Authentische Vertragsbelege (Direkt aus unterzeichneten Vertr\u00E4gen)","ConfidenceLabel":"100% verifiziertes Zitat","NoticesTitle":"Versandbereite Partner-Mitteilungen (Mit gesch\u00FCtzten Firmennamen)","GlossaryLockSuffix":"Terminologie gesperrt","NoNoticesRequired":"Keine weiteren Vertragspartner betroffen \u2013 keine externen Mitteilungen erforderlich.","SpecialistsTitle":"Analysen des KI-Spezialistenteams (Finanzen, Recht, Risiko \u0026 Betrieb)","ArtifactsTitle":"Generierte Dokumente (Pr\u00FCf- und downloadbereit)","KpiCascadeLabelPhysical":"Spitzenlast durch Dominoeffekt","KpiDirectCostLabel":"Direkte Kundenrabattkosten","KpiDirectCostLabelPhysical":"Direkte Ziel-Lastauswirkung","KpiOmniLabelPhysical":"Risikogewichtete Spitzenlast","KpiAlreadyCompliantSub":"Bereits konform (\u003C {ceiling})","KpiHopExclusionSuffix":" (Schlie\u00DFt Hop-1-Ansteckung aus)","ColAnnualDragPhysical":"Spitzen-Folgelast","ColSavingsPhysical":"Eingesparte Spitzenlast"};
     const ACID_STRINGS = {"GateTitle":"Menschliches Freigabegate \u0026 revisionssicheres Audit-Protokoll","StatePending":"WARTET AUF IHRE FREIGABE","StateCommitted":"GENEHMIGT \u0026 IM LIVESYSTEM GEBUCHT","StateRejected":"ABGELEHNT (KEINE \u00C4NDERUNGEN DURCHGEF\u00DCHRT)","StateRolledBack":"ZUR\u00DCCKGESETZT (URSPR\u00DCNGLICHER STAND WIEDERHERGESTELLT)","StateOccConflict":"BLOCKIERT: ZWISCHENZEITLICHE \u00C4NDERUNG DURCH DRITTE","InitialFeedbackHtml":"Wartet auf autorisierte Freigabe. Die KI hat alle Dokumente vorbereitet, aber \u003Cstrong\u003Ees wurden keinerlei produktive Daten ver\u00E4ndert\u003C/strong\u003E, bis Sie auf Genehmigen klicken.","BtnConfirm":"Freigeben \u0026 \u00C4nderung anwenden","BtnReject":"Vorgang abbrechen","BtnRollback":"1-Klick-Rollback (Vorherigen Stand wiederherstellen)","BtnSimOcc":"Testen: Was passiert bei gleichzeitigem Zugriff eines Kollegen?","BtnSimTamper":"Testen: Was geschieht bei versuchter Protokollmanipulation?","BtnRestoreTamper":"Audit-Log reparieren \u0026 Integrit\u00E4t pr\u00FCfen","LedgerTableTitle":"Unver\u00E4nderbares Compliance-Audit-Log (Kryptografisch versiegelt)","MerkleFormulaHint":"Jeder Eintrag ist kryptografisch mit dem vorherigen verkettet. Jede nachtr\u00E4gliche Manipulation der Datenbank wird sofort unweigerlich offengelegt.","ColEventId":"Ereignis-Nr.","ColTimestamp":"Zeitstempel (UTC)","ColActorId":"Benutzer / System","ColActionName":"Aktion \u0026 Zielkunde","ColOccSnapshot":"Versionsabgleich","ColStatus":"Status","ColPrevHash":"Vorheriges Siegel","ColEventHash":"Kryptografisches Siegel (SHA-256)","FlagHashMismatch":"DATENSATZ MANIPULIERT","FlagChainBroken":"KETTE DURCHBROCHEN"};
-    const TPL = {"DiagSa1":"\u003Cstrong\u003E[Schritt 01 - Auftrags- \u0026 Partnerzuordnung]\u003C/strong\u003E Handlungsanweisung \u003Ccode\u003E{action} ({concession} {unit})\u003C/code\u003E interpretiert und \u003Cstrong\u003E{count} Vertragsparteien\u003C/strong\u003E in unter 1 Millisekunde ohne Sch\u00E4tzwerte zugeordnet.","DiagSa2":"\u003Cstrong\u003E[Schritt 02 - 100% Portfolio-Pr\u00FCfung]\u003C/strong\u003E S\u00E4mtliche Vertr\u00E4ge zu \u003Ccode\u003E{containerId}\u003C/code\u003E und \u003Ccode\u003E{recipientId}\u003C/code\u003E analysiert -\u003E \u003Cstrong\u003E{triggered} von {total} Klauseln zur Ratenangleichung ausgel\u00F6st\u003C/strong\u003E.","DiagOpt":"\u003Cstrong\u003E[Schritt 03 - Deal-Optimierer]\u003C/strong\u003E Exakte risikofreie Obergrenze berechnet (\u003Ccode\u003ECF-02 = {cap} {unit}\u003C/code\u003E), um innerhalb des Fast-Track-Limits von {ceiling} zu verbleiben.","DiagSa3":"\u003Cstrong\u003E[Schritt 04 - Menschliches Freigabegate]\u003C/strong\u003E Abstimmung mit \u003Cstrong\u003E{specialists} KI-Fachagenten\u003C/strong\u003E abgeschlossen, Snapshot (v{stagedVer}) f\u00FCr 1-Klick-Rollback gesichert und \u003Ccode\u003EVorgang #{eventId}\u003C/code\u003E zur Zeichnung vorgelegt.","BypassThreshold":"Partnervolumen ({holderM}{unit}) liegt unter der angepassten Qualifikationsgrenze ({threshM}{unit})","BypassStepUp":"Neues Volumen des Zielkunden ({stepUpM}{unit}) \u00FCbersteigt das Volumen dieses Partners ({holderM}{unit})","BypassSafeHarbor":"Gem\u00E4\u00DF Notfall-Sicherheitsklausel von Parit\u00E4tsanspr\u00FCchen befreit","BypassVacatur":"Zugrundeliegende regulatorische Verordnung wurde gerichtlich f\u00FCr nichtig erkl\u00E4rt","BypassWaiver":"Partner hat einer bilateralen Ausnahmeregelung f\u00FCr diesen Vertrag zugestimmt","SvgTriggered":"AUSGEL\u00D6ST ({drag})","SvgBypassed":"NICHT AUSGEL\u00D6ST (0 Kosten)","SvgCommitment":"Volumen:","SvgTarget":"Kapazit\u00E4t:","SvgHopActive":"KASKADE AKTIV ({commitment}$ Mio. betroffen)","SvgHopIsolated":"HUB ISOLIERT (Keine Kaskade)","SvgSupremeCourtTitle":"Supreme-Court-Urteil 598 U.S. 44 (Verordnung aufgehoben)","SvgVacaturActive":"Regelung gekippt -\u003E Klauseln nicht mehr anwendbar","SvgVacaturInactive":"K\u00E4stchen links aktivieren, um Gerichtsurteil anzuwenden","BannerAlertTitle":"GOVERNANCE-WARNUNG: MEISTBEG\u00DCNSTIGUNGSKLAUSELN AUSGEL\u00D6ST","BannerAlertSub":"Die Gew\u00E4hrung von \u003Cstrong\u003E{action}\u003C/strong\u003E (\u003Ccode\u003E{concession} {unit}\u003C/code\u003E) an \u003Cstrong\u003E{recipient}\u003C/strong\u003E (\u003Ccode\u003E{recipientId}\u003C/code\u003E) berechtigt \u003Cstrong\u003E{triggered} weitere Hauptpartner\u003C/strong\u003E in \u003Cstrong\u003E{container}\u003C/strong\u003E automatisch dazu, exakt dieselben Konditionen einzufordern.","BannerClearedTitle":"DEAL F\u00DCR FAST-TRACK-FREIGABE BEREIT (KEINE KONFLIKTE)","BannerClearedSub":"Die Gew\u00E4hrung von \u003Cstrong\u003E{action}\u003C/strong\u003E (\u003Ccode\u003E{concession} {unit}\u003C/code\u003E) an \u003Cstrong\u003E{recipient}\u003C/strong\u003E (\u003Ccode\u003E{recipientId}\u003C/code\u003E) l\u00F6st \u003Cstrong\u003Ekeine Meistbeg\u00FCnstigungsklauseln\u003C/strong\u003E anderer Partner in \u003Cstrong\u003E{container}\u003C/strong\u003E aus.","ParetoCalloutHtml":"\u003Cstrong\u003E\u003Ci class=\u0027fas fa-award\u0027\u003E\u003C/i\u003E Empfohlene Deal-Struktur (\u003Ccode\u003ECF-02\u003C/code\u003E):\u003C/strong\u003E Nachlass auf \u003Ccode\u003E{cap} {unit}\u003C/code\u003E begrenzen, um die Kaskadenkosten auf \u003Cstrong\u003E{drag}\u003C/strong\u003E zu deckeln \u2013 spart \u003Cstrong class=\u0027accent-emerald\u0027\u003E{savings}\u003C/strong\u003E und qualifiziert f\u00FCr \u003Ccode\u003E{tier}\u003C/code\u003E.","StrategyCf02":"Nachlass bei Sicherheitsgrenze kappen (Bleibt unterhalb des {ceiling}-Budgets)","StrategyCf03":"H\u00F6heres Kundenvolumen fordern (Schlie\u00DFt Partner bis {lowestM}{unit} aus)","StrategyCf04":"Halbierung des Nachlasses (50% geringerer Rabatt bei {half} {unit})","StrategyCf01":"Aktuelle Reglereinstellungen ({concession} {unit} bei {stepUp}{commitUnit} Volumen)","KeystoneWaiverHtml":"\u003Ci class=\u0027fas fa-key\u0027\u003E\u003C/i\u003E \u003Cstrong\u003EHauptkostentreiber:\u003C/strong\u003E Eine bilaterale Freistellung von \u003Cstrong\u003E{cp0Name}\u003C/strong\u003E ({cp0M}{unit}) und \u003Cstrong\u003E{cp1Name}\u003C/strong\u003E ({cp1M}{unit}) beseitigt \u003Cstrong\u003E100%\u003C/strong\u003E des finanziellen Kaskadeneffekts.","MultiHopAlertHtml":"\u003Cspan class=\u0027hop-alert-inline\u0027\u003E\u003Ci class=\u0027fas fa-diagram-next\u0027\u003E\u003C/i\u003E \u003Cstrong\u003EStandort\u00FCbergreifender Kaskadenalarm:\u003C/strong\u003E Dieser Nachlass betrifft auch einen assoziierten Vertrag in \u003Cstrong\u003E{hopContainer}\u003C/strong\u003E ({hopCp}).\u003C/span\u003E","CompRole":"Automatisierte Vertrags- \u0026 Compliance-Pr\u00FCfung","CompTextTriggered":"Best\u00E4tigt: {triggered} bestehende Vertr\u00E4ge in \u0027{container}\u0027 besitzen Ratenangleichungsrechte. Formelle Ank\u00FCndigungsfrist vor Vertragsunterzeichnung zwingend erforderlich.","CompTextCleared":"Best\u00E4tigt: Keine kollidierenden Klauseln Dritter f\u00FCr \u0027{recipient}\u0027 in \u0027{container}\u0027 vorhanden. Bereit f\u00FCr Standardgenehmigung.","MathRole":"Finanzielle \u0026 Mengenbezogene Wirkungsanalyse","MathTextTriggered":"Verifiziert: Gesamte Kaskadenkosten von {drag}/Jahr \u00FCber ein anspruchsberechtigtes Partnervolumen von {exposure}{unit}.","MathTextCleared":"Verifiziert: Direkte Rabattkosten von {direct}/Jahr auf das Zielvolumen von {stepUp}{unit} (Keine Kaskadeneffekte).","VersionSnapshotFmt":"Erstellt auf Basis v{stagedVer} (Aktuell: v{liveVer})","FeedbackOccAbortHtml":"\u003Cstrong\u003E\u003Ci class=\u0027fas fa-ban\u0027\u003E\u003C/i\u003E KONFLIKT VERHINDERT (GLEICHZEITIGER ZUGRIFF BLOCKIERT):\u003C/strong\u003E Dieser Vorgang basierte auf \u003Ccode\u003EDatensatz v{stagedVer}\u003C/code\u003E von \u003Ccode\u003E{containerId}\u003C/code\u003E, ein Kollege hat jedoch soeben \u003Ccode\u003Ev{liveVer}\u003C/code\u003E gebucht. MindML hat das \u00DCberschreiben veralteter Daten verhindert. Klicken Sie links auf \u003Cstrong\u003EAuf Ausgangswerte zur\u00FCcksetzen\u003C/strong\u003E.","FeedbackCommittedHtml":"\u003Cstrong\u003E\u003Ci class=\u0027fas fa-circle-check\u0027\u003E\u003C/i\u003E \u00C4NDERUNG FREIGEGEBEN \u0026 GEBUCHT (Ereignis #{eventId}):\u003C/strong\u003E Versionspr\u00FCfung erfolgreich. Produktivdaten auf \u003Ccode\u003Ev{liveVer}\u003C/code\u003E aktualisiert und revisionssicher versiegelt. Sie k\u00F6nnen die \u00C4nderung nun per \u003Cstrong\u003E1-Klick-Rollback\u003C/strong\u003E testen!","FeedbackRejectedHtml":"\u003Cstrong\u003E\u003Ci class=\u0027fas fa-circle-xmark\u0027\u003E\u003C/i\u003E VORGANG ABGEBROCHEN (Ereignis #{eventId}):\u003C/strong\u003E Entwurf verworfen. Keine Produktivdaten ver\u00E4ndert; der Abbruch wurde ordnungsgem\u00E4\u00DF auditiert.","FeedbackRolledBackHtml":"\u003Cstrong\u003E\u003Ci class=\u0027fas fa-rotate-left\u0027\u003E\u003C/i\u003E 1-KLICK-ROLLBACK DURCHGEF\u00DCHRT (Ereignis #{eventId}):\u003C/strong\u003E \u003Ccode\u003E{container}\u003C/code\u003E und alle Vertragsvereinbarungen wurden aus dem Snapshot unmittelbar auf \u003Ccode\u003Ev{liveVer}\u003C/code\u003E zur\u00FCckgesetzt.","FeedbackOccSimHtml":"\u003Cstrong\u003E\u003Ci class=\u0027fas fa-bolt\u0027\u003E\u003C/i\u003E PARALLELE \u00C4NDERUNG SIMULIERT:\u003C/strong\u003E Angenommen, eine andere F\u00FChrungskraft bucht eine \u00C4nderung an \u003Ccode\u003E{container}\u003C/code\u003E auf \u003Ccode\u003Ev{liveVer}\u003C/code\u003E, w\u00E4hrend Ihre Maske noch \u003Ccode\u003Ev{stagedVer}\u003C/code\u003E anzeigt. Klicken Sie auf \u003Cstrong\u003EFreigeben \u0026 \u00C4nderung anwenden\u003C/strong\u003E, um die automatische Schutzfunktion zu testen!","FeedbackTamperActiveHtml":"\u003Cstrong\u003E\u003Ci class=\u0027fas fa-radiation\u0027\u003E\u003C/i\u003E UNBEFUGTE DATENBANKMANIPULATION ENTDECKT:\u003C/strong\u003E Es wurde versucht, \u003Ccode\u003EEreignis #101\u003C/code\u003E direkt in der Datenbank zu ver\u00E4ndern. Die Merkle-Pr\u00FCfung von MindML hat den manipulierten Datensatz sofort isoliert und nachfolgende Vorg\u00E4nge (\u003Ccode\u003EEreignis #{eventId}\u003C/code\u003E) gesperrt!","FeedbackTamperRestoredHtml":"\u003Cstrong\u003E\u003Ci class=\u0027fas fa-shield-check\u0027\u003E\u003C/i\u003E AUDIT-LOG WIEDERHERGESTELLT:\u003C/strong\u003E Urspr\u00FCnglicher Datensatz wiederhergestellt. Alle Pr\u00FCfsiegel der Ereigniskette sind intakt und best\u00E4tigt."};
+    const TPL = {"DiagSa1":"\u003Cstrong\u003E[Schritt 01 - Auftrags- \u0026 Partnerzuordnung]\u003C/strong\u003E Handlungsanweisung \u003Ccode\u003E{action} ({concession} {unit})\u003C/code\u003E interpretiert und \u003Cstrong\u003E{count} Vertragsparteien\u003C/strong\u003E in unter 1 Millisekunde ohne Sch\u00E4tzwerte zugeordnet.","DiagSa2":"\u003Cstrong\u003E[Schritt 02 - 100% Portfolio-Pr\u00FCfung]\u003C/strong\u003E S\u00E4mtliche Vertr\u00E4ge zu \u003Ccode\u003E{containerId}\u003C/code\u003E und \u003Ccode\u003E{recipientId}\u003C/code\u003E analysiert -\u003E \u003Cstrong\u003E{triggered} von {total} Klauseln zur Ratenangleichung ausgel\u00F6st\u003C/strong\u003E.","DiagOpt":"\u003Cstrong\u003E[Schritt 03 - Deal-Optimierer]\u003C/strong\u003E Exakte risikofreie Obergrenze berechnet (\u003Ccode\u003ECF-02 = {cap} {unit}\u003C/code\u003E), um innerhalb des Fast-Track-Limits von {ceiling} zu verbleiben.","DiagSa3":"\u003Cstrong\u003E[Schritt 04 - Menschliches Freigabegate]\u003C/strong\u003E Abstimmung mit \u003Cstrong\u003E{specialists} KI-Fachagenten\u003C/strong\u003E abgeschlossen, Snapshot (v{stagedVer}) f\u00FCr 1-Klick-Rollback gesichert und \u003Ccode\u003EVorgang #{eventId}\u003C/code\u003E zur Zeichnung vorgelegt.","BypassThreshold":"Partnervolumen ({holderM}{unit}) liegt unter der angepassten Qualifikationsgrenze ({threshM}{unit})","BypassStepUp":"Neues Volumen des Zielkunden ({stepUpM}{unit}) \u00FCbersteigt das Volumen dieses Partners ({holderM}{unit})","BypassSafeHarbor":"Gem\u00E4\u00DF Notfall-Sicherheitsklausel von Parit\u00E4tsanspr\u00FCchen befreit","BypassVacatur":"Zugrundeliegende regulatorische Verordnung wurde gerichtlich f\u00FCr nichtig erkl\u00E4rt","BypassWaiver":"Partner hat einer bilateralen Ausnahmeregelung f\u00FCr diesen Vertrag zugestimmt","SvgTriggered":"AUSGEL\u00D6ST ({drag})","SvgBypassed":"NICHT AUSGEL\u00D6ST (0 Kosten)","SvgCommitment":"Volumen:","SvgTarget":"Kapazit\u00E4t:","SvgHopActive":"KASKADE AKTIV ({commitment}$ Mio. betroffen)","SvgHopIsolated":"HUB ISOLIERT (Keine Kaskade)","SvgSupremeCourtTitle":"Supreme-Court-Urteil 598 U.S. 44 (Verordnung aufgehoben)","SvgVacaturActive":"Regelung gekippt -\u003E Klauseln nicht mehr anwendbar","SvgVacaturInactive":"K\u00E4stchen links aktivieren, um Gerichtsurteil anzuwenden","BannerAlertTitle":"GOVERNANCE-WARNUNG: MEISTBEG\u00DCNSTIGUNGSKLAUSELN AUSGEL\u00D6ST","BannerAlertSub":"Die Gew\u00E4hrung von \u003Cstrong\u003E{action}\u003C/strong\u003E (\u003Ccode\u003E{concession} {unit}\u003C/code\u003E) an \u003Cstrong\u003E{recipient}\u003C/strong\u003E (\u003Ccode\u003E{recipientId}\u003C/code\u003E) berechtigt \u003Cstrong\u003E{triggered} weitere Hauptpartner\u003C/strong\u003E in \u003Cstrong\u003E{container}\u003C/strong\u003E automatisch dazu, exakt dieselben Konditionen einzufordern.","BannerClearedTitle":"DEAL F\u00DCR FAST-TRACK-FREIGABE BEREIT (KEINE KONFLIKTE)","BannerClearedSub":"Die Gew\u00E4hrung von \u003Cstrong\u003E{action}\u003C/strong\u003E (\u003Ccode\u003E{concession} {unit}\u003C/code\u003E) an \u003Cstrong\u003E{recipient}\u003C/strong\u003E (\u003Ccode\u003E{recipientId}\u003C/code\u003E) l\u00F6st \u003Cstrong\u003Ekeine Meistbeg\u00FCnstigungsklauseln\u003C/strong\u003E anderer Partner in \u003Cstrong\u003E{container}\u003C/strong\u003E aus.","ParetoCalloutHtml":"\u003Cstrong\u003E\u003Ci class=\u0027fas fa-award\u0027\u003E\u003C/i\u003E Empfohlene Deal-Struktur (\u003Ccode\u003ECF-02\u003C/code\u003E):\u003C/strong\u003E Nachlass auf \u003Ccode\u003E{cap} {unit}\u003C/code\u003E begrenzen, um die Kaskadenkosten auf \u003Cstrong\u003E{drag}\u003C/strong\u003E zu deckeln \u2013 spart \u003Cstrong class=\u0027accent-emerald\u0027\u003E{savings}\u003C/strong\u003E und qualifiziert f\u00FCr \u003Ccode\u003E{tier}\u003C/code\u003E.","StrategyCf02":"Nachlass bei Sicherheitsgrenze kappen (Bleibt unterhalb des {ceiling}-Budgets)","StrategyCf03":"H\u00F6heres Kundenvolumen fordern (Schlie\u00DFt Partner bis {lowestM}{unit} aus)","StrategyCf04":"Halbierung des Nachlasses (50% geringerer Rabatt bei {half} {unit})","StrategyCf01":"Aktuelle Reglereinstellungen ({concession} {unit} bei {stepUp}{commitUnit} Volumen)","KeystoneWaiverHtml":"\u003Ci class=\u0027fas fa-key\u0027\u003E\u003C/i\u003E \u003Cstrong\u003EHauptkostentreiber:\u003C/strong\u003E Eine bilaterale Freistellung von \u003Cstrong\u003E{cp0Name}\u003C/strong\u003E ({cp0M}{unit}) und \u003Cstrong\u003E{cp1Name}\u003C/strong\u003E ({cp1M}{unit}) beseitigt \u003Cstrong\u003E100%\u003C/strong\u003E des finanziellen Kaskadeneffekts.","MultiHopAlertHtml":"\u003Cspan class=\u0027hop-alert-inline\u0027\u003E\u003Ci class=\u0027fas fa-diagram-next\u0027\u003E\u003C/i\u003E \u003Cstrong\u003EStandort\u00FCbergreifender Kaskadenalarm:\u003C/strong\u003E Dieser Nachlass betrifft auch einen assoziierten Vertrag in \u003Cstrong\u003E{hopContainer}\u003C/strong\u003E ({hopCp}).\u003C/span\u003E","CompRole":"Automatisierte Vertrags- \u0026 Compliance-Pr\u00FCfung","CompTextTriggered":"Best\u00E4tigt: {triggered} bestehende Vertr\u00E4ge in \u0027{container}\u0027 besitzen Ratenangleichungsrechte. Formelle Ank\u00FCndigungsfrist vor Vertragsunterzeichnung zwingend erforderlich.","CompTextCleared":"Best\u00E4tigt: Keine kollidierenden Klauseln Dritter f\u00FCr \u0027{recipient}\u0027 in \u0027{container}\u0027 vorhanden. Bereit f\u00FCr Standardgenehmigung.","MathRole":"Finanzielle \u0026 Mengenbezogene Wirkungsanalyse","MathTextTriggered":"Verifiziert: Gesamte Kaskadenkosten von {drag}/Jahr \u00FCber ein anspruchsberechtigtes Partnervolumen von {exposure}{unit}.","MathTextCleared":"Verifiziert: Direkte Rabattkosten von {direct}/Jahr auf das Zielvolumen von {stepUp}{unit} (Keine Kaskadeneffekte).","VersionSnapshotFmt":"Erstellt auf Basis v{stagedVer} (Aktuell: v{liveVer})","FeedbackOccAbortHtml":"\u003Cstrong\u003E\u003Ci class=\u0027fas fa-ban\u0027\u003E\u003C/i\u003E KONFLIKT VERHINDERT (GLEICHZEITIGER ZUGRIFF BLOCKIERT):\u003C/strong\u003E Dieser Vorgang basierte auf \u003Ccode\u003EDatensatz v{stagedVer}\u003C/code\u003E von \u003Ccode\u003E{containerId}\u003C/code\u003E, ein Kollege hat jedoch soeben \u003Ccode\u003Ev{liveVer}\u003C/code\u003E gebucht. MindML hat das \u00DCberschreiben veralteter Daten verhindert. Klicken Sie links auf \u003Cstrong\u003EAuf Ausgangswerte zur\u00FCcksetzen\u003C/strong\u003E.","FeedbackCommittedHtml":"\u003Cstrong\u003E\u003Ci class=\u0027fas fa-circle-check\u0027\u003E\u003C/i\u003E \u00C4NDERUNG FREIGEGEBEN \u0026 GEBUCHT (Ereignis #{eventId}):\u003C/strong\u003E Versionspr\u00FCfung erfolgreich. Produktivdaten auf \u003Ccode\u003Ev{liveVer}\u003C/code\u003E aktualisiert und revisionssicher versiegelt. Sie k\u00F6nnen die \u00C4nderung nun per \u003Cstrong\u003E1-Klick-Rollback\u003C/strong\u003E testen!","FeedbackRejectedHtml":"\u003Cstrong\u003E\u003Ci class=\u0027fas fa-circle-xmark\u0027\u003E\u003C/i\u003E VORGANG ABGEBROCHEN (Ereignis #{eventId}):\u003C/strong\u003E Entwurf verworfen. Keine Produktivdaten ver\u00E4ndert; der Abbruch wurde ordnungsgem\u00E4\u00DF auditiert.","FeedbackRolledBackHtml":"\u003Cstrong\u003E\u003Ci class=\u0027fas fa-rotate-left\u0027\u003E\u003C/i\u003E 1-KLICK-ROLLBACK DURCHGEF\u00DCHRT (Ereignis #{eventId}):\u003C/strong\u003E \u003Ccode\u003E{container}\u003C/code\u003E und alle Vertragsvereinbarungen wurden aus dem Snapshot unmittelbar auf \u003Ccode\u003Ev{liveVer}\u003C/code\u003E zur\u00FCckgesetzt.","FeedbackOccSimHtml":"\u003Cstrong\u003E\u003Ci class=\u0027fas fa-bolt\u0027\u003E\u003C/i\u003E PARALLELE \u00C4NDERUNG SIMULIERT:\u003C/strong\u003E Angenommen, eine andere F\u00FChrungskraft bucht eine \u00C4nderung an \u003Ccode\u003E{container}\u003C/code\u003E auf \u003Ccode\u003Ev{liveVer}\u003C/code\u003E, w\u00E4hrend Ihre Maske noch \u003Ccode\u003Ev{stagedVer}\u003C/code\u003E anzeigt. Klicken Sie auf \u003Cstrong\u003EFreigeben \u0026 \u00C4nderung anwenden\u003C/strong\u003E, um die automatische Schutzfunktion zu testen!","FeedbackTamperActiveHtml":"\u003Cstrong\u003E\u003Ci class=\u0027fas fa-radiation\u0027\u003E\u003C/i\u003E UNBEFUGTE DATENBANKMANIPULATION ENTDECKT:\u003C/strong\u003E Es wurde versucht, \u003Ccode\u003EEreignis #101\u003C/code\u003E direkt in der Datenbank zu ver\u00E4ndern. Die Merkle-Pr\u00FCfung von MindML hat den manipulierten Datensatz sofort isoliert und nachfolgende Vorg\u00E4nge (\u003Ccode\u003EEreignis #{eventId}\u003C/code\u003E) gesperrt!","FeedbackTamperRestoredHtml":"\u003Cstrong\u003E\u003Ci class=\u0027fas fa-shield-check\u0027\u003E\u003C/i\u003E AUDIT-LOG WIEDERHERGESTELLT:\u003C/strong\u003E Urspr\u00FCnglicher Datensatz wiederhergestellt. Alle Pr\u00FCfsiegel der Ereigniskette sind intakt und best\u00E4tigt.","ParetoCalloutCompliantHtml":"\u003Cdiv\u003E\u003Cstrong\u003E\u003Ci class=\u0027fas fa-circle-check\u0027\u003E\u003C/i\u003E Vereinbarung ist konform (\u003Ccode\u003ECF-01\u003C/code\u003E):\u003C/strong\u003E Aktuelle Parameter erzeugen \u003Cstrong\u003E{drag}\u003C/strong\u003E an Kaskadenlast, was sicher unter der Obergrenze von {ceiling} liegt. Sie sind f\u00FCr \u003Ccode\u003E{tier}\u003C/code\u003E freigegeben.\u003C/div\u003E"};
 
     function fmt(template, vars) {
         if (!template) return "";
@@ -912,13 +912,24 @@
         ].map(n => n.toString(16).padStart(8, '0')).join('');
     }
 
+    // Enhance existing currency/unit formatter to handle fractional physical units (e.g. 122.5 MW)
     function formatCurrencyOrUnit(amount, sc, showSign = false) {
-        const absVal = Math.abs(Math.round(amount));
+        const isInt = (amount % 1 === 0);
+        const absVal = Math.abs(isInt ? Math.round(amount) : Math.round(amount * 10) / 10);
         const sign = amount < 0 ? "-" : (showSign && amount > 0 ? "+" : "");
         if (sc.UnitType === "physical_mw") {
             return `${sign}${absVal.toLocaleString('en-US')} MW`;
         }
         return `${sign}${sc.CurrencySymbol}${absVal.toLocaleString('en-US')}`;
+    }
+
+    // New dedicated volume formatter
+    function formatVolume(amountM, sc) {
+        if (!sc) sc = activeScenario;
+        if (sc.UnitType === "physical_mw") {
+            return `${amountM} MW`;
+        }
+        return `${sc.CurrencySymbol || '$'}${amountM}M`;
     }
 
     // 4. Scenario Selection & Initialization
@@ -949,8 +960,8 @@
 
         document.getElementById('min-concession-lbl').textContent = `${activeScenario.MinConcession} ${activeScenario.Unit}`;
         document.getElementById('max-concession-lbl').textContent = `${activeScenario.MaxConcession} ${activeScenario.Unit}`;
-        document.getElementById('min-stepup-lbl').textContent = `${LEFT_STRINGS.BaselinePrefix} (${activeScenario.DefaultRecipientCommitment} ${activeScenario.CommitmentUnit})`;
-        document.getElementById('max-stepup-lbl').textContent = `${LEFT_STRINGS.StepUpPrefix} (${activeScenario.MaxRecipientCommitment} ${activeScenario.CommitmentUnit})`;
+        document.getElementById('min-stepup-lbl').textContent = `${LEFT_STRINGS.BaselinePrefix} (${formatVolume(activeScenario.DefaultRecipientCommitment, activeScenario)})`;
+        document.getElementById('max-stepup-lbl').textContent = `${LEFT_STRINGS.StepUpPrefix} (${formatVolume(activeScenario.MaxRecipientCommitment, activeScenario)})`;
 
         entityVersion = 1;
         stagedOpeningVersion = 1;
@@ -1016,9 +1027,9 @@
 
             let bypassedReason = null;
             if (!holderQualifies) {
-                bypassedReason = fmt(TPL.BypassThreshold, { holderM: cp.CommitmentM, unit: sc.CommitmentUnit, threshM: activeThreshold });
+                bypassedReason = fmt(TPL.BypassThreshold, { holderM: formatVolume(cp.CommitmentM, sc), unit: "", threshM: formatVolume(activeThreshold, sc) });
             } else if (!paritySatisfied) {
-                bypassedReason = fmt(TPL.BypassStepUp, { stepUpM: stepUpVal, unit: sc.CommitmentUnit, holderM: cp.CommitmentM });
+                bypassedReason = fmt(TPL.BypassStepUp, { stepUpM: formatVolume(stepUpVal, sc), unit: "", holderM: formatVolume(cp.CommitmentM, sc) });
             } else if (isVariantOn && sc.VariantEffect === "safe_harbor") {
                 bypassedReason = TPL.BypassSafeHarbor;
             } else if (isVariantOn && sc.VariantEffect === "court_vacatur") {
@@ -1214,10 +1225,16 @@
 
         const isPhysical = (activeScenario.UnitType === "physical_mw");
 
-        // Dynamically update KPI Titles for Physics vs Finance
-        document.querySelector('#kpi-card-drag .kpi-title').textContent = isPhysical ? "Peak Ripple-Effect Load" : CENTER_STRINGS.KpiCascadeLabel;
+        // 1. Localized KPI 1 Title (Dynamically switches: Ripple Cost vs Direct Cost, Physical vs Currency)
+        const kpi1TitleEl = document.querySelector('#kpi-card-drag .kpi-title');
+        if (ev.triggeredCount > 0) {
+            kpi1TitleEl.textContent = isPhysical ? CENTER_STRINGS.KpiCascadeLabelPhysical : CENTER_STRINGS.KpiCascadeLabel;
+        } else {
+            kpi1TitleEl.textContent = isPhysical ? CENTER_STRINGS.KpiDirectCostLabelPhysical : CENTER_STRINGS.KpiDirectCostLabel;
+        }
         document.querySelector('#kpi-card-tier .kpi-title').textContent = CENTER_STRINGS.KpiTierLabel;
 
+        // 2. Localized KPI 1 Values and Subtitle
         const dragEl = document.getElementById('kpi-val-drag');
         const subDragEl = document.getElementById('kpi-sub-drag');
         if (ev.triggeredCount > 0) {
@@ -1227,11 +1244,12 @@
             let subText = fmt(CENTER_STRINGS.KpiTriggeredSub, {
                 triggered: ev.triggeredCount,
                 total: activeScenario.Counterparties.length,
-                exposure: ev.aggregateExposureM,
-                unit: activeScenario.CommitmentUnit
+                exposure: formatVolume(ev.aggregateExposureM, activeScenario),
+                unit: ""
             });
-            // Clarify Hop-1 Contagion
-            if (ev.hopActive) subText += " (Excludes Hop-1 Contagion)";
+            if (ev.hopActive) {
+                subText += CENTER_STRINGS.KpiHopExclusionSuffix;
+            }
             subDragEl.textContent = subText;
         } else {
             dragEl.textContent = `${formatCurrencyOrUnit(-ev.directRecipientImpact, activeScenario)} ${isPhysical ? "" : CENTER_STRINGS.PerYearSuffix}`;
@@ -1239,13 +1257,13 @@
             subDragEl.textContent = CENTER_STRINGS.KpiZeroTriggeredSub;
         }
 
+        // 3. Localized KPI 2 Title (5-Year Horizon vs Physical Risk-Weighted Load)
         const omniEl = document.getElementById('kpi-val-omni');
         const subOmniEl = document.getElementById('kpi-sub-omni');
         const titleOmni = document.querySelector('#kpi-card-omni .kpi-title');
 
-        // FIX #2: Megawatt Physics vs Financial Horizons
         if (isPhysical) {
-            titleOmni.textContent = "Risk-Weighted Peak Load";
+            titleOmni.textContent = CENTER_STRINGS.KpiOmniLabelPhysical;
             omniEl.textContent = ev.triggeredCount > 0
                 ? formatCurrencyOrUnit(-ev.riskWeightedAnnual, activeScenario)
                 : formatCurrencyOrUnit(0, activeScenario);
@@ -1261,6 +1279,7 @@
             severity: ev.severityLabel
         });
 
+        // 4. Localized KPI 3 Savings Subtitle (No hardcoded "Already compliant" or "bps")
         document.getElementById('kpi-val-savings').textContent = `${formatCurrencyOrUnit(savingsVsBaseline, activeScenario, true)} ${isPhysical ? "" : CENTER_STRINGS.PerYearSuffix}`;
 
         let savingsSub = fmt(CENTER_STRINGS.KpiSavingsSub, {
@@ -1268,7 +1287,9 @@
             unit: activeScenario.Unit
         });
         if (ev.totalCascadeDrag <= ev.effectiveCeiling) {
-            savingsSub = `Already compliant (< ${ev.effectiveCeiling} ${activeScenario.Unit})`;
+            savingsSub = fmt(CENTER_STRINGS.KpiAlreadyCompliantSub, {
+                ceiling: formatCurrencyOrUnit(ev.effectiveCeiling, activeScenario)
+            });
         }
         document.getElementById('kpi-sub-savings').textContent = savingsSub;
 
@@ -1337,7 +1358,7 @@
                         <div class="ifb-card-title">${cp.Name}</div>
                         <div class="ifb-card-meta">
                             <span><code>${cp.Id}</code> (${cp.Jurisdiction})</span>
-                            <span><strong>${TPL.SvgCommitment} ${cp.CommitmentM}${sc.CommitmentUnit}</strong></span>
+                            <span><strong>${TPL.SvgCommitment} ${formatVolume(cp.CommitmentM, sc)}</strong></span>
                         </div>
                         <div class="ifb-card-signal">${cp.SignalBadge}</div>
                     </div>
@@ -1360,7 +1381,7 @@
                         <div class="ifb-card-meta">
                             <span><code>${sc.RecipientId}</code> (${sc.RecipientJurisdiction})</span>
                         </div>
-                        <div class="ifb-card-signal">${TPL.SvgCommitment} <strong>${ev.stepUpVal}${sc.CommitmentUnit}</strong></div>
+                        <div class="ifb-card-signal">${TPL.SvgCommitment} <strong>${formatVolume(ev.stepUpVal, sc)}</strong></div>
                     </div>
                 </div>
             </div>
@@ -1418,13 +1439,13 @@
             "Clause_Type": firstCp.RuleType,
             "Checked_Partner": firstCp.Name,
             "Partner_Qualifying_Check": {
-                "Partner_Current_Volume": `${firstCp.CommitmentM}${sc.CommitmentUnit}`,
-                "Required_Minimum_Threshold": `${firstCp.activeThreshold}${sc.CommitmentUnit}`,
+                "Partner_Current_Volume": `${formatVolume(firstCp.CommitmentM, sc)}`,
+                "Required_Minimum_Threshold": `${formatVolume(firstCp.activeThreshold, sc) }`,
                 "Meets_Minimum_Volume": firstCp.holderQualifies
             },
             "Target_Deal_Comparison": {
                 "Target_Client": sc.RecipientName,
-                "Target_Client_Volume": `${ev.stepUpVal}${sc.CommitmentUnit}`,
+                "Target_Client_Volume": `${formatVolume(ev.stepUpVal, sc) }`,
                 "Proposed_Adjustment": `${ev.concessionVal} ${sc.Unit}`,
                 "Partner_Has_Equal_Or_Larger_Volume": firstCp.paritySatisfied,
                 "Policy_Or_Court_Exemption_Active": ev.isVariantOn
@@ -1490,11 +1511,13 @@
         const bannerTitle = document.getElementById('gov-banner-title');
         const bannerSub = document.getElementById('gov-banner-sub');
         const isPhysical = (sc.UnitType === "physical_mw");
+
+        // Localized Table Headers for Physical MW vs Financial Currency
         const thDrag = document.querySelector('.kinetic-pareto-table thead tr th:nth-child(6)');
         const thSave = document.querySelector('.kinetic-pareto-table thead tr th:nth-child(7)');
         if (thDrag && thSave) {
-            thDrag.textContent = isPhysical ? "Peak Ripple Load" : CENTER_STRINGS.ColAnnualDrag;
-            thSave.textContent = isPhysical ? "Peak Load Saved" : CENTER_STRINGS.ColSavings;
+            thDrag.textContent = isPhysical ? CENTER_STRINGS.ColAnnualDragPhysical : CENTER_STRINGS.ColAnnualDrag;
+            thSave.textContent = isPhysical ? CENTER_STRINGS.ColSavingsPhysical : CENTER_STRINGS.ColSavings;
         }
 
         if (ev.triggeredCount > 0) {
@@ -1550,7 +1573,7 @@
             {
                 code: "CF-03",
                 recommended: false,
-                strategy: fmt(TPL.StrategyCf03, { lowestM: lowestCpCommitment, unit: sc.CommitmentUnit }),
+                strategy: fmt(TPL.StrategyCf03, { lowestM: formatVolume(lowestCpCommitment, sc), unit: "" }),
                 concession: ev.concessionVal,
                 stepUp: stepUpTarget,
                 evalObj: cf03
@@ -1566,7 +1589,7 @@
             {
                 code: "CF-01",
                 recommended: false,
-                strategy: fmt(TPL.StrategyCf01, { concession: ev.concessionVal, unit: sc.Unit, stepUp: ev.stepUpVal, commitUnit: sc.CommitmentUnit }),
+                strategy: fmt(TPL.StrategyCf01, { concession: ev.concessionVal, unit: sc.Unit, stepUp: formatVolume(ev.stepUpVal, sc), commitUnit: "" }),
                 concession: ev.concessionVal,
                 stepUp: ev.stepUpVal,
                 evalObj: cf01
@@ -1575,15 +1598,14 @@
 
         const savingsCf02 = Math.max(0, cf01.totalCascadeDrag - cf02.totalCascadeDrag);
 
-        // Dynamic Pareto Callout for Already Compliant Deals
+        // Localized Pareto Callout
         let calloutHtml = "";
         if (ev.totalCascadeDrag <= ev.effectiveCeiling) {
-            calloutHtml = `
-                <div>
-                    <strong><i class='fas fa-check-circle'></i> Deal is Compliant (<code>CF-01</code>):</strong>
-                    Current parameters generate <strong>${formatCurrencyOrUnit(-ev.totalCascadeDrag, sc)}</strong> in cascade drag, which is safely below the ${formatCurrencyOrUnit(ev.effectiveCeiling, sc)} limit. You are cleared for <code>${ev.governanceTier}</code>.
-                </div>
-            `;
+            calloutHtml = fmt(TPL.ParetoCalloutCompliantHtml, {
+                drag: formatCurrencyOrUnit(-ev.totalCascadeDrag, sc),
+                ceiling: formatCurrencyOrUnit(ev.effectiveCeiling, sc),
+                tier: ev.governanceTier
+            });
         } else {
             calloutHtml = fmt(TPL.ParetoCalloutHtml, {
                 cap: ev.breakevenCap,
@@ -1596,6 +1618,7 @@
         document.getElementById('pareto-callout').innerHTML = calloutHtml;
 
         const tbody = document.getElementById('pareto-table-body');
+
         tbody.innerHTML = paretoRows.map(r => {
             const rowSavings = Math.max(0, baselineEv.totalCascadeDrag - r.evalObj.totalCascadeDrag);
             const isCurrentActive = (Math.abs(r.concession - ev.concessionVal) < 0.05 && Math.abs(r.stepUp - ev.stepUpVal) < 0.05);
@@ -1623,10 +1646,10 @@
             : "";
         document.getElementById('keystone-waiver-box').innerHTML = fmt(TPL.KeystoneWaiverHtml, {
             cp0Name: cp0.Name,
-            cp0M: cp0.CommitmentM,
+            cp0M: formatVolume(cp0.CommitmentM, sc),
             cp1Name: cp1 ? cp1.Name : "",
-            cp1M: cp1 ? cp1.CommitmentM : "",
-            unit: sc.CommitmentUnit
+            cp1M: cp1 ? formatVolume(cp1.CommitmentM, sc) : "",
+            unit: ""
         }) + " " + hopHtml;
 
         document.getElementById('verbatim-citation-box').innerHTML = `
@@ -1673,8 +1696,8 @@
                 Role: TPL.MathRole,
                 Status: "VERIFIED",
                 Text: ev.triggeredCount > 0
-                    ? fmt(TPL.MathTextTriggered, { drag: formatCurrencyOrUnit(-ev.totalCascadeDrag, sc), exposure: ev.aggregateExposureM, unit: sc.CommitmentUnit })
-                    : fmt(TPL.MathTextCleared, { direct: formatCurrencyOrUnit(-ev.directRecipientImpact, sc), stepUp: ev.stepUpVal, unit: sc.CommitmentUnit })
+                    ? fmt(TPL.MathTextTriggered, { drag: formatCurrencyOrUnit(-ev.totalCascadeDrag, sc), exposure: formatVolume(ev.aggregateExposureM, sc), unit: "" })
+                    : fmt(TPL.MathTextCleared, { direct: formatCurrencyOrUnit(-ev.directRecipientImpact, sc), stepUp: formatVolume(ev.stepUpVal, sc), unit: "" })
             },
             ...sc.Specialists
         ];
