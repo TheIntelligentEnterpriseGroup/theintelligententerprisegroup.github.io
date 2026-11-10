@@ -1,0 +1,782 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta name="robots" content="index, follow" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <meta name="description" content='&#x62A;&#x642;&#x627;&#x631;&#x64A;&#x631; &#x627;&#x644;&#x62A;&#x639;&#x631;&#x636; &#x627;&#x644;&#x62A;&#x634;&#x63A;&#x64A;&#x644;&#x64A; &#x645;&#x646; MindML Sovereign Kinetic Engine. &#x634;&#x627;&#x647;&#x62F; &#x643;&#x64A;&#x641; &#x64A;&#x645;&#x646;&#x639; &#x627;&#x644;&#x62D;&#x644; &#x627;&#x644;&#x631;&#x64A;&#x627;&#x636;&#x64A; &#x627;&#x644;&#x62D;&#x62A;&#x645;&#x64A; &#x62A;&#x623;&#x62B;&#x64A;&#x631;&#x627;&#x62A; &#x627;&#x644;&#x633;&#x644;&#x633;&#x644;&#x629; &#x627;&#x644;&#x62A;&#x634;&#x63A;&#x64A;&#x644;&#x64A;&#x629; &#x645;&#x62A;&#x639;&#x62F;&#x62F;&#x629; &#x627;&#x644;&#x642;&#x641;&#x632;&#x627;&#x62A;.' />
+    <title>&#x645;&#x644;&#x641;&#x627;&#x62A; &#x645;&#x64A;&#x62F;&#x627;&#x646;&#x64A;&#x629;: &#x62A;&#x62D;&#x642;&#x64A;&#x642;&#x627;&#x62A; &#x627;&#x644;&#x645;&#x62E;&#x627;&#x637;&#x631; &#x627;&#x644;&#x639;&#x644;&#x627;&#x626;&#x642;&#x64A;&#x629; | The Intelligent Enterprise Group</title>
+
+    <style>
+        html { background-color: #3B3A47; }
+    </style>
+    <script>
+        (function () {
+            const key = 'preferredTheme';
+            const stored = localStorage.getItem(key);
+            //const systemDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+            const theme = stored || 'dark'/*(systemDark ? 'dark' : 'light')*/;
+            if (theme === 'dark') {
+                document.documentElement.classList.add('dark-mode');
+            } else {
+                document.documentElement.classList.remove('dark-mode');
+            }
+        })();
+    </script>
+
+
+        <link rel="alternate" hreflang="en" href="https://theintelligententerprisegroup.com/field-dossiers.html" />
+        <link rel="alternate" hreflang="fr" href="https://theintelligententerprisegroup.com/fr/field-dossiers.html" />
+        <link rel="alternate" hreflang="de" href="https://theintelligententerprisegroup.com/de/field-dossiers.html" />
+        <link rel="alternate" hreflang="es" href="https://theintelligententerprisegroup.com/es/field-dossiers.html" />
+        <link rel="alternate" hreflang="pt" href="https://theintelligententerprisegroup.com/pt/field-dossiers.html" />
+        <link rel="alternate" hreflang="zh" href="https://theintelligententerprisegroup.com/zh/field-dossiers.html" />
+        <link rel="alternate" hreflang="ja" href="https://theintelligententerprisegroup.com/ja/field-dossiers.html" />
+        <link rel="alternate" hreflang="ar" href="https://theintelligententerprisegroup.com/ar/field-dossiers.html" />
+
+
+    <link rel="alternate" hreflang="x-default" href="https://theintelligententerprisegroup.com/field-dossiers.html" />
+
+    <link rel="canonical" href="https://theintelligententerprisegroup.com/ar/field-dossiers.html" />
+
+
+    <link rel="stylesheet" href="/css/styles.css" />
+    <link rel="stylesheet" href="/css/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="/css/all.min.css" />
+
+    <script src="/js/lang-switcher.js" defer></script>
+
+    <script>
+        (function () {
+            if (localStorage.getItem('currentLang')) return;
+            const supported = [
+                     { code: "en" } ,
+                     { code: "fr" } ,
+                     { code: "de" } ,
+                     { code: "es" } ,
+                     { code: "pt" } ,
+                     { code: "zh" } ,
+                     { code: "ja" } ,
+                     { code: "ar" } 
+            ];
+            const defaultLang = "ar";
+            const navLangs = navigator.languages || [navigator.language || navigator.userLanguage];
+            let detected = null;
+            for (const nav of navLangs) {
+                const code = nav.toLowerCase().split('-')[0];
+                if (supported.find(s => s.code.toLowerCase() === code)) {
+                    detected = code;
+                    break;
+                }
+            }
+            const lang = detected || defaultLang;
+            localStorage.setItem('currentLang', lang);
+            document.documentElement.lang = lang;
+        })();
+    </script>
+
+    <!-- Organization structured data (JSON-LD) -->
+    <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "Organization",
+          "name": "The Intelligent Enterprise Group",
+          "url": "https://theintelligententerprisegroup.com/",
+          "logo": "https://theintelligententerprisegroup.com/images/tieg-logo.png",
+          "sameAs": []
+        }
+    </script>
+    <link rel="icon" href="/favicon.ico" />
+    <link rel="apple-touch-icon" href="/images/apple-touch-icon.png" />
+
+    
+
+</head>
+<body>
+    <header x-data="{ open: false }">
+        <div class="container header-top">
+            <div class="logo"></div>
+            <div class="theme-switch-wrapper">
+                <label class="theme-switch">
+                    <input type="checkbox" id="theme-checkbox" aria-label="Select theme"/>
+                    <span class="slider round"></span>
+                </label>
+                <span id="theme-label">الوضع الفاتح</span>
+                <span class="lang-switcher">
+                    <label for="lang-select" class="lang-label">🌐 اللغة:</label>
+
+                    <!-- Language switcher -->
+                    <select id="lang-select" class="lang-select">
+                        <option value="en" data-path="/">English</option>
+                        <option value="fr" data-path="/fr/">Fran&#xE7;ais</option>
+                        <option value="de" data-path="/de/">Deutsch</option>
+                        <option value="es" data-path="/es/">Espa&#xF1;ol</option>
+                        <option value="pt" data-path="/pt/">Portugu&#xEA;s</option>
+                        <option value="zh" data-path="/zh/">&#x4E2D;&#x6587;</option>
+                        <option value="ja" data-path="/ja/">&#x65E5;&#x672C;&#x8A9E;</option>
+                        <option value="ar" data-path="/ar/">&#x627;&#x644;&#x639;&#x631;&#x628;&#x64A;&#x629;</option>
+                    </select>
+
+                </span>
+            </div>
+        </div>
+        
+        <div class="container header-nav">
+            <button @click="open = !open" class="menu-toggle" aria-label="Toggle Menu">
+                <svg width="24" height="24" viewBox="0 0 24 24">
+                    <path fill="var(--nav-link-color)" d="M3 6h18v2H3V6zm0 5h18v2H3v-2zm0 5h18v2H3v-2z" />
+                </svg>
+            </button>
+
+            <nav class="main-nav" :class="{ 'open': open }">
+                <ul>
+                    <li><a href="index.html" class="">&#x627;&#x644;&#x631;&#x626;&#x64A;&#x633;&#x64A;&#x629;</a></li>
+                    <li><a href="about.html" class="">&#x645;&#x646; &#x646;&#x62D;&#x646;</a></li>
+                    <li><a href="services.html" class="">&#x627;&#x644;&#x62E;&#x62F;&#x645;&#x627;&#x62A; &#x648;&#x627;&#x644;&#x62D;&#x644;&#x648;&#x644;</a></li>
+                    <li><a href="case-studies.html" class="">&#x62F;&#x631;&#x627;&#x633;&#x627;&#x62A; &#x627;&#x644;&#x62D;&#x627;&#x644;&#x629;</a></li>
+                    <li><a href="resources.html" class="">&#x627;&#x644;&#x645;&#x648;&#x627;&#x631;&#x62F; &#x648;&#x627;&#x644;&#x631;&#x624;&#x649;</a></li>
+                    <li><a href="partners.html" class="">&#x627;&#x644;&#x634;&#x631;&#x643;&#x627;&#x621; &#x648;&#x627;&#x644;&#x62A;&#x62D;&#x627;&#x644;&#x641;&#x627;&#x62A;</a></li>                    
+                    <li><a href="contact.html" class="">&#x627;&#x644;&#x627;&#x62A;&#x635;&#x627;&#x644; &#x648;&#x627;&#x644;&#x627;&#x633;&#x62A;&#x634;&#x627;&#x631;&#x629;</a></li>
+                    <li class="has-submenu"
+                        x-data="{ openSub: false }"
+                        @mouseenter="openSub = true"
+                        @mouseleave="openSub = false">
+                      <button @click="openSub = !openSub"
+                              aria-haspopup="true"
+                              :aria-expanded="openSub.toString()">
+                        &#x645;&#x639;&#x644;&#x648;&#x645;&#x627;&#x62A;
+                        <svg width="12" height="12" viewBox="0 0 12 12" aria-hidden="true">
+                          <path d="M3 4l3 3 3-3" fill="currentColor"/>
+                        </svg>
+                      </button>
+                      <ul class="submenu" x-show="openSub" @click.outside="openSub = false">
+                        <li><a href="careers.html" class="">&#x627;&#x644;&#x648;&#x638;&#x627;&#x626;&#x641;</a></li>
+                        <li><a href="faqs.html" class="">&#x627;&#x644;&#x623;&#x633;&#x626;&#x644;&#x629; &#x627;&#x644;&#x634;&#x627;&#x626;&#x639;&#x629;</a></li>
+                        <li><a href="legal.html" class="">&#x627;&#x644;&#x633;&#x64A;&#x627;&#x633;&#x627;&#x62A; &#x648;&#x627;&#x644;&#x644;&#x648;&#x627;&#x626;&#x62D;</a></li>
+                      </ul>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        
+<section class="playbook-section">
+    <div class="playbook-container">
+        
+        <!-- Header -->
+        <div class="playbook-header">
+            <span class="playbook-eyebrow">&#x62A;&#x642;&#x627;&#x631;&#x64A;&#x631; &#x627;&#x644;&#x62A;&#x639;&#x631;&#x636; &#x627;&#x644;&#x62A;&#x634;&#x63A;&#x64A;&#x644;&#x64A; &#x645;&#x646; MindML Sovereign Kinetic Engine (v2.0)</span>
+            <h1 class="playbook-headline">&#x645;&#x644;&#x641;&#x627;&#x62A; &#x645;&#x64A;&#x62F;&#x627;&#x646;&#x64A;&#x629;: &#x62A;&#x62D;&#x642;&#x64A;&#x642;&#x627;&#x62A; &#x627;&#x644;&#x645;&#x62E;&#x627;&#x637;&#x631; &#x627;&#x644;&#x639;&#x644;&#x627;&#x626;&#x642;&#x64A;&#x629;</h1>
+        </div>
+
+        <!-- Executive Briefing -->
+        <div class="blueprint-highlight">
+            <div class="blueprint-content">
+                <span class="blueprint-badge"><i class="fas fa-bullseye"></i> &#x645;&#x648;&#x62C;&#x632; &#x62A;&#x646;&#x641;&#x64A;&#x630;&#x64A; &#x648;&#x628;&#x648;&#x627;&#x628;&#x629; &#x627;&#x644;&#x635;&#x641;&#x62D;&#x629;</span>
+                <div class="article-content" style="padding: 0;">
+                    <p>تتعثر استثمارات الذكاء الاصطناعي للمؤسسات بشكل روتيني عند الحد الفاصل بين توليد اللغة والواقع التشغيلي. تم تحسين النماذج اللغوية الكبيرة (LLMs) والتوليد المعزز بالاسترجاع (RAG) القائم على المتجهات لتلخيص النصوص والصياغة والبحث الاحتمالي؛ ومع ذلك، لا تعمل البنية التحتية عالية المخاطر على الاحتمالات الإحصائية. في شبكات الطاقة، والمجموعات الكيميائية، وسلاسل التبريد عبر الحدود، وقاعات البيانات الفائقة، وتشكيلات رأس المال الخاص، يرتبط كل تعديل تشغيلي بشبكة نشطة من العهود القانونية، والمحيطات الأمنية القانونية، والقيود المادية.</p><p>عندما تمنح الفِرق التجارية امتيازاً تعريفياً منعزلاً، أو تتنازل عن غرامة اتفاقية مستوى الخدمة (SLA)، أو تعدل تقليص الطاقة، فإنهم نادراً ما ينفذون معاملة منعزلة. تنتشر هذه الإجراءات عبر الشبكات التعاقدية والمادية، مما يؤدي بصمت إلى تنشيط عهود مطابقة الأسعار للدولة الأكثر رعاية (MFN)، أو اختراق المخازن المؤقتة للاستبعاد البيئي، أو إبطال مخصصات الصناديق المنظمة.</p><p>توثق الملفات الاستقصائية أدناه السلاسل العلائقية في العالم الحقيقي عبر القطاعات الصناعية الحيوية. يتناقض كل ملف مع الالتزامات غير المتحوطة التي يتجاهلها الذكاء الاصطناعي الحواري التقليدي، مع الحل الرياضي الحتمي، وتحسين الصفقات، والحوكمة المدققة عبر Merkle التي يفرضها MindML Sovereign Kinetic Engine.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Archive Filter Bar -->
+        <div style="display: flex; align-items: flex-start; background-color: rgba(161, 144, 217, 0.08); border-left: 4px solid var(--btn-bg); padding: 1.5rem; margin: 2rem 0; border-radius: 6px; width: 100%; box-sizing: border-box;">
+            <div style="width: 100%;">
+                <h4 style="margin: 0 0 10px 0; color: var(--text-color);">&#x62A;&#x635;&#x641;&#x64A;&#x629; &#x627;&#x644;&#x642;&#x637;&#x627;&#x639;&#x627;&#x62A; &#x648;&#x62A;&#x635;&#x641;&#x62D; &#x627;&#x644;&#x623;&#x631;&#x634;&#x64A;&#x641;</h4>
+                <div class="article-content" style="padding: 0; font-size: 0.95rem; line-height: 1.6;">
+                    <ul><li><strong>القطاعات الرأسية:</strong> جميع القطاعات | الطاقة الصناعية والكيماويات (§4.1) | السحابة السيادية وتكنولوجيا المعلومات (§4.2) | سلسلة التبريد الدوائية (§4.3) | شبكات الجهد العالي (§4.7) | رأس المال الخاص والصناديق (§4.8–4.9) | الشبكات المنظمة والطيران (§4.4, §4.10)</li><li><strong>القياس عن بعد للنظام:</strong> اجتياز الرسم البياني الحتمي: أقل من 1 مللي ثانية | تنفيذ السيليكون السيادي: معزول عن الشبكة / عدم خروج بيانات للسحابة | سلامة الحالة: مختومة بسلسلة SHA-256 Merkle</li></ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- The 6 Dossiers -->
+                <div class="blueprint-highlight" style="flex-direction: column; align-items: stretch; gap: 20px;" id="dossier-01">
+                    
+                    <h2 class="blueprint-title" style="margin-bottom: 5px;">&#x627;&#x644;&#x645;&#x644;&#x641; 01: &#x645;&#x636;&#x627;&#x639;&#x641; &#x645;&#x646;&#x637;&#x642;&#x629; &#x627;&#x644;&#x627;&#x646;&#x641;&#x62C;&#x627;&#x631;</h2>
+                    <h3 class="playbook-subhead" style="margin-left: 0; margin-bottom: 20px;">&#x634;&#x628;&#x643;&#x627;&#x62A; &#x627;&#x644;&#x637;&#x627;&#x642;&#x629; &#x648;&#x627;&#x644;&#x645;&#x62C;&#x645;&#x648;&#x639;&#x627;&#x62A; &#x627;&#x644;&#x643;&#x64A;&#x645;&#x64A;&#x627;&#x626;&#x64A;&#x629; Seveso III</h3>
+                    
+                    <img src="/images/post-1.jpg" alt="&#x62C;&#x62F;&#x648;&#x644; &#x627;&#x644;&#x645;&#x62E;&#x632;&#x646; &#x627;&#x644;&#x645;&#x624;&#x642;&#x62A; &#x644;&#x644;&#x625;&#x62E;&#x644;&#x627;&#x621; Seveso III" style="width: 100%; max-width: 550px; height: auto; display: block; margin: 0 auto 30px auto; border-radius: 8px; box-shadow: 0 8px 24px rgba(0,0,0,0.15);" loading="lazy" />
+                    
+                    <!-- Text Content mapped safely through CSS Document styles for professional spacing -->
+                    <div class="chat-area" style="background: transparent; padding: 0;">
+                        <div class="document" style="margin: 0; max-width: 100%;">
+                            
+                            <h3><i class="fas fa-satellite-dish"></i> &#x627;&#x644;&#x642;&#x64A;&#x627;&#x633; &#x639;&#x646; &#x628;&#x639;&#x62F; &#x627;&#x644;&#x62C;&#x646;&#x627;&#x626;&#x64A; &#x648;&#x645;&#x644;&#x641; &#x62A;&#x639;&#x631;&#x64A;&#x641; &#x627;&#x644;&#x62D;&#x627;&#x62F;&#x62B;</h3>
+                            <ul><li><strong>الكيان الحاكم:</strong> <code>AntwerpEnergyHub</code> (تخصيص شبكة أساسي بقيمة 1,000,000,000 دولار أمريكي بتعريفة أساسية 2.00%)</li><li><strong>تأريض العقد:</strong> <em>Energy_Grid_Charter.pdf</em>, المادة 1، البند 1.4 (المجموعة الصناعية في أنتويرب)</li><li><strong>المعاملة المستهدفة:</strong> اقتراح تخفيض التعريفة بمقدار 20 نقطة أساس لمشغل محطة الميناء (<code>PAR-9A21C401</code>) على عقد بقيمة 20 مليون دولار (امتياز مباشر 40,000 دولار/سنة)</li><li><strong>الأطراف المقابلة في نصف قطر التعرض:</strong><br/>- <code>BASF Antwerp Chemical Plant</code>: التزام بقيمة 140 مليون دولار | 5,000 متر حاجز إخلاء إلزامي | الاختصاص البلجيكي (<code>BE</code>)<br/>- <code>RWE Ruhr Power Station</code>: التزام بقيمة 110 مليون دولار | 3,500 متر حاجز إخلاء إلزامي | الاختصاص الألماني (<code>DE</code>)</li><li><strong>قاعدة تأهيل التكافؤ:</strong> يتم تفعيل تكافؤ التعريفة للدولة الأكثر رعاية (MFN) لأي طرف مقابل لديه التزام ≥ 50 مليون دولار عندما يكون الالتزام المستهدف ≤ التزام الشريك</li><li><strong>الانتهاك الأساسي:</strong> تنشيط عهد MFN لأطراف متعددة يتفاقم بسبب تقاطع المخزن المؤقت للخطر القانوني Seveso III</li><li><strong>مستوى التصعيد الافتراضي:</strong> <code>TIER_3_INVESTMENT_COMMITTEE_AND_GENERAL_COUNSEL</code> (اتفاقية مستوى الخدمة لإشعار 10 أيام)</li></ul>
+
+                            <hr/>
+
+                            <h3><i class="fas fa-bolt"></i> &#x627;&#x644;&#x62D;&#x627;&#x62F;&#x62B; &#x627;&#x644;&#x62A;&#x634;&#x63A;&#x64A;&#x644;&#x64A;</h3>
+                            <p>لتخفيف الازدحام في محطة الحاويات البحرية، يقوم مكتب العمليات التجارية في Antwerp Energy Hub بإعداد حزمة تخفيف تعريفة إدارية بقيمة 20 نقطة أساس (0.20%) لمشغل محطة الميناء على تخصيص الطاقة البالغ 20,000,000 دولار. في ورقة صفقة منعزلة، يتم حساب تكلفة الامتياز كمجاملة تجارية سنوية يمكن إدارتها بقيمة 40,000 دولار.</p>
+
+                            <h3><i class="fas fa-network-wired"></i> &#x627;&#x644;&#x648;&#x627;&#x642;&#x639; &#x627;&#x644;&#x639;&#x644;&#x627;&#x626;&#x642;&#x64A;</h3>
+                            <p>لا يعمل Antwerp Energy Hub بمعزل عن غيره. بموجب البند 1.4 من ميثاق المركز، يمتلك المستأجرون الصناعيون الرئيسيون حقوق تكافؤ تعريفة MFN ملزمة قانونًا مصممة لضمان المساواة في أسعار الطاقة عبر الحوض الصناعي. نظرًا لأن مشغل محطة الميناء يلتزم بـ 20 مليون دولار فقط، فإن منح هذا المعدل التفضيلي يخول على الفور كلاً من BASF Antwerp (حجم 140 مليون دولار) و RWE Ruhr (حجم 110 مليون دولار) لطلب تخفيضات مماثلة في التعريفة عبر كامل بصمة أصولهم.</p><p>في الوقت نفسه، يقوم كلا المرفقين بتشغيل وحدات معالجة كيميائية عالية الخطورة تخضع لتوجيهات Seveso III الأوروبية، وتحافظ على مناطق عازلة دائرية للإخلاء القانوني تبلغ 5,000 متر و 3,500 متر على التوالي. إن تعديل مخصصات الطاقة دون التحقق من بارامترات البنية التحتية المكانية يخاطر بتحفيز تحولات الإنتاج التي تتعدى على مناطق احتواء المخاطر القانونية.</p>
+
+                            <hr/>
+
+                            <h3><i class="fas fa-triangle-exclamation"></i> &#x627;&#x644;&#x62A;&#x623;&#x62B;&#x64A;&#x631; &#x627;&#x644;&#x62A;&#x633;&#x644;&#x633;&#x644;&#x64A; &#x63A;&#x64A;&#x631; &#x627;&#x644;&#x645;&#x62A;&#x62D;&#x648;&#x637;</h3>
+                            <ul><li><strong>التأثير السنوي للسلسلة:</strong> <br/>Δ<sub>cascade</sub> = -(140 مليون دولار + 110 مليون دولار) × (20 نقطة أساس × 0.0001) = <strong>-500,000 دولار/سنة</strong><br/>- حصة BASF Antwerp (56.0%): -280,000 دولار/سنة<br/>- حصة RWE Ruhr Power (44.0%): -220,000 دولار/سنة</li><li><strong>التعرض للمخاطر التراكمية لمدة 5 سنوات من OmniPredict:</strong><br/>تأثير 5 سنوات = -500,000 دولار × 0.85 × 5 = <strong>-2,125,000 دولار</strong></li><li><strong>حاجز الحوكمة:</strong> نظرًا لأن إجمالي السحب السنوي (-500,000 دولار) ينتهك حد السلطة المفوضة البالغ 1.6 × 250,000 دولار، يتجمد التنفيذ تحت المراجعة الإلزامية للمستوى 3 من المديرين التنفيذيين والمستشار العام.</li></ul>
+
+                            <hr/>
+
+                            <h3><i class="fas fa-shield-halved"></i> &#x62D;&#x644; Kinetic Engine</h3>
+                            <ol><li><strong>اجتياز التكافؤ الحتمي B-Tree:</strong> في أقل من 1 مللي ثانية، يجتاز المحرك الرسم البياني للكيان المشفر، ويحدد 100% من عهود MFN المتصلة دون تقريب المتجهات.</li><li><strong>التحقق المكاني GeoAnalyst:</strong> يعين إحداثيات المحطة الفعلية مقابل طبقات مضلع Seveso III GIS النشطة، مما يؤكد تقاطعات المخزن المؤقت البالغة 5,000 متر.</li><li><strong>التحسين الوصفي للصفقة (CF-02):</strong> يحل تلقائيًا الحد الأقصى للامتياز الأمثل لباريتو الذي يبقي التسرب المالي تحت العتبة التقديرية البالغة 250,000 دولار (<strong>9.9 نقطة أساس</strong>). توفر إعادة هيكلة التعريفة للمركز <strong>+252,500 دولار/سنة</strong> وتخليص الاتفاقية على الفور بموجب سلطة تفويض المستوى 1.</li><li><strong>إعفاء منطقة سلامة السياسة:</strong> يؤدي تبديل استثناء السلامة في حالات الطوارئ إلى استدعاء القسم 1.4B؛ نظرًا لأن كلا المصنعين يقعان داخل محيط الخطر المنظم، ينخفض تأثير السلسلة الخارجي إلى 0 دولار.</li><li><strong>سلامة دفتر Merkle:</strong> يمرر الإجراء تحت الكتلة #1042 في حالة PENDING مع ملخص تجزئة SHA-256 أصيل، مما يضمن التراجع الذري الكامل بنقرة واحدة.</li></ol>
+
+                            <div style="margin-top: 2.5rem; padding-top: 1.5rem; border-top: 1px solid var(--card-bg2); display: flex; align-items: center; font-weight: 700;">
+                                <span style="opacity: 0.85;">&#x625;&#x62C;&#x631;&#x627;&#x621; &#x627;&#x644;&#x62A;&#x62D;&#x642;&#x642; &#x627;&#x644;&#x645;&#x628;&#x627;&#x634;&#x631;:</span>
+                                <a href="stress-test-lab.html" class="btn btn-pulse" style="margin: 0 0 0 15px; padding: 0.45rem 1.25rem;">
+                                    <i class="fas fa-flask"></i> Load in Lab
+                                </a>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="blueprint-highlight" style="flex-direction: column; align-items: stretch; gap: 20px;" id="dossier-02">
+                    
+                    <h2 class="blueprint-title" style="margin-bottom: 5px;">&#x627;&#x644;&#x645;&#x644;&#x641; 02: &#x639;&#x62F;&#x648;&#x649; &#x627;&#x62A;&#x641;&#x627;&#x642;&#x64A;&#x629; &#x645;&#x633;&#x62A;&#x648;&#x649; &#x627;&#x644;&#x62E;&#x62F;&#x645;&#x629; (SLA)</h2>
+                    <h3 class="playbook-subhead" style="margin-left: 0; margin-bottom: 20px;">&#x627;&#x644;&#x633;&#x62D;&#x627;&#x628;&#x629; &#x627;&#x644;&#x633;&#x64A;&#x627;&#x62F;&#x64A;&#x629; &#x648;&#x627;&#x644;&#x628;&#x646;&#x64A;&#x629; &#x627;&#x644;&#x62A;&#x62D;&#x62A;&#x64A;&#x629; &#x644;&#x62A;&#x643;&#x646;&#x648;&#x644;&#x648;&#x62C;&#x64A;&#x627; &#x627;&#x644;&#x645;&#x639;&#x644;&#x648;&#x645;&#x627;&#x62A;</h3>
+                    
+                    <img src="/images/post-2.jpg" alt="&#x635;&#x64A;&#x646;&#x64A;&#x629; &#x648;&#x62D;&#x62F;&#x629; &#x62A;&#x62D;&#x643;&#x645; &#x62E;&#x627;&#x62F;&#x645; &#x627;&#x644;&#x631;&#x641; &#x648;&#x643;&#x627;&#x628;&#x644;&#x627;&#x62A; &#x627;&#x644;&#x623;&#x644;&#x64A;&#x627;&#x641;" style="width: 100%; max-width: 550px; height: auto; display: block; margin: 0 auto 30px auto; border-radius: 8px; box-shadow: 0 8px 24px rgba(0,0,0,0.15);" loading="lazy" />
+                    
+                    <!-- Text Content mapped safely through CSS Document styles for professional spacing -->
+                    <div class="chat-area" style="background: transparent; padding: 0;">
+                        <div class="document" style="margin: 0; max-width: 100%;">
+                            
+                            <h3><i class="fas fa-satellite-dish"></i> &#x627;&#x644;&#x642;&#x64A;&#x627;&#x633; &#x639;&#x646; &#x628;&#x639;&#x62F; &#x627;&#x644;&#x62C;&#x646;&#x627;&#x626;&#x64A; &#x648;&#x645;&#x644;&#x641; &#x62A;&#x639;&#x631;&#x64A;&#x641; &#x627;&#x644;&#x62D;&#x627;&#x62F;&#x62B;</h3>
+                            <ul><li><strong>الكيان الحاكم:</strong> <code>SovereignCloudCluster</code> (سعة تخصيص حوسبة بقيمة 600,000,000 دولار)</li><li><strong>تأريض العقد:</strong> <em>Sovereign_Cloud_Infrastructure_Master_Charter.pdf</em>, الجدول 4، البند 4.2</li><li><strong>المعاملة المستهدفة:</strong> اقتراح ائتمان رسوم خدمة SLA بمقدار 25 نقطة أساس لمستأجر FinTech Sandbox (<code>PAR-3310F2</code>) على التزام حوسبة بقيمة 10 ملايين دولار (ائتمان مباشر 25,000 دولار) بعد ارتفاعات زمن الوصول</li><li><strong>الأطراف المقابلة في نصف قطر التعرض:</strong><br/>- <code>Siemens Digital Cloud</code>: التزام حوسبة 120 مليون دولار | اتفاقية مستوى خدمة توافر الأولوية<br/>- <code>SAP Sovereign Node</code>: التزام حوسبة 80 مليون دولار | اتفاقية مستوى خدمة عزل البيانات السيادية</li><li><strong>قاعدة تأهيل التكافؤ:</strong> يتم تفعيل تكافؤ رسوم SLA السحابية لأي مستأجر لديه التزام ≥ 50 مليون دولار عندما يكون الالتزام المستهدف ≤ التزام المستأجر</li><li><strong>الانتهاك الأساسي:</strong> تم منح خصم تجاري دون ربط القياس عن بعد للأجهزة، مما أدى إلى تنشيط تكافؤ الرسوم على مستوى البنية التحتية الأساسية</li><li><strong>مستوى التصعيد الافتراضي:</strong> <code>TIER_3_EXECUTIVE_INFRASTRUCTURE_BOARD</code> (اتفاقية مستوى الخدمة لإشعار 10 أيام)</li></ul>
+
+                            <hr/>
+
+                            <h3><i class="fas fa-bolt"></i> &#x627;&#x644;&#x62D;&#x627;&#x62F;&#x62B; &#x627;&#x644;&#x62A;&#x634;&#x63A;&#x64A;&#x644;&#x64A;</h3>
+                            <p>بعد فقدان الحزم العابرة وارتفاع زمن الوصول عبر كبسولة حوسبة متعددة المستأجرين، يحاول دعم عملاء المؤسسات استرضاء عميل وضع حماية FinTech من خلال إصدار ائتمان رسوم أداء SLA بمقدار 25 نقطة أساس (0.25%) على عقده البالغ 10,000,000 دولار. يسجل مكتب الدعم التعديل البالغ 25,000 دولار كمجاملة قياسية للاحتفاظ بالعملاء.</p>
+
+                            <h3><i class="fas fa-network-wired"></i> &#x627;&#x644;&#x648;&#x627;&#x642;&#x639; &#x627;&#x644;&#x639;&#x644;&#x627;&#x626;&#x642;&#x64A;</h3>
+                            <p>تستضيف مجموعة الحوسبة أعباء عمل مؤسسية حرجة للمهمة بموجب التزامات خدمة سيادية طويلة الأجل. بموجب الجدول 4، تمتلك كل من Siemens Digital Cloud (120 مليون دولار) و SAP Sovereign Node (80 مليون دولار) عهود تكافؤ SLA صارمة: إذا تنازل مشغل البنية التحتية عن خصم رسوم أداء لأي عميل على المجموعة، فيجب تمديد نسبة الامتياز الدقيقة هذه إلى المستأجرين الرئيسيين ما لم يتم إثبات الفشل رياضيًا على أنه معزول لطبقات المحاكاة الافتراضية الخاصة بوضع الحماية.</p><p>علاوة على ذلك، أصدر الدعم التجاري الامتياز دون فحص القياس عن بعد للأجهزة. تشير سجلات الخادم المحلية إلى أن زمن الوصول كان ناتجًا عن اختناق الأجهزة النظامي—على وجه التحديد ProcessingTime العالي (45 مللي ثانية) و SystemDowntime (14 دقيقة) عبر محولات اللوحة المعززة المشتركة—بدلاً من خلل في الحساب المحلي.</p>
+
+                            <hr/>
+
+                            <h3><i class="fas fa-triangle-exclamation"></i> &#x627;&#x644;&#x62A;&#x623;&#x62B;&#x64A;&#x631; &#x627;&#x644;&#x62A;&#x633;&#x644;&#x633;&#x644;&#x64A; &#x63A;&#x64A;&#x631; &#x627;&#x644;&#x645;&#x62A;&#x62D;&#x648;&#x637;</h3>
+                            <ul><li><strong>التأثير السنوي للسلسلة:</strong><br/>Δ<sub>cascade</sub> = -(120 مليون دولار + 80 مليون دولار) × (25 نقطة أساس × 0.0001) = <strong>-500,000 دولار/سنة</strong></li><li><strong>التعرض الهندسي النظامي:</strong> إن إصدار الائتمان يعترف بالخطأ القانوني لـ SLA عبر كبسولة الحوسبة بأكملها، مما يعرض المزود لمطالبات الأضرار المقطوعة التراكمية متعددة المستأجرين التي تتجاوز 2,000,000 دولار عبر دورة مدتها 5 سنوات.</li><li><strong>حاجز الحوكمة:</strong> يتصاعد مباشرة إلى المستوى 3 من المجلس التنفيذي للبنية التحتية، مما يؤدي إلى تجميد الموافقات التشغيلية عبر قسم مركز البيانات.</li></ul>
+
+                            <hr/>
+
+                            <h3><i class="fas fa-shield-halved"></i> &#x62D;&#x644; Kinetic Engine</h3>
+                            <ol><li><strong>ارتباط القياس عن بعد الآلي للسبب الجذري:</strong> يستوعب RootCauseAnalysisAgent سجلات CSV للقياس عن بعد للنظام، مع الإشارة المرجعية إلى تذاكر زمن الوصول مع مقاييس اللوحة المعززة للمحول لعزل تدهور المجموعة النظامي عن أخطاء مستوى المستأجر.</li><li><strong>التحسين الوصفي للصفقة (CF-02):</strong> يحل للحد الأقصى للامتياز المسموح به والذي يظل ضمن السلطة المفوضة التقديرية للمستوى 1 (<strong>2.47 نقطة أساس</strong>). يحد وضع سقف للائتمان من التعرض الإجمالي إلى -49,500 دولار/سنة.</li><li><strong>بوابة الحقيقة الهندسية:</strong> يضع علامة على أنه يجب حل اختناق القياس عن بعد الأساسي بواسطة هندسة مركز البيانات قبل توقيع أي ائتمان تجاري، مما يمنع الاعترافات القانونية المبكرة بخرق البنية التحتية.</li><li><strong>بوابة Merkle Ledger للإلحاق فقط:</strong> تتطلب توقيعًا مشفرًا مزدوجًا من قائد البنية التحتية والمستشار المؤسسي، مع تسجيل انتقال الحالة مع تدقيق SHA-256 وصفر تسرب للقياس عن بعد السحابي.</li></ol>
+
+                            <div style="margin-top: 2.5rem; padding-top: 1.5rem; border-top: 1px solid var(--card-bg2); display: flex; align-items: center; font-weight: 700;">
+                                <span style="opacity: 0.85;">&#x625;&#x62C;&#x631;&#x627;&#x621; &#x627;&#x644;&#x62A;&#x62D;&#x642;&#x642; &#x627;&#x644;&#x645;&#x628;&#x627;&#x634;&#x631;:</span>
+                                <a href="stress-test-lab.html" class="btn btn-pulse" style="margin: 0 0 0 15px; padding: 0.45rem 1.25rem;">
+                                    <i class="fas fa-flask"></i> Load in Lab
+                                </a>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="blueprint-highlight" style="flex-direction: column; align-items: stretch; gap: 20px;" id="dossier-03">
+                    
+                    <h2 class="blueprint-title" style="margin-bottom: 5px;">&#x627;&#x644;&#x645;&#x644;&#x641; 03: &#x627;&#x644;&#x639;&#x62F;&#x648;&#x649; &#x645;&#x62A;&#x639;&#x62F;&#x62F;&#x629; &#x627;&#x644;&#x642;&#x641;&#x632;&#x627;&#x62A;</h2>
+                    <h3 class="playbook-subhead" style="margin-left: 0; margin-bottom: 20px;">&#x633;&#x644;&#x633;&#x644;&#x629; &#x62A;&#x648;&#x631;&#x64A;&#x62F; &#x627;&#x644;&#x645;&#x633;&#x62A;&#x62D;&#x636;&#x631;&#x627;&#x62A; &#x627;&#x644;&#x62F;&#x648;&#x627;&#x626;&#x64A;&#x629; &#x627;&#x644;&#x628;&#x64A;&#x648;&#x644;&#x648;&#x62C;&#x64A;&#x629; &#x648;&#x645;&#x645;&#x631;&#x627;&#x62A; &#x627;&#x644;&#x62E;&#x62F;&#x645;&#x627;&#x62A; &#x627;&#x644;&#x644;&#x648;&#x62C;&#x633;&#x62A;&#x64A;&#x629; &#x627;&#x644;&#x645;&#x631;&#x62A;&#x628;&#x637;&#x629;</h3>
+                    
+                    <img src="/images/post-3.jpg" alt="&#x62E;&#x632;&#x627;&#x646; &#x646;&#x642;&#x644; &#x645;&#x628;&#x631;&#x62F; &#x648;&#x628;&#x64A;&#x627;&#x646; &#x627;&#x644;&#x62E;&#x62F;&#x645;&#x627;&#x62A; &#x627;&#x644;&#x644;&#x648;&#x62C;&#x633;&#x62A;&#x64A;&#x629;" style="width: 100%; max-width: 550px; height: auto; display: block; margin: 0 auto 30px auto; border-radius: 8px; box-shadow: 0 8px 24px rgba(0,0,0,0.15);" loading="lazy" />
+                    
+                    <!-- Text Content mapped safely through CSS Document styles for professional spacing -->
+                    <div class="chat-area" style="background: transparent; padding: 0;">
+                        <div class="document" style="margin: 0; max-width: 100%;">
+                            
+                            <h3><i class="fas fa-satellite-dish"></i> &#x627;&#x644;&#x642;&#x64A;&#x627;&#x633; &#x639;&#x646; &#x628;&#x639;&#x62F; &#x627;&#x644;&#x62C;&#x646;&#x627;&#x626;&#x64A; &#x648;&#x645;&#x644;&#x641; &#x62A;&#x639;&#x631;&#x64A;&#x641; &#x627;&#x644;&#x62D;&#x627;&#x62F;&#x62B;</h3>
+                            <ul><li><strong>الكيان الحاكم الأساسي:</strong> <code>EuroLogisticsHub</code> (حجم مناولة الأدوية 900,000,000 دولار)</li><li><strong>الكيان الثانوي المتصل:</strong> <code>FrankfurtColdCorridor</code> (حجم 400,000,000 دولار)، مرتبط عبر حافة <code>LINKED_LOGISTICS_CORRIDOR</code></li><li><strong>تأريض العقد:</strong> <em>Pharma_ColdChain_Master_Agreement.pdf</em>, المادتان 1 و 2، البند 2.1</li><li><strong>المعاملة المستهدفة:</strong> اقتراح خصم تعريفة المناولة بمقدار 30 نقطة أساس لشركة النقل السريع الإقليمية (<code>PAR-7C11E309</code>) على التزام بقيمة 15 مليون دولار (45,000 دولار/سنة امتياز مباشر)</li><li><strong>الأطراف المقابلة في نصف قطر التعرض:</strong><br/>- <code>Sanofi Biologics Freight</code>: حجم 160 مليون دولار | الاختصاص الفرنسي (<code>FR</code>)<br/>- <code>Bayer Pharma Distribution</code>: حجم 90 مليون دولار | الاختصاص الألماني (<code>DE</code>)<br/>- <code>Roche Diagnostics Logistics</code> (ممر مرتبط): حجم 70 مليون دولار | الاختصاص الألماني (<code>DE</code>)</li><li><strong>قاعدة تأهيل التكافؤ:</strong> تم تفعيل تكافؤ رسوم المناولة عبر الأطراف المقابلة للمركز الأساسي، مع امتداد متعدٍ إلى الممرات التشغيلية المرتبطة التي تحمل حقوق التكافؤ المتبادل الرئيسية.</li><li><strong>الانتهاك الأساسي:</strong> تسرب عدوى التعريفة متعددة القفزات عبر الحدود إلى ممرات الخدمات اللوجستية الثانوية.</li></ul>
+
+                            <hr/>
+
+                            <h3><i class="fas fa-bolt"></i> &#x627;&#x644;&#x62D;&#x627;&#x62F;&#x62B; &#x627;&#x644;&#x62A;&#x634;&#x63A;&#x64A;&#x644;&#x64A;</h3>
+                            <p>لتأمين سعة التغذية المخصصة للحاويات المبردة أثناء اختناق لوجستي غير متوقع في سلسلة التبريد، يعرض مديرو الشحن الإقليميون في EuroLogisticsHub على شركة النقل السريع الإقليمية امتيازًا لتعريفة المناولة بمقدار 30 نقطة أساس (0.30%) على اتفاقية سنوية بقيمة 15,000,000 دولار. يعامل الفريق التجاري الامتياز البالغ 45,000 دولار كحافز مسار محلي معزول.</p>
+
+                            <h3><i class="fas fa-network-wired"></i> &#x627;&#x644;&#x648;&#x627;&#x642;&#x639; &#x627;&#x644;&#x639;&#x644;&#x627;&#x626;&#x642;&#x64A;</h3>
+                            <p>يعتمد التوزيع الصيدلاني لسلسلة التبريد على ممرات الشحن المترابطة. يعمل EuroLogisticsHub بموجب ميثاق تشغيل رئيسي موحد مع الشاحنين الرئيسيين Sanofi (160 مليون دولار) و Bayer (90 مليون دولار)، وكلاهما يتمتع بحقوق تكافؤ رسوم MFN.</p><p>بشكل حاسم، بموجب البند 2.1 من الاتفاقية الرئيسية، يرتبط EuroLogisticsHub بـ FrankfurtColdCorridor عبر حافة ممر لوجستي متبادل. بموجب هذا الإطار عبر الممرات، يحافظ الشاحنون الرئيسيون في فرانكفورت - تحديدًا Roche Diagnostics (حجم 70 مليون دولار) - على عهود التكافؤ عبر الممرات لضمان تكافؤ الأسعار عبر المراكز الأوروبية المتصلة. يمتد التعديل الجمركي غير المتحوط الممنوح في بلجيكا عبر الحدود إلى ألمانيا.</p>
+
+                            <hr/>
+
+                            <h3><i class="fas fa-triangle-exclamation"></i> &#x627;&#x644;&#x62A;&#x623;&#x62B;&#x64A;&#x631; &#x627;&#x644;&#x62A;&#x633;&#x644;&#x633;&#x644;&#x64A; &#x63A;&#x64A;&#x631; &#x627;&#x644;&#x645;&#x62A;&#x62D;&#x648;&#x637;</h3>
+                            <ul><li><strong>تأثير السحب للمركز الأساسي (القفزة 0):</strong><br/>Δ<sub>HubA</sub> = -(160 مليون دولار + 90 مليون دولار) × (30 نقطة أساس × 0.0001) = <strong>-750,000 دولار/سنة</strong></li><li><strong>سحب الممر المتصل المتعدي (القفزة 1):</strong><br/>Δ<sub>HubB</sub> = -70 مليون دولار × (30 نقطة أساس × 0.0001) = <strong>-210,000 دولار/سنة</strong></li><li><strong>إجمالي التعرض متعدد القفزات:</strong> <strong>-960,000 دولار/سنة</strong></li><li><strong>التعرض للمخاطر التراكمية لمدة 5 سنوات من OmniPredict:</strong> أكثر من 3,180,000 دولار عبر الممرات المتصلة.</li></ul>
+
+                            <hr/>
+
+                            <h3><i class="fas fa-shield-halved"></i> &#x62D;&#x644; Kinetic Engine</h3>
+                            <ol><li><strong>اكتشاف الرسم البياني BFS المتعدي:</strong> ينتقل اجتياز الرسم البياني للمحرك تلقائيًا إلى الخارج من EuroLogisticsHub على طول حافة LINKED_LOGISTICS_CORRIDOR، ويكتشف التعرض الثانوي على Roche Diagnostics في أقل من 1 مللي ثانية.</li><li><strong>التحسين الوصفي للصفقة (CF-02):</strong> يعيد حساب الامتياز الأمثل عبر الأطراف المقابلة للمركز الأساسي للبقاء ضمن الحد البالغ 250,000 دولار (<strong>9.9 نقطة أساس</strong>). يوفر سقف الخصم <strong>+502,500 دولار/سنة</strong> ويفتح موافقة المسار السريع للمستوى 1.</li><li><strong>سياسة تسوير العقود:</strong> إذا كان الامتياز الكامل البالغ 30 نقطة أساس إلزاميًا، فإن تبديل "Ring-Fence Primary Hub" يستدعي قابلية فصل شرط العقد، وعزل المنشأة الأساسية قانونًا وقطع رابط عدوى فرانكفورت. تنخفض امتدادات فرانكفورت من -210,000 دولار إلى <strong>0 دولار</strong>.</li><li><strong>بديل زيادة الحجم (CF-03):</strong> يقترح زيادة التزام حجم الناقل الإقليمي إلى 95 مليون دولار. نظرًا لأن 95 مليون دولار تتجاوز حجم Bayer البالغ 90 مليون دولار، يتم تجاوز Bayer قانونيًا، مما يزيل على الفور 270,000 دولار من سحب الرسوم.</li></ol>
+
+                            <div style="margin-top: 2.5rem; padding-top: 1.5rem; border-top: 1px solid var(--card-bg2); display: flex; align-items: center; font-weight: 700;">
+                                <span style="opacity: 0.85;">&#x625;&#x62C;&#x631;&#x627;&#x621; &#x627;&#x644;&#x62A;&#x62D;&#x642;&#x642; &#x627;&#x644;&#x645;&#x628;&#x627;&#x634;&#x631;:</span>
+                                <a href="stress-test-lab.html" class="btn btn-pulse" style="margin: 0 0 0 15px; padding: 0.45rem 1.25rem;">
+                                    <i class="fas fa-flask"></i> Load in Lab
+                                </a>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="blueprint-highlight" style="flex-direction: column; align-items: stretch; gap: 20px;" id="dossier-04">
+                    
+                    <h2 class="blueprint-title" style="margin-bottom: 5px;">&#x627;&#x644;&#x645;&#x644;&#x641; 04: &#x627;&#x644;&#x62B;&#x627;&#x628;&#x62A; &#x627;&#x644;&#x645;&#x64A;&#x62C;&#x627;&#x648;&#x627;&#x62A;</h2>
+                    <h3 class="playbook-subhead" style="margin-left: 0; margin-bottom: 20px;">&#x627;&#x644;&#x634;&#x628;&#x643;&#x627;&#x62A; &#x627;&#x644;&#x643;&#x647;&#x631;&#x628;&#x627;&#x626;&#x64A;&#x629; &#x630;&#x627;&#x62A; &#x627;&#x644;&#x62C;&#x647;&#x62F; &#x627;&#x644;&#x639;&#x627;&#x644;&#x64A; &#x648;&#x627;&#x644;&#x62D;&#x648;&#x643;&#x645;&#x629; &#x63A;&#x64A;&#x631; &#x627;&#x644;&#x646;&#x642;&#x62F;&#x64A;&#x629;</h3>
+                    
+                    <img src="/images/post-4.jpg" alt="&#x62A;&#x648;&#x62C;&#x64A;&#x647; &#x62A;&#x642;&#x644;&#x64A;&#x635; &#x623;&#x62D;&#x645;&#x627;&#x644; HVDC &#x648;&#x648;&#x62D;&#x62F;&#x629; &#x62A;&#x62D;&#x643;&#x645; &#x627;&#x644;&#x634;&#x628;&#x643;&#x629; &#x627;&#x644;&#x628;&#x62D;&#x631;&#x64A;&#x629;" style="width: 100%; max-width: 550px; height: auto; display: block; margin: 0 auto 30px auto; border-radius: 8px; box-shadow: 0 8px 24px rgba(0,0,0,0.15);" loading="lazy" />
+                    
+                    <!-- Text Content mapped safely through CSS Document styles for professional spacing -->
+                    <div class="chat-area" style="background: transparent; padding: 0;">
+                        <div class="document" style="margin: 0; max-width: 100%;">
+                            
+                            <h3><i class="fas fa-satellite-dish"></i> &#x627;&#x644;&#x642;&#x64A;&#x627;&#x633; &#x639;&#x646; &#x628;&#x639;&#x62F; &#x627;&#x644;&#x62C;&#x646;&#x627;&#x626;&#x64A; &#x648;&#x645;&#x644;&#x641; &#x62A;&#x639;&#x631;&#x64A;&#x641; &#x627;&#x644;&#x62D;&#x627;&#x62F;&#x62B;</h3>
+                            <ul><li><strong>الكيان الحاكم:</strong> <code>NorthSeaHVDCSubstation</code> (قدرة إنتاجية نقل فيزيائية 500 ميجاوات)</li><li><strong>الوحدة الأساسية الحاكمة:</strong> ميجاوات (MW) — بُعد فيزيائي غير نقدي</li><li><strong>تأريض العقد:</strong> <em>HVDC_Substation_Operating_Charter.pdf</em>, المادة 1، البند 1.1</li><li><strong>المعاملة المستهدفة:</strong> اقتراح إعفاء تقليص طاقة بمقدار 50 ميجاوات لوحدة Peaker الاحتياطية (<code>PAR-5E10C221</code>) على التزام سعة أساسية 25 ميجاوات أثناء إجهاد حمل الذروة</li><li><strong>المولدات في نصف قطر التعرض:</strong><br/>- <code>Offshore Wind Array Alpha</code>: توليد أساسي 200 ميجاوات | اتصال ناقل A<br/>- <code>Hydrogen Electrolyzer Plant</code>: حوض تحميل صناعي 150 ميجاوات | اتصال ناقل B</li><li><strong>قاعدة تأهيل التكافؤ:</strong> تم فرض <code>Load_Parity_SLA</code> الفعلي لجميع المشاركين في الشبكة ≥ 100 ميجاوات عندما يكون الجيل المستهدف ≤ توليد الشريك</li><li><strong>الانتهاك الأساسي:</strong> إعفاء مادي من تساقط الأحمال يؤدي إلى التكافؤ القانوني عبر 350 ميجاوات من التوليد، مما يخلق صدمة سعة بنسبة 28.57% تتجاوز حدود الاحتياطي الحراري</li></ul>
+
+                            <hr/>
+
+                            <h3><i class="fas fa-bolt"></i> &#x627;&#x644;&#x62D;&#x627;&#x62F;&#x62B; &#x627;&#x644;&#x62A;&#x634;&#x63A;&#x64A;&#x644;&#x64A;</h3>
+                            <p>خلال ذروة توليد الرياح البحرية الشديدة جنبًا إلى جنب مع ازدحام خط نقل عالي، يدرس مرسلو الشبكة منح وحدة Peaker الاحتياطية إعفاء تقليص قدره 50 ميجاوات لضمان الاستقرار الحراري الموضعي. بالنسبة للنموذج اللغوي القياسي أو النظام المالي، يبدو رقم "50" رقمًا غير مهم مقارنة بالعهود المالية القياسية بملايين الدولارات.</p>
+
+                            <h3><i class="fas fa-network-wired"></i> &#x627;&#x644;&#x648;&#x627;&#x642;&#x639; &#x627;&#x644;&#x639;&#x644;&#x627;&#x626;&#x642;&#x64A;</h3>
+                            <p>تحكم شبكات الطاقة المادية قوانين كيرشوف والتقييمات الحرارية للنقل، وليس العملة. بموجب البند 1.1 من ميثاق المحطة الفرعية، تمتلك المولدات المتصلة Offshore Wind Array Alpha (200 ميجاوات) و Hydrogen Electrolyzer Plant (150 ميجاوات) عهود <code>Load_Parity_SLA</code> ملزمة. بموجب قواعد تكافؤ الشبكة، فإن منح بدل حقن طاقة غير مقلص لأحد المشاركين يخول تلقائيًا كلا مرفقي الطاقة المتجددة الرئيسية للمطالبة بإعفاء متطابق قدره 50 ميجاوات أثناء نوافذ الازدحام.</p>
+
+                            <hr/>
+
+                            <h3><i class="fas fa-triangle-exclamation"></i> &#x627;&#x644;&#x62A;&#x623;&#x62B;&#x64A;&#x631; &#x627;&#x644;&#x62A;&#x633;&#x644;&#x633;&#x644;&#x64A; &#x63A;&#x64A;&#x631; &#x627;&#x644;&#x645;&#x62A;&#x62D;&#x648;&#x637;</h3>
+                            <ul><li><strong>عدوى الحمل المادي:</strong><br/>Δ<sub>load</sub> = 2 مولدات رئيسية × 50 ميجاوات = <strong>100 ميجاوات من الحمل غير المقلص</strong></li><li><strong>صدمة الأهمية النسبية:</strong><br/>التأثير النسبي = 100 ميجاوات / 350 ميجاوات (القدرة الأساسية المتصلة) = <strong>28.57%</strong></li><li><strong>التعرض الهندسي النظامي:</strong> يبلغ سقف الاحتياطي المعتمد للإرسال الآمن للمحطة الفرعية 35 ميجاوات. إن حقن 100 ميجاوات من الطاقة غير المقلصة يكسر التسامح الحراري بـ <strong>+65 ميجاوات</strong>، مما يخلق عدم استقرار فوري لتردد الشبكة وخطر رحلة حرارية عبر رابط بحر الشمال.</li><li><strong>حاجز الحوكمة:</strong> الأهمية النسبية ≥ 10% تؤدي إلى تصعيد إلزامي إلى المستوى 3 لمجلس إرسال الشبكة الرئيسي.</li></ul>
+
+                            <hr/>
+
+                            <h3><i class="fas fa-shield-halved"></i> &#x62D;&#x644; Kinetic Engine</h3>
+                            <ol><li><strong>التحليل الكمي ذو 11 بُعدًا:</strong> يحلل المحرك أصلًا الأبعاد الفيزيائية غير النقدية (MW, GWh, bar, m³/h)، ويزيل افتراضات العملة المالية ويفرض قوانين الحفظ الفيزيائية.</li><li><strong>تصعيد الأهمية النسبية:</strong> يحسب تلقائيًا تحول السعة النسبي البالغ 28.57%، ويوجه الطلب بعيدًا عن المكاتب التجارية مباشرة إلى مجلس إرسال الشبكة الرئيسي.</li><li><strong>التحسين الوصفي للصفقة (CF-02):</strong> يحل لأقصى إعفاء مادي يحترم حد مساحة الرأس للإرسال الآمن البالغ 35 ميجاوات (<strong>17.3 ميجاوات</strong>). إن وضع حد أعلى لإعفاء الذروة عند 17.3 ميجاوات يبقي إجمالي إزاحة حمل الشبكة عند 34.6 ميجاوات، ويحافظ على 65.4 ميجاوات من مساحة الرأس الاحتياطية ويفتح الإرسال الفوري من المستوى 1 بواسطة وحدة تحكم شبكة التحول.</li><li><strong>وضع إعادة تكوين شبكة ذروة الاحتياطي:</strong> إذا كان الإعفاء الكامل البالغ 50 ميجاوات أمرًا بالغ الأهمية، يمكن للمرسلين محاكاة تبديل المحطة الفرعية إلى وضع ذروة الاحتياطي. يحاكي هذا إغلاق مقرنات الناقل وتنشيط تبريد الخط الديناميكي، مما يوسع الحدود الحرارية إلى <strong>122.5 ميجاوات</strong> ويخلي طلب 50 ميجاوات بأمان.</li></ol>
+
+                            <div style="margin-top: 2.5rem; padding-top: 1.5rem; border-top: 1px solid var(--card-bg2); display: flex; align-items: center; font-weight: 700;">
+                                <span style="opacity: 0.85;">&#x625;&#x62C;&#x631;&#x627;&#x621; &#x627;&#x644;&#x62A;&#x62D;&#x642;&#x642; &#x627;&#x644;&#x645;&#x628;&#x627;&#x634;&#x631;:</span>
+                                <a href="stress-test-lab.html" class="btn btn-pulse" style="margin: 0 0 0 15px; padding: 0.45rem 1.25rem;">
+                                    <i class="fas fa-flask"></i> Load in Lab
+                                </a>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="blueprint-highlight" style="flex-direction: column; align-items: stretch; gap: 20px;" id="dossier-05">
+                    
+                    <h2 class="blueprint-title" style="margin-bottom: 5px;">&#x627;&#x644;&#x645;&#x644;&#x641; 05: &#x62A;&#x633;&#x644;&#x633;&#x644; &#x627;&#x644;&#x623;&#x633;&#x628;&#x642;&#x64A;&#x629;</h2>
+                    <h3 class="playbook-subhead" style="margin-left: 0; margin-bottom: 20px;">&#x631;&#x623;&#x633; &#x627;&#x644;&#x645;&#x627;&#x644; &#x627;&#x644;&#x62E;&#x627;&#x635;&#x60C; &#x648;&#x62A;&#x634;&#x643;&#x64A;&#x644;&#x627;&#x62A; &#x627;&#x644;&#x635;&#x646;&#x627;&#x62F;&#x64A;&#x642; &#x648;&#x627;&#x644;&#x625;&#x644;&#x63A;&#x627;&#x621;&#x627;&#x62A; &#x627;&#x644;&#x642;&#x636;&#x627;&#x626;&#x64A;&#x629;</h3>
+                    
+                    <img src="/images/post-5.jpg" alt="&#x637;&#x627;&#x648;&#x644;&#x629; &#x645;&#x643;&#x62A;&#x628;&#x629; &#x642;&#x627;&#x646;&#x648;&#x646;&#x64A;&#x629; &#x645;&#x639; &#x62E;&#x644;&#x627;&#x635;&#x629; &#x648;&#x627;&#x641;&#x64A;&#x629; &#x644;&#x644;&#x62A;&#x639;&#x62F;&#x64A;&#x644;&#x627;&#x62A;" style="width: 100%; max-width: 550px; height: auto; display: block; margin: 0 auto 30px auto; border-radius: 8px; box-shadow: 0 8px 24px rgba(0,0,0,0.15);" loading="lazy" />
+                    
+                    <!-- Text Content mapped safely through CSS Document styles for professional spacing -->
+                    <div class="chat-area" style="background: transparent; padding: 0;">
+                        <div class="document" style="margin: 0; max-width: 100%;">
+                            
+                            <h3><i class="fas fa-satellite-dish"></i> &#x627;&#x644;&#x642;&#x64A;&#x627;&#x633; &#x639;&#x646; &#x628;&#x639;&#x62F; &#x627;&#x644;&#x62C;&#x646;&#x627;&#x626;&#x64A; &#x648;&#x645;&#x644;&#x641; &#x62A;&#x639;&#x631;&#x64A;&#x641; &#x627;&#x644;&#x62D;&#x627;&#x62F;&#x62B;</h3>
+                            <ul><li><strong>الكيانات الحاكمة:</strong> <code>ApexGlobalBuyoutVIII</code> (تخصيص صندوق بقيمة 2,000,000,000 دولار) و <code>SovereignInfraFundIX</code> (تخصيص صندوق بنية تحتية بقيمة 1,200,000,000 دولار)</li><li><strong>تأريض العقد:</strong> <em>Apex_Buyout_SideLetter_Compendium.pdf</em> و <em>Regulatory_Compliance_Charter.pdf</em>, البند 6.1</li><li><strong>المعاملة المستهدفة:</strong> اقتراح تنازل عن رسوم إدارة بقيمة 25 نقطة أساس للمستثمر المشارك البلدي (<code>PAR-5510M0</code>) على التزام رأسمالي بقيمة 20 مليون دولار (50,000 دولار/سنة امتياز رسوم مباشر)</li><li><strong>الشركاء المحدودون المؤسسيون (LPs) في النطاق:</strong><br/>- <code>Allianz Global Infrastructure</code>: التزام رأسمالي 150 مليون دولار | عهد تكافؤ خطاب جانبي مرتبط بتفويض SEC § 1332<br/>- <code>CDPQ Quebec Pension</code>: التزام رأسمالي 110 ملايين دولار | عهد تكافؤ خطاب جانبي مرتبط بتفويض SEC § 1332</li><li><strong>قاعدة تأهيل التكافؤ:</strong> تكافؤ رسوم MFN المؤسسي الذي يمتلكه المستثمرون الذين يلتزمون بـ ≥ 50 مليون دولار، ويحكمه صراحة القواعد الإدارية القانونية</li><li><strong>الانتهاك الأساسي:</strong> تسلسل تكافؤ الرسوم غير المتحوط بموجب اللوائح النشطة، تليها إلغاء تفعيل البند على مستوى المحفظة بعد الإلغاء القضائي</li></ul>
+
+                            <hr/>
+
+                            <h3><i class="fas fa-bolt"></i> &#x627;&#x644;&#x62D;&#x627;&#x62F;&#x62B; &#x627;&#x644;&#x62A;&#x634;&#x63A;&#x64A;&#x644;&#x64A;</h3>
+                            <p>خلال مرحلة الإغلاق النهائية لأداة الاستثمار المشترك في البنية التحتية، يقترح شركاء تكوين الصندوق تقديم امتياز رسوم إدارة بقيمة 25 نقطة أساس (0.25%) للمستثمر المشارك البلدي على التزامه البالغ 20,000,000 دولار لتأمين المشاركة البلدية الأساسية. يحسب الراعي استراحة الرسوم كامتياز هامشي سنوي بقيمة 50,000 دولار.</p>
+
+                            <h3><i class="fas fa-network-wired"></i> &#x627;&#x644;&#x648;&#x627;&#x642;&#x639; &#x627;&#x644;&#x639;&#x644;&#x627;&#x626;&#x642;&#x64A;</h3>
+                            <p>تعمل حوكمة الصناديق المؤسسية من خلال ملخصات الخطابات الجانبية الهرمية والتفويضات القانونية. في ظل الظروف الأساسية، يحتفظ المستثمرون الأساسيون في المؤسسات Allianz Global (150 مليون دولار) و CDPQ Quebec Pension (110 ملايين دولار) برسائل جانبية نشطة لتكافؤ رسوم MFN. إن منح خصم رسوم بنسبة 25 نقطة أساس لمستثمر بقيمة 20 مليون دولار يؤدي تلقائيًا إلى مطابقة الرسوم عبر كلا العملاقين المؤسسيين (التزام إجمالي 260 مليون دولار).</p><p>بشكل حاسم، تستمد هذه الخطابات الجانبية سلطتها القانونية مباشرة (<code>DERIVES_FROM</code>) من معايير الشفافية الإدارية القانونية (مثل SEC Mandate § 1332). عندما تلغي محكمة إدارية أو محكمة استئناف أو تلغي تلك اللائحة الحاكمة (على سبيل المثال، حكم المحكمة العليا 598 U.S. 44، AuthorityRank = 100 يلغي AuthorityRank = 80)، يتغير النسب القانوني لكل عهد معتمد عبر المحفظة على الفور.</p>
+
+                            <hr/>
+
+                            <h3><i class="fas fa-triangle-exclamation"></i> &#x627;&#x644;&#x62A;&#x623;&#x62B;&#x64A;&#x631; &#x627;&#x644;&#x62A;&#x633;&#x644;&#x633;&#x644;&#x64A; &#x63A;&#x64A;&#x631; &#x627;&#x644;&#x645;&#x62A;&#x62D;&#x648;&#x637;</h3>
+                            <ul><li><strong>سحب السلسلة قبل الحكم الأساسي:</strong><br/>Δ<sub>cascade</sub> = -(150 مليون دولار + 110 ملايين دولار) × (25 نقطة أساس × 0.0001) = <strong>-650,000 دولار/سنة</strong></li><li><strong>تآكل رأس المال لمدة 5 سنوات:</strong> أكثر من <strong>2,760,000 دولار</strong> في تسرب إيرادات الرسوم غير المتحوطة.</li><li><strong>حاجز الحوكمة:</strong> يتصاعد إلى المستوى 3 من لجنة المخاطر والحوكمة، مما يتطلب تدخل الشريك الإداري، والمستشار العام، واللجنة الاستشارية لـ LP.</li></ul>
+
+                            <hr/>
+
+                            <h3><i class="fas fa-shield-halved"></i> &#x62D;&#x644; Kinetic Engine</h3>
+                            <ol><li><strong>اجتياز DAG للأسبقية المعيارية:</strong> يقوم المحرك بتنظيم الرسائل الجانبية التعاقدية والتعديلات والسلطات القانونية كرسوم بيانية لأسبقية نشطة مع الحواف العلائقية <code>OVERRULES</code> و <code>DERIVES_FROM</code>.</li><li><strong>التحسين الوصفي للصفقة (CF-02):</strong> في ظل ظروف ما قبل الحكم، يحسب المُحسِّن استراحة الرسوم الدقيقة التي تبقي تسرب الإيرادات أقل من الحد البالغ 250,000 دولار (<strong>9.51 نقطة أساس</strong>). تحد إعادة الهيكلة إلى 9.51 نقطة أساس إجمالي السحب السنوي إلى -247,260 دولارًا / سنة، مما يوفر <strong>+402,740 دولارًا / سنة</strong>.</li><li><strong>المسح الآلي للإلغاء التنظيمي:</strong> عند تبديل <strong>تطبيق حكم إلغاء المحكمة العليا</strong>، يقوم المحرك على الفور بمسح المحفظة البالغة 260 مليون دولار. نظرًا لإلغاء القاعدة الفيدرالية الأساسية، يتم إلغاء تنشيط جميع عهود العقود النهائية المعتمدة على هذا النظام الأساسي تلقائيًا. ينهار السحب الخارجي للسلسلة إلى <strong>0 دولار</strong>.</li><li><strong>تتبع سلالة التعديل:</strong> في سيناريوهات الصناديق اللاحقة، يتعامل المحرك بسلاسة مع تعديلات الخطاب الجانبي للجولة 2 التي ترفع عتبات التأهيل من 50 مليون دولار إلى 150 مليون دولار، ويستبعد تلقائيًا الصناديق الأقل من 150 مليون دولار مع الحفاظ على الدقة الرياضية للعهود الباقية.</li></ol>
+
+                            <div style="margin-top: 2.5rem; padding-top: 1.5rem; border-top: 1px solid var(--card-bg2); display: flex; align-items: center; font-weight: 700;">
+                                <span style="opacity: 0.85;">&#x625;&#x62C;&#x631;&#x627;&#x621; &#x627;&#x644;&#x62A;&#x62D;&#x642;&#x642; &#x627;&#x644;&#x645;&#x628;&#x627;&#x634;&#x631;:</span>
+                                <a href="stress-test-lab.html" class="btn btn-pulse" style="margin: 0 0 0 15px; padding: 0.45rem 1.25rem;">
+                                    <i class="fas fa-flask"></i> Load in Lab
+                                </a>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="blueprint-highlight" style="flex-direction: column; align-items: stretch; gap: 20px;" id="dossier-06">
+                    
+                    <h2 class="blueprint-title" style="margin-bottom: 5px;">&#x627;&#x644;&#x645;&#x644;&#x641; 06: &#x645;&#x643;&#x648;&#x646; &#x627;&#x644;&#x645;&#x644;&#x627;&#x630; &#x627;&#x644;&#x622;&#x645;&#x646;</h2>
+                    <h3 class="playbook-subhead" style="margin-left: 0; margin-bottom: 20px;">&#x627;&#x644;&#x634;&#x628;&#x643;&#x627;&#x62A; &#x627;&#x644;&#x645;&#x646;&#x638;&#x645;&#x629; &#x648;&#x627;&#x644;&#x637;&#x64A;&#x631;&#x627;&#x646; &#x648;&#x62A;&#x648;&#x62C;&#x64A;&#x647;&#x627;&#x62A; &#x627;&#x644;&#x637;&#x648;&#x627;&#x631;&#x626;</h3>
+                    
+                    <img src="/images/post-6.jpg" alt="&#x62A;&#x648;&#x62C;&#x64A;&#x647; &#x635;&#x644;&#x627;&#x62D;&#x64A;&#x629; &#x627;&#x644;&#x637;&#x64A;&#x631;&#x627;&#x646; &#x648;&#x62A;&#x646;&#x627;&#x632;&#x644; &#x627;&#x633;&#x62A;&#x62B;&#x646;&#x627;&#x621; &#x639;&#x644;&#x649; &#x637;&#x627;&#x648;&#x644;&#x629; &#x627;&#x644;&#x639;&#x645;&#x644;" style="width: 100%; max-width: 550px; height: auto; display: block; margin: 0 auto 30px auto; border-radius: 8px; box-shadow: 0 8px 24px rgba(0,0,0,0.15);" loading="lazy" />
+                    
+                    <!-- Text Content mapped safely through CSS Document styles for professional spacing -->
+                    <div class="chat-area" style="background: transparent; padding: 0;">
+                        <div class="document" style="margin: 0; max-width: 100%;">
+                            
+                            <h3><i class="fas fa-satellite-dish"></i> &#x627;&#x644;&#x642;&#x64A;&#x627;&#x633; &#x639;&#x646; &#x628;&#x639;&#x62F; &#x627;&#x644;&#x62C;&#x646;&#x627;&#x626;&#x64A; &#x648;&#x645;&#x644;&#x641; &#x62A;&#x639;&#x631;&#x64A;&#x641; &#x627;&#x644;&#x62D;&#x627;&#x62F;&#x62B;</h3>
+                            <ul><li><strong>الكيانات الحاكمة:</strong> <code>EuroAirworthinessFleet</code> و <code>EuroDroneConsortium</code> (حجم برنامج 1,500,000,000 دولار)</li><li><strong>تأريض العقد:</strong> <em>EuroDrone_Consortium_Charter.pdf</em>, القسم 4.2 و <em>EASA_Emergency_Airworthiness_Directive.pdf</em>, المادة 3</li><li><strong>المعاملة المستهدفة:</strong> اقتراح تخفيض تعريفة الصيانة بمقدار 20 نقطة أساس لجناح الطيران الإنساني MedEvac (<code>PAR-4412E8</code>) على التزام تشغيلي بقيمة 15 مليون دولار (30,000 دولار/سنة امتياز مباشر)</li><li><strong>شركاء الصناعة الرئيسيون في النطاق:</strong><br/>- <code>Airbus Defense Systems</code>: التزام برنامج 300 مليون دولار | مخزن مؤقت للمنطقة المحظورة في تولوز<br/>- <code>Thales Avionics Division</code>: التزام برنامج 200 مليون دولار | متوافق مع تدقيق أمن أنظمة الطيران الإلزامي</li><li><strong>قاعدة تأهيل التكافؤ:</strong> يتم تشغيل حقوق تكافؤ المقاول الرئيسي القياسية / تكافؤ الصيانة لأي شريك ≥ 100 مليون دولار</li><li><strong>الانتهاك الأساسي / الصراع:</strong> خرق واضح لتكافؤ MFN على تعريفات الصيانة الرئيسية مقابل الملاذات الآمنة في حالات الطوارئ الإنسانية القانونية (<code>EXCEPTION_TO</code>)</li></ul>
+
+                            <hr/>
+
+                            <h3><i class="fas fa-bolt"></i> &#x627;&#x644;&#x62D;&#x627;&#x62F;&#x62B; &#x627;&#x644;&#x62A;&#x634;&#x63A;&#x64A;&#x644;&#x64A;</h3>
+                            <p>لضمان التوافر السريع للنقل الطبي الجوي المنقذ للحياة أثناء أزمة إقليمية، يمنح مديرو العمليات امتياز صيانة وأدوات بمقدار 20 نقطة أساس (0.20%) لجناح MedEvac الإنساني. توقف البروتوكولات الإدارية القياسية الطلب على الفور، محذرة من أن منح شروط تفضيلية لأي مشغل أسطول يؤدي إلى تفعيل بنود تكافؤ الدولة الأكثر رعاية عبر المقاولين الصناعيين الرئيسيين Airbus Defense (300 مليون دولار) و Thales Avionics (200 مليون دولار).</p>
+
+                            <h3><i class="fas fa-network-wired"></i> &#x627;&#x644;&#x648;&#x627;&#x642;&#x639; &#x627;&#x644;&#x639;&#x644;&#x627;&#x626;&#x642;&#x64A;</h3>
+                            <p>تحتوي الشبكات التشغيلية عالية المخاطر بشكل متكرر على صمامات أمان قانونية وتنظيمية متعمدة. في حين تفرض المواثيق التجارية تكافؤًا صارمًا في الأسعار لحماية استثمارات المقاولين الرئيسيين، توفر توجيهات الطيران والرعاية الصحية القانونية ملاذات آمنة شرطية صريحة (<code>EXCEPTION_TO</code>). وبموجب المادة 3 من EASA، فإن عمليات سلامة الحياة في حالات الطوارئ غير الهادفة للربح معزولة قانونًا عن المحفزات التجارية للتكافؤ.</p><p>عندما تعتمد المنظمات على المراجعات القانونية اليدوية الخرقاء، فإن الخوف من إثارة ملايين الالتزامات للدولة الأكثر رعاية يشل العمليات، ويحاصر القرارات الإنسانية العاجلة في أسابيع من اجتماعات اللجان البيروقراطية. وعلى العكس من ذلك، فإن نشر أدوات الذكاء الاصطناعي التوليدية غير المقيدة يخاطر بصياغة إعفاءات غير مصرح بها تنتهك العقود التجارية عن طريق الخطأ دون التحقق من الامتثال القانوني.</p>
+
+                            <hr/>
+
+                            <h3><i class="fas fa-triangle-exclamation"></i> &#x627;&#x644;&#x62A;&#x623;&#x62B;&#x64A;&#x631; &#x627;&#x644;&#x62A;&#x633;&#x644;&#x633;&#x644;&#x64A; &#x63A;&#x64A;&#x631; &#x627;&#x644;&#x645;&#x62A;&#x62D;&#x648;&#x637;</h3>
+                            <ul><li><strong>سحب المقاول الرئيسي المحتمل (إذا أسيء إدارته):</strong><br/>Δ<sub>cascade</sub> = -(300 مليون دولار + 200 مليون دولار) × (40 نقطة أساس × 0.0001) = <strong>-2,000,000 دولار/سنة</strong></li><li><strong>جمود العمليات:</strong> تأخر عمليات سلامة الحياة من 10 إلى 14 يوم عمل في انتظار توقيعات اللجنة التنفيذية.</li><li><strong>حاجز الحوكمة:</strong> تصعيد إيجابي كاذب إلى المستوى 3 من مجلس الدفاع التنفيذي.</li></ul>
+
+                            <hr/>
+
+                            <h3><i class="fas fa-shield-halved"></i> &#x62D;&#x644; Kinetic Engine</h3>
+                            <ol><li><strong>تقييم AST الحتمي:</strong> ينفذ المحرك قاعدة الملاذ الآمن عبر سمات الطرف المقابل الحية في أقل من 1 مللي ثانية. ويتحقق من أن MedEvac تستوفي جميع المعايير الإنسانية القانونية بموجب <code>EXCEPTION_TO</code>، مما يثبت رياضيًا أن <strong>0 من عهود التكافؤ قد تم تشغيلها</strong>.</li><li><strong>التتبع السريع الفوري من المستوى 1:</strong> يتجاوز أسابيع من الجمود غير الضروري للمجلس، ويخلي الاتفاقية بموجب سلطة التفويض من المستوى 1 (تسجيل خروج للعمليات لمدة يومين) مدعومة بملف امتثال آلي ومُتحقق منه.</li><li><strong>هيكلة التنازل الأساسي الثنائي:</strong> في سيناريوهات التصنيع التجاري حيث لا تنطبق الملاذات الآمنة، يقوم المحرك بعزل الأطراف المقابلة الأساسية. يؤدي تأمين تنازل ثنائي مستهدف من Airbus Defense (مرساة بقيمة 300 مليون دولار) إلى القضاء على 60% من تكاليف السلسلة.</li><li><strong>التحسين الوصفي للصفقة (CF-02):</strong> يحل الحد التحليلي الدقيق (<strong>19.8 نقطة أساس</strong>) الذي يبقي تكاليف سلسلة الاتحاد الكاملة تحت السقف التقديري البالغ 1,000,000 دولار، مما يوفر <strong>+1,010,000 دولار/سنة</strong>.</li><li><strong>التراجع الذري بنقرة واحدة مشفر:</strong> يتم ختم كل موافقة مرحلية في سلسلة SHA-256 Merkle محلية. في حالة تحول الظروف التشغيلية أو التنظيمية، يمكن التراجع عن المعاملة إلى حالة ما قبل الطفرة الدقيقة بنقرة واحدة، مما يضمن سلامة الحالة الكاملة.</li></ol>
+
+                            <div style="margin-top: 2.5rem; padding-top: 1.5rem; border-top: 1px solid var(--card-bg2); display: flex; align-items: center; font-weight: 700;">
+                                <span style="opacity: 0.85;">&#x625;&#x62C;&#x631;&#x627;&#x621; &#x627;&#x644;&#x62A;&#x62D;&#x642;&#x642; &#x627;&#x644;&#x645;&#x628;&#x627;&#x634;&#x631;:</span>
+                                <a href="stress-test-lab.html" class="btn btn-pulse" style="margin: 0 0 0 15px; padding: 0.45rem 1.25rem;">
+                                    <i class="fas fa-flask"></i> Load in Lab
+                                </a>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+        <!-- Methodological Audit -->
+        <div class="blueprint-highlight" style="flex-direction: column; align-items: stretch; gap: 20px; margin-top: 4rem;">
+            <h2 class="blueprint-title">&#x627;&#x644;&#x62A;&#x62F;&#x642;&#x64A;&#x642; &#x627;&#x644;&#x645;&#x646;&#x647;&#x62C;&#x64A;: &#x645;&#x642;&#x627;&#x631;&#x646;&#x629; &#x645;&#x639;&#x645;&#x627;&#x631;&#x64A;&#x629;</h2>
+            <div class="table-responsive">
+                <table class="comparison-table"><thead><tr><th>القدرة التشغيلية</th><th>Vector RAG القياسي والذكاء الاصطناعي الحواري</th><th>MindML Sovereign Kinetic Engine (v2.0)</th></tr></thead><tbody><tr><td><strong>نموذج التنفيذ الأساسي</strong></td><td><strong>التنبؤ الاحتمالي:</strong> يخمن أجزاء النص ذات الصلة بناءً على مسافة التشابه الدلالي للمتجهات.</td><td><strong>اجتياز الرسم البياني الحتمي:</strong> روابط SQL B-Tree مفهرسة بـ 4 اتجاهات تنفذ مقابل نموذج مشفر.</td></tr><tr><td><strong>استدعاء العهد والتكافؤ</strong></td><td><strong>غير موثوق (<80%):</strong> يتجاهل البحث الدلالي Top-k بشكل روتيني الرسائل الجانبية المشروطة والبنود متعددة القفزات.</td><td><strong>استدعاء رياضي 100%:</strong> تحديد مضمون لجميع عهود التكافؤ المتصلة والعتبات والاستثناءات.</td></tr><tr><td><strong>التأريض المكاني والمادي</strong></td><td><strong>أعمى:</strong> يفتقر إلى ذكاء الوحدات البعدية؛ لا يمكنه إجراء مراجع مرجعية لإحداثيات GIS أو المخازن المؤقتة للسلامة المكانية.</td><td><strong>التحليل البعدي الأصلي:</strong> يطبع أصلًا 11 بُعدًا ماديًا (MW, GWh, m³/h, meters) ويتحقق من مضلعات GIS.</td></tr><tr><td><strong>توجيه الصفقات وحل المشكلات</strong></td><td><strong>سلبي:</strong> يولد شروحات سردية لمشاكل العقود دون علاجات تجارية قابلة للتطبيق.</td><td><strong>بدائل وصفية:</strong> يحل قيود التعادل الدقيقة لباريتو (CF-02) ويصنف أهداف التنازل الأساسية.</td></tr><tr><td><strong>طفرة حالة قاعدة البيانات</strong></td><td><strong>غير محمي / خطر الكتابة المباشرة:</strong> يخاطر الوصول المباشر لكتابة قاعدة البيانات بفساد السجل الصامت من الهلوسة.</td><td><strong>بوابة ما قبل الالتزام ACID ثنائية المرحلة:</strong> دورة حياة من 4 حالات (PENDING → COMMITTED / ROLLED_BACK) مع التحكم المتفائل في التزامن.</td></tr><tr><td><strong>قابلية التدقيق واكتشاف التلاعب</strong></td><td><strong>ملفات السجل المؤقتة:</strong> ملفات السجل النصية القياسية عرضة للتغيير اليدوي أو الحذف.</td><td><strong>سلسلة Merkle المشفرة:</strong> تجزئة حالة SHA-256 مع اكتشاف التلاعب في أقل من مللي ثانية واسترجاع ذري بنقرة واحدة.</td></tr><tr><td><strong>البنية التحتية وسيادة البيانات</strong></td><td><strong>التعرض المستمر لبيانات السحابة:</strong> مكالمات API عالية زمن الوصول تسرب شروط العقود الحساسة والتشغيلية إلى السحابات الخارجية.</td><td><strong>تنفيذ سيليكون محلي 100%:</strong> صفر مكالمات API خارجية، صفر اعتمادات GPU، وتنفيذ معزول في الموقع.</td></tr></tbody></table>
+            </div>
+        </div>
+
+        <!-- Global Verification Gateway CTA -->
+        <div class="cta-block" style="margin-top: 4rem;">
+            <h2 class="cta-headline">&#x628;&#x648;&#x627;&#x628;&#x629; &#x627;&#x644;&#x62A;&#x62D;&#x642;&#x642; &#x627;&#x644;&#x639;&#x627;&#x644;&#x645;&#x64A;&#x629;: &#x645;&#x62E;&#x62A;&#x628;&#x631; &#x627;&#x62E;&#x62A;&#x628;&#x627;&#x631; &#x627;&#x644;&#x625;&#x62C;&#x647;&#x627;&#x62F; &#x627;&#x644;&#x62A;&#x641;&#x627;&#x639;&#x644;&#x64A;</h2>
+            <div class="cta-sub">
+                <p>تعمل كل صيغة، ورسم بياني طوبولوجي، وضوابط الحوكمة المفصلة عبر هذه الملفات الميدانية الستة مباشرة داخل <strong>مختبر اختبار الإجهاد MindML Kinetic</strong>.</p><p>تم بناء مختبر اختبار الإجهاد كمحاكي طيران تشغيلي من جانب العميل، ويقوم بتشغيل صيغ التسلسل الجبري الأصيلة، وحلالات باريتو الحية، والتحقق من سلسلة SHA-256 Merkle لـ Web Crypto مباشرة داخل متصفحك.</p>
+            </div>
+            <a href="stress-test-lab.html" class="btn btn-pulse">
+                <i class="fas fa-atom"></i> &#x627;&#x62F;&#x62E;&#x644; &#x625;&#x644;&#x649; &#x645;&#x62E;&#x62A;&#x628;&#x631; &#x627;&#x62E;&#x62A;&#x628;&#x627;&#x631; &#x627;&#x644;&#x625;&#x62C;&#x647;&#x627;&#x62F; Kinetic
+            </a>
+        </div>
+
+    </div>
+</section>
+
+    </main>
+
+        <nav class="footer-sitemap" aria-label="Footer Navigation">
+            <div class="container sitemap-grid">
+                    <div class="sitemap-column">
+                        <h4>&#x627;&#x644;&#x634;&#x631;&#x643;&#x629;</h4>
+                        <ul>
+                                <li>
+                                    <a href="index.html">
+                                        &#x627;&#x644;&#x631;&#x626;&#x64A;&#x633;&#x64A;&#x629;
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="about.html">
+                                        &#x645;&#x646; &#x646;&#x62D;&#x646;
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="partners.html">
+                                        &#x627;&#x644;&#x634;&#x631;&#x643;&#x627;&#x621; &#x648;&#x627;&#x644;&#x62A;&#x62D;&#x627;&#x644;&#x641;&#x627;&#x62A;
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="careers.html">
+                                        &#x648;&#x638;&#x627;&#x626;&#x641;
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="contact.html">
+                                        &#x627;&#x62A;&#x635;&#x644; &#x628;&#x646;&#x627; &#x648;&#x627;&#x633;&#x62A;&#x634;&#x631;&#x646;&#x627;
+                                    </a>
+                                </li>
+                        </ul>
+                    </div>
+                    <div class="sitemap-column">
+                        <h4>&#x627;&#x644;&#x645;&#x646;&#x635;&#x629; &#x648;&#x627;&#x644;&#x62E;&#x62F;&#x645;&#x627;&#x62A;</h4>
+                        <ul>
+                                <li>
+                                    <a href="offline-ai-desktop-app.html">
+                                        &#x62C;&#x647;&#x627;&#x632; &#x637;&#x631;&#x641;&#x64A; &#x645;&#x639;&#x632;&#x648;&#x644; (Air-Gapped)
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="secure-on-premise-ai-server.html">
+                                        &#x62E;&#x627;&#x62F;&#x645; &#x645;&#x62D;&#x644;&#x64A; &#x622;&#x645;&#x646;
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="agentic-ai-workflows.html">
+                                        &#x633;&#x64A;&#x631; &#x639;&#x645;&#x644; &#x627;&#x644;&#x630;&#x643;&#x627;&#x621; &#x627;&#x644;&#x627;&#x635;&#x637;&#x646;&#x627;&#x639;&#x64A; &#x627;&#x644;&#x645;&#x633;&#x62A;&#x642;&#x644;
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="services.html">
+                                        &#x627;&#x644;&#x62E;&#x62F;&#x645;&#x627;&#x62A; &#x648;&#x627;&#x644;&#x62D;&#x644;&#x648;&#x644;
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="custom-ai-agent-development.html">
+                                        &#x62A;&#x637;&#x648;&#x64A;&#x631; &#x648;&#x643;&#x644;&#x627;&#x621; &#x630;&#x643;&#x627;&#x621; &#x627;&#x635;&#x637;&#x646;&#x627;&#x639;&#x64A; &#x645;&#x62E;&#x635;&#x635;&#x64A;&#x646;
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="ai-strategy-consulting.html">
+                                        &#x627;&#x633;&#x62A;&#x634;&#x627;&#x631;&#x627;&#x62A; &#x627;&#x633;&#x62A;&#x631;&#x627;&#x62A;&#x64A;&#x62C;&#x64A;&#x629; &#x627;&#x644;&#x630;&#x643;&#x627;&#x621; &#x627;&#x644;&#x627;&#x635;&#x637;&#x646;&#x627;&#x639;&#x64A;
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="security.html">
+                                        &#x646;&#x638;&#x631;&#x629; &#x639;&#x627;&#x645;&#x629; &#x639;&#x644;&#x649; &#x627;&#x644;&#x623;&#x645;&#x627;&#x646;
+                                    </a>
+                                </li>
+                        </ul>
+                    </div>
+                    <div class="sitemap-column">
+                        <h4>&#x627;&#x644;&#x62A;&#x643;&#x646;&#x648;&#x644;&#x648;&#x62C;&#x64A;&#x627; &#x648;&#x62D;&#x627;&#x644;&#x627;&#x62A; &#x627;&#x644;&#x627;&#x633;&#x62A;&#x62E;&#x62F;&#x627;&#x645;</h4>
+                        <ul>
+                                <li>
+                                    <a href="field-dossiers.html">
+                                        &#x645;&#x644;&#x641;&#x627;&#x62A; &#x645;&#x64A;&#x62F;&#x627;&#x646;&#x64A;&#x629;
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="private-rag-enterprise-search.html">
+                                        &#x628;&#x62D;&#x62B; RAG &#x62E;&#x627;&#x635; &#x644;&#x644;&#x645;&#x624;&#x633;&#x633;&#x627;&#x62A;
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="gpu-accelerated-local-ai.html">
+                                        &#x630;&#x643;&#x627;&#x621; &#x627;&#x635;&#x637;&#x646;&#x627;&#x639;&#x64A; &#x645;&#x62D;&#x644;&#x64A; &#x645;&#x633;&#x631;&#x639; &#x628;&#x648;&#x627;&#x633;&#x637;&#x629; GPU
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="run-ai-locally-without-internet.html">
+                                        &#x62A;&#x646;&#x641;&#x64A;&#x630; &#x633;&#x64A;&#x627;&#x62F;&#x64A; &#x645;&#x628;&#x646;&#x64A; &#x639;&#x644;&#x649; &#x627;&#x646;&#x639;&#x62F;&#x627;&#x645; &#x627;&#x644;&#x62B;&#x642;&#x629;
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="ai-data-privacy-compliance.html">
+                                        &#x627;&#x644;&#x627;&#x645;&#x62A;&#x62B;&#x627;&#x644; &#x644;&#x62E;&#x635;&#x648;&#x635;&#x64A;&#x629; &#x627;&#x644;&#x628;&#x64A;&#x627;&#x646;&#x627;&#x62A;
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="secure-local-ai-for-legal-finance.html">
+                                        &#x627;&#x644;&#x630;&#x643;&#x627;&#x621; &#x627;&#x644;&#x627;&#x635;&#x637;&#x646;&#x627;&#x639;&#x64A; &#x644;&#x644;&#x634;&#x624;&#x648;&#x646; &#x627;&#x644;&#x642;&#x627;&#x646;&#x648;&#x646;&#x64A;&#x629; &#x648;&#x627;&#x644;&#x645;&#x627;&#x644;&#x64A;&#x629;
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="ai-predictive-maintenance-manufacturing.html">
+                                        &#x627;&#x644;&#x635;&#x64A;&#x627;&#x646;&#x629; &#x627;&#x644;&#x62A;&#x646;&#x628;&#x624;&#x64A;&#x629;
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="ai-customer-support-automation.html">
+                                        &#x623;&#x62A;&#x645;&#x62A;&#x629; &#x62F;&#x639;&#x645; &#x627;&#x644;&#x639;&#x645;&#x644;&#x627;&#x621;
+                                    </a>
+                                </li>
+                        </ul>
+                    </div>
+                    <div class="sitemap-column">
+                        <h4>&#x627;&#x644;&#x645;&#x648;&#x627;&#x631;&#x62F; &#x648;&#x627;&#x644;&#x62F;&#x639;&#x645;</h4>
+                        <ul>
+                                <li>
+                                    <a href="stress-test-lab.html">
+                                        &#x645;&#x62E;&#x62A;&#x628;&#x631; &#x627;&#x62E;&#x62A;&#x628;&#x627;&#x631;&#x627;&#x62A; &#x627;&#x644;&#x625;&#x62C;&#x647;&#x627;&#x62F;
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="demo.html">
+                                        &#x639;&#x631;&#x636; &#x62A;&#x62C;&#x631;&#x64A;&#x628;&#x64A; &#x62D;&#x64A;
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="case-studies.html">
+                                        &#x62F;&#x631;&#x627;&#x633;&#x627;&#x62A; &#x627;&#x644;&#x62D;&#x627;&#x644;&#x629;
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="resources.html">
+                                        &#x627;&#x644;&#x645;&#x648;&#x627;&#x631;&#x62F; &#x648;&#x627;&#x644;&#x631;&#x624;&#x649;
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="faqs.html">
+                                        &#x627;&#x644;&#x623;&#x633;&#x626;&#x644;&#x629; &#x627;&#x644;&#x634;&#x627;&#x626;&#x639;&#x629;
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="legal.html">
+                                        &#x627;&#x644;&#x642;&#x627;&#x646;&#x648;&#x646;&#x64A;&#x629; &#x648;&#x627;&#x644;&#x633;&#x64A;&#x627;&#x633;&#x627;&#x62A;
+                                    </a>
+                                </li>
+                        </ul>
+                    </div>
+            </div>
+        </nav>
+
+    <footer>
+        <div class="container">
+            <p>&#xA9; 2025 The Intelligent Enterprise Group. &#x62C;&#x645;&#x64A;&#x639; &#x627;&#x644;&#x62D;&#x642;&#x648;&#x642; &#x645;&#x62D;&#x641;&#x648;&#x638;&#x629;.</p>
+        </div>
+    </footer>
+
+    <script src="/js/swiper-bundle.min.js"></script>
+    <script src="/js/cdn.min.js" defer></script>
+    <script src="/js/gsap.min.js"></script>
+    <script src="/js/DrawSVGPlugin.min.js"></script>
+
+    <script type="module" src="/js/themeToggle.js"></script>
+    <script type="module">
+        import { toggleTheme, getCurrentTheme } from '/js/themeToggle.js';
+        const checkbox = document.getElementById('theme-checkbox');
+        const themeLabel = document.getElementById('theme-label');
+
+        if (getCurrentTheme() === 'dark') {
+            checkbox.checked = true;
+            themeLabel.textContent = 'الوضع الداكن';
+        } else {
+            themeLabel.textContent = 'الوضع الفاتح';
+        }
+
+        checkbox.addEventListener('change', () => {
+            toggleTheme();
+            themeLabel.textContent = checkbox.checked ? 'الوضع الداكن' : 'الوضع الفاتح';
+        });
+    </script>
+
+    <button id="back-to-top" aria-label="Back to Top">&#x623;&#x639;&#x644;&#x649;</button>
+
+    
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            if (window.innerWidth < 768) return;
+
+            const intro = document.querySelector("#right-intro");
+            if (!intro) return;
+
+            const tl = gsap.timeline();
+            let isClosing = false; // Flag to prevent double-triggering the exit
+
+            // --- 1. DEFINE THE EXIT FUNCTION ---
+            const closeIntro = () => {
+                if (isClosing) return;
+                isClosing = true;
+
+                // Kill the main timeline so it doesn't keep running in the background
+                tl.kill();
+
+                // Create a dedicated exit timeline for a fast, responsive feel
+                const exitTl = gsap.timeline();
+
+                /* ROBOT FAST REVEAL & RUN */
+                exitTl.to(".robot-runner", { opacity: 1, duration: 0.2 });
+                exitTl.to(".robot-runner", {
+                    x: 400,
+                    duration: 0.8,
+                    ease: "power2.in"
+                }, "-=0.1");
+
+                /* PANEL SLIDE-OUT */
+                exitTl.to("#right-intro", {
+                    duration: 0.8,
+                    transform: "translateX(100%)",
+                    ease: "power3.inOut",
+                    onComplete: () => {
+                        intro.style.display = "none";
+                        // Remove scroll listener once closed
+                        window.removeEventListener("scroll", handleScroll);
+                    }
+                }, "-=0.6");
+            };
+
+            // --- 2. THE SCROLL LISTENER ---
+            const handleScroll = () => {
+                if (window.scrollY > 20) { // Trigger after 20px of scrolling
+                    closeIntro();
+                }
+            };
+            window.addEventListener("scroll", handleScroll);
+
+            // --- 3. ORIGINAL ANIMATION SEQUENCE ---
+            /* PANEL SLIDE-IN */
+            tl.to("#right-intro", {
+                duration: 0.8,
+                transform: "translateX(0%)",
+                ease: "power3.out"
+            });
+
+            /* PARTICLES */
+            for (let i = 0; i < 20; i++) {
+                const p = document.createElement("div");
+                p.className = "particle";
+                p.style.position = "absolute";
+                p.style.width = "4px";
+                p.style.height = "4px";
+                p.style.background = "rgba(0,174,239,0.35)";
+                p.style.borderRadius = "50%";
+                p.style.left = Math.random() * 100 + "%";
+                p.style.top = "100%";
+                document.querySelector(".intro-particles").appendChild(p);
+
+                gsap.to(p, {
+                    y: -window.innerHeight - 100,
+                    duration: 4 + Math.random() * 4,
+                    delay: Math.random() * 2,
+                    repeat: -1,
+                    ease: "none"
+                });
+            }
+
+            /* SIGNAL LINE & PULSE */
+            tl.to(".signal-main", { height: "60%", duration: 0.8, ease: "power2.out" })
+                .to(".loading-dots", { opacity: 1, duration: 0.3 })
+                .to(".pulse", { opacity: 1, scale: 1.4, duration: 0.3, stagger: 0.15 })
+                .to(".pulse", { scale: 0.6, opacity: 0.4, duration: 0.3, stagger: 0.15 })
+                .to(".loading-dots", { opacity: 0, duration: 0.3 });
+
+            /* TEXT REVEAL */
+            tl.to(".t1", { opacity: 1, x: 0, duration: 0.6 })
+                .to(".t2", { opacity: 1, x: 0, duration: 0.6 })
+                .to(".t3", { opacity: 1, x: 0, duration: 0.6 })
+                .to(".t4", { opacity: 1, x: 0, duration: 0.6 });
+
+            /* ROBOT ARM/LEG LOOPS (Independent of timeline) */
+            const robotParts = [
+                { el: ".arm-left", r: 30 }, { el: ".arm-right", r: -30 },
+                { el: ".leg-left", r: -30 }, { el: ".leg-right", r: 30 }
+            ];
+            robotParts.forEach(part => {
+                gsap.to(part.el, { rotation: part.r, yoyo: true, repeat: -1, duration: 0.2, ease: "power1.inOut" });
+            });
+
+            // --- 4. AUTO-EXIT (If user doesn't scroll) ---
+            tl.to(".robot-runner", { opacity: 1, duration: 0.3, delay: 5 });
+            tl.to(".robot-runner", { x: 400, duration: 1.2, ease: "power2.inOut" }, "-=0.2");
+            tl.to("#right-intro", {
+                duration: 1,
+                transform: "translateX(100%)",
+                ease: "power3.inOut",
+                onComplete: () => {
+                    if (!isClosing) { // Only hide if scroll didn't already trigger it
+                        intro.style.display = "none";
+                        window.removeEventListener("scroll", handleScroll);
+                    }
+                }
+            }, "-=0.6");
+        });
+    </script>
+    <!-- Cloudflare Web Analytics --><script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "e290b7bc8f584d41990f177692bdcf23"}'></script><!-- End Cloudflare Web Analytics -->
+</body>
+</html>
